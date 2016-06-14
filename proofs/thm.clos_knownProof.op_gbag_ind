@@ -1,0 +1,1119 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_knownProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_knownProof
+% SZS output start Proof for thm.clos_knownProof
+fof(f7877,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f7875,f7280,f5188,f5186,f5184,f5182,f5180,f5164,f5162,f5160,f5158,f5150,f5146,f5144,f5142,f5140,f5138,f5126,f5122,f5114,f5112,f5534,f5739,f6636,f6924,f6562,f5466,f6759,f7582,f6909,f5199,f6683,f6622,f6608,f7431,f6185,f7405,f5605,f6008,f6648,f7384,f6665,f6888,f6739,f5398,f5872,f7354,f5391,f5209,f7057,f6698,f6595,f6550,f7201,f6718,f6572,f6583,f6361,f7740])).
+fof(f7740,plain,(
+  $false | $spl82),
+  inference(subsumption_resolution,[],[f7739,f155])).
+fof(f155,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(resolution,[],[f143,f98])).
+fof(f98,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f18])).
+fof(f18,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.clos_knownProof.op_gbag_ind',aHL_FALSITY)).
+fof(f143,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X22] : (s(bool,'T_0') = s(bool,X22) <=> p(s(bool,X22)))),
+  file('thm.clos_knownProof.op_gbag_ind','thm.bool.EQ_CLAUSES|split|0')).
+fof(f7739,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl82),
+  inference(forward_demodulation,[],[f7713,f166])).
+fof(f166,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthBlock_0')))),
+  inference(resolution,[],[f62,f144])).
+fof(f144,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f62,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthBlock_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X16] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X16)))))) & ! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X15)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X14)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X11,X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X11),s('type.num.num',X12)))))) & ! [X10] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X10)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Update_0')))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X9)))))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X8)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X7)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X5,X6] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X5),s('type.ast.opw',X6)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X2),s('type.ast.shift',X3),s('type.num.num',X4)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordToInt_0')))) & ~p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK1,sK2])],[f42])).
+fof(f42,plain,(
+  ? [X0] : (! [X16] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X16)))))) & ! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X15)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X14)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X11,X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X11),s('type.num.num',X12)))))) & ! [X10] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X10)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Update_0')))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X9)))))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X8)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X7)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X5,X6] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X5),s('type.ast.opw',X6)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X2),s('type.ast.shift',X3),s('type.num.num',X4)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordToInt_0')))) & ? [X1] : ~p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op',X1)))))),
+  inference(rectify,[],[f35])).
+fof(f35,plain,(
+  ? [X0] : (! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X15)))))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X14)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X12)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X10),s('type.num.num',X11)))))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X9)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Update_0')))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X8)))))) & ! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X7)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X6] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X6)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X4,X5] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X4),s('type.ast.opw',X5)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X1),s('type.ast.shift',X2),s('type.num.num',X3)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordToInt_0')))) & ? [X16] : ~p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op',X16)))))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ? [X0] : ((! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X15)))))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X14)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X12)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X10),s('type.num.num',X11)))))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X9)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Update_0')))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X8)))))) & ! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X7)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X6] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X6)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X4,X5] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X4),s('type.ast.opw',X5)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X1),s('type.ast.shift',X2),s('type.num.num',X3)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordToInt_0'))))) & ? [X16] : ~p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op',X16)))))),
+  inference(ennf_transformation,[],[f17])).
+fof(f17,plain,(
+  ~! [X0] : ((! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X15)))))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X14)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X12)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X10),s('type.num.num',X11)))))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X9)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Update_0')))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X8)))))) & ! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X7)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X6] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X6)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X4,X5] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X4),s('type.ast.opw',X5)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X1),s('type.ast.shift',X2),s('type.num.num',X3)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op','const.closLang.WordToInt_0'))))) => ! [X16] : p(s(bool,happ(s(fun('type.closLang.op',bool),X0),s('type.closLang.op',X16)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ((! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X7)))))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X8)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X9)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X10] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X10)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X11,X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X11),s('type.num.num',X12)))))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Update_0')))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X14)))))) & ! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X15)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X16] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X16)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X17,X18] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X17),s('type.ast.opw',X18)))))) & ! [X19,X20,X21] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X19),s('type.ast.shift',X20),s('type.num.num',X21)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordToInt_0'))))) => ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op',X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ((! [X7] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X7)))))) & ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X8)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.AllocGlobal_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.GlobalsPtr_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))) & ! [X9] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X9)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.El_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.LengthBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Length_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.LengthByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.RefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.RefArray_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.DerefByte_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.UpdateByte_0')))) & ! [X10] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X10)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.ToList_0')))) & ! [X11,X12] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X11),s('type.num.num',X12)))))) & ! [X13] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X13)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.BlockCmp_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.IsBlock_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Ref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Deref_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Update_0')))) & ! [X14] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X14)))))) & ! [X15] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X15)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Equal_0')))) & ! [X16] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X16)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Add_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Sub_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Mult_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Div_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Mod_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Less_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.LessEq_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.Greater_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.GreaterEq_0')))) & ! [X17,X18] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X17),s('type.ast.opw',X18)))))) & ! [X19,X20,X21] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X19),s('type.ast.shift',X20),s('type.num.num',X21)))))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordFromInt_0')))) & p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op','const.closLang.WordToInt_0'))))) => ! [X8] : p(s(bool,happ(s(fun('type.closLang.op',bool),X6),s('type.closLang.op',X8)))))),
+  file('thm.clos_knownProof.op_gbag_ind','thm.clos_knownProof.op_gbag_ind')).
+fof(f7713,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthBlock_0'))) | $spl82),
+  inference(backward_demodulation,[],[f5126,f191])).
+fof(f191,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2)))),
+  inference(resolution,[],[f95,f148])).
+fof(f148,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X22] : (s(bool,'F_0') = s(bool,X22) <=> ~p(s(bool,X22)))),
+  file('thm.clos_knownProof.op_gbag_ind','thm.bool.EQ_CLAUSES|split|3')).
+fof(f95,plain,(
+  ~p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6361,plain,(
+  $false | $spl140),
+  inference(subsumption_resolution,[],[f6356,f192])).
+fof(f192,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2)))),
+  inference(resolution,[],[f95,f143])).
+fof(f6356,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl140),
+  inference(superposition,[],[f379,f5184])).
+fof(f379,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X0),s('type.ast.opw',X1)))))) )),
+  inference(resolution,[],[f91,f144])).
+fof(f91,plain,(
+  ( ! [X6,X5] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X5),s('type.ast.opw',X6))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f6583,plain,(
+  $false | $spl138),
+  inference(subsumption_resolution,[],[f6582,f155])).
+fof(f6582,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl138),
+  inference(forward_demodulation,[],[f6581,f188])).
+fof(f188,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GreaterEq_0')))),
+  inference(resolution,[],[f90,f144])).
+fof(f90,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GreaterEq_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6581,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GreaterEq_0'))) | $spl138),
+  inference(forward_demodulation,[],[f191,f5182])).
+fof(f6572,plain,(
+  $false | $spl144),
+  inference(subsumption_resolution,[],[f6571,f155])).
+fof(f6571,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl144),
+  inference(forward_demodulation,[],[f6570,f189])).
+fof(f189,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordFromInt_0')))),
+  inference(resolution,[],[f93,f144])).
+fof(f93,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordFromInt_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6570,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordFromInt_0'))) | $spl144),
+  inference(forward_demodulation,[],[f191,f5188])).
+fof(f6718,plain,(
+  $false | $spl134),
+  inference(subsumption_resolution,[],[f6717,f155])).
+fof(f6717,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl134),
+  inference(forward_demodulation,[],[f6716,f186])).
+fof(f186,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LessEq_0')))),
+  inference(resolution,[],[f88,f144])).
+fof(f88,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LessEq_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6716,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LessEq_0'))) | $spl134),
+  inference(forward_demodulation,[],[f191,f5178])).
+fof(f5178,plain,(
+  s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',sK2) | $spl134),
+  inference(cnf_transformation,[],[f5178_D])).
+fof(f5178_D,plain,(
+  s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',sK2) <=> ~$spl134),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl134])])).
+fof(f7201,plain,(
+  $false | $spl132),
+  inference(subsumption_resolution,[],[f7200,f155])).
+fof(f7200,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl132),
+  inference(forward_demodulation,[],[f7179,f185])).
+fof(f185,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Less_0')))),
+  inference(resolution,[],[f87,f144])).
+fof(f87,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Less_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7179,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Less_0'))) | $spl132),
+  inference(backward_demodulation,[],[f5176,f191])).
+fof(f5176,plain,(
+  s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',sK2) | $spl132),
+  inference(cnf_transformation,[],[f5176_D])).
+fof(f5176_D,plain,(
+  s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',sK2) <=> ~$spl132),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl132])])).
+fof(f6550,plain,(
+  $false | $spl130),
+  inference(subsumption_resolution,[],[f6549,f155])).
+fof(f6549,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl130),
+  inference(forward_demodulation,[],[f6534,f184])).
+fof(f184,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mod_0')))),
+  inference(resolution,[],[f86,f144])).
+fof(f86,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mod_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6534,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mod_0'))) | $spl130),
+  inference(backward_demodulation,[],[f5174,f191])).
+fof(f5174,plain,(
+  s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',sK2) | $spl130),
+  inference(cnf_transformation,[],[f5174_D])).
+fof(f5174_D,plain,(
+  s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',sK2) <=> ~$spl130),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl130])])).
+fof(f6595,plain,(
+  $false | $spl128),
+  inference(subsumption_resolution,[],[f6594,f155])).
+fof(f6594,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl128),
+  inference(forward_demodulation,[],[f6593,f183])).
+fof(f183,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Div_0')))),
+  inference(resolution,[],[f85,f144])).
+fof(f85,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Div_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6593,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Div_0'))) | $spl128),
+  inference(forward_demodulation,[],[f191,f5172])).
+fof(f5172,plain,(
+  s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) | $spl128),
+  inference(cnf_transformation,[],[f5172_D])).
+fof(f5172_D,plain,(
+  s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) <=> ~$spl128),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl128])])).
+fof(f6698,plain,(
+  $false | $spl126),
+  inference(subsumption_resolution,[],[f6697,f155])).
+fof(f6697,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl126),
+  inference(forward_demodulation,[],[f6696,f182])).
+fof(f182,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mult_0')))),
+  inference(resolution,[],[f84,f144])).
+fof(f84,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mult_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6696,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Mult_0'))) | $spl126),
+  inference(forward_demodulation,[],[f191,f5170])).
+fof(f5170,plain,(
+  s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | $spl126),
+  inference(cnf_transformation,[],[f5170_D])).
+fof(f5170_D,plain,(
+  s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) <=> ~$spl126),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl126])])).
+fof(f7057,plain,(
+  $false | $spl124),
+  inference(subsumption_resolution,[],[f7056,f155])).
+fof(f7056,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl124),
+  inference(forward_demodulation,[],[f7039,f181])).
+fof(f181,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Sub_0')))),
+  inference(resolution,[],[f83,f144])).
+fof(f83,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Sub_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7039,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Sub_0'))) | $spl124),
+  inference(backward_demodulation,[],[f5168,f191])).
+fof(f5168,plain,(
+  s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | $spl124),
+  inference(cnf_transformation,[],[f5168_D])).
+fof(f5168_D,plain,(
+  s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) <=> ~$spl124),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl124])])).
+fof(f5209,plain,(
+  $false | $spl122),
+  inference(subsumption_resolution,[],[f5208,f155])).
+fof(f5208,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl122),
+  inference(forward_demodulation,[],[f5207,f180])).
+fof(f180,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Add_0')))),
+  inference(resolution,[],[f82,f144])).
+fof(f82,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Add_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f5207,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Add_0'))) | $spl122),
+  inference(forward_demodulation,[],[f191,f5166])).
+fof(f5166,plain,(
+  s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | $spl122),
+  inference(cnf_transformation,[],[f5166_D])).
+fof(f5166_D,plain,(
+  s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) <=> ~$spl122),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl122])])).
+fof(f5391,plain,(
+  $false | $spl120),
+  inference(subsumption_resolution,[],[f5210,f192])).
+fof(f5210,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl120),
+  inference(superposition,[],[f303,f5164])).
+fof(f303,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X0)))))) )),
+  inference(resolution,[],[f81,f144])).
+fof(f81,plain,(
+  ( ! [X7] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X7))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f7354,plain,(
+  $false | $spl142),
+  inference(subsumption_resolution,[],[f7353,f155])).
+fof(f7353,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl142),
+  inference(forward_demodulation,[],[f7329,f190])).
+fof(f190,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordToInt_0')))),
+  inference(resolution,[],[f94,f144])).
+fof(f94,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordToInt_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7329,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordToInt_0'))) | $spl142),
+  inference(backward_demodulation,[],[f5186,f191])).
+fof(f5872,plain,(
+  $false | $spl116),
+  inference(subsumption_resolution,[],[f5868,f192])).
+fof(f5868,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl116),
+  inference(superposition,[],[f300,f5160])).
+fof(f300,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f79,f144])).
+fof(f79,plain,(
+  ( ! [X8] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X8))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f5398,plain,(
+  $false | $spl114),
+  inference(subsumption_resolution,[],[f5395,f192])).
+fof(f5395,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl114),
+  inference(superposition,[],[f297,f5158])).
+fof(f297,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f78,f144])).
+fof(f78,plain,(
+  ( ! [X9] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X9))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f6739,plain,(
+  $false | $spl112),
+  inference(subsumption_resolution,[],[f6738,f155])).
+fof(f6738,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl112),
+  inference(forward_demodulation,[],[f6737,f178])).
+fof(f178,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Update_0')))),
+  inference(resolution,[],[f77,f144])).
+fof(f77,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Update_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6737,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Update_0'))) | $spl112),
+  inference(forward_demodulation,[],[f191,f5156])).
+fof(f5156,plain,(
+  s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | $spl112),
+  inference(cnf_transformation,[],[f5156_D])).
+fof(f5156_D,plain,(
+  s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) <=> ~$spl112),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl112])])).
+fof(f6888,plain,(
+  $false | $spl110),
+  inference(subsumption_resolution,[],[f6887,f155])).
+fof(f6887,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl110),
+  inference(forward_demodulation,[],[f6875,f177])).
+fof(f177,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Deref_0')))),
+  inference(resolution,[],[f76,f144])).
+fof(f76,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Deref_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6875,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Deref_0'))) | $spl110),
+  inference(backward_demodulation,[],[f5154,f191])).
+fof(f5154,plain,(
+  s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | $spl110),
+  inference(cnf_transformation,[],[f5154_D])).
+fof(f5154_D,plain,(
+  s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) <=> ~$spl110),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl110])])).
+fof(f6665,plain,(
+  $false | $spl108),
+  inference(subsumption_resolution,[],[f6664,f155])).
+fof(f6664,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl108),
+  inference(forward_demodulation,[],[f6663,f176])).
+fof(f176,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Ref_0')))),
+  inference(resolution,[],[f75,f144])).
+fof(f75,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Ref_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6663,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Ref_0'))) | $spl108),
+  inference(forward_demodulation,[],[f191,f5152])).
+fof(f5152,plain,(
+  s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | $spl108),
+  inference(cnf_transformation,[],[f5152_D])).
+fof(f5152_D,plain,(
+  s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) <=> ~$spl108),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl108])])).
+fof(f7384,plain,(
+  $false | $spl94),
+  inference(subsumption_resolution,[],[f7383,f155])).
+fof(f7383,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl94),
+  inference(forward_demodulation,[],[f7382,f172])).
+fof(f172,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.UpdateByte_0')))),
+  inference(resolution,[],[f68,f144])).
+fof(f68,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.UpdateByte_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7382,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.UpdateByte_0'))) | $spl94),
+  inference(forward_demodulation,[],[f191,f5138])).
+fof(f6648,plain,(
+  $false | $spl104),
+  inference(subsumption_resolution,[],[f6647,f155])).
+fof(f6647,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl104),
+  inference(forward_demodulation,[],[f6646,f174])).
+fof(f174,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.BlockCmp_0')))),
+  inference(resolution,[],[f73,f144])).
+fof(f73,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.BlockCmp_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6646,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.BlockCmp_0'))) | $spl104),
+  inference(forward_demodulation,[],[f191,f5148])).
+fof(f5148,plain,(
+  s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | $spl104),
+  inference(cnf_transformation,[],[f5148_D])).
+fof(f5148_D,plain,(
+  s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) <=> ~$spl104),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl104])])).
+fof(f6008,plain,(
+  $false | $spl102),
+  inference(subsumption_resolution,[],[f6003,f192])).
+fof(f6003,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl102),
+  inference(superposition,[],[f294,f5146])).
+fof(f294,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f72,f144])).
+fof(f72,plain,(
+  ( ! [X10] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X10))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f5605,plain,(
+  $false | $spl100),
+  inference(subsumption_resolution,[],[f5601,f192])).
+fof(f5601,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl100),
+  inference(superposition,[],[f327,f5144])).
+fof(f327,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X0),s('type.num.num',X1)))))) )),
+  inference(resolution,[],[f71,f144])).
+fof(f71,plain,(
+  ( ! [X12,X11] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X11),s('type.num.num',X12))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f7405,plain,(
+  $false | $spl118),
+  inference(subsumption_resolution,[],[f7404,f155])).
+fof(f7404,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl118),
+  inference(forward_demodulation,[],[f7403,f179])).
+fof(f179,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Equal_0')))),
+  inference(resolution,[],[f80,f144])).
+fof(f80,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Equal_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7403,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Equal_0'))) | $spl118),
+  inference(forward_demodulation,[],[f191,f5162])).
+fof(f6185,plain,(
+  $false | $spl96),
+  inference(subsumption_resolution,[],[f6180,f192])).
+fof(f6180,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl96),
+  inference(superposition,[],[f291,f5140])).
+fof(f291,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f69,f144])).
+fof(f69,plain,(
+  ( ! [X13] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X13))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f7431,plain,(
+  $false | $spl98),
+  inference(subsumption_resolution,[],[f7430,f155])).
+fof(f7430,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl98),
+  inference(forward_demodulation,[],[f7429,f173])).
+fof(f173,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.ToList_0')))),
+  inference(resolution,[],[f70,f144])).
+fof(f70,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.ToList_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7429,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.ToList_0'))) | $spl98),
+  inference(forward_demodulation,[],[f191,f5142])).
+fof(f6608,plain,(
+  $false | $spl92),
+  inference(subsumption_resolution,[],[f6607,f155])).
+fof(f6607,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl92),
+  inference(forward_demodulation,[],[f6606,f171])).
+fof(f171,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.DerefByte_0')))),
+  inference(resolution,[],[f67,f144])).
+fof(f67,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.DerefByte_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6606,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.DerefByte_0'))) | $spl92),
+  inference(forward_demodulation,[],[f191,f5136])).
+fof(f5136,plain,(
+  s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | $spl92),
+  inference(cnf_transformation,[],[f5136_D])).
+fof(f5136_D,plain,(
+  s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) <=> ~$spl92),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl92])])).
+fof(f6622,plain,(
+  $false | $spl90),
+  inference(subsumption_resolution,[],[f6621,f155])).
+fof(f6621,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl90),
+  inference(forward_demodulation,[],[f6620,f170])).
+fof(f170,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefArray_0')))),
+  inference(resolution,[],[f66,f144])).
+fof(f66,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefArray_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6620,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefArray_0'))) | $spl90),
+  inference(forward_demodulation,[],[f191,f5134])).
+fof(f5134,plain,(
+  s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | $spl90),
+  inference(cnf_transformation,[],[f5134_D])).
+fof(f5134_D,plain,(
+  s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) <=> ~$spl90),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl90])])).
+fof(f6683,plain,(
+  $false | $spl88),
+  inference(subsumption_resolution,[],[f6682,f155])).
+fof(f6682,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl88),
+  inference(forward_demodulation,[],[f6681,f169])).
+fof(f169,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefByte_0')))),
+  inference(resolution,[],[f65,f144])).
+fof(f65,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefByte_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6681,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.RefByte_0'))) | $spl88),
+  inference(forward_demodulation,[],[f191,f5132])).
+fof(f5132,plain,(
+  s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | $spl88),
+  inference(cnf_transformation,[],[f5132_D])).
+fof(f5132_D,plain,(
+  s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) <=> ~$spl88),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl88])])).
+fof(f5199,plain,(
+  $false | $spl86),
+  inference(subsumption_resolution,[],[f5195,f168])).
+fof(f168,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthByte_0')))),
+  inference(resolution,[],[f64,f144])).
+fof(f64,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthByte_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f5195,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.LengthByte_0'))) | $spl86),
+  inference(backward_demodulation,[],[f5130,f192])).
+fof(f5130,plain,(
+  s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | $spl86),
+  inference(cnf_transformation,[],[f5130_D])).
+fof(f5130_D,plain,(
+  s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) <=> ~$spl86),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl86])])).
+fof(f6909,plain,(
+  $false | $spl84),
+  inference(subsumption_resolution,[],[f6908,f155])).
+fof(f6908,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl84),
+  inference(forward_demodulation,[],[f6907,f167])).
+fof(f167,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Length_0')))),
+  inference(resolution,[],[f63,f144])).
+fof(f63,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Length_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6907,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Length_0'))) | $spl84),
+  inference(forward_demodulation,[],[f191,f5128])).
+fof(f5128,plain,(
+  s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | $spl84),
+  inference(cnf_transformation,[],[f5128_D])).
+fof(f5128_D,plain,(
+  s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) <=> ~$spl84),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl84])])).
+fof(f7582,plain,(
+  $false | $spl136),
+  inference(subsumption_resolution,[],[f7581,f155])).
+fof(f7581,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl136),
+  inference(forward_demodulation,[],[f7555,f187])).
+fof(f187,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Greater_0')))),
+  inference(resolution,[],[f89,f144])).
+fof(f89,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Greater_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7555,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Greater_0'))) | $spl136),
+  inference(backward_demodulation,[],[f5180,f191])).
+fof(f6759,plain,(
+  $false | $spl80),
+  inference(subsumption_resolution,[],[f6758,f155])).
+fof(f6758,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl80),
+  inference(forward_demodulation,[],[f6757,f165])).
+fof(f165,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.El_0')))),
+  inference(resolution,[],[f61,f144])).
+fof(f61,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.El_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6757,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.El_0'))) | $spl80),
+  inference(forward_demodulation,[],[f191,f5124])).
+fof(f5124,plain,(
+  s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | $spl80),
+  inference(cnf_transformation,[],[f5124_D])).
+fof(f5124_D,plain,(
+  s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) <=> ~$spl80),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl80])])).
+fof(f5466,plain,(
+  $false | $spl78),
+  inference(subsumption_resolution,[],[f5463,f192])).
+fof(f5463,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl78),
+  inference(superposition,[],[f288,f5122])).
+fof(f288,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f60,f144])).
+fof(f60,plain,(
+  ( ! [X14] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X14))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f6562,plain,(
+  $false | $spl76),
+  inference(subsumption_resolution,[],[f6561,f155])).
+fof(f6561,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl76),
+  inference(forward_demodulation,[],[f6560,f164])).
+fof(f164,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobalsPtr_0')))),
+  inference(resolution,[],[f59,f144])).
+fof(f59,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobalsPtr_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6560,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobalsPtr_0'))) | $spl76),
+  inference(forward_demodulation,[],[f191,f5120])).
+fof(f5120,plain,(
+  s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | $spl76),
+  inference(cnf_transformation,[],[f5120_D])).
+fof(f5120_D,plain,(
+  s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) <=> ~$spl76),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl76])])).
+fof(f6924,plain,(
+  $false | $spl74),
+  inference(subsumption_resolution,[],[f6923,f155])).
+fof(f6923,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl74),
+  inference(forward_demodulation,[],[f6922,f163])).
+fof(f163,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GlobalsPtr_0')))),
+  inference(resolution,[],[f58,f144])).
+fof(f58,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GlobalsPtr_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6922,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.GlobalsPtr_0'))) | $spl74),
+  inference(forward_demodulation,[],[f191,f5118])).
+fof(f5118,plain,(
+  s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | $spl74),
+  inference(cnf_transformation,[],[f5118_D])).
+fof(f5118_D,plain,(
+  s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) <=> ~$spl74),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl74])])).
+fof(f6636,plain,(
+  $false | $spl72),
+  inference(subsumption_resolution,[],[f6635,f155])).
+fof(f6635,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl72),
+  inference(forward_demodulation,[],[f6634,f162])).
+fof(f162,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.AllocGlobal_0')))),
+  inference(resolution,[],[f57,f144])).
+fof(f57,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.AllocGlobal_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f6634,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.AllocGlobal_0'))) | $spl72),
+  inference(forward_demodulation,[],[f191,f5116])).
+fof(f5116,plain,(
+  s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | $spl72),
+  inference(cnf_transformation,[],[f5116_D])).
+fof(f5116_D,plain,(
+  s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) <=> ~$spl72),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl72])])).
+fof(f5739,plain,(
+  $false | $spl70),
+  inference(subsumption_resolution,[],[f5735,f192])).
+fof(f5735,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl70),
+  inference(superposition,[],[f275,f5114])).
+fof(f275,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f55,f144])).
+fof(f55,plain,(
+  ( ! [X16] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X16))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f5534,plain,(
+  $false | $spl68),
+  inference(subsumption_resolution,[],[f5531,f192])).
+fof(f5531,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',sK2))) | $spl68),
+  inference(superposition,[],[f285,f5112])).
+fof(f285,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X0)))))) )),
+  inference(resolution,[],[f56,f144])).
+fof(f56,plain,(
+  ( ! [X15] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X15))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f5112,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | $spl68),
+  inference(cnf_transformation,[],[f5112_D])).
+fof(f5112_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) <=> ~$spl68),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl68])])).
+fof(f5114,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | $spl70),
+  inference(cnf_transformation,[],[f5114_D])).
+fof(f5114_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) <=> ~$spl70),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl70])])).
+fof(f5122,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | $spl78),
+  inference(cnf_transformation,[],[f5122_D])).
+fof(f5122_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) <=> ~$spl78),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl78])])).
+fof(f5126,plain,(
+  s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | $spl82),
+  inference(cnf_transformation,[],[f5126_D])).
+fof(f5126_D,plain,(
+  s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) <=> ~$spl82),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl82])])).
+fof(f5138,plain,(
+  s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | $spl94),
+  inference(cnf_transformation,[],[f5138_D])).
+fof(f5138_D,plain,(
+  s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) <=> ~$spl94),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl94])])).
+fof(f5140,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | $spl96),
+  inference(cnf_transformation,[],[f5140_D])).
+fof(f5140_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) <=> ~$spl96),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl96])])).
+fof(f5142,plain,(
+  s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | $spl98),
+  inference(cnf_transformation,[],[f5142_D])).
+fof(f5142_D,plain,(
+  s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) <=> ~$spl98),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl98])])).
+fof(f5144,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | $spl100),
+  inference(cnf_transformation,[],[f5144_D])).
+fof(f5144_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) <=> ~$spl100),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl100])])).
+fof(f5146,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | $spl102),
+  inference(cnf_transformation,[],[f5146_D])).
+fof(f5146_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) <=> ~$spl102),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl102])])).
+fof(f5150,plain,(
+  s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | $spl106),
+  inference(cnf_transformation,[],[f5150_D])).
+fof(f5150_D,plain,(
+  s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) <=> ~$spl106),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl106])])).
+fof(f5158,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | $spl114),
+  inference(cnf_transformation,[],[f5158_D])).
+fof(f5158_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) <=> ~$spl114),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl114])])).
+fof(f5160,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | $spl116),
+  inference(cnf_transformation,[],[f5160_D])).
+fof(f5160_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) <=> ~$spl116),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl116])])).
+fof(f5162,plain,(
+  s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | $spl118),
+  inference(cnf_transformation,[],[f5162_D])).
+fof(f5162_D,plain,(
+  s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) <=> ~$spl118),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl118])])).
+fof(f5164,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | $spl120),
+  inference(cnf_transformation,[],[f5164_D])).
+fof(f5164_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) <=> ~$spl120),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl120])])).
+fof(f5180,plain,(
+  s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | $spl136),
+  inference(cnf_transformation,[],[f5180_D])).
+fof(f5180_D,plain,(
+  s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) <=> ~$spl136),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl136])])).
+fof(f5182,plain,(
+  s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | $spl138),
+  inference(cnf_transformation,[],[f5182_D])).
+fof(f5182_D,plain,(
+  s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) <=> ~$spl138),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl138])])).
+fof(f5184,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | $spl140),
+  inference(cnf_transformation,[],[f5184_D])).
+fof(f5184_D,plain,(
+  s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) <=> ~$spl140),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl140])])).
+fof(f5186,plain,(
+  s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | $spl142),
+  inference(cnf_transformation,[],[f5186_D])).
+fof(f5186_D,plain,(
+  s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) <=> ~$spl142),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl142])])).
+fof(f5188,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | $spl144),
+  inference(cnf_transformation,[],[f5188_D])).
+fof(f5188_D,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) <=> ~$spl144),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl144])])).
+fof(f7280,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl73 | $spl75 | $spl77 | $spl81 | $spl85 | $spl87 | $spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7279,f5115])).
+fof(f5115,plain,(
+  s('type.closLang.op','const.closLang.AllocGlobal_0') != s('type.closLang.op',sK2) | $spl73),
+  inference(cnf_transformation,[],[f5115_D])).
+fof(f5115_D,plain,(
+  s('type.closLang.op','const.closLang.AllocGlobal_0') != s('type.closLang.op',sK2) <=> ~$spl73),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl73])])).
+fof(f7279,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl75 | $spl77 | $spl81 | $spl85 | $spl87 | $spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7278,f5117])).
+fof(f5117,plain,(
+  s('type.closLang.op','const.closLang.GlobalsPtr_0') != s('type.closLang.op',sK2) | $spl75),
+  inference(cnf_transformation,[],[f5117_D])).
+fof(f5117_D,plain,(
+  s('type.closLang.op','const.closLang.GlobalsPtr_0') != s('type.closLang.op',sK2) <=> ~$spl75),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl75])])).
+fof(f7278,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl77 | $spl81 | $spl85 | $spl87 | $spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7277,f5119])).
+fof(f5119,plain,(
+  s('type.closLang.op','const.closLang.SetGlobalsPtr_0') != s('type.closLang.op',sK2) | $spl77),
+  inference(cnf_transformation,[],[f5119_D])).
+fof(f5119_D,plain,(
+  s('type.closLang.op','const.closLang.SetGlobalsPtr_0') != s('type.closLang.op',sK2) <=> ~$spl77),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl77])])).
+fof(f7277,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl81 | $spl85 | $spl87 | $spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7276,f5123])).
+fof(f5123,plain,(
+  s('type.closLang.op','const.closLang.El_0') != s('type.closLang.op',sK2) | $spl81),
+  inference(cnf_transformation,[],[f5123_D])).
+fof(f5123_D,plain,(
+  s('type.closLang.op','const.closLang.El_0') != s('type.closLang.op',sK2) <=> ~$spl81),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl81])])).
+fof(f7276,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl85 | $spl87 | $spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7275,f5127])).
+fof(f5127,plain,(
+  s('type.closLang.op','const.closLang.Length_0') != s('type.closLang.op',sK2) | $spl85),
+  inference(cnf_transformation,[],[f5127_D])).
+fof(f5127_D,plain,(
+  s('type.closLang.op','const.closLang.Length_0') != s('type.closLang.op',sK2) <=> ~$spl85),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl85])])).
+fof(f7275,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl87 | $spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7274,f5129])).
+fof(f5129,plain,(
+  s('type.closLang.op','const.closLang.LengthByte_0') != s('type.closLang.op',sK2) | $spl87),
+  inference(cnf_transformation,[],[f5129_D])).
+fof(f5129_D,plain,(
+  s('type.closLang.op','const.closLang.LengthByte_0') != s('type.closLang.op',sK2) <=> ~$spl87),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl87])])).
+fof(f7274,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl89 | $spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7273,f5131])).
+fof(f5131,plain,(
+  s('type.closLang.op','const.closLang.RefByte_0') != s('type.closLang.op',sK2) | $spl89),
+  inference(cnf_transformation,[],[f5131_D])).
+fof(f5131_D,plain,(
+  s('type.closLang.op','const.closLang.RefByte_0') != s('type.closLang.op',sK2) <=> ~$spl89),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl89])])).
+fof(f7273,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl91 | $spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7272,f5133])).
+fof(f5133,plain,(
+  s('type.closLang.op','const.closLang.RefArray_0') != s('type.closLang.op',sK2) | $spl91),
+  inference(cnf_transformation,[],[f5133_D])).
+fof(f5133_D,plain,(
+  s('type.closLang.op','const.closLang.RefArray_0') != s('type.closLang.op',sK2) <=> ~$spl91),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl91])])).
+fof(f7272,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl93 | $spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7271,f5135])).
+fof(f5135,plain,(
+  s('type.closLang.op','const.closLang.DerefByte_0') != s('type.closLang.op',sK2) | $spl93),
+  inference(cnf_transformation,[],[f5135_D])).
+fof(f5135_D,plain,(
+  s('type.closLang.op','const.closLang.DerefByte_0') != s('type.closLang.op',sK2) <=> ~$spl93),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl93])])).
+fof(f7271,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl105 | $spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7270,f5147])).
+fof(f5147,plain,(
+  s('type.closLang.op','const.closLang.BlockCmp_0') != s('type.closLang.op',sK2) | $spl105),
+  inference(cnf_transformation,[],[f5147_D])).
+fof(f5147_D,plain,(
+  s('type.closLang.op','const.closLang.BlockCmp_0') != s('type.closLang.op',sK2) <=> ~$spl105),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl105])])).
+fof(f7270,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl109 | $spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7269,f5151])).
+fof(f5151,plain,(
+  s('type.closLang.op','const.closLang.Ref_0') != s('type.closLang.op',sK2) | $spl109),
+  inference(cnf_transformation,[],[f5151_D])).
+fof(f5151_D,plain,(
+  s('type.closLang.op','const.closLang.Ref_0') != s('type.closLang.op',sK2) <=> ~$spl109),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl109])])).
+fof(f7269,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl111 | $spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7268,f5153])).
+fof(f5153,plain,(
+  s('type.closLang.op','const.closLang.Deref_0') != s('type.closLang.op',sK2) | $spl111),
+  inference(cnf_transformation,[],[f5153_D])).
+fof(f5153_D,plain,(
+  s('type.closLang.op','const.closLang.Deref_0') != s('type.closLang.op',sK2) <=> ~$spl111),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl111])])).
+fof(f7268,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl113 | $spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7267,f5155])).
+fof(f5155,plain,(
+  s('type.closLang.op','const.closLang.Update_0') != s('type.closLang.op',sK2) | $spl113),
+  inference(cnf_transformation,[],[f5155_D])).
+fof(f5155_D,plain,(
+  s('type.closLang.op','const.closLang.Update_0') != s('type.closLang.op',sK2) <=> ~$spl113),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl113])])).
+fof(f7267,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl123 | $spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7266,f5165])).
+fof(f5165,plain,(
+  s('type.closLang.op','const.closLang.Add_0') != s('type.closLang.op',sK2) | $spl123),
+  inference(cnf_transformation,[],[f5165_D])).
+fof(f5165_D,plain,(
+  s('type.closLang.op','const.closLang.Add_0') != s('type.closLang.op',sK2) <=> ~$spl123),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl123])])).
+fof(f7266,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl125 | $spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7265,f5167])).
+fof(f5167,plain,(
+  s('type.closLang.op','const.closLang.Sub_0') != s('type.closLang.op',sK2) | $spl125),
+  inference(cnf_transformation,[],[f5167_D])).
+fof(f5167_D,plain,(
+  s('type.closLang.op','const.closLang.Sub_0') != s('type.closLang.op',sK2) <=> ~$spl125),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl125])])).
+fof(f7265,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl127 | $spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7264,f5169])).
+fof(f5169,plain,(
+  s('type.closLang.op','const.closLang.Mult_0') != s('type.closLang.op',sK2) | $spl127),
+  inference(cnf_transformation,[],[f5169_D])).
+fof(f5169_D,plain,(
+  s('type.closLang.op','const.closLang.Mult_0') != s('type.closLang.op',sK2) <=> ~$spl127),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl127])])).
+fof(f7264,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl129 | $spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7263,f5171])).
+fof(f5171,plain,(
+  s('type.closLang.op','const.closLang.Div_0') != s('type.closLang.op',sK2) | $spl129),
+  inference(cnf_transformation,[],[f5171_D])).
+fof(f5171_D,plain,(
+  s('type.closLang.op','const.closLang.Div_0') != s('type.closLang.op',sK2) <=> ~$spl129),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl129])])).
+fof(f7263,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl131 | $spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7262,f5173])).
+fof(f5173,plain,(
+  s('type.closLang.op','const.closLang.Mod_0') != s('type.closLang.op',sK2) | $spl131),
+  inference(cnf_transformation,[],[f5173_D])).
+fof(f5173_D,plain,(
+  s('type.closLang.op','const.closLang.Mod_0') != s('type.closLang.op',sK2) <=> ~$spl131),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl131])])).
+fof(f7262,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | ($spl133 | $spl135)),
+  inference(subsumption_resolution,[],[f7261,f5175])).
+fof(f5175,plain,(
+  s('type.closLang.op','const.closLang.Less_0') != s('type.closLang.op',sK2) | $spl133),
+  inference(cnf_transformation,[],[f5175_D])).
+fof(f5175_D,plain,(
+  s('type.closLang.op','const.closLang.Less_0') != s('type.closLang.op',sK2) <=> ~$spl133),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl133])])).
+fof(f7261,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2)))) | $spl135),
+  inference(subsumption_resolution,[],[f7260,f5177])).
+fof(f5177,plain,(
+  s('type.closLang.op','const.closLang.LessEq_0') != s('type.closLang.op',sK2) | $spl135),
+  inference(cnf_transformation,[],[f5177_D])).
+fof(f5177_D,plain,(
+  s('type.closLang.op','const.closLang.LessEq_0') != s('type.closLang.op',sK2) <=> ~$spl135),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl135])])).
+fof(f7260,plain,(
+  s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2))))),
+  inference(subsumption_resolution,[],[f7208,f98])).
+fof(f7208,plain,(
+  p(s(bool,'F_0')) | s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(sK2)),s('type.ast.opw',sK14(sK2)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(sK2)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(sK2)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(sK2)),s('type.num.num',sK8(sK2)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(sK2)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(sK2)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',sK2) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',sK2) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(sK2)))) | s('type.closLang.op',sK2) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(sK2))))),
+  inference(superposition,[],[f550,f191])).
+fof(f550,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op',X0)))) | s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(X0)),s('type.ast.opw',sK14(X0)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(X0)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(X0)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(X0)),s('type.num.num',sK8(X0)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(X0)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(X0)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(X0))))) )),
+  inference(superposition,[],[f92,f101])).
+fof(f101,plain,(
+  ( ! [X0] : (s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',sK15(X0)),s('type.ast.shift',sK16(X0)),s('type.num.num',sK17(X0)))) | s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(X0)),s('type.ast.opw',sK14(X0)))) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(X0)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(X0)))) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(X0)),s('type.num.num',sK8(X0)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(X0)))) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(X0)))) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(X0))))) )),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  ! [X0] : (s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',sK3(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',sK4(X0)))) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',sK5(X0)))) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',sK6(X0)))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',sK7(X0)),s('type.num.num',sK8(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',sK9(X0)))) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',sK10(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',sK11(X0)))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',sK12(X0)))) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',X0) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',sK13(X0)),s('type.ast.opw',sK14(X0)))) | s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',sK15(X0)),s('type.ast.shift',sK16(X0)),s('type.num.num',sK17(X0)))) | s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',X0))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6,sK7,sK8,sK9,sK10,sK11,sK12,sK13,sK14,sK15,sK16,sK17])],[f20])).
+fof(f20,plain,(
+  ! [X0] : (? [X15] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X15))) | ? [X14] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X14))) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',X0) | ? [X13] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X13))) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',X0) | ? [X12] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X12))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',X0) | ? [X10,X11] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X10),s('type.num.num',X11))) | ? [X9] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X9))) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',X0) | ? [X8] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X8))) | ? [X7] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X7))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',X0) | ? [X6] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X6))) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',X0) | ? [X4,X5] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X4),s('type.ast.opw',X5))) | ? [X1,X2,X3] : s('type.closLang.op',X0) = s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X1),s('type.ast.shift',X2),s('type.num.num',X3))) | s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',X0) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',X0))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X23] : (? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.Global_1'(s('type.num.num',X7))) | ? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.SetGlobal_1'(s('type.num.num',X7))) | s('type.closLang.op','const.closLang.AllocGlobal_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.GlobalsPtr_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.SetGlobalsPtr_0') = s('type.closLang.op',X23) | ? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.Cons_1'(s('type.num.num',X7))) | s('type.closLang.op','const.closLang.El_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.LengthBlock_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Length_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.LengthByte_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.RefByte_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.RefArray_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.DerefByte_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.UpdateByte_0') = s('type.closLang.op',X23) | ? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.FromList_1'(s('type.num.num',X7))) | s('type.closLang.op','const.closLang.ToList_0') = s('type.closLang.op',X23) | ? [X7,X24] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.TagLenEq_2'(s('type.num.num',X7),s('type.num.num',X24))) | ? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.TagEq_1'(s('type.num.num',X7))) | s('type.closLang.op','const.closLang.BlockCmp_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.IsBlock_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Ref_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Deref_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Update_0') = s('type.closLang.op',X23) | ? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.Label_1'(s('type.num.num',X7))) | ? [X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.FFI_1'(s('type.num.num',X7))) | s('type.closLang.op','const.closLang.Equal_0') = s('type.closLang.op',X23) | ? [X25] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int',X25))) | s('type.closLang.op','const.closLang.Add_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Sub_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Mult_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Div_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Mod_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Less_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.LessEq_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.Greater_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.GreaterEq_0') = s('type.closLang.op',X23) | ? [X26,X27] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.WordOp_2'(s('type.ast.word_size',X26),s('type.ast.opw',X27))) | ? [X26,X28,X7] : s('type.closLang.op',X23) = s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X26),s('type.ast.shift',X28),s('type.num.num',X7))) | s('type.closLang.op','const.closLang.WordFromInt_0') = s('type.closLang.op',X23) | s('type.closLang.op','const.closLang.WordToInt_0') = s('type.closLang.op',X23))),
+  file('thm.clos_knownProof.op_gbag_ind','thm.closLang.op_nchotomy')).
+fof(f92,plain,(
+  ( ! [X4,X2,X3] : (p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.WordShift_3'(s('type.ast.word_size',X2),s('type.ast.shift',X3),s('type.num.num',X4))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f7875,plain,(
+  $false | $spl106),
+  inference(subsumption_resolution,[],[f7874,f155])).
+fof(f7874,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl106),
+  inference(forward_demodulation,[],[f7858,f175])).
+fof(f175,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.IsBlock_0')))),
+  inference(resolution,[],[f74,f144])).
+fof(f74,plain,(
+  p(s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.IsBlock_0'))))),
+  inference(cnf_transformation,[],[f43])).
+fof(f7858,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closLang.op',bool),sK1),s('type.closLang.op','const.closLang.IsBlock_0'))) | $spl106),
+  inference(backward_demodulation,[],[f5150,f191])).
+% SZS output end Proof for thm.clos_knownProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 348
+% Passive clauses: 1263
+% Generated clauses: 7560
+% Final active clauses: 162
+% Final passive clauses: 444
+% Input formulas: 15
+% Initial clauses: 100
+% 
+% Duplicate literals: 356
+% Trivial inequalities: 95
+% Fw subsumption resolutions: 753
+% Fw demodulations: 1495
+% Bw demodulations: 125
+% 
+% Simple tautologies: 199
+% Equational tautologies: 16
+% Forward subsumptions: 3377
+% 
+% Binary resolution: 195
+% Forward superposition: 2624
+% Backward superposition: 1472
+% Self superposition: 30
+% Equality factoring: 28
+% Equality resolution: 21
+% 
+% Split clauses: 92
+% Split components: 1103
+% SAT solver clauses: 177
+% SAT solver unit clauses: 45
+% SAT solver binary clauses: 37
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 92
+% Sat splitting refutations: 41
+% 
+% TWLsolver clauses: 176
+% TWLsolver calls for satisfiability: 86
+% 
+% Memory used [KB]: 4605
+% Time elapsed: 0.371 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.381 s

@@ -1,0 +1,196 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.exh_to_patProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.exh_to_patProof
+% SZS output start Proof for thm.exh_to_patProof
+fof(f8063,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f8059,f210,f318,f320,f189,f321])).
+fof(f321,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f321_D])).
+fof(f321_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f189,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f37])).
+fof(f37,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0',aHL_FALSITY)).
+fof(f320,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(cnf_transformation,[],[f320_D])).
+fof(f320_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f318,plain,(
+  p(s(bool,'T_0')) | $spl0),
+  inference(cnf_transformation,[],[f318_D])).
+fof(f318_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f210,plain,(
+  p(s(bool,'T_0')) | p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f129])).
+fof(f129,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')) | p(s(bool,X0))))),
+  inference(flattening,[],[f128])).
+fof(f128,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | (~p(s(bool,'F_0')) | p(s(bool,X0)))))),
+  inference(nnf_transformation,[],[f88])).
+fof(f88,plain,(
+  ! [X0] : ((~p(s(bool,'F_0')) | p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(ennf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : ((p(s(bool,'F_0')) => p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X9] : ((p(s(bool,'F_0')) => p(s(bool,X9))) <=> p(s(bool,'T_0')))),
+  file('thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0','thm.bool.IMP_CLAUSES|split|2')).
+fof(f8059,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f8058,f321])).
+fof(f8058,plain,(
+  p(s(bool,'F_0')) | $spl0),
+  inference(forward_demodulation,[],[f8057,f342])).
+fof(f342,plain,(
+  s(bool,'F_0') = s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK12)))),
+  inference(resolution,[],[f201,f182])).
+fof(f182,plain,(
+  ~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK12))))),
+  inference(cnf_transformation,[],[f117])).
+fof(f117,plain,(
+  p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK11)))) & p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK11),s('type.patSem.v',sK12)))) & ~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK12))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12])],[f81])).
+fof(f81,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X1)))) & p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X1),s('type.patSem.v',X2)))) & ~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X2)))))),
+  inference(flattening,[],[f80])).
+fof(f80,plain,(
+  ? [X0,X1,X2] : ((p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X1)))) & p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X1),s('type.patSem.v',X2))))) & ~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X2)))))),
+  inference(ennf_transformation,[],[f34])).
+fof(f34,plain,(
+  ~! [X0,X1,X2] : ((p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X1)))) & p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X1),s('type.patSem.v',X2))))) => p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ((p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X6),s('type.patSem.v',X7)))) & p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X7),s('type.patSem.v',X8))))) => p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X6),s('type.patSem.v',X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ((p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X6),s('type.patSem.v',X7)))) & p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X7),s('type.patSem.v',X8))))) => p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X6),s('type.patSem.v',X8)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0','thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0')).
+fof(f201,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f122])).
+fof(f122,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X9] : (s(bool,'F_0') = s(bool,X9) <=> ~p(s(bool,X9)))),
+  file('thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0','thm.bool.EQ_CLAUSES|split|2')).
+fof(f8057,plain,(
+  p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK12)))) | $spl0),
+  inference(subsumption_resolution,[],[f8050,f318])).
+fof(f8050,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK12)))) | $spl0),
+  inference(superposition,[],[f3099,f336])).
+fof(f336,plain,(
+  s(bool,'T_0') = s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK11),s('type.patSem.v',sK12)))),
+  inference(resolution,[],[f197,f181])).
+fof(f181,plain,(
+  p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK11),s('type.patSem.v',sK12))))),
+  inference(cnf_transformation,[],[f117])).
+fof(f197,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f120])).
+fof(f120,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X9] : (s(bool,'T_0') = s(bool,X9) <=> p(s(bool,X9)))),
+  file('thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0','thm.bool.EQ_CLAUSES|split|1')).
+fof(f3099,plain,(
+  ( ! [X0] : (~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK11),s('type.patSem.v',X0)))) | p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',X0))))) ) | $spl0),
+  inference(subsumption_resolution,[],[f3095,f318])).
+fof(f3095,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK11),s('type.patSem.v',X0)))) | p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',X0))))) )),
+  inference(superposition,[],[f229,f335])).
+fof(f335,plain,(
+  s(bool,'T_0') = s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK11)))),
+  inference(resolution,[],[f197,f180])).
+fof(f180,plain,(
+  p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',sK10),s('type.patSem.v',sK11))))),
+  inference(cnf_transformation,[],[f117])).
+fof(f229,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X1)))) | ~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X1),s('type.patSem.v',X2)))) | p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X2))))) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f91,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X1)))) | ! [X2] : (~p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X1),s('type.patSem.v',X2)))) | p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X2))))))),
+  inference(ennf_transformation,[],[f62])).
+fof(f62,plain,(
+  ! [X0,X1] : (p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X1)))) => ! [X2] : (p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X1),s('type.patSem.v',X2)))) => p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X0),s('type.patSem.v',X2))))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X13,X14] : (p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X13),s('type.patSem.v',X14)))) => ! [X15] : (p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X14),s('type.patSem.v',X15)))) => p(s(bool,'const.exh_to_patProof.v_rel_2'(s('type.patSem.v',X13),s('type.patSem.v',X15))))))),
+  file('thm.exh_to_patProof.exh_to_patProof_73_prove_ltb|split|0','thm.exh_to_patProof.v_rel_trans')).
+% SZS output end Proof for thm.exh_to_patProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 466
+% Passive clauses: 2092
+% Generated clauses: 7707
+% Final active clauses: 459
+% Final passive clauses: 1498
+% Input formulas: 32
+% Initial clauses: 135
+% 
+% Duplicate literals: 320
+% Trivial inequalities: 20
+% Fw subsumption resolutions: 913
+% Fw demodulations: 158
+% Bw demodulations: 6
+% 
+% Simple tautologies: 167
+% Equational tautologies: 33
+% Forward subsumptions: 3632
+% 
+% Binary resolution: 3183
+% Factoring: 820
+% Forward superposition: 972
+% Backward superposition: 1007
+% Self superposition: 24
+% Equality factoring: 28
+% Equality resolution: 5
+% 
+% Split clauses: 345
+% Split components: 698
+% SAT solver clauses: 509
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 70
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 345
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 507
+% TWLsolver calls for satisfiability: 229
+% 
+% Memory used [KB]: 3709
+% Time elapsed: 0.299 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.31 s

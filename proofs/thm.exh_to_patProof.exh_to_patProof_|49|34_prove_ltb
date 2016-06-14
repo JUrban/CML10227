@@ -1,0 +1,169 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.exh_to_patProof
+% (131444)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 870
+% Passive clauses: 4789
+% Generated clauses: 25392
+% Final active clauses: 799
+% Final passive clauses: 3542
+% Input formulas: 260
+% Initial clauses: 536
+% 
+% Duplicate literals: 222
+% Trivial inequalities: 44
+% Fw subsumption resolutions: 1632
+% Fw demodulations: 1494
+% Bw demodulations: 13
+% 
+% Simple tautologies: 242
+% Equational tautologies: 33
+% Forward subsumptions: 16734
+% 
+% Binary resolution: 5044
+% Factoring: 1157
+% Forward superposition: 6190
+% Backward superposition: 8859
+% Self superposition: 48
+% Equality factoring: 2
+% Equality resolution: 17
+% 
+% Split clauses: 230
+% Split components: 462
+% SAT solver clauses: 410
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 66
+% 
+% Sat splits: 230
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 410
+% TWLsolver calls for satisfiability: 348
+% 
+% Memory used [KB]: 14839
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.exh_to_patProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.exh_to_patProof
+% SZS output start Proof for thm.exh_to_patProof
+fof(f15921,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f15920,f15855,f15890,f943,f1506,f1232,f1704])).
+fof(f1704,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK100(X2,X1,X0)),s(X1,sK101(X2,X1,X0))))) ) | $spl336),
+  inference(cnf_transformation,[],[f1704_D])).
+fof(f1704_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK100(X2,X1,X0)),s(X1,sK101(X2,X1,X0))))) ) <=> ~$spl336),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl336])])).
+fof(f1232,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK100(X2,X1,X0)),s(X1,sK101(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f869])).
+fof(f869,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK100(X2,X1,X0)),s(X1,sK101(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK100,sK101])],[f464])).
+fof(f464,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f463])).
+fof(f463,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f247])).
+fof(f247,axiom,(
+  ! [X40,X42] : ! [X6] : ? [X39,X38] : s('type.pair.prod'(X40,X42),X6) = s('type.pair.prod'(X40,X42),'const.pair.,_2'(s(X40,X39),s(X42,X38)))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|34_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f1506,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X1),s('type.exhLang.exp',X2)))) ) | $spl0),
+  inference(cnf_transformation,[],[f1506_D])).
+fof(f1506_D,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X1),s('type.exhLang.exp',X2)))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f943,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X1),s('type.exhLang.exp',X2)))) )),
+  inference(cnf_transformation,[],[f750])).
+fof(f750,plain,(
+  ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X1),s('type.exhLang.exp',X2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK20])],[f668])).
+fof(f668,plain,(
+  ? [X0] : ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X0) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X1),s('type.exhLang.exp',X2)))),
+  inference(ennf_transformation,[],[f262])).
+fof(f262,plain,(
+  ~! [X0] : ? [X1,X2] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X0) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X1),s('type.exhLang.exp',X2)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ? [X7,X8] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X6) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X7),s('type.exhLang.exp',X8)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ? [X7,X8] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X6) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),X7),s('type.exhLang.exp',X8)))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|34_prove_ltb','thm.exh_to_patProof.exh_to_patProof_|49|34_prove_ltb')).
+fof(f15890,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X0)) ) | $spl4350),
+  inference(cnf_transformation,[],[f15890_D])).
+fof(f15890_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X0)) ) <=> ~$spl4350),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4350])])).
+fof(f15855,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),sK20) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.exhSem.v')),'type.exhLang.exp'),X0)) ) | ($spl0 | $spl336)),
+  inference(superposition,[],[f1506,f1704])).
+fof(f15920,plain,(
+  $false | $spl4350),
+  inference(equality_resolution,[],[f15890])).
+% SZS output end Proof for thm.exh_to_patProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 462
+% Passive clauses: 2295
+% Generated clauses: 15141
+% Final active clauses: 440
+% Final passive clauses: 1581
+% Input formulas: 260
+% Initial clauses: 536
+% 
+% Duplicate literals: 102
+% Trivial inequalities: 35
+% Fw subsumption resolutions: 676
+% Fw demodulations: 1210
+% Bw demodulations: 265
+% Condensations: 120
+% Global subsumptions: 25
+% 
+% Simple tautologies: 243
+% Equational tautologies: 21
+% Forward subsumptions: 7488
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 1693
+% Factoring: 288
+% Forward superposition: 4112
+% Backward superposition: 3591
+% Self superposition: 73
+% Equality factoring: 2
+% Equality resolution: 18
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 3392
+% SAT solver unit clauses: 670
+% SAT solver binary clauses: 202
+% SAT solver learnt clauses: 53
+% SAT solver learnt literals: 17
+% 
+% Sat splits: 2
+% Sat splitting refutations: 19
+% 
+% TWLsolver clauses: 3289
+% TWLsolver calls for satisfiability: 7632
+% 
+% Memory used [KB]: 16758
+% Time elapsed: 0.602 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.24 s

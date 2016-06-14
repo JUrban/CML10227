@@ -1,0 +1,221 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.patProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.patProps
+% SZS output start Proof for thm.patProps
+fof(f20069,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f20068,f165,f265,f173,f268,f199,f267,f272])).
+fof(f272,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))) ) | $spl10),
+  inference(cnf_transformation,[],[f272_D])).
+fof(f272_D,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))) ) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f267,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(cnf_transformation,[],[f267_D])).
+fof(f267_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f199,plain,(
+  ( ! [X0] : (p(s(bool,'F_0')) | s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f134])).
+fof(f134,plain,(
+  ! [X0] : ((s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))))),
+  inference(nnf_transformation,[],[f92])).
+fof(f92,plain,(
+  ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))) <=> p(s(bool,'F_0')))),
+  inference(rectify,[],[f54])).
+fof(f54,axiom,(
+  ! [X11] : (s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X11))) <=> p(s(bool,'F_0')))),
+  file('thm.patProps.Boolv_disjoint','thm.numeral.numeral_eq|split|1')).
+fof(f268,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f268_D])).
+fof(f268_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f173,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f68])).
+fof(f68,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.patProps.Boolv_disjoint',aHL_FALSITY)).
+fof(f265,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) | $spl0),
+  inference(cnf_transformation,[],[f265_D])).
+fof(f265_D,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f165,plain,(
+  p(s(bool,'F_0')) | s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0')))),
+  inference(cnf_transformation,[],[f132])).
+fof(f132,plain,(
+  (s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) | p(s(bool,'F_0'))) & (s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) != s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f130])).
+fof(f130,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) <~> p(s(bool,'F_0'))),
+  inference(ennf_transformation,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~(s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) <=> p(s(bool,'F_0')))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) <=> p(s(bool,'F_0'))),
+  file('thm.patProps.Boolv_disjoint','thm.patProps.Boolv_disjoint')).
+fof(f20068,plain,(
+  $false | ($spl0 | $spl10)),
+  inference(subsumption_resolution,[],[f20044,f728])).
+fof(f728,plain,(
+  s('type.num.num','const.conLang.true_tag_0') != s('type.num.num','const.conLang.false_tag_0') | $spl10),
+  inference(subsumption_resolution,[],[f720,f272])).
+fof(f720,plain,(
+  s('type.num.num','const.conLang.true_tag_0') != s('type.num.num','const.conLang.false_tag_0') | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))),
+  inference(superposition,[],[f700,f171])).
+fof(f171,plain,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(cnf_transformation,[],[f16])).
+fof(f16,axiom,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  file('thm.patProps.Boolv_disjoint','thm.conLang.false_tag_def')).
+fof(f700,plain,(
+  ( ! [X0] : (s('type.num.num','const.conLang.true_tag_0') != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))) | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0)) )),
+  inference(forward_demodulation,[],[f205,f168])).
+fof(f168,plain,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.num.|48|_0')),
+  inference(cnf_transformation,[],[f15])).
+fof(f15,axiom,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.num.|48|_0')),
+  file('thm.patProps.Boolv_disjoint','thm.conLang.true_tag_def')).
+fof(f205,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0) | s('type.num.num','const.num.|48|_0') != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f137])).
+fof(f137,plain,(
+  ! [X0] : ((s('type.num.num','const.num.|48|_0') != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))) | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0)) & (s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num',X0) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0)))))),
+  inference(nnf_transformation,[],[f95])).
+fof(f95,plain,(
+  ! [X0] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))) <=> s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0))),
+  inference(rectify,[],[f34])).
+fof(f34,axiom,(
+  ! [X11] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X11))) <=> s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X11))),
+  file('thm.patProps.Boolv_disjoint','thm.numeral.numeral_distrib|split|17')).
+fof(f20044,plain,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.conLang.false_tag_0') | $spl0),
+  inference(trivial_inequality_removal,[],[f20043])).
+fof(f20043,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) != s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) | s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.conLang.false_tag_0') | $spl0),
+  inference(superposition,[],[f9621,f6725])).
+fof(f6725,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num','const.conLang.true_tag_0'),s('type.list.list'('type.patSem.v'),'const.list.NIL_0')))),
+  inference(superposition,[],[f195,f227])).
+fof(f227,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f106])).
+fof(f106,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f105])).
+fof(f105,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X7] : ! [X9,X10] : s(X7,X9) = s(X7,'const.bool.COND_3'(s(bool,'T_0'),s(X7,X9),s(X7,X10)))),
+  file('thm.patProps.Boolv_disjoint','thm.bool.COND_CLAUSES|split|0')).
+fof(f195,plain,(
+  ( ! [X0] : (s('type.patSem.v','const.patSem.Boolv_1'(s(bool,X0))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.patSem.v'),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f90])).
+fof(f90,plain,(
+  ! [X0] : s('type.patSem.v','const.patSem.Boolv_1'(s(bool,X0))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.patSem.v'),'const.list.NIL_0')))),
+  inference(rectify,[],[f67])).
+fof(f67,axiom,(
+  ! [X21] : s('type.patSem.v','const.patSem.Boolv_1'(s(bool,X21))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num','const.bool.COND_3'(s(bool,X21),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.patSem.v'),'const.list.NIL_0')))),
+  file('thm.patProps.Boolv_disjoint','thm.patSem.Boolv_def')).
+fof(f9621,plain,(
+  ( ! [X4,X3] : (s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) != s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X3),s('type.list.list'('type.patSem.v'),X4))) | s('type.num.num','const.conLang.false_tag_0') = s('type.num.num',X3)) ) | $spl0),
+  inference(superposition,[],[f254,f6730])).
+fof(f6730,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'T_0'))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num','const.conLang.false_tag_0'),s('type.list.list'('type.patSem.v'),'const.list.NIL_0'))) | $spl0),
+  inference(forward_demodulation,[],[f6724,f265])).
+fof(f6724,plain,(
+  s('type.patSem.v','const.patSem.Boolv_1'(s(bool,'F_0'))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num','const.conLang.false_tag_0'),s('type.list.list'('type.patSem.v'),'const.list.NIL_0')))),
+  inference(superposition,[],[f195,f226])).
+fof(f226,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X0,X1,X2] : s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f103])).
+fof(f103,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X7] : ! [X9,X10] : s(X7,X10) = s(X7,'const.bool.COND_3'(s(bool,'F_0'),s(X7,X9),s(X7,X10)))),
+  file('thm.patProps.Boolv_disjoint','thm.bool.COND_CLAUSES|split|1')).
+fof(f254,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X0),s('type.list.list'('type.patSem.v'),X1))) != s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X2),s('type.list.list'('type.patSem.v'),X3))) | s('type.num.num',X0) = s('type.num.num',X2)) )),
+  inference(cnf_transformation,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X0),s('type.list.list'('type.patSem.v'),X1))) != s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X2),s('type.list.list'('type.patSem.v'),X3))) | (s('type.num.num',X0) = s('type.num.num',X2) & s('type.list.list'('type.patSem.v'),X1) = s('type.list.list'('type.patSem.v'),X3))) & (s('type.num.num',X0) != s('type.num.num',X2) | s('type.list.list'('type.patSem.v'),X1) != s('type.list.list'('type.patSem.v'),X3) | s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X0),s('type.list.list'('type.patSem.v'),X1))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X2),s('type.list.list'('type.patSem.v'),X3)))))),
+  inference(flattening,[],[f159])).
+fof(f159,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X0),s('type.list.list'('type.patSem.v'),X1))) != s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X2),s('type.list.list'('type.patSem.v'),X3))) | (s('type.num.num',X0) = s('type.num.num',X2) & s('type.list.list'('type.patSem.v'),X1) = s('type.list.list'('type.patSem.v'),X3))) & ((s('type.num.num',X0) != s('type.num.num',X2) | s('type.list.list'('type.patSem.v'),X1) != s('type.list.list'('type.patSem.v'),X3)) | s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X0),s('type.list.list'('type.patSem.v'),X1))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X2),s('type.list.list'('type.patSem.v'),X3)))))),
+  inference(nnf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2,X3] : (s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X0),s('type.list.list'('type.patSem.v'),X1))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X2),s('type.list.list'('type.patSem.v'),X3))) <=> (s('type.num.num',X0) = s('type.num.num',X2) & s('type.list.list'('type.patSem.v'),X1) = s('type.list.list'('type.patSem.v'),X3)))),
+  inference(rectify,[],[f62])).
+fof(f62,axiom,(
+  ! [X15,X16,X17,X18] : (s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X15),s('type.list.list'('type.patSem.v'),X16))) = s('type.patSem.v','const.patSem.Conv_2'(s('type.num.num',X17),s('type.list.list'('type.patSem.v'),X18))) <=> (s('type.num.num',X15) = s('type.num.num',X17) & s('type.list.list'('type.patSem.v'),X16) = s('type.list.list'('type.patSem.v'),X18)))),
+  file('thm.patProps.Boolv_disjoint','thm.patSem.v_|49||49||split|1')).
+% SZS output end Proof for thm.patProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 296
+% Passive clauses: 2982
+% Generated clauses: 19804
+% Final active clauses: 234
+% Final passive clauses: 2212
+% Input formulas: 66
+% Initial clauses: 99
+% 
+% Duplicate literals: 349
+% Trivial inequalities: 315
+% Fw subsumption resolutions: 732
+% Fw demodulations: 5444
+% Bw demodulations: 42
+% 
+% Simple tautologies: 81
+% Equational tautologies: 44
+% Forward subsumptions: 10039
+% Fw demodulations to eq. taut.: 76
+% Bw demodulations to eq. taut.: 13
+% 
+% Binary resolution: 13
+% Forward superposition: 8137
+% Backward superposition: 4409
+% Self superposition: 95
+% Equality factoring: 48
+% Equality resolution: 68
+% 
+% Split clauses: 108
+% Split components: 216
+% SAT solver clauses: 188
+% SAT solver unit clauses: 2
+% SAT solver binary clauses: 35
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 108
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 187
+% TWLsolver calls for satisfiability: 39
+% 
+% Memory used [KB]: 9466
+% Time elapsed: 0.346 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.35 s

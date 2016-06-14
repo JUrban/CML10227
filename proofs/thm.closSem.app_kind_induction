@@ -1,0 +1,175 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.closSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closSem
+% SZS output start Proof for thm.closSem
+fof(f2566,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2565,f2543,f2542,f129,f181])).
+fof(f181,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f181_D])).
+fof(f181_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f129,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.closSem.app_kind_induction',aHL_FALSITY)).
+fof(f2542,plain,(
+  s('type.closSem.app_kind',sK1) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(sK1)))) | $spl30),
+  inference(cnf_transformation,[],[f2542_D])).
+fof(f2542_D,plain,(
+  s('type.closSem.app_kind',sK1) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(sK1)))) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f2543,plain,(
+  s('type.closSem.app_kind',sK1) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(sK1)))) | $spl3),
+  inference(subsumption_resolution,[],[f2519,f181])).
+fof(f2519,plain,(
+  p(s(bool,'F_0')) | s('type.closSem.app_kind',sK1) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(sK1))))),
+  inference(superposition,[],[f2325,f189])).
+fof(f189,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind',sK1)))),
+  inference(resolution,[],[f122,f141])).
+fof(f141,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X13] : (s(bool,'F_0') = s(bool,X13) <=> ~p(s(bool,X13)))),
+  file('thm.closSem.app_kind_induction','thm.bool.EQ_CLAUSES|split|3')).
+fof(f122,plain,(
+  ~p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind',sK1))))),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X5] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X5)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X2),s('type.list.list'('type.closSem.v'),X3),s('type.list.list'('type.closSem.v'),X4)))))) & ~p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind',sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f103])).
+fof(f103,plain,(
+  ? [X0] : (! [X5] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X5)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X2),s('type.list.list'('type.closSem.v'),X3),s('type.list.list'('type.closSem.v'),X4)))))) & ? [X1] : ~p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind',X1)))))),
+  inference(rectify,[],[f95])).
+fof(f95,plain,(
+  ? [X0] : (! [X4] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X4)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X1),s('type.list.list'('type.closSem.v'),X2),s('type.list.list'('type.closSem.v'),X3)))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind',X5)))))),
+  inference(flattening,[],[f94])).
+fof(f94,plain,(
+  ? [X0] : ((! [X4] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X4)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X1),s('type.list.list'('type.closSem.v'),X2),s('type.list.list'('type.closSem.v'),X3))))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind',X5)))))),
+  inference(ennf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ((! [X4] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X4)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X1),s('type.list.list'('type.closSem.v'),X2),s('type.list.list'('type.closSem.v'),X3))))))) => ! [X5] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X0),s('type.closSem.app_kind',X5)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ((! [X7] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X6),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X7)))))) & ! [X8,X9,X10] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X6),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X8),s('type.list.list'('type.closSem.v'),X9),s('type.list.list'('type.closSem.v'),X10))))))) => ! [X11] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X6),s('type.closSem.app_kind',X11)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ((! [X7] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X6),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X7)))))) & ! [X8,X9,X10] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X6),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X8),s('type.list.list'('type.closSem.v'),X9),s('type.list.list'('type.closSem.v'),X10))))))) => ! [X11] : p(s(bool,happ(s(fun('type.closSem.app_kind',bool),X6),s('type.closSem.app_kind',X11)))))),
+  file('thm.closSem.app_kind_induction','thm.closSem.app_kind_induction')).
+fof(f2325,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind',X0)))) | s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(X0))))) )),
+  inference(superposition,[],[f121,f133])).
+fof(f133,plain,(
+  ( ! [X0] : (s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',sK3(X0)),s('type.list.list'('type.closSem.v'),sK4(X0)),s('type.list.list'('type.closSem.v'),sK5(X0)))) | s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(X0))))) )),
+  inference(cnf_transformation,[],[f107])).
+fof(f107,plain,(
+  ! [X0] : (s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK2(X0)))) | s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',sK3(X0)),s('type.list.list'('type.closSem.v'),sK4(X0)),s('type.list.list'('type.closSem.v'),sK5(X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3,sK4,sK5])],[f45])).
+fof(f45,plain,(
+  ! [X0] : (? [X4] : s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X4))) | ? [X1,X2,X3] : s('type.closSem.app_kind',X0) = s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X1),s('type.list.list'('type.closSem.v'),X2),s('type.list.list'('type.closSem.v'),X3))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X44] : (? [X7] : s('type.closSem.app_kind',X44) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X7))) | ? [X8,X9,X10] : s('type.closSem.app_kind',X44) = s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X8),s('type.list.list'('type.closSem.v'),X9),s('type.list.list'('type.closSem.v'),X10))))),
+  file('thm.closSem.app_kind_induction','thm.closSem.app_kind_nchotomy')).
+fof(f121,plain,(
+  ( ! [X4,X2,X3] : (p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind','const.closSem.Full_app_3'(s('type.closLang.exp',X2),s('type.list.list'('type.closSem.v'),X3),s('type.list.list'('type.closSem.v'),X4))))))) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f2565,plain,(
+  $false | $spl30),
+  inference(subsumption_resolution,[],[f2555,f190])).
+fof(f190,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind',sK1)))),
+  inference(resolution,[],[f122,f136])).
+fof(f136,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f31])).
+fof(f31,axiom,(
+  ! [X13] : (s(bool,'T_0') = s(bool,X13) <=> p(s(bool,X13)))),
+  file('thm.closSem.app_kind_induction','thm.bool.EQ_CLAUSES|split|1')).
+fof(f2555,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind',sK1))) | $spl30),
+  inference(superposition,[],[f213,f2542])).
+fof(f213,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X0)))))) )),
+  inference(resolution,[],[f120,f137])).
+fof(f137,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f120,plain,(
+  ( ! [X5] : (p(s(bool,happ(s(fun('type.closSem.app_kind',bool),sK0),s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X5))))))) )),
+  inference(cnf_transformation,[],[f104])).
+% SZS output end Proof for thm.closSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 51
+% Passive clauses: 546
+% Generated clauses: 2391
+% Final active clauses: 49
+% Final passive clauses: 457
+% Input formulas: 37
+% Initial clauses: 58
+% 
+% Duplicate literals: 139
+% Trivial inequalities: 42
+% Fw subsumption resolutions: 213
+% Fw demodulations: 196
+% Bw demodulations: 2
+% 
+% Simple tautologies: 92
+% Equational tautologies: 30
+% Forward subsumptions: 1117
+% 
+% Binary resolution: 78
+% Factoring: 1
+% Forward superposition: 675
+% Backward superposition: 853
+% Self superposition: 58
+% Equality factoring: 54
+% Equality resolution: 9
+% 
+% Split clauses: 30
+% Split components: 60
+% SAT solver clauses: 55
+% SAT solver unit clauses: 7
+% SAT solver binary clauses: 35
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 30
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 54
+% TWLsolver calls for satisfiability: 21
+% 
+% Memory used [KB]: 2046
+% Time elapsed: 0.111 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.095 s

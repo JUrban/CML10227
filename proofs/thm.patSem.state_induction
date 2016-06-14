@@ -1,0 +1,143 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.patSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.patSem
+% SZS output start Proof for thm.patSem
+fof(f9658,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f9644,f241,f348])).
+fof(f348,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f348_D])).
+fof(f348_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f241,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.patSem.state_induction',aHL_FALSITY)).
+fof(f9644,plain,(
+  $false | $spl5),
+  inference(subsumption_resolution,[],[f9625,f348])).
+fof(f9625,plain,(
+  p(s(bool,'F_0'))),
+  inference(superposition,[],[f9505,f366])).
+fof(f366,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.patSem.state'(sK0),bool),sK1),s('type.patSem.state'(sK0),sK2)))),
+  inference(resolution,[],[f238,f249])).
+fof(f249,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f203])).
+fof(f203,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f78])).
+fof(f78,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f77])).
+fof(f77,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X16] : (s(bool,'F_0') = s(bool,X16) <=> ~p(s(bool,X16)))),
+  file('thm.patSem.state_induction','thm.bool.EQ_CLAUSES|split|2')).
+fof(f238,plain,(
+  ~p(s(bool,happ(s(fun('type.patSem.state'(sK0),bool),sK1),s('type.patSem.state'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f200])).
+fof(f200,plain,(
+  ! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.patSem.state'(sK0),bool),sK1),s('type.patSem.state'(sK0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X4),s('type.ffi.ffi_state'(sK0),X5),s('type.list.list'('type.option.option'('type.patSem.v')),X6)))))) & ~p(s(bool,happ(s(fun('type.patSem.state'(sK0),bool),sK1),s('type.patSem.state'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f199])).
+fof(f199,plain,(
+  ? [X0,X1] : (! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X4),s('type.ffi.ffi_state'(X0),X5),s('type.list.list'('type.option.option'('type.patSem.v')),X6)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),X2)))))),
+  inference(rectify,[],[f192])).
+fof(f192,plain,(
+  ? [X0,X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.patSem.v')),X5)))))) & ? [X6] : ~p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),X6)))))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.patSem.v')),X5)))))) => ! [X6] : p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),X6)))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0] : ! [X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.patSem.v')),X5)))))) => ! [X6] : p(s(bool,happ(s(fun('type.patSem.state'(X0),bool),X1),s('type.patSem.state'(X0),X6)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.patSem.state'(X6),bool),X7),s('type.patSem.state'(X6),'const.patSem.recordtype|46|state_4'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s('type.list.list'('type.option.option'('type.patSem.v')),X11)))))) => ! [X12] : p(s(bool,happ(s(fun('type.patSem.state'(X6),bool),X7),s('type.patSem.state'(X6),X12)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.patSem.state'(X6),bool),X7),s('type.patSem.state'(X6),'const.patSem.recordtype|46|state_4'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s('type.list.list'('type.option.option'('type.patSem.v')),X11)))))) => ! [X12] : p(s(bool,happ(s(fun('type.patSem.state'(X6),bool),X7),s('type.patSem.state'(X6),X12)))))),
+  file('thm.patSem.state_induction','thm.patSem.state_induction')).
+fof(f9505,plain,(
+  ( ! [X8] : (p(s(bool,happ(s(fun('type.patSem.state'(sK0),bool),sK1),s('type.patSem.state'(sK0),X8))))) )),
+  inference(superposition,[],[f237,f271])).
+fof(f271,plain,(
+  ( ! [X0,X1] : (s('type.patSem.state'(X0),X1) = s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',sK3(X1,X0)),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),sK4(X1,X0)),s('type.ffi.ffi_state'(X0),sK5(X1,X0)),s('type.list.list'('type.option.option'('type.patSem.v')),sK6(X1,X0))))) )),
+  inference(cnf_transformation,[],[f218])).
+fof(f218,plain,(
+  ! [X0,X1] : s('type.patSem.state'(X0),X1) = s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',sK3(X1,X0)),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),sK4(X1,X0)),s('type.ffi.ffi_state'(X0),sK5(X1,X0)),s('type.list.list'('type.option.option'('type.patSem.v')),sK6(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6])],[f90])).
+fof(f90,plain,(
+  ! [X0,X1] : ? [X2,X3,X4,X5] : s('type.patSem.state'(X0),X1) = s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.patSem.v')),X5)))),
+  inference(flattening,[],[f89])).
+fof(f89,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3,X4,X5] : s('type.patSem.state'(X0),X1) = s('type.patSem.state'(X0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.patSem.v')),X5)))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X6] : ! [X48] : ? [X8,X9,X10,X11] : s('type.patSem.state'(X6),X48) = s('type.patSem.state'(X6),'const.patSem.recordtype|46|state_4'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s('type.list.list'('type.option.option'('type.patSem.v')),X11)))),
+  file('thm.patSem.state_induction','thm.patSem.state_nchotomy')).
+fof(f237,plain,(
+  ( ! [X6,X4,X5,X3] : (p(s(bool,happ(s(fun('type.patSem.state'(sK0),bool),sK1),s('type.patSem.state'(sK0),'const.patSem.recordtype|46|state_4'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.patSem.v')),X4),s('type.ffi.ffi_state'(sK0),X5),s('type.list.list'('type.option.option'('type.patSem.v')),X6))))))) )),
+  inference(cnf_transformation,[],[f200])).
+% SZS output end Proof for thm.patSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 119
+% Passive clauses: 1361
+% Generated clauses: 9284
+% Final active clauses: 96
+% Final passive clauses: 1068
+% Input formulas: 69
+% Initial clauses: 105
+% 
+% Duplicate literals: 416
+% Trivial inequalities: 176
+% Fw subsumption resolutions: 800
+% Fw demodulations: 839
+% Bw demodulations: 20
+% 
+% Simple tautologies: 199
+% Equational tautologies: 41
+% Forward subsumptions: 5395
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 201
+% Factoring: 1
+% Forward superposition: 3751
+% Backward superposition: 2738
+% Self superposition: 106
+% Equality factoring: 64
+% Equality resolution: 23
+% 
+% Split clauses: 84
+% Split components: 170
+% SAT solver clauses: 217
+% SAT solver unit clauses: 20
+% SAT solver binary clauses: 79
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 84
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 211
+% TWLsolver calls for satisfiability: 102
+% 
+% Memory used [KB]: 6396
+% Time elapsed: 0.243 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.25 s

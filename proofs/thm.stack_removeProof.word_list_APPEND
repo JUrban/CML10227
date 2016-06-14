@@ -1,0 +1,264 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stack_removeProof
+% (129864)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 1034
+% Passive clauses: 7345
+% Generated clauses: 28062
+% Final active clauses: 984
+% Final passive clauses: 6061
+% Input formulas: 260
+% Initial clauses: 504
+% 
+% Duplicate literals: 155
+% Trivial inequalities: 59
+% Fw subsumption resolutions: 2050
+% Fw demodulations: 2168
+% Bw demodulations: 45
+% 
+% Simple tautologies: 257
+% Equational tautologies: 24
+% Forward subsumptions: 15660
+% Fw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 6945
+% Factoring: 381
+% Forward superposition: 7317
+% Backward superposition: 8210
+% Self superposition: 46
+% Equality factoring: 2
+% Equality resolution: 8
+% 
+% Split clauses: 373
+% Split components: 780
+% SAT solver clauses: 543
+% SAT solver unit clauses: 19
+% SAT solver binary clauses: 103
+% 
+% Sat splits: 373
+% 
+% TWLsolver clauses: 527
+% TWLsolver calls for satisfiability: 334
+% 
+% Memory used [KB]: 16119
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stack_removeProof
+% (129974)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 337
+% Generated clauses: 1617
+% Final passive clauses: 316
+% Input formulas: 260
+% Initial clauses: 504
+% 
+% Duplicate literals: 30
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 58
+% Fw demodulations: 524
+% Bw demodulations: 21
+% Condensations: 41
+% Global subsumptions: 29
+% 
+% Simple tautologies: 90
+% Equational tautologies: 2
+% Forward subsumptions: 2
+% 
+% Split clauses: 34
+% Split components: 80
+% SAT solver clauses: 1036
+% SAT solver unit clauses: 650
+% SAT solver binary clauses: 125
+% SAT solver learnt clauses: 58
+% SAT solver learnt literals: 432
+% 
+% Sat splits: 34
+% 
+% TWLsolver clauses: 930
+% TWLsolver calls for satisfiability: 67690
+% 
+% Memory used [KB]: 9083
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.stack_removeProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stack_removeProof
+% SZS output start Proof for thm.stack_removeProof
+fof(f61738,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f61737,f27427])).
+fof(f27427,plain,(
+  ( ! [X0,X3] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X3))),s(X0,X3))))) )),
+  inference(forward_demodulation,[],[f27426,f1330])).
+fof(f1330,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))) )),
+  inference(cnf_transformation,[],[f606])).
+fof(f606,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))),
+  inference(flattening,[],[f605])).
+fof(f605,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X59,X60,X61] : ! [X62,X63,X64] : s(X59,happ(s(fun(X60,X59),'_dst_x1x0_2'(s(fun(X60,fun(X61,X59)),X62),s(X61,X63))),s(X60,X64))) = s(X59,happ(s(fun(X61,X59),happ(s(fun(X60,fun(X61,X59)),X62),s(X60,X64))),s(X61,X63)))),
+  file('thm.stack_removeProof.word_list_APPEND','_dst_x1x0_ax')).
+fof(f27426,plain,(
+  ( ! [X0,X3] : (p(s(bool,happ(s(fun(X0,bool),'_dst_x1x0_2'(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X3))),s(X0,X3))))) )),
+  inference(forward_demodulation,[],[f27425,f1212])).
+fof(f1212,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun('type.list.list'(X1),X0),sK33(X3,X2,X1,X0)),s('type.list.list'(X1),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f792])).
+fof(f792,plain,(
+  ! [X0,X1,X2,X3] : (s(X0,X2) = s(X0,happ(s(fun('type.list.list'(X1),X0),sK33(X3,X2,X1,X0)),s('type.list.list'(X1),'const.list.NIL_0'))) & ! [X5,X6] : s(X0,happ(s(fun('type.list.list'(X1),X0),sK33(X3,X2,X1,X0)),s('type.list.list'(X1),'const.list.CONS_2'(s(X1,X5),s('type.list.list'(X1),X6))))) = s(X0,happ(s(fun(X0,X0),happ(s(fun('type.list.list'(X1),fun(X0,X0)),happ(s(fun(X1,fun('type.list.list'(X1),fun(X0,X0))),X3),s(X1,X5))),s('type.list.list'(X1),X6))),s(X0,happ(s(fun('type.list.list'(X1),X0),sK33(X3,X2,X1,X0)),s('type.list.list'(X1),X6))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK33])],[f564])).
+fof(f564,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : (s(X0,X2) = s(X0,happ(s(fun('type.list.list'(X1),X0),X4),s('type.list.list'(X1),'const.list.NIL_0'))) & ! [X5,X6] : s(X0,happ(s(fun('type.list.list'(X1),X0),X4),s('type.list.list'(X1),'const.list.CONS_2'(s(X1,X5),s('type.list.list'(X1),X6))))) = s(X0,happ(s(fun(X0,X0),happ(s(fun('type.list.list'(X1),fun(X0,X0)),happ(s(fun(X1,fun('type.list.list'(X1),fun(X0,X0))),X3),s(X1,X5))),s('type.list.list'(X1),X6))),s(X0,happ(s(fun('type.list.list'(X1),X0),X4),s('type.list.list'(X1),X6))))))),
+  inference(flattening,[],[f563])).
+fof(f563,plain,(
+  ! [X0,X1] : ! [X2,X3] : ? [X4] : (s(X0,X2) = s(X0,happ(s(fun('type.list.list'(X1),X0),X4),s('type.list.list'(X1),'const.list.NIL_0'))) & ! [X5,X6] : s(X0,happ(s(fun('type.list.list'(X1),X0),X4),s('type.list.list'(X1),'const.list.CONS_2'(s(X1,X5),s('type.list.list'(X1),X6))))) = s(X0,happ(s(fun(X0,X0),happ(s(fun('type.list.list'(X1),fun(X0,X0)),happ(s(fun(X1,fun('type.list.list'(X1),fun(X0,X0))),X3),s(X1,X5))),s('type.list.list'(X1),X6))),s(X0,happ(s(fun('type.list.list'(X1),X0),X4),s('type.list.list'(X1),X6))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X7] : ! [X11,X12] : ? [X13] : (s(X6,X11) = s(X6,happ(s(fun('type.list.list'(X7),X6),X13),s('type.list.list'(X7),'const.list.NIL_0'))) & ! [X14,X15] : s(X6,happ(s(fun('type.list.list'(X7),X6),X13),s('type.list.list'(X7),'const.list.CONS_2'(s(X7,X14),s('type.list.list'(X7),X15))))) = s(X6,happ(s(fun(X6,X6),happ(s(fun('type.list.list'(X7),fun(X6,X6)),happ(s(fun(X7,fun('type.list.list'(X7),fun(X6,X6))),X12),s(X7,X14))),s('type.list.list'(X7),X15))),s(X6,happ(s(fun('type.list.list'(X7),X6),X13),s('type.list.list'(X7),X15))))))),
+  file('thm.stack_removeProof.word_list_APPEND','thm.list.list_Axiom')).
+fof(f27425,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun(X0,bool),'_dst_x1x0_2'(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X3))),s(X0,happ(s(fun('type.list.list'(X1),X0),sK33(X2,X3,X1,X0)),s('type.list.list'(X1),'const.list.NIL_0'))))))) )),
+  inference(forward_demodulation,[],[f26856,f1330])).
+fof(f26856,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,happ(s(fun('type.list.list'(X1),X0),sK33(X2,X3,X1,X0)),s('type.list.list'(X1),'const.list.NIL_0'))))),s(X0,X3))))) )),
+  inference(unit_resulting_resolution,[],[f1212,f1253])).
+fof(f1253,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f801])).
+fof(f801,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f593])).
+fof(f593,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f64])).
+fof(f64,axiom,(
+  ! [X73,X74,X75] : (p(s(bool,happ(s(fun(X73,bool),happ(s(fun(X73,fun(X73,bool)),'=_0'),s(X73,X74))),s(X73,X75)))) <=> s(X73,X74) = s(X73,X75))),
+  file('thm.stack_removeProof.word_list_APPEND',arity_0_HL_EQ)).
+fof(f61737,plain,(
+  ~p(s(bool,happ(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool),happ(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool)),'=_0'),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))))))),
+  inference(forward_demodulation,[],[f61736,f1330])).
+fof(f61736,plain,(
+  ~p(s(bool,happ(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool),'_dst_x1x0_2'(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool)),'=_0'),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))))))),
+  inference(forward_demodulation,[],[f61735,f1594])).
+fof(f1594,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))))))),s('type.list.list'(X1),X3)))))) )),
+  inference(forward_demodulation,[],[f1217,f1019])).
+fof(f1019,plain,(
+  ( ! [X2,X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))) )),
+  inference(cnf_transformation,[],[f418])).
+fof(f418,plain,(
+  ! [X0,X1,X2] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(flattening,[],[f417])).
+fof(f417,plain,(
+  ! [X0] : ! [X1,X2] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(rectify,[],[f206])).
+fof(f206,axiom,(
+  ! [X7] : ! [X58,X49] : s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X49),s('type.fcp.cart'(bool,X7),X58))) = s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X58),s('type.fcp.cart'(bool,X7),X49)))),
+  file('thm.stack_removeProof.word_list_APPEND','thm.words.WORD_MULT_COMM')).
+fof(f1217,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))),s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'))))),s('type.list.list'(X1),X3)))))) )),
+  inference(cnf_transformation,[],[f572])).
+fof(f572,plain,(
+  ! [X0,X1,X2,X3,X4] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))),s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'))))),s('type.list.list'(X1),X3)))))),
+  inference(flattening,[],[f571])).
+fof(f571,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))),s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'))))),s('type.list.list'(X1),X3)))))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),X10),s('type.list.list'(X7),'const.list.APPEND_2'(s('type.list.list'(X7),X8),s('type.list.list'(X7),X9))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),X10),s('type.list.list'(X7),X8))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),X10),s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X7),X8))))),s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'))))),s('type.list.list'(X7),X9)))))),
+  file('thm.stack_removeProof.word_list_APPEND','thm.bvp_to_wordProps.word_list_APPEND')).
+fof(f61735,plain,(
+  ~p(s(bool,happ(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool),'_dst_x1x0_2'(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool)),'=_0'),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),sK24))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.fcp.cart'(bool,sK22),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK22),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK22),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK23),sK24))))))))),s('type.list.list'(sK23),sK25))))))))),
+  inference(forward_demodulation,[],[f61734,f1330])).
+fof(f61734,plain,(
+  ~p(s(bool,happ(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool),happ(s(fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),fun(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),bool)),'=_0'),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),sK24))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.fcp.cart'(bool,sK22),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK22),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK22),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK23),sK24))))))))),s('type.list.list'(sK23),sK25))))))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))))))),
+  inference(unit_resulting_resolution,[],[f837,f1252])).
+fof(f1252,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f801])).
+fof(f837,plain,(
+  s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))) != s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),sK24))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.fcp.cart'(bool,sK22),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK22),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK22),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK23),sK24))))))))),s('type.list.list'(sK23),sK25)))))),
+  inference(cnf_transformation,[],[f681])).
+fof(f681,plain,(
+  s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),'const.list.APPEND_2'(s('type.list.list'(sK23),sK24),s('type.list.list'(sK23),sK25))))) != s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.list.list'(sK23),sK24))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,sK22),sK23),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,sK22),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK22),sK26),s('type.fcp.cart'(bool,sK22),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK22),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK22),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK23),sK24))))))))),s('type.list.list'(sK23),sK25)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK22,sK23,sK24,sK25,sK26])],[f612])).
+fof(f612,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) != s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))))))),s('type.list.list'(X1),X3)))))),
+  inference(ennf_transformation,[],[f263])).
+fof(f263,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))))))),s('type.list.list'(X1),X3)))))),
+  inference(flattening,[],[f262])).
+fof(f262,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),'const.list.APPEND_2'(s('type.list.list'(X1),X2),s('type.list.list'(X1),X3))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),X4),s('type.list.list'(X1),X2))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X0),X1),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))))))))),s('type.list.list'(X1),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),X10),s('type.list.list'(X7),'const.list.APPEND_2'(s('type.list.list'(X7),X8),s('type.list.list'(X7),X9))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),X10),s('type.list.list'(X7),X8))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),X10),s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X7),X8))))))))),s('type.list.list'(X7),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),X10),s('type.list.list'(X7),'const.list.APPEND_2'(s('type.list.list'(X7),X8),s('type.list.list'(X7),X9))))) = s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.set_sep.STAR_2'(s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),X10),s('type.list.list'(X7),X8))),s(fun(fun('type.pair.prod'('type.fcp.cart'(bool,X6),X7),bool),bool),'const.misc.word_list_2'(s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),X10),s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X7),X8))))))))),s('type.list.list'(X7),X9)))))),
+  file('thm.stack_removeProof.word_list_APPEND','thm.stack_removeProof.word_list_APPEND')).
+% SZS output end Proof for thm.stack_removeProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 803
+% Passive clauses: 8794
+% Generated clauses: 60899
+% Final active clauses: 737
+% Final passive clauses: 7757
+% Input formulas: 260
+% Initial clauses: 504
+% 
+% Duplicate literals: 50
+% Trivial inequalities: 34
+% Fw subsumption resolutions: 251
+% Fw demodulations: 11100
+% Bw demodulations: 296
+% Condensations: 50
+% 
+% Simple tautologies: 149
+% Equational tautologies: 34
+% Forward subsumptions: 40207
+% Fw demodulations to eq. taut.: 216
+% Bw demodulations to eq. taut.: 3
+% 
+% Unit resulting resolution: 16327
+% Factoring: 2
+% Forward superposition: 16606
+% Backward superposition: 15464
+% Self superposition: 198
+% Equality factoring: 2
+% Equality resolution: 5
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 8815
+% SAT solver unit clauses: 6846
+% SAT solver binary clauses: 1003
+% 
+% Sat splits: 9
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 71768
+% Time elapsed: 2.275 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.631 s

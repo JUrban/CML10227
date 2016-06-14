@@ -1,0 +1,106 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.pegComplete
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.pegComplete
+% SZS output start Proof for thm.pegComplete
+fof(f245,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f233,f238,f236,f234,f237,f235,f239])).
+fof(f239,plain,(
+  ~p(s(bool,sK13)) | $spl3),
+  inference(cnf_transformation,[],[f239_D])).
+fof(f239_D,plain,(
+  ~p(s(bool,sK13)) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f235,plain,(
+  ~p(s(bool,sK13))),
+  inference(duplicate_literal_removal,[],[f126])).
+fof(f126,plain,(
+  ~p(s(bool,sK13)) | ~p(s(bool,sK13))),
+  inference(cnf_transformation,[],[f78])).
+fof(f78,plain,(
+  (p(s(bool,sK13)) | s(sK10,sK11) != s(sK10,sK12) | s(sK10,sK11) != s(sK10,sK12) | p(s(bool,sK13))) & ((~p(s(bool,sK13)) & s(sK10,sK11) = s(sK10,sK12)) | (s(sK10,sK11) = s(sK10,sK12) & ~p(s(bool,sK13))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13])],[f77])).
+fof(f77,plain,(
+  ? [X0,X1,X2,X3] : ((p(s(bool,X3)) | s(X0,X1) != s(X0,X2) | s(X0,X1) != s(X0,X2) | p(s(bool,X3))) & ((~p(s(bool,X3)) & s(X0,X1) = s(X0,X2)) | (s(X0,X1) = s(X0,X2) & ~p(s(bool,X3)))))),
+  inference(flattening,[],[f76])).
+fof(f76,plain,(
+  ? [X0,X1,X2,X3] : (((p(s(bool,X3)) | s(X0,X1) != s(X0,X2)) | (s(X0,X1) != s(X0,X2) | p(s(bool,X3)))) & ((~p(s(bool,X3)) & s(X0,X1) = s(X0,X2)) | (s(X0,X1) = s(X0,X2) & ~p(s(bool,X3)))))),
+  inference(nnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ? [X0,X1,X2,X3] : ((p(s(bool,X3)) | s(X0,X1) != s(X0,X2)) <~> (s(X0,X1) != s(X0,X2) | p(s(bool,X3))))),
+  inference(ennf_transformation,[],[f22])).
+fof(f22,plain,(
+  ~! [X0,X1,X2,X3] : ((p(s(bool,X3)) | s(X0,X1) != s(X0,X2)) <=> (s(X0,X1) = s(X0,X2) => p(s(bool,X3))))),
+  inference(flattening,[],[f21])).
+fof(f21,plain,(
+  ~! [X0] : ! [X1,X2,X3] : ((p(s(bool,X3)) | ~s(X0,X1) = s(X0,X2)) <=> (s(X0,X1) = s(X0,X2) => p(s(bool,X3))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : ((p(s(bool,X9)) | ~s(X6,X7) = s(X6,X8)) <=> (s(X6,X7) = s(X6,X8) => p(s(bool,X9))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : ((p(s(bool,X9)) | ~s(X6,X7) = s(X6,X8)) <=> (s(X6,X7) = s(X6,X8) => p(s(bool,X9))))),
+  file('thm.pegComplete.pegComplete_|49||48|5_prove_ltb','thm.pegComplete.pegComplete_|49||48|5_prove_ltb')).
+fof(f237,plain,(
+  s(sK10,sK11) = s(sK10,sK12) | $spl0),
+  inference(cnf_transformation,[],[f237_D])).
+fof(f237_D,plain,(
+  s(sK10,sK11) = s(sK10,sK12) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f234,plain,(
+  s(sK10,sK11) = s(sK10,sK12)),
+  inference(duplicate_literal_removal,[],[f125])).
+fof(f125,plain,(
+  s(sK10,sK11) = s(sK10,sK12) | s(sK10,sK11) = s(sK10,sK12)),
+  inference(cnf_transformation,[],[f78])).
+fof(f236,plain,(
+  s(sK10,sK11) != s(sK10,sK12) | $spl1),
+  inference(cnf_transformation,[],[f236_D])).
+fof(f236_D,plain,(
+  s(sK10,sK11) != s(sK10,sK12) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f238,plain,(
+  p(s(bool,sK13)) | $spl2),
+  inference(cnf_transformation,[],[f238_D])).
+fof(f238_D,plain,(
+  p(s(bool,sK13)) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f233,plain,(
+  p(s(bool,sK13)) | s(sK10,sK11) != s(sK10,sK12)),
+  inference(duplicate_literal_removal,[],[f123])).
+fof(f123,plain,(
+  p(s(bool,sK13)) | s(sK10,sK11) != s(sK10,sK12) | s(sK10,sK11) != s(sK10,sK12) | p(s(bool,sK13))),
+  inference(cnf_transformation,[],[f78])).
+% SZS output end Proof for thm.pegComplete
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Passive clauses: 81
+% Generated clauses: 113
+% Final passive clauses: 81
+% Input formulas: 19
+% Initial clauses: 107
+% 
+% Duplicate literals: 7
+% 
+% Simple tautologies: 16
+% 
+% Split clauses: 8
+% Split components: 16
+% SAT solver clauses: 11
+% SAT solver unit clauses: 2
+% SAT solver binary clauses: 8
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 8
+% 
+% TWLsolver clauses: 5
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.014 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.041 s

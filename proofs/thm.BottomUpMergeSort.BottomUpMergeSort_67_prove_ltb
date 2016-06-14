@@ -1,0 +1,337 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.BottomUpMergeSort
+% (54346)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 769
+% Passive clauses: 8012
+% Generated clauses: 20521
+% Final active clauses: 753
+% Final passive clauses: 6815
+% Input formulas: 39
+% Initial clauses: 167
+% 
+% Duplicate literals: 636
+% Trivial inequalities: 127
+% Fw subsumption resolutions: 2098
+% Fw demodulations: 502
+% Bw demodulations: 10
+% 
+% Simple tautologies: 251
+% Equational tautologies: 59
+% Forward subsumptions: 8019
+% 
+% Binary resolution: 9309
+% Factoring: 1431
+% Forward superposition: 3749
+% Backward superposition: 2249
+% Self superposition: 25
+% Equality factoring: 28
+% Equality resolution: 48
+% 
+% Split clauses: 752
+% Split components: 1522
+% SAT solver clauses: 1249
+% SAT solver unit clauses: 32
+% SAT solver binary clauses: 211
+% 
+% Sat splits: 752
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 1239
+% TWLsolver calls for satisfiability: 508
+% 
+% Memory used [KB]: 10234
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.BottomUpMergeSort
+% (54382)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 461
+% Passive clauses: 2529
+% Generated clauses: 12110
+% Final active clauses: 457
+% Final passive clauses: 2068
+% Input formulas: 39
+% Initial clauses: 167
+% 
+% Duplicate literals: 315
+% Trivial inequalities: 79
+% Fw subsumption resolutions: 1119
+% Fw demodulations: 393
+% Bw demodulations: 4
+% Condensations: 373
+% Global subsumptions: 13
+% 
+% Simple tautologies: 267
+% Equational tautologies: 20
+% Forward subsumptions: 3893
+% 
+% Binary resolution: 3314
+% Factoring: 274
+% Forward superposition: 1897
+% Backward superposition: 1537
+% Self superposition: 25
+% Equality factoring: 28
+% Equality resolution: 29
+% 
+% Split clauses: 116
+% Split components: 241
+% SAT solver clauses: 3283
+% SAT solver unit clauses: 163
+% SAT solver binary clauses: 77
+% SAT solver learnt clauses: 26
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 116
+% 
+% TWLsolver clauses: 3231
+% TWLsolver calls for satisfiability: 1528
+% 
+% Memory used [KB]: 14456
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.BottomUpMergeSort
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BottomUpMergeSort
+% SZS output start Proof for thm.BottomUpMergeSort
+fof(f16545,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f16544,f405])).
+fof(f405,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f224,f221])).
+fof(f221,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb',aHL_TRUTH)).
+fof(f224,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f143])).
+fof(f143,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f17])).
+fof(f17,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f16544,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f16543,f578])).
+fof(f578,plain,(
+  s(bool,'F_0') = s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)))))),
+  inference(unit_resulting_resolution,[],[f220,f239])).
+fof(f239,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X18] : (s(bool,'F_0') = s(bool,X18) <=> ~p(s(bool,X18)))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.bool.EQ_CLAUSES|split|3')).
+fof(f220,plain,(
+  ~p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))))))),
+  inference(cnf_transformation,[],[f142])).
+fof(f142,plain,(
+  p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))),s('type.num.num',sK15)))) & ~p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14,sK15])],[f99])).
+fof(f99,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'(X0)),X4))),s('type.num.num',X5)))) & ~p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'(X0)),X4)))))))),
+  inference(ennf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'(X0)),X4))),s('type.num.num',X5)))) => p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'(X0)),X4)))))))),
+  inference(flattening,[],[f41])).
+fof(f41,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4,X5] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'(X0)),X4))),s('type.num.num',X5)))) => p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'(X0)),X4)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10,X11] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X6,fun(X6,bool)),X7),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),'const.pair.,_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'(X6)),X10))),s('type.num.num',X11)))) => p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X6,fun(X6,bool)),X7),s(X6,X8),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),'const.pair.,_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'(X6)),X10)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10,X11] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X6,fun(X6,bool)),X7),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),'const.pair.,_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'(X6)),X10))),s('type.num.num',X11)))) => p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X6,fun(X6,bool)),X7),s(X6,X8),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),'const.pair.,_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'(X6)),X10)))))))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb')).
+fof(f16543,plain,(
+  p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))))))),
+  inference(subsumption_resolution,[],[f16542,f221])).
+fof(f16542,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))))))),
+  inference(forward_demodulation,[],[f16541,f1232])).
+fof(f1232,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.list.list'(sK10),X0),s('type.list.list'('type.list.list'(sK10)),sK14),s('type.num.num',sK13)))) )),
+  inference(unit_resulting_resolution,[],[f1180,f235])).
+fof(f235,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f145])).
+fof(f145,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X18] : (s(bool,'T_0') = s(bool,X18) <=> p(s(bool,X18)))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f1180,plain,(
+  ( ! [X0] : (p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.list.list'(sK10),X0),s('type.list.list'('type.list.list'(sK10)),sK14),s('type.num.num',sK13))))) )),
+  inference(subsumption_resolution,[],[f1131,f221])).
+fof(f1131,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.list.list'(sK10),X0),s('type.list.list'('type.list.list'(sK10)),sK14),s('type.num.num',sK13))))) )),
+  inference(superposition,[],[f269,f530])).
+fof(f530,plain,(
+  s(bool,'T_0') = s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))),s('type.num.num',sK15)))),
+  inference(unit_resulting_resolution,[],[f219,f235])).
+fof(f219,plain,(
+  p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))),s('type.num.num',sK15))))),
+  inference(cnf_transformation,[],[f142])).
+fof(f269,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'(X0)),X3))),s('type.num.num',X4)))) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),X5),s('type.list.list'('type.list.list'(X0)),X3),s('type.num.num',X2))))) )),
+  inference(cnf_transformation,[],[f111])).
+fof(f111,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (~p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'(X0)),X3))),s('type.num.num',X4)))) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),X5),s('type.list.list'('type.list.list'(X0)),X3),s('type.num.num',X2)))))),
+  inference(ennf_transformation,[],[f73])).
+fof(f73,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'(X0)),X3))),s('type.num.num',X4)))) => p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),X5),s('type.list.list'('type.list.list'(X0)),X3),s('type.num.num',X2)))))),
+  inference(flattening,[],[f72])).
+fof(f72,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X0,fun(X0,bool)),X1),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'(X0)),X3))),s('type.num.num',X4)))) => p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),X5),s('type.list.list'('type.list.list'(X0)),X3),s('type.num.num',X2)))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X7,X9,X10,X11,X17] : (p(s(bool,'const.BottomUpMergeSort.sortable_inv_3'(s(fun(X6,fun(X6,bool)),X7),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),'const.pair.,_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'(X6)),X10))),s('type.num.num',X11)))) => p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X6,fun(X6,bool)),X7),s('type.list.list'(X6),X17),s('type.list.list'('type.list.list'(X6)),X10),s('type.num.num',X9)))))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.BottomUpMergeSort.BottomUpMergeSort_66_prove_ltb')).
+fof(f16541,plain,(
+  ~p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.list.list'(sK10),'const.list.CONS_2'(s(sK10,sK12),s('type.list.list'(sK10),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(sK10)),sK14),s('type.num.num',sK13)))) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))))))),
+  inference(forward_demodulation,[],[f16443,f15361])).
+fof(f15361,plain,(
+  s('type.list.list'('type.list.list'(sK10)),sK14) = s('type.list.list'('type.list.list'(sK10)),sK18('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10))),
+  inference(unit_resulting_resolution,[],[f1498,f307])).
+fof(f307,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X1,X3) = s(X1,X5)) )),
+  inference(cnf_transformation,[],[f184])).
+fof(f184,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5))) & (s(X0,X2) != s(X0,X4) | s(X1,X3) != s(X1,X5) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))))),
+  inference(flattening,[],[f183])).
+fof(f183,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5))) & ((s(X0,X2) != s(X0,X4) | s(X1,X3) != s(X1,X5)) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))))),
+  inference(nnf_transformation,[],[f89])).
+fof(f89,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) <=> (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5)))),
+  inference(flattening,[],[f88])).
+fof(f88,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) <=> (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X6,X20] : ! [X8,X19,X29,X30] : (s('type.pair.prod'(X6,X20),'const.pair.,_2'(s(X6,X8),s(X20,X19))) = s('type.pair.prod'(X6,X20),'const.pair.,_2'(s(X6,X29),s(X20,X30))) <=> (s(X6,X8) = s(X6,X29) & s(X20,X19) = s(X20,X30)))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.pair.CLOSED_PAIR_EQ')).
+fof(f1498,plain,(
+  s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK17('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10)),s('type.list.list'('type.list.list'(sK10)),sK18('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10))))),
+  inference(subsumption_resolution,[],[f1443,f405])).
+fof(f1443,plain,(
+  p(s(bool,'F_0')) | s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK17('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10)),s('type.list.list'('type.list.list'(sK10)),sK18('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10))))),
+  inference(superposition,[],[f267,f578])).
+fof(f267,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) | s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',sK17(X3,X2,X1,X0)),s('type.list.list'('type.list.list'(X0)),sK18(X3,X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f167])).
+fof(f167,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) | ! [X6,X7] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) != s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X6),s('type.list.list'('type.list.list'(X0)),X7))) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X7),s('type.num.num',X6)))))) & ((s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',sK17(X3,X2,X1,X0)),s('type.list.list'('type.list.list'(X0)),sK18(X3,X2,X1,X0)))) & ~p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),sK18(X3,X2,X1,X0)),s('type.num.num',sK17(X3,X2,X1,X0)))))) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK17,sK18])],[f166])).
+fof(f166,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) | ! [X6,X7] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) != s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X6),s('type.list.list'('type.list.list'(X0)),X7))) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X7),s('type.num.num',X6)))))) & (? [X4,X5] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X4),s('type.list.list'('type.list.list'(X0)),X5))) & ~p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X5),s('type.num.num',X4))))) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3))))))),
+  inference(rectify,[],[f165])).
+fof(f165,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) | ! [X4,X5] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) != s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X4),s('type.list.list'('type.list.list'(X0)),X5))) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X5),s('type.num.num',X4)))))) & (? [X4,X5] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X4),s('type.list.list'('type.list.list'(X0)),X5))) & ~p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X5),s('type.num.num',X4))))) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3))))))),
+  inference(nnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) <=> ! [X4,X5] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) != s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X4),s('type.list.list'('type.list.list'(X0)),X5))) | p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X5),s('type.num.num',X4))))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) <=> ! [X4,X5] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X4),s('type.list.list'('type.list.list'(X0)),X5))) => p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X5),s('type.num.num',X4))))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ! [X0] : ! [X1,X2,X3] : (p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3)))) <=> ! [X4,X5] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),'const.pair.,_2'(s('type.num.num',X4),s('type.list.list'('type.list.list'(X0)),X5))) => p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),X5),s('type.num.num',X4))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X12,X13,X14] : (p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X6,fun(X6,bool)),X12),s(X6,X13),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),X14)))) <=> ! [X15,X16] : (s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),X14) = s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X6))),'const.pair.,_2'(s('type.num.num',X15),s('type.list.list'('type.list.list'(X6)),X16))) => p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X6,fun(X6,bool)),X12),s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X13),s('type.list.list'(X6),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X6)),X16),s('type.num.num',X15))))))),
+  file('thm.BottomUpMergeSort.BottomUpMergeSort_67_prove_ltb','thm.BottomUpMergeSort.add_side_def')).
+fof(f16443,plain,(
+  ~p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(sK10,fun(sK10,bool)),sK11),s('type.list.list'(sK10),'const.list.CONS_2'(s(sK10,sK12),s('type.list.list'(sK10),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(sK10)),sK18('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10)),s('type.num.num',sK13)))) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(sK10,fun(sK10,bool)),sK11),s(sK10,sK12),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(sK10))),'const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14))))))),
+  inference(superposition,[],[f268,f15362])).
+fof(f15362,plain,(
+  s('type.num.num',sK13) = s('type.num.num',sK17('const.pair.,_2'(s('type.num.num',sK13),s('type.list.list'('type.list.list'(sK10)),sK14)),sK12,sK11,sK10))),
+  inference(unit_resulting_resolution,[],[f1498,f306])).
+fof(f306,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X0,X2) = s(X0,X4)) )),
+  inference(cnf_transformation,[],[f184])).
+fof(f268,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.BottomUpMergeSort.add_seg_side_4'(s(fun(X0,fun(X0,bool)),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'('type.list.list'(X0)),sK18(X3,X2,X1,X0)),s('type.num.num',sK17(X3,X2,X1,X0))))) | p(s(bool,'const.BottomUpMergeSort.add_side_3'(s(fun(X0,fun(X0,bool)),X1),s(X0,X2),s('type.pair.prod'('type.num.num','type.list.list'('type.list.list'(X0))),X3))))) )),
+  inference(cnf_transformation,[],[f167])).
+% SZS output end Proof for thm.BottomUpMergeSort
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 613
+% Passive clauses: 1854
+% Generated clauses: 16029
+% Final active clauses: 415
+% Final passive clauses: 467
+% Input formulas: 39
+% Initial clauses: 167
+% 
+% Duplicate literals: 672
+% Trivial inequalities: 66
+% Fw subsumption resolutions: 821
+% Fw demodulations: 1670
+% Bw demodulations: 165
+% Condensations: 604
+% Global subsumptions: 12
+% 
+% Simple tautologies: 112
+% Equational tautologies: 294
+% Forward subsumptions: 8785
+% Fw demodulations to eq. taut.: 577
+% Bw demodulations to eq. taut.: 46
+% 
+% Unit resulting resolution: 5609
+% Forward superposition: 2816
+% Backward superposition: 3031
+% Self superposition: 54
+% Equality factoring: 40
+% Equality resolution: 27
+% 
+% Split clauses: 128
+% Split components: 261
+% SAT solver clauses: 2505
+% SAT solver unit clauses: 607
+% SAT solver binary clauses: 454
+% 
+% Sat splits: 128
+% Sat splitting refutations: 381
+% 
+% Memory used [KB]: 9083
+% Time elapsed: 0.569 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.9 s

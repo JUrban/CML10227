@@ -1,0 +1,463 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.exh_to_patProof
+% (41331)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 106
+% Passive clauses: 1914
+% Generated clauses: 9408
+% Final active clauses: 89
+% Final passive clauses: 1655
+% Input formulas: 31
+% Initial clauses: 76
+% 
+% Duplicate literals: 394
+% Trivial inequalities: 149
+% Fw subsumption resolutions: 1180
+% Fw demodulations: 1200
+% Bw demodulations: 15
+% 
+% Simple tautologies: 240
+% Equational tautologies: 35
+% Forward subsumptions: 4064
+% Fw demodulations to eq. taut.: 4
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 389
+% Factoring: 2
+% Forward superposition: 3064
+% Backward superposition: 2716
+% Self superposition: 92
+% Equality factoring: 62
+% Equality resolution: 16
+% 
+% Split clauses: 162
+% Split components: 347
+% SAT solver clauses: 338
+% SAT solver unit clauses: 16
+% SAT solver binary clauses: 73
+% 
+% Sat splits: 162
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 333
+% TWLsolver calls for satisfiability: 108
+% 
+% Memory used [KB]: 6780
+% Time elapsed: 0.630 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.exh_to_patProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.exh_to_patProof
+% SZS output start Proof for thm.exh_to_patProof
+fof(f2059,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2058,f127,f226,f1655,f1364,f251,f253,f130,f228,f713,f714,f363,f375,f123,f221,f403,f417,f1349,f261,f265,f124,f219,f217,f134,f230,f180,f246,f179,f245,f188,f248,f1312,f1313,f1363,f125,f224,f339,f346,f133,f231,f172,f242,f1796,f1797,f122,f218,f222,f178,f244])).
+fof(f244,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) ) | $spl30),
+  inference(cnf_transformation,[],[f244_D])).
+fof(f244_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) ) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f178,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f61])).
+fof(f61,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(flattening,[],[f60])).
+fof(f60,plain,(
+  ! [X0,X1] : ! [X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6,X7] : ! [X10] : s('type.pair.prod'(X6,X7),X10) = s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,'const.pair.FST_1'(s('type.pair.prod'(X6,X7),X10))),s(X7,'const.pair.SND_1'(s('type.pair.prod'(X6,X7),X10)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.pair.PAIR')).
+fof(f222,plain,(
+  ( ! [X6,X7] : (s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,X6),s(sK1,X7))) | p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,X6))),s(sK1,X7))))) ) | $spl6),
+  inference(cnf_transformation,[],[f222_D])).
+fof(f222_D,plain,(
+  ( ! [X6,X7] : (s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,X6),s(sK1,X7))) | p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,X6))),s(sK1,X7))))) ) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f218,plain,(
+  p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) | $spl2),
+  inference(cnf_transformation,[],[f218_D])).
+fof(f218_D,plain,(
+  p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f122,plain,(
+  ( ! [X6,X7] : (p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) | p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,X6))),s(sK1,X7)))) | s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,X6),s(sK1,X7)))) )),
+  inference(cnf_transformation,[],[f88])).
+fof(f88,plain,(
+  (! [X6,X7] : (s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,X6),s(sK1,X7))) | p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,X6))),s(sK1,X7))))) | p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))))) & ((s('type.pair.prod'(sK0,sK1),sK2) = s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,sK4),s(sK1,sK5))) & ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))))) | ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f87])).
+fof(f87,plain,(
+  ? [X0,X1,X2,X3] : ((! [X6,X7] : (s('type.pair.prod'(X0,X1),X2) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X6),s(X1,X7))) | p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X6))),s(X1,X7))))) | p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2))))) & (? [X4,X5] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) & ~p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X4))),s(X1,X5))))) | ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2))))))),
+  inference(rectify,[],[f86])).
+fof(f86,plain,(
+  ? [X0,X1,X2,X3] : ((! [X4,X5] : (s('type.pair.prod'(X0,X1),X2) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X4))),s(X1,X5))))) | p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2))))) & (? [X4,X5] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) & ~p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X4))),s(X1,X5))))) | ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2))))))),
+  inference(nnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ? [X0,X1,X2,X3] : (! [X4,X5] : (s('type.pair.prod'(X0,X1),X2) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X4))),s(X1,X5))))) <~> p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f34])).
+fof(f34,plain,(
+  ~! [X0,X1,X2,X3] : (! [X4,X5] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) => p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X4))),s(X1,X5))))) <=> p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2)))))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ~! [X0,X1] : ! [X2,X3] : (! [X4,X5] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) => p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X3),s(X0,X4))),s(X1,X5))))) <=> p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun(X1,bool)),X3),s('type.pair.prod'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : (! [X10,X11] : (s('type.pair.prod'(X6,X7),X8) = s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X11))) => p(s(bool,happ(s(fun(X7,bool),happ(s(fun(X6,fun(X7,bool)),X9),s(X6,X10))),s(X7,X11))))) <=> p(s(bool,'const.pair.UNCURRY_2'(s(fun(X6,fun(X7,bool)),X9),s('type.pair.prod'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : (! [X10,X11] : (s('type.pair.prod'(X6,X7),X8) = s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X11))) => p(s(bool,happ(s(fun(X7,bool),happ(s(fun(X6,fun(X7,bool)),X9),s(X6,X10))),s(X7,X11))))) <=> p(s(bool,'const.pair.UNCURRY_2'(s(fun(X6,fun(X7,bool)),X9),s('type.pair.prod'(X6,X7),X8)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb')).
+fof(f1797,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),X0) | p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),X0))))) ) | $spl428),
+  inference(cnf_transformation,[],[f1797_D])).
+fof(f1797_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),X0) | p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),X0))))) ) <=> ~$spl428),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl428])])).
+fof(f1796,plain,(
+  ( ! [X0] : (p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),X0)))) | s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),X0)) ) | ($spl6 | $spl30 | $spl38)),
+  inference(forward_demodulation,[],[f1755,f248])).
+fof(f1755,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,sK1),sK2) != s('type.pair.prod'(sK0,sK1),X0) | p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,'const.pair.FST_1'(s('type.pair.prod'(sK0,sK1),X0))))),s(sK1,'const.pair.SND_1'(s('type.pair.prod'(sK0,sK1),X0))))))) ) | ($spl6 | $spl30)),
+  inference(superposition,[],[f222,f244])).
+fof(f242,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | ~p(s(bool,X1)) | s(bool,X0) != s(bool,X1)) ) | $spl26),
+  inference(cnf_transformation,[],[f242_D])).
+fof(f242_D,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | ~p(s(bool,X1)) | s(bool,X0) != s(bool,X1)) ) <=> ~$spl26),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl26])])).
+fof(f172,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | ~p(s(bool,X1)) | s(bool,X0) != s(bool,X1)) )),
+  inference(cnf_transformation,[],[f116])).
+fof(f116,plain,(
+  ! [X0,X1] : ((s(bool,X0) != s(bool,X1) | ((~p(s(bool,X0)) | p(s(bool,X1))) & (~p(s(bool,X1)) | p(s(bool,X0))))) & ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(flattening,[],[f115])).
+fof(f115,plain,(
+  ! [X0,X1] : ((s(bool,X0) != s(bool,X1) | ((~p(s(bool,X0)) | p(s(bool,X1))) & (~p(s(bool,X1)) | p(s(bool,X0))))) & (((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0)))) | s(bool,X0) = s(bool,X1)))),
+  inference(nnf_transformation,[],[f80])).
+fof(f80,plain,(
+  ! [X0,X1] : (s(bool,X0) = s(bool,X1) <=> ((~p(s(bool,X0)) | p(s(bool,X1))) & (~p(s(bool,X1)) | p(s(bool,X0)))))),
+  inference(ennf_transformation,[],[f57])).
+fof(f57,plain,(
+  ! [X0,X1] : (s(bool,X0) = s(bool,X1) <=> ((p(s(bool,X0)) => p(s(bool,X1))) & (p(s(bool,X1)) => p(s(bool,X0)))))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X13,X14] : (s(bool,X13) = s(bool,X14) <=> ((p(s(bool,X13)) => p(s(bool,X14))) & (p(s(bool,X14)) => p(s(bool,X13)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.bool.EQ_IMP_THM')).
+fof(f231,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) ) | $spl20),
+  inference(cnf_transformation,[],[f231_D])).
+fof(f231_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f133,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f91,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X12] : (s(bool,'F_0') = s(bool,X12) <=> ~p(s(bool,X12)))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f346,plain,(
+  ( ! [X8,X7] : (~p(s(bool,X7)) | s(bool,X7) != s(bool,X8) | s(bool,'F_0') != s(bool,X8)) ) | $spl60),
+  inference(cnf_transformation,[],[f346_D])).
+fof(f346_D,plain,(
+  ( ! [X8,X7] : (~p(s(bool,X7)) | s(bool,X7) != s(bool,X8) | s(bool,'F_0') != s(bool,X8)) ) <=> ~$spl60),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl60])])).
+fof(f339,plain,(
+  ( ! [X8,X7] : (~p(s(bool,X7)) | s(bool,X7) != s(bool,X8) | s(bool,'F_0') != s(bool,X8)) ) | ($spl20 | $spl26)),
+  inference(resolution,[],[f242,f231])).
+fof(f224,plain,(
+  p(s(bool,'T_0')) | $spl8),
+  inference(cnf_transformation,[],[f224_D])).
+fof(f224_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f125,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb',aHL_TRUTH)).
+fof(f1363,plain,(
+  $false | ($spl3 | $spl8 | $spl42)),
+  inference(subsumption_resolution,[],[f1362,f224])).
+fof(f1362,plain,(
+  ~p(s(bool,'T_0')) | ($spl3 | $spl42)),
+  inference(forward_demodulation,[],[f219,f253])).
+fof(f1313,plain,(
+  ( ! [X12] : (s(bool,'F_0') != s(bool,X12) | s(bool,X12) != s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) ) | $spl284),
+  inference(cnf_transformation,[],[f1313_D])).
+fof(f1313_D,plain,(
+  ( ! [X12] : (s(bool,'F_0') != s(bool,X12) | s(bool,X12) != s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) ) <=> ~$spl284),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl284])])).
+fof(f1312,plain,(
+  ( ! [X12] : (s(bool,X12) != s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) | s(bool,'F_0') != s(bool,X12)) ) | ($spl8 | $spl42 | $spl60)),
+  inference(subsumption_resolution,[],[f1292,f224])).
+fof(f1292,plain,(
+  ( ! [X12] : (~p(s(bool,'T_0')) | s(bool,X12) != s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) | s(bool,'F_0') != s(bool,X12)) ) | ($spl42 | $spl60)),
+  inference(superposition,[],[f346,f253])).
+fof(f248,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X2),X4))))),s(X2,'const.pair.SND_1'(s('type.pair.prod'(X1,X2),X4)))))) ) | $spl38),
+  inference(cnf_transformation,[],[f248_D])).
+fof(f248_D,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X2),X4))))),s(X2,'const.pair.SND_1'(s('type.pair.prod'(X1,X2),X4)))))) ) <=> ~$spl38),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl38])])).
+fof(f188,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X2),X4))))),s(X2,'const.pair.SND_1'(s('type.pair.prod'(X1,X2),X4)))))) )),
+  inference(cnf_transformation,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X2),X4))))),s(X2,'const.pair.SND_1'(s('type.pair.prod'(X1,X2),X4)))))),
+  inference(flattening,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1,X2] : ! [X3,X4] : s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X2),X4))))),s(X2,'const.pair.SND_1'(s('type.pair.prod'(X1,X2),X4)))))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X18,X6,X7] : ! [X19,X20] : s(X18,'const.pair.UNCURRY_2'(s(fun(X6,fun(X7,X18)),X19),s('type.pair.prod'(X6,X7),X20))) = s(X18,happ(s(fun(X7,X18),happ(s(fun(X6,fun(X7,X18)),X19),s(X6,'const.pair.FST_1'(s('type.pair.prod'(X6,X7),X20))))),s(X7,'const.pair.SND_1'(s('type.pair.prod'(X6,X7),X20)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.pair.UNCURRY')).
+fof(f245,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))) ) | $spl32),
+  inference(cnf_transformation,[],[f245_D])).
+fof(f245_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))) ) <=> ~$spl32),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl32])])).
+fof(f179,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))) )),
+  inference(cnf_transformation,[],[f63])).
+fof(f63,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))),
+  inference(flattening,[],[f62])).
+fof(f62,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X7,X6] : ! [X10,X11] : s(X6,X10) = s(X6,'const.pair.FST_1'(s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X11)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.pair.FST')).
+fof(f246,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))) ) | $spl34),
+  inference(cnf_transformation,[],[f246_D])).
+fof(f246_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))) ) <=> ~$spl34),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl34])])).
+fof(f180,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))) )),
+  inference(cnf_transformation,[],[f65])).
+fof(f65,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(flattening,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X6,X7] : ! [X10,X11] : s(X7,X11) = s(X7,'const.pair.SND_1'(s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X11)))))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.pair.SND')).
+fof(f230,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | $spl18),
+  inference(cnf_transformation,[],[f230_D])).
+fof(f230_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f134,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f217,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5)))) | $spl1),
+  inference(cnf_transformation,[],[f217_D])).
+fof(f217_D,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5)))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f219,plain,(
+  ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) | $spl3),
+  inference(cnf_transformation,[],[f219_D])).
+fof(f219_D,plain,(
+  ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f124,plain,(
+  ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) | ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))))),
+  inference(cnf_transformation,[],[f88])).
+fof(f265,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))) | $spl44),
+  inference(cnf_transformation,[],[f265_D])).
+fof(f265_D,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))) <=> ~$spl44),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl44])])).
+fof(f261,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))) | ($spl1 | $spl18)),
+  inference(resolution,[],[f230,f217])).
+fof(f1349,plain,(
+  $false | ($spl44 | $spl124 | $spl284)),
+  inference(subsumption_resolution,[],[f1340,f714])).
+fof(f1340,plain,(
+  s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) != s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))) | ($spl44 | $spl284)),
+  inference(trivial_inequality_removal,[],[f1324])).
+fof(f1324,plain,(
+  s(bool,'F_0') != s(bool,'F_0') | s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) != s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK3),s(sK0,sK4))),s(sK1,sK5))) | ($spl44 | $spl284)),
+  inference(superposition,[],[f1313,f265])).
+fof(f417,plain,(
+  s(sK1,sK5) = s(sK1,'const.pair.SND_1'(s('type.pair.prod'(sK0,sK1),sK2))) | $spl68),
+  inference(cnf_transformation,[],[f417_D])).
+fof(f417_D,plain,(
+  s(sK1,sK5) = s(sK1,'const.pair.SND_1'(s('type.pair.prod'(sK0,sK1),sK2))) <=> ~$spl68),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl68])])).
+fof(f403,plain,(
+  s(sK1,sK5) = s(sK1,'const.pair.SND_1'(s('type.pair.prod'(sK0,sK1),sK2))) | ($spl4 | $spl34)),
+  inference(superposition,[],[f246,f221])).
+fof(f221,plain,(
+  s('type.pair.prod'(sK0,sK1),sK2) = s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,sK4),s(sK1,sK5))) | $spl4),
+  inference(cnf_transformation,[],[f221_D])).
+fof(f221_D,plain,(
+  s('type.pair.prod'(sK0,sK1),sK2) = s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,sK4),s(sK1,sK5))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f123,plain,(
+  ~p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) | s('type.pair.prod'(sK0,sK1),sK2) = s('type.pair.prod'(sK0,sK1),'const.pair.,_2'(s(sK0,sK4),s(sK1,sK5)))),
+  inference(cnf_transformation,[],[f88])).
+fof(f375,plain,(
+  s(sK0,sK4) = s(sK0,'const.pair.FST_1'(s('type.pair.prod'(sK0,sK1),sK2))) | $spl64),
+  inference(cnf_transformation,[],[f375_D])).
+fof(f375_D,plain,(
+  s(sK0,sK4) = s(sK0,'const.pair.FST_1'(s('type.pair.prod'(sK0,sK1),sK2))) <=> ~$spl64),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl64])])).
+fof(f363,plain,(
+  s(sK0,sK4) = s(sK0,'const.pair.FST_1'(s('type.pair.prod'(sK0,sK1),sK2))) | ($spl4 | $spl32)),
+  inference(superposition,[],[f245,f221])).
+fof(f714,plain,(
+  ( ! [X14,X15] : (s(X14,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,X14)),X15),s('type.pair.prod'(sK0,sK1),sK2))) = s(X14,happ(s(fun(sK1,X14),happ(s(fun(sK0,fun(sK1,X14)),X15),s(sK0,sK4))),s(sK1,sK5)))) ) | $spl124),
+  inference(cnf_transformation,[],[f714_D])).
+fof(f714_D,plain,(
+  ( ! [X14,X15] : (s(X14,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,X14)),X15),s('type.pair.prod'(sK0,sK1),sK2))) = s(X14,happ(s(fun(sK1,X14),happ(s(fun(sK0,fun(sK1,X14)),X15),s(sK0,sK4))),s(sK1,sK5)))) ) <=> ~$spl124),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl124])])).
+fof(f713,plain,(
+  ( ! [X14,X15] : (s(X14,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,X14)),X15),s('type.pair.prod'(sK0,sK1),sK2))) = s(X14,happ(s(fun(sK1,X14),happ(s(fun(sK0,fun(sK1,X14)),X15),s(sK0,sK4))),s(sK1,sK5)))) ) | ($spl38 | $spl64 | $spl68)),
+  inference(forward_demodulation,[],[f672,f417])).
+fof(f672,plain,(
+  ( ! [X14,X15] : (s(X14,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,X14)),X15),s('type.pair.prod'(sK0,sK1),sK2))) = s(X14,happ(s(fun(sK1,X14),happ(s(fun(sK0,fun(sK1,X14)),X15),s(sK0,sK4))),s(sK1,'const.pair.SND_1'(s('type.pair.prod'(sK0,sK1),sK2)))))) ) | ($spl38 | $spl64)),
+  inference(superposition,[],[f248,f375])).
+fof(f228,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl14),
+  inference(cnf_transformation,[],[f228_D])).
+fof(f228_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f130,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f89])).
+fof(f89,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f36])).
+fof(f36,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X12] : (s(bool,'T_0') = s(bool,X12) <=> p(s(bool,X12)))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f253,plain,(
+  s(bool,'T_0') = s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) | $spl42),
+  inference(cnf_transformation,[],[f253_D])).
+fof(f253_D,plain,(
+  s(bool,'T_0') = s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) <=> ~$spl42),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl42])])).
+fof(f251,plain,(
+  s(bool,'T_0') = s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) | ($spl2 | $spl14)),
+  inference(resolution,[],[f228,f218])).
+fof(f1364,plain,(
+  s(bool,'F_0') = s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) | $spl294),
+  inference(cnf_transformation,[],[f1364_D])).
+fof(f1364_D,plain,(
+  s(bool,'F_0') = s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) <=> ~$spl294),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl294])])).
+fof(f1655,plain,(
+  s(bool,'F_0') = s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2))) | ($spl3 | $spl18)),
+  inference(resolution,[],[f230,f219])).
+fof(f226,plain,(
+  ~p(s(bool,'F_0')) | $spl11),
+  inference(cnf_transformation,[],[f226_D])).
+fof(f226_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl11),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl11])])).
+fof(f127,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f35])).
+fof(f35,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.exh_to_patProof.exh_to_patProof_|49|22_prove_ltb',aHL_FALSITY)).
+fof(f2058,plain,(
+  $false | ($spl11 | $spl294 | $spl428)),
+  inference(subsumption_resolution,[],[f2057,f226])).
+fof(f2057,plain,(
+  p(s(bool,'F_0')) | ($spl294 | $spl428)),
+  inference(forward_demodulation,[],[f2049,f1364])).
+fof(f2049,plain,(
+  p(s(bool,'const.pair.UNCURRY_2'(s(fun(sK0,fun(sK1,bool)),sK3),s('type.pair.prod'(sK0,sK1),sK2)))) | $spl428),
+  inference(equality_resolution,[],[f1797])).
+% SZS output end Proof for thm.exh_to_patProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 65
+% Passive clauses: 314
+% Generated clauses: 2134
+% Final active clauses: 36
+% Final passive clauses: 128
+% Input formulas: 31
+% Initial clauses: 76
+% 
+% Duplicate literals: 11
+% Trivial inequalities: 16
+% Fw subsumption resolutions: 150
+% Fw demodulations: 212
+% Bw demodulations: 109
+% Condensations: 26
+% Global subsumptions: 8
+% 
+% Simple tautologies: 39
+% Equational tautologies: 7
+% Forward subsumptions: 923
+% Fw demodulations to eq. taut.: 2
+% Bw demodulations to eq. taut.: 18
+% 
+% Binary resolution: 63
+% Factoring: 1
+% Forward superposition: 384
+% Backward superposition: 565
+% Self superposition: 42
+% Equality factoring: 4
+% Equality resolution: 4
+% 
+% Split clauses: 21
+% Split components: 43
+% SAT solver clauses: 496
+% SAT solver unit clauses: 83
+% SAT solver binary clauses: 32
+% SAT solver learnt clauses: 20
+% SAT solver learnt literals: 4
+% 
+% Sat splits: 21
+% Sat splitting refutations: 15
+% 
+% TWLsolver clauses: 460
+% TWLsolver calls for satisfiability: 323
+% 
+% Memory used [KB]: 2942
+% Time elapsed: 0.168 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.828 s

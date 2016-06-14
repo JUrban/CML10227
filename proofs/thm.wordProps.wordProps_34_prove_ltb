@@ -1,0 +1,163 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordProps
+% (38119)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 117
+% Passive clauses: 1371
+% Generated clauses: 10128
+% Final active clauses: 116
+% Final passive clauses: 1137
+% Input formulas: 37
+% Initial clauses: 80
+% 
+% Duplicate literals: 422
+% Trivial inequalities: 510
+% Fw subsumption resolutions: 929
+% Fw demodulations: 1733
+% 
+% Simple tautologies: 269
+% Equational tautologies: 23
+% Forward subsumptions: 4706
+% 
+% Binary resolution: 37
+% Forward superposition: 3279
+% Backward superposition: 2922
+% Self superposition: 99
+% Equality factoring: 54
+% Equality resolution: 27
+% 
+% Split clauses: 89
+% Split components: 178
+% SAT solver clauses: 275
+% SAT solver unit clauses: 18
+% SAT solver binary clauses: 75
+% 
+% Sat splits: 89
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 275
+% TWLsolver calls for satisfiability: 50
+% 
+% Memory used [KB]: 9210
+% Time elapsed: 0.634 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordProps
+% SZS output start Proof for thm.wordProps
+fof(f354,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f353,f347,f350,f142,f229,f206,f269])).
+fof(f269,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK63(X2,X1,X0)),s(X1,sK64(X2,X1,X0))))) ) | $spl56),
+  inference(cnf_transformation,[],[f269_D])).
+fof(f269_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK63(X2,X1,X0)),s(X1,sK64(X2,X1,X0))))) ) <=> ~$spl56),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl56])])).
+fof(f206,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK63(X2,X1,X0)),s(X1,sK64(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f135])).
+fof(f135,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK63(X2,X1,X0)),s(X1,sK64(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK63,sK64])],[f75])).
+fof(f75,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X7] : ! [X31] : ? [X71,X34] : s('type.pair.prod'(X6,X7),X31) = s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X71),s(X7,X34)))),
+  file('thm.wordProps.wordProps_34_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f229,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(sK2)),X4),s('type.wordSem.state'(sK2,sK3),X5))) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))) ) | $spl0),
+  inference(cnf_transformation,[],[f229_D])).
+fof(f229_D,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(sK2)),X4),s('type.wordSem.state'(sK2,sK3),X5))) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f142,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(sK2)),X4),s('type.wordSem.state'(sK2,sK3),X5))) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))) )),
+  inference(cnf_transformation,[],[f100])).
+fof(f100,plain,(
+  ! [X4,X5] : s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(sK2)),X4),s('type.wordSem.state'(sK2,sK3),X5))) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3,sK4,sK5])],[f92])).
+fof(f92,plain,(
+  ? [X0,X1,X2,X3] : ! [X4,X5] : s('type.pair.prod'('type.option.option'('type.wordSem.result'(X0)),'type.wordSem.state'(X0,X1)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(X0)),X4),s('type.wordSem.state'(X0,X1),X5))) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(X0)),'type.wordSem.state'(X0,X1)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(X0),'type.wordSem.state'(X0,X1)),'const.pair.,_2'(s('type.wordLang.prog'(X0),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1,X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.option.option'('type.wordSem.result'(X0)),'type.wordSem.state'(X0,X1)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(X0)),X4),s('type.wordSem.state'(X0,X1),X5))) = s('type.pair.prod'('type.option.option'('type.wordSem.result'(X0)),'type.wordSem.state'(X0,X1)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(X0),'type.wordSem.state'(X0,X1)),'const.pair.,_2'(s('type.wordLang.prog'(X0),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1] : ! [X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.option.option'('type.wordSem.result'(X0)),'type.wordSem.state'(X0,X1)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(X0)),X4),s('type.wordSem.state'(X0,X1),X5))) = s('type.pair.prod'('type.option.option'('type.wordSem.result'(X0)),'type.wordSem.state'(X0,X1)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(X0),'type.wordSem.state'(X0,X1)),'const.pair.,_2'(s('type.wordLang.prog'(X0),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.option.option'('type.wordSem.result'(X6)),'type.wordSem.state'(X6,X7)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(X6)),X10),s('type.wordSem.state'(X6,X7),X11))) = s('type.pair.prod'('type.option.option'('type.wordSem.result'(X6)),'type.wordSem.state'(X6,X7)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(X6),'type.wordSem.state'(X6,X7)),'const.pair.,_2'(s('type.wordLang.prog'(X6),X9),s('type.wordSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.option.option'('type.wordSem.result'(X6)),'type.wordSem.state'(X6,X7)),'const.pair.,_2'(s('type.option.option'('type.wordSem.result'(X6)),X10),s('type.wordSem.state'(X6,X7),X11))) = s('type.pair.prod'('type.option.option'('type.wordSem.result'(X6)),'type.wordSem.state'(X6,X7)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(X6),'type.wordSem.state'(X6,X7)),'const.pair.,_2'(s('type.wordLang.prog'(X6),X9),s('type.wordSem.state'(X6,X7),X8)))))),
+  file('thm.wordProps.wordProps_34_prove_ltb','thm.wordProps.wordProps_34_prove_ltb')).
+fof(f350,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),X0) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))) ) | $spl94),
+  inference(cnf_transformation,[],[f350_D])).
+fof(f350_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),X0) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))) ) <=> ~$spl94),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl94])])).
+fof(f347,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),X0) != s('type.pair.prod'('type.option.option'('type.wordSem.result'(sK2)),'type.wordSem.state'(sK2,sK3)),'const.wordSem.evaluate_1'(s('type.pair.prod'('type.wordLang.prog'(sK2),'type.wordSem.state'(sK2,sK3)),'const.pair.,_2'(s('type.wordLang.prog'(sK2),sK5),s('type.wordSem.state'(sK2,sK3),sK4)))))) ) | ($spl0 | $spl56)),
+  inference(superposition,[],[f229,f269])).
+fof(f353,plain,(
+  $false | $spl94),
+  inference(equality_resolution,[],[f350])).
+% SZS output end Proof for thm.wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 15
+% Passive clauses: 48
+% Generated clauses: 208
+% Final active clauses: 15
+% Final passive clauses: 33
+% Input formulas: 37
+% Initial clauses: 80
+% 
+% Duplicate literals: 2
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 1
+% Fw demodulations: 5
+% Condensations: 5
+% Global subsumptions: 10
+% 
+% Simple tautologies: 30
+% Equational tautologies: 4
+% Forward subsumptions: 34
+% 
+% Binary resolution: 8
+% Forward superposition: 18
+% Backward superposition: 21
+% Self superposition: 3
+% Equality factoring: 2
+% Equality resolution: 2
+% 
+% SAT solver clauses: 171
+% SAT solver unit clauses: 100
+% SAT solver binary clauses: 29
+% SAT solver learnt clauses: 21
+% 
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 130
+% TWLsolver calls for satisfiability: 7939
+% 
+% Memory used [KB]: 2046
+% Time elapsed: 0.022 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.68 s

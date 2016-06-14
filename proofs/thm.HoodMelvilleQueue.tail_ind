@@ -1,0 +1,151 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.HoodMelvilleQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.HoodMelvilleQueue
+% SZS output start Proof for thm.HoodMelvilleQueue
+fof(f5327,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f5306,f96])).
+fof(f96,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.HoodMelvilleQueue.tail_ind',aHL_FALSITY)).
+fof(f5306,plain,(
+  p(s(bool,'F_0'))),
+  inference(superposition,[],[f5271,f134])).
+fof(f134,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),sK2)))),
+  inference(resolution,[],[f93,f104])).
+fof(f104,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f29])).
+fof(f29,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X36] : (s(bool,'F_0') = s(bool,X36) <=> ~p(s(bool,X36)))),
+  file('thm.HoodMelvilleQueue.tail_ind','thm.bool.EQ_CLAUSES|split|3')).
+fof(f93,plain,(
+  ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X7,X8,X9,X10,X11,X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X7),s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,X8),s('type.list.list'(sK0),X9))),s('type.HoodMelvilleQueue.status'(sK0),X10),s('type.num.num',X11),s('type.list.list'(sK0),X12)))))) & ! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X3),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(sK0),X4),s('type.num.num',X5),s('type.list.list'(sK0),X6)))))) & ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f68])).
+fof(f68,plain,(
+  ? [X0,X1] : (! [X7,X8,X9,X10,X11,X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X7),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X8),s('type.list.list'(X0),X9))),s('type.HoodMelvilleQueue.status'(X0),X10),s('type.num.num',X11),s('type.list.list'(X0),X12)))))) & ! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X3),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X2)))))),
+  inference(rectify,[],[f55])).
+fof(f55,plain,(
+  ? [X0,X1] : (! [X6,X7,X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) & ? [X12] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(flattening,[],[f54])).
+fof(f54,plain,(
+  ? [X0,X1] : ((! [X6,X7,X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) & ? [X12] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1] : ((! [X6,X7,X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) => ! [X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1] : ((! [X6,X7,X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) => ! [X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((! [X8,X9,X10,X11,X12,X13] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X8),s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X9),s('type.list.list'(X6),X10))),s('type.HoodMelvilleQueue.status'(X6),X11),s('type.num.num',X12),s('type.list.list'(X6),X13)))))) & ! [X14,X15,X16,X17] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X14),s('type.list.list'(X6),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X6),X15),s('type.num.num',X16),s('type.list.list'(X6),X17))))))) => ! [X18] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),X18)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((! [X8,X9,X10,X11,X12,X13] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X8),s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X9),s('type.list.list'(X6),X10))),s('type.HoodMelvilleQueue.status'(X6),X11),s('type.num.num',X12),s('type.list.list'(X6),X13)))))) & ! [X14,X15,X16,X17] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X14),s('type.list.list'(X6),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X6),X15),s('type.num.num',X16),s('type.list.list'(X6),X17))))))) => ! [X18] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),X18)))))),
+  file('thm.HoodMelvilleQueue.tail_ind','thm.HoodMelvilleQueue.tail_ind')).
+fof(f5271,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),X0))))) )),
+  inference(subsumption_resolution,[],[f5242,f91])).
+fof(f91,plain,(
+  ( ! [X12,X10,X8,X7,X11,X9] : (p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X7),s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,X8),s('type.list.list'(sK0),X9))),s('type.HoodMelvilleQueue.status'(sK0),X10),s('type.num.num',X11),s('type.list.list'(sK0),X12))))))) )),
+  inference(cnf_transformation,[],[f69])).
+fof(f5242,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),X0)))) | ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',sK6(sK1,sK0)),s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,sK7(sK1,sK0)),s('type.list.list'(sK0),sK8(sK1,sK0)))),s('type.HoodMelvilleQueue.status'(sK0),sK9(sK1,sK0)),s('type.num.num',sK10(sK1,sK0)),s('type.list.list'(sK0),sK11(sK1,sK0)))))))) )),
+  inference(resolution,[],[f111,f92])).
+fof(f92,plain,(
+  ( ! [X6,X4,X5,X3] : (p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(sK0),bool),sK1),s('type.HoodMelvilleQueue.queue'(sK0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X3),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(sK0),X4),s('type.num.num',X5),s('type.list.list'(sK0),X6))))))) )),
+  inference(cnf_transformation,[],[f69])).
+fof(f111,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',sK12(X1,X0)),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),sK13(X1,X0)),s('type.num.num',sK14(X1,X0)),s('type.list.list'(X0),sK15(X1,X0))))))) | p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X2)))) | ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',sK6(X1,X0)),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK7(X1,X0)),s('type.list.list'(X0),sK8(X1,X0)))),s('type.HoodMelvilleQueue.status'(X0),sK9(X1,X0)),s('type.num.num',sK10(X1,X0)),s('type.list.list'(X0),sK11(X1,X0)))))))) )),
+  inference(cnf_transformation,[],[f78])).
+fof(f78,plain,(
+  ! [X0,X1] : (~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',sK6(X1,X0)),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK7(X1,X0)),s('type.list.list'(X0),sK8(X1,X0)))),s('type.HoodMelvilleQueue.status'(X0),sK9(X1,X0)),s('type.num.num',sK10(X1,X0)),s('type.list.list'(X0),sK11(X1,X0))))))) | ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',sK12(X1,X0)),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),sK13(X1,X0)),s('type.num.num',sK14(X1,X0)),s('type.list.list'(X0),sK15(X1,X0))))))) | ! [X2] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK6,sK7,sK8,sK9,sK10,sK11,sK12,sK13,sK14,sK15])],[f77])).
+fof(f77,plain,(
+  ! [X0,X1] : (? [X7,X8,X9,X10,X11,X12] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X7),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X8),s('type.list.list'(X0),X9))),s('type.HoodMelvilleQueue.status'(X0),X10),s('type.num.num',X11),s('type.list.list'(X0),X12)))))) | ? [X3,X4,X5,X6] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X3),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))))) | ! [X2] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X2)))))),
+  inference(rectify,[],[f58])).
+fof(f58,plain,(
+  ! [X0,X1] : (? [X6,X7,X8,X9,X10,X11] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) | ? [X2,X3,X4,X5] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) | ! [X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(flattening,[],[f57])).
+fof(f57,plain,(
+  ! [X0,X1] : ((? [X6,X7,X8,X9,X10,X11] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) | ? [X2,X3,X4,X5] : ~p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) | ! [X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1] : ((! [X6,X7,X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) => ! [X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ! [X0] : ! [X1] : ((! [X6,X7,X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X6),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X7),s('type.list.list'(X0),X8))),s('type.HoodMelvilleQueue.status'(X0),X9),s('type.num.num',X10),s('type.list.list'(X0),X11)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) => ! [X12] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X0),bool),X1),s('type.HoodMelvilleQueue.queue'(X0),X12)))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X7] : ((! [X21,X9,X22,X23,X24,X25] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X21),s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X9),s('type.list.list'(X6),X22))),s('type.HoodMelvilleQueue.status'(X6),X23),s('type.num.num',X24),s('type.list.list'(X6),X25)))))) & ! [X26,X27,X28,X29] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),'const.HoodMelvilleQueue.QUEUE_5'(s('type.num.num',X26),s('type.list.list'(X6),'const.list.NIL_0'),s('type.HoodMelvilleQueue.status'(X6),X27),s('type.num.num',X28),s('type.list.list'(X6),X29))))))) => ! [X18] : p(s(bool,happ(s(fun('type.HoodMelvilleQueue.queue'(X6),bool),X7),s('type.HoodMelvilleQueue.queue'(X6),X18)))))),
+  file('thm.HoodMelvilleQueue.tail_ind','thm.HoodMelvilleQueue.head_ind')).
+% SZS output end Proof for thm.HoodMelvilleQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 81
+% Passive clauses: 957
+% Generated clauses: 5146
+% Final active clauses: 72
+% Final passive clauses: 790
+% Input formulas: 21
+% Initial clauses: 36
+% 
+% Duplicate literals: 264
+% Trivial inequalities: 86
+% Fw subsumption resolutions: 782
+% Fw demodulations: 520
+% Bw demodulations: 7
+% 
+% Simple tautologies: 139
+% Equational tautologies: 37
+% Forward subsumptions: 2144
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 314
+% Factoring: 1
+% Forward superposition: 1554
+% Backward superposition: 1361
+% Self superposition: 82
+% Equality factoring: 78
+% Equality resolution: 14
+% 
+% Split clauses: 109
+% Split components: 218
+% SAT solver clauses: 273
+% SAT solver unit clauses: 39
+% SAT solver binary clauses: 119
+% 
+% Sat splits: 109
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 272
+% TWLsolver calls for satisfiability: 69
+% 
+% Memory used [KB]: 3198
+% Time elapsed: 0.131 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.134 s

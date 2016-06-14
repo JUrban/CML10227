@@ -1,0 +1,281 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bigSmallEquiv
+% (93029)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 151
+% Passive clauses: 3512
+% Generated clauses: 21923
+% Final active clauses: 151
+% Final passive clauses: 3173
+% Input formulas: 31
+% Initial clauses: 60
+% 
+% Duplicate literals: 525
+% Trivial inequalities: 824
+% Fw subsumption resolutions: 1841
+% Fw demodulations: 5905
+% 
+% Simple tautologies: 432
+% Equational tautologies: 43
+% Forward subsumptions: 8692
+% Fw demodulations to eq. taut.: 8
+% 
+% Binary resolution: 81
+% Factoring: 1
+% Forward superposition: 6481
+% Backward superposition: 5928
+% Self superposition: 127
+% Equality factoring: 72
+% Equality resolution: 53
+% 
+% Split clauses: 80
+% Split components: 160
+% SAT solver clauses: 207
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 93
+% 
+% Sat splits: 80
+% 
+% TWLsolver clauses: 207
+% TWLsolver calls for satisfiability: 45
+% 
+% Memory used [KB]: 9594
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bigSmallEquiv
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bigSmallEquiv
+% SZS output start Proof for thm.bigSmallEquiv
+fof(f5324,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f5079,f116,f177,f4703,f4707,f4696,f4700,f165,f206,f4624,f4679,f115,f178,f164,f205,f4838,f4873,f4872,f3064,f3108,f117,f176,f146,f193,f5323])).
+fof(f5323,plain,(
+  $false | ($spl46 | $spl888)),
+  inference(trivial_inequality_removal,[],[f5322])).
+fof(f5322,plain,(
+  s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) | ($spl46 | $spl888)),
+  inference(superposition,[],[f4873,f206])).
+fof(f193,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK5(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK4(X1,X0))))) ) | $spl20),
+  inference(cnf_transformation,[],[f193_D])).
+fof(f193_D,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK5(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK4(X1,X0))))) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f146,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK5(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK4(X1,X0))))) )),
+  inference(cnf_transformation,[],[f98])).
+fof(f98,plain,(
+  ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK4(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK5(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK4,sK5])],[f49])).
+fof(f49,plain,(
+  ! [X0,X1] : (? [X3] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))) | ? [X2] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X2))))),
+  inference(flattening,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : ! [X1] : (? [X3] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))) | ? [X2] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X2))))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X6] : ! [X22] : (? [X12] : s('type.semanticPrimitives.error_result'(X6),X22) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X12))) | ? [X12] : s('type.semanticPrimitives.error_result'(X6),X22) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X12))))),
+  file('thm.bigSmallEquiv.bigSmallEquiv_38_prove_ltb','thm.semanticPrimitives.error_result_nchotomy')).
+fof(f176,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X4),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5)))))))) ) | $spl0),
+  inference(cnf_transformation,[],[f176_D])).
+fof(f176_D,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X4),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5)))))))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f117,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X4),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5)))))))) )),
+  inference(cnf_transformation,[],[f83])).
+fof(f83,plain,(
+  ! [X8,X9] : s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X8),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rval_1'(s(sK1,X9))))) & ! [X6,X7] : s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X6),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,X7))))))) & ! [X4,X5] : s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X4),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f78])).
+fof(f78,plain,(
+  ? [X0,X1,X2,X3] : (! [X8,X9] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) != s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X8),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rval_1'(s(X1,X9))))) & ! [X6,X7] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) != s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X6),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X2),'const.semanticPrimitives.Rraise_1'(s(X2,X7))))))) & ! [X4,X5] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) != s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5))))))))),
+  inference(ennf_transformation,[],[f34])).
+fof(f34,plain,(
+  ~! [X0,X1,X2,X3] : (? [X8,X9] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) = s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X8),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rval_1'(s(X1,X9))))) | ? [X6,X7] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) = s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X6),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X2),'const.semanticPrimitives.Rraise_1'(s(X2,X7))))))) | ? [X4,X5] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) = s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5))))))))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ~! [X0,X1,X2] : ! [X3] : (? [X8,X9] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) = s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X8),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rval_1'(s(X1,X9))))) | ? [X6,X7] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) = s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X6),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X2),'const.semanticPrimitives.Rraise_1'(s(X2,X7))))))) | ? [X4,X5] : s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),X3) = s('type.pair.prod'(X0,'type.semanticPrimitives.result'(X1,X2)),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.result'(X1,X2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X2),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X5))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9] : (? [X10,X11] : s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),X9) = s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),'const.pair.,_2'(s(X6,X10),s('type.semanticPrimitives.result'(X7,X8),'const.semanticPrimitives.Rval_1'(s(X7,X11))))) | ? [X10,X11] : s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),X9) = s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),'const.pair.,_2'(s(X6,X10),s('type.semanticPrimitives.result'(X7,X8),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X8),'const.semanticPrimitives.Rraise_1'(s(X8,X11))))))) | ? [X10,X12] : s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),X9) = s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),'const.pair.,_2'(s(X6,X10),s('type.semanticPrimitives.result'(X7,X8),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X8),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X12))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9] : (? [X10,X11] : s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),X9) = s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),'const.pair.,_2'(s(X6,X10),s('type.semanticPrimitives.result'(X7,X8),'const.semanticPrimitives.Rval_1'(s(X7,X11))))) | ? [X10,X11] : s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),X9) = s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),'const.pair.,_2'(s(X6,X10),s('type.semanticPrimitives.result'(X7,X8),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X8),'const.semanticPrimitives.Rraise_1'(s(X8,X11))))))) | ? [X10,X12] : s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),X9) = s('type.pair.prod'(X6,'type.semanticPrimitives.result'(X7,X8)),'const.pair.,_2'(s(X6,X10),s('type.semanticPrimitives.result'(X7,X8),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X8),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X12))))))))),
+  file('thm.bigSmallEquiv.bigSmallEquiv_38_prove_ltb','thm.bigSmallEquiv.bigSmallEquiv_38_prove_ltb')).
+fof(f3108,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X1),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),X0))))) | s('type.semanticPrimitives.error_result'(sK2),X0) = s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,sK4(X0,sK2))))) ) | $spl460),
+  inference(cnf_transformation,[],[f3108_D])).
+fof(f3108_D,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X1),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),X0))))) | s('type.semanticPrimitives.error_result'(sK2),X0) = s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,sK4(X0,sK2))))) ) <=> ~$spl460),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl460])])).
+fof(f3064,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X1),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),X0))))) | s('type.semanticPrimitives.error_result'(sK2),X0) = s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,sK4(X0,sK2))))) ) | ($spl0 | $spl20)),
+  inference(superposition,[],[f176,f193])).
+fof(f4872,plain,(
+  s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1)) = s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,sK4(sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1),sK2)))) | $spl886),
+  inference(cnf_transformation,[],[f4872_D])).
+fof(f4872_D,plain,(
+  s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1)) = s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,sK4(sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1),sK2)))) <=> ~$spl886),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl886])])).
+fof(f4873,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X0),s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0))))) ) | $spl888),
+  inference(cnf_transformation,[],[f4873_D])).
+fof(f4873_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X0),s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0))))) ) <=> ~$spl888),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl888])])).
+fof(f4838,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X0),s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0)))) | s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1)) = s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,sK4(sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1),sK2))))) ) | ($spl460 | $spl842)),
+  inference(superposition,[],[f3108,f4707])).
+fof(f205,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),sK9(X2,X1,X0)))) | s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,sK8(X2,X1,X0))))) ) | $spl44),
+  inference(cnf_transformation,[],[f205_D])).
+fof(f205_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),sK9(X2,X1,X0)))) | s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,sK8(X2,X1,X0))))) ) <=> ~$spl44),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl44])])).
+fof(f164,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),sK9(X2,X1,X0)))) | s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,sK8(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X0,X1,X2] : (s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,sK8(X2,X1,X0)))) | s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),sK9(X2,X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK8,sK9])],[f65])).
+fof(f65,plain,(
+  ! [X0,X1,X2] : (? [X4] : s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X4))) | ? [X3] : s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),X3))))),
+  inference(flattening,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1] : ! [X2] : (? [X4] : s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X4))) | ? [X3] : s('type.semanticPrimitives.result'(X0,X1),X2) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),X3))))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X6,X7] : ! [X23] : (? [X12] : s('type.semanticPrimitives.result'(X6,X7),X23) = s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rval_1'(s(X6,X12))) | ? [X24] : s('type.semanticPrimitives.result'(X6,X7),X23) = s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X7),X24))))),
+  file('thm.bigSmallEquiv.bigSmallEquiv_38_prove_ltb','thm.semanticPrimitives.result_nchotomy')).
+fof(f178,plain,(
+  ( ! [X8,X9] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X8),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rval_1'(s(sK1,X9)))))) ) | $spl4),
+  inference(cnf_transformation,[],[f178_D])).
+fof(f178_D,plain,(
+  ( ! [X8,X9] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X8),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rval_1'(s(sK1,X9)))))) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f115,plain,(
+  ( ! [X8,X9] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X8),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rval_1'(s(sK1,X9)))))) )),
+  inference(cnf_transformation,[],[f83])).
+fof(f4679,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X1),s('type.semanticPrimitives.result'(sK1,sK2),X0))) | s('type.semanticPrimitives.result'(sK1,sK2),X0) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(X0,sK2,sK1))))) ) | $spl810),
+  inference(cnf_transformation,[],[f4679_D])).
+fof(f4679_D,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X1),s('type.semanticPrimitives.result'(sK1,sK2),X0))) | s('type.semanticPrimitives.result'(sK1,sK2),X0) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(X0,sK2,sK1))))) ) <=> ~$spl810),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl810])])).
+fof(f4624,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X1),s('type.semanticPrimitives.result'(sK1,sK2),X0))) | s('type.semanticPrimitives.result'(sK1,sK2),X0) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(X0,sK2,sK1))))) ) | ($spl4 | $spl44)),
+  inference(superposition,[],[f178,f205])).
+fof(f206,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK10(X2,X1,X0)),s(X1,sK11(X2,X1,X0))))) ) | $spl46),
+  inference(cnf_transformation,[],[f206_D])).
+fof(f206_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK10(X2,X1,X0)),s(X1,sK11(X2,X1,X0))))) ) <=> ~$spl46),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl46])])).
+fof(f165,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK10(X2,X1,X0)),s(X1,sK11(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f109])).
+fof(f109,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK10(X2,X1,X0)),s(X1,sK11(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11])],[f67])).
+fof(f67,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X7] : ! [X16] : ? [X20,X9] : s('type.pair.prod'(X6,X7),X16) = s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X20),s(X7,X9)))),
+  file('thm.bigSmallEquiv.bigSmallEquiv_38_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f4700,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),X0) | s('type.semanticPrimitives.result'(sK1,sK2),sK11(X0,'type.semanticPrimitives.result'(sK1,sK2),sK0)) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(X0,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1))))) ) | $spl836),
+  inference(cnf_transformation,[],[f4700_D])).
+fof(f4700_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),X0) | s('type.semanticPrimitives.result'(sK1,sK2),sK11(X0,'type.semanticPrimitives.result'(sK1,sK2),sK0)) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(X0,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1))))) ) <=> ~$spl836),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl836])])).
+fof(f4696,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),X0) | s('type.semanticPrimitives.result'(sK1,sK2),sK11(X0,'type.semanticPrimitives.result'(sK1,sK2),sK0)) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(X0,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1))))) ) | ($spl46 | $spl810)),
+  inference(superposition,[],[f4679,f206])).
+fof(f4707,plain,(
+  s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0)) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1)))) | $spl842),
+  inference(cnf_transformation,[],[f4707_D])).
+fof(f4707_D,plain,(
+  s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0)) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1)))) <=> ~$spl842),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl842])])).
+fof(f4703,plain,(
+  s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0)) = s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1)))) | $spl836),
+  inference(equality_resolution,[],[f4700])).
+fof(f177,plain,(
+  ( ! [X6,X7] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X6),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,X7)))))))) ) | $spl2),
+  inference(cnf_transformation,[],[f177_D])).
+fof(f177_D,plain,(
+  ( ! [X6,X7] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X6),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,X7)))))))) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f116,plain,(
+  ( ! [X6,X7] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X6),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),'const.semanticPrimitives.Rraise_1'(s(sK2,X7)))))))) )),
+  inference(cnf_transformation,[],[f83])).
+fof(f5079,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X0),s('type.semanticPrimitives.result'(sK1,sK2),sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0))))) ) | ($spl2 | $spl842 | $spl886)),
+  inference(forward_demodulation,[],[f5037,f4707])).
+fof(f5037,plain,(
+  ( ! [X0] : (s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),sK3) != s('type.pair.prod'(sK0,'type.semanticPrimitives.result'(sK1,sK2)),'const.pair.,_2'(s(sK0,X0),s('type.semanticPrimitives.result'(sK1,sK2),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK2),sK9(sK11(sK3,'type.semanticPrimitives.result'(sK1,sK2),sK0),sK2,sK1))))))) ) | ($spl2 | $spl886)),
+  inference(superposition,[],[f177,f4872])).
+% SZS output end Proof for thm.bigSmallEquiv
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 81
+% Passive clauses: 591
+% Generated clauses: 5167
+% Final active clauses: 74
+% Final passive clauses: 453
+% Input formulas: 31
+% Initial clauses: 60
+% 
+% Duplicate literals: 258
+% Trivial inequalities: 92
+% Fw subsumption resolutions: 296
+% Fw demodulations: 435
+% Bw demodulations: 61
+% Condensations: 446
+% Global subsumptions: 5
+% 
+% Simple tautologies: 135
+% Equational tautologies: 41
+% Forward subsumptions: 1741
+% Bw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 88
+% Factoring: 1
+% Forward superposition: 1452
+% Backward superposition: 1211
+% Self superposition: 81
+% Equality factoring: 68
+% Equality resolution: 22
+% 
+% Split clauses: 24
+% Split components: 48
+% SAT solver clauses: 1184
+% SAT solver unit clauses: 68
+% SAT solver binary clauses: 70
+% SAT solver learnt clauses: 11
+% 
+% Sat splits: 24
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 1163
+% TWLsolver calls for satisfiability: 271
+% 
+% Memory used [KB]: 5245
+% Time elapsed: 0.206 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.818 s

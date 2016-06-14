@@ -1,0 +1,569 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpProps
+% (60130)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 642
+% Passive clauses: 8515
+% Generated clauses: 16353
+% Final active clauses: 640
+% Final passive clauses: 7540
+% Input formulas: 69
+% Initial clauses: 243
+% 
+% Duplicate literals: 213
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 577
+% Fw demodulations: 943
+% 
+% Simple tautologies: 265
+% Equational tautologies: 49
+% Forward subsumptions: 5736
+% 
+% Binary resolution: 8285
+% Factoring: 940
+% Forward superposition: 2507
+% Backward superposition: 2504
+% Self superposition: 42
+% Equality factoring: 2
+% Equality resolution: 14
+% 
+% Split clauses: 171
+% Split components: 344
+% SAT solver clauses: 378
+% SAT solver unit clauses: 20
+% SAT solver binary clauses: 81
+% SAT solver learnt clauses: 1
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 171
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 377
+% TWLsolver calls for satisfiability: 297
+% 
+% Memory used [KB]: 14456
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvpProps
+% (60151)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 429
+% Passive clauses: 2364
+% Generated clauses: 11652
+% Final active clauses: 417
+% Final passive clauses: 1880
+% Input formulas: 69
+% Initial clauses: 243
+% 
+% Duplicate literals: 173
+% Trivial inequalities: 17
+% Fw subsumption resolutions: 756
+% Fw demodulations: 556
+% Bw demodulations: 55
+% Condensations: 337
+% Global subsumptions: 20
+% 
+% Simple tautologies: 241
+% Equational tautologies: 23
+% Forward subsumptions: 4158
+% Fw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 2658
+% Factoring: 366
+% Forward superposition: 1834
+% Backward superposition: 2091
+% Self superposition: 72
+% Equality factoring: 26
+% Equality resolution: 21
+% 
+% Split clauses: 18
+% Split components: 36
+% SAT solver clauses: 3212
+% SAT solver unit clauses: 260
+% SAT solver binary clauses: 112
+% SAT solver learnt clauses: 42
+% SAT solver learnt literals: 15
+% 
+% Sat splits: 18
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 3130
+% TWLsolver calls for satisfiability: 4295
+% 
+% Memory used [KB]: 17398
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.bvpProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpProps
+% SZS output start Proof for thm.bvpProps
+fof(f120593,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f342,f612,f610,f341,f611,f609,f5698,f5700,f5699,f40460,f118647,f118650,f118653,f118656,f118659,f118662,f118665])).
+fof(f118665,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118664,f430])).
+fof(f430,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f117])).
+fof(f117,plain,(
+  ! [X0,X1] : s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))),
+  inference(flattening,[],[f116])).
+fof(f116,plain,(
+  ! [X0] : ! [X1] : ~s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X6] : ! [X24] : ~s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X24)))),
+  file('thm.bvpProps.cut_state_eq_none','thm.option.NOT_NONE_SOME')).
+fof(f118664,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118663,f609])).
+fof(f118663,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115560,f431])).
+fof(f431,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X1),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),happ(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),happ(s(fun(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0))),'const.bvpSem.state_locals_fupd_0'),s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X1))),s('type.bvpSem.state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f119])).
+fof(f119,plain,(
+  ! [X0,X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X1),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),happ(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),happ(s(fun(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0))),'const.bvpSem.state_locals_fupd_0'),s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X1))),s('type.bvpSem.state'(X0),X2)))),
+  inference(flattening,[],[f118])).
+fof(f118,plain,(
+  ! [X0] : ! [X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X1),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),happ(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),happ(s(fun(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0))),'const.bvpSem.state_locals_fupd_0'),s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X1))),s('type.bvpSem.state'(X0),X2)))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X11] : ! [X42,X43] : s('type.bvpSem.state'(X11),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X42),s('type.bvpSem.state'(X11),X43))) = s('type.bvpSem.state'(X11),happ(s(fun('type.bvpSem.state'(X11),'type.bvpSem.state'(X11)),happ(s(fun(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),fun('type.bvpSem.state'(X11),'type.bvpSem.state'(X11))),'const.bvpSem.state_locals_fupd_0'),s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X42))),s('type.bvpSem.state'(X11),X43)))),
+  file('thm.bvpProps.cut_state_eq_none','ARITY_0_2_const.bvpSem.state_locals_fupd')).
+fof(f115560,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),happ(s(fun('type.bvpSem.state'(sK14),'type.bvpSem.state'(sK14)),happ(s(fun(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),fun('type.bvpSem.state'(sK14),'type.bvpSem.state'(sK14))),'const.bvpSem.state_locals_fupd_0'),s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(unit_resulting_resolution,[],[f431,f43748,f445])).
+fof(f445,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) | s('type.bvpSem.state'(X0),X1) != s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2))) | s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f287])).
+fof(f287,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) != s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2))) | (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),sK78(X3,X2,X1,X0)))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) & s('type.bvpSem.state'(X0),X1) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK78(X3,X2,X1,X0)))),s('type.bvpSem.state'(X0),X2))))) & (! [X4] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) | s('type.bvpSem.state'(X0),X1) != s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2)))) | s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK78])],[f286])).
+fof(f286,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) != s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2))) | ? [X5] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X5))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) & s('type.bvpSem.state'(X0),X1) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X5))),s('type.bvpSem.state'(X0),X2))))) & (! [X4] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) | s('type.bvpSem.state'(X0),X1) != s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2)))) | s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2)))))),
+  inference(rectify,[],[f285])).
+fof(f285,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) != s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2))) | ? [X4] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) & s('type.bvpSem.state'(X0),X1) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2))))) & (! [X4] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) | s('type.bvpSem.state'(X0),X1) != s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2)))) | s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2)))))),
+  inference(nnf_transformation,[],[f131])).
+fof(f131,plain,(
+  ! [X0,X1,X2,X3] : (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2))) <=> ? [X4] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) & s('type.bvpSem.state'(X0),X1) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(flattening,[],[f130])).
+fof(f130,plain,(
+  ! [X0] : ! [X1,X2,X3] : (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2))) <=> ? [X4] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2))))) & s('type.bvpSem.state'(X0),X1) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X4))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X9,X7,X8] : (s('type.option.option'('type.bvpSem.state'(X6)),'const.option.SOME_1'(s('type.bvpSem.state'(X6),X9))) = s('type.option.option'('type.bvpSem.state'(X6)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X8),s('type.bvpSem.state'(X6),X7))) <=> ? [X10] : (s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),X10))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X8),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X6),X7))))) & s('type.bvpSem.state'(X6),X9) = s('type.bvpSem.state'(X6),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),X10))),s('type.bvpSem.state'(X6),X7)))))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bvpProps.cut_state_eq_some')).
+fof(f43748,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))) | $spl3),
+  inference(unit_resulting_resolution,[],[f612,f405])).
+fof(f405,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK17(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) )),
+  inference(cnf_transformation,[],[f259])).
+fof(f259,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK17(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK17])],[f108])).
+fof(f108,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(flattening,[],[f107])).
+fof(f107,plain,(
+  ! [X0] : ! [X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(rectify,[],[f47])).
+fof(f47,axiom,(
+  ! [X6] : ! [X61] : (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X61) | ? [X24] : s('type.option.option'(X6),X61) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X24))))),
+  file('thm.bvpProps.cut_state_eq_none','thm.option.option_nchotomy')).
+fof(f118662,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118661,f430])).
+fof(f118661,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118660,f609])).
+fof(f118660,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115561,f497])).
+fof(f497,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(X1,X2),s(fun(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f151])).
+fof(f151,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(X1,X2),s(fun(X0,X1),X3)))),
+  inference(flattening,[],[f150])).
+fof(f150,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(X1,X2),s(fun(X0,X1),X3)))),
+  inference(rectify,[],[f39])).
+fof(f39,axiom,(
+  ! [X6,X44] : ! [X38,X60] : s(X44,X38) = s(X44,'const.option.option_CASE_3'(s('type.option.option'(X6),'const.option.NONE_0'),s(X44,X38),s(fun(X6,X44),X60)))),
+  file('thm.bvpProps.cut_state_eq_none','thm.option.option_case_def|split|0')).
+fof(f115561,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))),s(fun(X0,'type.bvpSem.state'(sK14)),X1)))))) ) | $spl3),
+  inference(unit_resulting_resolution,[],[f497,f43748,f445])).
+fof(f118659,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118658,f430])).
+fof(f118658,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118657,f609])).
+fof(f118657,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115562,f615])).
+fof(f615,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f498,f496])).
+fof(f496,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f148])).
+fof(f148,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f66])).
+fof(f66,axiom,(
+  ! [X44,X6] : ! [X24,X9] : s(X6,X24) = s(X6,'const.combin.K_2'(s(X6,X24),s(X44,X9)))),
+  file('thm.bvpProps.cut_state_eq_none','thm.combin.K_THM')).
+fof(f498,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f153])).
+fof(f153,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f152])).
+fof(f152,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f70])).
+fof(f70,axiom,(
+  ! [X6,X44] : ! [X42,X43] : s(X6,'const.combin.K_2'(s(X6,X42),s(X44,X43))) = s(X6,happ(s(fun(X44,X6),'const.combin.K_1'(s(X6,X42))),s(X44,X43)))),
+  file('thm.bvpProps.cut_state_eq_none','ARITY_1_2_const.combin.K')).
+fof(f115562,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),happ(s(fun(X0,'type.bvpSem.state'(sK14)),'const.combin.K_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))),s(X0,X1)))))) ) | $spl3),
+  inference(unit_resulting_resolution,[],[f615,f43748,f445])).
+fof(f118656,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118655,f430])).
+fof(f118655,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118654,f609])).
+fof(f118654,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115563,f496])).
+fof(f115563,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.combin.K_2'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))),s(X0,X1)))))) ) | $spl3),
+  inference(unit_resulting_resolution,[],[f496,f43748,f445])).
+fof(f118653,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118652,f430])).
+fof(f118652,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118651,f609])).
+fof(f118651,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115564,f89012])).
+fof(f89012,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,sK17('const.option.SOME_1'(s(X0,X1)),X0))) )),
+  inference(unit_resulting_resolution,[],[f1836,f435])).
+fof(f435,plain,(
+  ( ! [X2,X0,X1] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f278])).
+fof(f278,plain,(
+  ! [X0,X1,X2] : ((s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))),
+  inference(nnf_transformation,[],[f125])).
+fof(f125,plain,(
+  ! [X0,X1,X2] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(flattening,[],[f124])).
+fof(f124,plain,(
+  ! [X0] : ! [X1,X2] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f37])).
+fof(f37,axiom,(
+  ! [X6] : ! [X24,X9] : (s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X9))) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X24))) <=> s(X6,X9) = s(X6,X24))),
+  file('thm.bvpProps.cut_state_eq_none','thm.option.SOME_|49||49|')).
+fof(f1836,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK17('const.option.SOME_1'(s(X0,X1)),X0))))) )),
+  inference(unit_resulting_resolution,[],[f430,f405])).
+fof(f115564,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),sK17('const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15)))),'type.bvpSem.state'(sK14))))) | $spl3),
+  inference(unit_resulting_resolution,[],[f89012,f43748,f445])).
+fof(f118650,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118649,f430])).
+fof(f118649,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118648,f609])).
+fof(f118648,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115565,f2405])).
+fof(f2405,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,sK76(X1,'const.combin.K_1'(s(bool,'F_0')),X0))) )),
+  inference(unit_resulting_resolution,[],[f613,f1750])).
+fof(f1750,plain,(
+  ( ! [X4,X5,X3] : (p(s(bool,X4)) | s(X3,X5) = s(X3,sK76(X5,'const.combin.K_1'(s(bool,X4)),X3))) )),
+  inference(superposition,[],[f437,f615])).
+fof(f437,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(X0,X2) = s(X0,sK76(X2,X1,X0))) )),
+  inference(cnf_transformation,[],[f281])).
+fof(f281,plain,(
+  ! [X0,X1,X2] : (((s(X0,X2) = s(X0,sK76(X2,X1,X0)) & ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK76(X2,X1,X0)))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ! [X3] : (s(X0,X2) != s(X0,X3) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK76])],[f280])).
+fof(f280,plain,(
+  ! [X0,X1,X2] : ((? [X4] : (s(X0,X2) = s(X0,X4) & ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ! [X3] : (s(X0,X2) != s(X0,X3) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(rectify,[],[f279])).
+fof(f279,plain,(
+  ! [X0,X1,X2] : ((? [X3] : (s(X0,X2) = s(X0,X3) & ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ! [X3] : (s(X0,X2) != s(X0,X3) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(nnf_transformation,[],[f191])).
+fof(f191,plain,(
+  ! [X0,X1,X2] : (! [X3] : (s(X0,X2) != s(X0,X3) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(ennf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2] : (! [X3] : (s(X0,X2) = s(X0,X3) => p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(flattening,[],[f126])).
+fof(f126,plain,(
+  ! [X0] : ! [X1,X2] : (! [X3] : (s(X0,X2) = s(X0,X3) => p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(rectify,[],[f49])).
+fof(f49,axiom,(
+  ! [X6] : ! [X60,X38] : (! [X24] : (s(X6,X24) = s(X6,X38) => p(s(bool,happ(s(fun(X6,bool),X60),s(X6,X24))))) <=> p(s(bool,happ(s(fun(X6,bool),X60),s(X6,X38)))))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bool.UNWIND_FORALL_THM2')).
+fof(f613,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f347,f343])).
+fof(f343,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.bvpProps.cut_state_eq_none',aHL_TRUTH)).
+fof(f347,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f230])).
+fof(f230,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f28])).
+fof(f28,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bool.NOT_CLAUSES|split|1')).
+fof(f115565,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),sK76('const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15)),'const.combin.K_1'(s(bool,'F_0')),'type.bvpSem.state'(sK14))))) | $spl3),
+  inference(unit_resulting_resolution,[],[f2405,f43748,f445])).
+fof(f118647,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f118646,f430])).
+fof(f118646,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f118645,f609])).
+fof(f118645,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(forward_demodulation,[],[f115566,f5728])).
+fof(f5728,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,sK77(X1,'const.combin.K_1'(s(bool,'T_0')),X0))) )),
+  inference(unit_resulting_resolution,[],[f343,f1803])).
+fof(f1803,plain,(
+  ( ! [X4,X5,X3] : (~p(s(bool,X4)) | s(X3,X5) = s(X3,sK77(X5,'const.combin.K_1'(s(bool,X4)),X3))) )),
+  inference(superposition,[],[f441,f615])).
+fof(f441,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(X0,X2) = s(X0,sK77(X2,X1,X0))) )),
+  inference(cnf_transformation,[],[f284])).
+fof(f284,plain,(
+  ! [X0,X1,X2] : ((! [X4] : (s(X0,X2) != s(X0,X4) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | (s(X0,X2) = s(X0,sK77(X2,X1,X0)) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK77(X2,X1,X0))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK77])],[f283])).
+fof(f283,plain,(
+  ! [X0,X1,X2] : ((! [X4] : (s(X0,X2) != s(X0,X4) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(rectify,[],[f282])).
+fof(f282,plain,(
+  ! [X0,X1,X2] : ((! [X3] : (s(X0,X2) != s(X0,X3) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(nnf_transformation,[],[f129])).
+fof(f129,plain,(
+  ! [X0,X1,X2] : (? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(flattening,[],[f128])).
+fof(f128,plain,(
+  ! [X0] : ! [X1,X2] : (? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(rectify,[],[f34])).
+fof(f34,axiom,(
+  ! [X6] : ! [X12,X59] : (? [X24] : (s(X6,X24) = s(X6,X59) & p(s(bool,happ(s(fun(X6,bool),X12),s(X6,X24))))) <=> p(s(bool,happ(s(fun(X6,bool),X12),s(X6,X59)))))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bool.UNWIND_THM2')).
+fof(f115566,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),sK77('const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),sK17('const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))),'type.sptree.spt'('type.bvlSem.v'))))),s('type.bvpSem.state'(sK14),sK15)),'const.combin.K_1'(s(bool,'T_0')),'type.bvpSem.state'(sK14))))) | $spl3),
+  inference(unit_resulting_resolution,[],[f5728,f43748,f445])).
+fof(f40460,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(subsumption_resolution,[],[f40459,f430])).
+fof(f40459,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),sK78(sK16,sK15,sK17('const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15)),'type.bvpSem.state'(sK14)),sK14)))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f40428,f611])).
+fof(f40428,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),sK78(sK16,sK15,sK17('const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15)),'type.bvpSem.state'(sK14)),sK14)))) | $spl1),
+  inference(unit_resulting_resolution,[],[f1835,f443])).
+fof(f443,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.SOME_1'(s('type.bvpSem.state'(X0),X1))) != s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.bvpSem.state'(X0),X2))) | s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.SOME_1'(s('type.sptree.spt'('type.bvlSem.v'),sK78(X3,X2,X1,X0)))) = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X3),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f287])).
+fof(f1835,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) = s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.SOME_1'(s('type.bvpSem.state'(sK14),sK17('const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15)),'type.bvpSem.state'(sK14))))) | $spl1),
+  inference(unit_resulting_resolution,[],[f610,f405])).
+fof(f5699,plain,(
+  ( ! [X6,X4,X2,X5,X3,X1] : (s(X1,X2) != s(X1,X3) | s(bool,'F_0') != s(bool,X4) | s(X1,'const.bool.COND_3'(s(bool,'F_0'),s(X1,X6),s(X1,X3))) = s(X1,'const.bool.COND_3'(s(bool,X4),s(X1,X5),s(X1,X2)))) ) | $spl4),
+  inference(cnf_transformation,[],[f5699_D])).
+fof(f5699_D,plain,(
+  ( ! [X6,X4,X2,X5,X3,X1] : (s(X1,X2) != s(X1,X3) | s(bool,'F_0') != s(bool,X4) | s(X1,'const.bool.COND_3'(s(bool,'F_0'),s(X1,X6),s(X1,X3))) = s(X1,'const.bool.COND_3'(s(bool,X4),s(X1,X5),s(X1,X2)))) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f5700,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl6),
+  inference(cnf_transformation,[],[f5700_D])).
+fof(f5700_D,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f5698,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (p(s(bool,X0)) | s(X1,X2) != s(X1,X3) | s(X1,'const.bool.COND_3'(s(bool,'F_0'),s(X1,X6),s(X1,X3))) = s(X1,'const.bool.COND_3'(s(bool,X4),s(X1,X5),s(X1,X2))) | s(bool,'F_0') != s(bool,X4)) )),
+  inference(subsumption_resolution,[],[f5473,f360])).
+fof(f360,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f232])).
+fof(f232,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f83])).
+fof(f83,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X54] : (s(bool,'T_0') = s(bool,X54) <=> p(s(bool,X54)))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bool.EQ_CLAUSES|split|1')).
+fof(f5473,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (p(s(bool,X0)) | s(X1,X2) != s(X1,X3) | s(X1,'const.bool.COND_3'(s(bool,'F_0'),s(X1,X6),s(X1,X3))) = s(X1,'const.bool.COND_3'(s(bool,X4),s(X1,X5),s(X1,X2))) | s(bool,'F_0') != s(bool,X4) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f448,f353])).
+fof(f353,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvpProps.cut_state_eq_none',aHL_BOOL_CASES)).
+fof(f448,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (p(s(bool,X2)) | s(X0,X5) != s(X0,X6) | s(X0,'const.bool.COND_3'(s(bool,X1),s(X0,X3),s(X0,X5))) = s(X0,'const.bool.COND_3'(s(bool,X2),s(X0,X4),s(X0,X6))) | s(bool,X1) != s(bool,X2)) )),
+  inference(cnf_transformation,[],[f193])).
+fof(f193,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : (s(bool,X1) != s(bool,X2) | (p(s(bool,X2)) & s(X0,X3) != s(X0,X4)) | (~p(s(bool,X2)) & s(X0,X5) != s(X0,X6)) | s(X0,'const.bool.COND_3'(s(bool,X1),s(X0,X3),s(X0,X5))) = s(X0,'const.bool.COND_3'(s(bool,X2),s(X0,X4),s(X0,X6))))),
+  inference(flattening,[],[f192])).
+fof(f192,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ((s(bool,X1) != s(bool,X2) | (p(s(bool,X2)) & s(X0,X3) != s(X0,X4)) | (~p(s(bool,X2)) & s(X0,X5) != s(X0,X6))) | s(X0,'const.bool.COND_3'(s(bool,X1),s(X0,X3),s(X0,X5))) = s(X0,'const.bool.COND_3'(s(bool,X2),s(X0,X4),s(X0,X6))))),
+  inference(ennf_transformation,[],[f133])).
+fof(f133,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ((s(bool,X1) = s(bool,X2) & (p(s(bool,X2)) => s(X0,X3) = s(X0,X4)) & (~p(s(bool,X2)) => s(X0,X5) = s(X0,X6))) => s(X0,'const.bool.COND_3'(s(bool,X1),s(X0,X3),s(X0,X5))) = s(X0,'const.bool.COND_3'(s(bool,X2),s(X0,X4),s(X0,X6))))),
+  inference(flattening,[],[f132])).
+fof(f132,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6] : ((s(bool,X1) = s(bool,X2) & (p(s(bool,X2)) => s(X0,X3) = s(X0,X4)) & (~p(s(bool,X2)) => s(X0,X5) = s(X0,X6))) => s(X0,'const.bool.COND_3'(s(bool,X1),s(X0,X3),s(X0,X5))) = s(X0,'const.bool.COND_3'(s(bool,X2),s(X0,X4),s(X0,X6))))),
+  inference(rectify,[],[f67])).
+fof(f67,axiom,(
+  ! [X6] : ! [X12,X69,X24,X37,X9,X55] : ((s(bool,X12) = s(bool,X69) & (p(s(bool,X69)) => s(X6,X24) = s(X6,X37)) & (~p(s(bool,X69)) => s(X6,X9) = s(X6,X55))) => s(X6,'const.bool.COND_3'(s(bool,X12),s(X6,X24),s(X6,X9))) = s(X6,'const.bool.COND_3'(s(bool,X69),s(X6,X37),s(X6,X55))))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bool.COND_CONG')).
+fof(f609,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) | $spl0),
+  inference(cnf_transformation,[],[f609_D])).
+fof(f609_D,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f611,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) | $spl2),
+  inference(cnf_transformation,[],[f611_D])).
+fof(f611_D,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f341,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) | s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15)))),
+  inference(cnf_transformation,[],[f229])).
+fof(f229,plain,(
+  (s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) | s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15)))))) & (s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') != s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) | s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK14,sK15,sK16])],[f228])).
+fof(f228,plain,(
+  ? [X0,X1,X2] : ((s('type.option.option'('type.bvpSem.state'(X0)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.bvpSem.state'(X0),X1))) | s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X1)))))) & (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.NONE_0') != s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.bvpSem.state'(X0),X1))) | s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X1)))))))),
+  inference(nnf_transformation,[],[f175])).
+fof(f175,plain,(
+  ? [X0,X1,X2] : (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.bvpSem.state'(X0),X1))) <~> s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X1))))))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1,X2] : (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.bvpSem.state'(X0),X1))) <=> s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X1))))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0] : ! [X1,X2] : (s('type.option.option'('type.bvpSem.state'(X0)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(X0)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.bvpSem.state'(X0),X1))) <=> s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X2),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X0),X1))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (s('type.option.option'('type.bvpSem.state'(X6)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(X6)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X8),s('type.bvpSem.state'(X6),X7))) <=> s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X8),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X6),X7))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (s('type.option.option'('type.bvpSem.state'(X6)),'const.option.NONE_0') = s('type.option.option'('type.bvpSem.state'(X6)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),X8),s('type.bvpSem.state'(X6),X7))) <=> s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') = s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),X8),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(X6),X7))))))),
+  file('thm.bvpProps.cut_state_eq_none','thm.bvpProps.cut_state_eq_none')).
+fof(f610,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') != s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) | $spl1),
+  inference(cnf_transformation,[],[f610_D])).
+fof(f610_D,plain,(
+  s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') != s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f612,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) | $spl3),
+  inference(cnf_transformation,[],[f612_D])).
+fof(f612_D,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f342,plain,(
+  s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.option.NONE_0') != s('type.option.option'('type.sptree.spt'('type.bvlSem.v')),'const.bvpSem.cut_env_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.sptree.spt'('type.bvlSem.v'),'const.bvpSem.state_locals_1'(s('type.bvpSem.state'(sK14),sK15))))) | s('type.option.option'('type.bvpSem.state'(sK14)),'const.option.NONE_0') != s('type.option.option'('type.bvpSem.state'(sK14)),'const.bvpSem.cut_state_2'(s('type.sptree.spt'('type.one.one'),sK16),s('type.bvpSem.state'(sK14),sK15)))),
+  inference(cnf_transformation,[],[f229])).
+% SZS output end Proof for thm.bvpProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 332
+% Passive clauses: 2044
+% Generated clauses: 120246
+% Final active clauses: 327
+% Final passive clauses: 1652
+% Input formulas: 69
+% Initial clauses: 243
+% 
+% Duplicate literals: 27
+% Trivial inequalities: 5
+% Fw subsumption resolutions: 47
+% Fw demodulations: 74385
+% Bw demodulations: 8
+% Condensations: 37
+% Global subsumptions: 1
+% 
+% Simple tautologies: 80
+% Equational tautologies: 22
+% Forward subsumptions: 18277
+% Fw demodulations to eq. taut.: 25310
+% Bw demodulations to eq. taut.: 1
+% 
+% Unit resulting resolution: 40161
+% Factoring: 1
+% Forward superposition: 2730
+% Backward superposition: 2538
+% Self superposition: 46
+% Equality factoring: 2
+% Equality resolution: 10
+% 
+% Split clauses: 3
+% Split components: 6
+% SAT solver clauses: 2061
+% SAT solver unit clauses: 868
+% SAT solver binary clauses: 748
+% 
+% Sat splits: 3
+% Sat splitting refutations: 8
+% 
+% Memory used [KB]: 48485
+% Time elapsed: 4.150 s
+% ------------------------------
+% ------------------------------
+% Success in time 5.5 s

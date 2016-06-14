@@ -1,0 +1,402 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvlProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvlProps
+% SZS output start Proof for thm.bvlProps
+fof(f3067,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3066,f171,f268,f266,f2866,f499,f170,f267,f265,f223,f269,f277,f183,f270,f2968,f514,f504,f2933,f2960,f2970,f508,f505,f2999,f3001,f509])).
+fof(f509,plain,(
+  s(bool,'F_0') != s(bool,sK0) | $spl27),
+  inference(cnf_transformation,[],[f509_D])).
+fof(f509_D,plain,(
+  s(bool,'F_0') != s(bool,sK0) <=> ~$spl27),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl27])])).
+fof(f3001,plain,(
+  s(bool,'F_0') = s(bool,sK1) | $spl44),
+  inference(cnf_transformation,[],[f3001_D])).
+fof(f3001_D,plain,(
+  s(bool,'F_0') = s(bool,sK1) <=> ~$spl44),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl44])])).
+fof(f2999,plain,(
+  s(bool,'F_0') = s(bool,sK1) | s(bool,'F_0') != s(bool,sK0) | ($spl2 | $spl5)),
+  inference(forward_demodulation,[],[f2983,f300])).
+fof(f300,plain,(
+  s(bool,'F_0') = s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.conLang.true_tag_0')))),
+  inference(resolution,[],[f216,f281])).
+fof(f281,plain,(
+  ~p(s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.conLang.true_tag_0'))))),
+  inference(forward_demodulation,[],[f186,f174])).
+fof(f174,plain,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.num.|48|_0')),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,axiom,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.num.|48|_0')),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.conLang.true_tag_def')).
+fof(f186,plain,(
+  ~p(s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.num.|48|_0'))))),
+  inference(cnf_transformation,[],[f77])).
+fof(f77,plain,(
+  ~p(s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.num.|48|_0'))))),
+  inference(flattening,[],[f61])).
+fof(f61,axiom,(
+  ~p(s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.num.|48|_0'))))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.numeral.numeral_distrib|split|34')).
+fof(f216,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f152])).
+fof(f152,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f105])).
+fof(f105,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f104])).
+fof(f104,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X10] : (s(bool,'F_0') = s(bool,X10) <=> ~p(s(bool,X10)))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.bool.EQ_CLAUSES|split|2')).
+fof(f2983,plain,(
+  s(bool,'F_0') != s(bool,sK0) | s(bool,sK1) = s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.conLang.true_tag_0'))) | ($spl2 | $spl5)),
+  inference(superposition,[],[f1208,f267])).
+fof(f1208,plain,(
+  ( ! [X12] : (s(bool,'F_0') != s(bool,X12) | s(bool,X12) = s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.conLang.true_tag_0')))) ) | $spl5),
+  inference(subsumption_resolution,[],[f1192,f270])).
+fof(f1192,plain,(
+  ( ! [X12] : (p(s(bool,'F_0')) | s(bool,X12) = s(bool,'const.arithmetic.ODD_1'(s('type.num.num','const.conLang.true_tag_0'))) | s(bool,'F_0') != s(bool,X12)) )),
+  inference(superposition,[],[f560,f300])).
+fof(f560,plain,(
+  ( ! [X2,X1] : (p(s(bool,X1)) | s(bool,X1) = s(bool,X2) | s(bool,'F_0') != s(bool,X2)) )),
+  inference(resolution,[],[f249,f215])).
+fof(f215,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f152])).
+fof(f249,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f144])).
+fof(f144,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f143])).
+fof(f143,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f133])).
+fof(f133,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X8,X9] : ((p(s(bool,X8)) => p(s(bool,X9))) => ((p(s(bool,X9)) => p(s(bool,X8))) => s(bool,X8) = s(bool,X9)))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.bool.IMP_ANTISYM_AX')).
+fof(f505,plain,(
+  s(bool,'T_0') = s(bool,sK1) | $spl22),
+  inference(cnf_transformation,[],[f505_D])).
+fof(f505_D,plain,(
+  s(bool,'T_0') = s(bool,sK1) <=> ~$spl22),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl22])])).
+fof(f508,plain,(
+  s(bool,'F_0') = s(bool,sK0) | $spl26),
+  inference(cnf_transformation,[],[f508_D])).
+fof(f508_D,plain,(
+  s(bool,'F_0') = s(bool,sK0) <=> ~$spl26),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl26])])).
+fof(f2970,plain,(
+  s(bool,'F_0') = s(bool,sK0) | s(bool,'T_0') = s(bool,sK1) | $spl2),
+  inference(superposition,[],[f267,f209])).
+fof(f209,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvlProps.bool_to_tag_|49||49|',aHL_BOOL_CASES)).
+fof(f2960,plain,(
+  $false | ($spl2 | $spl22 | $spl26)),
+  inference(subsumption_resolution,[],[f2939,f184])).
+fof(f184,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(cnf_transformation,[],[f75])).
+fof(f75,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(flattening,[],[f16])).
+fof(f16,axiom,(
+  ~s(bool,'T_0') = s(bool,'F_0')),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.bool.BOOL_EQ_DISTINCT|split|0')).
+fof(f2939,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | ($spl2 | $spl22 | $spl26)),
+  inference(backward_demodulation,[],[f2934,f508])).
+fof(f2934,plain,(
+  s(bool,'T_0') = s(bool,sK0) | ($spl2 | $spl22)),
+  inference(forward_demodulation,[],[f267,f505])).
+fof(f2933,plain,(
+  $false | ($spl0 | $spl16 | $spl22 | $spl26)),
+  inference(subsumption_resolution,[],[f2932,f1017])).
+fof(f1017,plain,(
+  s('type.num.num','const.conLang.true_tag_0') != s('type.num.num','const.conLang.false_tag_0') | $spl16),
+  inference(subsumption_resolution,[],[f1007,f277])).
+fof(f1007,plain,(
+  s('type.num.num','const.conLang.true_tag_0') != s('type.num.num','const.conLang.false_tag_0') | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))),
+  inference(superposition,[],[f985,f177])).
+fof(f177,plain,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(cnf_transformation,[],[f26])).
+fof(f26,axiom,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.conLang.false_tag_def')).
+fof(f985,plain,(
+  ( ! [X0] : (s('type.num.num','const.conLang.true_tag_0') != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))) | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0)) )),
+  inference(forward_demodulation,[],[f227,f174])).
+fof(f227,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0) | s('type.num.num','const.num.|48|_0') != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f158])).
+fof(f158,plain,(
+  ! [X0] : ((s('type.num.num','const.num.|48|_0') != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))) | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0)) & (s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num',X0) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0)))))),
+  inference(nnf_transformation,[],[f112])).
+fof(f112,plain,(
+  ! [X0] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))) <=> s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X0))),
+  inference(rectify,[],[f44])).
+fof(f44,axiom,(
+  ! [X15] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X15))) <=> s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num',X15))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.numeral.numeral_distrib|split|17')).
+fof(f2932,plain,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.conLang.false_tag_0') | ($spl0 | $spl22 | $spl26)),
+  inference(forward_demodulation,[],[f2931,f2740])).
+fof(f2740,plain,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0')))),
+  inference(superposition,[],[f203,f238])).
+fof(f238,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f122])).
+fof(f122,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f121])).
+fof(f121,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X11] : ! [X8,X9] : s(X11,X8) = s(X11,'const.bool.COND_3'(s(bool,'T_0'),s(X11,X8),s(X11,X9)))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.bool.COND_CLAUSES|split|0')).
+fof(f203,plain,(
+  ( ! [X0] : (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X0))) = s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0')))) )),
+  inference(cnf_transformation,[],[f94])).
+fof(f94,plain,(
+  ! [X0] : s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X0))) = s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0')))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X14] : s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X14))) = s('type.num.num','const.bool.COND_3'(s(bool,X14),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0')))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.clos_to_bvl.bool_to_tag_def')).
+fof(f2931,plain,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) | ($spl0 | $spl22 | $spl26)),
+  inference(forward_demodulation,[],[f2930,f2739])).
+fof(f2739,plain,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0')))),
+  inference(superposition,[],[f203,f237])).
+fof(f237,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f120])).
+fof(f120,plain,(
+  ! [X0,X1,X2] : s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f119])).
+fof(f119,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X11] : ! [X8,X9] : s(X11,X9) = s(X11,'const.bool.COND_3'(s(bool,'F_0'),s(X11,X8),s(X11,X9)))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.bool.COND_CLAUSES|split|1')).
+fof(f2930,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0'))) | ($spl0 | $spl22 | $spl26)),
+  inference(forward_demodulation,[],[f2929,f508])).
+fof(f2929,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) | ($spl0 | $spl22)),
+  inference(forward_demodulation,[],[f265,f505])).
+fof(f504,plain,(
+  s(bool,'T_0') != s(bool,sK1) | $spl23),
+  inference(cnf_transformation,[],[f504_D])).
+fof(f504_D,plain,(
+  s(bool,'T_0') != s(bool,sK1) <=> ~$spl23),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl23])])).
+fof(f514,plain,(
+  s(bool,'T_0') != s(bool,sK1) | ($spl3 | $spl27)),
+  inference(backward_demodulation,[],[f511,f268])).
+fof(f511,plain,(
+  s(bool,'T_0') = s(bool,sK0) | $spl27),
+  inference(trivial_inequality_removal,[],[f510])).
+fof(f510,plain,(
+  s(bool,'F_0') != s(bool,'F_0') | s(bool,'T_0') = s(bool,sK0) | $spl27),
+  inference(superposition,[],[f509,f209])).
+fof(f2968,plain,(
+  $false | ($spl1 | $spl2 | $spl22)),
+  inference(trivial_inequality_removal,[],[f2967])).
+fof(f2967,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) | ($spl1 | $spl2 | $spl22)),
+  inference(forward_demodulation,[],[f2935,f2934])).
+fof(f2935,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) | ($spl1 | $spl22)),
+  inference(forward_demodulation,[],[f266,f505])).
+fof(f270,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f270_D])).
+fof(f270_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f183,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvlProps.bool_to_tag_|49||49|',aHL_FALSITY)).
+fof(f277,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))) ) | $spl16),
+  inference(cnf_transformation,[],[f277_D])).
+fof(f277_D,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f269,plain,(
+  p(s(bool,'F_0')) | $spl4),
+  inference(cnf_transformation,[],[f269_D])).
+fof(f269_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f223,plain,(
+  ( ! [X0] : (p(s(bool,'F_0')) | s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f156])).
+fof(f156,plain,(
+  ! [X0] : ((s('type.num.num','const.arithmetic.ZERO_0') != s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))))),
+  inference(nnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : (s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))) <=> p(s(bool,'F_0')))),
+  inference(rectify,[],[f63])).
+fof(f63,axiom,(
+  ! [X15] : (s('type.num.num','const.arithmetic.ZERO_0') = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X15))) <=> p(s(bool,'F_0')))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.numeral.numeral_eq|split|0')).
+fof(f265,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) | $spl0),
+  inference(cnf_transformation,[],[f265_D])).
+fof(f265_D,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f267,plain,(
+  s(bool,sK0) = s(bool,sK1) | $spl2),
+  inference(cnf_transformation,[],[f267_D])).
+fof(f267_D,plain,(
+  s(bool,sK0) = s(bool,sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f170,plain,(
+  s(bool,sK0) = s(bool,sK1) | s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1)))),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) | s(bool,sK0) = s(bool,sK1)) & (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) | s(bool,sK0) != s(bool,sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f146])).
+fof(f146,plain,(
+  ? [X0,X1] : ((s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X1))) | s(bool,X0) = s(bool,X1)) & (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X0))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X1))) | s(bool,X0) != s(bool,X1)))),
+  inference(nnf_transformation,[],[f141])).
+fof(f141,plain,(
+  ? [X0,X1] : (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X1))) <~> s(bool,X0) = s(bool,X1))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X0))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X1))) <=> s(bool,X0) = s(bool,X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X6))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X7))) <=> s(bool,X6) = s(bool,X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X6))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,X7))) <=> s(bool,X6) = s(bool,X7))),
+  file('thm.bvlProps.bool_to_tag_|49||49|','thm.bvlProps.bool_to_tag_|49||49|')).
+fof(f499,plain,(
+  s(bool,'F_0') != s(bool,sK0) | s(bool,'T_0') = s(bool,sK1) | $spl3),
+  inference(superposition,[],[f268,f209])).
+fof(f2866,plain,(
+  $false | ($spl0 | $spl16 | $spl23 | $spl27)),
+  inference(subsumption_resolution,[],[f2838,f1017])).
+fof(f2838,plain,(
+  s('type.num.num','const.conLang.true_tag_0') = s('type.num.num','const.conLang.false_tag_0') | ($spl0 | $spl23 | $spl27)),
+  inference(backward_demodulation,[],[f2740,f2773])).
+fof(f2773,plain,(
+  s('type.num.num','const.conLang.false_tag_0') = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) | ($spl0 | $spl23 | $spl27)),
+  inference(backward_demodulation,[],[f2739,f541])).
+fof(f541,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0'))) | ($spl0 | $spl23 | $spl27)),
+  inference(subsumption_resolution,[],[f526,f504])).
+fof(f526,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,sK1) | ($spl0 | $spl27)),
+  inference(superposition,[],[f513,f209])).
+fof(f513,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'T_0'))) = s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) | ($spl0 | $spl27)),
+  inference(backward_demodulation,[],[f511,f265])).
+fof(f266,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) | $spl1),
+  inference(cnf_transformation,[],[f266_D])).
+fof(f266_D,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f268,plain,(
+  s(bool,sK0) != s(bool,sK1) | $spl3),
+  inference(cnf_transformation,[],[f268_D])).
+fof(f268_D,plain,(
+  s(bool,sK0) != s(bool,sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f171,plain,(
+  s(bool,sK0) != s(bool,sK1) | s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK1)))),
+  inference(cnf_transformation,[],[f147])).
+fof(f3066,plain,(
+  $false | ($spl1 | $spl26 | $spl44)),
+  inference(trivial_inequality_removal,[],[f3065])).
+fof(f3065,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0'))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0'))) | ($spl1 | $spl26 | $spl44)),
+  inference(forward_demodulation,[],[f3064,f508])).
+fof(f3064,plain,(
+  s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,'F_0'))) != s('type.num.num','const.clos_to_bvl.bool_to_tag_1'(s(bool,sK0))) | ($spl1 | $spl44)),
+  inference(forward_demodulation,[],[f266,f3001])).
+% SZS output end Proof for thm.bvlProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 99
+% Passive clauses: 366
+% Generated clauses: 2884
+% Final active clauses: 68
+% Final passive clauses: 161
+% Input formulas: 69
+% Initial clauses: 94
+% 
+% Duplicate literals: 20
+% Trivial inequalities: 47
+% Fw subsumption resolutions: 169
+% Fw demodulations: 488
+% Bw demodulations: 20
+% 
+% Simple tautologies: 29
+% Equational tautologies: 9
+% Forward subsumptions: 1756
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 57
+% Factoring: 1
+% Forward superposition: 780
+% Backward superposition: 1129
+% Self superposition: 27
+% Equality factoring: 10
+% Equality resolution: 5
+% 
+% Split clauses: 32
+% Split components: 64
+% SAT solver clauses: 50
+% SAT solver unit clauses: 5
+% SAT solver binary clauses: 27
+% SAT solver learnt clauses: 4
+% SAT solver learnt literals: 5
+% 
+% Sat splits: 32
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 46
+% TWLsolver calls for satisfiability: 18
+% 
+% Memory used [KB]: 1791
+% Time elapsed: 0.102 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.121 s

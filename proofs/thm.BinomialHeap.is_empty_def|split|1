@@ -1,0 +1,511 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.BinomialHeap
+% (97875)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 1213
+% Passive clauses: 6536
+% Generated clauses: 38662
+% Final active clauses: 1129
+% Final passive clauses: 4965
+% Input formulas: 516
+% Initial clauses: 1042
+% 
+% Duplicate literals: 183
+% Trivial inequalities: 154
+% Fw subsumption resolutions: 1829
+% Fw demodulations: 3534
+% Bw demodulations: 38
+% 
+% Simple tautologies: 369
+% Equational tautologies: 15
+% Forward subsumptions: 25711
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 5202
+% Factoring: 527
+% Forward superposition: 13521
+% Backward superposition: 12386
+% Self superposition: 48
+% Equality factoring: 2
+% Equality resolution: 11
+% 
+% Split clauses: 486
+% Split components: 974
+% SAT solver clauses: 625
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 83
+% 
+% Sat splits: 486
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 625
+% TWLsolver calls for satisfiability: 409
+% 
+% Memory used [KB]: 19957
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.BinomialHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BinomialHeap
+% SZS output start Proof for thm.BinomialHeap
+fof(f17923,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f17874,f1882,f2951,f17807,f17809,f2552,f3547,f17805,f17806,f2964,f2966,f2568,f3554,f4840,f4841,f4829,f4835,f4757,f4775,f4306,f4337,f2567,f3555,f4367,f4380,f3548,f3549,f16866,f16963,f2093,f3111,f4110,f4111,f2050,f3074,f2054,f3078,f4078,f4079,f4041,f4042,f1951,f3023,f2038,f3062,f4044,f4045,f1950,f3022,f17704,f17705,f4844,f4862,f7777,f7835,f1881,f2949,f1954,f3025])).
+fof(f3025,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) | $spl126),
+  inference(cnf_transformation,[],[f3025_D])).
+fof(f3025_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl126),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl126])])).
+fof(f1954,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.BinomialHeap.is_empty_def|split|1',aHL_BOOL_CASES)).
+fof(f2949,plain,(
+  s(bool,'F_0') != s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))) | $spl1),
+  inference(cnf_transformation,[],[f2949_D])).
+fof(f2949_D,plain,(
+  s(bool,'F_0') != s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f1881,plain,(
+  s(bool,'F_0') != s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))),
+  inference(cnf_transformation,[],[f1495])).
+fof(f1495,plain,(
+  s(bool,'F_0') != s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK52,sK53,sK54])],[f1368])).
+fof(f1368,plain,(
+  ? [X0,X1,X2] : s(bool,'F_0') != s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))),
+  inference(ennf_transformation,[],[f519])).
+fof(f519,plain,(
+  ~! [X0,X1,X2] : s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f518])).
+fof(f518,plain,(
+  ~! [X0] : ! [X1,X2] : s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X7)))))),
+  file('thm.BinomialHeap.is_empty_def|split|1','thm.BinomialHeap.is_empty_def|split|1')).
+fof(f7835,plain,(
+  s(bool,'T_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))) | $spl2936),
+  inference(cnf_transformation,[],[f7835_D])).
+fof(f7835_D,plain,(
+  s(bool,'T_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))) <=> ~$spl2936),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2936])])).
+fof(f7777,plain,(
+  s(bool,'T_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))) | ($spl1 | $spl126)),
+  inference(trivial_inequality_removal,[],[f7759])).
+fof(f7759,plain,(
+  s(bool,'F_0') != s(bool,'F_0') | s(bool,'T_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))) | ($spl1 | $spl126)),
+  inference(superposition,[],[f2949,f3025])).
+fof(f4862,plain,(
+  ( ! [X2,X3] : (~sP42(X2,X2) | ~p(s(bool,X3)) | ~sP43(X2,X3)) ) | $spl2206),
+  inference(cnf_transformation,[],[f4862_D])).
+fof(f4862_D,plain,(
+  ( ! [X2,X3] : (~sP42(X2,X2) | ~p(s(bool,X3)) | ~sP43(X2,X3)) ) <=> ~$spl2206),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2206])])).
+fof(f4844,plain,(
+  ( ! [X2,X3] : (~sP42(X2,X2) | ~p(s(bool,X3)) | ~sP43(X2,X3)) ) | ($spl1122 | $spl2200)),
+  inference(resolution,[],[f4841,f3555])).
+fof(f17705,plain,(
+  ( ! [X6] : (~sP42(X6,X6) | ~sP43(X6,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))) ) | $spl5258),
+  inference(cnf_transformation,[],[f17705_D])).
+fof(f17705_D,plain,(
+  ( ! [X6] : (~sP42(X6,X6) | ~sP43(X6,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))) ) <=> ~$spl5258),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5258])])).
+fof(f17704,plain,(
+  ( ! [X6] : (~sP42(X6,X6) | ~sP43(X6,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))) ) | ($spl2 | $spl2206 | $spl2936)),
+  inference(subsumption_resolution,[],[f17641,f2951])).
+fof(f17641,plain,(
+  ( ! [X6] : (~p(s(bool,'T_0')) | ~sP42(X6,X6) | ~sP43(X6,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))) ) | ($spl2206 | $spl2936)),
+  inference(superposition,[],[f4862,f7835])).
+fof(f3022,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) ) | $spl120),
+  inference(cnf_transformation,[],[f3022_D])).
+fof(f3022_D,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) ) <=> ~$spl120),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl120])])).
+fof(f1950,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) )),
+  inference(cnf_transformation,[],[f578])).
+fof(f578,plain,(
+  ! [X0] : s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6] : s(fun('type.list.list'(X6),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X6),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X6),fun('type.list.list'(X6),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X6),fun('type.list.list'(X6),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X6),bool),fun('type.list.list'(X6),bool)),'_dst_x0_1'(s(fun('type.list.list'(X6),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X6),fun(bool,fun(fun(X6,fun('type.list.list'(X6),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X6,fun('type.list.list'(X6),bool)),'_dst_x0_1'(s(fun('type.list.list'(X6),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  file('thm.BinomialHeap.is_empty_def|split|1','thm.BinomialHeap.is_empty_primitive_def')).
+fof(f4045,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'T_0'),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) | $spl1840),
+  inference(cnf_transformation,[],[f4045_D])).
+fof(f4045_D,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'T_0'),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) <=> ~$spl1840),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1840])])).
+fof(f4044,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'T_0'),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) | ($spl120 | $spl154)),
+  inference(forward_demodulation,[],[f4043,f3062])).
+fof(f4043,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) | ($spl120 | $spl154)),
+  inference(forward_demodulation,[],[f3022,f3062])).
+fof(f3062,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))) ) | $spl154),
+  inference(cnf_transformation,[],[f3062_D])).
+fof(f3062_D,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))) ) <=> ~$spl154),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl154])])).
+fof(f2038,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f627])).
+fof(f627,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))),
+  inference(flattening,[],[f626])).
+fof(f626,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X6] : ! [X17] : s(X6,X17) = s(X6,'const.combin.I_1'(s(X6,X17)))),
+  file('thm.BinomialHeap.is_empty_def|split|1','thm.combin.I_THM')).
+fof(f3023,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) ) | $spl122),
+  inference(cnf_transformation,[],[f3023_D])).
+fof(f3023_D,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) ) <=> ~$spl122),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl122])])).
+fof(f1951,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) )),
+  inference(cnf_transformation,[],[f579])).
+fof(f579,plain,(
+  ! [X0] : s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  inference(rectify,[],[f93])).
+fof(f93,axiom,(
+  ! [X6] : s(fun('type.list.list'(X6),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X6),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X6),fun('type.list.list'(X6),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X6),fun('type.list.list'(X6),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X6),bool),fun('type.list.list'(X6),bool)),'_dst_x0_1'(s(fun('type.list.list'(X6),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X6),fun(bool,fun(fun(X6,fun('type.list.list'(X6),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X6,fun('type.list.list'(X6),bool)),'_dst_x0_1'(s(fun('type.list.list'(X6),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  file('thm.BinomialHeap.is_empty_def|split|1','thm.BinaryRandomAccessLists.is_empty_primitive_def')).
+fof(f4042,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'T_0'),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) | $spl1838),
+  inference(cnf_transformation,[],[f4042_D])).
+fof(f4042_D,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'T_0'),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) <=> ~$spl1838),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1838])])).
+fof(f4041,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'T_0'),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) | ($spl122 | $spl154)),
+  inference(forward_demodulation,[],[f4040,f3062])).
+fof(f4040,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.relation.WFREC_2'(s(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),'const.min.@_1'(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.list.list'(X0),bool),fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.list.list'(X0),fun(bool,fun(fun(X0,fun('type.list.list'(X0),bool)),bool))),'const.list.list_CASE_0'),s(bool,'const.combin.I_1'(s(bool,'T_0'))),s(fun(X0,fun('type.list.list'(X0),bool)),'_dst_x0_1'(s(fun('type.list.list'(X0),bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) ) | ($spl122 | $spl154)),
+  inference(forward_demodulation,[],[f3023,f3062])).
+fof(f4079,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0')) ) | $spl1872),
+  inference(cnf_transformation,[],[f4079_D])).
+fof(f4079_D,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0')) ) <=> ~$spl1872),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1872])])).
+fof(f4078,plain,(
+  ( ! [X0] : (s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0') = s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0')) ) | ($spl1838 | $spl1840)),
+  inference(forward_demodulation,[],[f4042,f4045])).
+fof(f3078,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X0),X1)))) ) | $spl186),
+  inference(cnf_transformation,[],[f3078_D])).
+fof(f3078_D,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X0),X1)))) ) <=> ~$spl186),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl186])])).
+fof(f2054,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f659])).
+fof(f659,plain,(
+  ! [X0,X1] : s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X0),X1)))),
+  inference(flattening,[],[f658])).
+fof(f658,plain,(
+  ! [X0] : ! [X1] : s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X0),X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X9] : s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X6),X9))) = s(bool,happ(s(fun('type.list.list'(X6),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X6),X9)))),
+  file('thm.BinomialHeap.is_empty_def|split|1','ARITY_0_1_const.BinomialHeap.is_empty')).
+fof(f3074,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0'),s('type.list.list'(X0),X1)))) ) | $spl178),
+  inference(cnf_transformation,[],[f3074_D])).
+fof(f3074_D,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0'),s('type.list.list'(X0),X1)))) ) <=> ~$spl178),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl178])])).
+fof(f2050,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0'),s('type.list.list'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f651])).
+fof(f651,plain,(
+  ! [X0,X1] : s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0'),s('type.list.list'(X0),X1)))),
+  inference(flattening,[],[f650])).
+fof(f650,plain,(
+  ! [X0] : ! [X1] : s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinaryRandomAccessLists.is_empty_0'),s('type.list.list'(X0),X1)))),
+  inference(rectify,[],[f92])).
+fof(f92,axiom,(
+  ! [X6] : ! [X9] : s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X6),X9))) = s(bool,happ(s(fun('type.list.list'(X6),bool),'const.BinaryRandomAccessLists.is_empty_0'),s('type.list.list'(X6),X9)))),
+  file('thm.BinomialHeap.is_empty_def|split|1','ARITY_0_1_const.BinaryRandomAccessLists.is_empty')).
+fof(f4111,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1)))) ) | $spl1894),
+  inference(cnf_transformation,[],[f4111_D])).
+fof(f4111_D,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1)))) ) <=> ~$spl1894),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1894])])).
+fof(f4110,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1)))) ) | ($spl178 | $spl186 | $spl1872)),
+  inference(forward_demodulation,[],[f4109,f3078])).
+fof(f4109,plain,(
+  ( ! [X0,X1] : (s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),X1))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.BinomialHeap.is_empty_0'),s('type.list.list'(X0),X1)))) ) | ($spl178 | $spl1872)),
+  inference(backward_demodulation,[],[f4079,f3074])).
+fof(f3111,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'F_0') = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))) ) | $spl252),
+  inference(cnf_transformation,[],[f3111_D])).
+fof(f3111_D,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'F_0') = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))) ) <=> ~$spl252),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl252])])).
+fof(f2093,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'F_0') = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f709])).
+fof(f709,plain,(
+  ! [X0,X1,X2] : s(bool,'F_0') = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f708])).
+fof(f708,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,'F_0') = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X6] : ! [X7,X8] : s(bool,'F_0') = s(bool,'const.BinaryRandomAccessLists.is_empty_1'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X7)))))),
+  file('thm.BinomialHeap.is_empty_def|split|1','thm.BinaryRandomAccessLists.is_empty_def|split|1')).
+fof(f16963,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X3),'const.list.CONS_2'(s(X3,X4),s('type.list.list'(X3),X5)))))) ) | $spl5026),
+  inference(cnf_transformation,[],[f16963_D])).
+fof(f16963_D,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X3),'const.list.CONS_2'(s(X3,X4),s('type.list.list'(X3),X5)))))) ) <=> ~$spl5026),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5026])])).
+fof(f16866,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'F_0') = s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(X3),'const.list.CONS_2'(s(X3,X4),s('type.list.list'(X3),X5)))))) ) | ($spl252 | $spl1894)),
+  inference(superposition,[],[f3111,f4111])).
+fof(f3549,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | ~sP42(X0,X1)) ) | $spl1116),
+  inference(cnf_transformation,[],[f3549_D])).
+fof(f3549_D,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | ~sP42(X0,X1)) ) <=> ~$spl1116),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1116])])).
+fof(f3548,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,X1)) | ~sP42(X0,X1)) )),
+  inference(global_subsumption,[],[f2551,f1891,f1882])).
+fof(f1891,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1496])).
+fof(f1496,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f520])).
+fof(f520,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f46])).
+fof(f46,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.BinomialHeap.is_empty_def|split|1','thm.bool.NOT_CLAUSES|split|2')).
+fof(f2551,plain,(
+  ( ! [X0,X1] : (p(s(bool,'F_0')) | p(s(bool,X0)) | p(s(bool,X1)) | ~sP42(X0,X1)) )),
+  inference(cnf_transformation,[],[f1772])).
+fof(f1772,plain,(
+  ! [X0,X1] : ((~sP42(X0,X1) | p(s(bool,X1)) | p(s(bool,X0)) | p(s(bool,'F_0'))) & ((~p(s(bool,X1)) & ~p(s(bool,X0)) & ~p(s(bool,'F_0'))) | sP42(X0,X1)))),
+  inference(flattening,[],[f1771])).
+fof(f1771,plain,(
+  ! [X0,X1] : ((~sP42(X0,X1) | (p(s(bool,X1)) | p(s(bool,X0)) | p(s(bool,'F_0')))) & ((~p(s(bool,X1)) & ~p(s(bool,X0)) & ~p(s(bool,'F_0'))) | sP42(X0,X1)))),
+  inference(nnf_transformation,[],[f1480])).
+fof(f1480,plain,(
+  ! [X0,X1] : (sP42(X0,X1) <=> (p(s(bool,X1)) | p(s(bool,X0)) | p(s(bool,'F_0'))))),
+  introduced(predicate_definition_introduction,[new_symbols(naming,[sP42])])).
+fof(f4380,plain,(
+  ( ! [X2,X1] : (p(s(bool,X2)) | ~sP43('T_0',X1) | ~sP42(X2,X1)) ) | $spl1996),
+  inference(cnf_transformation,[],[f4380_D])).
+fof(f4380_D,plain,(
+  ( ! [X2,X1] : (p(s(bool,X2)) | ~sP43('T_0',X1) | ~sP42(X2,X1)) ) <=> ~$spl1996),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1996])])).
+fof(f4367,plain,(
+  ( ! [X2,X1] : (~sP43('T_0',X1) | p(s(bool,X2)) | ~sP42(X2,X1)) ) | ($spl1116 | $spl1952)),
+  inference(resolution,[],[f4337,f3549])).
+fof(f3555,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | ~p(s(bool,X1)) | ~sP43(X0,X1)) ) | $spl1122),
+  inference(cnf_transformation,[],[f3555_D])).
+fof(f3555_D,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | ~p(s(bool,X1)) | ~sP43(X0,X1)) ) <=> ~$spl1122),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1122])])).
+fof(f2567,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | ~p(s(bool,X1)) | ~sP43(X0,X1)) )),
+  inference(cnf_transformation,[],[f1779])).
+fof(f1779,plain,(
+  ! [X0,X1] : ((~sP43(X0,X1) | ((p(s(bool,X0)) | p(s(bool,X1))) & (~p(s(bool,X1)) | ~p(s(bool,X0))))) & ((~p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & p(s(bool,X0))) | sP43(X0,X1)))),
+  inference(rectify,[],[f1778])).
+fof(f1778,plain,(
+  ! [X1,X0] : ((~sP43(X1,X0) | ((p(s(bool,X1)) | p(s(bool,X0))) & (~p(s(bool,X0)) | ~p(s(bool,X1))))) & ((~p(s(bool,X1)) & ~p(s(bool,X0))) | (p(s(bool,X0)) & p(s(bool,X1))) | sP43(X1,X0)))),
+  inference(flattening,[],[f1777])).
+fof(f1777,plain,(
+  ! [X1,X0] : ((~sP43(X1,X0) | ((p(s(bool,X1)) | p(s(bool,X0))) & (~p(s(bool,X0)) | ~p(s(bool,X1))))) & (((~p(s(bool,X1)) & ~p(s(bool,X0))) | (p(s(bool,X0)) & p(s(bool,X1)))) | sP43(X1,X0)))),
+  inference(nnf_transformation,[],[f1482])).
+fof(f1482,plain,(
+  ! [X1,X0] : (sP43(X1,X0) <=> ((p(s(bool,X1)) | p(s(bool,X0))) & (~p(s(bool,X0)) | ~p(s(bool,X1)))))),
+  introduced(predicate_definition_introduction,[new_symbols(naming,[sP43])])).
+fof(f4337,plain,(
+  ( ! [X9] : (~p(s(bool,X9)) | ~sP43('T_0',X9)) ) | $spl1952),
+  inference(cnf_transformation,[],[f4337_D])).
+fof(f4337_D,plain,(
+  ( ! [X9] : (~p(s(bool,X9)) | ~sP43('T_0',X9)) ) <=> ~$spl1952),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1952])])).
+fof(f4306,plain,(
+  ( ! [X9] : (~p(s(bool,X9)) | ~sP43('T_0',X9)) ) | ($spl2 | $spl1122)),
+  inference(resolution,[],[f3555,f2951])).
+fof(f4775,plain,(
+  ( ! [X14,X13] : (~sP43('T_0',X13) | ~sP42(X14,X13) | ~sP43('T_0',X14)) ) | $spl2154),
+  inference(cnf_transformation,[],[f4775_D])).
+fof(f4775_D,plain,(
+  ( ! [X14,X13] : (~sP43('T_0',X13) | ~sP42(X14,X13) | ~sP43('T_0',X14)) ) <=> ~$spl2154),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2154])])).
+fof(f4757,plain,(
+  ( ! [X14,X13] : (~sP43('T_0',X13) | ~sP42(X14,X13) | ~sP43('T_0',X14)) ) | ($spl1952 | $spl1996)),
+  inference(resolution,[],[f4380,f4337])).
+fof(f4835,plain,(
+  ( ! [X0] : (~sP43('T_0',X0) | ~sP42(X0,X0)) ) | $spl2198),
+  inference(cnf_transformation,[],[f4835_D])).
+fof(f4835_D,plain,(
+  ( ! [X0] : (~sP43('T_0',X0) | ~sP42(X0,X0)) ) <=> ~$spl2198),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2198])])).
+fof(f4829,plain,(
+  ( ! [X0] : (~sP43('T_0',X0) | ~sP42(X0,X0)) ) | $spl2154),
+  inference(factoring,[],[f4775])).
+fof(f4841,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | ~sP42(X0,X0)) ) | $spl2200),
+  inference(cnf_transformation,[],[f4841_D])).
+fof(f4841_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | ~sP42(X0,X0)) ) <=> ~$spl2200),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2200])])).
+fof(f4840,plain,(
+  ( ! [X0] : (~sP42(X0,X0) | p(s(bool,X0))) ) | ($spl2 | $spl1120 | $spl2198)),
+  inference(subsumption_resolution,[],[f4836,f2951])).
+fof(f4836,plain,(
+  ( ! [X0] : (~sP42(X0,X0) | p(s(bool,X0)) | ~p(s(bool,'T_0'))) ) | ($spl1120 | $spl2198)),
+  inference(resolution,[],[f4835,f3554])).
+fof(f3554,plain,(
+  ( ! [X0,X1] : (sP43(X0,X1) | p(s(bool,X1)) | ~p(s(bool,X0))) ) | $spl1120),
+  inference(cnf_transformation,[],[f3554_D])).
+fof(f3554_D,plain,(
+  ( ! [X0,X1] : (sP43(X0,X1) | p(s(bool,X1)) | ~p(s(bool,X0))) ) <=> ~$spl1120),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1120])])).
+fof(f2568,plain,(
+  ( ! [X0,X1] : (sP43(X0,X1) | p(s(bool,X1)) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f1779])).
+fof(f2966,plain,(
+  ~p(s(bool,'F_0')) | $spl17),
+  inference(cnf_transformation,[],[f2966_D])).
+fof(f2966_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl17),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl17])])).
+fof(f2964,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(global_subsumption,[],[f1891,f1882])).
+fof(f17806,plain,(
+  ( ! [X0] : (~sP42(X0,X0)) ) | $spl5362),
+  inference(cnf_transformation,[],[f17806_D])).
+fof(f17806_D,plain,(
+  ( ! [X0] : (~sP42(X0,X0)) ) <=> ~$spl5362),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5362])])).
+fof(f17805,plain,(
+  ( ! [X0] : (~sP42(X0,X0)) ) | ($spl17 | $spl1120 | $spl2200 | $spl5026 | $spl5258)),
+  inference(subsumption_resolution,[],[f17804,f2966])).
+fof(f17804,plain,(
+  ( ! [X0] : (p(s(bool,'F_0')) | ~sP42(X0,X0)) ) | ($spl1120 | $spl2200 | $spl5026 | $spl5258)),
+  inference(forward_demodulation,[],[f17803,f16963])).
+fof(f17803,plain,(
+  ( ! [X0] : (~sP42(X0,X0) | p(s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53))))))) ) | ($spl1120 | $spl2200 | $spl5258)),
+  inference(subsumption_resolution,[],[f17801,f4841])).
+fof(f17801,plain,(
+  ( ! [X0] : (~sP42(X0,X0) | p(s(bool,'const.BinomialHeap.is_empty_1'(s('type.list.list'(sK52),'const.list.CONS_2'(s(sK52,sK54),s('type.list.list'(sK52),sK53)))))) | ~p(s(bool,X0))) ) | ($spl1120 | $spl5258)),
+  inference(resolution,[],[f17705,f3554])).
+fof(f3547,plain,(
+  ( ! [X0,X1] : (sP42(X0,X1) | ~p(s(bool,X1))) ) | $spl1114),
+  inference(cnf_transformation,[],[f3547_D])).
+fof(f3547_D,plain,(
+  ( ! [X0,X1] : (sP42(X0,X1) | ~p(s(bool,X1))) ) <=> ~$spl1114),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1114])])).
+fof(f2552,plain,(
+  ( ! [X0,X1] : (sP42(X0,X1) | ~p(s(bool,X1))) )),
+  inference(cnf_transformation,[],[f1772])).
+fof(f17809,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) | $spl5364),
+  inference(cnf_transformation,[],[f17809_D])).
+fof(f17809_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) <=> ~$spl5364),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5364])])).
+fof(f17807,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) | ($spl1114 | $spl5362)),
+  inference(resolution,[],[f17806,f3547])).
+fof(f2951,plain,(
+  p(s(bool,'T_0')) | $spl2),
+  inference(cnf_transformation,[],[f2951_D])).
+fof(f2951_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f1882,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.BinomialHeap.is_empty_def|split|1',aHL_TRUTH)).
+fof(f17874,plain,(
+  $false | ($spl2 | $spl5364)),
+  inference(resolution,[],[f17809,f2951])).
+% SZS output end Proof for thm.BinomialHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 555
+% Passive clauses: 2607
+% Generated clauses: 16006
+% Final active clauses: 528
+% Final passive clauses: 1980
+% Input formulas: 516
+% Initial clauses: 1042
+% 
+% Duplicate literals: 85
+% Trivial inequalities: 6
+% Fw subsumption resolutions: 881
+% Fw demodulations: 1370
+% Bw demodulations: 87
+% Condensations: 71
+% Global subsumptions: 36
+% 
+% Simple tautologies: 261
+% Equational tautologies: 7
+% Forward subsumptions: 7792
+% 
+% Binary resolution: 1869
+% Factoring: 97
+% Forward superposition: 3437
+% Backward superposition: 4248
+% Self superposition: 44
+% Equality factoring: 2
+% Equality resolution: 1
+% 
+% Split clauses: 13
+% Split components: 26
+% SAT solver clauses: 3951
+% SAT solver unit clauses: 1417
+% SAT solver binary clauses: 316
+% SAT solver learnt clauses: 74
+% SAT solver learnt literals: 13
+% 
+% Sat splits: 13
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 3804
+% TWLsolver calls for satisfiability: 33378
+% 
+% Memory used [KB]: 30063
+% Time elapsed: 0.485 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.16 s

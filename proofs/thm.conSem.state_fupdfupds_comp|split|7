@@ -1,0 +1,276 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.conSem
+% (15674)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 182
+% Passive clauses: 3330
+% Generated clauses: 24631
+% Final active clauses: 131
+% Final passive clauses: 2922
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 876
+% Trivial inequalities: 168
+% Fw subsumption resolutions: 2309
+% Fw demodulations: 4349
+% Bw demodulations: 44
+% 
+% Simple tautologies: 193
+% Equational tautologies: 49
+% Forward subsumptions: 12673
+% 
+% Binary resolution: 569
+% Factoring: 1
+% Forward superposition: 9397
+% Backward superposition: 6652
+% Self superposition: 197
+% Equality factoring: 96
+% Equality resolution: 16
+% 
+% Split clauses: 260
+% Split components: 520
+% SAT solver clauses: 856
+% SAT solver unit clauses: 53
+% SAT solver binary clauses: 150
+% 
+% Sat splits: 260
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 856
+% TWLsolver calls for satisfiability: 161
+% 
+% Memory used [KB]: 19829
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.conSem
+% (15694)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 118
+% Passive clauses: 858
+% Generated clauses: 12960
+% Final active clauses: 87
+% Final passive clauses: 542
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 526
+% Trivial inequalities: 100
+% Fw subsumption resolutions: 797
+% Fw demodulations: 1539
+% Bw demodulations: 223
+% Condensations: 1140
+% 
+% Simple tautologies: 117
+% Equational tautologies: 43
+% Forward subsumptions: 6040
+% 
+% Binary resolution: 352
+% Factoring: 1
+% Forward superposition: 3844
+% Backward superposition: 3221
+% Self superposition: 144
+% Equality factoring: 96
+% Equality resolution: 8
+% 
+% Split clauses: 50
+% Split components: 100
+% SAT solver clauses: 1407
+% SAT solver unit clauses: 131
+% SAT solver binary clauses: 33
+% 
+% Sat splits: 50
+% Sat splitting refutations: 14
+% 
+% TWLsolver clauses: 1407
+% TWLsolver calls for satisfiability: 255
+% 
+% Memory used [KB]: 11129
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.conSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.conSem
+% SZS output start Proof for thm.conSem
+fof(f19625,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f19624,f215])).
+fof(f215,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.conSem.state_fupdfupds_comp|split|7','thm.bool.TRUTH')).
+fof(f19624,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f19622,f3470])).
+fof(f3470,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f2346,f299])).
+fof(f299,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f217,f218])).
+fof(f218,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.conSem.state_fupdfupds_comp|split|7',aHL_BOOL_CASES)).
+fof(f217,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.conSem.state_fupdfupds_comp|split|7',aHL_FALSITY)).
+fof(f2346,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f2271,f222])).
+fof(f222,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f78])).
+fof(f78,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(flattening,[],[f77])).
+fof(f77,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f69])).
+fof(f69,axiom,(
+  ! [X8] : ! [X47,X12] : s(X8,X47) = s(X8,'const.ind_type.FCONS_3'(s(X8,X47),s(fun('type.num.num',X8),X12),s('type.num.num','const.num.|48|_0')))),
+  file('thm.conSem.state_fupdfupds_comp|split|7','thm.ind_type.FCONS|split|0')).
+fof(f2271,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0'))))),s(X0,X1))))) )),
+  inference(unit_resulting_resolution,[],[f222,f269])).
+fof(f269,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f213,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f146])).
+fof(f146,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f51])).
+fof(f51,axiom,(
+  ! [X43,X44,X45] : (p(s(bool,happ(s(fun(X43,bool),happ(s(fun(X43,fun(X43,bool)),'=_0'),s(X43,X44))),s(X43,X45)))) <=> s(X43,X44) = s(X43,X45))),
+  file('thm.conSem.state_fupdfupds_comp|split|7',arity_0_HL_EQ)).
+fof(f19622,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK2,'type.conSem.state'(sK0)),bool),happ(s(fun(fun(sK2,'type.conSem.state'(sK0)),fun(fun(sK2,'type.conSem.state'(sK0)),bool)),'=_0'),s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6),s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))))),s(fun(sK2,'type.conSem.state'(sK3)),sK4))))),s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6),s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))))),s(fun(sK2,'type.conSem.state'(sK3)),sK4))))))),
+  inference(backward_demodulation,[],[f19568,f11048])).
+fof(f11048,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK2,'type.conSem.state'(sK0)),bool),happ(s(fun(fun(sK2,'type.conSem.state'(sK0)),fun(fun(sK2,'type.conSem.state'(sK0)),bool)),'=_0'),s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6),s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))))),s(fun(sK2,'type.conSem.state'(sK3)),sK4))))),s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK1),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6))),s(fun(sK2,'type.conSem.state'(sK1)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))),s(fun(sK2,'type.conSem.state'(sK3)),sK4))))))))),
+  inference(unit_resulting_resolution,[],[f214,f268])).
+fof(f268,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f214,plain,(
+  s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6),s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))))),s(fun(sK2,'type.conSem.state'(sK3)),sK4))) != s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK1),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6))),s(fun(sK2,'type.conSem.state'(sK1)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))),s(fun(sK2,'type.conSem.state'(sK3)),sK4)))))),
+  inference(cnf_transformation,[],[f199])).
+fof(f199,plain,(
+  s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6),s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))))),s(fun(sK2,'type.conSem.state'(sK3)),sK4))) != s(fun(sK2,'type.conSem.state'(sK0)),'const.combin.o_2'(s(fun('type.conSem.state'(sK1),'type.conSem.state'(sK0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK1),'type.ffi.ffi_state'(sK0)),sK6))),s(fun(sK2,'type.conSem.state'(sK1)),'const.combin.o_2'(s(fun('type.conSem.state'(sK3),'type.conSem.state'(sK1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(sK3),'type.ffi.ffi_state'(sK1)),sK5))),s(fun(sK2,'type.conSem.state'(sK3)),sK4)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5,sK6])],[f193])).
+fof(f193,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X3),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X6),s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X1)),X5))))),s(fun(X2,'type.conSem.state'(X3)),X4))) != s(fun(X2,'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X6))),s(fun(X2,'type.conSem.state'(X1)),'const.combin.o_2'(s(fun('type.conSem.state'(X3),'type.conSem.state'(X1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X1)),X5))),s(fun(X2,'type.conSem.state'(X3)),X4)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X3),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X6),s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X1)),X5))))),s(fun(X2,'type.conSem.state'(X3)),X4))) = s(fun(X2,'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X6))),s(fun(X2,'type.conSem.state'(X1)),'const.combin.o_2'(s(fun('type.conSem.state'(X3),'type.conSem.state'(X1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X1)),X5))),s(fun(X2,'type.conSem.state'(X3)),X4)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X3),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X6),s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X1)),X5))))),s(fun(X2,'type.conSem.state'(X3)),X4))) = s(fun(X2,'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X6))),s(fun(X2,'type.conSem.state'(X1)),'const.combin.o_2'(s(fun('type.conSem.state'(X3),'type.conSem.state'(X1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X3),'type.ffi.ffi_state'(X1)),X5))),s(fun(X2,'type.conSem.state'(X3)),X4)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ! [X10,X11,X12] : s(fun(X8,'type.conSem.state'(X6)),'const.combin.o_2'(s(fun('type.conSem.state'(X9),'type.conSem.state'(X6)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X6)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X7),'type.ffi.ffi_state'(X6)),X12),s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X7)),X11))))),s(fun(X8,'type.conSem.state'(X9)),X10))) = s(fun(X8,'type.conSem.state'(X6)),'const.combin.o_2'(s(fun('type.conSem.state'(X7),'type.conSem.state'(X6)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X7),'type.ffi.ffi_state'(X6)),X12))),s(fun(X8,'type.conSem.state'(X7)),'const.combin.o_2'(s(fun('type.conSem.state'(X9),'type.conSem.state'(X7)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X7)),X11))),s(fun(X8,'type.conSem.state'(X9)),X10)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ! [X10,X11,X12] : s(fun(X8,'type.conSem.state'(X6)),'const.combin.o_2'(s(fun('type.conSem.state'(X9),'type.conSem.state'(X6)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X6)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X7),'type.ffi.ffi_state'(X6)),X12),s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X7)),X11))))),s(fun(X8,'type.conSem.state'(X9)),X10))) = s(fun(X8,'type.conSem.state'(X6)),'const.combin.o_2'(s(fun('type.conSem.state'(X7),'type.conSem.state'(X6)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X7),'type.ffi.ffi_state'(X6)),X12))),s(fun(X8,'type.conSem.state'(X7)),'const.combin.o_2'(s(fun('type.conSem.state'(X9),'type.conSem.state'(X7)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X7)),X11))),s(fun(X8,'type.conSem.state'(X9)),X10)))))),
+  file('thm.conSem.state_fupdfupds_comp|split|7','thm.conSem.state_fupdfupds_comp|split|7')).
+fof(f19568,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X5,'type.conSem.state'(X1)),'const.combin.o_2'(s(fun('type.conSem.state'(X0),'type.conSem.state'(X1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X1)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X1)),X3),s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X2)),X4))))),s(fun(X5,'type.conSem.state'(X0)),X6))) = s(fun(X5,'type.conSem.state'(X1)),'const.combin.o_2'(s(fun('type.conSem.state'(X2),'type.conSem.state'(X1)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X1)),X3))),s(fun(X5,'type.conSem.state'(X2)),'const.combin.o_2'(s(fun('type.conSem.state'(X0),'type.conSem.state'(X2)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X2)),X4))),s(fun(X5,'type.conSem.state'(X0)),X6)))))) )),
+  inference(superposition,[],[f276,f271])).
+fof(f271,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X0)),X4),s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X2)),X3))))) = s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X2),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X0)),X4))),s(fun('type.conSem.state'(X1),'type.conSem.state'(X2)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X2)),X3)))))) )),
+  inference(cnf_transformation,[],[f150])).
+fof(f150,plain,(
+  ! [X0,X1,X2,X3,X4] : s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X0)),X4),s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X2)),X3))))) = s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X2),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X0)),X4))),s(fun('type.conSem.state'(X1),'type.conSem.state'(X2)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X2)),X3)))))),
+  inference(flattening,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1,X2] : ! [X3,X4] : s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X0)),X4),s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X2)),X3))))) = s(fun('type.conSem.state'(X1),'type.conSem.state'(X0)),'const.combin.o_2'(s(fun('type.conSem.state'(X2),'type.conSem.state'(X0)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X2),'type.ffi.ffi_state'(X0)),X4))),s(fun('type.conSem.state'(X1),'type.conSem.state'(X2)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X2)),X3)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X9,X7] : ! [X11,X12] : s(fun('type.conSem.state'(X9),'type.conSem.state'(X6)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X6)),'const.combin.o_2'(s(fun('type.ffi.ffi_state'(X7),'type.ffi.ffi_state'(X6)),X12),s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X7)),X11))))) = s(fun('type.conSem.state'(X9),'type.conSem.state'(X6)),'const.combin.o_2'(s(fun('type.conSem.state'(X7),'type.conSem.state'(X6)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X7),'type.ffi.ffi_state'(X6)),X12))),s(fun('type.conSem.state'(X9),'type.conSem.state'(X7)),'const.conSem.state_ffi_fupd_1'(s(fun('type.ffi.ffi_state'(X9),'type.ffi.ffi_state'(X7)),X11)))))),
+  file('thm.conSem.state_fupdfupds_comp|split|7','thm.conSem.state_fupdfupds_comp|split|6')).
+fof(f276,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f159])).
+fof(f159,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X16,X8,X22,X17] : ! [X12,X11,X10] : s(fun(X22,X16),'const.combin.o_2'(s(fun(X8,X16),X12),s(fun(X22,X8),'const.combin.o_2'(s(fun(X17,X8),X11),s(fun(X22,X17),X10))))) = s(fun(X22,X16),'const.combin.o_2'(s(fun(X17,X16),'const.combin.o_2'(s(fun(X8,X16),X12),s(fun(X17,X8),X11))),s(fun(X22,X17),X10)))),
+  file('thm.conSem.state_fupdfupds_comp|split|7','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.conSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 173
+% Passive clauses: 1604
+% Generated clauses: 20570
+% Final active clauses: 108
+% Final passive clauses: 967
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 665
+% Trivial inequalities: 55
+% Fw subsumption resolutions: 711
+% Fw demodulations: 3315
+% Bw demodulations: 458
+% Condensations: 920
+% Global subsumptions: 2
+% 
+% Simple tautologies: 58
+% Equational tautologies: 139
+% Forward subsumptions: 12972
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 14
+% 
+% Unit resulting resolution: 725
+% Factoring: 1
+% Forward superposition: 6437
+% Backward superposition: 5602
+% Self superposition: 197
+% Equality factoring: 78
+% Equality resolution: 2
+% 
+% Split clauses: 27
+% Split components: 54
+% SAT solver clauses: 1712
+% SAT solver unit clauses: 415
+% SAT solver binary clauses: 635
+% 
+% Sat splits: 27
+% Sat splitting refutations: 50
+% 
+% Memory used [KB]: 22899
+% Time elapsed: 1.389 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.77 s

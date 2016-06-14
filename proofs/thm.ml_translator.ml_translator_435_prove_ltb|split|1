@@ -1,0 +1,103 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f21497,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f21496,f239])).
+fof(f239,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X3))) != s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),X2)))) )),
+  inference(cnf_transformation,[],[f139])).
+fof(f139,plain,(
+  ! [X0,X1,X2,X3] : s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X3))) != s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),X2)))),
+  inference(flattening,[],[f138])).
+fof(f138,plain,(
+  ! [X0,X1] : ! [X2,X3] : ~s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X3))) = s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),X2)))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6,X7] : ! [X13,X14] : ~s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rval_1'(s(X6,X14))) = s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X7),X13)))),
+  file('thm.ml_translator.ml_translator_435_prove_ltb|split|1','thm.semanticPrimitives.result_distinct')).
+fof(f21496,plain,(
+  s('type.semanticPrimitives.result'(sK0,sK1),'const.semanticPrimitives.Rval_1'(s(sK0,sK2))) = s('type.semanticPrimitives.result'(sK0,sK1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0')))))),
+  inference(forward_demodulation,[],[f166,f231])).
+fof(f231,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))) )),
+  inference(cnf_transformation,[],[f123])).
+fof(f123,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(flattening,[],[f122])).
+fof(f122,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6,X7] : ! [X8,X12] : s(X7,X12) = s(X7,'const.pair.SND_1'(s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X8),s(X7,X12)))))),
+  file('thm.ml_translator.ml_translator_435_prove_ltb|split|1','thm.pair.SND')).
+fof(f166,plain,(
+  s('type.semanticPrimitives.result'(sK0,sK1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) = s('type.semanticPrimitives.result'(sK0,sK1),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(sK0,sK1)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(sK0,sK1),'const.semanticPrimitives.Rval_1'(s(sK0,sK2)))))))),
+  inference(cnf_transformation,[],[f145])).
+fof(f145,plain,(
+  s('type.semanticPrimitives.result'(sK0,sK1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) = s('type.semanticPrimitives.result'(sK0,sK1),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(sK0,sK1)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(sK0,sK1),'const.semanticPrimitives.Rval_1'(s(sK0,sK2)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f140])).
+fof(f140,plain,(
+  ? [X0,X1,X2] : s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) = s('type.semanticPrimitives.result'(X0,X1),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(X0,X1)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X2)))))))),
+  inference(ennf_transformation,[],[f56])).
+fof(f56,plain,(
+  ~! [X0,X1,X2] : s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) != s('type.semanticPrimitives.result'(X0,X1),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(X0,X1)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X2)))))))),
+  inference(flattening,[],[f55])).
+fof(f55,plain,(
+  ~! [X0,X1] : ! [X2] : ~s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) = s('type.semanticPrimitives.result'(X0,X1),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(X0,X1)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(X0,X1),'const.semanticPrimitives.Rval_1'(s(X0,X2)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8] : ~s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X7),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) = s('type.semanticPrimitives.result'(X6,X7),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(X6,X7)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rval_1'(s(X6,X8)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8] : ~s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'(X7),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtype_error_0'))))) = s('type.semanticPrimitives.result'(X6,X7),'const.pair.SND_1'(s('type.pair.prod'('type.semanticPrimitives.state'('type.one.one'),'type.semanticPrimitives.result'(X6,X7)),'const.pair.,_2'(s('type.semanticPrimitives.state'('type.one.one'),'const.ml_translator.empty_state_0'),s('type.semanticPrimitives.result'(X6,X7),'const.semanticPrimitives.Rval_1'(s(X6,X8)))))))),
+  file('thm.ml_translator.ml_translator_435_prove_ltb|split|1','thm.ml_translator.ml_translator_435_prove_ltb|split|1')).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 121
+% Passive clauses: 1964
+% Generated clauses: 20976
+% Final active clauses: 121
+% Final passive clauses: 1746
+% Input formulas: 53
+% Initial clauses: 74
+% 
+% Duplicate literals: 736
+% Trivial inequalities: 369
+% Fw subsumption resolutions: 2709
+% Fw demodulations: 1900
+% 
+% Simple tautologies: 418
+% Equational tautologies: 41
+% Forward subsumptions: 12473
+% 
+% Binary resolution: 80
+% Factoring: 1
+% Forward superposition: 7989
+% Backward superposition: 6685
+% Self superposition: 231
+% Equality factoring: 101
+% Equality resolution: 36
+% 
+% Split clauses: 231
+% Split components: 474
+% SAT solver clauses: 462
+% SAT solver unit clauses: 26
+% SAT solver binary clauses: 143
+% 
+% Sat splits: 231
+% 
+% TWLsolver clauses: 462
+% TWLsolver calls for satisfiability: 88
+% 
+% Memory used [KB]: 14456
+% Time elapsed: 0.435 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.44 s

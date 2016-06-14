@@ -1,0 +1,92 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvl_to_bviProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvl_to_bviProof
+% SZS output start Proof for thm.bvl_to_bviProof
+fof(f7812,plain,(
+  $false),
+  inference(equality_resolution,[],[f7539])).
+fof(f7539,plain,(
+  ( ! [X3] : (s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),X3) != s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',sK12)))) )),
+  inference(superposition,[],[f433,f596])).
+fof(f596,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK42(X2,X1,X0)),s(X1,sK43(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f409])).
+fof(f409,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK42(X2,X1,X0)),s(X1,sK43(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK42,sK43])],[f246])).
+fof(f246,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f245])).
+fof(f245,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f116])).
+fof(f116,axiom,(
+  ! [X24,X66] : ! [X69] : ? [X90,X91] : s('type.pair.prod'(X24,X66),X69) = s('type.pair.prod'(X24,X66),'const.pair.,_2'(s(X24,X90),s(X66,X91)))),
+  file('thm.bvl_to_bviProof.bvl_to_bviProof_57_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f433,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',sK12))) != s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.pair.,_2'(s('type.list.list'('type.bvl.exp'),X1),s('type.bvl.exp',X2)))) )),
+  inference(cnf_transformation,[],[f352])).
+fof(f352,plain,(
+  ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',sK12))) != s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.pair.,_2'(s('type.list.list'('type.bvl.exp'),X1),s('type.bvl.exp',X2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12])],[f321])).
+fof(f321,plain,(
+  ? [X0] : ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',X0))) != s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.pair.,_2'(s('type.list.list'('type.bvl.exp'),X1),s('type.bvl.exp',X2)))),
+  inference(ennf_transformation,[],[f134])).
+fof(f134,plain,(
+  ~! [X0] : ? [X1,X2] : s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',X0))) = s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.pair.,_2'(s('type.list.list'('type.bvl.exp'),X1),s('type.bvl.exp',X2)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ? [X7,X8] : s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',X6))) = s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.pair.,_2'(s('type.list.list'('type.bvl.exp'),X7),s('type.bvl.exp',X8)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ? [X7,X8] : s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.bvl_to_bvi.destLet_1'(s('type.bvl.exp',X6))) = s('type.pair.prod'('type.list.list'('type.bvl.exp'),'type.bvl.exp'),'const.pair.,_2'(s('type.list.list'('type.bvl.exp'),X7),s('type.bvl.exp',X8)))),
+  file('thm.bvl_to_bviProof.bvl_to_bviProof_57_prove_ltb','thm.bvl_to_bviProof.bvl_to_bviProof_57_prove_ltb')).
+% SZS output end Proof for thm.bvl_to_bviProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 361
+% Passive clauses: 2059
+% Generated clauses: 7365
+% Final active clauses: 354
+% Final passive clauses: 1579
+% Input formulas: 132
+% Initial clauses: 244
+% 
+% Duplicate literals: 147
+% Trivial inequalities: 14
+% Fw subsumption resolutions: 473
+% Fw demodulations: 499
+% Bw demodulations: 6
+% 
+% Simple tautologies: 168
+% Equational tautologies: 26
+% Forward subsumptions: 4068
+% 
+% Binary resolution: 2517
+% Factoring: 699
+% Forward superposition: 1377
+% Backward superposition: 1338
+% Self superposition: 31
+% Equality factoring: 2
+% Equality resolution: 9
+% 
+% Split clauses: 30
+% Split components: 60
+% SAT solver clauses: 34
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 14
+% 
+% Sat splits: 30
+% 
+% TWLsolver clauses: 34
+% TWLsolver calls for satisfiability: 19
+% 
+% Memory used [KB]: 4605
+% Time elapsed: 0.154 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.164 s

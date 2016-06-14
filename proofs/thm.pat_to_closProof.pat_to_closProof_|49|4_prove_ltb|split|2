@@ -1,0 +1,152 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.pat_to_closProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.pat_to_closProof
+% SZS output start Proof for thm.pat_to_closProof
+fof(f15558,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f15557,f442,f747,f745,f786,f443,f748,f746])).
+fof(f746,plain,(
+  s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))) | $spl1),
+  inference(cnf_transformation,[],[f746_D])).
+fof(f746_D,plain,(
+  s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f748,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),sK11) | $spl3),
+  inference(cnf_transformation,[],[f748_D])).
+fof(f748_D,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),sK11) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f443,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),sK11) | s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11)))),
+  inference(cnf_transformation,[],[f333])).
+fof(f333,plain,(
+  (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))) | s('type.list.list'(sK10),'const.list.NIL_0') = s('type.list.list'(sK10),sK11)) & (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))) | s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),sK11))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11])],[f332])).
+fof(f332,plain,(
+  ? [X0,X1] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) & (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1)))),
+  inference(nnf_transformation,[],[f297])).
+fof(f297,plain,(
+  ? [X0,X1] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) <~> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(ennf_transformation,[],[f140])).
+fof(f140,plain,(
+  ~! [X0,X1] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(flattening,[],[f139])).
+fof(f139,plain,(
+  ~! [X0] : ! [X1] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  file('thm.pat_to_closProof.pat_to_closProof_|49|4_prove_ltb|split|2','thm.pat_to_closProof.pat_to_closProof_|49|4_prove_ltb|split|2')).
+fof(f786,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f779])).
+fof(f779,plain,(
+  s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.|48|_0') | ($spl1 | $spl2)),
+  inference(superposition,[],[f778,f457])).
+fof(f457,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f146,plain,(
+  ! [X0] : s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f51])).
+fof(f51,axiom,(
+  ! [X6] : s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.pat_to_closProof.pat_to_closProof_|49|4_prove_ltb|split|2','thm.list.LENGTH|split|0')).
+fof(f778,plain,(
+  s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),'const.list.NIL_0'))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f746,f747])).
+fof(f745,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))) | $spl0),
+  inference(cnf_transformation,[],[f745_D])).
+fof(f745_D,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f747,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') = s('type.list.list'(sK10),sK11) | $spl2),
+  inference(cnf_transformation,[],[f747_D])).
+fof(f747_D,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') = s('type.list.list'(sK10),sK11) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f442,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') = s('type.list.list'(sK10),sK11) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11)))),
+  inference(cnf_transformation,[],[f333])).
+fof(f15557,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f15556,f748])).
+fof(f15556,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') = s('type.list.list'(sK10),sK11) | $spl0),
+  inference(trivial_inequality_removal,[],[f15555])).
+fof(f15555,plain,(
+  s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.|48|_0') | s('type.list.list'(sK10),'const.list.NIL_0') = s('type.list.list'(sK10),sK11) | $spl0),
+  inference(superposition,[],[f564,f745])).
+fof(f564,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(cnf_transformation,[],[f373])).
+fof(f373,plain,(
+  ! [X0,X1] : ((s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) & (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1)))))),
+  inference(nnf_transformation,[],[f223])).
+fof(f223,plain,(
+  ! [X0,X1] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(flattening,[],[f222])).
+fof(f222,plain,(
+  ! [X0] : ! [X1] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(rectify,[],[f56])).
+fof(f56,axiom,(
+  ! [X6] : ! [X22] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X22))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X22))),
+  file('thm.pat_to_closProof.pat_to_closProof_|49|4_prove_ltb|split|2','thm.list.LENGTH_NIL')).
+% SZS output end Proof for thm.pat_to_closProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 634
+% Passive clauses: 2654
+% Generated clauses: 15101
+% Final active clauses: 611
+% Final passive clauses: 1859
+% Input formulas: 137
+% Initial clauses: 297
+% 
+% Duplicate literals: 161
+% Trivial inequalities: 33
+% Fw subsumption resolutions: 982
+% Fw demodulations: 561
+% Bw demodulations: 9
+% 
+% Simple tautologies: 165
+% Equational tautologies: 21
+% Forward subsumptions: 10403
+% 
+% Binary resolution: 3756
+% Factoring: 751
+% Forward superposition: 3707
+% Backward superposition: 4729
+% Self superposition: 26
+% Equality factoring: 2
+% Equality resolution: 7
+% 
+% Split clauses: 153
+% Split components: 306
+% SAT solver clauses: 263
+% SAT solver unit clauses: 15
+% SAT solver binary clauses: 59
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 153
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 261
+% TWLsolver calls for satisfiability: 221
+% 
+% Memory used [KB]: 7164
+% Time elapsed: 0.227 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.24 s

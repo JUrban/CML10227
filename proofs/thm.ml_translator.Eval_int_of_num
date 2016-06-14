@@ -1,0 +1,88 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f419,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f418,f78])).
+fof(f78,plain,(
+  p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK2),s('type.ast.exp',sK0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',sK1))))))),
+  inference(cnf_transformation,[],[f57])).
+fof(f57,plain,(
+  p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK2),s('type.ast.exp',sK0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',sK1)))))) & ~p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK2),s('type.ast.exp',sK0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',sK1))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f46])).
+fof(f46,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.ast.exp',X0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X1)))))) & ~p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.ast.exp',X0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X1)))))))))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.ast.exp',X0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X1)))))) => p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.ast.exp',X0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X1)))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : (p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X8),s('type.ast.exp',X6),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X7)))))) => p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X8),s('type.ast.exp',X6),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X7)))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : (p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X8),s('type.ast.exp',X6),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X7)))))) => p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X8),s('type.ast.exp',X6),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X7)))))))))),
+  file('thm.ml_translator.Eval_int_of_num','thm.ml_translator.Eval_int_of_num')).
+fof(f418,plain,(
+  ~p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK2),s('type.ast.exp',sK0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',sK1))))))),
+  inference(forward_demodulation,[],[f79,f83])).
+fof(f83,plain,(
+  ( ! [X0] : (s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X0))) = s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X0)))))) )),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0] : s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X0))) = s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X0)))))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X7] : s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.NUM_1'(s('type.num.num',X7))) = s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',X7)))))),
+  file('thm.ml_translator.Eval_int_of_num','thm.ml_translator.NUM_def')).
+fof(f79,plain,(
+  ~p(s(bool,'const.ml_translator.Eval_3'(s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK2),s('type.ast.exp',sK0),s(fun('type.semanticPrimitives.v',bool),'const.ml_translator.INT_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num',sK1))))))))),
+  inference(cnf_transformation,[],[f57])).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 19
+% Passive clauses: 63
+% Generated clauses: 325
+% Final active clauses: 16
+% Final passive clauses: 28
+% Input formulas: 21
+% Initial clauses: 49
+% 
+% Duplicate literals: 40
+% Trivial inequalities: 10
+% Fw subsumption resolutions: 25
+% Fw demodulations: 1
+% 
+% Simple tautologies: 45
+% Equational tautologies: 15
+% Forward subsumptions: 106
+% 
+% Binary resolution: 22
+% Forward superposition: 25
+% Backward superposition: 89
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 4
+% 
+% Split clauses: 20
+% Split components: 42
+% SAT solver clauses: 34
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 22
+% 
+% Sat splits: 20
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 34
+% TWLsolver calls for satisfiability: 13
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.015 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.01 s

@@ -1,0 +1,119 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f173,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f171,f79])).
+fof(f79,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.ml_translator.vector_induction',aHL_FALSITY)).
+fof(f171,plain,(
+  p(s(bool,'F_0'))),
+  inference(superposition,[],[f164,f108])).
+fof(f108,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.ml_translator.vector'(sK0),bool),sK1),s('type.ml_translator.vector'(sK0),sK2)))),
+  inference(resolution,[],[f77,f82])).
+fof(f82,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f68])).
+fof(f68,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f26])).
+fof(f26,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X12] : (s(bool,'F_0') = s(bool,X12) <=> ~p(s(bool,X12)))),
+  file('thm.ml_translator.vector_induction','thm.bool.EQ_CLAUSES|split|2')).
+fof(f77,plain,(
+  ~p(s(bool,happ(s(fun('type.ml_translator.vector'(sK0),bool),sK1),s('type.ml_translator.vector'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X3] : p(s(bool,happ(s(fun('type.ml_translator.vector'(sK0),bool),sK1),s('type.ml_translator.vector'(sK0),'const.ml_translator.Vector_1'(s('type.list.list'(sK0),X3)))))) & ~p(s(bool,happ(s(fun('type.ml_translator.vector'(sK0),bool),sK1),s('type.ml_translator.vector'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f66])).
+fof(f66,plain,(
+  ? [X0,X1] : (! [X3] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),X3)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),X2)))))),
+  inference(rectify,[],[f59])).
+fof(f59,plain,(
+  ? [X0,X1] : (! [X2] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),X2)))))) & ? [X3] : ~p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),X3)))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1] : (! [X2] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),X2)))))) => ! [X3] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),X3)))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1] : (! [X2] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),X2)))))) => ! [X3] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X0),bool),X1),s('type.ml_translator.vector'(X0),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X6),bool),X7),s('type.ml_translator.vector'(X6),'const.ml_translator.Vector_1'(s('type.list.list'(X6),X8)))))) => ! [X9] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X6),bool),X7),s('type.ml_translator.vector'(X6),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X6),bool),X7),s('type.ml_translator.vector'(X6),'const.ml_translator.Vector_1'(s('type.list.list'(X6),X8)))))) => ! [X9] : p(s(bool,happ(s(fun('type.ml_translator.vector'(X6),bool),X7),s('type.ml_translator.vector'(X6),X9)))))),
+  file('thm.ml_translator.vector_induction','thm.ml_translator.vector_induction')).
+fof(f164,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.ml_translator.vector'(sK0),bool),sK1),s('type.ml_translator.vector'(sK0),X0))))) )),
+  inference(superposition,[],[f76,f84])).
+fof(f84,plain,(
+  ( ! [X0,X1] : (s('type.ml_translator.vector'(X0),X1) = s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),sK3(X1,X0))))) )),
+  inference(cnf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1] : s('type.ml_translator.vector'(X0),X1) = s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),sK3(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3])],[f31])).
+fof(f31,plain,(
+  ! [X0,X1] : ? [X2] : s('type.ml_translator.vector'(X0),X1) = s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),X2)))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : ! [X1] : ? [X2] : s('type.ml_translator.vector'(X0),X1) = s('type.ml_translator.vector'(X0),'const.ml_translator.Vector_1'(s('type.list.list'(X0),X2)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6] : ! [X35] : ? [X8] : s('type.ml_translator.vector'(X6),X35) = s('type.ml_translator.vector'(X6),'const.ml_translator.Vector_1'(s('type.list.list'(X6),X8)))),
+  file('thm.ml_translator.vector_induction','thm.ml_translator.vector_nchotomy')).
+fof(f76,plain,(
+  ( ! [X3] : (p(s(bool,happ(s(fun('type.ml_translator.vector'(sK0),bool),sK1),s('type.ml_translator.vector'(sK0),'const.ml_translator.Vector_1'(s('type.list.list'(sK0),X3))))))) )),
+  inference(cnf_transformation,[],[f67])).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 14
+% Passive clauses: 51
+% Generated clauses: 97
+% Final active clauses: 13
+% Final passive clauses: 36
+% Input formulas: 21
+% Initial clauses: 29
+% 
+% Duplicate literals: 1
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 7
+% Fw demodulations: 2
+% Bw demodulations: 1
+% 
+% Simple tautologies: 5
+% Equational tautologies: 4
+% Forward subsumptions: 25
+% 
+% Binary resolution: 24
+% Factoring: 1
+% Forward superposition: 13
+% Backward superposition: 14
+% Self superposition: 2
+% Equality factoring: 2
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.014 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.007 s

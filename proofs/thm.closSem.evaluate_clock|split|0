@@ -1,0 +1,160 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.closSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closSem
+% SZS output start Proof for thm.closSem
+fof(f9812,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f9811,f213,f350])).
+fof(f350,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f350_D])).
+fof(f350_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f213,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.closSem.evaluate_clock|split|0',aHL_FALSITY)).
+fof(f9811,plain,(
+  $false | $spl1),
+  inference(subsumption_resolution,[],[f9810,f350])).
+fof(f9810,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f9808,f2516])).
+fof(f2516,plain,(
+  s(bool,'F_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK15))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13)))))),
+  inference(resolution,[],[f206,f226])).
+fof(f226,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f144])).
+fof(f144,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X12] : (s(bool,'F_0') = s(bool,X12) <=> ~p(s(bool,X12)))),
+  file('thm.closSem.evaluate_clock|split|0','thm.bool.EQ_CLAUSES|split|2')).
+fof(f206,plain,(
+  ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK15))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13))))))),
+  inference(cnf_transformation,[],[f139])).
+fof(f139,plain,(
+  s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),sK14),s('type.closSem.state'(sK10),sK15))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),sK11),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),sK12),s('type.closSem.state'(sK10),sK13))))))) & ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK15))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14,sK15])],[f97])).
+fof(f97,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X4),s('type.closSem.state'(X0),X5))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),X2),s('type.closSem.state'(X0),X3))))))) & ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X5))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3)))))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X4),s('type.closSem.state'(X0),X5))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),X2),s('type.closSem.state'(X0),X3))))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X5))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3)))))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4,X5] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X4),s('type.closSem.state'(X0),X5))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),X2),s('type.closSem.state'(X0),X3))))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X5))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10,X11] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X10),s('type.closSem.state'(X6),X11))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X6))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X7),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),X8),s('type.closSem.state'(X6),X9))))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X11))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X9)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10,X11] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X10),s('type.closSem.state'(X6),X11))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X6))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X7),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),X8),s('type.closSem.state'(X6),X9))))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X11))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X9)))))))),
+  file('thm.closSem.evaluate_clock|split|0','thm.closSem.evaluate_clock|split|0')).
+fof(f9808,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK15))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13))))))),
+  inference(equality_resolution,[],[f4121])).
+fof(f4121,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),sK14),s('type.closSem.state'(sK10),sK15))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X0),s('type.closSem.state'(sK10),X1))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),X1))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13))))))) )),
+  inference(forward_demodulation,[],[f4120,f287])).
+fof(f287,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))) )),
+  inference(cnf_transformation,[],[f88])).
+fof(f88,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(flattening,[],[f87])).
+fof(f87,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X21] : ! [X15,X22] : s(X21,X22) = s(X21,'const.pair.SND_1'(s('type.pair.prod'(X6,X21),'const.pair.,_2'(s(X6,X15),s(X21,X22)))))),
+  file('thm.closSem.evaluate_clock|split|0','thm.pair.SND')).
+fof(f4120,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),X1))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),sK12),s('type.closSem.state'(sK10),sK13)))))))))) | s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),sK14),s('type.closSem.state'(sK10),sK15))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X0),s('type.closSem.state'(sK10),X1)))) )),
+  inference(forward_demodulation,[],[f4116,f287])).
+fof(f4116,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),sK14),s('type.closSem.state'(sK10),sK15))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X0),s('type.closSem.state'(sK10),X1))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),X1))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),sK11),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),sK12),s('type.closSem.state'(sK10),sK13))))))))))))))) )),
+  inference(superposition,[],[f256,f205])).
+fof(f205,plain,(
+  s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),sK14),s('type.closSem.state'(sK10),sK15))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10))),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),sK11),s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.list.list'('type.closSem.v'),sK12),s('type.closSem.state'(sK10),sK13)))))))),
+  inference(cnf_transformation,[],[f139])).
+fof(f256,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X2),s('type.closSem.state'(X0),X3))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1))))))))))) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X0,X1,X2,X3] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X2),s('type.closSem.state'(X0),X3))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1)))))))))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1,X2,X3] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X2),s('type.closSem.state'(X0),X3))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1)))))))))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ! [X0] : ! [X1,X2,X3] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X2),s('type.closSem.state'(X0),X3))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X3))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0)),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X0))),X1)))))))))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X16] : ! [X17,X10,X11] : (s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X16)),'const.closSem.evaluate_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X16))),X17))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X16)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),X10),s('type.closSem.state'(X16),X11))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X16),X11))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X16),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X16)),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.pair.prod'('type.list.list'('type.closSem.v'),'type.closSem.state'(X16))),X17)))))))))))),
+  file('thm.closSem.evaluate_clock|split|0','thm.closSem.closSem_2|48||48|_prove_ltb|split|0')).
+% SZS output end Proof for thm.closSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 517
+% Passive clauses: 2996
+% Generated clauses: 9562
+% Final active clauses: 484
+% Final passive clauses: 2194
+% Input formulas: 37
+% Initial clauses: 141
+% 
+% Duplicate literals: 259
+% Trivial inequalities: 75
+% Fw subsumption resolutions: 1096
+% Fw demodulations: 172
+% Bw demodulations: 32
+% 
+% Simple tautologies: 155
+% Equational tautologies: 55
+% Forward subsumptions: 4496
+% 
+% Binary resolution: 4058
+% Factoring: 996
+% Forward superposition: 1299
+% Backward superposition: 1227
+% Self superposition: 28
+% Equality factoring: 26
+% Equality resolution: 23
+% 
+% Split clauses: 305
+% Split components: 616
+% SAT solver clauses: 505
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 88
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 305
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 502
+% TWLsolver calls for satisfiability: 294
+% 
+% Memory used [KB]: 4605
+% Time elapsed: 0.223 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.23 s

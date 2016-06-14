@@ -1,0 +1,287 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.exhSem
+% (47052)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 159
+% Passive clauses: 3343
+% Generated clauses: 22348
+% Final active clauses: 129
+% Final passive clauses: 3000
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 774
+% Trivial inequalities: 110
+% Fw subsumption resolutions: 1580
+% Fw demodulations: 3324
+% Bw demodulations: 26
+% 
+% Simple tautologies: 122
+% Equational tautologies: 47
+% Forward subsumptions: 12630
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 470
+% Factoring: 2
+% Forward superposition: 8444
+% Backward superposition: 7567
+% Self superposition: 223
+% Equality factoring: 94
+% Equality resolution: 7
+% 
+% Split clauses: 211
+% Split components: 422
+% SAT solver clauses: 597
+% SAT solver unit clauses: 40
+% SAT solver binary clauses: 129
+% 
+% Sat splits: 211
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 597
+% TWLsolver calls for satisfiability: 146
+% 
+% Memory used [KB]: 21364
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.exhSem
+% (47085)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 135
+% Passive clauses: 1264
+% Generated clauses: 16860
+% Final active clauses: 97
+% Final passive clauses: 806
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 563
+% Trivial inequalities: 99
+% Fw subsumption resolutions: 862
+% Fw demodulations: 1898
+% Bw demodulations: 349
+% Condensations: 1416
+% 
+% Simple tautologies: 113
+% Equational tautologies: 44
+% Forward subsumptions: 8313
+% Bw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 454
+% Factoring: 1
+% Forward superposition: 5487
+% Backward superposition: 4676
+% Self superposition: 184
+% Equality factoring: 98
+% Equality resolution: 8
+% 
+% Split clauses: 104
+% Split components: 208
+% SAT solver clauses: 1853
+% SAT solver unit clauses: 131
+% SAT solver binary clauses: 41
+% 
+% Sat splits: 104
+% Sat splitting refutations: 19
+% 
+% TWLsolver clauses: 1853
+% TWLsolver calls for satisfiability: 276
+% 
+% Memory used [KB]: 16502
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.exhSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.exhSem
+% SZS output start Proof for thm.exhSem
+fof(f37455,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f37454,f216])).
+fof(f216,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7',aHL_TRUTH)).
+fof(f37454,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f37452,f3577])).
+fof(f3577,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(condensation,[],[f3576])).
+fof(f3576,plain,(
+  ( ! [X10,X8,X9] : (s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(subsumption_resolution,[],[f3513,f300])).
+fof(f300,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f218,f219])).
+fof(f219,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7',aHL_BOOL_CASES)).
+fof(f218,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7',aHL_FALSITY)).
+fof(f3513,plain,(
+  ( ! [X10,X8,X9] : (p(s(bool,X10)) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(superposition,[],[f3002,f298])).
+fof(f298,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f219,f219])).
+fof(f3002,plain,(
+  ( ! [X0,X3] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X3))),s(X0,X3))))) )),
+  inference(forward_demodulation,[],[f2914,f263])).
+fof(f263,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))) )),
+  inference(cnf_transformation,[],[f135])).
+fof(f135,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X3) = s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3)))))),
+  inference(rectify,[],[f44])).
+fof(f44,axiom,(
+  ! [X6,X14] : ! [X17,X20] : s(X14,X20) = s(X14,'const.pair.SND_1'(s('type.pair.prod'(X6,X14),'const.pair.,_2'(s(X6,X17),s(X14,X20)))))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7','thm.pair.SND')).
+fof(f2914,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,'const.pair.SND_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3))))))),s(X0,X3))))) )),
+  inference(unit_resulting_resolution,[],[f263,f271])).
+fof(f271,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f214])).
+fof(f214,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f148])).
+fof(f148,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f53])).
+fof(f53,axiom,(
+  ! [X48,X49,X50] : (p(s(bool,happ(s(fun(X48,bool),happ(s(fun(X48,fun(X48,bool)),'=_0'),s(X48,X49))),s(X48,X50)))) <=> s(X48,X49) = s(X48,X50))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7',arity_0_HL_EQ)).
+fof(f37452,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.exhSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.exhSem.state'(sK1)),fun(fun(sK0,'type.exhSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2))))),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f37385,f13433])).
+fof(f13433,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.exhSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.exhSem.state'(sK1)),fun(fun(sK0,'type.exhSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2))))),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4))),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f215,f270])).
+fof(f270,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f214])).
+fof(f215,plain,(
+  s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2))) != s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4))),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f199])).
+fof(f199,plain,(
+  s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2))) != s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK4))),s(fun(sK0,'type.exhSem.state'(sK1)),'const.combin.o_2'(s(fun('type.exhSem.state'(sK1),'type.exhSem.state'(sK1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),sK3))),s(fun(sK0,'type.exhSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f193])).
+fof(f193,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X3))))),s(fun(X0,'type.exhSem.state'(X1)),X2))) != s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X4))),s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X3))),s(fun(X0,'type.exhSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X3))))),s(fun(X0,'type.exhSem.state'(X1)),X2))) = s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X4))),s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X3))),s(fun(X0,'type.exhSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X4),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X3))))),s(fun(X0,'type.exhSem.state'(X1)),X2))) = s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X4))),s(fun(X0,'type.exhSem.state'(X1)),'const.combin.o_2'(s(fun('type.exhSem.state'(X1),'type.exhSem.state'(X1)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X3))),s(fun(X0,'type.exhSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X10),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X9))))),s(fun(X6,'type.exhSem.state'(X7)),X8))) = s(fun(X6,'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X10))),s(fun(X6,'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X9))),s(fun(X6,'type.exhSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X10),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X9))))),s(fun(X6,'type.exhSem.state'(X7)),X8))) = s(fun(X6,'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X10))),s(fun(X6,'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X9))),s(fun(X6,'type.exhSem.state'(X7)),X8)))))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7','thm.exhSem.state_fupdfupds_comp|split|7')).
+fof(f37385,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.exhSem.state'(X0)),'const.combin.o_2'(s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2))))),s(fun(X3,'type.exhSem.state'(X0)),X4))) = s(fun(X3,'type.exhSem.state'(X0)),'const.combin.o_2'(s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1))),s(fun(X3,'type.exhSem.state'(X0)),'const.combin.o_2'(s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2))),s(fun(X3,'type.exhSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f277,f229])).
+fof(f229,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1))))) = s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.combin.o_2'(s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2))),s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1)))))) )),
+  inference(cnf_transformation,[],[f90])).
+fof(f90,plain,(
+  ! [X0,X1,X2] : s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1))))) = s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.combin.o_2'(s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2))),s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1)))))),
+  inference(flattening,[],[f89])).
+fof(f89,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1))))) = s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.combin.o_2'(s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X2))),s(fun('type.exhSem.state'(X0),'type.exhSem.state'(X0)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X10),s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X9))))) = s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.combin.o_2'(s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X10))),s(fun('type.exhSem.state'(X7),'type.exhSem.state'(X7)),'const.exhSem.state_globals_fupd_1'(s(fun('type.list.list'('type.option.option'('type.exhSem.v')),'type.list.list'('type.option.option'('type.exhSem.v'))),X9)))))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7','thm.exhSem.state_fupdfupds_comp|split|6')).
+fof(f277,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f159])).
+fof(f159,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X14,X6,X22,X15] : ! [X10,X9,X8] : s(fun(X22,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X22,X6),'const.combin.o_2'(s(fun(X15,X6),X9),s(fun(X22,X15),X8))))) = s(fun(X22,X14),'const.combin.o_2'(s(fun(X15,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X15,X6),X9))),s(fun(X22,X15),X8)))),
+  file('thm.exhSem.state_fupdfupds_comp|split|7','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.exhSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 239
+% Passive clauses: 3799
+% Generated clauses: 40827
+% Final active clauses: 111
+% Final passive clauses: 1378
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 1051
+% Trivial inequalities: 63
+% Fw subsumption resolutions: 1126
+% Fw demodulations: 6601
+% Bw demodulations: 2120
+% Condensations: 1533
+% Global subsumptions: 355
+% 
+% Simple tautologies: 127
+% Equational tautologies: 176
+% Forward subsumptions: 25449
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 70
+% 
+% Unit resulting resolution: 1122
+% Factoring: 1
+% Forward superposition: 12342
+% Backward superposition: 10251
+% Self superposition: 280
+% Equality factoring: 94
+% Equality resolution: 2
+% 
+% Split clauses: 39
+% Split components: 78
+% SAT solver clauses: 4677
+% SAT solver unit clauses: 1074
+% SAT solver binary clauses: 2095
+% 
+% Sat splits: 39
+% Sat splitting refutations: 443
+% 
+% Memory used [KB]: 44519
+% Time elapsed: 1.944 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.27 s

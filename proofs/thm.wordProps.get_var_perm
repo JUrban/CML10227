@@ -1,0 +1,218 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordProps
+% (141716)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 805
+% Passive clauses: 6917
+% Generated clauses: 30136
+% Final active clauses: 776
+% Final passive clauses: 5865
+% Input formulas: 516
+% Initial clauses: 724
+% 
+% Duplicate literals: 165
+% Trivial inequalities: 38
+% Fw subsumption resolutions: 1488
+% Fw demodulations: 3188
+% Bw demodulations: 7
+% 
+% Simple tautologies: 222
+% Equational tautologies: 26
+% Forward subsumptions: 17622
+% 
+% Binary resolution: 4562
+% Factoring: 684
+% Forward superposition: 8027
+% Backward superposition: 11036
+% Self superposition: 41
+% Equality factoring: 2
+% Equality resolution: 10
+% 
+% Split clauses: 520
+% Split components: 1042
+% SAT solver clauses: 673
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 66
+% 
+% Sat splits: 520
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 672
+% TWLsolver calls for satisfiability: 310
+% 
+% Memory used [KB]: 18038
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.wordProps
+% (141735)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 593
+% Generated clauses: 3185
+% Final passive clauses: 547
+% Input formulas: 516
+% Initial clauses: 724
+% 
+% Duplicate literals: 6
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 5
+% Fw demodulations: 1709
+% Bw demodulations: 46
+% Condensations: 17
+% Global subsumptions: 24
+% 
+% Simple tautologies: 80
+% Equational tautologies: 2
+% Forward subsumptions: 2
+% 
+% SAT solver clauses: 1492
+% SAT solver unit clauses: 1162
+% SAT solver binary clauses: 119
+% SAT solver learnt clauses: 48
+% SAT solver learnt literals: 12
+% 
+% TWLsolver clauses: 1396
+% TWLsolver calls for satisfiability: 3718
+% 
+% Memory used [KB]: 13176
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 135 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordProps
+% SZS output start Proof for thm.wordProps
+fof(f50690,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f50689])).
+fof(f50689,plain,(
+  s('type.option.option'('type.option.option'('type.wordSem.word_loc'(sK10))),'const.option.SOME_1'(s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),sK12))))) != s('type.option.option'('type.option.option'('type.wordSem.word_loc'(sK10))),'const.option.SOME_1'(s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),sK12)))))),
+  inference(backward_demodulation,[],[f50686,f14997])).
+fof(f14997,plain,(
+  s('type.option.option'('type.option.option'('type.wordSem.word_loc'(sK10))),'const.option.SOME_1'(s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),sK12))))) != s('type.option.option'('type.option.option'('type.wordSem.word_loc'(sK10))),'const.option.SOME_1'(s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),sK13))),s('type.wordSem.state'(sK10,sK11),sK12)))))))),
+  inference(unit_resulting_resolution,[],[f1649,f1795])).
+fof(f1795,plain,(
+  ( ! [X2,X0,X1] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f1567])).
+fof(f1567,plain,(
+  ! [X0,X1,X2] : ((s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))),
+  inference(nnf_transformation,[],[f643])).
+fof(f643,plain,(
+  ! [X0,X1,X2] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(flattening,[],[f642])).
+fof(f642,plain,(
+  ! [X0] : ! [X1,X2] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f228])).
+fof(f228,axiom,(
+  ! [X6] : ! [X51,X61] : (s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X51))) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X61))) <=> s(X6,X51) = s(X6,X61))),
+  file('thm.wordProps.get_var_perm','thm.option.SOME_|49||49|')).
+fof(f1649,plain,(
+  s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),sK12))) != s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),sK13))),s('type.wordSem.state'(sK10,sK11),sK12)))))),
+  inference(cnf_transformation,[],[f1512])).
+fof(f1512,plain,(
+  s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),sK12))) != s('type.option.option'('type.wordSem.word_loc'(sK10)),'const.wordSem.get_var_2'(s('type.num.num',sK14),s('type.wordSem.state'(sK10,sK11),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),sK13))),s('type.wordSem.state'(sK10,sK11),sK12)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14])],[f1457])).
+fof(f1457,plain,(
+  ? [X0,X1,X2,X3,X4] : s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),X2))) != s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),X3))),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f519])).
+fof(f519,plain,(
+  ~! [X0,X1,X2,X3,X4] : s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),X2))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),X3))),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f518])).
+fof(f518,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),X2))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),X3))),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s('type.option.option'('type.wordSem.word_loc'(X6)),'const.wordSem.get_var_2'(s('type.num.num',X10),s('type.wordSem.state'(X6,X7),X8))) = s('type.option.option'('type.wordSem.word_loc'(X6)),'const.wordSem.get_var_2'(s('type.num.num',X10),s('type.wordSem.state'(X6,X7),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),X9))),s('type.wordSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s('type.option.option'('type.wordSem.word_loc'(X6)),'const.wordSem.get_var_2'(s('type.num.num',X10),s('type.wordSem.state'(X6,X7),X8))) = s('type.option.option'('type.wordSem.word_loc'(X6)),'const.wordSem.get_var_2'(s('type.num.num',X10),s('type.wordSem.state'(X6,X7),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),'const.combin.K_1'(s(fun('type.num.num',fun('type.num.num','type.num.num')),X9))),s('type.wordSem.state'(X6,X7),X8)))))),
+  file('thm.wordProps.get_var_perm','thm.wordProps.get_var_perm')).
+fof(f50686,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),X3))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),X2),s('type.wordSem.state'(X0,X1),X3)))))) )),
+  inference(forward_demodulation,[],[f50631,f1951])).
+fof(f1951,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X2),s('type.wordSem.state'(X0,X1),X3))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.sptree.lookup_2'(s('type.num.num',X2),s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3)))))) )),
+  inference(cnf_transformation,[],[f826])).
+fof(f826,plain,(
+  ! [X0,X1,X2,X3] : s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X2),s('type.wordSem.state'(X0,X1),X3))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.sptree.lookup_2'(s('type.num.num',X2),s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(flattening,[],[f825])).
+fof(f825,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X2),s('type.wordSem.state'(X0,X1),X3))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.sptree.lookup_2'(s('type.num.num',X2),s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(rectify,[],[f234])).
+fof(f234,axiom,(
+  ! [X6,X12] : ! [X80,X15] : s('type.option.option'('type.wordSem.word_loc'(X6)),'const.wordSem.get_var_2'(s('type.num.num',X80),s('type.wordSem.state'(X6,X12),X15))) = s('type.option.option'('type.wordSem.word_loc'(X6)),'const.sptree.lookup_2'(s('type.num.num',X80),s('type.sptree.spt'('type.wordSem.word_loc'(X6)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X6,X12),X15)))))),
+  file('thm.wordProps.get_var_perm','thm.wordSem.get_var_def')).
+fof(f50631,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.option.option'('type.wordSem.word_loc'(X0)),'const.sptree.lookup_2'(s('type.num.num',X4),s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))))) = s('type.option.option'('type.wordSem.word_loc'(X0)),'const.wordSem.get_var_2'(s('type.num.num',X4),s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),X2),s('type.wordSem.state'(X0,X1),X3)))))) )),
+  inference(superposition,[],[f1951,f2010])).
+fof(f2010,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),X3),s('type.wordSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f944])).
+fof(f944,plain,(
+  ! [X0,X1,X2,X3] : s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f943])).
+fof(f943,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f121])).
+fof(f121,axiom,(
+  ! [X6,X12] : ! [X15,X24] : s('type.sptree.spt'('type.wordSem.word_loc'(X6)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X6,X12),X15))) = s('type.sptree.spt'('type.wordSem.word_loc'(X6)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X6,X12),'const.wordSem.state_permute_fupd_2'(s(fun(fun('type.num.num',fun('type.num.num','type.num.num')),fun('type.num.num',fun('type.num.num','type.num.num'))),X24),s('type.wordSem.state'(X6,X12),X15)))))),
+  file('thm.wordProps.get_var_perm','thm.wordSem.wordSem_73_prove_ltb')).
+% SZS output end Proof for thm.wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 878
+% Passive clauses: 5226
+% Generated clauses: 49176
+% Final active clauses: 863
+% Final passive clauses: 3865
+% Input formulas: 516
+% Initial clauses: 724
+% 
+% Duplicate literals: 7
+% Trivial inequalities: 14
+% Fw subsumption resolutions: 697
+% Fw demodulations: 7915
+% Bw demodulations: 169
+% Condensations: 30
+% 
+% Simple tautologies: 124
+% Equational tautologies: 49
+% Forward subsumptions: 33271
+% Fw demodulations to eq. taut.: 998
+% Bw demodulations to eq. taut.: 41
+% 
+% Unit resulting resolution: 8817
+% Factoring: 1
+% Forward superposition: 12418
+% Backward superposition: 18114
+% Self superposition: 94
+% Equality factoring: 2
+% Equality resolution: 17
+% 
+% Split clauses: 7
+% Split components: 14
+% SAT solver clauses: 6029
+% SAT solver unit clauses: 2638
+% SAT solver binary clauses: 2836
+% 
+% Sat splits: 7
+% Sat splitting refutations: 787
+% 
+% Memory used [KB]: 49508
+% Time elapsed: 2.307 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.72 s

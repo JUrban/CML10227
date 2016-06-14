@@ -1,0 +1,323 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.okasaki_misc
+% (25305)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 690
+% Passive clauses: 5602
+% Generated clauses: 21151
+% Final active clauses: 680
+% Final passive clauses: 4584
+% Input formulas: 34
+% Initial clauses: 147
+% 
+% Duplicate literals: 903
+% Trivial inequalities: 111
+% Fw subsumption resolutions: 2303
+% Fw demodulations: 580
+% Bw demodulations: 7
+% 
+% Simple tautologies: 223
+% Equational tautologies: 76
+% Forward subsumptions: 7758
+% 
+% Binary resolution: 7061
+% Factoring: 1348
+% Forward superposition: 2858
+% Backward superposition: 5377
+% Self superposition: 110
+% Equality factoring: 110
+% Equality resolution: 22
+% 
+% Split clauses: 1337
+% Split components: 2858
+% SAT solver clauses: 1742
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 167
+% 
+% Sat splits: 1337
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1737
+% TWLsolver calls for satisfiability: 408
+% 
+% Memory used [KB]: 9722
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.okasaki_misc
+% (25325)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 461
+% Passive clauses: 2759
+% Generated clauses: 15992
+% Final active clauses: 398
+% Final passive clauses: 2073
+% Input formulas: 34
+% Initial clauses: 147
+% 
+% Duplicate literals: 522
+% Trivial inequalities: 92
+% Fw subsumption resolutions: 1326
+% Fw demodulations: 568
+% Bw demodulations: 204
+% Condensations: 784
+% Global subsumptions: 13
+% 
+% Simple tautologies: 262
+% Equational tautologies: 24
+% Forward subsumptions: 6271
+% Bw demodulations to eq. taut.: 62
+% 
+% Binary resolution: 3451
+% Factoring: 103
+% Forward superposition: 3067
+% Backward superposition: 2652
+% Self superposition: 58
+% Equality factoring: 45
+% Equality resolution: 13
+% 
+% Split clauses: 218
+% Split components: 445
+% SAT solver clauses: 3460
+% SAT solver unit clauses: 158
+% SAT solver binary clauses: 90
+% SAT solver learnt clauses: 26
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 218
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 3408
+% TWLsolver calls for satisfiability: 1506
+% 
+% Memory used [KB]: 14200
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.okasaki_misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.okasaki_misc
+% SZS output start Proof for thm.okasaki_misc
+fof(f7377,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f7376,f359])).
+fof(f359,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f198,f195])).
+fof(f195,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f9])).
+fof(f9,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.bool.TRUTH')).
+fof(f198,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f128])).
+fof(f128,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f16])).
+fof(f16,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.bool.NOT_CLAUSES|split|1')).
+fof(f7376,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f7042,f438])).
+fof(f438,plain,(
+  s(bool,'F_0') = s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)))))),
+  inference(unit_resulting_resolution,[],[f194,f213])).
+fof(f213,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f132])).
+fof(f132,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f47])).
+fof(f47,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X12] : (s(bool,'F_0') = s(bool,X12) <=> ~p(s(bool,X12)))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.bool.EQ_CLAUSES|split|2')).
+fof(f194,plain,(
+  ~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13))))))),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),sK12)))) & ~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13])],[f86])).
+fof(f86,plain,(
+  ? [X0,X1,X2,X3] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) & ~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X2),s(fun(X0,'type.num.num'),X3)))))))),
+  inference(ennf_transformation,[],[f37])).
+fof(f37,plain,(
+  ~! [X0,X1,X2,X3] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) => p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X2),s(fun(X0,'type.num.num'),X3)))))))),
+  inference(flattening,[],[f36])).
+fof(f36,plain,(
+  ~! [X0] : ! [X1,X2,X3] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) => p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X2),s(fun(X0,'type.num.num'),X3)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X6,bool),X7),s(fun(X6,'type.num.num'),X8)))) => p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X6,bool),X7),s(fun(X6,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X6,'type.num.num'),X8),s(fun(X6,'type.num.num'),X9)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X6,bool),X7),s(fun(X6,'type.num.num'),X8)))) => p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X6,bool),X7),s(fun(X6,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X6,'type.num.num'),X8),s(fun(X6,'type.num.num'),X9)))))))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.okasaki_misc.BAG_EVERY_DIFF')).
+fof(f7042,plain,(
+  p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13))))))),
+  inference(unit_resulting_resolution,[],[f6373,f239])).
+fof(f239,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK14(X2,X1,X0))))) | p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2))))) )),
+  inference(cnf_transformation,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) | ! [X4] : (~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X4),s(fun(X0,'type.num.num'),X2)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4)))))) & ((p(s(bool,'const.bag.BAG_IN_2'(s(X0,sK14(X2,X1,X0)),s(fun(X0,'type.num.num'),X2)))) & ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK14(X2,X1,X0)))))) | p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK14])],[f148])).
+fof(f148,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) | ! [X4] : (~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X4),s(fun(X0,'type.num.num'),X2)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4)))))) & (? [X3] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,X3),s(fun(X0,'type.num.num'),X2)))) & ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) | p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2))))))),
+  inference(rectify,[],[f147])).
+fof(f147,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) | ! [X3] : (~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X3),s(fun(X0,'type.num.num'),X2)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))) & (? [X3] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,X3),s(fun(X0,'type.num.num'),X2)))) & ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) | p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2))))))),
+  inference(nnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) <=> ! [X3] : (~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X3),s(fun(X0,'type.num.num'),X2)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))))),
+  inference(ennf_transformation,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) <=> ! [X3] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,X3),s(fun(X0,'type.num.num'),X2)))) => p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))))),
+  inference(flattening,[],[f63])).
+fof(f63,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) <=> ! [X3] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,X3),s(fun(X0,'type.num.num'),X2)))) => p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X7,X11] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X6,bool),X7),s(fun(X6,'type.num.num'),X11)))) <=> ! [X10] : (p(s(bool,'const.bag.BAG_IN_2'(s(X6,X10),s(fun(X6,'type.num.num'),X11)))) => p(s(bool,happ(s(fun(X6,bool),X7),s(X6,X10))))))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.bag.BAG_EVERY')).
+fof(f6373,plain,(
+  p(s(bool,happ(s(fun(sK10,bool),sK11),s(sK10,sK14('const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)),sK11,sK10)))))),
+  inference(unit_resulting_resolution,[],[f4792,f1117])).
+fof(f1117,plain,(
+  ( ! [X0] : (~p(s(bool,'const.bag.BAG_IN_2'(s(sK10,X0),s(fun(sK10,'type.num.num'),sK12)))) | p(s(bool,happ(s(fun(sK10,bool),sK11),s(sK10,X0))))) )),
+  inference(subsumption_resolution,[],[f1115,f195])).
+fof(f1115,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.bag.BAG_IN_2'(s(sK10,X0),s(fun(sK10,'type.num.num'),sK12)))) | p(s(bool,happ(s(fun(sK10,bool),sK11),s(sK10,X0))))) )),
+  inference(superposition,[],[f237,f391])).
+fof(f391,plain,(
+  s(bool,'T_0') = s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),sK12)))),
+  inference(unit_resulting_resolution,[],[f193,f209])).
+fof(f209,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f130])).
+fof(f130,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X12] : (s(bool,'T_0') = s(bool,X12) <=> p(s(bool,X12)))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.bool.EQ_CLAUSES|split|1')).
+fof(f193,plain,(
+  p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(sK10,bool),sK11),s(fun(sK10,'type.num.num'),sK12))))),
+  inference(cnf_transformation,[],[f127])).
+fof(f237,plain,(
+  ( ! [X4,X2,X0,X1] : (~p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2)))) | ~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X4),s(fun(X0,'type.num.num'),X2)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) )),
+  inference(cnf_transformation,[],[f149])).
+fof(f4792,plain,(
+  p(s(bool,'const.bag.BAG_IN_2'(s(sK10,sK14('const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)),sK11,sK10)),s(fun(sK10,'type.num.num'),sK12))))),
+  inference(subsumption_resolution,[],[f4735,f195])).
+fof(f4735,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.bag.BAG_IN_2'(s(sK10,sK14('const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)),sK11,sK10)),s(fun(sK10,'type.num.num'),sK12))))),
+  inference(superposition,[],[f240,f2410])).
+fof(f2410,plain,(
+  s(bool,'T_0') = s(bool,'const.bag.BAG_IN_2'(s(sK10,sK14('const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)),sK11,sK10)),s(fun(sK10,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)))))),
+  inference(subsumption_resolution,[],[f2404,f359])).
+fof(f2404,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.bag.BAG_IN_2'(s(sK10,sK14('const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)),sK11,sK10)),s(fun(sK10,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(sK10,'type.num.num'),sK12),s(fun(sK10,'type.num.num'),sK13)))))),
+  inference(superposition,[],[f1060,f438])).
+fof(f1060,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X2),s(fun(X0,'type.num.num'),X1)))) | s(bool,'T_0') = s(bool,'const.bag.BAG_IN_2'(s(X0,sK14(X1,X2,X0)),s(fun(X0,'type.num.num'),X1)))) )),
+  inference(subsumption_resolution,[],[f1059,f359])).
+fof(f1059,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'F_0')) | p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X2),s(fun(X0,'type.num.num'),X1)))) | s(bool,'T_0') = s(bool,'const.bag.BAG_IN_2'(s(X0,sK14(X1,X2,X0)),s(fun(X0,'type.num.num'),X1)))) )),
+  inference(superposition,[],[f238,f202])).
+fof(f202,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF',aHL_BOOL_CASES)).
+fof(f238,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,sK14(X2,X1,X0)),s(fun(X0,'type.num.num'),X2)))) | p(s(bool,'const.bag.BAG_EVERY_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),X2))))) )),
+  inference(cnf_transformation,[],[f149])).
+fof(f240,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X3),s(fun(X0,'type.num.num'),X2)))))) | p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),X3))))) )),
+  inference(cnf_transformation,[],[f97])).
+fof(f97,plain,(
+  ! [X0,X1,X2,X3] : (~p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X3),s(fun(X0,'type.num.num'),X2)))))) | p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),X3)))))),
+  inference(ennf_transformation,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X3),s(fun(X0,'type.num.num'),X2)))))) => p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),X3)))))),
+  inference(flattening,[],[f65])).
+fof(f65,plain,(
+  ! [X0] : ! [X1,X2,X3] : (p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X0,'type.num.num'),X3),s(fun(X0,'type.num.num'),X2)))))) => p(s(bool,'const.bag.BAG_IN_2'(s(X0,X1),s(fun(X0,'type.num.num'),X3)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X10,X9,X8] : (p(s(bool,'const.bag.BAG_IN_2'(s(X6,X10),s(fun(X6,'type.num.num'),'const.bag.BAG_DIFF_2'(s(fun(X6,'type.num.num'),X8),s(fun(X6,'type.num.num'),X9)))))) => p(s(bool,'const.bag.BAG_IN_2'(s(X6,X10),s(fun(X6,'type.num.num'),X8)))))),
+  file('thm.okasaki_misc.BAG_EVERY_DIFF','thm.bag.BAG_IN_DIFF_E')).
+% SZS output end Proof for thm.okasaki_misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 390
+% Passive clauses: 864
+% Generated clauses: 7075
+% Final active clauses: 365
+% Final passive clauses: 369
+% Input formulas: 34
+% Initial clauses: 147
+% 
+% Duplicate literals: 229
+% Trivial inequalities: 27
+% Fw subsumption resolutions: 433
+% Fw demodulations: 567
+% Bw demodulations: 65
+% Condensations: 176
+% Global subsumptions: 3
+% 
+% Simple tautologies: 65
+% Equational tautologies: 287
+% Forward subsumptions: 4120
+% Bw demodulations to eq. taut.: 1
+% 
+% Unit resulting resolution: 3724
+% Forward superposition: 789
+% Backward superposition: 766
+% Self superposition: 24
+% Equality factoring: 28
+% Equality resolution: 3
+% 
+% Split clauses: 64
+% Split components: 133
+% SAT solver clauses: 1230
+% SAT solver unit clauses: 523
+% SAT solver binary clauses: 287
+% 
+% Sat splits: 64
+% Sat splitting refutations: 233
+% 
+% Memory used [KB]: 3454
+% Time elapsed: 0.149 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.49 s

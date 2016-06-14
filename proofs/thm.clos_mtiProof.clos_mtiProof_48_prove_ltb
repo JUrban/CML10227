@@ -1,0 +1,129 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.clos_mtiProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_mtiProof
+% SZS output start Proof for thm.clos_mtiProof
+fof(f1215,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f1214,f105])).
+fof(f105,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1)),
+  inference(cnf_transformation,[],[f80])).
+fof(f80,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) & s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f66])).
+fof(f66,plain,(
+  ? [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1) & s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))))),
+  inference(ennf_transformation,[],[f31])).
+fof(f31,plain,(
+  ~! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1) => s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ~! [X0] : ! [X1] : (~s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) => ~s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (~s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7) => ~s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (~s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7) => ~s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))))),
+  file('thm.clos_mtiProof.clos_mtiProof_48_prove_ltb','thm.clos_mtiProof.clos_mtiProof_48_prove_ltb')).
+fof(f1214,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1)),
+  inference(trivial_inequality_removal,[],[f1211])).
+fof(f1211,plain,(
+  s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.|48|_0') | s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1)),
+  inference(superposition,[],[f1206,f106])).
+fof(f106,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1)))),
+  inference(cnf_transformation,[],[f80])).
+fof(f1206,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(superposition,[],[f142,f282])).
+fof(f282,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.num.SUC_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),sK3(X1,X0)))))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(superposition,[],[f144,f143])).
+fof(f143,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK2(X1,X0)),s('type.list.list'(X0),sK3(X1,X0)))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(cnf_transformation,[],[f98])).
+fof(f98,plain,(
+  ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK2(X1,X0)),s('type.list.list'(X0),sK3(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3])],[f54])).
+fof(f54,plain,(
+  ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | ? [X2,X3] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))),
+  inference(flattening,[],[f53])).
+fof(f53,plain,(
+  ! [X0] : ! [X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | ? [X2,X3] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6] : ! [X17] : (s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X17) | ? [X16,X10] : s('type.list.list'(X6),X17) = s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X16),s('type.list.list'(X6),X10))))),
+  file('thm.clos_mtiProof.clos_mtiProof_48_prove_ltb','thm.list.list_CASES')).
+fof(f144,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num','const.num.SUC_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X1),s('type.list.list'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f56])).
+fof(f56,plain,(
+  ! [X0,X1,X2] : s('type.num.num','const.num.SUC_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X1),s('type.list.list'(X0),X2)))))),
+  inference(flattening,[],[f55])).
+fof(f55,plain,(
+  ! [X0] : ! [X1,X2] : s('type.num.num','const.num.SUC_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X1),s('type.list.list'(X0),X2)))))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6] : ! [X16,X10] : s('type.num.num','const.num.SUC_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X10))))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X16),s('type.list.list'(X6),X10)))))),
+  file('thm.clos_mtiProof.clos_mtiProof_48_prove_ltb','thm.list.LENGTH|split|1')).
+fof(f142,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.SUC_1'(s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.SUC_1'(s('type.num.num',X0)))),
+  inference(flattening,[],[f51])).
+fof(f51,plain,(
+  ! [X0] : ~s('type.num.num','const.num.|48|_0') = s('type.num.num','const.num.SUC_1'(s('type.num.num',X0)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X20] : ~s('type.num.num','const.num.|48|_0') = s('type.num.num','const.num.SUC_1'(s('type.num.num',X20)))),
+  file('thm.clos_mtiProof.clos_mtiProof_48_prove_ltb','thm.num.NOT_SUC')).
+% SZS output end Proof for thm.clos_mtiProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 36
+% Passive clauses: 201
+% Generated clauses: 1051
+% Final active clauses: 36
+% Final passive clauses: 142
+% Input formulas: 28
+% Initial clauses: 62
+% 
+% Duplicate literals: 97
+% Trivial inequalities: 31
+% Fw subsumption resolutions: 151
+% 
+% Simple tautologies: 88
+% Equational tautologies: 28
+% Forward subsumptions: 416
+% 
+% Binary resolution: 48
+% Factoring: 1
+% Forward superposition: 226
+% Backward superposition: 323
+% Self superposition: 43
+% Equality factoring: 50
+% Equality resolution: 9
+% 
+% Split clauses: 44
+% Split components: 92
+% SAT solver clauses: 60
+% SAT solver unit clauses: 7
+% SAT solver binary clauses: 33
+% 
+% Sat splits: 44
+% 
+% TWLsolver clauses: 60
+% TWLsolver calls for satisfiability: 17
+% 
+% Memory used [KB]: 1023
+% Time elapsed: 0.030 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.025 s

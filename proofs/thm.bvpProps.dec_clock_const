@@ -1,0 +1,105 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpProps
+% SZS output start Proof for thm.bvpProps
+fof(f4680,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f4678])).
+fof(f4678,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1)))),
+  inference(superposition,[],[f270,f4583])).
+fof(f4583,plain,(
+  ( ! [X6,X7] : (s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X6),X7)))))) )),
+  inference(superposition,[],[f295,f276])).
+fof(f276,plain,(
+  ( ! [X0,X1] : (s('type.bvpSem.state'(X0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X0),X1))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvpSem.state_clock_1'(s('type.bvpSem.state'(X0),X1))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.bvpSem.state'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f98])).
+fof(f98,plain,(
+  ! [X0,X1] : s('type.bvpSem.state'(X0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X0),X1))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvpSem.state_clock_1'(s('type.bvpSem.state'(X0),X1))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.bvpSem.state'(X0),X1)))),
+  inference(flattening,[],[f97])).
+fof(f97,plain,(
+  ! [X0] : ! [X1] : s('type.bvpSem.state'(X0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X0),X1))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvpSem.state_clock_1'(s('type.bvpSem.state'(X0),X1))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.bvpSem.state'(X0),X1)))),
+  inference(rectify,[],[f90])).
+fof(f90,axiom,(
+  ! [X9] : ! [X7] : s('type.bvpSem.state'(X9),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X9),X7))) = s('type.bvpSem.state'(X9),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvpSem.state_clock_1'(s('type.bvpSem.state'(X9),X7))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.bvpSem.state'(X9),X7)))),
+  file('thm.bvpProps.dec_clock_const','thm.bvpSem.dec_clock_def')).
+fof(f295,plain,(
+  ( ! [X2,X0,X1] : (s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f134])).
+fof(f134,plain,(
+  ! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f133])).
+fof(f133,plain,(
+  ! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f70])).
+fof(f70,axiom,(
+  ! [X9] : ! [X7,X10] : s('type.ffi.ffi_state'(X9),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X9),X7))) = s('type.ffi.ffi_state'(X9),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X9),'const.bvpSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X10),s('type.bvpSem.state'(X9),X7)))))),
+  file('thm.bvpProps.dec_clock_const','thm.bvpSem.bvpSem_|49||48|2_prove_ltb')).
+fof(f270,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f267])).
+fof(f267,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f265])).
+fof(f265,plain,(
+  ? [X0,X1] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) != s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X0),X1)))))),
+  inference(ennf_transformation,[],[f93])).
+fof(f93,plain,(
+  ~! [X0,X1] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f92])).
+fof(f92,plain,(
+  ~! [X0] : ! [X1] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.dec_clock_1'(s('type.bvpSem.state'(X6),X7)))))),
+  file('thm.bvpProps.dec_clock_const','thm.bvpProps.dec_clock_const')).
+% SZS output end Proof for thm.bvpProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 111
+% Passive clauses: 665
+% Generated clauses: 4238
+% Final active clauses: 109
+% Final passive clauses: 520
+% Input formulas: 90
+% Initial clauses: 91
+% 
+% Duplicate literals: 432
+% Trivial inequalities: 62
+% Fw subsumption resolutions: 401
+% 
+% Simple tautologies: 132
+% Equational tautologies: 90
+% Forward subsumptions: 1807
+% 
+% Binary resolution: 16
+% Forward superposition: 1415
+% Backward superposition: 1268
+% Self superposition: 280
+% Equality factoring: 246
+% Equality resolution: 5
+% 
+% Split clauses: 177
+% Split components: 356
+% SAT solver clauses: 680
+% SAT solver unit clauses: 227
+% SAT solver binary clauses: 234
+% 
+% Sat splits: 177
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 678
+% TWLsolver calls for satisfiability: 25
+% 
+% Memory used [KB]: 2686
+% Time elapsed: 0.142 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.151 s

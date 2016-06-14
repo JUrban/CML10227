@@ -1,0 +1,171 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.typeSoundInvariants
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.typeSoundInvariants
+% SZS output start Proof for thm.typeSoundInvariants
+fof(f3878,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3877,f64,f92,f90,f3856,f63,f91,f89])).
+fof(f89,plain,(
+  s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1))) | $spl0),
+  inference(cnf_transformation,[],[f89_D])).
+fof(f89_D,plain,(
+  s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f91,plain,(
+  s('type.ast.t',sK0) = s('type.ast.t',sK1) | $spl2),
+  inference(cnf_transformation,[],[f91_D])).
+fof(f91_D,plain,(
+  s('type.ast.t',sK0) = s('type.ast.t',sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f63,plain,(
+  s('type.ast.t',sK0) = s('type.ast.t',sK1) | s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1)))),
+  inference(cnf_transformation,[],[f59])).
+fof(f59,plain,(
+  (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1))) | s('type.ast.t',sK0) = s('type.ast.t',sK1)) & (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) != s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1))) | s('type.ast.t',sK0) != s('type.ast.t',sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f58])).
+fof(f58,plain,(
+  ? [X0,X1] : ((s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))) | s('type.ast.t',X0) = s('type.ast.t',X1)) & (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X0))) != s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))) | s('type.ast.t',X0) != s('type.ast.t',X1)))),
+  inference(nnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ? [X0,X1] : (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))) <~> s('type.ast.t',X0) = s('type.ast.t',X1))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1] : (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X0))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))) <=> s('type.ast.t',X0) = s('type.ast.t',X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X6))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X7))) <=> s('type.ast.t',X6) = s('type.ast.t',X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X6))) = s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X7))) <=> s('type.ast.t',X6) = s('type.ast.t',X7))),
+  file('thm.typeSoundInvariants.store_t_|49||49||split|0','thm.typeSoundInvariants.store_t_|49||49||split|0')).
+fof(f3856,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f3855,f92])).
+fof(f3855,plain,(
+  s('type.ast.t',sK0) = s('type.ast.t',sK1) | $spl0),
+  inference(forward_demodulation,[],[f3834,f73])).
+fof(f73,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X9] : ! [X6,X10] : s(X9,X6) = s(X9,'const.ind_type.FCONS_3'(s(X9,X6),s(fun('type.num.num',X9),X10),s('type.num.num','const.num.|48|_0')))),
+  file('thm.typeSoundInvariants.store_t_|49||49||split|0','thm.ind_type.FCONS|split|0')).
+fof(f3834,plain,(
+  ( ! [X2] : (s('type.ast.t',sK1) = s('type.ast.t','const.ind_type.FCONS_3'(s('type.ast.t',sK0),s(fun('type.num.num','type.ast.t'),X2),s('type.num.num','const.num.|48|_0')))) ) | $spl0),
+  inference(superposition,[],[f3331,f73])).
+fof(f3331,plain,(
+  ( ! [X0,X1] : (s('type.ast.t','const.ind_type.FCONS_3'(s('type.ast.t',sK0),s(fun('type.num.num','type.ast.t'),X0),s('type.num.num',X1))) = s('type.ast.t','const.ind_type.FCONS_3'(s('type.ast.t',sK1),s(fun('type.num.num','type.ast.t'),X0),s('type.num.num',X1)))) ) | $spl0),
+  inference(forward_demodulation,[],[f3218,f79])).
+fof(f79,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X9] : ! [X8,X25,X26] : s(X9,'const.ind_type.FCONS_3'(s(X9,X8),s(fun('type.num.num',X9),X25),s('type.num.num',X26))) = s(X9,happ(s(fun('type.num.num',X9),happ(s(fun(fun('type.num.num',X9),fun('type.num.num',X9)),happ(s(fun(X9,fun(fun('type.num.num',X9),fun('type.num.num',X9))),'const.ind_type.FCONS_0'),s(X9,X8))),s(fun('type.num.num',X9),X25))),s('type.num.num',X26)))),
+  file('thm.typeSoundInvariants.store_t_|49||49||split|0','ARITY_0_3_const.ind_type.FCONS')).
+fof(f3218,plain,(
+  ( ! [X0,X1] : (s('type.ast.t','const.ind_type.FCONS_3'(s('type.ast.t',sK1),s(fun('type.num.num','type.ast.t'),X0),s('type.num.num',X1))) = s('type.ast.t',happ(s(fun('type.num.num','type.ast.t'),happ(s(fun(fun('type.num.num','type.ast.t'),fun('type.num.num','type.ast.t')),happ(s(fun('type.ast.t',fun(fun('type.num.num','type.ast.t'),fun('type.num.num','type.ast.t'))),'const.ind_type.FCONS_0'),s('type.ast.t',sK0))),s(fun('type.num.num','type.ast.t'),X0))),s('type.num.num',X1)))) ) | $spl0),
+  inference(superposition,[],[f79,f1534])).
+fof(f1534,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.ast.t',X0),X1),s('type.ast.t',sK0))) = s(X0,happ(s(fun('type.ast.t',X0),X1),s('type.ast.t',sK1)))) ) | $spl0),
+  inference(forward_demodulation,[],[f1442,f80])).
+fof(f80,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ast.t',X0),X2),s('type.ast.t',X1))) = s(X0,'const.typeSoundInvariants.store_t_CASE_4'(s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))),s(fun('type.ast.t',X0),X2),s(X0,X3),s(fun('type.ast.t',X0),X4)))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,happ(s(fun('type.ast.t',X0),X2),s('type.ast.t',X1))) = s(X0,'const.typeSoundInvariants.store_t_CASE_4'(s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))),s(fun('type.ast.t',X0),X2),s(X0,X3),s(fun('type.ast.t',X0),X4)))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : ! [X1,X2,X3,X4] : s(X0,happ(s(fun('type.ast.t',X0),X2),s('type.ast.t',X1))) = s(X0,'const.typeSoundInvariants.store_t_CASE_4'(s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X1))),s(fun('type.ast.t',X0),X2),s(X0,X3),s(fun('type.ast.t',X0),X4)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X9] : ! [X6,X10,X11,X12] : s(X9,happ(s(fun('type.ast.t',X9),X10),s('type.ast.t',X6))) = s(X9,'const.typeSoundInvariants.store_t_CASE_4'(s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',X6))),s(fun('type.ast.t',X9),X10),s(X9,X11),s(fun('type.ast.t',X9),X12)))),
+  file('thm.typeSoundInvariants.store_t_|49||49||split|0','thm.typeSoundInvariants.store_t_case_def|split|0')).
+fof(f1442,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ast.t',X0),X1),s('type.ast.t',sK1))) = s(X0,'const.typeSoundInvariants.store_t_CASE_4'(s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))),s(fun('type.ast.t',X0),X1),s(X0,X2),s(fun('type.ast.t',X0),X3)))) ) | $spl0),
+  inference(superposition,[],[f80,f89])).
+fof(f90,plain,(
+  s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) != s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1))) | $spl1),
+  inference(cnf_transformation,[],[f90_D])).
+fof(f90_D,plain,(
+  s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) != s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f92,plain,(
+  s('type.ast.t',sK0) != s('type.ast.t',sK1) | $spl3),
+  inference(cnf_transformation,[],[f92_D])).
+fof(f92_D,plain,(
+  s('type.ast.t',sK0) != s('type.ast.t',sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f64,plain,(
+  s('type.ast.t',sK0) != s('type.ast.t',sK1) | s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) != s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK1)))),
+  inference(cnf_transformation,[],[f59])).
+fof(f3877,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f3876])).
+fof(f3876,plain,(
+  s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) != s('type.typeSoundInvariants.store_t','const.typeSoundInvariants.Ref_t_1'(s('type.ast.t',sK0))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f90,f91])).
+% SZS output end Proof for thm.typeSoundInvariants
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 57
+% Passive clauses: 963
+% Generated clauses: 3719
+% Final active clauses: 48
+% Final passive clauses: 782
+% Input formulas: 21
+% Initial clauses: 26
+% 
+% Duplicate literals: 198
+% Trivial inequalities: 36
+% Fw subsumption resolutions: 341
+% Fw demodulations: 139
+% Bw demodulations: 1
+% 
+% Simple tautologies: 72
+% Equational tautologies: 38
+% Forward subsumptions: 1807
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 91
+% Factoring: 1
+% Forward superposition: 1358
+% Backward superposition: 1247
+% Self superposition: 136
+% Equality factoring: 94
+% Equality resolution: 6
+% 
+% Split clauses: 92
+% Split components: 184
+% SAT solver clauses: 196
+% SAT solver unit clauses: 10
+% SAT solver binary clauses: 44
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 92
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 194
+% TWLsolver calls for satisfiability: 75
+% 
+% Memory used [KB]: 5245
+% Time elapsed: 0.135 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.139 s

@@ -1,0 +1,492 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvlSem
+% (105784)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 216
+% Passive clauses: 4477
+% Generated clauses: 24318
+% Final active clauses: 198
+% Final passive clauses: 4005
+% Input formulas: 132
+% Initial clauses: 232
+% 
+% Duplicate literals: 608
+% Trivial inequalities: 533
+% Fw subsumption resolutions: 2130
+% Fw demodulations: 3833
+% Bw demodulations: 18
+% 
+% Simple tautologies: 382
+% Equational tautologies: 50
+% Forward subsumptions: 11586
+% 
+% Binary resolution: 815
+% Factoring: 1
+% Forward superposition: 8353
+% Backward superposition: 7421
+% Self superposition: 136
+% Equality factoring: 68
+% Equality resolution: 44
+% 
+% Split clauses: 352
+% Split components: 722
+% SAT solver clauses: 968
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 233
+% 
+% Sat splits: 352
+% 
+% TWLsolver clauses: 968
+% TWLsolver calls for satisfiability: 245
+% 
+% Memory used [KB]: 19573
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvlSem
+% (105824)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 197
+% Passive clauses: 1265
+% Generated clauses: 20194
+% Final active clauses: 192
+% Final passive clauses: 1042
+% Input formulas: 132
+% Initial clauses: 232
+% 
+% Duplicate literals: 10
+% Trivial inequalities: 466
+% Fw subsumption resolutions: 807
+% Fw demodulations: 7323
+% Bw demodulations: 30
+% Condensations: 26
+% Global subsumptions: 17
+% 
+% Simple tautologies: 81
+% Equational tautologies: 17
+% Forward subsumptions: 7625
+% Fw demodulations to eq. taut.: 131
+% 
+% Binary resolution: 210
+% Factoring: 1
+% Forward superposition: 5210
+% Backward superposition: 4434
+% Self superposition: 76
+% Equality factoring: 4
+% Equality resolution: 67
+% 
+% Split clauses: 27
+% Split components: 54
+% SAT solver clauses: 2369
+% SAT solver unit clauses: 297
+% SAT solver binary clauses: 72
+% SAT solver learnt clauses: 34
+% 
+% Sat splits: 27
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2301
+% TWLsolver calls for satisfiability: 816
+% 
+% Memory used [KB]: 26609
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.bvlSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvlSem
+% SZS output start Proof for thm.bvlSem
+fof(f124815,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f124814,f449])).
+fof(f449,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f18])).
+fof(f18,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bool.TRUTH')).
+fof(f124814,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f124813,f123375])).
+fof(f123375,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.integer.int',bool),X0),s('type.integer.int',sK1)))) )),
+  inference(unit_resulting_resolution,[],[f123002,f21715])).
+fof(f21715,plain,(
+  ( ! [X19] : (s(bool,X19) != s(bool,happ(s(fun('type.num.num',bool),sK8('_dstsel_0_x0_1'(s('type.num.num',sK0)),fun('type.num.num',bool))),s('type.num.num',sK0))) | s(bool,'T_0') = s(bool,X19)) )),
+  inference(subsumption_resolution,[],[f21637,f449])).
+fof(f21637,plain,(
+  ( ! [X19] : (~p(s(bool,'T_0')) | s(bool,X19) != s(bool,happ(s(fun('type.num.num',bool),sK8('_dstsel_0_x0_1'(s('type.num.num',sK0)),fun('type.num.num',bool))),s('type.num.num',sK0))) | s(bool,'T_0') = s(bool,X19)) )),
+  inference(superposition,[],[f736,f21501])).
+fof(f21501,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.num.num',bool),sK8('_dstsel_0_x0_1'(s('type.num.num',sK0)),fun('type.num.num',bool))),s('type.num.num',sK0)))),
+  inference(unit_resulting_resolution,[],[f449,f21419,f563])).
+fof(f563,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f347])).
+fof(f347,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f346])).
+fof(f346,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f221])).
+fof(f221,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X19,X20] : ((p(s(bool,X19)) => p(s(bool,X20))) => ((p(s(bool,X20)) => p(s(bool,X19))) => s(bool,X19) = s(bool,X20)))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bool.IMP_ANTISYM_AX')).
+fof(f21419,plain,(
+  p(s(bool,happ(s(fun('type.num.num',bool),sK8('_dstsel_0_x0_1'(s('type.num.num',sK0)),fun('type.num.num',bool))),s('type.num.num',sK0))))),
+  inference(forward_demodulation,[],[f21321,f600])).
+fof(f600,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun(X1,X0),X3),s(X1,X2))) = s(X0,happ(s(fun(fun(X1,X0),X0),'_dstsel_0_x0_1'(s(X1,X2))),s(fun(X1,X0),X3)))) )),
+  inference(cnf_transformation,[],[f256])).
+fof(f256,plain,(
+  ! [X0,X1,X2,X3] : s(X0,happ(s(fun(X1,X0),X3),s(X1,X2))) = s(X0,happ(s(fun(fun(X1,X0),X0),'_dstsel_0_x0_1'(s(X1,X2))),s(fun(X1,X0),X3)))),
+  inference(flattening,[],[f255])).
+fof(f255,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,happ(s(fun(X1,X0),X3),s(X1,X2))) = s(X0,happ(s(fun(fun(X1,X0),X0),'_dstsel_0_x0_1'(s(X1,X2))),s(fun(X1,X0),X3)))),
+  inference(rectify,[],[f99])).
+fof(f99,axiom,(
+  ! [X21,X23] : ! [X25,X26] : s(X21,happ(s(fun(X23,X21),X26),s(X23,X25))) = s(X21,happ(s(fun(fun(X23,X21),X21),'_dstsel_0_x0_1'(s(X23,X25))),s(fun(X23,X21),X26)))),
+  file('thm.bvlSem.v_distinct|split|3','_dstsel_0_x0_ax')).
+fof(f21321,plain,(
+  p(s(bool,happ(s(fun(fun('type.num.num',bool),bool),'_dstsel_0_x0_1'(s('type.num.num',sK0))),s(fun('type.num.num',bool),sK8('_dstsel_0_x0_1'(s('type.num.num',sK0)),fun('type.num.num',bool))))))),
+  inference(unit_resulting_resolution,[],[f20990,f572])).
+fof(f572,plain,(
+  ( ! [X0,X1] : (~p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK8(X1,X0)))))) )),
+  inference(cnf_transformation,[],[f417])).
+fof(f417,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK8(X1,X0)))))) & (! [X2] : ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK8])],[f416])).
+fof(f416,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1)))) | ? [X3] : p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) & (! [X2] : ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1))))))),
+  inference(rectify,[],[f415])).
+fof(f415,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1)))) | ? [X2] : p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (! [X2] : ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1))))))),
+  inference(nnf_transformation,[],[f226])).
+fof(f226,plain,(
+  ! [X0,X1] : (p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1)))) <=> ? [X2] : p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(rectify,[],[f112])).
+fof(f112,axiom,(
+  ! [X61,X66] : (p(s(bool,happ(s(fun(fun(X61,bool),bool),'?_1'),s(fun(X61,bool),X66)))) <=> ? [X62] : p(s(bool,happ(s(fun(X61,bool),X66),s(X61,X62)))))),
+  file('thm.bvlSem.v_distinct|split|3','?_HL_QUANT')).
+fof(f20990,plain,(
+  p(s(bool,happ(s(fun(fun(fun('type.num.num',bool),bool),bool),'?_1'),s(fun(fun('type.num.num',bool),bool),'_dstsel_0_x0_1'(s('type.num.num',sK0))))))),
+  inference(subsumption_resolution,[],[f20900,f449])).
+fof(f20900,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,happ(s(fun(fun(fun('type.num.num',bool),bool),bool),'?_1'),s(fun(fun('type.num.num',bool),bool),'_dstsel_0_x0_1'(s('type.num.num',sK0))))))),
+  inference(superposition,[],[f573,f17881])).
+fof(f17881,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(fun('type.num.num',bool),bool),'_dstsel_0_x0_1'(s('type.num.num',sK0))),s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0)))))),
+  inference(unit_resulting_resolution,[],[f600,f10022])).
+fof(f10022,plain,(
+  ( ! [X15] : (s(bool,X15) != s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0))),s('type.num.num',sK0))) | s(bool,'T_0') = s(bool,X15)) )),
+  inference(subsumption_resolution,[],[f9959,f449])).
+fof(f9959,plain,(
+  ( ! [X15] : (~p(s(bool,'T_0')) | s(bool,X15) != s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0))),s('type.num.num',sK0))) | s(bool,'T_0') = s(bool,X15)) )),
+  inference(superposition,[],[f736,f9872])).
+fof(f9872,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0))),s('type.num.num',sK0)))),
+  inference(unit_resulting_resolution,[],[f713,f9612,f6366])).
+fof(f6366,plain,(
+  ( ! [X10,X11] : (~p(s(bool,X11)) | s(bool,X10) = s(bool,X11) | s(bool,'F_0') = s(bool,X10)) )),
+  inference(forward_demodulation,[],[f6365,f528])).
+fof(f528,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f179])).
+fof(f179,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f178])).
+fof(f178,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X23] : ! [X25] : s(X23,X25) = s(X23,happ(s(fun(X23,X23),'_i_0_0'),s(X23,X25)))),
+  file('thm.bvlSem.v_distinct|split|3','_i0_ax')).
+fof(f6365,plain,(
+  ( ! [X10,X11] : (~p(s(bool,X11)) | s(bool,X11) = s(bool,happ(s(fun(bool,bool),'_i_0_0'),s(bool,X10))) | s(bool,'F_0') = s(bool,X10)) )),
+  inference(subsumption_resolution,[],[f6313,f449])).
+fof(f6313,plain,(
+  ( ! [X10,X11] : (~p(s(bool,'T_0')) | ~p(s(bool,X11)) | s(bool,X11) = s(bool,happ(s(fun(bool,bool),'_i_0_0'),s(bool,X10))) | s(bool,'F_0') = s(bool,X10)) )),
+  inference(superposition,[],[f563,f767])).
+fof(f767,plain,(
+  ( ! [X2] : (s(bool,'T_0') = s(bool,happ(s(fun(bool,bool),'_i_0_0'),s(bool,X2))) | s(bool,'F_0') = s(bool,X2)) )),
+  inference(superposition,[],[f528,f468])).
+fof(f468,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvlSem.v_distinct|split|3',aHL_BOOL_CASES)).
+fof(f9612,plain,(
+  p(s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0))),s('type.num.num',sK0))))),
+  inference(forward_demodulation,[],[f9611,f627])).
+fof(f627,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))) )),
+  inference(cnf_transformation,[],[f278])).
+fof(f278,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))),
+  inference(flattening,[],[f277])).
+fof(f277,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))),
+  inference(rectify,[],[f111])).
+fof(f111,axiom,(
+  ! [X21,X23,X22] : ! [X24,X25,X26] : s(X21,happ(s(fun(X22,X21),happ(s(fun(X23,fun(X22,X21)),X24),s(X23,X26))),s(X22,X25))) = s(X21,happ(s(fun(X23,X21),'_dst_x1x0_2'(s(fun(X23,fun(X22,X21)),X24),s(X22,X25))),s(X23,X26)))),
+  file('thm.bvlSem.v_distinct|split|3','_dst_x1x0_ax')).
+fof(f9611,plain,(
+  p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x1x0_2'(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0))),s('type.num.num',sK0))))),
+  inference(forward_demodulation,[],[f9610,f8901])).
+fof(f8901,plain,(
+  ( ! [X0] : (s('type.num.num',sK0) = s('type.num.num','const.ind_type.FCONS_3'(s('type.num.num',X0),s(fun('type.num.num','type.num.num'),'_i_0_0'),s('type.num.num','const.num.SUC_1'(s('type.num.num',sK0)))))) )),
+  inference(unit_resulting_resolution,[],[f448,f8867])).
+fof(f8867,plain,(
+  ( ! [X0,X1] : (s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',sK1))) != s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0))) | s('type.num.num',sK0) = s('type.num.num','const.ind_type.FCONS_3'(s('type.num.num',X1),s(fun('type.num.num','type.num.num'),'_i_0_0'),s('type.num.num','const.num.SUC_1'(s('type.num.num',X0)))))) )),
+  inference(superposition,[],[f8730,f528])).
+fof(f8730,plain,(
+  ( ! [X385,X387,X386] : (s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',sK1))) != s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X386),s('type.num.num',X387))))) | s('type.num.num',sK0) = s('type.num.num','const.ind_type.FCONS_3'(s('type.num.num',X385),s(fun('type.num.num','type.num.num'),X386),s('type.num.num','const.num.SUC_1'(s('type.num.num',X387)))))) )),
+  inference(superposition,[],[f1506,f544])).
+fof(f544,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.SUC_1'(s('type.num.num',X3)))))) )),
+  inference(cnf_transformation,[],[f198])).
+fof(f198,plain,(
+  ! [X0,X1,X2,X3] : s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.SUC_1'(s('type.num.num',X3)))))),
+  inference(flattening,[],[f197])).
+fof(f197,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.SUC_1'(s('type.num.num',X3)))))),
+  inference(rectify,[],[f45])).
+fof(f45,axiom,(
+  ! [X9] : ! [X7,X10,X35] : s(X9,happ(s(fun('type.num.num',X9),X10),s('type.num.num',X35))) = s(X9,'const.ind_type.FCONS_3'(s(X9,X7),s(fun('type.num.num',X9),X10),s('type.num.num','const.num.SUC_1'(s('type.num.num',X35)))))),
+  file('thm.bvlSem.v_distinct|split|3','thm.ind_type.FCONS|split|1')).
+fof(f1506,plain,(
+  ( ! [X0] : (s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',sK1))) != s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0))) | s('type.num.num',sK0) = s('type.num.num',X0)) )),
+  inference(superposition,[],[f564,f448])).
+fof(f564,plain,(
+  ( ! [X0,X1] : (s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0))) != s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1))) | s('type.num.num',X0) = s('type.num.num',X1)) )),
+  inference(cnf_transformation,[],[f409])).
+fof(f409,plain,(
+  ! [X0,X1] : ((s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0))) != s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1))) | s('type.num.num',X0) = s('type.num.num',X1)) & (s('type.num.num',X0) != s('type.num.num',X1) | s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1)))))),
+  inference(nnf_transformation,[],[f222])).
+fof(f222,plain,(
+  ! [X0,X1] : (s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1))) <=> s('type.num.num',X0) = s('type.num.num',X1))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X7,X6] : (s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X6))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X7))) <=> s('type.num.num',X6) = s('type.num.num',X7))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bvlSem.v_|49||49||split|4')).
+fof(f448,plain,(
+  s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',sK1))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',sK0)))),
+  inference(cnf_transformation,[],[f362])).
+fof(f362,plain,(
+  s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',sK1))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',sK0)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f332])).
+fof(f332,plain,(
+  ? [X0,X1] : s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X1))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0)))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1] : s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X1))) != s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0)))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1] : ~s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X1))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X0)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ~s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X7))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X6)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ~s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X7))) = s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X6)))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bvlSem.v_distinct|split|3')).
+fof(f9610,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x1x0_2'(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num',sK0))),s('type.num.num','const.ind_type.FCONS_3'(s('type.num.num',X0),s(fun('type.num.num','type.num.num'),'_i_0_0'),s('type.num.num','const.num.SUC_1'(s('type.num.num',sK0))))))))) )),
+  inference(forward_demodulation,[],[f9479,f627])).
+fof(f9479,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'=_0'),s('type.num.num','const.ind_type.FCONS_3'(s('type.num.num',X0),s(fun('type.num.num','type.num.num'),'_i_0_0'),s('type.num.num','const.num.SUC_1'(s('type.num.num',sK0))))))),s('type.num.num',sK0))))) )),
+  inference(unit_resulting_resolution,[],[f8901,f616])).
+fof(f616,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f440])).
+fof(f440,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f267])).
+fof(f267,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f93])).
+fof(f93,axiom,(
+  ! [X61,X62,X63] : (p(s(bool,happ(s(fun(X61,bool),happ(s(fun(X61,fun(X61,bool)),'=_0'),s(X61,X62))),s(X61,X63)))) <=> s(X61,X62) = s(X61,X63))),
+  file('thm.bvlSem.v_distinct|split|3',arity_0_HL_EQ)).
+fof(f713,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(unit_resulting_resolution,[],[f701,f472])).
+fof(f472,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f365])).
+fof(f365,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f152])).
+fof(f152,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f42])).
+fof(f42,axiom,(
+  ! [X17] : (s(bool,'T_0') = s(bool,X17) <=> p(s(bool,X17)))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bool.EQ_CLAUSES|split|1')).
+fof(f701,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f454,f449])).
+fof(f454,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f363])).
+fof(f363,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f81])).
+fof(f81,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bool.NOT_CLAUSES|split|1')).
+fof(f573,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | p(s(bool,happ(s(fun(fun(X0,bool),bool),'?_1'),s(fun(X0,bool),X1))))) )),
+  inference(cnf_transformation,[],[f417])).
+fof(f736,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | s(bool,X0) != s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f476,f468])).
+fof(f476,plain,(
+  ( ! [X0] : (s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f367])).
+fof(f367,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f155])).
+fof(f155,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f154])).
+fof(f154,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f41])).
+fof(f41,axiom,(
+  ! [X17] : (s(bool,'F_0') = s(bool,X17) <=> ~p(s(bool,X17)))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bool.EQ_CLAUSES|split|2')).
+fof(f123002,plain,(
+  ( ! [X0,X5,X1] : (s(X0,happ(s(fun('type.integer.int',X0),X1),s('type.integer.int',sK1))) = s(X0,happ(s(fun('type.num.num',X0),X5),s('type.num.num',sK0)))) )),
+  inference(superposition,[],[f48376,f547])).
+fof(f547,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.integer.int',X0),X2),s('type.integer.int',X1))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X6)))) )),
+  inference(cnf_transformation,[],[f204])).
+fof(f204,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.integer.int',X0),X2),s('type.integer.int',X1))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X6)))),
+  inference(flattening,[],[f203])).
+fof(f203,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.integer.int',X0),X2),s('type.integer.int',X1))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X6)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X9] : ! [X7,X10,X11,X12,X13,X14] : s(X9,happ(s(fun('type.integer.int',X9),X10),s('type.integer.int',X7))) = s(X9,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',X7))),s(fun('type.integer.int',X9),X10),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X9),X11),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X9)),X12),s(fun('type.num.num',X9),X13),s(fun('type.num.num',X9),X14)))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bvlSem.v_case_def|split|0')).
+fof(f48376,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X1),s('type.num.num',sK0))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.Number_1'(s('type.integer.int',sK1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X1)))) )),
+  inference(superposition,[],[f549,f448])).
+fof(f549,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X6),s('type.num.num',X1))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X6)))) )),
+  inference(cnf_transformation,[],[f208])).
+fof(f208,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.num.num',X0),X6),s('type.num.num',X1))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X6)))),
+  inference(flattening,[],[f207])).
+fof(f207,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.num.num',X0),X6),s('type.num.num',X1))) = s(X0,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X1))),s(fun('type.integer.int',X0),X2),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X0),X3),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X0)),X4),s(fun('type.num.num',X0),X5),s(fun('type.num.num',X0),X6)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X9] : ! [X7,X10,X11,X12,X13,X14] : s(X9,happ(s(fun('type.num.num',X9),X14),s('type.num.num',X7))) = s(X9,'const.bvlSem.v_CASE_6'(s('type.bvlSem.v','const.bvlSem.RefPtr_1'(s('type.num.num',X7))),s(fun('type.integer.int',X9),X10),s(fun('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))))),X9),X11),s(fun('type.num.num',fun('type.list.list'('type.bvlSem.v'),X9)),X12),s(fun('type.num.num',X9),X13),s(fun('type.num.num',X9),X14)))),
+  file('thm.bvlSem.v_distinct|split|3','thm.bvlSem.v_case_def|split|4')).
+fof(f124813,plain,(
+  ( ! [X373] : (~p(s(bool,happ(s(fun('type.integer.int',bool),X373),s('type.integer.int',sK1))))) )),
+  inference(subsumption_resolution,[],[f123972,f123752])).
+fof(f123752,plain,(
+  ( ! [X26,X24,X22] : (s(X22,X24) = s(X22,happ(s(fun('type.num.num',X22),X26),s('type.num.num',sK0)))) )),
+  inference(superposition,[],[f123002,f27243])).
+fof(f27243,plain,(
+  ( ! [X6,X4,X8,X7,X5,X9] : (s(X4,X6) = s(X4,happ(s(fun(X7,X4),'_dst_x0x1_2'(s(fun(X5,X4),'_dst_x0_1'(s(X4,X6))),s(fun(X7,X5),X8))),s(X7,X9)))) )),
+  inference(superposition,[],[f626,f596])).
+fof(f596,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f248])).
+fof(f248,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))),
+  inference(flattening,[],[f247])).
+fof(f247,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))),
+  inference(rectify,[],[f115])).
+fof(f115,axiom,(
+  ! [X23,X21] : ! [X24,X26] : s(X21,X24) = s(X21,happ(s(fun(X23,X21),'_dst_x0_1'(s(X21,X24))),s(X23,X26)))),
+  file('thm.bvlSem.v_distinct|split|3','_dst_x0_ax')).
+fof(f626,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5))))) = s(X0,happ(s(fun(X2,X0),'_dst_x0x1_2'(s(fun(X1,X0),X3),s(fun(X2,X1),X4))),s(X2,X5)))) )),
+  inference(cnf_transformation,[],[f276])).
+fof(f276,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5))))) = s(X0,happ(s(fun(X2,X0),'_dst_x0x1_2'(s(fun(X1,X0),X3),s(fun(X2,X1),X4))),s(X2,X5)))),
+  inference(flattening,[],[f275])).
+fof(f275,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5))))) = s(X0,happ(s(fun(X2,X0),'_dst_x0x1_2'(s(fun(X1,X0),X3),s(fun(X2,X1),X4))),s(X2,X5)))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X21,X22,X23] : ! [X24,X25,X26] : s(X21,happ(s(fun(X22,X21),X24),s(X22,happ(s(fun(X23,X22),X25),s(X23,X26))))) = s(X21,happ(s(fun(X23,X21),'_dst_x0x1_2'(s(fun(X22,X21),X24),s(fun(X23,X22),X25))),s(X23,X26)))),
+  file('thm.bvlSem.v_distinct|split|3','_dst_x0x1_ax')).
+fof(f123972,plain,(
+  ( ! [X374,X373] : (s(bool,'F_0') != s(bool,happ(s(fun('type.num.num',bool),X374),s('type.num.num',sK0))) | ~p(s(bool,happ(s(fun('type.integer.int',bool),X373),s('type.integer.int',sK1))))) )),
+  inference(superposition,[],[f476,f123002])).
+% SZS output end Proof for thm.bvlSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 564
+% Passive clauses: 7020
+% Generated clauses: 121342
+% Final active clauses: 423
+% Final passive clauses: 1863
+% Input formulas: 132
+% Initial clauses: 232
+% Discarded non-redundant clauses: 27324
+% 
+% Duplicate literals: 2273
+% Trivial inequalities: 247
+% Fw subsumption resolutions: 5572
+% Fw demodulations: 26814
+% Bw demodulations: 1553
+% Condensations: 3068
+% Global subsumptions: 102
+% 
+% Simple tautologies: 375
+% Equational tautologies: 501
+% Forward subsumptions: 68612
+% Fw demodulations to eq. taut.: 2386
+% Bw demodulations to eq. taut.: 25
+% 
+% Unit resulting resolution: 16183
+% Factoring: 5
+% Forward superposition: 35088
+% Backward superposition: 29277
+% Self superposition: 273
+% Equality factoring: 106
+% Equality resolution: 52
+% 
+% Split clauses: 73
+% Split components: 146
+% SAT solver clauses: 7812
+% SAT solver unit clauses: 1796
+% SAT solver binary clauses: 3326
+% 
+% Sat splits: 73
+% Sat splitting refutations: 542
+% 
+% Memory used [KB]: 96331
+% Time elapsed: 7.605 s
+% ------------------------------
+% ------------------------------
+% Success in time 8.95 s

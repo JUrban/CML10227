@@ -1,0 +1,238 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stackProps
+% (78033)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 276
+% Passive clauses: 3706
+% Generated clauses: 24594
+% Final active clauses: 235
+% Final passive clauses: 3101
+% Input formulas: 132
+% Initial clauses: 206
+% 
+% Duplicate literals: 498
+% Trivial inequalities: 193
+% Fw subsumption resolutions: 1836
+% Fw demodulations: 3640
+% Bw demodulations: 39
+% 
+% Simple tautologies: 301
+% Equational tautologies: 63
+% Forward subsumptions: 14173
+% Fw demodulations to eq. taut.: 30
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 734
+% Factoring: 3
+% Forward superposition: 10992
+% Backward superposition: 6605
+% Self superposition: 136
+% Equality factoring: 70
+% Equality resolution: 49
+% 
+% Split clauses: 155
+% Split components: 310
+% SAT solver clauses: 474
+% SAT solver unit clauses: 25
+% SAT solver binary clauses: 194
+% 
+% Sat splits: 155
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 472
+% TWLsolver calls for satisfiability: 135
+% 
+% Memory used [KB]: 14200
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stackProps
+% (78041)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 215
+% Passive clauses: 1213
+% Generated clauses: 17614
+% Final active clauses: 180
+% Final passive clauses: 769
+% Input formulas: 132
+% Initial clauses: 206
+% 
+% Duplicate literals: 442
+% Trivial inequalities: 133
+% Fw subsumption resolutions: 939
+% Fw demodulations: 2549
+% Bw demodulations: 254
+% Condensations: 589
+% Global subsumptions: 13
+% 
+% Simple tautologies: 243
+% Equational tautologies: 54
+% Forward subsumptions: 9679
+% Fw demodulations to eq. taut.: 17
+% Bw demodulations to eq. taut.: 6
+% 
+% Binary resolution: 288
+% Factoring: 3
+% Forward superposition: 6514
+% Backward superposition: 4725
+% Self superposition: 144
+% Equality factoring: 66
+% Equality resolution: 26
+% 
+% Split clauses: 21
+% Split components: 42
+% SAT solver clauses: 1942
+% SAT solver unit clauses: 313
+% SAT solver binary clauses: 103
+% SAT solver learnt clauses: 26
+% 
+% Sat splits: 21
+% Sat splitting refutations: 11
+% 
+% TWLsolver clauses: 1890
+% TWLsolver calls for satisfiability: 1728
+% 
+% Memory used [KB]: 17142
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.stackProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stackProps
+% SZS output start Proof for thm.stackProps
+fof(f99133,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f99123])).
+fof(f99123,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),sK2))) != s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),sK2)))),
+  inference(superposition,[],[f409,f37892])).
+fof(f37892,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.ffi.ffi_state'(X0),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X1,X0),X4))) = s('type.ffi.ffi_state'(X0),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X1,X0),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X1),X3),s('type.stackSem.state'(X1,X0),X4)))))) )),
+  inference(forward_demodulation,[],[f37752,f522])).
+fof(f522,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),X3),s('type.stackSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f237])).
+fof(f237,plain,(
+  ! [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f236])).
+fof(f236,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f48])).
+fof(f48,axiom,(
+  ! [X7,X11] : ! [X15,X20] : s('type.ffi.ffi_state'(X11),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X7,X11),X15))) = s('type.ffi.ffi_state'(X11),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X7,X11),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7))),X20),s('type.stackSem.state'(X7,X11),X15)))))),
+  file('thm.stackProps.set_store_const|split|0','thm.stackSem.stackSem_274_prove_ltb')).
+fof(f37752,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.ffi.ffi_state'(X0),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X1,X0),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X1),X3),s('type.stackSem.state'(X1,X0),X4))))) = s('type.ffi.ffi_state'(X0),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X1,X0),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X1))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X1)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X1)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X1,X0),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X1)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X1),X3))))))),s('type.stackSem.state'(X1,X0),X4)))))) )),
+  inference(unit_resulting_resolution,[],[f565,f543])).
+fof(f543,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.stackSem.state'(X0,X1),X2) != s('type.stackSem.state'(X0,X1),X3) | s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f406])).
+fof(f406,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.stackSem.state'(X0,X1),X2) != s('type.stackSem.state'(X0,X1),X3) | (s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X3))))) & (s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.stackSem.state'(X0,X1),X2) = s('type.stackSem.state'(X0,X1),X3)))),
+  inference(flattening,[],[f405])).
+fof(f405,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.stackSem.state'(X0,X1),X2) != s('type.stackSem.state'(X0,X1),X3) | (s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X3))))) & ((s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X3))) | s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3))) | s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X2))) != s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X3))) | s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X2))) != s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X3)))) | s('type.stackSem.state'(X0,X1),X2) = s('type.stackSem.state'(X0,X1),X3)))),
+  inference(nnf_transformation,[],[f253])).
+fof(f253,plain,(
+  ! [X0,X1,X2,X3] : (s('type.stackSem.state'(X0,X1),X2) = s('type.stackSem.state'(X0,X1),X3) <=> (s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X3)))))),
+  inference(flattening,[],[f252])).
+fof(f252,plain,(
+  ! [X0,X1] : ! [X2,X3] : (s('type.stackSem.state'(X0,X1),X2) = s('type.stackSem.state'(X0,X1),X3) <=> (s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.word_loc'(X0)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.list.list'('type.fcp.cart'(bool,X0)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.stackLang.prog'(X0)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X3))) & s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X2))) = s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X0,X1),X3))) & s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X2))) = s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X0,X1),X3)))))),
+  inference(rectify,[],[f49])).
+fof(f49,axiom,(
+  ! [X7,X11] : ! [X13,X12] : (s('type.stackSem.state'(X7,X11),X12) = s('type.stackSem.state'(X7,X11),X13) <=> (s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'const.stackSem.state_regs_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.list.list'('type.wordSem.word_loc'(X7)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.list.list'('type.wordSem.word_loc'(X7)),'const.stackSem.state_stack_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.num.num','const.stackSem.state_stack_space_1'(s('type.stackSem.state'(X7,X11),X13))) & s(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X7,X11),X12))) = s(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),'const.stackSem.state_memory_1'(s('type.stackSem.state'(X7,X11),X13))) & s(fun('type.fcp.cart'(bool,X7),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X7,X11),X12))) = s(fun('type.fcp.cart'(bool,X7),bool),'const.stackSem.state_mdomain_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.list.list'('type.fcp.cart'(bool,X7)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.list.list'('type.fcp.cart'(bool,X7)),'const.stackSem.state_bitmaps_1'(s('type.stackSem.state'(X7,X11),X13))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X7)),'type.pair.prod'(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),'type.pair.prod'(fun('type.fcp.cart'(bool,X7),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X7)),'type.pair.prod'(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X7,X11),X12))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X7)),'type.pair.prod'(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),'type.pair.prod'(fun('type.fcp.cart'(bool,X7),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X7)),'type.pair.prod'(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)))))),'const.stackSem.state_gc_fun_1'(s('type.stackSem.state'(X7,X11),X13))) & s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X7,X11),X12))) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X7,X11),X13))) & s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X7,X11),X12))) = s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X7,X11),X13))) & s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X7,X11),X12))) = s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.num.num','const.stackSem.state_clock_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.sptree.spt'('type.stackLang.prog'(X7)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.sptree.spt'('type.stackLang.prog'(X7)),'const.stackSem.state_code_1'(s('type.stackSem.state'(X7,X11),X13))) & s('type.ffi.ffi_state'(X11),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X7,X11),X12))) = s('type.ffi.ffi_state'(X11),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X7,X11),X13))) & s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X7,X11),X12))) = s(fun('type.num.num',bool),'const.stackSem.state_ffi_save_regs_1'(s('type.stackSem.state'(X7,X11),X13))) & s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X7,X11),X12))) = s(bool,'const.stackSem.state_be_1'(s('type.stackSem.state'(X7,X11),X13)))))),
+  file('thm.stackProps.set_store_const|split|0','thm.stackSem.state_component_equality')).
+fof(f565,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.stackSem.state'(X0,X1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.stackSem.state'(X0,X1),X4))) = s('type.stackSem.state'(X0,X1),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.stackSem.state'(X0,X1),X4)))) )),
+  inference(cnf_transformation,[],[f259])).
+fof(f259,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.stackSem.state'(X0,X1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.stackSem.state'(X0,X1),X4))) = s('type.stackSem.state'(X0,X1),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.stackSem.state'(X0,X1),X4)))),
+  inference(flattening,[],[f258])).
+fof(f258,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.stackSem.state'(X0,X1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.stackSem.state'(X0,X1),X4))) = s('type.stackSem.state'(X0,X1),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.stackSem.state'(X0,X1),X4)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X7,X11] : ! [X14,X10,X15] : s('type.stackSem.state'(X7,X11),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X14),s('type.wordSem.word_loc'(X7),X10),s('type.stackSem.state'(X7,X11),X15))) = s('type.stackSem.state'(X7,X11),'const.stackSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'const.stackSem.state_store_1'(s('type.stackSem.state'(X7,X11),X15))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X7)),'const.pair.,_2'(s('type.wordLang.store_name',X14),s('type.wordSem.word_loc'(X7),X10))))))),s('type.stackSem.state'(X7,X11),X15)))),
+  file('thm.stackProps.set_store_const|split|0','thm.stackSem.set_store_def')).
+fof(f409,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),sK2))) != s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',sK4),s('type.wordSem.word_loc'(sK0),sK3),s('type.stackSem.state'(sK0,sK1),sK2)))))),
+  inference(cnf_transformation,[],[f364])).
+fof(f364,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),sK2))) != s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',sK4),s('type.wordSem.word_loc'(sK0),sK3),s('type.stackSem.state'(sK0,sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f355])).
+fof(f355,plain,(
+  ? [X0,X1,X2,X3,X4] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X4),s('type.wordSem.word_loc'(X0),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X4),s('type.wordSem.word_loc'(X0),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X4),s('type.wordSem.word_loc'(X0),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),X8))) = s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X10),s('type.wordSem.word_loc'(X6),X9),s('type.stackSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),X8))) = s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),'const.stackSem.set_store_3'(s('type.wordLang.store_name',X10),s('type.wordSem.word_loc'(X6),X9),s('type.stackSem.state'(X6,X7),X8)))))),
+  file('thm.stackProps.set_store_const|split|0','thm.stackProps.set_store_const|split|0')).
+% SZS output end Proof for thm.stackProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 482
+% Passive clauses: 5935
+% Generated clauses: 98603
+% Final active clauses: 365
+% Final passive clauses: 2091
+% Input formulas: 132
+% Initial clauses: 206
+% Discarded non-redundant clauses: 28863
+% 
+% Duplicate literals: 917
+% Trivial inequalities: 228
+% Fw subsumption resolutions: 2227
+% Fw demodulations: 18665
+% Bw demodulations: 708
+% Condensations: 1762
+% Global subsumptions: 28
+% 
+% Simple tautologies: 403
+% Equational tautologies: 659
+% Forward subsumptions: 65141
+% Fw demodulations to eq. taut.: 583
+% Bw demodulations to eq. taut.: 100
+% 
+% Unit resulting resolution: 9805
+% Factoring: 4
+% Forward superposition: 39661
+% Backward superposition: 23361
+% Self superposition: 370
+% Equality factoring: 82
+% Equality resolution: 48
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 6120
+% SAT solver unit clauses: 1774
+% SAT solver binary clauses: 2989
+% 
+% Sat splits: 9
+% Sat splitting refutations: 137
+% 
+% Memory used [KB]: 129848
+% Time elapsed: 5.922 s
+% ------------------------------
+% ------------------------------
+% Success in time 7.26 s

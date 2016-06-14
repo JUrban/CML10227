@@ -1,0 +1,191 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.PhysicistsQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.PhysicistsQueue
+% SZS output start Proof for thm.PhysicistsQueue
+fof(f3475,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3465,f199,f135,f198,f203])).
+fof(f203,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(resolution,[],[f199,f198])).
+fof(f198,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f198_D])).
+fof(f198_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f135,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.PhysicistsQueue.queue_induction',aHL_FALSITY)).
+fof(f199,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl2),
+  inference(cnf_transformation,[],[f199_D])).
+fof(f199_D,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f3465,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl1),
+  inference(subsumption_resolution,[],[f3450,f137])).
+fof(f137,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X16] : (s(bool,'T_0') = s(bool,X16) <=> p(s(bool,X16)))),
+  file('thm.PhysicistsQueue.queue_induction','thm.bool.EQ_CLAUSES|split|1')).
+fof(f3450,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl1),
+  inference(superposition,[],[f3424,f386])).
+fof(f386,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),sK2))) | s(bool,'T_0') = s(bool,X4)) ) | $spl1),
+  inference(subsumption_resolution,[],[f380,f198])).
+fof(f380,plain,(
+  ( ! [X4] : (p(s(bool,'F_0')) | s(bool,X4) = s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),sK2))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f235,f210])).
+fof(f210,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),sK2)))),
+  inference(resolution,[],[f133,f142])).
+fof(f142,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X16] : (s(bool,'F_0') = s(bool,X16) <=> ~p(s(bool,X16)))),
+  file('thm.PhysicistsQueue.queue_induction','thm.bool.EQ_CLAUSES|split|2')).
+fof(f133,plain,(
+  ~p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f107])).
+fof(f107,plain,(
+  ! [X3,X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(sK0),X3),s('type.num.num',X4),s('type.list.list'(sK0),X5),s('type.num.num',X6),s('type.list.list'(sK0),X7)))))) & ~p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f106])).
+fof(f106,plain,(
+  ? [X0,X1] : (! [X3,X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5),s('type.num.num',X6),s('type.list.list'(X0),X7)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),X2)))))),
+  inference(rectify,[],[f99])).
+fof(f99,plain,(
+  ? [X0,X1] : (! [X2,X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),X2),s('type.num.num',X3),s('type.list.list'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))))) & ? [X7] : ~p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),X7)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : (! [X2,X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),X2),s('type.num.num',X3),s('type.list.list'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))))) => ! [X7] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),X7)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1] : (! [X2,X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),X2),s('type.num.num',X3),s('type.list.list'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))))) => ! [X7] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X0),bool),X1),s('type.PhysicistsQueue.queue'(X0),X7)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8,X9,X10,X11,X12] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X6),bool),X7),s('type.PhysicistsQueue.queue'(X6),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X6),X8),s('type.num.num',X9),s('type.list.list'(X6),X10),s('type.num.num',X11),s('type.list.list'(X6),X12)))))) => ! [X13] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X6),bool),X7),s('type.PhysicistsQueue.queue'(X6),X13)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8,X9,X10,X11,X12] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X6),bool),X7),s('type.PhysicistsQueue.queue'(X6),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X6),X8),s('type.num.num',X9),s('type.list.list'(X6),X10),s('type.num.num',X11),s('type.list.list'(X6),X12)))))) => ! [X13] : p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(X6),bool),X7),s('type.PhysicistsQueue.queue'(X6),X13)))))),
+  file('thm.PhysicistsQueue.queue_induction','thm.PhysicistsQueue.queue_induction')).
+fof(f235,plain,(
+  ( ! [X2,X1] : (p(s(bool,X1)) | s(bool,X1) = s(bool,X2) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(resolution,[],[f178,f138])).
+fof(f138,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f178,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f102])).
+fof(f102,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f101])).
+fof(f101,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X14,X15] : ((p(s(bool,X14)) => p(s(bool,X15))) => ((p(s(bool,X15)) => p(s(bool,X14))) => s(bool,X14) = s(bool,X15)))),
+  file('thm.PhysicistsQueue.queue_induction','thm.bool.IMP_ANTISYM_AX')).
+fof(f3424,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),X0))))) )),
+  inference(superposition,[],[f132,f162])).
+fof(f162,plain,(
+  ( ! [X0,X1] : (s('type.PhysicistsQueue.queue'(X0),X1) = s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),sK3(X1,X0)),s('type.num.num',sK4(X1,X0)),s('type.list.list'(X0),sK5(X1,X0)),s('type.num.num',sK6(X1,X0)),s('type.list.list'(X0),sK7(X1,X0))))) )),
+  inference(cnf_transformation,[],[f123])).
+fof(f123,plain,(
+  ! [X0,X1] : s('type.PhysicistsQueue.queue'(X0),X1) = s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),sK3(X1,X0)),s('type.num.num',sK4(X1,X0)),s('type.list.list'(X0),sK5(X1,X0)),s('type.num.num',sK6(X1,X0)),s('type.list.list'(X0),sK7(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6,sK7])],[f56])).
+fof(f56,plain,(
+  ! [X0,X1] : ? [X2,X3,X4,X5,X6] : s('type.PhysicistsQueue.queue'(X0),X1) = s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),X2),s('type.num.num',X3),s('type.list.list'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))),
+  inference(flattening,[],[f55])).
+fof(f55,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3,X4,X5,X6] : s('type.PhysicistsQueue.queue'(X0),X1) = s('type.PhysicistsQueue.queue'(X0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X0),X2),s('type.num.num',X3),s('type.list.list'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X46] : ? [X8,X9,X10,X11,X12] : s('type.PhysicistsQueue.queue'(X6),X46) = s('type.PhysicistsQueue.queue'(X6),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(X6),X8),s('type.num.num',X9),s('type.list.list'(X6),X10),s('type.num.num',X11),s('type.list.list'(X6),X12)))),
+  file('thm.PhysicistsQueue.queue_induction','thm.PhysicistsQueue.queue_nchotomy')).
+fof(f132,plain,(
+  ( ! [X6,X4,X7,X5,X3] : (p(s(bool,happ(s(fun('type.PhysicistsQueue.queue'(sK0),bool),sK1),s('type.PhysicistsQueue.queue'(sK0),'const.PhysicistsQueue.QUEUE_5'(s('type.list.list'(sK0),X3),s('type.num.num',X4),s('type.list.list'(sK0),X5),s('type.num.num',X6),s('type.list.list'(sK0),X7))))))) )),
+  inference(cnf_transformation,[],[f107])).
+% SZS output end Proof for thm.PhysicistsQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 55
+% Passive clauses: 657
+% Generated clauses: 3282
+% Final active clauses: 47
+% Final passive clauses: 549
+% Input formulas: 37
+% Initial clauses: 63
+% 
+% Duplicate literals: 192
+% Trivial inequalities: 50
+% Fw subsumption resolutions: 297
+% Fw demodulations: 252
+% Bw demodulations: 5
+% 
+% Simple tautologies: 100
+% Equational tautologies: 32
+% Forward subsumptions: 1671
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 94
+% Factoring: 1
+% Forward superposition: 1079
+% Backward superposition: 1096
+% Self superposition: 70
+% Equality factoring: 56
+% Equality resolution: 8
+% 
+% Split clauses: 37
+% Split components: 74
+% SAT solver clauses: 77
+% SAT solver unit clauses: 8
+% SAT solver binary clauses: 41
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 37
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 72
+% TWLsolver calls for satisfiability: 28
+% 
+% Memory used [KB]: 2430
+% Time elapsed: 0.083 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.089 s

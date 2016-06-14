@@ -1,0 +1,278 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labSem
+% (133142)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 126
+% Passive clauses: 3109
+% Generated clauses: 16279
+% Final active clauses: 118
+% Final passive clauses: 2809
+% Input formulas: 37
+% Initial clauses: 59
+% 
+% Duplicate literals: 679
+% Trivial inequalities: 326
+% Fw subsumption resolutions: 1818
+% Fw demodulations: 1567
+% Bw demodulations: 6
+% 
+% Simple tautologies: 368
+% Equational tautologies: 52
+% Forward subsumptions: 7859
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 234
+% Factoring: 2
+% Forward superposition: 6148
+% Backward superposition: 5508
+% Self superposition: 237
+% Equality factoring: 126
+% Equality resolution: 32
+% 
+% Split clauses: 347
+% Split components: 701
+% SAT solver clauses: 665
+% SAT solver unit clauses: 28
+% SAT solver binary clauses: 123
+% 
+% Sat splits: 347
+% 
+% TWLsolver clauses: 664
+% TWLsolver calls for satisfiability: 140
+% 
+% Memory used [KB]: 15479
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.labSem
+% (133174)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 132
+% Passive clauses: 1027
+% Generated clauses: 14401
+% Final active clauses: 123
+% Final passive clauses: 886
+% Input formulas: 37
+% Initial clauses: 59
+% 
+% Duplicate literals: 379
+% Trivial inequalities: 374
+% Fw subsumption resolutions: 831
+% Fw demodulations: 1812
+% Bw demodulations: 11
+% Condensations: 668
+% Global subsumptions: 4
+% 
+% Simple tautologies: 154
+% Equational tautologies: 27
+% Forward subsumptions: 7477
+% 
+% Binary resolution: 53
+% Factoring: 2
+% Forward superposition: 4028
+% Backward superposition: 5605
+% Self superposition: 141
+% Equality factoring: 45
+% Equality resolution: 33
+% 
+% Split clauses: 24
+% Split components: 53
+% SAT solver clauses: 1681
+% SAT solver unit clauses: 88
+% SAT solver binary clauses: 52
+% SAT solver learnt clauses: 9
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 24
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 1664
+% TWLsolver calls for satisfiability: 362
+% 
+% Memory used [KB]: 23666
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.labSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labSem
+% SZS output start Proof for thm.labSem
+fof(f3388,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f3387,f185])).
+fof(f185,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(unit_resulting_resolution,[],[f184,f138])).
+fof(f138,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X15] : (s(bool,'T_0') = s(bool,X15) <=> p(s(bool,X15)))),
+  file('thm.labSem.word8_loc_induction','thm.bool.EQ_CLAUSES|split|0')).
+fof(f184,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f128,f125])).
+fof(f125,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.labSem.word8_loc_induction',aHL_TRUTH)).
+fof(f128,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f105])).
+fof(f105,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f32])).
+fof(f32,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.labSem.word8_loc_induction','thm.bool.NOT_CLAUSES|split|2')).
+fof(f3387,plain,(
+  s(bool,'T_0') = s(bool,'F_0')),
+  inference(backward_demodulation,[],[f3386,f197])).
+fof(f197,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',sK1)))),
+  inference(unit_resulting_resolution,[],[f124,f143])).
+fof(f143,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f31])).
+fof(f31,axiom,(
+  ! [X15] : (s(bool,'F_0') = s(bool,X15) <=> ~p(s(bool,X15)))),
+  file('thm.labSem.word8_loc_induction','thm.bool.EQ_CLAUSES|split|2')).
+fof(f124,plain,(
+  ~p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',sK1))))),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X5] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X5)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X2),s('type.num.num',X3),s('type.num.num',X4)))))) & ~p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f103])).
+fof(f103,plain,(
+  ? [X0] : (! [X5] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X5)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X2),s('type.num.num',X3),s('type.num.num',X4)))))) & ? [X1] : ~p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc',X1)))))),
+  inference(rectify,[],[f95])).
+fof(f95,plain,(
+  ? [X0] : (! [X4] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X4)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X1),s('type.num.num',X2),s('type.num.num',X3)))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc',X5)))))),
+  inference(flattening,[],[f94])).
+fof(f94,plain,(
+  ? [X0] : ((! [X4] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X4)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X1),s('type.num.num',X2),s('type.num.num',X3))))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc',X5)))))),
+  inference(ennf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ((! [X4] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X4)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X1),s('type.num.num',X2),s('type.num.num',X3))))))) => ! [X5] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X0),s('type.labSem.word8_loc',X5)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ((! [X7] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X6),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X7)))))) & ! [X8,X9,X10] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X6),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X8),s('type.num.num',X9),s('type.num.num',X10))))))) => ! [X11] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X6),s('type.labSem.word8_loc',X11)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ((! [X7] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X6),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X7)))))) & ! [X8,X9,X10] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X6),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X8),s('type.num.num',X9),s('type.num.num',X10))))))) => ! [X11] : p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),X6),s('type.labSem.word8_loc',X11)))))),
+  file('thm.labSem.word8_loc_induction','thm.labSem.word8_loc_induction')).
+fof(f3386,plain,(
+  ( ! [X17] : (s(bool,'T_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',X17)))) )),
+  inference(duplicate_literal_removal,[],[f3374])).
+fof(f3374,plain,(
+  ( ! [X17] : (s(bool,'T_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',X17))) | s(bool,'T_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',X17)))) )),
+  inference(superposition,[],[f189,f1365])).
+fof(f1365,plain,(
+  ( ! [X2] : (s('type.labSem.word8_loc',X2) = s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),sK2(X2)))) | s(bool,'T_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc',X2)))) )),
+  inference(superposition,[],[f190,f135])).
+fof(f135,plain,(
+  ( ! [X0] : (s('type.labSem.word8_loc',X0) = s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',sK3(X0)),s('type.num.num',sK4(X0)),s('type.num.num',sK5(X0)))) | s('type.labSem.word8_loc',X0) = s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),sK2(X0))))) )),
+  inference(cnf_transformation,[],[f107])).
+fof(f107,plain,(
+  ! [X0] : (s('type.labSem.word8_loc',X0) = s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),sK2(X0)))) | s('type.labSem.word8_loc',X0) = s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',sK3(X0)),s('type.num.num',sK4(X0)),s('type.num.num',sK5(X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3,sK4,sK5])],[f45])).
+fof(f45,plain,(
+  ! [X0] : (? [X4] : s('type.labSem.word8_loc',X0) = s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X4))) | ? [X1,X2,X3] : s('type.labSem.word8_loc',X0) = s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X1),s('type.num.num',X2),s('type.num.num',X3))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X43] : (? [X7] : s('type.labSem.word8_loc',X43) = s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X7))) | ? [X8,X9,X10] : s('type.labSem.word8_loc',X43) = s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X8),s('type.num.num',X9),s('type.num.num',X10))))),
+  file('thm.labSem.word8_loc_induction','thm.labSem.word8_loc_nchotomy')).
+fof(f190,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X0),s('type.num.num',X1),s('type.num.num',X2)))))) )),
+  inference(unit_resulting_resolution,[],[f123,f139])).
+fof(f139,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f123,plain,(
+  ( ! [X4,X2,X3] : (p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc','const.labSem.LocByte_3'(s('type.num.num',X2),s('type.num.num',X3),s('type.num.num',X4))))))) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f189,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X0)))))) )),
+  inference(unit_resulting_resolution,[],[f122,f139])).
+fof(f122,plain,(
+  ( ! [X5] : (p(s(bool,happ(s(fun('type.labSem.word8_loc',bool),sK0),s('type.labSem.word8_loc','const.labSem.Byte_1'(s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),X5))))))) )),
+  inference(cnf_transformation,[],[f104])).
+% SZS output end Proof for thm.labSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 93
+% Passive clauses: 638
+% Generated clauses: 3371
+% Final active clauses: 67
+% Final passive clauses: 445
+% Input formulas: 37
+% Initial clauses: 59
+% 
+% Duplicate literals: 81
+% Trivial inequalities: 46
+% Fw subsumption resolutions: 127
+% Fw demodulations: 294
+% Bw demodulations: 67
+% Condensations: 29
+% 
+% Simple tautologies: 19
+% Equational tautologies: 25
+% Forward subsumptions: 2044
+% Fw demodulations to eq. taut.: 18
+% Bw demodulations to eq. taut.: 48
+% 
+% Unit resulting resolution: 165
+% Factoring: 2
+% Forward superposition: 1203
+% Backward superposition: 1123
+% Self superposition: 58
+% Equality factoring: 5
+% Equality resolution: 4
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 682
+% SAT solver unit clauses: 139
+% SAT solver binary clauses: 225
+% 
+% Sat splits: 2
+% Sat splitting refutations: 38
+% 
+% Memory used [KB]: 8827
+% Time elapsed: 0.221 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.53 s

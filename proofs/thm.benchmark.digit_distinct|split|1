@@ -1,0 +1,261 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.benchmark
+% (129657)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 122
+% Passive clauses: 2154
+% Generated clauses: 10959
+% Final active clauses: 112
+% Final passive clauses: 1887
+% Input formulas: 68
+% Initial clauses: 102
+% 
+% Duplicate literals: 360
+% Trivial inequalities: 190
+% Fw subsumption resolutions: 1007
+% Fw demodulations: 1626
+% Bw demodulations: 10
+% 
+% Simple tautologies: 189
+% Equational tautologies: 42
+% Forward subsumptions: 5059
+% 
+% Binary resolution: 378
+% Factoring: 1
+% Forward superposition: 3862
+% Backward superposition: 3326
+% Self superposition: 104
+% Equality factoring: 64
+% Equality resolution: 26
+% 
+% Split clauses: 192
+% Split components: 384
+% SAT solver clauses: 477
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 136
+% 
+% Sat splits: 192
+% 
+% TWLsolver clauses: 477
+% TWLsolver calls for satisfiability: 138
+% 
+% Memory used [KB]: 7419
+% Time elapsed: 0.614 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.benchmark
+% (129685)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 143
+% Passive clauses: 1292
+% Generated clauses: 15177
+% Final active clauses: 113
+% Final passive clauses: 908
+% Input formulas: 68
+% Initial clauses: 102
+% 
+% Duplicate literals: 471
+% Trivial inequalities: 162
+% Fw subsumption resolutions: 903
+% Fw demodulations: 1624
+% Bw demodulations: 237
+% Condensations: 1188
+% Global subsumptions: 8
+% 
+% Simple tautologies: 179
+% Equational tautologies: 45
+% Forward subsumptions: 7112
+% Bw demodulations to eq. taut.: 24
+% 
+% Binary resolution: 360
+% Factoring: 1
+% Forward superposition: 4781
+% Backward superposition: 3774
+% Self superposition: 149
+% Equality factoring: 78
+% Equality resolution: 20
+% 
+% Split clauses: 79
+% Split components: 158
+% SAT solver clauses: 2229
+% SAT solver unit clauses: 147
+% SAT solver binary clauses: 54
+% SAT solver learnt clauses: 16
+% 
+% Sat splits: 79
+% Sat splitting refutations: 13
+% 
+% TWLsolver clauses: 2197
+% TWLsolver calls for satisfiability: 396
+% 
+% Memory used [KB]: 16630
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.benchmark
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.benchmark
+% SZS output start Proof for thm.benchmark
+fof(f65940,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f65939,f65938])).
+fof(f65938,plain,(
+  ( ! [X366] : (~p(s(bool,X366))) )),
+  inference(forward_demodulation,[],[f65937,f312])).
+fof(f312,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X0),'const.benchmark.Zero_0'),s(X1,X2),s(fun('type.benchmark.times'(X0),X1),X3),s(fun('type.benchmark.times'(X0),fun('type.benchmark.times'(X0),X1)),X4)))) )),
+  inference(cnf_transformation,[],[f150])).
+fof(f150,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X1,X2) = s(X1,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X0),'const.benchmark.Zero_0'),s(X1,X2),s(fun('type.benchmark.times'(X0),X1),X3),s(fun('type.benchmark.times'(X0),fun('type.benchmark.times'(X0),X1)),X4)))),
+  inference(flattening,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X1,X2) = s(X1,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X0),'const.benchmark.Zero_0'),s(X1,X2),s(fun('type.benchmark.times'(X0),X1),X3),s(fun('type.benchmark.times'(X0),fun('type.benchmark.times'(X0),X1)),X4)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X22] : ! [X34,X21,X35] : s(X22,X34) = s(X22,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X6),'const.benchmark.Zero_0'),s(X22,X34),s(fun('type.benchmark.times'(X6),X22),X21),s(fun('type.benchmark.times'(X6),fun('type.benchmark.times'(X6),X22)),X35)))),
+  file('thm.benchmark.digit_distinct|split|1','thm.benchmark.digit_case_def|split|0')).
+fof(f65937,plain,(
+  ( ! [X366,X368,X367] : (~p(s(bool,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(sK0),'const.benchmark.Zero_0'),s(bool,X366),s(fun('type.benchmark.times'(sK0),bool),X367),s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),bool)),X368))))) )),
+  inference(subsumption_resolution,[],[f65435,f65281])).
+fof(f65281,plain,(
+  ( ! [X4,X7,X5] : (s(X4,X5) = s(X4,happ(s(fun('type.benchmark.times'(sK0),X4),happ(s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),X4)),X7),s('type.benchmark.times'(sK0),sK2))),s('type.benchmark.times'(sK0),sK1)))) )),
+  inference(superposition,[],[f28811,f312])).
+fof(f28811,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(sK0),'const.benchmark.Zero_0'),s(X0,X2),s(fun('type.benchmark.times'(sK0),X0),X3),s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),X0)),X1))) = s(X0,happ(s(fun('type.benchmark.times'(sK0),X0),happ(s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),X0)),X1),s('type.benchmark.times'(sK0),sK2))),s('type.benchmark.times'(sK0),sK1)))) )),
+  inference(superposition,[],[f315,f228])).
+fof(f228,plain,(
+  s('type.benchmark.digit'(sK0),'const.benchmark.Zero_0') = s('type.benchmark.digit'(sK0),'const.benchmark.Two_2'(s('type.benchmark.times'(sK0),sK2),s('type.benchmark.times'(sK0),sK1)))),
+  inference(cnf_transformation,[],[f189])).
+fof(f189,plain,(
+  s('type.benchmark.digit'(sK0),'const.benchmark.Zero_0') = s('type.benchmark.digit'(sK0),'const.benchmark.Two_2'(s('type.benchmark.times'(sK0),sK2),s('type.benchmark.times'(sK0),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f182])).
+fof(f182,plain,(
+  ? [X0,X1,X2] : s('type.benchmark.digit'(X0),'const.benchmark.Zero_0') = s('type.benchmark.digit'(X0),'const.benchmark.Two_2'(s('type.benchmark.times'(X0),X2),s('type.benchmark.times'(X0),X1)))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2] : s('type.benchmark.digit'(X0),'const.benchmark.Zero_0') != s('type.benchmark.digit'(X0),'const.benchmark.Two_2'(s('type.benchmark.times'(X0),X2),s('type.benchmark.times'(X0),X1)))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0] : ! [X1,X2] : ~s('type.benchmark.digit'(X0),'const.benchmark.Zero_0') = s('type.benchmark.digit'(X0),'const.benchmark.Two_2'(s('type.benchmark.times'(X0),X2),s('type.benchmark.times'(X0),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : ~s('type.benchmark.digit'(X6),'const.benchmark.Zero_0') = s('type.benchmark.digit'(X6),'const.benchmark.Two_2'(s('type.benchmark.times'(X6),X8),s('type.benchmark.times'(X6),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : ~s('type.benchmark.digit'(X6),'const.benchmark.Zero_0') = s('type.benchmark.digit'(X6),'const.benchmark.Two_2'(s('type.benchmark.times'(X6),X8),s('type.benchmark.times'(X6),X7)))),
+  file('thm.benchmark.digit_distinct|split|1','thm.benchmark.digit_distinct|split|1')).
+fof(f315,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.benchmark.times'(X1),X0),happ(s(fun('type.benchmark.times'(X1),fun('type.benchmark.times'(X1),X0)),X6),s('type.benchmark.times'(X1),X2))),s('type.benchmark.times'(X1),X3))) = s(X0,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X1),'const.benchmark.Two_2'(s('type.benchmark.times'(X1),X2),s('type.benchmark.times'(X1),X3))),s(X0,X4),s(fun('type.benchmark.times'(X1),X0),X5),s(fun('type.benchmark.times'(X1),fun('type.benchmark.times'(X1),X0)),X6)))) )),
+  inference(cnf_transformation,[],[f156])).
+fof(f156,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.benchmark.times'(X1),X0),happ(s(fun('type.benchmark.times'(X1),fun('type.benchmark.times'(X1),X0)),X6),s('type.benchmark.times'(X1),X2))),s('type.benchmark.times'(X1),X3))) = s(X0,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X1),'const.benchmark.Two_2'(s('type.benchmark.times'(X1),X2),s('type.benchmark.times'(X1),X3))),s(X0,X4),s(fun('type.benchmark.times'(X1),X0),X5),s(fun('type.benchmark.times'(X1),fun('type.benchmark.times'(X1),X0)),X6)))),
+  inference(flattening,[],[f155])).
+fof(f155,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.benchmark.times'(X1),X0),happ(s(fun('type.benchmark.times'(X1),fun('type.benchmark.times'(X1),X0)),X6),s('type.benchmark.times'(X1),X2))),s('type.benchmark.times'(X1),X3))) = s(X0,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X1),'const.benchmark.Two_2'(s('type.benchmark.times'(X1),X2),s('type.benchmark.times'(X1),X3))),s(X0,X4),s(fun('type.benchmark.times'(X1),X0),X5),s(fun('type.benchmark.times'(X1),fun('type.benchmark.times'(X1),X0)),X6)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X22,X6] : ! [X8,X7,X34,X21,X35] : s(X22,happ(s(fun('type.benchmark.times'(X6),X22),happ(s(fun('type.benchmark.times'(X6),fun('type.benchmark.times'(X6),X22)),X35),s('type.benchmark.times'(X6),X8))),s('type.benchmark.times'(X6),X7))) = s(X22,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(X6),'const.benchmark.Two_2'(s('type.benchmark.times'(X6),X8),s('type.benchmark.times'(X6),X7))),s(X22,X34),s(fun('type.benchmark.times'(X6),X22),X21),s(fun('type.benchmark.times'(X6),fun('type.benchmark.times'(X6),X22)),X35)))),
+  file('thm.benchmark.digit_distinct|split|1','thm.benchmark.digit_case_def|split|2')).
+fof(f65435,plain,(
+  ( ! [X366,X368,X367] : (s(bool,'F_0') != s(bool,happ(s(fun('type.benchmark.times'(sK0),bool),happ(s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),bool)),X368),s('type.benchmark.times'(sK0),sK2))),s('type.benchmark.times'(sK0),sK1))) | ~p(s(bool,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(sK0),'const.benchmark.Zero_0'),s(bool,X366),s(fun('type.benchmark.times'(sK0),bool),X367),s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),bool)),X368))))) )),
+  inference(superposition,[],[f243,f28811])).
+fof(f243,plain,(
+  ( ! [X0] : (s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f194])).
+fof(f194,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f80])).
+fof(f80,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f79])).
+fof(f79,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X29] : (s(bool,'F_0') = s(bool,X29) <=> ~p(s(bool,X29)))),
+  file('thm.benchmark.digit_distinct|split|1','thm.bool.EQ_CLAUSES|split|2')).
+fof(f65939,plain,(
+  ( ! [X407,X406] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,happ(s(fun('type.benchmark.times'(sK0),bool),happ(s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),bool)),X406),s('type.benchmark.times'(sK0),sK2))),s('type.benchmark.times'(sK0),sK1))))),s(bool,X407))))) )),
+  inference(subsumption_resolution,[],[f65445,f65938])).
+fof(f65445,plain,(
+  ( ! [X405,X407,X404,X406] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,happ(s(fun('type.benchmark.times'(sK0),bool),happ(s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),bool)),X406),s('type.benchmark.times'(sK0),sK2))),s('type.benchmark.times'(sK0),sK1))))),s(bool,X407)))) | p(s(bool,'const.benchmark.digit_CASE_4'(s('type.benchmark.digit'(sK0),'const.benchmark.Zero_0'),s(bool,X404),s(fun('type.benchmark.times'(sK0),bool),X405),s(fun('type.benchmark.times'(sK0),fun('type.benchmark.times'(sK0),bool)),X406))))) )),
+  inference(superposition,[],[f301,f28811])).
+fof(f301,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f224])).
+fof(f224,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) | ~p(s(bool,X0)) | p(s(bool,X1))) & ((p(s(bool,X0)) & ~p(s(bool,X1))) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1))))))),
+  inference(flattening,[],[f223])).
+fof(f223,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) | (~p(s(bool,X0)) | p(s(bool,X1)))) & ((p(s(bool,X0)) & ~p(s(bool,X1))) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1))))))),
+  inference(nnf_transformation,[],[f187])).
+fof(f187,plain,(
+  ! [X0,X1] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) <=> (~p(s(bool,X0)) | p(s(bool,X1))))),
+  inference(ennf_transformation,[],[f130])).
+fof(f130,plain,(
+  ! [X0,X1] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) <=> (p(s(bool,X0)) => p(s(bool,X1))))),
+  inference(rectify,[],[f67])).
+fof(f67,axiom,(
+  ! [X45,X46] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X45))),s(bool,X46)))) <=> (p(s(bool,X45)) => p(s(bool,X46))))),
+  file('thm.benchmark.digit_distinct|split|1','==>_HL_0')).
+% SZS output end Proof for thm.benchmark
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 236
+% Passive clauses: 3180
+% Generated clauses: 66982
+% Final active clauses: 133
+% Final passive clauses: 1661
+% Input formulas: 68
+% Initial clauses: 102
+% Discarded non-redundant clauses: 487
+% 
+% Duplicate literals: 1289
+% Trivial inequalities: 448
+% Fw subsumption resolutions: 5453
+% Fw demodulations: 14162
+% Bw demodulations: 353
+% Condensations: 3816
+% Global subsumptions: 40
+% 
+% Simple tautologies: 400
+% Equational tautologies: 205
+% Forward subsumptions: 36592
+% Fw demodulations to eq. taut.: 950
+% Bw demodulations to eq. taut.: 7
+% 
+% Unit resulting resolution: 3524
+% Factoring: 1
+% Forward superposition: 19115
+% Backward superposition: 16447
+% Self superposition: 414
+% Equality factoring: 170
+% Equality resolution: 47
+% 
+% Split clauses: 92
+% Split components: 185
+% SAT solver clauses: 3493
+% SAT solver unit clauses: 814
+% SAT solver binary clauses: 1181
+% 
+% Sat splits: 92
+% Sat splitting refutations: 87
+% 
+% Memory used [KB]: 72152
+% Time elapsed: 3.452 s
+% ------------------------------
+% ------------------------------
+% Success in time 4.821 s

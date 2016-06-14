@@ -1,0 +1,323 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.asmProps
+% (27456)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 189
+% Passive clauses: 3379
+% Generated clauses: 31832
+% Final active clauses: 176
+% Final passive clauses: 2901
+% Input formulas: 21
+% Initial clauses: 42
+% 
+% Duplicate literals: 1283
+% Trivial inequalities: 383
+% Fw subsumption resolutions: 4366
+% Fw demodulations: 5226
+% Bw demodulations: 10
+% 
+% Simple tautologies: 537
+% Equational tautologies: 49
+% Forward subsumptions: 15024
+% 
+% Binary resolution: 420
+% Forward superposition: 9849
+% Backward superposition: 9684
+% Self superposition: 199
+% Equality factoring: 110
+% Equality resolution: 44
+% 
+% Split clauses: 870
+% Split components: 1773
+% SAT solver clauses: 1606
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 97
+% 
+% Sat splits: 870
+% Sat splitting refutations: 12
+% 
+% TWLsolver clauses: 1592
+% TWLsolver calls for satisfiability: 209
+% 
+% Memory used [KB]: 17014
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.asmProps
+% (27523)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 123
+% Passive clauses: 919
+% Generated clauses: 16016
+% Final active clauses: 117
+% Final passive clauses: 744
+% Input formulas: 21
+% Initial clauses: 42
+% 
+% Duplicate literals: 661
+% Trivial inequalities: 280
+% Fw subsumption resolutions: 1370
+% Fw demodulations: 1865
+% Bw demodulations: 30
+% Condensations: 971
+% Global subsumptions: 6
+% 
+% Simple tautologies: 225
+% Equational tautologies: 27
+% Forward subsumptions: 8129
+% Bw demodulations to eq. taut.: 21
+% 
+% Binary resolution: 171
+% Factoring: 1
+% Forward superposition: 6139
+% Backward superposition: 3281
+% Self superposition: 160
+% Equality factoring: 60
+% Equality resolution: 33
+% 
+% Split clauses: 214
+% Split components: 430
+% SAT solver clauses: 1624
+% SAT solver unit clauses: 67
+% SAT solver binary clauses: 46
+% SAT solver learnt clauses: 12
+% SAT solver learnt literals: 2
+% 
+% Sat splits: 214
+% Sat splitting refutations: 12
+% 
+% TWLsolver clauses: 1600
+% TWLsolver calls for satisfiability: 415
+% 
+% Memory used [KB]: 13432
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.asmProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.asmProps
+% SZS output start Proof for thm.asmProps
+fof(f63100,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f63099,f117])).
+fof(f117,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f79,f77])).
+fof(f77,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.asmProps.decoder_asm_deterministic',aHL_TRUTH)).
+fof(f79,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f59])).
+fof(f59,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f21])).
+fof(f21,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.asmProps.decoder_asm_deterministic','thm.bool.NOT_CLAUSES|split|2')).
+fof(f63099,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f63038,f125])).
+fof(f125,plain,(
+  s(bool,'F_0') = s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2)))),
+  inference(unit_resulting_resolution,[],[f76,f89])).
+fof(f89,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f63])).
+fof(f63,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X28] : (s(bool,'F_0') = s(bool,X28) <=> ~p(s(bool,X28)))),
+  file('thm.asmProps.decoder_asm_deterministic','thm.bool.EQ_CLAUSES|split|2')).
+fof(f76,plain,(
+  ~p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f58])).
+fof(f58,plain,(
+  ! [X4,X5] : (~p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(sK0),X4),s('type.asm.asm_config'(sK0),sK2)))) | s('type.asm.asm'(sK0),X4) = s('type.asm.asm'(sK0),happ(s(fun('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'type.asm.asm'(sK0)),sK3),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.list.APPEND_2'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm'(sK0),X4))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X5)))))) & ~p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f53])).
+fof(f53,plain,(
+  ? [X0,X1,X2] : (? [X3] : ! [X4,X5] : (~p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2)))) | s('type.asm.asm'(X0),X4) = s('type.asm.asm'(X0),happ(s(fun('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'type.asm.asm'(X0)),X3),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.list.APPEND_2'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X5)))))) & ~p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : (? [X3] : ! [X4,X5] : (p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2)))) => s('type.asm.asm'(X0),X4) = s('type.asm.asm'(X0),happ(s(fun('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'type.asm.asm'(X0)),X3),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.list.APPEND_2'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X5)))))) => p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2] : (? [X3] : ! [X4,X5] : (p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2)))) => s('type.asm.asm'(X0),X4) = s('type.asm.asm'(X0),happ(s(fun('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'type.asm.asm'(X0)),X3),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.list.APPEND_2'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X5)))))) => p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (? [X9] : ! [X10,X11] : (p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X6),X10),s('type.asm.asm_config'(X6),X8)))) => s('type.asm.asm'(X6),X10) = s('type.asm.asm'(X6),happ(s(fun('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'type.asm.asm'(X6)),X9),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.list.APPEND_2'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm'(X6),X10))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X11)))))) => p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm_config'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (? [X9] : ! [X10,X11] : (p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X6),X10),s('type.asm.asm_config'(X6),X8)))) => s('type.asm.asm'(X6),X10) = s('type.asm.asm'(X6),happ(s(fun('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'type.asm.asm'(X6)),X9),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.list.APPEND_2'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm'(X6),X10))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X11)))))) => p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm_config'(X6),X8)))))),
+  file('thm.asmProps.decoder_asm_deterministic','thm.asmProps.decoder_asm_deterministic')).
+fof(f63038,plain,(
+  p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2))))),
+  inference(unit_resulting_resolution,[],[f62807,f101])).
+fof(f101,plain,(
+  ( ! [X2,X0,X1] : (s('type.asmSem.asm_state'(X0),sK6(X2,X1,X0)) != s('type.asmSem.asm_state'(X0),sK7(X2,X1,X0)) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | ! [X7,X8,X9,X10] : (~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X8),s('type.asm.asm'(X0),X7),s('type.asmSem.asm_state'(X0),X9)))) | ~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X8),s('type.asm.asm'(X0),X7),s('type.asmSem.asm_state'(X0),X10)))) | s('type.asmSem.asm_state'(X0),X9) = s('type.asmSem.asm_state'(X0),X10))) & ((p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK6(X2,X1,X0))))) & p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK7(X2,X1,X0))))) & s('type.asmSem.asm_state'(X0),sK6(X2,X1,X0)) != s('type.asmSem.asm_state'(X0),sK7(X2,X1,X0))) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK4,sK5,sK6,sK7])],[f69])).
+fof(f69,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | ! [X7,X8,X9,X10] : (~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X8),s('type.asm.asm'(X0),X7),s('type.asmSem.asm_state'(X0),X9)))) | ~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X8),s('type.asm.asm'(X0),X7),s('type.asmSem.asm_state'(X0),X10)))) | s('type.asmSem.asm_state'(X0),X9) = s('type.asmSem.asm_state'(X0),X10))) & (? [X3,X4,X5,X6] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6)))) & s('type.asmSem.asm_state'(X0),X5) != s('type.asmSem.asm_state'(X0),X6)) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2))))))),
+  inference(rectify,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | ! [X3,X4,X5,X6] : (~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) | ~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6)))) | s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),X6))) & (? [X3,X4,X5,X6] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6)))) & s('type.asmSem.asm_state'(X0),X5) != s('type.asmSem.asm_state'(X0),X6)) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2))))))),
+  inference(nnf_transformation,[],[f56])).
+fof(f56,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) <=> ! [X3,X4,X5,X6] : (~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) | ~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6)))) | s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),X6)))),
+  inference(flattening,[],[f55])).
+fof(f55,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) <=> ! [X3,X4,X5,X6] : ((~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) | ~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6))))) | s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),X6)))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) <=> ! [X3,X4,X5,X6] : ((p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6))))) => s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),X6)))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) <=> ! [X3,X4,X5,X6] : ((p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X4),s('type.asm.asm'(X0),X3),s('type.asmSem.asm_state'(X0),X6))))) => s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),X6)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X7,X8] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm_config'(X6),X8)))) <=> ! [X10,X12,X13,X14] : ((p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm_config'(X6),X8),s('type.asmSem.asm_state'(X6),X12),s('type.asm.asm'(X6),X10),s('type.asmSem.asm_state'(X6),X13)))) & p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm_config'(X6),X8),s('type.asmSem.asm_state'(X6),X12),s('type.asm.asm'(X6),X10),s('type.asmSem.asm_state'(X6),X14))))) => s('type.asmSem.asm_state'(X6),X13) = s('type.asmSem.asm_state'(X6),X14)))),
+  file('thm.asmProps.decoder_asm_deterministic','thm.asmProps.asm_deterministic_def')).
+fof(f62807,plain,(
+  s('type.asmSem.asm_state'(sK0),sK6(sK2,sK1,sK0)) = s('type.asmSem.asm_state'(sK0),sK7(sK2,sK1,sK0))),
+  inference(forward_demodulation,[],[f62806,f62257])).
+fof(f62257,plain,(
+  s('type.asmSem.asm_state'(sK0),sK6(sK2,sK1,sK0)) = s('type.asmSem.asm_state'(sK0),'const.asmSem.asm_3'(s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)))),s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)))))))))),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0))))),
+  inference(subsumption_resolution,[],[f62000,f77])).
+fof(f62000,plain,(
+  ~p(s(bool,'T_0')) | s('type.asmSem.asm_state'(sK0),sK6(sK2,sK1,sK0)) = s('type.asmSem.asm_state'(sK0),'const.asmSem.asm_3'(s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)))),s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)))))))))),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0))))),
+  inference(superposition,[],[f107,f29060])).
+fof(f29060,plain,(
+  s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.asmSem.asm_state'(sK0),sK6(sK2,sK1,sK0))))),
+  inference(subsumption_resolution,[],[f29034,f117])).
+fof(f29034,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.asmSem.asm_state'(sK0),sK6(sK2,sK1,sK0))))),
+  inference(superposition,[],[f2649,f125])).
+fof(f2649,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK6(X2,X1,X0))))) )),
+  inference(subsumption_resolution,[],[f2635,f117])).
+fof(f2635,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'F_0')) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK6(X2,X1,X0))))) )),
+  inference(superposition,[],[f99,f83])).
+fof(f83,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.asmProps.decoder_asm_deterministic',aHL_BOOL_CASES)).
+fof(f99,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK6(X2,X1,X0))))) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f70])).
+fof(f107,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5)))) | s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3)))) )),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5)))) | (p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X3))),s(fun('type.fcp.cart'(bool,X0),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X0),X3)))))) & p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X0),X2))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X0),X3)))))))) & s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X0),X3))) = s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X0),X2))) & s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X0),X3))) = s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X0),X2))) & s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3))) & ~p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2)))))) & (~p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X3))),s(fun('type.fcp.cart'(bool,X0),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X0),X3)))))) | ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X0),X2))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X0),X3)))))))) | s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X0),X3))) != s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X0),X2))) | s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X0),X3))) != s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X0),X2))) | s('type.asmSem.asm_state'(X0),X5) != s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3))) | p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X0),X5)))) | ~p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2)))) | p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5))))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((~p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5)))) | (p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X3))),s(fun('type.fcp.cart'(bool,X0),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X0),X3)))))) & p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X0),X2))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X0),X3)))))))) & s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X0),X3))) = s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X0),X2))) & s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X0),X3))) = s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X0),X2))) & s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3))) & ~p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2)))))) & ((~p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X3))),s(fun('type.fcp.cart'(bool,X0),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X0),X3)))))) | ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X0),X2))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X0),X3)))))))) | s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X0),X3))) != s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X0),X2))) | s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X0),X3))) != s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X0),X2))) | s('type.asmSem.asm_state'(X0),X5) != s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3))) | p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X0),X5)))) | ~p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2))))) | p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5))))))),
+  inference(nnf_transformation,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5)))) <=> (p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X3))),s(fun('type.fcp.cart'(bool,X0),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X0),X3)))))) & p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X0),X2))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X0),X3)))))))) & s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X0),X3))) = s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X0),X2))) & s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X0),X3))) = s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X0),X2))) & s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3))) & ~p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2))))))),
+  inference(flattening,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),X3),s('type.asm.asm'(X0),X4),s('type.asmSem.asm_state'(X0),X5)))) <=> (p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X3))),s(fun('type.fcp.cart'(bool,X0),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X0),X3)))))) & p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X0),X2))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X0),X3)))))))) & s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X0),X3))) = s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X0),X2))) & s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X0),X3))) = s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X0),X2))) & s('type.asmSem.asm_state'(X0),X5) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_3'(s('type.asm.asm'(X0),X4),s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X3))),s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm'(X0),X4))))))))),s('type.asmSem.asm_state'(X0),X3))) & ~p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X0),X5)))) & p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X0),X4),s('type.asm.asm_config'(X0),X2))))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6] : ! [X7,X8,X12,X10,X13] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm_config'(X6),X8),s('type.asmSem.asm_state'(X6),X12),s('type.asm.asm'(X6),X10),s('type.asmSem.asm_state'(X6),X13)))) <=> (p(s(bool,'const.asmSem.bytes_in_memory_4'(s('type.fcp.cart'(bool,X6),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X6),X12))),s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm'(X6),X10))),s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),X12))),s(fun('type.fcp.cart'(bool,X6),bool),'const.asmSem.asm_state_mem_domain_1'(s('type.asmSem.asm_state'(X6),X12)))))) & p(s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.num.num'),'const.asm.asm_config_link_reg_1'(s('type.asm.asm_config'(X6),X8))),s(bool,'T_0'),s(fun('type.num.num',bool),'=_1'(s('type.num.num','const.asmSem.asm_state_lr_1'(s('type.asmSem.asm_state'(X6),X12)))))))) & s(bool,'const.asmSem.asm_state_be_1'(s('type.asmSem.asm_state'(X6),X12))) = s(bool,'const.asm.asm_config_big_endian_1'(s('type.asm.asm_config'(X6),X8))) & s('type.num.num','const.asmSem.asm_state_align_1'(s('type.asmSem.asm_state'(X6),X12))) = s('type.num.num','const.asm.asm_config_code_alignment_1'(s('type.asm.asm_config'(X6),X8))) & s('type.asmSem.asm_state'(X6),X13) = s('type.asmSem.asm_state'(X6),'const.asmSem.asm_3'(s('type.asm.asm'(X6),X10),s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X6),X12))),s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(X6),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X7),s('type.asm.asm'(X6),X10))))))))),s('type.asmSem.asm_state'(X6),X12))) & ~p(s(bool,'const.asmSem.asm_state_failed_1'(s('type.asmSem.asm_state'(X6),X13)))) & p(s(bool,'const.asm.asm_ok_2'(s('type.asm.asm'(X6),X10),s('type.asm.asm_config'(X6),X8))))))),
+  file('thm.asmProps.decoder_asm_deterministic','thm.asmSem.asm_step_def')).
+fof(f62806,plain,(
+  s('type.asmSem.asm_state'(sK0),sK7(sK2,sK1,sK0)) = s('type.asmSem.asm_state'(sK0),'const.asmSem.asm_3'(s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)))),s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)))))))))),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0))))),
+  inference(subsumption_resolution,[],[f62550,f77])).
+fof(f62550,plain,(
+  ~p(s(bool,'T_0')) | s('type.asmSem.asm_state'(sK0),sK7(sK2,sK1,sK0)) = s('type.asmSem.asm_state'(sK0),'const.asmSem.asm_3'(s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)))),s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),happ(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)))))))))),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0))))),
+  inference(superposition,[],[f107,f29460])).
+fof(f29460,plain,(
+  s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.asmSem.asm_state'(sK0),sK7(sK2,sK1,sK0))))),
+  inference(subsumption_resolution,[],[f29434,f117])).
+fof(f29434,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(sK0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),sK1),s('type.asm.asm_config'(sK0),sK2),s('type.asmSem.asm_state'(sK0),sK5(sK2,sK1,sK0)),s('type.asm.asm'(sK0),sK4(sK2,sK1,sK0)),s('type.asmSem.asm_state'(sK0),sK7(sK2,sK1,sK0))))),
+  inference(superposition,[],[f2937,f125])).
+fof(f2937,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK7(X2,X1,X0))))) )),
+  inference(subsumption_resolution,[],[f2923,f117])).
+fof(f2923,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'F_0')) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2)))) | s(bool,'T_0') = s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK7(X2,X1,X0))))) )),
+  inference(superposition,[],[f100,f83])).
+fof(f100,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.asmSem.asm_step_5'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2),s('type.asmSem.asm_state'(X0),sK5(X2,X1,X0)),s('type.asm.asm'(X0),sK4(X2,X1,X0)),s('type.asmSem.asm_state'(X0),sK7(X2,X1,X0))))) | p(s(bool,'const.asmProps.asm_deterministic_2'(s(fun('type.asm.asm'(X0),'type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))))),X1),s('type.asm.asm_config'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f70])).
+% SZS output end Proof for thm.asmProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 336
+% Passive clauses: 1885
+% Generated clauses: 62959
+% Final active clauses: 196
+% Final passive clauses: 693
+% Input formulas: 21
+% Initial clauses: 42
+% 
+% Duplicate literals: 2717
+% Trivial inequalities: 618
+% Fw subsumption resolutions: 5663
+% Fw demodulations: 12900
+% Bw demodulations: 952
+% Condensations: 4259
+% Global subsumptions: 38
+% 
+% Simple tautologies: 719
+% Equational tautologies: 285
+% Forward subsumptions: 33677
+% Fw demodulations to eq. taut.: 76
+% Bw demodulations to eq. taut.: 18
+% 
+% Unit resulting resolution: 2704
+% Forward superposition: 19115
+% Backward superposition: 12658
+% Self superposition: 286
+% Equality factoring: 108
+% Equality resolution: 58
+% 
+% Split clauses: 50
+% Split components: 100
+% SAT solver clauses: 2081
+% SAT solver unit clauses: 83
+% SAT solver binary clauses: 591
+% 
+% Sat splits: 50
+% Sat splitting refutations: 56
+% 
+% Memory used [KB]: 31726
+% Time elapsed: 1.974 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.31 s

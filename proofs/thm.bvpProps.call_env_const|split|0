@@ -1,0 +1,107 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpProps
+% SZS output start Proof for thm.bvpProps
+fof(f8654,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f8648])).
+fof(f8648,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1)))),
+  inference(superposition,[],[f322,f2852])).
+fof(f2852,plain,(
+  ( ! [X14,X12,X13] : (s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),X14))) = s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X13),s('type.bvpSem.state'(X12),X14)))))) )),
+  inference(superposition,[],[f378,f412])).
+fof(f412,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvpSem.state'(X0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X1),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),'const.sptree.fromList_1'(s('type.list.list'('type.bvlSem.v'),X1))))),s('type.bvpSem.state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f255])).
+fof(f255,plain,(
+  ! [X0,X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X1),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),'const.sptree.fromList_1'(s('type.list.list'('type.bvlSem.v'),X1))))),s('type.bvpSem.state'(X0),X2)))),
+  inference(flattening,[],[f254])).
+fof(f254,plain,(
+  ! [X0] : ! [X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X1),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),'const.sptree.fromList_1'(s('type.list.list'('type.bvlSem.v'),X1))))),s('type.bvpSem.state'(X0),X2)))),
+  inference(rectify,[],[f96])).
+fof(f96,axiom,(
+  ! [X6] : ! [X15,X12] : s('type.bvpSem.state'(X6),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X15),s('type.bvpSem.state'(X6),X12))) = s('type.bvpSem.state'(X6),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),'const.combin.K_1'(s('type.sptree.spt'('type.bvlSem.v'),'const.sptree.fromList_1'(s('type.list.list'('type.bvlSem.v'),X15))))),s('type.bvpSem.state'(X6),X12)))),
+  file('thm.bvpProps.call_env_const|split|0','thm.bvpSem.call_env_def')).
+fof(f378,plain,(
+  ( ! [X2,X0,X1] : (s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X2),s('type.bvpSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f187])).
+fof(f187,plain,(
+  ! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f186])).
+fof(f186,plain,(
+  ! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f71])).
+fof(f71,axiom,(
+  ! [X11] : ! [X12,X13] : s('type.ffi.ffi_state'(X11),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X11),X12))) = s('type.ffi.ffi_state'(X11),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X11),'const.bvpSem.state_locals_fupd_2'(s(fun('type.sptree.spt'('type.bvlSem.v'),'type.sptree.spt'('type.bvlSem.v')),X13),s('type.bvpSem.state'(X11),X12)))))),
+  file('thm.bvpProps.call_env_const|split|0','thm.bvpSem.bvpSem_97_prove_ltb')).
+fof(f322,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),sK2),s('type.bvpSem.state'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f309])).
+fof(f309,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),sK2),s('type.bvpSem.state'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f307])).
+fof(f307,plain,(
+  ? [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) != s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(ennf_transformation,[],[f109])).
+fof(f109,plain,(
+  ~! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f108])).
+fof(f108,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X8),s('type.bvpSem.state'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.call_env_2'(s('type.list.list'('type.bvlSem.v'),X8),s('type.bvpSem.state'(X6),X7)))))),
+  file('thm.bvpProps.call_env_const|split|0','thm.bvpProps.call_env_const|split|0')).
+% SZS output end Proof for thm.bvpProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 155
+% Passive clauses: 688
+% Generated clauses: 8148
+% Final active clauses: 151
+% Final passive clauses: 470
+% Input formulas: 106
+% Initial clauses: 117
+% 
+% Duplicate literals: 632
+% Trivial inequalities: 73
+% Fw subsumption resolutions: 766
+% Fw demodulations: 910
+% Bw demodulations: 2
+% 
+% Simple tautologies: 157
+% Equational tautologies: 22
+% Forward subsumptions: 4516
+% 
+% Binary resolution: 9
+% Forward superposition: 3363
+% Backward superposition: 2017
+% Self superposition: 111
+% Equality factoring: 49
+% Equality resolution: 11
+% 
+% Split clauses: 207
+% Split components: 423
+% SAT solver clauses: 439
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 65
+% 
+% Sat splits: 207
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 438
+% TWLsolver calls for satisfiability: 73
+% 
+% Memory used [KB]: 6908
+% Time elapsed: 0.426 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.44 s

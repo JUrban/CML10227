@@ -1,0 +1,225 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.bvp_to_wordProps
+% (110039)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 66
+% Passive clauses: 1927
+% Generated clauses: 11573
+% Final active clauses: 63
+% Final passive clauses: 1752
+% Input formulas: 10
+% Initial clauses: 11
+% 
+% Duplicate literals: 813
+% Trivial inequalities: 139
+% Fw subsumption resolutions: 1482
+% Fw demodulations: 624
+% 
+% Simple tautologies: 241
+% Equational tautologies: 87
+% Forward subsumptions: 4850
+% Fw demodulations to eq. taut.: 6
+% 
+% Binary resolution: 28
+% Forward superposition: 5259
+% Backward superposition: 3480
+% Self superposition: 339
+% Equality factoring: 240
+% Equality resolution: 10
+% 
+% Split clauses: 589
+% Split components: 1183
+% SAT solver clauses: 1495
+% SAT solver unit clauses: 241
+% SAT solver binary clauses: 412
+% 
+% Sat splits: 589
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1491
+% TWLsolver calls for satisfiability: 81
+% 
+% Memory used [KB]: 5373
+% Time elapsed: 0.630 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvp_to_wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_to_wordProps
+% SZS output start Proof for thm.bvp_to_wordProps
+fof(f5919,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f5896,f53,f55,f30,f43,f35,f49,f2765,f2766,f39,f51,f293,f299,f38,f50])).
+fof(f50,plain,(
+  ( ! [X2,X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))) ) | $spl10),
+  inference(cnf_transformation,[],[f50_D])).
+fof(f50_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))) ) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f38,plain,(
+  ( ! [X2,X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))) )),
+  inference(cnf_transformation,[],[f20])).
+fof(f20,plain,(
+  ! [X0,X1,X2] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(flattening,[],[f19])).
+fof(f19,plain,(
+  ! [X0] : ! [X1,X2] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6] : ! [X9,X7] : s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),X7),s('type.fcp.cart'(bool,X6),X9))) = s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),X7)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_2|49|5_prove_ltb','thm.words.WORD_MULT_COMM')).
+fof(f299,plain,(
+  ( ! [X2,X3] : (s('type.fcp.cart'(bool,X2),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X2),X3))) = s('type.fcp.cart'(bool,X2),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X2),X3),s('type.fcp.cart'(bool,X2),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X2),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))))))) ) | $spl48),
+  inference(cnf_transformation,[],[f299_D])).
+fof(f299_D,plain,(
+  ( ! [X2,X3] : (s('type.fcp.cart'(bool,X2),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X2),X3))) = s('type.fcp.cart'(bool,X2),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X2),X3),s('type.fcp.cart'(bool,X2),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X2),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))))))) ) <=> ~$spl48),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl48])])).
+fof(f293,plain,(
+  ( ! [X2,X3] : (s('type.fcp.cart'(bool,X2),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X2),X3))) = s('type.fcp.cart'(bool,X2),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X2),X3),s('type.fcp.cart'(bool,X2),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X2),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))))))) ) | ($spl8 | $spl10)),
+  inference(superposition,[],[f49,f50])).
+fof(f51,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X3))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))),s('type.fcp.cart'(bool,X0),X3)))) ) | $spl12),
+  inference(cnf_transformation,[],[f51_D])).
+fof(f51_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X3))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))),s('type.fcp.cart'(bool,X0),X3)))) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f39,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X3))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))),s('type.fcp.cart'(bool,X0),X3)))) )),
+  inference(cnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0,X1,X2,X3] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X3))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))),s('type.fcp.cart'(bool,X0),X3)))),
+  inference(flattening,[],[f21])).
+fof(f21,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X3))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))),s('type.fcp.cart'(bool,X0),X3)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6] : ! [X9,X7,X8] : s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),X7),s('type.fcp.cart'(bool,X6),X8))))) = s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),X7))),s('type.fcp.cart'(bool,X6),X8)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_2|49|5_prove_ltb','thm.words.WORD_MULT_ASSOC')).
+fof(f2766,plain,(
+  ( ! [X8,X7,X9] : (s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),X9))))) = s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),X9)))))) ) | $spl196),
+  inference(cnf_transformation,[],[f2766_D])).
+fof(f2766_D,plain,(
+  ( ! [X8,X7,X9] : (s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),X9))))) = s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),X9)))))) ) <=> ~$spl196),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl196])])).
+fof(f2765,plain,(
+  ( ! [X8,X7,X9] : (s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),X9))))) = s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),X9)))))) ) | ($spl12 | $spl48)),
+  inference(forward_demodulation,[],[f2754,f299])).
+fof(f2754,plain,(
+  ( ! [X8,X7,X9] : (s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),X9))))) = s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X8),s('type.fcp.cart'(bool,X7),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X7),X9),s('type.fcp.cart'(bool,X7),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X7),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))))))))) ) | ($spl12 | $spl48)),
+  inference(superposition,[],[f299,f51])).
+fof(f49,plain,(
+  ( ! [X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),X1)))) ) | $spl8),
+  inference(cnf_transformation,[],[f49_D])).
+fof(f49_D,plain,(
+  ( ! [X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),X1)))) ) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f35,plain,(
+  ( ! [X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),X1)))) )),
+  inference(cnf_transformation,[],[f16])).
+fof(f16,plain,(
+  ! [X0,X1] : s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(flattening,[],[f15])).
+fof(f15,plain,(
+  ! [X0] : ! [X1] : s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X6] : ! [X7] : s('type.fcp.cart'(bool,X6),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X6),X7))) = s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X6),X7)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_2|49|5_prove_ltb','thm.words.WORD_NEG_MUL')).
+fof(f43,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) | $spl1),
+  inference(cnf_transformation,[],[f43_D])).
+fof(f43_D,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f30,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1)))))),
+  inference(cnf_transformation,[],[f27])).
+fof(f27,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f25])).
+fof(f25,plain,(
+  ? [X0,X1] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))))) != s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),X1)))))),
+  inference(ennf_transformation,[],[f13])).
+fof(f13,plain,(
+  ~! [X0,X1] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),X1)))))),
+  inference(flattening,[],[f12])).
+fof(f12,plain,(
+  ~! [X0] : ! [X1] : s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),X1))))) = s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X0),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X6),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X6),X7))))) = s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X6),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X6),X7))))) = s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,X6),'const.words.n2w_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.fcp.cart'(bool,X6),'const.words.word_mul_2'(s('type.fcp.cart'(bool,X6),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,X6),X7)))))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_2|49|5_prove_ltb','thm.bvp_to_wordProps.bvp_to_wordProps_2|49|5_prove_ltb')).
+fof(f55,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) | $spl17),
+  inference(cnf_transformation,[],[f55_D])).
+fof(f55_D,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) <=> ~$spl17),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl17])])).
+fof(f53,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),sK1))))) | ($spl1 | $spl8)),
+  inference(forward_demodulation,[],[f43,f49])).
+fof(f5896,plain,(
+  $false | ($spl17 | $spl196)),
+  inference(trivial_inequality_removal,[],[f5867])).
+fof(f5867,plain,(
+  s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) != s('type.fcp.cart'(bool,sK0),'const.words.word_2comp_1'(s('type.fcp.cart'(bool,sK0),'const.words.word_mul_2'(s('type.fcp.cart'(bool,sK0),'const.misc.bytes_in_word_0'),s('type.fcp.cart'(bool,sK0),sK1))))) | ($spl17 | $spl196)),
+  inference(superposition,[],[f55,f2766])).
+% SZS output end Proof for thm.bvp_to_wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 44
+% Passive clauses: 161
+% Generated clauses: 5710
+% Final active clauses: 41
+% Final passive clauses: 115
+% Input formulas: 10
+% Initial clauses: 11
+% 
+% Duplicate literals: 942
+% Trivial inequalities: 43
+% Fw subsumption resolutions: 239
+% Fw demodulations: 134
+% Bw demodulations: 1
+% Condensations: 1336
+% 
+% Simple tautologies: 128
+% Equational tautologies: 60
+% Forward subsumptions: 2276
+% Fw demodulations to eq. taut.: 15
+% 
+% Binary resolution: 12
+% Forward superposition: 1491
+% Backward superposition: 1002
+% Self superposition: 218
+% Equality factoring: 178
+% Equality resolution: 3
+% 
+% Split clauses: 79
+% Split components: 159
+% SAT solver clauses: 451
+% SAT solver unit clauses: 18
+% SAT solver binary clauses: 69
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 79
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 450
+% TWLsolver calls for satisfiability: 53
+% 
+% Memory used [KB]: 4477
+% Time elapsed: 0.535 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.173 s

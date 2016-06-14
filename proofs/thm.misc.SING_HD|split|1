@@ -1,0 +1,148 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f790,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f788,f83,f139,f137,f773,f84,f140,f138])).
+fof(f138,plain,(
+  s('type.list.list'(sK0),sK1) != s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) | $spl1),
+  inference(cnf_transformation,[],[f138_D])).
+fof(f138_D,plain,(
+  s('type.list.list'(sK0),sK1) != s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f140,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) | $spl3),
+  inference(cnf_transformation,[],[f140_D])).
+fof(f140_D,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f84,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) | s('type.list.list'(sK0),sK1) != s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,plain,(
+  (s('type.list.list'(sK0),sK1) = s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))) & (s('type.list.list'(sK0),sK1) != s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f52])).
+fof(f52,plain,(
+  ? [X0,X1] : ((s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))) & (s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))),
+  inference(nnf_transformation,[],[f46])).
+fof(f46,plain,(
+  ? [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) <~> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (s('type.list.list'(X6),X7) = s('type.list.list'(X6),'const.list.CONS_2'(s(X6,'const.list.HD_1'(s('type.list.list'(X6),X7))),s('type.list.list'(X6),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (s('type.list.list'(X6),X7) = s('type.list.list'(X6),'const.list.CONS_2'(s(X6,'const.list.HD_1'(s('type.list.list'(X6),X7))),s('type.list.list'(X6),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  file('thm.misc.SING_HD|split|1','thm.misc.SING_HD|split|1')).
+fof(f773,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(subsumption_resolution,[],[f772,f138])).
+fof(f772,plain,(
+  s('type.list.list'(sK0),sK1) = s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) | $spl2),
+  inference(equality_resolution,[],[f771])).
+fof(f771,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0')))) ) | $spl2),
+  inference(forward_demodulation,[],[f127,f139])).
+fof(f127,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))) )),
+  inference(cnf_transformation,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1] : ((s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))) & (s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0')))))),
+  inference(nnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0] : ! [X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X7] : (s('type.list.list'(X6),X7) = s('type.list.list'(X6),'const.list.CONS_2'(s(X6,'const.list.HD_1'(s('type.list.list'(X6),X7))),s('type.list.list'(X6),'const.list.NIL_0'))) <=> s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  file('thm.misc.SING_HD|split|1','thm.misc.SING_HD|split|0')).
+fof(f137,plain,(
+  s('type.list.list'(sK0),sK1) = s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) | $spl0),
+  inference(cnf_transformation,[],[f137_D])).
+fof(f137_D,plain,(
+  s('type.list.list'(sK0),sK1) = s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f139,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) | $spl2),
+  inference(cnf_transformation,[],[f139_D])).
+fof(f139_D,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f83,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) | s('type.list.list'(sK0),sK1) = s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f53])).
+fof(f788,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f787,f140])).
+fof(f787,plain,(
+  s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) | $spl0),
+  inference(forward_demodulation,[],[f786,f137])).
+fof(f786,plain,(
+  s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))))) | $spl0),
+  inference(subsumption_resolution,[],[f774,f137])).
+fof(f774,plain,(
+  s('type.list.list'(sK0),sK1) != s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))) | s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,'const.list.HD_1'(s('type.list.list'(sK0),sK1))),s('type.list.list'(sK0),'const.list.NIL_0'))))) | $spl0),
+  inference(superposition,[],[f126,f137])).
+fof(f126,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.CONS_2'(s(X0,'const.list.HD_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.NIL_0'))) | s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))) )),
+  inference(cnf_transformation,[],[f79])).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 27
+% Passive clauses: 155
+% Generated clauses: 672
+% Final active clauses: 20
+% Final passive clauses: 77
+% Input formulas: 21
+% Initial clauses: 52
+% 
+% Duplicate literals: 81
+% Trivial inequalities: 7
+% Fw subsumption resolutions: 71
+% Fw demodulations: 3
+% 
+% Simple tautologies: 63
+% Equational tautologies: 28
+% Forward subsumptions: 247
+% 
+% Binary resolution: 36
+% Factoring: 1
+% Forward superposition: 151
+% Backward superposition: 158
+% Self superposition: 44
+% Equality factoring: 50
+% Equality resolution: 2
+% 
+% Split clauses: 21
+% Split components: 42
+% SAT solver clauses: 58
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 29
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 21
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 55
+% TWLsolver calls for satisfiability: 37
+% 
+% Memory used [KB]: 895
+% Time elapsed: 0.024 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.026 s

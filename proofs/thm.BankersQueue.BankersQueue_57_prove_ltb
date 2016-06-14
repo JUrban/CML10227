@@ -1,0 +1,508 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.BankersQueue
+% (146749)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 258
+% Passive clauses: 3675
+% Generated clauses: 31651
+% Final active clauses: 210
+% Final passive clauses: 2997
+% Input formulas: 59
+% Initial clauses: 80
+% 
+% Duplicate literals: 207
+% Trivial inequalities: 549
+% Fw subsumption resolutions: 2449
+% Fw demodulations: 10957
+% Bw demodulations: 28
+% 
+% Simple tautologies: 73
+% Equational tautologies: 24
+% Forward subsumptions: 13883
+% Fw demodulations to eq. taut.: 7
+% Bw demodulations to eq. taut.: 12
+% 
+% Binary resolution: 35
+% Forward superposition: 8803
+% Backward superposition: 8331
+% Self superposition: 119
+% Equality factoring: 36
+% Equality resolution: 19
+% 
+% Split clauses: 69
+% Split components: 138
+% SAT solver clauses: 124
+% SAT solver unit clauses: 5
+% SAT solver binary clauses: 15
+% SAT solver learnt clauses: 1
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 69
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 123
+% TWLsolver calls for satisfiability: 32
+% 
+% Memory used [KB]: 22259
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.BankersQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BankersQueue
+% SZS output start Proof for thm.BankersQueue
+fof(f7550,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f302,f304,f1635,f1636,f151,f236,f385,f398,f180,f269,f1746,f1753,f1751,f1816,f156,f244,f7536,f149,f233,f231,f7121,f7122,f7140,f7162,f7231,f7232,f7327,f7328,f7449,f179,f268,f160,f249,f1123,f1127,f203,f279,f204,f280,f158,f247,f202,f278,f216,f284,f6943,f6944,f212,f288,f150,f234,f232])).
+fof(f232,plain,(
+  ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | $spl1),
+  inference(cnf_transformation,[],[f232_D])).
+fof(f232_D,plain,(
+  ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f234,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) | $spl3),
+  inference(cnf_transformation,[],[f234_D])).
+fof(f234_D,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f150,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) | ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))))),
+  inference(cnf_transformation,[],[f128])).
+fof(f128,plain,(
+  (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1)) & (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f127])).
+fof(f127,plain,(
+  ? [X0,X1] : ((p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) & (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1)))),
+  inference(nnf_transformation,[],[f125])).
+fof(f125,plain,(
+  ? [X0,X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) <~> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(ennf_transformation,[],[f62])).
+fof(f62,plain,(
+  ~! [X0,X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(flattening,[],[f61])).
+fof(f61,plain,(
+  ~! [X0] : ! [X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X6),X7),s('type.BankersQueue.queue'(X6),'const.BankersQueue.empty_0')))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X6),X7),s('type.BankersQueue.queue'(X6),'const.BankersQueue.empty_0')))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.BankersQueue.BankersQueue_57_prove_ltb')).
+fof(f288,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5)))))) ) | $spl90),
+  inference(cnf_transformation,[],[f288_D])).
+fof(f288_D,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5)))))) ) <=> ~$spl90),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl90])])).
+fof(f212,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) | ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f146,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) | (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) & s('type.num.num',X4) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) & s('type.num.num',X2) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2)))))) & (s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) | s('type.num.num',X4) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) | s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2)))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))))),
+  inference(flattening,[],[f145])).
+fof(f145,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) | (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) & s('type.num.num',X4) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) & s('type.num.num',X2) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2)))))) & ((s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) | s('type.num.num',X4) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) | s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2))))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))))),
+  inference(nnf_transformation,[],[f111])).
+fof(f111,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) <=> (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) & s('type.num.num',X4) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) & s('type.num.num',X2) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2))))))),
+  inference(flattening,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) <=> (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) & s('type.num.num',X4) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) & s('type.num.num',X2) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X8,X9,X10,X11,X12] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X6),X8),s('type.BankersQueue.queue'(X6),'const.BankersQueue.QUEUE_4'(s('type.num.num',X9),s('type.list.list'(X6),X10),s('type.num.num',X11),s('type.list.list'(X6),X12)))))) <=> (s('type.list.list'(X6),X8) = s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X10),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X12))))) & s('type.num.num',X11) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X12))) & s('type.num.num',X9) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X10))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X11),s('type.num.num',X9))))))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.BankersQueue.queue_inv_def')).
+fof(f6944,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) ) | $spl730),
+  inference(cnf_transformation,[],[f6944_D])).
+fof(f6944_D,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) ) <=> ~$spl730),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl730])])).
+fof(f6943,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0'))))) ) | ($spl58 | $spl70 | $spl90 | $spl226)),
+  inference(forward_demodulation,[],[f6942,f278])).
+fof(f6942,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),'const.list.NIL_0'))) | ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0'))))) ) | ($spl58 | $spl90 | $spl226)),
+  inference(forward_demodulation,[],[f6910,f1127])).
+fof(f6910,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0')))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))))) ) | ($spl58 | $spl90)),
+  inference(superposition,[],[f288,f268])).
+fof(f284,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2)))) | s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) | s('type.num.num',X4) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) ) | $spl82),
+  inference(cnf_transformation,[],[f284_D])).
+fof(f284_D,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2)))) | s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) | s('type.num.num',X4) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5))))))) ) <=> ~$spl82),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl82])])).
+fof(f216,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X4),s('type.num.num',X2)))) | s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X3))) | s('type.num.num',X4) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X5))) | s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X3),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X5)))))) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f278,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) ) | $spl70),
+  inference(cnf_transformation,[],[f278_D])).
+fof(f278_D,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) ) <=> ~$spl70),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl70])])).
+fof(f202,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f95])).
+fof(f95,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6] : ! [X17] : s('type.list.list'(X6),X17) = s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X17),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.list.APPEND_NIL')).
+fof(f247,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))) ) | $spl16),
+  inference(cnf_transformation,[],[f247_D])).
+fof(f247_D,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f158,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f65])).
+fof(f65,plain,(
+  ! [X0] : s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X6] : s('type.num.num','const.num.|48|_0') = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.list.LENGTH|split|0')).
+fof(f280,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) ) | $spl74),
+  inference(cnf_transformation,[],[f280_D])).
+fof(f280_D,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) ) <=> ~$spl74),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl74])])).
+fof(f204,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f100])).
+fof(f100,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f99])).
+fof(f99,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X19] : s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X19))) = s('type.list.list'(X6),'const.list.REV_2'(s('type.list.list'(X6),X19),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.list.REVERSE_REV')).
+fof(f279,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))) ) | $spl72),
+  inference(cnf_transformation,[],[f279_D])).
+fof(f279_D,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))) ) <=> ~$spl72),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl72])])).
+fof(f203,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f98])).
+fof(f98,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))),
+  inference(flattening,[],[f97])).
+fof(f97,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X6] : ! [X18] : s('type.list.list'(X6),X18) = s('type.list.list'(X6),'const.list.REV_2'(s('type.list.list'(X6),'const.list.NIL_0'),s('type.list.list'(X6),X18)))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.list.REV_DEF|split|0')).
+fof(f1127,plain,(
+  ( ! [X0] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))) ) | $spl226),
+  inference(cnf_transformation,[],[f1127_D])).
+fof(f1127_D,plain,(
+  ( ! [X0] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))) ) <=> ~$spl226),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl226])])).
+fof(f1123,plain,(
+  ( ! [X0] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))) ) | ($spl72 | $spl74)),
+  inference(superposition,[],[f280,f279])).
+fof(f249,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))) ) | $spl20),
+  inference(cnf_transformation,[],[f249_D])).
+fof(f249_D,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f160,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X0] : s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))),
+  inference(rectify,[],[f50])).
+fof(f50,axiom,(
+  ! [X20] : s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X20)))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.numeral.numeral_distrib|split|26')).
+fof(f268,plain,(
+  ( ! [X0] : (s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0') = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0')))) ) | $spl58),
+  inference(cnf_transformation,[],[f268_D])).
+fof(f268_D,plain,(
+  ( ! [X0] : (s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0') = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0')))) ) <=> ~$spl58),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl58])])).
+fof(f179,plain,(
+  ( ! [X0] : (s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0') = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,plain,(
+  ! [X0] : s('type.BankersQueue.queue'(X0),'const.BankersQueue.empty_0') = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : s('type.BankersQueue.queue'(X6),'const.BankersQueue.empty_0') = s('type.BankersQueue.queue'(X6),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(X6),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb','thm.BankersQueue.empty_def')).
+fof(f7449,plain,(
+  $false | ($spl13 | $spl16 | $spl58 | $spl282 | $spl766)),
+  inference(subsumption_resolution,[],[f7448,f244])).
+fof(f7448,plain,(
+  p(s(bool,'F_0')) | ($spl16 | $spl58 | $spl282 | $spl766)),
+  inference(forward_demodulation,[],[f7447,f1753])).
+fof(f7447,plain,(
+  p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | ($spl16 | $spl58 | $spl766)),
+  inference(forward_demodulation,[],[f7446,f268])).
+fof(f7446,plain,(
+  p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ($spl16 | $spl766)),
+  inference(subsumption_resolution,[],[f7407,f247])).
+fof(f7407,plain,(
+  ( ! [X0] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.num.num','const.num.|48|_0') != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0')))) ) | ($spl16 | $spl766)),
+  inference(superposition,[],[f7328,f247])).
+fof(f7328,plain,(
+  ( ! [X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1)) ) | $spl766),
+  inference(cnf_transformation,[],[f7328_D])).
+fof(f7328_D,plain,(
+  ( ! [X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1)) ) <=> ~$spl766),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl766])])).
+fof(f7327,plain,(
+  ( ! [X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.num.|48|_0'),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1)) ) | ($spl4 | $spl16 | $spl20 | $spl756)),
+  inference(forward_demodulation,[],[f7326,f247])).
+fof(f7326,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | ($spl4 | $spl16 | $spl20 | $spl756)),
+  inference(subsumption_resolution,[],[f7325,f236])).
+fof(f7325,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | ($spl16 | $spl20 | $spl756)),
+  inference(forward_demodulation,[],[f7324,f249])).
+fof(f7324,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X1)))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | ($spl16 | $spl756)),
+  inference(forward_demodulation,[],[f7323,f247])).
+fof(f7323,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.num.num',X1)))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | ($spl16 | $spl756)),
+  inference(trivial_inequality_removal,[],[f7285])).
+fof(f7285,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.|48|_0') | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.num.num',X1)))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | ($spl16 | $spl756)),
+  inference(superposition,[],[f7232,f247])).
+fof(f7232,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X0) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X0),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | $spl756),
+  inference(cnf_transformation,[],[f7232_D])).
+fof(f7232_D,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X1) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X0) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X0),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) <=> ~$spl756),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl756])])).
+fof(f7231,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X0),s('type.list.list'(sK0),'const.list.NIL_0'),s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X0) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1)) ) | ($spl16 | $spl226 | $spl754)),
+  inference(forward_demodulation,[],[f7230,f1127])).
+fof(f7230,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X0) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.NIL_0'))),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X0),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.NIL_0'))),s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1)) ) | ($spl16 | $spl226 | $spl754)),
+  inference(forward_demodulation,[],[f7182,f247])).
+fof(f7182,plain,(
+  ( ! [X0,X1] : (s('type.num.num',X0) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),'const.list.NIL_0'))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.NIL_0'))),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X0),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.NIL_0'))),s('type.num.num',X1),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X1)) ) | ($spl226 | $spl754)),
+  inference(superposition,[],[f7162,f1127])).
+fof(f7162,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X1))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(sK0),X1),s('type.num.num',X0),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X0)) ) | $spl754),
+  inference(cnf_transformation,[],[f7162_D])).
+fof(f7162_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X1))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(sK0),X1),s('type.num.num',X0),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X0)) ) <=> ~$spl754),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl754])])).
+fof(f7140,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X0) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(sK0),X1),s('type.num.num',X0),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))) | s('type.num.num',X2) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X1)))) ) | $spl750),
+  inference(equality_resolution,[],[f7122])).
+fof(f7122,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),X39) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X40) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39)))) ) | $spl750),
+  inference(cnf_transformation,[],[f7122_D])).
+fof(f7122_D,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),X39) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X40) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),'const.list.NIL_0')))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39)))) ) <=> ~$spl750),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl750])])).
+fof(f7121,plain,(
+  ( ! [X39,X41,X38,X40] : (p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.num.num','const.num.|48|_0') != s('type.num.num',X40) | s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),X39) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39)))) ) | ($spl2 | $spl16 | $spl70 | $spl82 | $spl226)),
+  inference(forward_demodulation,[],[f7120,f233])).
+fof(f7120,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.num.num','const.num.|48|_0') != s('type.num.num',X40) | s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),X39) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),sK1))))))) ) | ($spl2 | $spl16 | $spl70 | $spl82 | $spl226)),
+  inference(forward_demodulation,[],[f7119,f247])).
+fof(f7119,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.num.num',X40) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),'const.list.NIL_0'))) | s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),X39) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),sK1))))))) ) | ($spl2 | $spl70 | $spl82 | $spl226)),
+  inference(forward_demodulation,[],[f7118,f233])).
+fof(f7118,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),X39) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39))) | s('type.num.num',X40) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),sK1))))))) ) | ($spl2 | $spl70 | $spl82 | $spl226)),
+  inference(forward_demodulation,[],[f7117,f278])).
+fof(f7117,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X39),s('type.list.list'(sK0),'const.list.NIL_0'))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39))) | s('type.num.num',X40) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),sK1))))))) ) | ($spl2 | $spl82 | $spl226)),
+  inference(forward_demodulation,[],[f7075,f1127])).
+fof(f7075,plain,(
+  ( ! [X39,X41,X38,X40] : (s('type.list.list'(sK0),X38) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X39),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.NIL_0'))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X40),s('type.num.num',X41)))) | s('type.num.num',X41) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),X39))) | s('type.num.num',X40) != s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),X38),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X41),s('type.list.list'(sK0),X39),s('type.num.num',X40),s('type.list.list'(sK0),sK1))))))) ) | ($spl2 | $spl82)),
+  inference(superposition,[],[f284,f233])).
+fof(f231,plain,(
+  p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | $spl0),
+  inference(cnf_transformation,[],[f231_D])).
+fof(f231_D,plain,(
+  p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f233,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | $spl2),
+  inference(cnf_transformation,[],[f233_D])).
+fof(f233_D,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f149,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))))),
+  inference(cnf_transformation,[],[f128])).
+fof(f7536,plain,(
+  $false | ($spl0 | $spl3 | $spl730)),
+  inference(subsumption_resolution,[],[f7525,f234])).
+fof(f7525,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | ($spl0 | $spl730)),
+  inference(resolution,[],[f231,f6944])).
+fof(f244,plain,(
+  ~p(s(bool,'F_0')) | $spl13),
+  inference(cnf_transformation,[],[f244_D])).
+fof(f244_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl13),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl13])])).
+fof(f156,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f63])).
+fof(f63,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb',aHL_FALSITY)).
+fof(f1816,plain,(
+  $false | ($spl4 | $spl13 | $spl280)),
+  inference(subsumption_resolution,[],[f1770,f236])).
+fof(f1770,plain,(
+  ~p(s(bool,'T_0')) | ($spl13 | $spl280)),
+  inference(backward_demodulation,[],[f1751,f244])).
+fof(f1751,plain,(
+  ( ! [X9] : (s(bool,'T_0') = s(bool,X9)) ) | $spl280),
+  inference(cnf_transformation,[],[f1751_D])).
+fof(f1751_D,plain,(
+  ( ! [X9] : (s(bool,'T_0') = s(bool,X9)) ) <=> ~$spl280),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl280])])).
+fof(f1753,plain,(
+  s(bool,'F_0') = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | $spl282),
+  inference(cnf_transformation,[],[f1753_D])).
+fof(f1753_D,plain,(
+  s(bool,'F_0') = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) <=> ~$spl282),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl282])])).
+fof(f1746,plain,(
+  ( ! [X9] : (s(bool,'F_0') = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | s(bool,'T_0') = s(bool,X9)) ) | ($spl60 | $spl266)),
+  inference(duplicate_literal_removal,[],[f1686])).
+fof(f1686,plain,(
+  ( ! [X9] : (s(bool,'F_0') = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | s(bool,'T_0') = s(bool,X9) | s(bool,'T_0') = s(bool,X9)) ) | ($spl60 | $spl266)),
+  inference(superposition,[],[f1636,f269])).
+fof(f269,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) | $spl60),
+  inference(cnf_transformation,[],[f269_D])).
+fof(f269_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl60),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl60])])).
+fof(f180,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb',aHL_BOOL_CASES)).
+fof(f398,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) ) | $spl118),
+  inference(cnf_transformation,[],[f398_D])).
+fof(f398_D,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl118),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl118])])).
+fof(f385,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) ) | $spl60),
+  inference(superposition,[],[f269,f269])).
+fof(f236,plain,(
+  p(s(bool,'T_0')) | $spl4),
+  inference(cnf_transformation,[],[f236_D])).
+fof(f236_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f151,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.BankersQueue.BankersQueue_57_prove_ltb',aHL_TRUTH)).
+fof(f1636,plain,(
+  ( ! [X9] : (s(bool,X9) = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | s(bool,'T_0') = s(bool,X9)) ) | $spl266),
+  inference(cnf_transformation,[],[f1636_D])).
+fof(f1636_D,plain,(
+  ( ! [X9] : (s(bool,X9) = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | s(bool,'T_0') = s(bool,X9)) ) <=> ~$spl266),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl266])])).
+fof(f1635,plain,(
+  ( ! [X9] : (s(bool,X9) = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | s(bool,'T_0') = s(bool,X9)) ) | ($spl4 | $spl117 | $spl118)),
+  inference(subsumption_resolution,[],[f1469,f236])).
+fof(f1469,plain,(
+  ( ! [X9] : (~p(s(bool,'T_0')) | s(bool,X9) = s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0'))) | s(bool,'T_0') = s(bool,X9)) ) | ($spl117 | $spl118)),
+  inference(superposition,[],[f304,f398])).
+fof(f304,plain,(
+  ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | $spl117),
+  inference(cnf_transformation,[],[f304_D])).
+fof(f304_D,plain,(
+  ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) <=> ~$spl117),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl117])])).
+fof(f302,plain,(
+  ~p(s(bool,'const.BankersQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.empty_0')))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f232,f233])).
+% SZS output end Proof for thm.BankersQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 138
+% Passive clauses: 410
+% Generated clauses: 7400
+% Final active clauses: 113
+% Final passive clauses: 206
+% Input formulas: 59
+% Initial clauses: 80
+% 
+% Duplicate literals: 129
+% Trivial inequalities: 54
+% Fw subsumption resolutions: 350
+% Fw demodulations: 1596
+% Bw demodulations: 73
+% Condensations: 111
+% Global subsumptions: 4
+% 
+% Simple tautologies: 50
+% Equational tautologies: 22
+% Forward subsumptions: 3756
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 10
+% 
+% Binary resolution: 21
+% Forward superposition: 2981
+% Backward superposition: 1454
+% Self superposition: 67
+% Equality factoring: 34
+% Equality resolution: 9
+% 
+% Split clauses: 22
+% Split components: 44
+% SAT solver clauses: 982
+% SAT solver unit clauses: 123
+% SAT solver binary clauses: 34
+% SAT solver learnt clauses: 13
+% SAT solver learnt literals: 4
+% 
+% Sat splits: 22
+% Sat splitting refutations: 19
+% 
+% TWLsolver clauses: 961
+% TWLsolver calls for satisfiability: 266
+% 
+% Memory used [KB]: 7291
+% Time elapsed: 0.186 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.82 s

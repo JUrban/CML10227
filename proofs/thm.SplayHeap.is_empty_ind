@@ -1,0 +1,229 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.SplayHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.SplayHeap
+% SZS output start Proof for thm.SplayHeap
+fof(f2869,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2862,f94,f148,f2814,f150,f2331,f92,f145,f152])).
+fof(f152,plain,(
+  $false | ($spl0 | $spl6)),
+  inference(resolution,[],[f150,f145])).
+fof(f145,plain,(
+  p(s(bool,'T_0')) | $spl0),
+  inference(cnf_transformation,[],[f145_D])).
+fof(f145_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f92,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.SplayHeap.is_empty_ind',aHL_TRUTH)).
+fof(f2331,plain,(
+  ( ! [X1] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),X1))))) ) | $spl62),
+  inference(cnf_transformation,[],[f2331_D])).
+fof(f2331_D,plain,(
+  ( ! [X1] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),X1))))) ) <=> ~$spl62),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl62])])).
+fof(f150,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) | $spl6),
+  inference(cnf_transformation,[],[f150_D])).
+fof(f150_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f2814,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),X1))))) ) | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f2813,f90])).
+fof(f90,plain,(
+  ( ! [X4,X5,X3] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(sK0),X3),s(sK0,X4),s('type.SplayHeap.heap'(sK0),X5))))))) )),
+  inference(cnf_transformation,[],[f70])).
+fof(f70,plain,(
+  p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Empty_0')))) & ! [X3,X4,X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(sK0),X3),s(sK0,X4),s('type.SplayHeap.heap'(sK0),X5)))))) & ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f69])).
+fof(f69,plain,(
+  ? [X0,X1] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X3,X4,X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X3),s(X0,X4),s('type.SplayHeap.heap'(X0),X5)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))))),
+  inference(rectify,[],[f52])).
+fof(f52,plain,(
+  ? [X0,X1] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X3),s('type.SplayHeap.heap'(X0),X4)))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(flattening,[],[f51])).
+fof(f51,plain,(
+  ? [X0,X1] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X3),s('type.SplayHeap.heap'(X0),X4))))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X3),s('type.SplayHeap.heap'(X0),X4))))))) => ! [X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X3),s('type.SplayHeap.heap'(X0),X4))))))) => ! [X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),'const.SplayHeap.Empty_0')))) & ! [X8,X9,X10] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X6),X8),s(X6,X9),s('type.SplayHeap.heap'(X6),X10))))))) => ! [X8] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),'const.SplayHeap.Empty_0')))) & ! [X8,X9,X10] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X6),X8),s(X6,X9),s('type.SplayHeap.heap'(X6),X10))))))) => ! [X8] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),X8)))))),
+  file('thm.SplayHeap.is_empty_ind','thm.SplayHeap.is_empty_ind')).
+fof(f2813,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(sK0),sK3(sK1,sK0)),s(sK0,sK5(sK1,sK0)),s('type.SplayHeap.heap'(sK0),sK4(sK1,sK0))))))) | p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),X1))))) ) | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f2795,f96])).
+fof(f96,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f71])).
+fof(f71,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f26])).
+fof(f26,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X26] : (s(bool,'F_0') = s(bool,X26) <=> ~p(s(bool,X26)))),
+  file('thm.SplayHeap.is_empty_ind','thm.bool.EQ_CLAUSES|split|3')).
+fof(f2795,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(sK0),sK3(sK1,sK0)),s(sK0,sK5(sK1,sK0)),s('type.SplayHeap.heap'(sK0),sK4(sK1,sK0))))))) | p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),X1)))) | s(bool,'F_0') = s(bool,X0)) ) | ($spl0 | $spl3)),
+  inference(superposition,[],[f117,f280])).
+fof(f280,plain,(
+  ( ! [X5] : (s(bool,X5) = s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Empty_0'))) | s(bool,'F_0') = s(bool,X5)) ) | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f277,f145])).
+fof(f277,plain,(
+  ( ! [X5] : (~p(s(bool,'T_0')) | s(bool,X5) = s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Empty_0'))) | s(bool,'F_0') = s(bool,X5)) ) | $spl3),
+  inference(superposition,[],[f198,f173])).
+fof(f173,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Empty_0'))) | $spl3),
+  inference(subsumption_resolution,[],[f168,f148])).
+fof(f168,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Empty_0')))),
+  inference(superposition,[],[f89,f95])).
+fof(f95,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.SplayHeap.is_empty_ind',aHL_BOOL_CASES)).
+fof(f89,plain,(
+  p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),'const.SplayHeap.Empty_0'))))),
+  inference(cnf_transformation,[],[f70])).
+fof(f198,plain,(
+  ( ! [X8,X7] : (~p(s(bool,X7)) | s(bool,X7) = s(bool,X8) | s(bool,'F_0') = s(bool,X8)) )),
+  inference(resolution,[],[f123,f97])).
+fof(f97,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f71])).
+fof(f123,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f63])).
+fof(f63,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f62])).
+fof(f62,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X27,X28] : ((p(s(bool,X27)) => p(s(bool,X28))) => ((p(s(bool,X28)) => p(s(bool,X27))) => s(bool,X27) = s(bool,X28)))),
+  file('thm.SplayHeap.is_empty_ind','thm.bool.IMP_ANTISYM_AX')).
+fof(f117,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) | ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),sK3(X1,X0)),s(X0,sK5(X1,X0)),s('type.SplayHeap.heap'(X0),sK4(X1,X0))))))) | p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1] : (~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) | (p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),sK3(X1,X0))))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),sK4(X1,X0))))) & ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),sK3(X1,X0)),s(X0,sK5(X1,X0)),s('type.SplayHeap.heap'(X0),sK4(X1,X0)))))))) | ! [X2] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5])],[f83])).
+fof(f83,plain,(
+  ! [X0,X1] : (~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) | ? [X3,X4] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X3)))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X4)))) & ? [X5] : ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X3),s(X0,X5),s('type.SplayHeap.heap'(X0),X4))))))) | ! [X2] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))))),
+  inference(rectify,[],[f59])).
+fof(f59,plain,(
+  ! [X0,X1] : (~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) | ? [X2,X3] : (p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X3)))) & ? [X4] : ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X4),s('type.SplayHeap.heap'(X0),X3))))))) | ! [X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(flattening,[],[f58])).
+fof(f58,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) | ? [X2,X3] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X3))))) & ? [X4] : ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X4),s('type.SplayHeap.heap'(X0),X3)))))))) | ! [X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(ennf_transformation,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X2,X3] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X3))))) => ! [X4] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X4),s('type.SplayHeap.heap'(X0),X3)))))))) => ! [X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(flattening,[],[f36])).
+fof(f36,plain,(
+  ! [X0] : ! [X1] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Empty_0')))) & ! [X2,X3] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X2)))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X3))))) => ! [X4] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X0),X2),s(X0,X4),s('type.SplayHeap.heap'(X0),X3)))))))) => ! [X5] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X0),bool),X1),s('type.SplayHeap.heap'(X0),X5)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X7] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),'const.SplayHeap.Empty_0')))) & ! [X11,X12] : ((p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),X11)))) & p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),X12))))) => ! [X13] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),'const.SplayHeap.Tree_3'(s('type.SplayHeap.heap'(X6),X11),s(X6,X13),s('type.SplayHeap.heap'(X6),X12)))))))) => ! [X11] : p(s(bool,happ(s(fun('type.SplayHeap.heap'(X6),bool),X7),s('type.SplayHeap.heap'(X6),X11)))))),
+  file('thm.SplayHeap.is_empty_ind','thm.SplayHeap.heap_induction')).
+fof(f148,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f148_D])).
+fof(f148_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f94,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.SplayHeap.is_empty_ind',aHL_FALSITY)).
+fof(f2862,plain,(
+  $false | ($spl3 | $spl62)),
+  inference(subsumption_resolution,[],[f2845,f148])).
+fof(f2845,plain,(
+  p(s(bool,'F_0')) | $spl62),
+  inference(superposition,[],[f2331,f157])).
+fof(f157,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),sK2)))),
+  inference(resolution,[],[f91,f97])).
+fof(f91,plain,(
+  ~p(s(bool,happ(s(fun('type.SplayHeap.heap'(sK0),bool),sK1),s('type.SplayHeap.heap'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f70])).
+% SZS output end Proof for thm.SplayHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 55
+% Passive clauses: 563
+% Generated clauses: 2702
+% Final active clauses: 41
+% Final passive clauses: 417
+% Input formulas: 21
+% Initial clauses: 56
+% 
+% Duplicate literals: 164
+% Trivial inequalities: 49
+% Fw subsumption resolutions: 352
+% Fw demodulations: 172
+% Bw demodulations: 10
+% 
+% Simple tautologies: 100
+% Equational tautologies: 34
+% Forward subsumptions: 1116
+% 
+% Binary resolution: 145
+% Factoring: 1
+% Forward superposition: 810
+% Backward superposition: 774
+% Self superposition: 72
+% Equality factoring: 64
+% Equality resolution: 4
+% 
+% Split clauses: 100
+% Split components: 203
+% SAT solver clauses: 205
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 69
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 100
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 202
+% TWLsolver calls for satisfiability: 55
+% 
+% Memory used [KB]: 1918
+% Time elapsed: 0.100 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.113 s

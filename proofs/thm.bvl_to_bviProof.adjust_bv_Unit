@@ -1,0 +1,121 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.bvl_to_bviProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvl_to_bviProof
+% SZS output start Proof for thm.bvl_to_bviProof
+fof(f4421,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f4418])).
+fof(f4418,plain,(
+  s('type.bvlSem.v','const.bvlSem.Unit_0') != s('type.bvlSem.v','const.bvlSem.Unit_0')),
+  inference(superposition,[],[f40,f4415])).
+fof(f4415,plain,(
+  ( ! [X0] : (s('type.bvlSem.v','const.bvlSem.Unit_0') = s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X0),s('type.bvlSem.v','const.bvlSem.Unit_0')))) )),
+  inference(superposition,[],[f2919,f44])).
+fof(f44,plain,(
+  s('type.bvlSem.v','const.bvlSem.Unit_0') = s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num','const.dec_to_exh.tuple_tag_0'),s('type.list.list'('type.bvlSem.v'),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f9])).
+fof(f9,axiom,(
+  s('type.bvlSem.v','const.bvlSem.Unit_0') = s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num','const.dec_to_exh.tuple_tag_0'),s('type.list.list'('type.bvlSem.v'),'const.list.NIL_0')))),
+  file('thm.bvl_to_bviProof.adjust_bv_Unit','thm.bvlSem.Unit_def')).
+fof(f2919,plain,(
+  ( ! [X0,X1] : (s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),'const.list.NIL_0'))) = s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X0),s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),'const.list.NIL_0')))))) )),
+  inference(superposition,[],[f2592,f54])).
+fof(f54,plain,(
+  ( ! [X2,X0,X1] : (s('type.list.list'(X1),'const.list.NIL_0') = s('type.list.list'(X1),'const.list.MAP_2'(s(fun(X0,X1),X2),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f29])).
+fof(f29,plain,(
+  ! [X0,X1,X2] : s('type.list.list'(X1),'const.list.NIL_0') = s('type.list.list'(X1),'const.list.MAP_2'(s(fun(X0,X1),X2),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ! [X0,X1] : ! [X2] : s('type.list.list'(X1),'const.list.NIL_0') = s('type.list.list'(X1),'const.list.MAP_2'(s(fun(X0,X1),X2),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X7,X15] : ! [X16] : s('type.list.list'(X15),'const.list.NIL_0') = s('type.list.list'(X15),'const.list.MAP_2'(s(fun(X7,X15),X16),s('type.list.list'(X7),'const.list.NIL_0')))),
+  file('thm.bvl_to_bviProof.adjust_bv_Unit','thm.list.MAP|split|0')).
+fof(f2592,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),X0))))) = s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),'const.list.MAP_2'(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X2))),s('type.list.list'('type.bvlSem.v'),X0)))))) )),
+  inference(forward_demodulation,[],[f57,f50])).
+fof(f50,plain,(
+  ( ! [X0,X1] : (s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X0),s('type.bvlSem.v',X1))) = s('type.bvlSem.v',happ(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X0))),s('type.bvlSem.v',X1)))) )),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0,X1] : s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X0),s('type.bvlSem.v',X1))) = s('type.bvlSem.v',happ(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X0))),s('type.bvlSem.v',X1)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X19,X20] : s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X19),s('type.bvlSem.v',X20))) = s('type.bvlSem.v',happ(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X19))),s('type.bvlSem.v',X20)))),
+  file('thm.bvl_to_bviProof.adjust_bv_Unit','ARITY_1_2_const.bvl_to_bviProof.adjust_bv')).
+fof(f57,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvlSem.v',happ(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X2))),s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),X0))))) = s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),'const.list.MAP_2'(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X2))),s('type.list.list'('type.bvlSem.v'),X0)))))) )),
+  inference(cnf_transformation,[],[f34])).
+fof(f34,plain,(
+  ! [X0,X1,X2] : s('type.bvlSem.v',happ(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X2))),s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),X0))))) = s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X1),s('type.list.list'('type.bvlSem.v'),'const.list.MAP_2'(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X2))),s('type.list.list'('type.bvlSem.v'),X0)))))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X13,X14,X9] : s('type.bvlSem.v',happ(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X9))),s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X14),s('type.list.list'('type.bvlSem.v'),X13))))) = s('type.bvlSem.v','const.bvlSem.Block_2'(s('type.num.num',X14),s('type.list.list'('type.bvlSem.v'),'const.list.MAP_2'(s(fun('type.bvlSem.v','type.bvlSem.v'),'const.bvl_to_bviProof.adjust_bv_1'(s(fun('type.num.num','type.num.num'),X9))),s('type.list.list'('type.bvlSem.v'),X13)))))),
+  file('thm.bvl_to_bviProof.adjust_bv_Unit','thm.bvl_to_bviProof.adjust_bv_def|split|4')).
+fof(f40,plain,(
+  s('type.bvlSem.v','const.bvlSem.Unit_0') != s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),sK0),s('type.bvlSem.v','const.bvlSem.Unit_0')))),
+  inference(cnf_transformation,[],[f37])).
+fof(f37,plain,(
+  s('type.bvlSem.v','const.bvlSem.Unit_0') != s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),sK0),s('type.bvlSem.v','const.bvlSem.Unit_0')))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f35])).
+fof(f35,plain,(
+  ? [X0] : s('type.bvlSem.v','const.bvlSem.Unit_0') != s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X0),s('type.bvlSem.v','const.bvlSem.Unit_0')))),
+  inference(ennf_transformation,[],[f19])).
+fof(f19,plain,(
+  ~! [X0] : s('type.bvlSem.v','const.bvlSem.Unit_0') = s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X0),s('type.bvlSem.v','const.bvlSem.Unit_0')))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : s('type.bvlSem.v','const.bvlSem.Unit_0') = s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X6),s('type.bvlSem.v','const.bvlSem.Unit_0')))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : s('type.bvlSem.v','const.bvlSem.Unit_0') = s('type.bvlSem.v','const.bvl_to_bviProof.adjust_bv_2'(s(fun('type.num.num','type.num.num'),X6),s('type.bvlSem.v','const.bvlSem.Unit_0')))),
+  file('thm.bvl_to_bviProof.adjust_bv_Unit','thm.bvl_to_bviProof.adjust_bv_Unit')).
+% SZS output end Proof for thm.bvl_to_bviProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 40
+% Passive clauses: 599
+% Generated clauses: 4207
+% Final active clauses: 38
+% Final passive clauses: 524
+% Input formulas: 17
+% Initial clauses: 18
+% 
+% Duplicate literals: 439
+% Trivial inequalities: 62
+% Fw subsumption resolutions: 434
+% Fw demodulations: 1
+% 
+% Simple tautologies: 136
+% Equational tautologies: 90
+% Forward subsumptions: 1785
+% 
+% Binary resolution: 16
+% Forward superposition: 1471
+% Backward superposition: 1207
+% Self superposition: 283
+% Equality factoring: 246
+% Equality resolution: 6
+% 
+% Split clauses: 187
+% Split components: 376
+% SAT solver clauses: 692
+% SAT solver unit clauses: 227
+% SAT solver binary clauses: 234
+% 
+% Sat splits: 187
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 690
+% TWLsolver calls for satisfiability: 26
+% 
+% Memory used [KB]: 2302
+% Time elapsed: 0.328 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.34 s

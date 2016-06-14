@@ -1,0 +1,429 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labProps
+% (56170)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 219
+% Passive clauses: 3296
+% Generated clauses: 22034
+% Final active clauses: 189
+% Final passive clauses: 2878
+% Input formulas: 517
+% Initial clauses: 616
+% 
+% Duplicate literals: 613
+% Trivial inequalities: 544
+% Fw subsumption resolutions: 1783
+% Fw demodulations: 3094
+% Bw demodulations: 30
+% 
+% Simple tautologies: 433
+% Equational tautologies: 44
+% Forward subsumptions: 11955
+% Fw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 218
+% Factoring: 1
+% Forward superposition: 7294
+% Backward superposition: 7542
+% Self superposition: 149
+% Equality factoring: 75
+% Equality resolution: 34
+% 
+% Split clauses: 94
+% Split components: 188
+% SAT solver clauses: 285
+% SAT solver unit clauses: 15
+% SAT solver binary clauses: 83
+% 
+% Sat splits: 94
+% 
+% TWLsolver clauses: 285
+% TWLsolver calls for satisfiability: 61
+% 
+% Memory used [KB]: 13944
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.labProps
+% (56185)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 218
+% Passive clauses: 1905
+% Generated clauses: 23952
+% Final active clauses: 149
+% Final passive clauses: 1000
+% Input formulas: 517
+% Initial clauses: 616
+% 
+% Duplicate literals: 631
+% Trivial inequalities: 496
+% Fw subsumption resolutions: 1265
+% Fw demodulations: 2889
+% Bw demodulations: 719
+% Condensations: 869
+% Global subsumptions: 13
+% 
+% Simple tautologies: 298
+% Equational tautologies: 41
+% Forward subsumptions: 13042
+% Bw demodulations to eq. taut.: 34
+% 
+% Binary resolution: 249
+% Factoring: 1
+% Forward superposition: 6584
+% Backward superposition: 7383
+% Self superposition: 149
+% Equality factoring: 69
+% Equality resolution: 21
+% 
+% Split clauses: 54
+% Split components: 108
+% SAT solver clauses: 3124
+% SAT solver unit clauses: 1086
+% SAT solver binary clauses: 88
+% SAT solver learnt clauses: 26
+% 
+% Sat splits: 54
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 3072
+% TWLsolver calls for satisfiability: 2038
+% 
+% Memory used [KB]: 21108
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.labProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labProps
+% SZS output start Proof for thm.labProps
+fof(f269030,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f269029,f1552])).
+fof(f1552,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.labProps.arith_upd_consts|split|4',aHL_TRUTH)).
+fof(f269029,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f269027,f112511])).
+fof(f112511,plain,(
+  ( ! [X10,X9] : (s(bool,'T_0') = s(bool,happ(s(fun(X9,bool),happ(s(fun(X9,fun(X9,bool)),'=_0'),s(X9,X10))),s(X9,X10)))) )),
+  inference(forward_demodulation,[],[f112150,f4271])).
+fof(f4271,plain,(
+  ( ! [X6,X4,X2,X0,X8,X7,X5,X3,X1] : (s(bool,'T_0') = s(bool,sK30(X0,sK34(X1,X2,X3,X4,'const.asm.Sub_0',X5,X6),X7,X8))) )),
+  inference(unit_resulting_resolution,[],[f3998,f2501])).
+fof(f2501,plain,(
+  ( ! [X12,X10,X13,X11] : (p(s(bool,X11)) | s(bool,'T_0') = s(bool,sK30(X10,X11,X12,X13))) )),
+  inference(subsumption_resolution,[],[f2490,f2170])).
+fof(f2170,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f1558,f1552])).
+fof(f1558,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f1485])).
+fof(f1485,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f521])).
+fof(f521,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f293])).
+fof(f293,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.bool.NOT_CLAUSES|split|1')).
+fof(f2490,plain,(
+  ( ! [X12,X10,X13,X11] : (p(s(bool,'F_0')) | p(s(bool,X11)) | s(bool,'T_0') = s(bool,sK30(X10,X11,X12,X13))) )),
+  inference(superposition,[],[f1957,f1595])).
+fof(f1595,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.labProps.arith_upd_consts|split|4',aHL_BOOL_CASES)).
+fof(f1957,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,sK30(X3,X2,X1,X0))) | p(s(bool,X2))) )),
+  inference(cnf_transformation,[],[f1542])).
+fof(f1542,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,sK30(X3,X2,X1,X0))) | ~p(s(bool,X2)) | p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))))) & ((p(s(bool,X2)) & ~p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))))) | p(s(bool,sK30(X3,X2,X1,X0)))) & s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_failed_fupd_2'(s(fun(bool,bool),'const.combin.K_1'(s(bool,sK30(X3,X2,X1,X0)))),s('type.labSem.state'(X0,X1),X3))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK30])],[f1541])).
+fof(f1541,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : ((~p(s(bool,X4)) | ~p(s(bool,X2)) | p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))))) & ((p(s(bool,X2)) & ~p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))))) | p(s(bool,X4))) & s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_failed_fupd_2'(s(fun(bool,bool),'const.combin.K_1'(s(bool,X4))),s('type.labSem.state'(X0,X1),X3))))),
+  inference(flattening,[],[f1540])).
+fof(f1540,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : (((~p(s(bool,X4)) | (~p(s(bool,X2)) | p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3)))))) & ((p(s(bool,X2)) & ~p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))))) | p(s(bool,X4)))) & s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_failed_fupd_2'(s(fun(bool,bool),'const.combin.K_1'(s(bool,X4))),s('type.labSem.state'(X0,X1),X3))))),
+  inference(nnf_transformation,[],[f1093])).
+fof(f1093,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : ((p(s(bool,X4)) <=> (~p(s(bool,X2)) | p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3)))))) & s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_failed_fupd_2'(s(fun(bool,bool),'const.combin.K_1'(s(bool,X4))),s('type.labSem.state'(X0,X1),X3))))),
+  inference(flattening,[],[f1092])).
+fof(f1092,plain,(
+  ! [X0,X1] : ! [X2,X3] : ? [X4] : ((p(s(bool,X4)) <=> (~p(s(bool,X2)) | p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3)))))) & s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_failed_fupd_2'(s(fun(bool,bool),'const.combin.K_1'(s(bool,X4))),s('type.labSem.state'(X0,X1),X3))))),
+  inference(rectify,[],[f283])).
+fof(f283,axiom,(
+  ! [X6,X7] : ! [X21,X25] : ? [X26] : ((p(s(bool,X26)) <=> (~p(s(bool,X21)) | p(s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X6,X7),X25)))))) & s('type.labSem.state'(X6,X7),'const.labSem.assert_2'(s(bool,X21),s('type.labSem.state'(X6,X7),X25))) = s('type.labSem.state'(X6,X7),'const.labSem.state_failed_fupd_2'(s(fun(bool,bool),'const.combin.K_1'(s(bool,X26))),s('type.labSem.state'(X6,X7),X25))))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.labSem.assert_def')).
+fof(f3998,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,sK34(X0,X1,X2,X3,'const.asm.Sub_0',X4,X5)))) )),
+  inference(unit_resulting_resolution,[],[f1571,f2078])).
+fof(f2078,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (~p(s(bool,sK34(X6,X5,X4,X3,X2,X1,X0))) | s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2)) )),
+  inference(cnf_transformation,[],[f1547])).
+fof(f1547,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ((~p(s(bool,sK33(X6,X5,X4,X3,X2,X1,X0))) | (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & (s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop',X2) | s('type.asm.reg_imm'(X0),X5) != s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))) | p(s(bool,sK33(X6,X5,X4,X3,X2,X1,X0)))) & ((~p(s(bool,sK34(X6,X5,X4,X3,X2,X1,X0))) | (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & (s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop',X2) | s('type.asm.reg_imm'(X0),X5) != s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))) | p(s(bool,sK34(X6,X5,X4,X3,X2,X1,X0)))) & s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),'const.asm.Binop_4'(s('type.asm.binop',X2),s('type.num.num',X3),s('type.num.num',X4),s('type.asm.reg_imm'(X0),X5))),s('type.labSem.state'(X0,X1),X6))) = s('type.labSem.state'(X0,X1),'const.pair.pair_CASE_2'(s('type.pair.prod'('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordSem.word_loc'(X0),'const.labSem.state_regs_2'(s('type.labSem.state'(X0,X1),X6),s('type.num.num',X4))),s('type.wordSem.word_loc'(X0),'const.labSem.reg_imm_2'(s('type.asm.reg_imm'(X0),X5),s('type.labSem.state'(X0,X1),X6))))),s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x10_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x00x10x01x00_4'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'_i_0_0'),s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x00_3'(s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)))),'const.labSem.binop_upd_2'(s('type.num.num',X3),s('type.asm.binop',X2))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'_i_0_0'),s('type.labSem.state'(X0,X1),X6))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,sK34(X6,X5,X4,X3,X2,X1,X0)))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s(fun('type.num.num',fun('type.num.num','type.wordSem.word_loc'(X0))),'const.wordSem.Loc_0'),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6))))))),s(fun('type.wordSem.word_loc'(X0),fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1)))),'_dst_x000x100x000_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,sK33(X6,X5,X4,X3,X2,X1,X0)))),s(fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1)),'_dst_x1x0_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6)))))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK33,sK34])],[f1546])).
+fof(f1546,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ? [X7] : ((~p(s(bool,X7)) | (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & (s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop',X2) | s('type.asm.reg_imm'(X0),X5) != s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))) | p(s(bool,X7))) & ? [X8] : ((~p(s(bool,X8)) | (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & (s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop',X2) | s('type.asm.reg_imm'(X0),X5) != s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))) | p(s(bool,X8))) & s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),'const.asm.Binop_4'(s('type.asm.binop',X2),s('type.num.num',X3),s('type.num.num',X4),s('type.asm.reg_imm'(X0),X5))),s('type.labSem.state'(X0,X1),X6))) = s('type.labSem.state'(X0,X1),'const.pair.pair_CASE_2'(s('type.pair.prod'('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordSem.word_loc'(X0),'const.labSem.state_regs_2'(s('type.labSem.state'(X0,X1),X6),s('type.num.num',X4))),s('type.wordSem.word_loc'(X0),'const.labSem.reg_imm_2'(s('type.asm.reg_imm'(X0),X5),s('type.labSem.state'(X0,X1),X6))))),s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x10_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x00x10x01x00_4'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'_i_0_0'),s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x00_3'(s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)))),'const.labSem.binop_upd_2'(s('type.num.num',X3),s('type.asm.binop',X2))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'_i_0_0'),s('type.labSem.state'(X0,X1),X6))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X8))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s(fun('type.num.num',fun('type.num.num','type.wordSem.word_loc'(X0))),'const.wordSem.Loc_0'),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6))))))),s(fun('type.wordSem.word_loc'(X0),fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1)))),'_dst_x000x100x000_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X7))),s(fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1)),'_dst_x1x0_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6)))))))))))),
+  inference(flattening,[],[f1545])).
+fof(f1545,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ? [X7] : (((~p(s(bool,X7)) | (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & ((s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop',X2) | s('type.asm.reg_imm'(X0),X5) != s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4)))) | p(s(bool,X7)))) & ? [X8] : (((~p(s(bool,X8)) | (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & ((s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop',X2) | s('type.asm.reg_imm'(X0),X5) != s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4)))) | p(s(bool,X8)))) & s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),'const.asm.Binop_4'(s('type.asm.binop',X2),s('type.num.num',X3),s('type.num.num',X4),s('type.asm.reg_imm'(X0),X5))),s('type.labSem.state'(X0,X1),X6))) = s('type.labSem.state'(X0,X1),'const.pair.pair_CASE_2'(s('type.pair.prod'('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordSem.word_loc'(X0),'const.labSem.state_regs_2'(s('type.labSem.state'(X0,X1),X6),s('type.num.num',X4))),s('type.wordSem.word_loc'(X0),'const.labSem.reg_imm_2'(s('type.asm.reg_imm'(X0),X5),s('type.labSem.state'(X0,X1),X6))))),s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x10_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x00x10x01x00_4'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'_i_0_0'),s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x00_3'(s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)))),'const.labSem.binop_upd_2'(s('type.num.num',X3),s('type.asm.binop',X2))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'_i_0_0'),s('type.labSem.state'(X0,X1),X6))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X8))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s(fun('type.num.num',fun('type.num.num','type.wordSem.word_loc'(X0))),'const.wordSem.Loc_0'),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6))))))),s(fun('type.wordSem.word_loc'(X0),fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1)))),'_dst_x000x100x000_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X7))),s(fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1)),'_dst_x1x0_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6)))))))))))),
+  inference(nnf_transformation,[],[f1315])).
+fof(f1315,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ? [X7] : ((p(s(bool,X7)) <=> (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & ? [X8] : ((p(s(bool,X8)) <=> (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),'const.asm.Binop_4'(s('type.asm.binop',X2),s('type.num.num',X3),s('type.num.num',X4),s('type.asm.reg_imm'(X0),X5))),s('type.labSem.state'(X0,X1),X6))) = s('type.labSem.state'(X0,X1),'const.pair.pair_CASE_2'(s('type.pair.prod'('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordSem.word_loc'(X0),'const.labSem.state_regs_2'(s('type.labSem.state'(X0,X1),X6),s('type.num.num',X4))),s('type.wordSem.word_loc'(X0),'const.labSem.reg_imm_2'(s('type.asm.reg_imm'(X0),X5),s('type.labSem.state'(X0,X1),X6))))),s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x10_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x00x10x01x00_4'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'_i_0_0'),s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x00_3'(s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)))),'const.labSem.binop_upd_2'(s('type.num.num',X3),s('type.asm.binop',X2))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'_i_0_0'),s('type.labSem.state'(X0,X1),X6))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X8))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s(fun('type.num.num',fun('type.num.num','type.wordSem.word_loc'(X0))),'const.wordSem.Loc_0'),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6))))))),s(fun('type.wordSem.word_loc'(X0),fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1)))),'_dst_x000x100x000_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X7))),s(fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1)),'_dst_x1x0_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6)))))))))))),
+  inference(flattening,[],[f1314])).
+fof(f1314,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5,X6] : ? [X7] : ((p(s(bool,X7)) <=> (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & ? [X8] : ((p(s(bool,X8)) <=> (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X2) & s('type.asm.reg_imm'(X0),X5) = s('type.asm.reg_imm'(X0),'const.asm.Reg_1'(s('type.num.num',X4))))) & s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),'const.asm.Binop_4'(s('type.asm.binop',X2),s('type.num.num',X3),s('type.num.num',X4),s('type.asm.reg_imm'(X0),X5))),s('type.labSem.state'(X0,X1),X6))) = s('type.labSem.state'(X0,X1),'const.pair.pair_CASE_2'(s('type.pair.prod'('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordSem.word_loc'(X0),'const.labSem.state_regs_2'(s('type.labSem.state'(X0,X1),X6),s('type.num.num',X4))),s('type.wordSem.word_loc'(X0),'const.labSem.reg_imm_2'(s('type.asm.reg_imm'(X0),X5),s('type.labSem.state'(X0,X1),X6))))),s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x10_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x00x10x01x00_4'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'type.labSem.state'(X0,X1)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X0),'type.wordSem.word_loc'(X0)),'_i_0_0'),s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),'type.labSem.state'(X0,X1))),'_dst_x01x10x00_3'(s(fun('type.fcp.cart'(bool,X0),fun('type.fcp.cart'(bool,X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)))),'const.labSem.binop_upd_2'(s('type.num.num',X3),s('type.asm.binop',X2))),s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'_i_0_0'),s('type.labSem.state'(X0,X1),X6))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X8))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1))),'_dst_x00x11x00_3'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s(fun('type.num.num',fun('type.num.num','type.wordSem.word_loc'(X0))),'const.wordSem.Loc_0'),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6))))))),s(fun('type.wordSem.word_loc'(X0),fun('type.num.num',fun('type.num.num','type.labSem.state'(X0,X1)))),'_dst_x000x100x000_3'(s(fun('type.labSem.state'(X0,X1),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.bool.COND_1'(s(bool,X7))),s(fun('type.wordSem.word_loc'(X0),'type.labSem.state'(X0,X1)),'_dst_x1x0_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1))),'const.labSem.upd_reg_1'(s('type.num.num',X3))),s('type.labSem.state'(X0,X1),X6))),s('type.labSem.state'(X0,X1),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X0,X1),X6)))))))))))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6,X7] : ! [X21,X22,X23,X24,X25] : ? [X26] : ((p(s(bool,X26)) <=> (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X21) & s('type.asm.reg_imm'(X6),X24) = s('type.asm.reg_imm'(X6),'const.asm.Reg_1'(s('type.num.num',X23))))) & ? [X27] : ((p(s(bool,X27)) <=> (s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop',X21) & s('type.asm.reg_imm'(X6),X24) = s('type.asm.reg_imm'(X6),'const.asm.Reg_1'(s('type.num.num',X23))))) & s('type.labSem.state'(X6,X7),'const.labSem.arith_upd_2'(s('type.asm.arith'(X6),'const.asm.Binop_4'(s('type.asm.binop',X21),s('type.num.num',X22),s('type.num.num',X23),s('type.asm.reg_imm'(X6),X24))),s('type.labSem.state'(X6,X7),X25))) = s('type.labSem.state'(X6,X7),'const.pair.pair_CASE_2'(s('type.pair.prod'('type.wordSem.word_loc'(X6),'type.wordSem.word_loc'(X6)),'const.pair.,_2'(s('type.wordSem.word_loc'(X6),'const.labSem.state_regs_2'(s('type.labSem.state'(X6,X7),X25),s('type.num.num',X23))),s('type.wordSem.word_loc'(X6),'const.labSem.reg_imm_2'(s('type.asm.reg_imm'(X6),X24),s('type.labSem.state'(X6,X7),X25))))),s(fun('type.wordSem.word_loc'(X6),fun('type.wordSem.word_loc'(X6),'type.labSem.state'(X6,X7))),'_dst_x01x10x10_3'(s(fun('type.wordSem.word_loc'(X6),fun(fun('type.fcp.cart'(bool,X6),'type.labSem.state'(X6,X7)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X6,X7))),'type.labSem.state'(X6,X7)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X6),fun('type.fcp.cart'(bool,X6),'type.labSem.state'(X6,X7))),'_dst_x00x10x01x00_4'(s(fun('type.wordSem.word_loc'(X6),fun(fun('type.fcp.cart'(bool,X6),'type.labSem.state'(X6,X7)),fun(fun('type.num.num',fun('type.num.num','type.labSem.state'(X6,X7))),'type.labSem.state'(X6,X7)))),'const.wordSem.word_loc_CASE_0'),s(fun('type.wordSem.word_loc'(X6),'type.wordSem.word_loc'(X6)),'_i_0_0'),s(fun('type.fcp.cart'(bool,X6),fun('type.fcp.cart'(bool,X6),'type.labSem.state'(X6,X7))),'_dst_x01x10x00_3'(s(fun('type.fcp.cart'(bool,X6),fun('type.fcp.cart'(bool,X6),fun('type.labSem.state'(X6,X7),'type.labSem.state'(X6,X7)))),'const.labSem.binop_upd_2'(s('type.num.num',X22),s('type.asm.binop',X21))),s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,X6)),'_i_0_0'),s('type.labSem.state'(X6,X7),X25))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X6,X7))),'_dst_x00x11x00_3'(s(fun('type.labSem.state'(X6,X7),fun('type.labSem.state'(X6,X7),'type.labSem.state'(X6,X7))),'const.bool.COND_1'(s(bool,X27))),s(fun('type.num.num',fun('type.num.num','type.labSem.state'(X6,X7))),'_dst_x00x11x00_3'(s(fun('type.wordSem.word_loc'(X6),fun('type.labSem.state'(X6,X7),'type.labSem.state'(X6,X7))),'const.labSem.upd_reg_1'(s('type.num.num',X22))),s(fun('type.num.num',fun('type.num.num','type.wordSem.word_loc'(X6))),'const.wordSem.Loc_0'),s('type.labSem.state'(X6,X7),X25))),s('type.labSem.state'(X6,X7),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X6,X7),X25))))))),s(fun('type.wordSem.word_loc'(X6),fun('type.num.num',fun('type.num.num','type.labSem.state'(X6,X7)))),'_dst_x000x100x000_3'(s(fun('type.labSem.state'(X6,X7),fun('type.labSem.state'(X6,X7),'type.labSem.state'(X6,X7))),'const.bool.COND_1'(s(bool,X26))),s(fun('type.wordSem.word_loc'(X6),'type.labSem.state'(X6,X7)),'_dst_x1x0_2'(s(fun('type.wordSem.word_loc'(X6),fun('type.labSem.state'(X6,X7),'type.labSem.state'(X6,X7))),'const.labSem.upd_reg_1'(s('type.num.num',X22))),s('type.labSem.state'(X6,X7),X25))),s('type.labSem.state'(X6,X7),'const.labSem.assert_2'(s(bool,'F_0'),s('type.labSem.state'(X6,X7),X25)))))))))))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.labSem.arith_upd_def|split|0')).
+fof(f1571,plain,(
+  s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop','const.asm.Sub_0')),
+  inference(cnf_transformation,[],[f533])).
+fof(f533,plain,(
+  s('type.asm.binop','const.asm.Or_0') != s('type.asm.binop','const.asm.Sub_0')),
+  inference(flattening,[],[f490])).
+fof(f490,axiom,(
+  ~s('type.asm.binop','const.asm.Or_0') = s('type.asm.binop','const.asm.Sub_0')),
+  file('thm.labProps.arith_upd_consts|split|4','thm.asm.binop_distinct|split|5')).
+fof(f112150,plain,(
+  ( ! [X6,X4,X2,X0,X10,X8,X7,X5,X3,X1,X9] : (s(bool,sK30(X0,sK34(X1,X2,X3,X4,'const.asm.Sub_0',X5,X6),X7,X8)) = s(bool,happ(s(fun(X9,bool),happ(s(fun(X9,fun(X9,bool)),'=_0'),s(X9,X10))),s(X9,X10)))) )),
+  inference(unit_resulting_resolution,[],[f4278,f104947,f7737])).
+fof(f7737,plain,(
+  ( ! [X68,X66,X64,X67,X65] : (~p(s(bool,X68)) | s(bool,X68) = s(bool,sK30(X64,X65,X66,X67)) | s(bool,'T_0') = s(bool,X65)) )),
+  inference(subsumption_resolution,[],[f7698,f1552])).
+fof(f7698,plain,(
+  ( ! [X68,X66,X64,X67,X65] : (~p(s(bool,'T_0')) | ~p(s(bool,X68)) | s(bool,X68) = s(bool,sK30(X64,X65,X66,X67)) | s(bool,'T_0') = s(bool,X65)) )),
+  inference(superposition,[],[f1717,f2716])).
+fof(f2716,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,'T_0') = s(bool,sK30(X1,X0,X2,X3)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(subsumption_resolution,[],[f2703,f2170])).
+fof(f2703,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,sK30(X1,X0,X2,X3)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f2501,f1595])).
+fof(f1717,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f1478])).
+fof(f1478,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f1477])).
+fof(f1477,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f687])).
+fof(f687,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X32,X33] : ((p(s(bool,X32)) => p(s(bool,X33))) => ((p(s(bool,X33)) => p(s(bool,X32))) => s(bool,X32) = s(bool,X33)))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.bool.IMP_ANTISYM_AX')).
+fof(f104947,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f104946,f2132])).
+fof(f2132,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))) )),
+  inference(cnf_transformation,[],[f1403])).
+fof(f1403,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))),
+  inference(flattening,[],[f1402])).
+fof(f1402,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,happ(s(fun(X1,X0),'_dst_x1x0_2'(s(fun(X1,fun(X2,X0)),X3),s(X2,X4))),s(X1,X5))) = s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X5))),s(X2,X4)))),
+  inference(rectify,[],[f49])).
+fof(f49,axiom,(
+  ! [X45,X47,X46] : ! [X49,X50,X52] : s(X45,happ(s(fun(X46,X45),happ(s(fun(X47,fun(X46,X45)),X49),s(X47,X52))),s(X46,X50))) = s(X45,happ(s(fun(X47,X45),'_dst_x1x0_2'(s(fun(X47,fun(X46,X45)),X49),s(X46,X50))),s(X47,X52)))),
+  file('thm.labProps.arith_upd_consts|split|4','_dst_x1x0_ax')).
+fof(f104946,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),'_dst_x1x0_2'(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f104945,f1645])).
+fof(f1645,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f583])).
+fof(f583,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))),
+  inference(flattening,[],[f582])).
+fof(f582,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))),
+  inference(rectify,[],[f394])).
+fof(f394,axiom,(
+  ! [X6] : ! [X8] : s(X6,X8) = s(X6,'const.combin.I_1'(s(X6,X8)))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.combin.I_THM')).
+fof(f104945,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),'_dst_x1x0_2'(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,'const.combin.I_1'(s(X0,X1))))))) )),
+  inference(forward_demodulation,[],[f103532,f2132])).
+fof(f103532,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,'const.combin.I_1'(s(X0,X1))))),s(X0,X1))))) )),
+  inference(unit_resulting_resolution,[],[f1645,f2108])).
+fof(f2108,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f1548])).
+fof(f1548,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f1366])).
+fof(f1366,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f90])).
+fof(f90,axiom,(
+  ! [X65,X66,X67] : (p(s(bool,happ(s(fun(X65,bool),happ(s(fun(X65,fun(X65,bool)),'=_0'),s(X65,X66))),s(X65,X67)))) <=> s(X65,X66) = s(X65,X67))),
+  file('thm.labProps.arith_upd_consts|split|4',arity_0_HL_EQ)).
+fof(f4278,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(bool,'T_0') != s(bool,sK34(X0,X1,X2,X3,'const.asm.Sub_0',X4,X5))) )),
+  inference(unit_resulting_resolution,[],[f3998,f1599])).
+fof(f1599,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f1487])).
+fof(f1487,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f561])).
+fof(f561,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f111])).
+fof(f111,axiom,(
+  ! [X41] : (s(bool,'T_0') = s(bool,X41) <=> p(s(bool,X41)))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.bool.EQ_CLAUSES|split|1')).
+fof(f269027,plain,(
+  ~p(s(bool,happ(s(fun('type.list.list'('type.labLang.sec'(sK0)),bool),happ(s(fun('type.list.list'('type.labLang.sec'(sK0)),fun('type.list.list'('type.labLang.sec'(sK0)),bool)),'=_0'),s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),sK2))))),s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),sK2))))))),
+  inference(backward_demodulation,[],[f269026,f101408])).
+fof(f101408,plain,(
+  ~p(s(bool,happ(s(fun('type.list.list'('type.labLang.sec'(sK0)),bool),happ(s(fun('type.list.list'('type.labLang.sec'(sK0)),fun('type.list.list'('type.labLang.sec'(sK0)),bool)),'=_0'),s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),sK2))))),s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.arith_upd_2'(s('type.asm.arith'(sK0),sK3),s('type.labSem.state'(sK0,sK1),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f1551,f2107])).
+fof(f2107,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f1548])).
+fof(f1551,plain,(
+  s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),sK2))) != s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.arith_upd_2'(s('type.asm.arith'(sK0),sK3),s('type.labSem.state'(sK0,sK1),sK2)))))),
+  inference(cnf_transformation,[],[f1484])).
+fof(f1484,plain,(
+  s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),sK2))) != s('type.list.list'('type.labLang.sec'(sK0)),'const.labSem.state_code_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.arith_upd_2'(s('type.asm.arith'(sK0),sK3),s('type.labSem.state'(sK0,sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f1472])).
+fof(f1472,plain,(
+  ? [X0,X1,X2,X3] : s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f520])).
+fof(f520,plain,(
+  ~! [X0,X1,X2,X3] : s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f519])).
+fof(f519,plain,(
+  ~! [X0,X1] : ! [X2,X3] : s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X7),X8))) = s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X7),'const.labSem.arith_upd_2'(s('type.asm.arith'(X6),X9),s('type.labSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X7),X8))) = s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X7),'const.labSem.arith_upd_2'(s('type.asm.arith'(X6),X9),s('type.labSem.state'(X6,X7),X8)))))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.labProps.arith_upd_consts|split|4')).
+fof(f269026,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X2),s('type.labSem.state'(X0,X1),X3)))))) )),
+  inference(forward_demodulation,[],[f268835,f1804])).
+fof(f1804,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),X3),s('type.labSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f841])).
+fof(f841,plain,(
+  ! [X0,X1,X2,X3] : s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f840])).
+fof(f840,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f68])).
+fof(f68,axiom,(
+  ! [X6,X7] : ! [X25,X57] : s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X7),X25))) = s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X7),'const.labSem.asm_inst_2'(s('type.asm.inst'(X6),X57),s('type.labSem.state'(X6,X7),X25)))))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.labSem.asm_inst_consts|split|1')).
+fof(f268835,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X2),s('type.labSem.state'(X0,X1),X3))))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),'const.asm.Arith_1'(s('type.asm.arith'(X0),X2))),s('type.labSem.state'(X0,X1),X3)))))) )),
+  inference(unit_resulting_resolution,[],[f1828,f1935])).
+fof(f1935,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.labSem.state'(X0,X1),X2) != s('type.labSem.state'(X0,X1),X3) | s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f1537])).
+fof(f1537,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.labSem.state'(X0,X1),X2) != s('type.labSem.state'(X0,X1),X3) | (s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X3))))) & (s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X3))) | s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X2))) != s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X3))) | s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X3))) | s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X2))) != s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3)))),
+  inference(flattening,[],[f1536])).
+fof(f1536,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.labSem.state'(X0,X1),X2) != s('type.labSem.state'(X0,X1),X3) | (s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X3))))) & ((s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X3))) | s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X2))) != s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X3))) | s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X2))) != s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X3))) | s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X2))) != s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X3))) | s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X3)))) | s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3)))),
+  inference(nnf_transformation,[],[f1089])).
+fof(f1089,plain,(
+  ! [X0,X1,X2,X3] : (s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3) <=> (s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X3)))))),
+  inference(flattening,[],[f1088])).
+fof(f1088,plain,(
+  ! [X0,X1] : ! [X2,X3] : (s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3) <=> (s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num','type.wordSem.word_loc'(X0)),'const.labSem.state_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.labSem.state_mem_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.labSem.state_ffi_1'(s('type.labSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X0)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.list.list'('type.labLang.sec'(X0)),'const.labSem.state_code_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X3))) & s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X2))) = s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X0,X1),X3))) & s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X0,X1),X3)))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6,X18] : ! [X19,X20] : (s('type.labSem.state'(X6,X18),X19) = s('type.labSem.state'(X6,X18),X20) <=> (s(fun('type.num.num','type.wordSem.word_loc'(X6)),'const.labSem.state_regs_1'(s('type.labSem.state'(X6,X18),X19))) = s(fun('type.num.num','type.wordSem.word_loc'(X6)),'const.labSem.state_regs_1'(s('type.labSem.state'(X6,X18),X20))) & s(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'const.labSem.state_mem_1'(s('type.labSem.state'(X6,X18),X19))) = s(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'const.labSem.state_mem_1'(s('type.labSem.state'(X6,X18),X20))) & s(fun('type.fcp.cart'(bool,X6),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X6,X18),X19))) = s(fun('type.fcp.cart'(bool,X6),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X6,X18),X20))) & s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X6,X18),X19))) = s(bool,'const.labSem.state_be_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.ffi.ffi_state'(X18),'const.labSem.state_ffi_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.ffi.ffi_state'(X18),'const.labSem.state_ffi_1'(s('type.labSem.state'(X6,X18),X20))) & s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X6)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X6,X18),X19))) = s(fun('type.num.num',fun('type.num.num','type.option.option'('type.fcp.cart'(bool,X6)))),'const.labSem.state_io_regs_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.list.list'('type.labLang.sec'(X6)),'const.labSem.state_code_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X6,X18),X20))) & s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X6,X18),X19))) = s(bool,'const.labSem.state_failed_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.num.num','const.labSem.state_ptr_reg_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.num.num','const.labSem.state_len_reg_1'(s('type.labSem.state'(X6,X18),X20))) & s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X6,X18),X19))) = s('type.num.num','const.labSem.state_link_reg_1'(s('type.labSem.state'(X6,X18),X20)))))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.labSem.labSem_3|49|4_prove_ltb')).
+fof(f1828,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),'const.asm.Arith_1'(s('type.asm.arith'(X0),X2))),s('type.labSem.state'(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f889])).
+fof(f889,plain,(
+  ! [X0,X1,X2,X3] : s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),'const.asm.Arith_1'(s('type.asm.arith'(X0),X2))),s('type.labSem.state'(X0,X1),X3)))),
+  inference(flattening,[],[f888])).
+fof(f888,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.labSem.state'(X0,X1),'const.labSem.arith_upd_2'(s('type.asm.arith'(X0),X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.asm_inst_2'(s('type.asm.inst'(X0),'const.asm.Arith_1'(s('type.asm.arith'(X0),X2))),s('type.labSem.state'(X0,X1),X3)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X18] : ! [X8,X25] : s('type.labSem.state'(X6,X18),'const.labSem.arith_upd_2'(s('type.asm.arith'(X6),X8),s('type.labSem.state'(X6,X18),X25))) = s('type.labSem.state'(X6,X18),'const.labSem.asm_inst_2'(s('type.asm.inst'(X6),'const.asm.Arith_1'(s('type.asm.arith'(X6),X8))),s('type.labSem.state'(X6,X18),X25)))),
+  file('thm.labProps.arith_upd_consts|split|4','thm.labSem.asm_inst_def|split|2')).
+% SZS output end Proof for thm.labProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 1061
+% Passive clauses: 9093
+% Generated clauses: 271863
+% Final active clauses: 463
+% Final passive clauses: 3246
+% Input formulas: 517
+% Initial clauses: 616
+% 
+% Duplicate literals: 4425
+% Trivial inequalities: 1823
+% Fw subsumption resolutions: 11600
+% Fw demodulations: 64715
+% Bw demodulations: 5010
+% Condensations: 3900
+% Global subsumptions: 368
+% 
+% Simple tautologies: 878
+% Equational tautologies: 800
+% Forward subsumptions: 172249
+% Fw demodulations to eq. taut.: 851
+% Bw demodulations to eq. taut.: 258
+% 
+% Unit resulting resolution: 22522
+% Factoring: 1
+% Forward superposition: 83183
+% Backward superposition: 68050
+% Self superposition: 484
+% Equality factoring: 183
+% Equality resolution: 47
+% 
+% Split clauses: 60
+% Split components: 120
+% SAT solver clauses: 10489
+% SAT solver unit clauses: 2723
+% SAT solver binary clauses: 4246
+% 
+% Sat splits: 60
+% Sat splitting refutations: 906
+% 
+% Memory used [KB]: 118718
+% Time elapsed: 7.559 s
+% ------------------------------
+% ------------------------------
+% Success in time 8.93 s

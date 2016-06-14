@@ -1,0 +1,294 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labSem
+% (105026)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 136
+% Passive clauses: 2286
+% Generated clauses: 16338
+% Final active clauses: 104
+% Final passive clauses: 1949
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 746
+% Trivial inequalities: 197
+% Fw subsumption resolutions: 1655
+% Fw demodulations: 2228
+% Bw demodulations: 27
+% 
+% Simple tautologies: 241
+% Equational tautologies: 64
+% Forward subsumptions: 7787
+% 
+% Binary resolution: 250
+% Factoring: 1
+% Forward superposition: 5519
+% Backward superposition: 5106
+% Self superposition: 224
+% Equality factoring: 142
+% Equality resolution: 19
+% 
+% Split clauses: 221
+% Split components: 442
+% SAT solver clauses: 523
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 78
+% 
+% Sat splits: 221
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 523
+% TWLsolver calls for satisfiability: 122
+% 
+% Memory used [KB]: 8955
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.labSem
+% (105048)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 86
+% Passive clauses: 676
+% Generated clauses: 8637
+% Final active clauses: 65
+% Final passive clauses: 460
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 439
+% Trivial inequalities: 79
+% Fw subsumption resolutions: 610
+% Fw demodulations: 956
+% Bw demodulations: 141
+% Condensations: 930
+% 
+% Simple tautologies: 103
+% Equational tautologies: 44
+% Forward subsumptions: 3739
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 208
+% Factoring: 1
+% Forward superposition: 2183
+% Backward superposition: 2029
+% Self superposition: 139
+% Equality factoring: 98
+% Equality resolution: 8
+% 
+% Split clauses: 74
+% Split components: 148
+% SAT solver clauses: 1178
+% SAT solver unit clauses: 258
+% SAT solver binary clauses: 35
+% 
+% Sat splits: 74
+% Sat splitting refutations: 11
+% 
+% TWLsolver clauses: 1178
+% TWLsolver calls for satisfiability: 280
+% 
+% Memory used [KB]: 11897
+% Time elapsed: 0.741 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.labSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labSem
+% SZS output start Proof for thm.labSem
+fof(f18428,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f18427,f405])).
+fof(f405,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.labSem.state_fupdfupds_comp|split|17',aHL_TRUTH)).
+fof(f18427,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f18425,f2976])).
+fof(f2976,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f2893,f551])).
+fof(f551,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f407,f408])).
+fof(f408,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.labSem.state_fupdfupds_comp|split|17',aHL_BOOL_CASES)).
+fof(f407,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.labSem.state_fupdfupds_comp|split|17',aHL_FALSITY)).
+fof(f2893,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(backward_demodulation,[],[f2809,f1264])).
+fof(f1264,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.combin.o_3'(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(fun(X0,X0),'_i_0_0'),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f1219,f478])).
+fof(f478,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f253])).
+fof(f253,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(flattening,[],[f252])).
+fof(f252,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6,X7,X15] : ! [X11,X10,X17] : s(X6,'const.combin.o_3'(s(fun(X7,X6),X11),s(fun(X15,X7),X10),s(X15,X17))) = s(X6,happ(s(fun(X7,X6),X11),s(X7,happ(s(fun(X15,X7),X10),s(X15,X17)))))),
+  file('thm.labSem.state_fupdfupds_comp|split|17','thm.combin.o_THM')).
+fof(f1219,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1))))))) )),
+  inference(unit_resulting_resolution,[],[f409,f475])).
+fof(f475,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f403])).
+fof(f403,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f247])).
+fof(f247,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f77])).
+fof(f77,axiom,(
+  ! [X49,X50,X51] : (p(s(bool,happ(s(fun(X49,bool),happ(s(fun(X49,fun(X49,bool)),'=_0'),s(X49,X50))),s(X49,X51)))) <=> s(X49,X50) = s(X49,X51))),
+  file('thm.labSem.state_fupdfupds_comp|split|17',arity_0_HL_EQ)).
+fof(f409,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f138])).
+fof(f138,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f137])).
+fof(f137,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f129])).
+fof(f129,axiom,(
+  ! [X44] : ! [X46] : s(X44,X46) = s(X44,happ(s(fun(X44,X44),'_i_0_0'),s(X44,X46)))),
+  file('thm.labSem.state_fupdfupds_comp|split|17','_i0_ax')).
+fof(f2809,plain,(
+  ( ! [X76,X74,X75,X73] : (s(X75,happ(s(fun(X73,X75),X76),s(X73,X74))) = s(X75,'const.combin.o_3'(s(fun(X73,X75),X76),s(fun(X73,X73),'_i_0_0'),s(X73,X74)))) )),
+  inference(superposition,[],[f478,f409])).
+fof(f18425,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.labSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.labSem.state'(sK1,sK2)),fun(fun(sK0,'type.labSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK5),s(fun('type.num.num','type.num.num'),sK4))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK5),s(fun('type.num.num','type.num.num'),sK4))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3))))))),
+  inference(backward_demodulation,[],[f18387,f4638])).
+fof(f4638,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.labSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.labSem.state'(sK1,sK2)),fun(fun(sK0,'type.labSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK5),s(fun('type.num.num','type.num.num'),sK4))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK5))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3))))))))),
+  inference(unit_resulting_resolution,[],[f404,f474])).
+fof(f474,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f403])).
+fof(f404,plain,(
+  s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK5),s(fun('type.num.num','type.num.num'),sK4))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK5))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3)))))),
+  inference(cnf_transformation,[],[f391])).
+fof(f391,plain,(
+  s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK5),s(fun('type.num.num','type.num.num'),sK4))))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK5))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.labSem.state'(sK1,sK2),'type.labSem.state'(sK1,sK2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.labSem.state'(sK1,sK2)),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f386])).
+fof(f386,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X5),s(fun('type.num.num','type.num.num'),X4))))),s(fun(X0,'type.labSem.state'(X1,X2)),X3))) != s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X5))),s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.labSem.state'(X1,X2)),X3)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X5),s(fun('type.num.num','type.num.num'),X4))))),s(fun(X0,'type.labSem.state'(X1,X2)),X3))) = s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X5))),s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.labSem.state'(X1,X2)),X3)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5] : s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X5),s(fun('type.num.num','type.num.num'),X4))))),s(fun(X0,'type.labSem.state'(X1,X2)),X3))) = s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X5))),s(fun(X0,'type.labSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.labSem.state'(X1,X2),'type.labSem.state'(X1,X2)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.labSem.state'(X1,X2)),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X11),s(fun('type.num.num','type.num.num'),X10))))),s(fun(X6,'type.labSem.state'(X7,X8)),X9))) = s(fun(X6,'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X11))),s(fun(X6,'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun(X6,'type.labSem.state'(X7,X8)),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X11),s(fun('type.num.num','type.num.num'),X10))))),s(fun(X6,'type.labSem.state'(X7,X8)),X9))) = s(fun(X6,'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X11))),s(fun(X6,'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun(X6,'type.labSem.state'(X7,X8)),X9)))))),
+  file('thm.labSem.state_fupdfupds_comp|split|17','thm.labSem.state_fupdfupds_comp|split|17')).
+fof(f18387,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X4,'type.labSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X4,'type.labSem.state'(X0,X1)),X5))) = s(fun(X4,'type.labSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun(X4,'type.labSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X4,'type.labSem.state'(X0,X1)),X5)))))) )),
+  inference(superposition,[],[f490,f438])).
+fof(f438,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X3),s(fun('type.num.num','type.num.num'),X2))))) = s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2)))))) )),
+  inference(cnf_transformation,[],[f177])).
+fof(f177,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X3),s(fun('type.num.num','type.num.num'),X2))))) = s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2)))))),
+  inference(flattening,[],[f176])).
+fof(f176,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X3),s(fun('type.num.num','type.num.num'),X2))))) = s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun('type.labSem.state'(X0,X1),'type.labSem.state'(X0,X1)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7,X8] : ! [X10,X11] : s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X11),s(fun('type.num.num','type.num.num'),X10))))) = s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X11))),s(fun('type.labSem.state'(X7,X8),'type.labSem.state'(X7,X8)),'const.labSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X10)))))),
+  file('thm.labSem.state_fupdfupds_comp|split|17','thm.labSem.state_fupdfupds_comp|split|16')).
+fof(f490,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f277])).
+fof(f277,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f276])).
+fof(f276,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X6,X7,X20,X15] : ! [X11,X10,X9] : s(fun(X20,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X20,X7),'const.combin.o_2'(s(fun(X15,X7),X10),s(fun(X20,X15),X9))))) = s(fun(X20,X6),'const.combin.o_2'(s(fun(X15,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X15,X7),X10))),s(fun(X20,X15),X9)))),
+  file('thm.labSem.state_fupdfupds_comp|split|17','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.labSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 161
+% Passive clauses: 1853
+% Generated clauses: 18810
+% Final active clauses: 80
+% Final passive clauses: 811
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 823
+% Trivial inequalities: 96
+% Fw subsumption resolutions: 764
+% Fw demodulations: 2637
+% Bw demodulations: 790
+% Condensations: 1155
+% Global subsumptions: 2
+% 
+% Simple tautologies: 131
+% Equational tautologies: 194
+% Forward subsumptions: 11008
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 14
+% 
+% Unit resulting resolution: 779
+% Factoring: 1
+% Forward superposition: 5169
+% Backward superposition: 5094
+% Self superposition: 247
+% Equality factoring: 130
+% Equality resolution: 7
+% 
+% Split clauses: 45
+% Split components: 90
+% SAT solver clauses: 2020
+% SAT solver unit clauses: 405
+% SAT solver binary clauses: 752
+% 
+% Sat splits: 45
+% Sat splitting refutations: 73
+% 
+% Memory used [KB]: 18805
+% Time elapsed: 1.035 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.431 s

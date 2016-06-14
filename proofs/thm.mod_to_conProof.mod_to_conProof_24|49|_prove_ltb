@@ -1,0 +1,168 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.mod_to_conProof
+% (103387)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 131
+% Passive clauses: 3078
+% Generated clauses: 16218
+% Final active clauses: 130
+% Final passive clauses: 2710
+% Input formulas: 68
+% Initial clauses: 120
+% 
+% Duplicate literals: 482
+% Trivial inequalities: 436
+% Fw subsumption resolutions: 1308
+% Fw demodulations: 2239
+% 
+% Simple tautologies: 397
+% Equational tautologies: 39
+% Forward subsumptions: 7780
+% 
+% Binary resolution: 154
+% Factoring: 1
+% Forward superposition: 6294
+% Backward superposition: 5186
+% Self superposition: 147
+% Equality factoring: 67
+% Equality resolution: 40
+% 
+% Split clauses: 346
+% Split components: 706
+% SAT solver clauses: 575
+% SAT solver unit clauses: 62
+% SAT solver binary clauses: 181
+% 
+% Sat splits: 346
+% 
+% TWLsolver clauses: 570
+% TWLsolver calls for satisfiability: 77
+% 
+% Memory used [KB]: 11513
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.mod_to_conProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.mod_to_conProof
+% SZS output start Proof for thm.mod_to_conProof
+fof(f2841,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2840,f2799,f2828,f239,f377,f315,f418])).
+fof(f418,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK5(X2,X1,X0)),s(X1,sK6(X2,X1,X0))))) ) | $spl54),
+  inference(cnf_transformation,[],[f418_D])).
+fof(f418_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK5(X2,X1,X0)),s(X1,sK6(X2,X1,X0))))) ) <=> ~$spl54),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl54])])).
+fof(f315,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK5(X2,X1,X0)),s(X1,sK6(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f229])).
+fof(f229,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK5(X2,X1,X0)),s(X1,sK6(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK5,sK6])],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X6,X17] : ! [X24] : ? [X25,X14] : s('type.pair.prod'(X6,X17),X24) = s('type.pair.prod'(X6,X17),'const.pair.,_2'(s(X6,X25),s(X17,X14)))),
+  file('thm.mod_to_conProof.mod_to_conProof_24|49|_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f377,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2))) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(sK0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))) ) | $spl0),
+  inference(cnf_transformation,[],[f377_D])).
+fof(f377_D,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2))) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(sK0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f239,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2))) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(sK0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))) )),
+  inference(cnf_transformation,[],[f196])).
+fof(f196,plain,(
+  ! [X4,X5] : s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2))) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(sK0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f178])).
+fof(f178,plain,(
+  ? [X0,X1,X2,X3] : ! [X4,X5] : s('type.pair.prod'('type.modSem.state'(X0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',X3),s('type.modSem.state'(X0),X1),s('type.modLang.dec',X2))) != s('type.pair.prod'('type.modSem.state'(X0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(X0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.modSem.state'(X0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',X3),s('type.modSem.state'(X0),X1),s('type.modLang.dec',X2))) = s('type.pair.prod'('type.modSem.state'(X0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(X0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0] : ! [X1,X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.modSem.state'(X0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',X3),s('type.modSem.state'(X0),X1),s('type.modLang.dec',X2))) = s('type.pair.prod'('type.modSem.state'(X0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(X0),X4),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X5)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.modSem.state'(X6),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',X9),s('type.modSem.state'(X6),X7),s('type.modLang.dec',X8))) = s('type.pair.prod'('type.modSem.state'(X6),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(X6),X10),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X11)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.modSem.state'(X6),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',X9),s('type.modSem.state'(X6),X7),s('type.modLang.dec',X8))) = s('type.pair.prod'('type.modSem.state'(X6),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.pair.,_2'(s('type.modSem.state'(X6),X10),s('type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v'),X11)))),
+  file('thm.mod_to_conProof.mod_to_conProof_24|49|_prove_ltb','thm.mod_to_conProof.mod_to_conProof_24|49|_prove_ltb')).
+fof(f2828,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),X0) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2)))) ) | $spl384),
+  inference(cnf_transformation,[],[f2828_D])).
+fof(f2828_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),X0) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2)))) ) <=> ~$spl384),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl384])])).
+fof(f2799,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),X0) != s('type.pair.prod'('type.modSem.state'(sK0),'type.semanticPrimitives.result'('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))),'type.list.list'('type.modSem.v')),'type.modSem.v')),'const.modSem.evaluate_dec_3'(s('type.modSem.environment',sK3),s('type.modSem.state'(sK0),sK1),s('type.modLang.dec',sK2)))) ) | ($spl0 | $spl54)),
+  inference(superposition,[],[f377,f418])).
+fof(f2840,plain,(
+  $false | $spl384),
+  inference(equality_resolution,[],[f2828])).
+% SZS output end Proof for thm.mod_to_conProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 45
+% Passive clauses: 240
+% Generated clauses: 2623
+% Final active clauses: 37
+% Final passive clauses: 148
+% Input formulas: 68
+% Initial clauses: 120
+% 
+% Duplicate literals: 104
+% Trivial inequalities: 17
+% Fw subsumption resolutions: 53
+% Fw demodulations: 210
+% Bw demodulations: 54
+% Condensations: 181
+% Global subsumptions: 12
+% 
+% Simple tautologies: 69
+% Equational tautologies: 19
+% Forward subsumptions: 1390
+% 
+% Binary resolution: 57
+% Factoring: 1
+% Forward superposition: 620
+% Backward superposition: 858
+% Self superposition: 61
+% Equality factoring: 28
+% Equality resolution: 3
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 470
+% SAT solver unit clauses: 162
+% SAT solver binary clauses: 35
+% SAT solver learnt clauses: 25
+% 
+% Sat splits: 2
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 421
+% TWLsolver calls for satisfiability: 455
+% 
+% Memory used [KB]: 2942
+% Time elapsed: 0.084 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.706 s

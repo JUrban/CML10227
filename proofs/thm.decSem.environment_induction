@@ -1,0 +1,136 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.decSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.decSem
+% SZS output start Proof for thm.decSem
+fof(f2567,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2559,f224,f321])).
+fof(f321,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f321_D])).
+fof(f321_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f224,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.decSem.environment_induction',aHL_FALSITY)).
+fof(f2559,plain,(
+  $false | $spl1),
+  inference(subsumption_resolution,[],[f2548,f321])).
+fof(f2548,plain,(
+  p(s(bool,'F_0'))),
+  inference(superposition,[],[f2516,f333])).
+fof(f333,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.decSem.environment',bool),sK0),s('type.decSem.environment',sK1)))),
+  inference(resolution,[],[f221,f232])).
+fof(f232,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f181])).
+fof(f181,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f76])).
+fof(f76,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f75])).
+fof(f75,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X13] : (s(bool,'F_0') = s(bool,X13) <=> ~p(s(bool,X13)))),
+  file('thm.decSem.environment_induction','thm.bool.EQ_CLAUSES|split|3')).
+fof(f221,plain,(
+  ~p(s(bool,happ(s(fun('type.decSem.environment',bool),sK0),s('type.decSem.environment',sK1))))),
+  inference(cnf_transformation,[],[f178])).
+fof(f178,plain,(
+  ! [X2,X3] : p(s(bool,happ(s(fun('type.decSem.environment',bool),sK0),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X2),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X3)))))) & ~p(s(bool,happ(s(fun('type.decSem.environment',bool),sK0),s('type.decSem.environment',sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f177])).
+fof(f177,plain,(
+  ? [X0] : (! [X2,X3] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X0),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X2),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X3)))))) & ? [X1] : ~p(s(bool,happ(s(fun('type.decSem.environment',bool),X0),s('type.decSem.environment',X1)))))),
+  inference(rectify,[],[f170])).
+fof(f170,plain,(
+  ? [X0] : (! [X1,X2] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X0),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X1),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X2)))))) & ? [X3] : ~p(s(bool,happ(s(fun('type.decSem.environment',bool),X0),s('type.decSem.environment',X3)))))),
+  inference(ennf_transformation,[],[f70])).
+fof(f70,plain,(
+  ~! [X0] : (! [X1,X2] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X0),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X1),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X2)))))) => ! [X3] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X0),s('type.decSem.environment',X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : (! [X7,X8] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X6),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X7),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X8)))))) => ! [X9] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X6),s('type.decSem.environment',X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : (! [X7,X8] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X6),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X7),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X8)))))) => ! [X9] : p(s(bool,happ(s(fun('type.decSem.environment',bool),X6),s('type.decSem.environment',X9)))))),
+  file('thm.decSem.environment_induction','thm.decSem.environment_induction')).
+fof(f2516,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.decSem.environment',bool),sK0),s('type.decSem.environment',X0))))) )),
+  inference(superposition,[],[f220,f274])).
+fof(f274,plain,(
+  ( ! [X0] : (s('type.decSem.environment',X0) = s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),sK12(X0)),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),sK13(X0))))) )),
+  inference(cnf_transformation,[],[f206])).
+fof(f206,plain,(
+  ! [X0] : s('type.decSem.environment',X0) = s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),sK12(X0)),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),sK13(X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13])],[f115])).
+fof(f115,plain,(
+  ! [X0] : ? [X1,X2] : s('type.decSem.environment',X0) = s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X1),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X2)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X39] : ? [X7,X8] : s('type.decSem.environment',X39) = s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X7),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X8)))),
+  file('thm.decSem.environment_induction','thm.decSem.environment_nchotomy')).
+fof(f220,plain,(
+  ( ! [X2,X3] : (p(s(bool,happ(s(fun('type.decSem.environment',bool),sK0),s('type.decSem.environment','const.decSem.recordtype|46|environment_2'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),X2),s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),X3))))))) )),
+  inference(cnf_transformation,[],[f178])).
+% SZS output end Proof for thm.decSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 50
+% Passive clauses: 535
+% Generated clauses: 2285
+% Final active clauses: 42
+% Final passive clauses: 442
+% Input formulas: 68
+% Initial clauses: 98
+% 
+% Duplicate literals: 125
+% Trivial inequalities: 35
+% Fw subsumption resolutions: 226
+% Fw demodulations: 192
+% Bw demodulations: 6
+% 
+% Simple tautologies: 91
+% Equational tautologies: 31
+% Forward subsumptions: 1017
+% 
+% Binary resolution: 110
+% Factoring: 1
+% Forward superposition: 590
+% Backward superposition: 768
+% Self superposition: 58
+% Equality factoring: 52
+% Equality resolution: 6
+% 
+% Split clauses: 38
+% Split components: 76
+% SAT solver clauses: 68
+% SAT solver unit clauses: 8
+% SAT solver binary clauses: 43
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 38
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 64
+% TWLsolver calls for satisfiability: 25
+% 
+% Memory used [KB]: 1663
+% Time elapsed: 0.054 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.061 s

@@ -1,0 +1,88 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f353,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f54,f78])).
+fof(f78,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.ml_translator.MEMBER_2'(s(X0,X2),s('type.list.list'(X0),X1))) = s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f29])).
+fof(f29,plain,(
+  ! [X0,X1,X2] : s(bool,'const.ml_translator.MEMBER_2'(s(X0,X2),s('type.list.list'(X0),X1))) = s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,'const.ml_translator.MEMBER_2'(s(X0,X2),s('type.list.list'(X0),X1))) = s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X9] : ! [X7,X8] : s(bool,'const.ml_translator.MEMBER_2'(s(X9,X8),s('type.list.list'(X9),X7))) = s(bool,'const.bool.IN_2'(s(X9,X8),s(fun(X9,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X9),X7)))))),
+  file('thm.ml_translator.MEMBER_INTRO|split|2','thm.ml_translator.ml_translator_448_prove_ltb')).
+fof(f54,plain,(
+  s(bool,'const.ml_translator.MEMBER_2'(s(sK0,sK2),s('type.list.list'(sK0),sK1))) != s(bool,'const.bool.IN_2'(s(sK0,sK2),s(fun(sK0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f36])).
+fof(f36,plain,(
+  s(bool,'const.ml_translator.MEMBER_2'(s(sK0,sK2),s('type.list.list'(sK0),sK1))) != s(bool,'const.bool.IN_2'(s(sK0,sK2),s(fun(sK0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f34])).
+fof(f34,plain,(
+  ? [X0,X1,X2] : s(bool,'const.ml_translator.MEMBER_2'(s(X0,X2),s('type.list.list'(X0),X1))) != s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),X1)))))),
+  inference(ennf_transformation,[],[f18])).
+fof(f18,plain,(
+  ~! [X0,X1,X2] : s(bool,'const.ml_translator.MEMBER_2'(s(X0,X2),s('type.list.list'(X0),X1))) = s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f17])).
+fof(f17,plain,(
+  ~! [X0] : ! [X1,X2] : s(bool,'const.ml_translator.MEMBER_2'(s(X0,X2),s('type.list.list'(X0),X1))) = s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s(bool,'const.ml_translator.MEMBER_2'(s(X6,X8),s('type.list.list'(X6),X7))) = s(bool,'const.bool.IN_2'(s(X6,X8),s(fun(X6,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s(bool,'const.ml_translator.MEMBER_2'(s(X6,X8),s('type.list.list'(X6),X7))) = s(bool,'const.bool.IN_2'(s(X6,X8),s(fun(X6,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X6),X7)))))),
+  file('thm.ml_translator.MEMBER_INTRO|split|2','thm.ml_translator.MEMBER_INTRO|split|2')).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 14
+% Passive clauses: 43
+% Generated clauses: 283
+% Final active clauses: 8
+% Final passive clauses: 18
+% Input formulas: 15
+% Initial clauses: 28
+% 
+% Duplicate literals: 53
+% Trivial inequalities: 5
+% Fw subsumption resolutions: 3
+% Fw demodulations: 2
+% Bw demodulations: 1
+% 
+% Simple tautologies: 33
+% Equational tautologies: 16
+% Forward subsumptions: 112
+% 
+% Binary resolution: 4
+% Forward superposition: 57
+% Backward superposition: 64
+% Self superposition: 27
+% Equality factoring: 28
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 17
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 7
+% 
+% Sat splits: 9
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 17
+% TWLsolver calls for satisfiability: 10
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.016 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.005 s

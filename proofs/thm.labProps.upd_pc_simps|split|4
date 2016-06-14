@@ -1,0 +1,208 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labProps
+% (62361)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 127
+% Passive clauses: 1643
+% Generated clauses: 15864
+% Final active clauses: 125
+% Final passive clauses: 1371
+% Input formulas: 81
+% Initial clauses: 92
+% 
+% Duplicate literals: 525
+% Trivial inequalities: 202
+% Fw subsumption resolutions: 1274
+% Fw demodulations: 1975
+% 
+% Simple tautologies: 177
+% Equational tautologies: 22
+% Forward subsumptions: 9561
+% 
+% Binary resolution: 4
+% Forward superposition: 6098
+% Backward superposition: 5403
+% Self superposition: 184
+% Equality factoring: 51
+% Equality resolution: 11
+% 
+% Split clauses: 133
+% Split components: 266
+% SAT solver clauses: 366
+% SAT solver unit clauses: 41
+% SAT solver binary clauses: 107
+% 
+% Sat splits: 133
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 366
+% TWLsolver calls for satisfiability: 86
+% 
+% Memory used [KB]: 12409
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.labProps
+% (62377)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 85
+% Passive clauses: 455
+% Generated clauses: 9134
+% Final active clauses: 82
+% Final passive clauses: 351
+% Input formulas: 81
+% Initial clauses: 92
+% 
+% Duplicate literals: 385
+% Trivial inequalities: 152
+% Fw subsumption resolutions: 429
+% Fw demodulations: 785
+% Bw demodulations: 18
+% Condensations: 1048
+% Global subsumptions: 4
+% 
+% Simple tautologies: 124
+% Equational tautologies: 20
+% Forward subsumptions: 4535
+% 
+% Binary resolution: 4
+% Forward superposition: 3328
+% Backward superposition: 2218
+% Self superposition: 134
+% Equality factoring: 46
+% Equality resolution: 11
+% 
+% Split clauses: 14
+% Split components: 28
+% SAT solver clauses: 774
+% SAT solver unit clauses: 164
+% SAT solver binary clauses: 28
+% SAT solver learnt clauses: 8
+% 
+% Sat splits: 14
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 758
+% TWLsolver calls for satisfiability: 159
+% 
+% Memory used [KB]: 8827
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.labProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labProps
+% SZS output start Proof for thm.labProps
+fof(f92380,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f92336])).
+fof(f92336,plain,(
+  s(fun('type.fcp.cart'(bool,sK0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(sK0),sK2))) != s(fun('type.fcp.cart'(bool,sK0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(sK0),sK2)))),
+  inference(superposition,[],[f248,f35312])).
+fof(f35312,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))) )),
+  inference(superposition,[],[f328,f314])).
+fof(f314,plain,(
+  ( ! [X2,X0,X1] : (s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2))) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'const.combin.K_1'(s('type.fcp.cart'(bool,X0),X1))),s('type.asmSem.asm_state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f182])).
+fof(f182,plain,(
+  ! [X0,X1,X2] : s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2))) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'const.combin.K_1'(s('type.fcp.cart'(bool,X0),X1))),s('type.asmSem.asm_state'(X0),X2)))),
+  inference(flattening,[],[f181])).
+fof(f181,plain,(
+  ! [X0] : ! [X1,X2] : s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2))) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'const.combin.K_1'(s('type.fcp.cart'(bool,X0),X1))),s('type.asmSem.asm_state'(X0),X2)))),
+  inference(rectify,[],[f71])).
+fof(f71,axiom,(
+  ! [X6] : ! [X11,X8] : s('type.asmSem.asm_state'(X6),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X6),X11),s('type.asmSem.asm_state'(X6),X8))) = s('type.asmSem.asm_state'(X6),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,X6)),'const.combin.K_1'(s('type.fcp.cart'(bool,X6),X11))),s('type.asmSem.asm_state'(X6),X8)))),
+  file('thm.labProps.upd_pc_simps|split|4','thm.asmSem.upd_pc_def')).
+fof(f328,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.asmSem.asm_state'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f210])).
+fof(f210,plain,(
+  ! [X0,X1,X2] : s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(flattening,[],[f209])).
+fof(f209,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X6] : ! [X9,X10] : s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),X10))) = s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,X6)),X9),s('type.asmSem.asm_state'(X6),X10)))))),
+  file('thm.labProps.upd_pc_simps|split|4','thm.asmSem.asmSem_33_prove_ltb')).
+fof(f248,plain,(
+  s(fun('type.fcp.cart'(bool,sK0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(sK0),sK2))) != s(fun('type.fcp.cart'(bool,sK0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(sK0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,sK0),sK1),s('type.asmSem.asm_state'(sK0),sK2)))))),
+  inference(cnf_transformation,[],[f235])).
+fof(f235,plain,(
+  s(fun('type.fcp.cart'(bool,sK0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(sK0),sK2))) != s(fun('type.fcp.cart'(bool,sK0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(sK0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,sK0),sK1),s('type.asmSem.asm_state'(sK0),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f233])).
+fof(f233,plain,(
+  ? [X0,X1,X2] : s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(ennf_transformation,[],[f84])).
+fof(f84,plain,(
+  ~! [X0,X1,X2] : s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(flattening,[],[f83])).
+fof(f83,plain,(
+  ~! [X0] : ! [X1,X2] : s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),X8))) = s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X6),X7),s('type.asmSem.asm_state'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),X8))) = s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),'const.asmSem.asm_state_mem_1'(s('type.asmSem.asm_state'(X6),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X6),X7),s('type.asmSem.asm_state'(X6),X8)))))),
+  file('thm.labProps.upd_pc_simps|split|4','thm.labProps.upd_pc_simps|split|4')).
+% SZS output end Proof for thm.labProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 374
+% Passive clauses: 4909
+% Generated clauses: 94526
+% Final active clauses: 200
+% Final passive clauses: 1590
+% Input formulas: 81
+% Initial clauses: 92
+% 
+% Duplicate literals: 3885
+% Trivial inequalities: 1131
+% Fw subsumption resolutions: 5959
+% Fw demodulations: 11605
+% Bw demodulations: 2769
+% Condensations: 8233
+% Global subsumptions: 46
+% 
+% Simple tautologies: 875
+% Equational tautologies: 328
+% Forward subsumptions: 57294
+% Fw demodulations to eq. taut.: 12
+% Bw demodulations to eq. taut.: 255
+% 
+% Unit resulting resolution: 3303
+% Forward superposition: 26603
+% Backward superposition: 26978
+% Self superposition: 506
+% Equality factoring: 153
+% Equality resolution: 37
+% 
+% Split clauses: 206
+% Split components: 423
+% SAT solver clauses: 5391
+% SAT solver unit clauses: 241
+% SAT solver binary clauses: 1175
+% 
+% Sat splits: 206
+% Sat splitting refutations: 22
+% 
+% Memory used [KB]: 55137
+% Time elapsed: 4.170 s
+% ------------------------------
+% ------------------------------
+% Success in time 5.54 s

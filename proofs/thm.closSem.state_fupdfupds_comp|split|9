@@ -1,0 +1,303 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.closSem
+% (81486)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 161
+% Passive clauses: 3200
+% Generated clauses: 21738
+% Final active clauses: 106
+% Final passive clauses: 2821
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 802
+% Trivial inequalities: 107
+% Fw subsumption resolutions: 1784
+% Fw demodulations: 3472
+% Bw demodulations: 48
+% 
+% Simple tautologies: 126
+% Equational tautologies: 49
+% Forward subsumptions: 11669
+% 
+% Binary resolution: 488
+% Factoring: 2
+% Forward superposition: 7455
+% Backward superposition: 7040
+% Self superposition: 227
+% Equality factoring: 96
+% Equality resolution: 8
+% 
+% Split clauses: 227
+% Split components: 454
+% SAT solver clauses: 676
+% SAT solver unit clauses: 31
+% SAT solver binary clauses: 128
+% 
+% Sat splits: 227
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 676
+% TWLsolver calls for satisfiability: 145
+% 
+% Memory used [KB]: 20596
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.closSem
+% (81516)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 124
+% Passive clauses: 1245
+% Generated clauses: 14580
+% Final active clauses: 89
+% Final passive clauses: 873
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 412
+% Trivial inequalities: 24
+% Fw subsumption resolutions: 711
+% Fw demodulations: 1572
+% Bw demodulations: 277
+% Condensations: 1003
+% 
+% Simple tautologies: 49
+% Equational tautologies: 38
+% Forward subsumptions: 7197
+% 
+% Binary resolution: 366
+% Factoring: 1
+% Forward superposition: 4594
+% Backward superposition: 3972
+% Self superposition: 185
+% Equality factoring: 76
+% Equality resolution: 1
+% 
+% Split clauses: 38
+% Split components: 76
+% SAT solver clauses: 1898
+% SAT solver unit clauses: 131
+% SAT solver binary clauses: 43
+% 
+% Sat splits: 38
+% Sat splitting refutations: 11
+% 
+% TWLsolver clauses: 1898
+% TWLsolver calls for satisfiability: 273
+% 
+% Memory used [KB]: 23027
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.closSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closSem
+% SZS output start Proof for thm.closSem
+fof(f49244,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f49243,f215])).
+fof(f215,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.closSem.state_fupdfupds_comp|split|9','thm.bool.TRUTH')).
+fof(f49243,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f49241,f4139])).
+fof(f4139,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(condensation,[],[f4138])).
+fof(f4138,plain,(
+  ( ! [X10,X8,X9] : (s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(subsumption_resolution,[],[f4066,f299])).
+fof(f299,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f217,f218])).
+fof(f218,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.closSem.state_fupdfupds_comp|split|9',aHL_BOOL_CASES)).
+fof(f217,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.closSem.state_fupdfupds_comp|split|9',aHL_FALSITY)).
+fof(f4066,plain,(
+  ( ! [X10,X8,X9] : (p(s(bool,X10)) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(superposition,[],[f3383,f297])).
+fof(f297,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f218,f218])).
+fof(f3383,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(backward_demodulation,[],[f3283,f1312])).
+fof(f1312,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),'const.combin.o_3'(s(fun(X0,fun(X0,bool)),'=_0'),s(fun(X0,X0),'_i_0_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f1265,f267])).
+fof(f267,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f142])).
+fof(f142,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(flattening,[],[f141])).
+fof(f141,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X14,X6,X15] : ! [X10,X9,X17] : s(X14,'const.combin.o_3'(s(fun(X6,X14),X10),s(fun(X15,X6),X9),s(X15,X17))) = s(X14,happ(s(fun(X6,X14),X10),s(X6,happ(s(fun(X15,X6),X9),s(X15,X17)))))),
+  file('thm.closSem.state_fupdfupds_comp|split|9','thm.combin.o_THM')).
+fof(f1265,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1))))),s(X0,X1))))) )),
+  inference(unit_resulting_resolution,[],[f219,f264])).
+fof(f264,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f213,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f45])).
+fof(f45,axiom,(
+  ! [X45,X46,X47] : (p(s(bool,happ(s(fun(X45,bool),happ(s(fun(X45,fun(X45,bool)),'=_0'),s(X45,X46))),s(X45,X47)))) <=> s(X45,X46) = s(X45,X47))),
+  file('thm.closSem.state_fupdfupds_comp|split|9',arity_0_HL_EQ)).
+fof(f219,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f73])).
+fof(f73,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f64])).
+fof(f64,axiom,(
+  ! [X35] : ! [X37] : s(X35,X37) = s(X35,happ(s(fun(X35,X35),'_i_0_0'),s(X35,X37)))),
+  file('thm.closSem.state_fupdfupds_comp|split|9','_i0_ax')).
+fof(f3283,plain,(
+  ( ! [X76,X74,X75,X73] : (s(X75,happ(s(fun(X73,X75),X76),s(X73,X74))) = s(X75,'const.combin.o_3'(s(fun(X73,X75),X76),s(fun(X73,X73),'_i_0_0'),s(X73,X74)))) )),
+  inference(superposition,[],[f267,f219])).
+fof(f49241,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),fun(fun(sK0,'type.closSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))))))),
+  inference(backward_demodulation,[],[f49164,f13111])).
+fof(f13111,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),fun(fun(sK0,'type.closSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))))),
+  inference(unit_resulting_resolution,[],[f214,f263])).
+fof(f263,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f214,plain,(
+  s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))) != s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f199])).
+fof(f199,plain,(
+  s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))) != s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f193])).
+fof(f193,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X4),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X3))))),s(fun(X0,'type.closSem.state'(X1)),X2))) != s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X4))),s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X3))),s(fun(X0,'type.closSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X4),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X3))))),s(fun(X0,'type.closSem.state'(X1)),X2))) = s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X4))),s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X3))),s(fun(X0,'type.closSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X4),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X3))))),s(fun(X0,'type.closSem.state'(X1)),X2))) = s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X4))),s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X3))),s(fun(X0,'type.closSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X10),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X9))))),s(fun(X6,'type.closSem.state'(X7)),X8))) = s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X10))),s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X9))),s(fun(X6,'type.closSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X10),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X9))))),s(fun(X6,'type.closSem.state'(X7)),X8))) = s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X10))),s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X9))),s(fun(X6,'type.closSem.state'(X7)),X8)))))),
+  file('thm.closSem.state_fupdfupds_comp|split|9','thm.closSem.state_fupdfupds_comp|split|9')).
+fof(f49164,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2))))),s(fun(X3,'type.closSem.state'(X0)),X4))) = s(fun(X3,'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1))),s(fun(X3,'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2))),s(fun(X3,'type.closSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f271,f229])).
+fof(f229,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1))))) = s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2))),s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1)))))) )),
+  inference(cnf_transformation,[],[f92])).
+fof(f92,plain,(
+  ! [X0,X1,X2] : s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1))))) = s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2))),s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1)))))),
+  inference(flattening,[],[f91])).
+fof(f91,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1))))) = s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X2))),s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X10),s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X9))))) = s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X10))),s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_code_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp')),'type.finite_map.fmap'('type.num.num','type.pair.prod'('type.num.num','type.closLang.exp'))),X9)))))),
+  file('thm.closSem.state_fupdfupds_comp|split|9','thm.closSem.state_fupdfupds_comp|split|8')).
+fof(f271,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f150])).
+fof(f150,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X14,X6,X22,X15] : ! [X10,X9,X8] : s(fun(X22,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X22,X6),'const.combin.o_2'(s(fun(X15,X6),X9),s(fun(X22,X15),X8))))) = s(fun(X22,X14),'const.combin.o_2'(s(fun(X15,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X15,X6),X9))),s(fun(X22,X15),X8)))),
+  file('thm.closSem.state_fupdfupds_comp|split|9','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.closSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 293
+% Passive clauses: 5021
+% Generated clauses: 53315
+% Final active clauses: 116
+% Final passive clauses: 1684
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 1396
+% Trivial inequalities: 143
+% Fw subsumption resolutions: 1692
+% Fw demodulations: 8316
+% Bw demodulations: 2827
+% Condensations: 2242
+% Global subsumptions: 361
+% 
+% Simple tautologies: 225
+% Equational tautologies: 242
+% Forward subsumptions: 33101
+% Fw demodulations to eq. taut.: 7
+% Bw demodulations to eq. taut.: 84
+% 
+% Unit resulting resolution: 1467
+% Factoring: 1
+% Forward superposition: 15726
+% Backward superposition: 13910
+% Self superposition: 403
+% Equality factoring: 152
+% Equality resolution: 9
+% 
+% Split clauses: 55
+% Split components: 110
+% SAT solver clauses: 5941
+% SAT solver unit clauses: 1484
+% SAT solver binary clauses: 2575
+% 
+% Sat splits: 55
+% Sat splitting refutations: 447
+% 
+% Memory used [KB]: 53986
+% Time elapsed: 2.818 s
+% ------------------------------
+% ------------------------------
+% Success in time 4.151 s

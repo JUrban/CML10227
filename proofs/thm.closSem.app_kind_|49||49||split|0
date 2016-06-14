@@ -1,0 +1,171 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.closSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closSem
+% SZS output start Proof for thm.closSem
+fof(f7283,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f7282,f66,f94,f92,f7261,f65,f93,f91])).
+fof(f91,plain,(
+  s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1))) | $spl0),
+  inference(cnf_transformation,[],[f91_D])).
+fof(f91_D,plain,(
+  s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f93,plain,(
+  s('type.closSem.v',sK0) = s('type.closSem.v',sK1) | $spl2),
+  inference(cnf_transformation,[],[f93_D])).
+fof(f93_D,plain,(
+  s('type.closSem.v',sK0) = s('type.closSem.v',sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f65,plain,(
+  s('type.closSem.v',sK0) = s('type.closSem.v',sK1) | s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1)))),
+  inference(cnf_transformation,[],[f61])).
+fof(f61,plain,(
+  (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1))) | s('type.closSem.v',sK0) = s('type.closSem.v',sK1)) & (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) != s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1))) | s('type.closSem.v',sK0) != s('type.closSem.v',sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f60])).
+fof(f60,plain,(
+  ? [X0,X1] : ((s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))) | s('type.closSem.v',X0) = s('type.closSem.v',X1)) & (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X0))) != s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))) | s('type.closSem.v',X0) != s('type.closSem.v',X1)))),
+  inference(nnf_transformation,[],[f55])).
+fof(f55,plain,(
+  ? [X0,X1] : (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))) <~> s('type.closSem.v',X0) = s('type.closSem.v',X1))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1] : (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X0))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))) <=> s('type.closSem.v',X0) = s('type.closSem.v',X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X6))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X7))) <=> s('type.closSem.v',X6) = s('type.closSem.v',X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X6))) = s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X7))) <=> s('type.closSem.v',X6) = s('type.closSem.v',X7))),
+  file('thm.closSem.app_kind_|49||49||split|0','thm.closSem.app_kind_|49||49||split|0')).
+fof(f7261,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f7260,f94])).
+fof(f7260,plain,(
+  s('type.closSem.v',sK0) = s('type.closSem.v',sK1) | $spl0),
+  inference(forward_demodulation,[],[f7239,f72])).
+fof(f72,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f28])).
+fof(f28,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(flattening,[],[f27])).
+fof(f27,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X9] : ! [X6,X10] : s(X9,X6) = s(X9,'const.ind_type.FCONS_3'(s(X9,X6),s(fun('type.num.num',X9),X10),s('type.num.num','const.num.|48|_0')))),
+  file('thm.closSem.app_kind_|49||49||split|0','thm.ind_type.FCONS|split|0')).
+fof(f7239,plain,(
+  ( ! [X2] : (s('type.closSem.v',sK1) = s('type.closSem.v','const.ind_type.FCONS_3'(s('type.closSem.v',sK0),s(fun('type.num.num','type.closSem.v'),X2),s('type.num.num','const.num.|48|_0')))) ) | $spl0),
+  inference(superposition,[],[f2771,f72])).
+fof(f2771,plain,(
+  ( ! [X4,X5] : (s('type.closSem.v','const.ind_type.FCONS_3'(s('type.closSem.v',sK0),s(fun('type.num.num','type.closSem.v'),X4),s('type.num.num',X5))) = s('type.closSem.v','const.ind_type.FCONS_3'(s('type.closSem.v',sK1),s(fun('type.num.num','type.closSem.v'),X4),s('type.num.num',X5)))) ) | $spl0),
+  inference(forward_demodulation,[],[f2672,f78])).
+fof(f78,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) )),
+  inference(cnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X9] : ! [X8,X19,X20] : s(X9,'const.ind_type.FCONS_3'(s(X9,X8),s(fun('type.num.num',X9),X19),s('type.num.num',X20))) = s(X9,happ(s(fun('type.num.num',X9),happ(s(fun(fun('type.num.num',X9),fun('type.num.num',X9)),happ(s(fun(X9,fun(fun('type.num.num',X9),fun('type.num.num',X9))),'const.ind_type.FCONS_0'),s(X9,X8))),s(fun('type.num.num',X9),X19))),s('type.num.num',X20)))),
+  file('thm.closSem.app_kind_|49||49||split|0','ARITY_0_3_const.ind_type.FCONS')).
+fof(f2672,plain,(
+  ( ! [X4,X5] : (s('type.closSem.v','const.ind_type.FCONS_3'(s('type.closSem.v',sK1),s(fun('type.num.num','type.closSem.v'),X4),s('type.num.num',X5))) = s('type.closSem.v',happ(s(fun('type.num.num','type.closSem.v'),happ(s(fun(fun('type.num.num','type.closSem.v'),fun('type.num.num','type.closSem.v')),happ(s(fun('type.closSem.v',fun(fun('type.num.num','type.closSem.v'),fun('type.num.num','type.closSem.v'))),'const.ind_type.FCONS_0'),s('type.closSem.v',sK0))),s(fun('type.num.num','type.closSem.v'),X4))),s('type.num.num',X5)))) ) | $spl0),
+  inference(superposition,[],[f78,f1899])).
+fof(f1899,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.closSem.v',X0),X1),s('type.closSem.v',sK0))) = s(X0,happ(s(fun('type.closSem.v',X0),X1),s('type.closSem.v',sK1)))) ) | $spl0),
+  inference(forward_demodulation,[],[f1831,f76])).
+fof(f76,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.closSem.v',X0),X2),s('type.closSem.v',X1))) = s(X0,'const.closSem.app_kind_CASE_3'(s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))),s(fun('type.closSem.v',X0),X2),s(fun('type.closLang.exp',fun('type.list.list'('type.closSem.v'),fun('type.list.list'('type.closSem.v'),X0))),X3)))) )),
+  inference(cnf_transformation,[],[f34])).
+fof(f34,plain,(
+  ! [X0,X1,X2,X3] : s(X0,happ(s(fun('type.closSem.v',X0),X2),s('type.closSem.v',X1))) = s(X0,'const.closSem.app_kind_CASE_3'(s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))),s(fun('type.closSem.v',X0),X2),s(fun('type.closLang.exp',fun('type.list.list'('type.closSem.v'),fun('type.list.list'('type.closSem.v'),X0))),X3)))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,happ(s(fun('type.closSem.v',X0),X2),s('type.closSem.v',X1))) = s(X0,'const.closSem.app_kind_CASE_3'(s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X1))),s(fun('type.closSem.v',X0),X2),s(fun('type.closLang.exp',fun('type.list.list'('type.closSem.v'),fun('type.list.list'('type.closSem.v'),X0))),X3)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X9] : ! [X6,X10,X11] : s(X9,happ(s(fun('type.closSem.v',X9),X10),s('type.closSem.v',X6))) = s(X9,'const.closSem.app_kind_CASE_3'(s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',X6))),s(fun('type.closSem.v',X9),X10),s(fun('type.closLang.exp',fun('type.list.list'('type.closSem.v'),fun('type.list.list'('type.closSem.v'),X9))),X11)))),
+  file('thm.closSem.app_kind_|49||49||split|0','thm.closSem.app_kind_case_def|split|0')).
+fof(f1831,plain,(
+  ( ! [X2,X0,X1] : (s(X0,happ(s(fun('type.closSem.v',X0),X1),s('type.closSem.v',sK1))) = s(X0,'const.closSem.app_kind_CASE_3'(s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))),s(fun('type.closSem.v',X0),X1),s(fun('type.closLang.exp',fun('type.list.list'('type.closSem.v'),fun('type.list.list'('type.closSem.v'),X0))),X2)))) ) | $spl0),
+  inference(superposition,[],[f76,f91])).
+fof(f92,plain,(
+  s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) != s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1))) | $spl1),
+  inference(cnf_transformation,[],[f92_D])).
+fof(f92_D,plain,(
+  s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) != s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f94,plain,(
+  s('type.closSem.v',sK0) != s('type.closSem.v',sK1) | $spl3),
+  inference(cnf_transformation,[],[f94_D])).
+fof(f94_D,plain,(
+  s('type.closSem.v',sK0) != s('type.closSem.v',sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f66,plain,(
+  s('type.closSem.v',sK0) != s('type.closSem.v',sK1) | s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) != s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK1)))),
+  inference(cnf_transformation,[],[f61])).
+fof(f7282,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f7281])).
+fof(f7281,plain,(
+  s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) != s('type.closSem.app_kind','const.closSem.Partial_app_1'(s('type.closSem.v',sK0))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f92,f93])).
+% SZS output end Proof for thm.closSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 74
+% Passive clauses: 1510
+% Generated clauses: 7078
+% Final active clauses: 64
+% Final passive clauses: 1280
+% Input formulas: 21
+% Initial clauses: 26
+% 
+% Duplicate literals: 321
+% Trivial inequalities: 109
+% Fw subsumption resolutions: 778
+% Fw demodulations: 579
+% Bw demodulations: 1
+% 
+% Simple tautologies: 121
+% Equational tautologies: 44
+% Forward subsumptions: 3334
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 118
+% Factoring: 2
+% Forward superposition: 2641
+% Backward superposition: 2136
+% Self superposition: 172
+% Equality factoring: 116
+% Equality resolution: 14
+% 
+% Split clauses: 152
+% Split components: 304
+% SAT solver clauses: 364
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 47
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 152
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 362
+% TWLsolver calls for satisfiability: 91
+% 
+% Memory used [KB]: 8315
+% Time elapsed: 0.270 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.272 s

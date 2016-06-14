@@ -1,0 +1,176 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.bvp_to_wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_to_wordProps
+% SZS output start Proof for thm.bvp_to_wordProps
+fof(f8473,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f8463])).
+fof(f8463,plain,(
+  s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),sK1),s(bool,sK2))) != s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),sK1),s(bool,sK2)))),
+  inference(superposition,[],[f61,f1466])).
+fof(f1466,plain,(
+  ( ! [X0,X1] : (s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),X0),s(bool,X1))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK4),s('type.fcp.cart'(bool,sK0),X0),s(bool,X1)))) )),
+  inference(subsumption_resolution,[],[f1465,f103])).
+fof(f103,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(resolution,[],[f66,f64])).
+fof(f64,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f20])).
+fof(f20,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvp_to_wordProps.get_byte_eq',aHL_FALSITY)).
+fof(f66,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f21])).
+fof(f21,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X13] : (s(bool,'T_0') = s(bool,X13) <=> p(s(bool,X13)))),
+  file('thm.bvp_to_wordProps.get_byte_eq','thm.bool.EQ_CLAUSES|split|0')).
+fof(f1465,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'F_0') | s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),X0),s(bool,X1))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK4),s('type.fcp.cart'(bool,sK0),X0),s(bool,X1)))) )),
+  inference(forward_demodulation,[],[f1440,f105])).
+fof(f105,plain,(
+  s(bool,'T_0') = s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(sK0),'const.bool.the_value_0')))),
+  inference(resolution,[],[f67,f59])).
+fof(f59,plain,(
+  p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(sK0),'const.bool.the_value_0'))))),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(sK0),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,sK0),sK4) = s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,sK0),sK4))),s('type.fcp.cart'(bool,sK0),sK3))) & s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),sK1),s(bool,sK2))) != s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK4),s('type.fcp.cart'(bool,sK0),sK1),s(bool,sK2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f40])).
+fof(f40,plain,(
+  ? [X0,X1,X2,X3,X4] : (p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,X0),X4) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))),s('type.fcp.cart'(bool,X0),X3))) & s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) != s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ? [X0,X1,X2,X3,X4] : ((p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,X0),X4) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))),s('type.fcp.cart'(bool,X0),X3)))) & s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) != s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(ennf_transformation,[],[f19])).
+fof(f19,plain,(
+  ~! [X0,X1,X2,X3,X4] : ((p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,X0),X4) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))),s('type.fcp.cart'(bool,X0),X3)))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(flattening,[],[f18])).
+fof(f18,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4] : ((p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,X0),X4) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))),s('type.fcp.cart'(bool,X0),X3)))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X4),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X6),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,X6),X10) = s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X6),X10))),s('type.fcp.cart'(bool,X6),X9)))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),X7),s(bool,X8))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X6),X10),s('type.fcp.cart'(bool,X6),X7),s(bool,X8))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X6),'const.bool.the_value_0')))) & s('type.fcp.cart'(bool,X6),X10) = s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X6),X10))),s('type.fcp.cart'(bool,X6),X9)))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),X7),s(bool,X8))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X6),X10),s('type.fcp.cart'(bool,X6),X7),s(bool,X8))))),
+  file('thm.bvp_to_wordProps.get_byte_eq','thm.bvp_to_wordProps.get_byte_eq')).
+fof(f67,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f1440,plain,(
+  ( ! [X0,X1] : (s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),X0),s(bool,X1))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK4),s('type.fcp.cart'(bool,sK0),X0),s(bool,X1))) | s(bool,'F_0') = s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(sK0),'const.bool.the_value_0')))) )),
+  inference(superposition,[],[f645,f420])).
+fof(f420,plain,(
+  s('type.fcp.cart'(bool,sK0),sK4) = s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,sK0),sK4)))))),
+  inference(superposition,[],[f76,f60])).
+fof(f60,plain,(
+  s('type.fcp.cart'(bool,sK0),sK4) = s('type.fcp.cart'(bool,sK0),'const.words.word_add_2'(s('type.fcp.cart'(bool,sK0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,sK0),sK4))),s('type.fcp.cart'(bool,sK0),sK3)))),
+  inference(cnf_transformation,[],[f47])).
+fof(f76,plain,(
+  ( ! [X2,X0,X1] : (s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))) )),
+  inference(cnf_transformation,[],[f30])).
+fof(f30,plain,(
+  ! [X0,X1,X2] : s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(flattening,[],[f29])).
+fof(f29,plain,(
+  ! [X0] : ! [X1,X2] : s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X1),s('type.fcp.cart'(bool,X0),X2))) = s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X2),s('type.fcp.cart'(bool,X0),X1)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X6] : ! [X19,X7] : s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),X7),s('type.fcp.cart'(bool,X6),X19))) = s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),X19),s('type.fcp.cart'(bool,X6),X7)))),
+  file('thm.bvp_to_wordProps.get_byte_eq','thm.words.WORD_ADD_COMM')).
+fof(f645,plain,(
+  ( ! [X6,X8,X7,X5,X9] : (s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X5),X6),s('type.fcp.cart'(bool,X5),X7),s(bool,X8))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X5),'const.words.word_add_2'(s('type.fcp.cart'(bool,X5),X6),s('type.fcp.cart'(bool,X5),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X5),X9))))),s('type.fcp.cart'(bool,X5),X7),s(bool,X8))) | s(bool,'F_0') = s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X5),'const.bool.the_value_0')))) )),
+  inference(resolution,[],[f79,f71])).
+fof(f71,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X13] : (s(bool,'F_0') = s(bool,X13) <=> ~p(s(bool,X13)))),
+  file('thm.bvp_to_wordProps.get_byte_eq','thm.bool.EQ_CLAUSES|split|2')).
+fof(f79,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) | s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))))),s('type.fcp.cart'(bool,X0),X1),s(bool,X2)))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1,X2,X3,X4] : (~p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) | s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))))),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(ennf_transformation,[],[f34])).
+fof(f34,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))))),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ! [X0] : ! [X1,X2,X3,X4] : (p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X0),'const.bool.the_value_0')))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X0),'const.words.word_add_2'(s('type.fcp.cart'(bool,X0),X3),s('type.fcp.cart'(bool,X0),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X0),X4))))),s('type.fcp.cart'(bool,X0),X1),s(bool,X2))))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X6] : ! [X7,X8,X9,X10] : (p(s(bool,'const.labProps.good_dimindex_1'(s('type.bool.itself'(X6),'const.bool.the_value_0')))) => s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),X7),s(bool,X8))) = s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,X6),'const.words.word_add_2'(s('type.fcp.cart'(bool,X6),X9),s('type.fcp.cart'(bool,X6),'const.alignment.byte_align_1'(s('type.fcp.cart'(bool,X6),X10))))),s('type.fcp.cart'(bool,X6),X7),s(bool,X8))))),
+  file('thm.bvp_to_wordProps.get_byte_eq','thm.bvp_to_wordProps.get_byte_byte_align')).
+fof(f61,plain,(
+  s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK3),s('type.fcp.cart'(bool,sK0),sK1),s(bool,sK2))) != s('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one')))),'const.wordSem.get_byte_3'(s('type.fcp.cart'(bool,sK0),sK4),s('type.fcp.cart'(bool,sK0),sK1),s(bool,sK2)))),
+  inference(cnf_transformation,[],[f47])).
+% SZS output end Proof for thm.bvp_to_wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 106
+% Passive clauses: 914
+% Generated clauses: 8066
+% Final active clauses: 98
+% Final passive clauses: 694
+% Input formulas: 16
+% Initial clauses: 36
+% 
+% Duplicate literals: 562
+% Trivial inequalities: 182
+% Fw subsumption resolutions: 1327
+% Fw demodulations: 668
+% Bw demodulations: 4
+% 
+% Simple tautologies: 225
+% Equational tautologies: 38
+% Forward subsumptions: 3122
+% 
+% Binary resolution: 235
+% Forward superposition: 2823
+% Backward superposition: 1850
+% Self superposition: 130
+% Equality factoring: 110
+% Equality resolution: 21
+% 
+% Split clauses: 743
+% Split components: 1586
+% SAT solver clauses: 1136
+% SAT solver unit clauses: 50
+% SAT solver binary clauses: 218
+% 
+% Sat splits: 743
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 1134
+% TWLsolver calls for satisfiability: 127
+% 
+% Memory used [KB]: 4093
+% Time elapsed: 0.401 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.4 s

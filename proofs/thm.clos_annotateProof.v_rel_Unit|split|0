@@ -1,0 +1,298 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 148 next slice time: 44
+dis+11_7_41 on thm.clos_annotateProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_annotateProof
+% SZS output start Proof for thm.clos_annotateProof
+fof(f157049,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f157023,f1797,f2982,f2980,f92388,f1798,f2983,f2981,f1815,f2987,f1943,f2984,f2986])).
+fof(f2986,plain,(
+  p(s(bool,'F_0')) | $spl6),
+  inference(cnf_transformation,[],[f2986_D])).
+fof(f2986_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f2984,plain,(
+  p(s(bool,'T_0')) | $spl4),
+  inference(cnf_transformation,[],[f2984_D])).
+fof(f2984_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f1943,plain,(
+  p(s(bool,'T_0')) | p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f1498])).
+fof(f1498,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')) | p(s(bool,X0))))),
+  inference(flattening,[],[f1497])).
+fof(f1497,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | (~p(s(bool,'F_0')) | p(s(bool,X0)))))),
+  inference(nnf_transformation,[],[f1343])).
+fof(f1343,plain,(
+  ! [X0] : ((~p(s(bool,'F_0')) | p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(ennf_transformation,[],[f615])).
+fof(f615,plain,(
+  ! [X0] : ((p(s(bool,'F_0')) => p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f97])).
+fof(f97,axiom,(
+  ! [X14] : ((p(s(bool,'F_0')) => p(s(bool,X14))) <=> p(s(bool,'T_0')))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.bool.IMP_CLAUSES|split|2')).
+fof(f2987,plain,(
+  ~p(s(bool,'F_0')) | $spl7),
+  inference(cnf_transformation,[],[f2987_D])).
+fof(f2987_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl7),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl7])])).
+fof(f1815,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f522])).
+fof(f522,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0',aHL_FALSITY)).
+fof(f2981,plain,(
+  ~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))) | $spl1),
+  inference(cnf_transformation,[],[f2981_D])).
+fof(f2981_D,plain,(
+  ~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f2983,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') != s('type.closSem.v',sK56) | $spl3),
+  inference(cnf_transformation,[],[f2983_D])).
+fof(f2983_D,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') != s('type.closSem.v',sK56) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f1798,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') != s('type.closSem.v',sK56) | ~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0'))))),
+  inference(cnf_transformation,[],[f1456])).
+fof(f1456,plain,(
+  (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))) | s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',sK56)) & (~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))) | s('type.closSem.v','const.closSem.Unit_0') != s('type.closSem.v',sK56))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK56])],[f1455])).
+fof(f1455,plain,(
+  ? [X0] : ((p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Unit_0')))) | s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',X0)) & (~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Unit_0')))) | s('type.closSem.v','const.closSem.Unit_0') != s('type.closSem.v',X0)))),
+  inference(nnf_transformation,[],[f1338])).
+fof(f1338,plain,(
+  ? [X0] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Unit_0')))) <~> s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',X0))),
+  inference(ennf_transformation,[],[f519])).
+fof(f519,plain,(
+  ~! [X0] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Unit_0')))) <=> s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',X0))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X6),s('type.closSem.v','const.closSem.Unit_0')))) <=> s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',X6))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X6),s('type.closSem.v','const.closSem.Unit_0')))) <=> s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',X6))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.clos_annotateProof.v_rel_Unit|split|0')).
+fof(f92388,plain,(
+  $false | ($spl1 | $spl2 | $spl7)),
+  inference(subsumption_resolution,[],[f92387,f2987])).
+fof(f92387,plain,(
+  p(s(bool,'F_0')) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f92318,f3036])).
+fof(f3036,plain,(
+  s(bool,'F_0') = s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Unit_0'),s('type.closSem.v','const.closSem.Unit_0'))) | ($spl1 | $spl2)),
+  inference(resolution,[],[f1895,f2995])).
+fof(f2995,plain,(
+  ~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Unit_0'),s('type.closSem.v','const.closSem.Unit_0')))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f2981,f2982])).
+fof(f1895,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f1467])).
+fof(f1467,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f594])).
+fof(f594,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f593])).
+fof(f593,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f167])).
+fof(f167,axiom,(
+  ! [X14] : (s(bool,'F_0') = s(bool,X14) <=> ~p(s(bool,X14)))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.bool.EQ_CLAUSES|split|3')).
+fof(f92318,plain,(
+  p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Unit_0'),s('type.closSem.v','const.closSem.Unit_0'))))),
+  inference(superposition,[],[f51940,f92281])).
+fof(f92281,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,'T_0')))),
+  inference(forward_demodulation,[],[f92214,f3286])).
+fof(f3286,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))),
+  inference(forward_demodulation,[],[f1808,f1802])).
+fof(f1802,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.dec_to_exh.tuple_tag_0')),
+  inference(cnf_transformation,[],[f123])).
+fof(f123,axiom,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.dec_to_exh.tuple_tag_0')),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.dec_to_exh.tuple_tag_def')).
+fof(f1808,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.dec_to_exh.tuple_tag_0'),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f10])).
+fof(f10,axiom,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.dec_to_exh.tuple_tag_0'),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.closSem.Unit_def')).
+fof(f92214,plain,(
+  s('type.closSem.v','const.closSem.Boolv_1'(s(bool,'T_0'))) = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))),
+  inference(superposition,[],[f83959,f1985])).
+fof(f1985,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f664])).
+fof(f664,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f663])).
+fof(f663,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f159])).
+fof(f159,axiom,(
+  ! [X47] : ! [X125,X126] : s(X47,X125) = s(X47,'const.bool.COND_3'(s(bool,'T_0'),s(X47,X125),s(X47,X126)))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.bool.COND_CLAUSES|split|0')).
+fof(f83959,plain,(
+  ( ! [X0] : (s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X0))) = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.num.|48|_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))) )),
+  inference(forward_demodulation,[],[f1869,f1801])).
+fof(f1801,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.conLang.true_tag_0')),
+  inference(cnf_transformation,[],[f157])).
+fof(f157,axiom,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.conLang.true_tag_0')),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.conLang.true_tag_def')).
+fof(f1869,plain,(
+  ( ! [X0] : (s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X0))) = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f576])).
+fof(f576,plain,(
+  ! [X0] : s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X0))) = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.bool.COND_3'(s(bool,X0),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))),
+  inference(rectify,[],[f160])).
+fof(f160,axiom,(
+  ! [X41] : s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X41))) = s('type.closSem.v','const.closSem.Block_2'(s('type.num.num','const.bool.COND_3'(s(bool,X41),s('type.num.num','const.conLang.true_tag_0'),s('type.num.num','const.conLang.false_tag_0'))),s('type.list.list'('type.closSem.v'),'const.list.NIL_0')))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.closSem.Boolv_def')).
+fof(f51940,plain,(
+  ( ! [X0] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X0))),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X0))))))) )),
+  inference(equality_resolution,[],[f2542])).
+fof(f2542,plain,(
+  ( ! [X0,X1] : (s('type.closSem.v',X0) != s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))) | p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))),s('type.closSem.v',X0))))) )),
+  inference(cnf_transformation,[],[f1694])).
+fof(f1694,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))),s('type.closSem.v',X0)))) | s('type.closSem.v',X0) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1)))) & (s('type.closSem.v',X0) != s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))) | p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))),s('type.closSem.v',X0))))))),
+  inference(nnf_transformation,[],[f878])).
+fof(f878,plain,(
+  ! [X0,X1] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))),s('type.closSem.v',X0)))) <=> s('type.closSem.v',X0) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X41] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X41))),s('type.closSem.v',X6)))) <=> s('type.closSem.v',X6) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X41))))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.clos_annotateProof.v_rel_Boolv|split|1')).
+fof(f2980,plain,(
+  p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))) | $spl0),
+  inference(cnf_transformation,[],[f2980_D])).
+fof(f2980_D,plain,(
+  p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f2982,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',sK56) | $spl2),
+  inference(cnf_transformation,[],[f2982_D])).
+fof(f2982_D,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',sK56) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f1797,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',sK56) | p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0'))))),
+  inference(cnf_transformation,[],[f1456])).
+fof(f157023,plain,(
+  $false | ($spl0 | $spl3 | $spl4)),
+  inference(subsumption_resolution,[],[f157022,f2983])).
+fof(f157022,plain,(
+  s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',sK56) | ($spl0 | $spl4)),
+  inference(subsumption_resolution,[],[f156974,f2984])).
+fof(f156974,plain,(
+  ~p(s(bool,'T_0')) | s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',sK56) | $spl0),
+  inference(superposition,[],[f92955,f92424])).
+fof(f92424,plain,(
+  s(bool,'T_0') = s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0'))) | $spl0),
+  inference(resolution,[],[f2980,f1891])).
+fof(f1891,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f1465])).
+fof(f1465,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f591])).
+fof(f591,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f177])).
+fof(f177,axiom,(
+  ! [X14] : (s(bool,'T_0') = s(bool,X14) <=> p(s(bool,X14)))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.bool.EQ_CLAUSES|split|0')).
+fof(f92955,plain,(
+  ( ! [X5] : (~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X5),s('type.closSem.v','const.closSem.Unit_0')))) | s('type.closSem.v','const.closSem.Unit_0') = s('type.closSem.v',X5)) ) | $spl0),
+  inference(forward_demodulation,[],[f92954,f92281])).
+fof(f92954,plain,(
+  ( ! [X5] : (s('type.closSem.v',X5) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,'T_0'))) | ~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X5),s('type.closSem.v','const.closSem.Unit_0'))))) ) | $spl0),
+  inference(forward_demodulation,[],[f92953,f92424])).
+fof(f92953,plain,(
+  ( ! [X5] : (~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X5),s('type.closSem.v','const.closSem.Unit_0')))) | s('type.closSem.v',X5) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))))) ) | $spl0),
+  inference(forward_demodulation,[],[f92809,f92281])).
+fof(f92809,plain,(
+  ( ! [X5] : (~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X5),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,'T_0')))))) | s('type.closSem.v',X5) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',sK56),s('type.closSem.v','const.closSem.Unit_0')))))) ) | $spl0),
+  inference(superposition,[],[f2551,f92424])).
+fof(f2551,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1)))))) | s('type.closSem.v',X0) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1)))) )),
+  inference(cnf_transformation,[],[f1699])).
+fof(f1699,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1)))))) | s('type.closSem.v',X0) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1)))) & (s('type.closSem.v',X0) != s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))) | p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))))))))),
+  inference(nnf_transformation,[],[f883])).
+fof(f883,plain,(
+  ! [X0,X1] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X0),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1)))))) <=> s('type.closSem.v',X0) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X1))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6,X41] : (p(s(bool,'const.clos_annotateProof.v_rel_2'(s('type.closSem.v',X6),s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X41)))))) <=> s('type.closSem.v',X6) = s('type.closSem.v','const.closSem.Boolv_1'(s(bool,X41))))),
+  file('thm.clos_annotateProof.v_rel_Unit|split|0','thm.clos_annotateProof.v_rel_Boolv|split|0')).
+% SZS output end Proof for thm.clos_annotateProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 1155
+% Passive clauses: 17855
+% Generated clauses: 155627
+% Final active clauses: 897
+% Final passive clauses: 14269
+% Input formulas: 517
+% Initial clauses: 1175
+% 
+% Duplicate literals: 485
+% Trivial inequalities: 2343
+% Fw subsumption resolutions: 9388
+% Fw demodulations: 32598
+% Bw demodulations: 152
+% 
+% Simple tautologies: 1060
+% Equational tautologies: 46
+% Forward subsumptions: 91985
+% Fw demodulations to eq. taut.: 31
+% Bw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 2956
+% Factoring: 1
+% Forward superposition: 47215
+% Backward superposition: 58336
+% Self superposition: 212
+% Equality factoring: 40
+% Equality resolution: 68
+% 
+% Split clauses: 286
+% Split components: 574
+% SAT solver clauses: 1417
+% SAT solver unit clauses: 15
+% SAT solver binary clauses: 390
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 286
+% Sat splitting refutations: 64
+% 
+% TWLsolver clauses: 1413
+% TWLsolver calls for satisfiability: 181
+% 
+% Memory used [KB]: 92237
+% Time elapsed: 2.812 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.93 s

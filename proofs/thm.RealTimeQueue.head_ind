@@ -1,0 +1,363 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.RealTimeQueue
+% (13146)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 273
+% Passive clauses: 4493
+% Generated clauses: 36301
+% Final active clauses: 178
+% Final passive clauses: 3987
+% Input formulas: 133
+% Initial clauses: 197
+% 
+% Duplicate literals: 958
+% Trivial inequalities: 453
+% Fw subsumption resolutions: 2464
+% Fw demodulations: 7689
+% Bw demodulations: 78
+% 
+% Simple tautologies: 478
+% Equational tautologies: 51
+% Forward subsumptions: 19624
+% Fw demodulations to eq. taut.: 17
+% Bw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 120
+% Factoring: 2
+% Forward superposition: 12213
+% Backward superposition: 11902
+% Self superposition: 190
+% Equality factoring: 89
+% Equality resolution: 47
+% 
+% Split clauses: 100
+% Split components: 202
+% SAT solver clauses: 275
+% SAT solver unit clauses: 7
+% SAT solver binary clauses: 119
+% 
+% Sat splits: 100
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 275
+% TWLsolver calls for satisfiability: 52
+% 
+% Memory used [KB]: 17014
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.RealTimeQueue
+% (13165)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 203
+% Passive clauses: 1019
+% Generated clauses: 26212
+% Final active clauses: 180
+% Final passive clauses: 715
+% Input formulas: 133
+% Initial clauses: 197
+% 
+% Duplicate literals: 491
+% Trivial inequalities: 243
+% Fw subsumption resolutions: 2199
+% Fw demodulations: 7031
+% Bw demodulations: 118
+% Condensations: 577
+% Global subsumptions: 14
+% 
+% Simple tautologies: 264
+% Equational tautologies: 11
+% Forward subsumptions: 12662
+% Fw demodulations to eq. taut.: 11
+% 
+% Binary resolution: 72
+% Factoring: 1
+% Forward superposition: 8848
+% Backward superposition: 5148
+% Self superposition: 148
+% Equality factoring: 21
+% Equality resolution: 56
+% 
+% Split clauses: 55
+% Split components: 110
+% SAT solver clauses: 1919
+% SAT solver unit clauses: 307
+% SAT solver binary clauses: 49
+% SAT solver learnt clauses: 32
+% SAT solver learnt literals: 8
+% 
+% Sat splits: 55
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 1855
+% TWLsolver calls for satisfiability: 913
+% 
+% Memory used [KB]: 18805
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.RealTimeQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.RealTimeQueue
+% SZS output start Proof for thm.RealTimeQueue
+fof(f132188,plain,(
+  $false),
+  inference(unit_resulting_resolution,[],[f622,f622,f623,f132101,f3291])).
+fof(f3291,plain,(
+  ( ! [X21,X22,X20] : (~p(s(bool,X21)) | s(bool,X20) = s(bool,X21) | s(bool,X20) = s(bool,X22) | s(bool,'T_0') = s(bool,X22)) )),
+  inference(forward_demodulation,[],[f3290,f485])).
+fof(f485,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,'const.ml_translator.CONTAINER_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f193])).
+fof(f193,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,'const.ml_translator.CONTAINER_1'(s(X0,X1)))),
+  inference(flattening,[],[f192])).
+fof(f192,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,'const.ml_translator.CONTAINER_1'(s(X0,X1)))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X6] : ! [X8] : s(X6,X8) = s(X6,'const.ml_translator.CONTAINER_1'(s(X6,X8)))),
+  file('thm.RealTimeQueue.head_ind','thm.ml_translator.CONTAINER_def')).
+fof(f3290,plain,(
+  ( ! [X21,X22,X20] : (~p(s(bool,X21)) | s(bool,X21) = s(bool,'const.ml_translator.CONTAINER_1'(s(bool,X20))) | s(bool,X20) = s(bool,X22) | s(bool,'T_0') = s(bool,X22)) )),
+  inference(subsumption_resolution,[],[f2967,f408])).
+fof(f408,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.RealTimeQueue.head_ind',aHL_TRUTH)).
+fof(f2967,plain,(
+  ( ! [X21,X22,X20] : (~p(s(bool,'T_0')) | ~p(s(bool,X21)) | s(bool,X21) = s(bool,'const.ml_translator.CONTAINER_1'(s(bool,X20))) | s(bool,X20) = s(bool,X22) | s(bool,'T_0') = s(bool,X22)) )),
+  inference(superposition,[],[f564,f2326])).
+fof(f2326,plain,(
+  ( ! [X2,X3] : (s(bool,X2) = s(bool,X3) | s(bool,'T_0') = s(bool,'const.ml_translator.CONTAINER_1'(s(bool,X3))) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(superposition,[],[f2124,f2037])).
+fof(f2037,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(subsumption_resolution,[],[f2013,f608])).
+fof(f608,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f415,f408])).
+fof(f415,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f345])).
+fof(f345,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f137])).
+fof(f137,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f64])).
+fof(f64,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.RealTimeQueue.head_ind','thm.bool.NOT_CLAUSES|split|2')).
+fof(f2013,plain,(
+  ( ! [X4] : (p(s(bool,'F_0')) | s(bool,X4) = s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f910,f658])).
+fof(f658,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3)))),
+  inference(unit_resulting_resolution,[],[f407,f461])).
+fof(f461,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f349])).
+fof(f349,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f179])).
+fof(f179,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f178])).
+fof(f178,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X31] : (s(bool,'F_0') = s(bool,X31) <=> ~p(s(bool,X31)))),
+  file('thm.RealTimeQueue.head_ind','thm.bool.EQ_CLAUSES|split|2')).
+fof(f407,plain,(
+  ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3))))),
+  inference(cnf_transformation,[],[f344])).
+fof(f344,plain,(
+  ! [X5,X6,X7,X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.CONS_2'(s(sK1,X5),s('type.list.list'(sK1),X6))),s('type.list.list'(sK1),X7),s('type.list.list'(sK1),X8)))))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.NIL_0'),s('type.list.list'(sK1),X3),s('type.list.list'(sK1),X4)))))) & ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK1,sK2,sK3])],[f343])).
+fof(f343,plain,(
+  ? [X0,X1] : (! [X5,X6,X7,X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X5),s('type.list.list'(X0),X6))),s('type.list.list'(X0),X7),s('type.list.list'(X0),X8)))))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X3),s('type.list.list'(X0),X4)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X2)))))),
+  inference(rectify,[],[f306])).
+fof(f306,plain,(
+  ? [X0,X1] : (! [X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X4),s('type.list.list'(X0),X5))),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) & ? [X8] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(flattening,[],[f305])).
+fof(f305,plain,(
+  ? [X0,X1] : ((! [X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X4),s('type.list.list'(X0),X5))),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X2),s('type.list.list'(X0),X3))))))) & ? [X8] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(ennf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~! [X0,X1] : ((! [X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X4),s('type.list.list'(X0),X5))),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X2),s('type.list.list'(X0),X3))))))) => ! [X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(flattening,[],[f135])).
+fof(f135,plain,(
+  ~! [X0] : ! [X1] : ((! [X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X4),s('type.list.list'(X0),X5))),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X2),s('type.list.list'(X0),X3))))))) => ! [X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X9))),s('type.list.list'(X6),X10),s('type.list.list'(X6),X11)))))) & ! [X12,X13] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X6),'const.list.NIL_0'),s('type.list.list'(X6),X12),s('type.list.list'(X6),X13))))))) => ! [X14] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),X14)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X9))),s('type.list.list'(X6),X10),s('type.list.list'(X6),X11)))))) & ! [X12,X13] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X6),'const.list.NIL_0'),s('type.list.list'(X6),X12),s('type.list.list'(X6),X13))))))) => ! [X14] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),X14)))))),
+  file('thm.RealTimeQueue.head_ind','thm.RealTimeQueue.head_ind')).
+fof(f910,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(subsumption_resolution,[],[f886,f608])).
+fof(f886,plain,(
+  ( ! [X0,X1] : (p(s(bool,'F_0')) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f561,f454])).
+fof(f454,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.RealTimeQueue.head_ind',aHL_BOOL_CASES)).
+fof(f561,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f334])).
+fof(f334,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f333])).
+fof(f333,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f270])).
+fof(f270,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X15,X16] : ((p(s(bool,X15)) => p(s(bool,X16))) => ((p(s(bool,X16)) => p(s(bool,X15))) => s(bool,X15) = s(bool,X16)))),
+  file('thm.RealTimeQueue.head_ind','thm.bool.IMP_ANTISYM_AX')).
+fof(f2124,plain,(
+  ( ! [X29] : (s(bool,X29) = s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3))) | s(bool,'T_0') = s(bool,'const.ml_translator.CONTAINER_1'(s(bool,X29)))) )),
+  inference(superposition,[],[f2037,f485])).
+fof(f564,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f334])).
+fof(f132101,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),X0))))) )),
+  inference(subsumption_resolution,[],[f132100,f408])).
+fof(f132100,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),X0))))) )),
+  inference(forward_demodulation,[],[f132099,f1282])).
+fof(f1282,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,'T_0') = s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.CONS_2'(s(sK1,X0),s('type.list.list'(sK1),X1))),s('type.list.list'(sK1),X2),s('type.list.list'(sK1),X3)))))) )),
+  inference(unit_resulting_resolution,[],[f405,f457])).
+fof(f457,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f347])).
+fof(f347,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f176])).
+fof(f176,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X31] : (s(bool,'T_0') = s(bool,X31) <=> p(s(bool,X31)))),
+  file('thm.RealTimeQueue.head_ind','thm.bool.EQ_CLAUSES|split|0')).
+fof(f405,plain,(
+  ( ! [X6,X8,X7,X5] : (p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.CONS_2'(s(sK1,X5),s('type.list.list'(sK1),X6))),s('type.list.list'(sK1),X7),s('type.list.list'(sK1),X8))))))) )),
+  inference(cnf_transformation,[],[f344])).
+fof(f132099,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.CONS_2'(s(sK1,sK9(sK2,sK1)),s('type.list.list'(sK1),sK10(sK2,sK1)))),s('type.list.list'(sK1),sK11(sK2,sK1)),s('type.list.list'(sK1),sK12(sK2,sK1))))))) | p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),X0))))) )),
+  inference(subsumption_resolution,[],[f132031,f408])).
+fof(f132031,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.CONS_2'(s(sK1,sK9(sK2,sK1)),s('type.list.list'(sK1),sK10(sK2,sK1)))),s('type.list.list'(sK1),sK11(sK2,sK1)),s('type.list.list'(sK1),sK12(sK2,sK1))))))) | p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),X0))))) )),
+  inference(superposition,[],[f492,f684])).
+fof(f684,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.NIL_0'),s('type.list.list'(sK1),X0),s('type.list.list'(sK1),X1)))))) )),
+  inference(unit_resulting_resolution,[],[f406,f457])).
+fof(f406,plain,(
+  ( ! [X4,X3] : (p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(sK1),'const.list.NIL_0'),s('type.list.list'(sK1),X3),s('type.list.list'(sK1),X4))))))) )),
+  inference(cnf_transformation,[],[f344])).
+fof(f492,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),sK7(X1,X0)),s('type.list.list'(X0),sK8(X1,X0))))))) | ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK9(X1,X0)),s('type.list.list'(X0),sK10(X1,X0)))),s('type.list.list'(X0),sK11(X1,X0)),s('type.list.list'(X0),sK12(X1,X0))))))) | p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f368])).
+fof(f368,plain,(
+  ! [X0,X1] : (~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),sK7(X1,X0)),s('type.list.list'(X0),sK8(X1,X0))))))) | ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK9(X1,X0)),s('type.list.list'(X0),sK10(X1,X0)))),s('type.list.list'(X0),sK11(X1,X0)),s('type.list.list'(X0),sK12(X1,X0))))))) | ! [X2] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK7,sK8,sK9,sK10,sK11,sK12])],[f367])).
+fof(f367,plain,(
+  ! [X0,X1] : (? [X7,X8] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X7),s('type.list.list'(X0),X8)))))) | ? [X3,X4,X5,X6] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X3),s('type.list.list'(X0),X4))),s('type.list.list'(X0),X5),s('type.list.list'(X0),X6)))))) | ! [X2] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X2)))))),
+  inference(rectify,[],[f315])).
+fof(f315,plain,(
+  ! [X0,X1] : (? [X6,X7] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) | ? [X2,X3,X4,X5] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))),s('type.list.list'(X0),X4),s('type.list.list'(X0),X5)))))) | ! [X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(flattening,[],[f314])).
+fof(f314,plain,(
+  ! [X0,X1] : ((? [X6,X7] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) | ? [X2,X3,X4,X5] : ~p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))),s('type.list.list'(X0),X4),s('type.list.list'(X0),X5))))))) | ! [X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(ennf_transformation,[],[f205])).
+fof(f205,plain,(
+  ! [X0,X1] : ((! [X6,X7] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))),s('type.list.list'(X0),X4),s('type.list.list'(X0),X5))))))) => ! [X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(flattening,[],[f204])).
+fof(f204,plain,(
+  ! [X0] : ! [X1] : ((! [X6,X7] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X6),s('type.list.list'(X0),X7)))))) & ! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))),s('type.list.list'(X0),X4),s('type.list.list'(X0),X5))))))) => ! [X8] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X0),bool),X1),s('type.RealTimeQueue.queue'(X0),X8)))))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6] : ! [X7] : ((! [X18,X22] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X6),'const.list.NIL_0'),s('type.list.list'(X6),X18),s('type.list.list'(X6),X22)))))) & ! [X23,X24,X25,X26] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),'const.RealTimeQueue.QUEUE_3'(s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X23),s('type.list.list'(X6),X24))),s('type.list.list'(X6),X25),s('type.list.list'(X6),X26))))))) => ! [X14] : p(s(bool,happ(s(fun('type.RealTimeQueue.queue'(X6),bool),X7),s('type.RealTimeQueue.queue'(X6),X14)))))),
+  file('thm.RealTimeQueue.head_ind','thm.RealTimeQueue.is_empty_ind')).
+fof(f623,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.RealTimeQueue.queue'(sK1),bool),sK2),s('type.RealTimeQueue.queue'(sK1),sK3)))),
+  inference(unit_resulting_resolution,[],[f407,f456])).
+fof(f456,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f347])).
+fof(f622,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(unit_resulting_resolution,[],[f608,f456])).
+% SZS output end Proof for thm.RealTimeQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 465
+% Passive clauses: 3270
+% Generated clauses: 132538
+% Final active clauses: 338
+% Final passive clauses: 1902
+% Input formulas: 133
+% Initial clauses: 197
+% 
+% Duplicate literals: 2079
+% Trivial inequalities: 1315
+% Fw subsumption resolutions: 10758
+% Fw demodulations: 35993
+% Bw demodulations: 949
+% Condensations: 2652
+% Global subsumptions: 43
+% 
+% Simple tautologies: 1016
+% Equational tautologies: 328
+% Forward subsumptions: 74484
+% Fw demodulations to eq. taut.: 204
+% Bw demodulations to eq. taut.: 42
+% 
+% Unit resulting resolution: 6788
+% Factoring: 1
+% Forward superposition: 36307
+% Backward superposition: 33976
+% Self superposition: 348
+% Equality factoring: 105
+% Equality resolution: 74
+% 
+% Split clauses: 125
+% Split components: 250
+% SAT solver clauses: 3731
+% SAT solver unit clauses: 636
+% SAT solver binary clauses: 1154
+% 
+% Sat splits: 125
+% Sat splitting refutations: 166
+% 
+% Memory used [KB]: 63708
+% Time elapsed: 3.530 s
+% ------------------------------
+% ------------------------------
+% Success in time 4.871 s

@@ -1,0 +1,297 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.modSem
+% (24574)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 190
+% Passive clauses: 3589
+% Generated clauses: 25162
+% Final active clauses: 130
+% Final passive clauses: 3095
+% Input formulas: 68
+% Initial clauses: 77
+% 
+% Duplicate literals: 927
+% Trivial inequalities: 168
+% Fw subsumption resolutions: 2324
+% Fw demodulations: 4608
+% Bw demodulations: 50
+% 
+% Simple tautologies: 220
+% Equational tautologies: 52
+% Forward subsumptions: 12588
+% 
+% Binary resolution: 542
+% Factoring: 3
+% Forward superposition: 10290
+% Backward superposition: 6311
+% Self superposition: 232
+% Equality factoring: 106
+% Equality resolution: 19
+% 
+% Split clauses: 278
+% Split components: 556
+% SAT solver clauses: 880
+% SAT solver unit clauses: 41
+% SAT solver binary clauses: 130
+% 
+% Sat splits: 278
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 878
+% TWLsolver calls for satisfiability: 160
+% 
+% Memory used [KB]: 15607
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.modSem
+% (24694)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 126
+% Passive clauses: 958
+% Generated clauses: 15334
+% Final active clauses: 90
+% Final passive clauses: 683
+% Input formulas: 68
+% Initial clauses: 77
+% 
+% Duplicate literals: 508
+% Trivial inequalities: 36
+% Fw subsumption resolutions: 741
+% Fw demodulations: 1475
+% Bw demodulations: 171
+% Condensations: 1202
+% 
+% Simple tautologies: 55
+% Equational tautologies: 41
+% Forward subsumptions: 8519
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 268
+% Factoring: 1
+% Forward superposition: 5008
+% Backward superposition: 4454
+% Self superposition: 217
+% Equality factoring: 82
+% Equality resolution: 2
+% 
+% Split clauses: 81
+% Split components: 162
+% SAT solver clauses: 1722
+% SAT solver unit clauses: 131
+% SAT solver binary clauses: 53
+% SAT solver learnt clauses: 1
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 81
+% Sat splitting refutations: 33
+% 
+% TWLsolver clauses: 1721
+% TWLsolver calls for satisfiability: 253
+% 
+% Memory used [KB]: 23155
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.modSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.modSem
+% SZS output start Proof for thm.modSem
+fof(f17028,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f17027,f213])).
+fof(f213,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.modSem.state_fupdfupds_comp|split|3','thm.bool.TRUTH')).
+fof(f17027,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f17025,f3164])).
+fof(f3164,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f2748,f294])).
+fof(f294,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f215,f216])).
+fof(f216,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.modSem.state_fupdfupds_comp|split|3',aHL_BOOL_CASES)).
+fof(f215,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.modSem.state_fupdfupds_comp|split|3',aHL_FALSITY)).
+fof(f2748,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(backward_demodulation,[],[f2647,f604])).
+fof(f604,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.combin.o_3'(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(fun(X0,X0),'_i_0_0'),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f570,f263])).
+fof(f263,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f143])).
+fof(f143,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(flattening,[],[f142])).
+fof(f142,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X14,X6,X15] : ! [X10,X9,X17] : s(X14,'const.combin.o_3'(s(fun(X6,X14),X10),s(fun(X15,X6),X9),s(X15,X17))) = s(X14,happ(s(fun(X6,X14),X10),s(X6,happ(s(fun(X15,X6),X9),s(X15,X17)))))),
+  file('thm.modSem.state_fupdfupds_comp|split|3','thm.combin.o_THM')).
+fof(f570,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1))))))) )),
+  inference(unit_resulting_resolution,[],[f217,f261])).
+fof(f261,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f211])).
+fof(f211,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f139])).
+fof(f139,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f49])).
+fof(f49,axiom,(
+  ! [X47,X48,X49] : (p(s(bool,happ(s(fun(X47,bool),happ(s(fun(X47,fun(X47,bool)),'=_0'),s(X47,X48))),s(X47,X49)))) <=> s(X47,X48) = s(X47,X49))),
+  file('thm.modSem.state_fupdfupds_comp|split|3',arity_0_HL_EQ)).
+fof(f217,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f73])).
+fof(f73,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f68])).
+fof(f68,axiom,(
+  ! [X36] : ! [X38] : s(X36,X38) = s(X36,happ(s(fun(X36,X36),'_i_0_0'),s(X36,X38)))),
+  file('thm.modSem.state_fupdfupds_comp|split|3','_i0_ax')).
+fof(f2647,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X2,happ(s(fun(X0,X2),X3),s(X0,X1))) = s(X2,'const.combin.o_3'(s(fun(X0,X2),X3),s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(superposition,[],[f263,f217])).
+fof(f17025,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),fun(fun(sK0,'type.modSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f16971,f8571])).
+fof(f8571,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),fun(fun(sK0,'type.modSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f212,f260])).
+fof(f260,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f211])).
+fof(f212,plain,(
+  s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))) != s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))),s(fun(sK0,'type.modSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f199])).
+fof(f199,plain,(
+  s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))) != s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK4))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),sK3))),s(fun(sK0,'type.modSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f194])).
+fof(f194,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X3))))),s(fun(X0,'type.modSem.state'(X1)),X2))) != s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X4))),s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X3))),s(fun(X0,'type.modSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X3))))),s(fun(X0,'type.modSem.state'(X1)),X2))) = s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X4))),s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X3))),s(fun(X0,'type.modSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X3))))),s(fun(X0,'type.modSem.state'(X1)),X2))) = s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X4))),s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X3))),s(fun(X0,'type.modSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X10),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X9))))),s(fun(X6,'type.modSem.state'(X7)),X8))) = s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X10))),s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X9))),s(fun(X6,'type.modSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X10),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X9))))),s(fun(X6,'type.modSem.state'(X7)),X8))) = s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X10))),s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X9))),s(fun(X6,'type.modSem.state'(X7)),X8)))))),
+  file('thm.modSem.state_fupdfupds_comp|split|3','thm.modSem.state_fupdfupds_comp|split|3')).
+fof(f16971,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2))))),s(fun(X3,'type.modSem.state'(X0)),X4))) = s(fun(X3,'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1))),s(fun(X3,'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2))),s(fun(X3,'type.modSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f267,f224])).
+fof(f224,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1))))) = s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2))),s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1)))))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,plain,(
+  ! [X0,X1,X2] : s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1))))) = s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2))),s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1)))))),
+  inference(flattening,[],[f85])).
+fof(f85,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1))))) = s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X2))),s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X10),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X9))))) = s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X10))),s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v'))),X9)))))),
+  file('thm.modSem.state_fupdfupds_comp|split|3','thm.modSem.state_fupdfupds_comp|split|2')).
+fof(f267,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f151])).
+fof(f151,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f150])).
+fof(f150,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X14,X6,X22,X15] : ! [X10,X9,X8] : s(fun(X22,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X22,X6),'const.combin.o_2'(s(fun(X15,X6),X9),s(fun(X22,X15),X8))))) = s(fun(X22,X14),'const.combin.o_2'(s(fun(X15,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X15,X6),X9))),s(fun(X22,X15),X8)))),
+  file('thm.modSem.state_fupdfupds_comp|split|3','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.modSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 152
+% Passive clauses: 1454
+% Generated clauses: 17426
+% Final active clauses: 99
+% Final passive clauses: 946
+% Input formulas: 68
+% Initial clauses: 77
+% 
+% Duplicate literals: 570
+% Trivial inequalities: 48
+% Fw subsumption resolutions: 541
+% Fw demodulations: 2600
+% Bw demodulations: 345
+% Condensations: 782
+% Global subsumptions: 1
+% 
+% Simple tautologies: 56
+% Equational tautologies: 124
+% Forward subsumptions: 11155
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 20
+% 
+% Unit resulting resolution: 587
+% Factoring: 1
+% Forward superposition: 5499
+% Backward superposition: 5325
+% Self superposition: 224
+% Equality factoring: 74
+% Equality resolution: 2
+% 
+% Split clauses: 20
+% Split components: 40
+% SAT solver clauses: 1520
+% SAT solver unit clauses: 354
+% SAT solver binary clauses: 617
+% 
+% Sat splits: 20
+% Sat splitting refutations: 23
+% 
+% Memory used [KB]: 23411
+% Time elapsed: 0.781 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.131 s

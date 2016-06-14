@@ -1,0 +1,315 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.typeSysProps
+% (7680)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 80
+% Passive clauses: 1806
+% Generated clauses: 13074
+% Final active clauses: 68
+% Final passive clauses: 1524
+% Input formulas: 21
+% Initial clauses: 49
+% 
+% Duplicate literals: 805
+% Trivial inequalities: 206
+% Fw subsumption resolutions: 2097
+% Fw demodulations: 1167
+% Bw demodulations: 4
+% 
+% Simple tautologies: 239
+% Equational tautologies: 58
+% Forward subsumptions: 5691
+% 
+% Binary resolution: 130
+% Factoring: 3
+% Forward superposition: 4605
+% Backward superposition: 3957
+% Self superposition: 281
+% Equality factoring: 174
+% Equality resolution: 14
+% 
+% Split clauses: 538
+% Split components: 1081
+% SAT solver clauses: 1124
+% SAT solver unit clauses: 2
+% SAT solver binary clauses: 68
+% 
+% Sat splits: 538
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 1120
+% TWLsolver calls for satisfiability: 135
+% 
+% Memory used [KB]: 8059
+% Time elapsed: 0.608 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.typeSysProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.typeSysProps
+% SZS output start Proof for thm.typeSysProps
+fof(f480,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f476,f89,f148,f90,f150,f132,f164,f180,f182,f86,f144,f91,f151,f183,f185,f87,f142,f246,f255,f166,f168,f88,f140,f85,f146,f229,f238,f127,f162])).
+fof(f162,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1)) ) | $spl16),
+  inference(cnf_transformation,[],[f162_D])).
+fof(f162_D,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1)) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f127,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | p(s(bool,X1)) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f55])).
+fof(f55,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f54])).
+fof(f54,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X23,X24] : ((p(s(bool,X23)) => p(s(bool,X24))) => ((p(s(bool,X24)) => p(s(bool,X23))) => s(bool,X23) = s(bool,X24)))),
+  file('thm.typeSysProps.typeSysProps_33_prove_ltb','thm.bool.IMP_ANTISYM_AX')).
+fof(f238,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | $spl38),
+  inference(cnf_transformation,[],[f238_D])).
+fof(f238_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl38),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl38])])).
+fof(f229,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | ($spl11 | $spl16)),
+  inference(resolution,[],[f162,f150])).
+fof(f146,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num',sK0) | $spl6),
+  inference(cnf_transformation,[],[f146_D])).
+fof(f146_D,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num',sK0) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f85,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num',sK0)),
+  inference(cnf_transformation,[],[f59])).
+fof(f59,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num',sK0) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1)))) & p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) & ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',sK0),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f47])).
+fof(f47,plain,(
+  ? [X0,X1,X2,X3] : (s('type.num.num','const.num.|48|_0') = s('type.num.num',X0) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),X1)))) & p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',X2)))) & ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',X0),s('type.list.list'('type.ast.t'),X1),s('type.ast.t',X2)))))))),
+  inference(flattening,[],[f46])).
+fof(f46,plain,(
+  ? [X0,X1,X2,X3] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num',X0) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),X1)))) & p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',X2))))) & ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',X0),s('type.list.list'('type.ast.t'),X1),s('type.ast.t',X2)))))))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1,X2,X3] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num',X0) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),X1)))) & p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',X2))))) => p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',X0),s('type.list.list'('type.ast.t'),X1),s('type.ast.t',X2)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num',X6) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),X7)))) & p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X7))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',X8))))) => p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',X6),s('type.list.list'('type.ast.t'),X7),s('type.ast.t',X8)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num',X6) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),X7)))) & p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X7))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',X8))))) => p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',X6),s('type.list.list'('type.ast.t'),X7),s('type.ast.t',X8)))))))),
+  file('thm.typeSysProps.typeSysProps_33_prove_ltb','thm.typeSysProps.typeSysProps_33_prove_ltb')).
+fof(f140,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',sK0),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2)))))) | $spl1),
+  inference(cnf_transformation,[],[f140_D])).
+fof(f140_D,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',sK0),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2)))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f88,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num',sK0),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2))))))),
+  inference(cnf_transformation,[],[f59])).
+fof(f168,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2)))))) | $spl25),
+  inference(cnf_transformation,[],[f168_D])).
+fof(f168_D,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2)))))) <=> ~$spl25),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl25])])).
+fof(f166,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2)))))) | ($spl1 | $spl6)),
+  inference(forward_demodulation,[],[f140,f146])).
+fof(f255,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2))))) | $spl48),
+  inference(cnf_transformation,[],[f255_D])).
+fof(f255_D,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2))))) <=> ~$spl48),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl48])])).
+fof(f246,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),sK1),s('type.ast.t',sK2))))) | ($spl25 | $spl38)),
+  inference(resolution,[],[f238,f168])).
+fof(f142,plain,(
+  p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) | $spl2),
+  inference(cnf_transformation,[],[f142_D])).
+fof(f142_D,plain,(
+  p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f87,plain,(
+  p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2))))),
+  inference(cnf_transformation,[],[f59])).
+fof(f185,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2))) | $spl32),
+  inference(cnf_transformation,[],[f185_D])).
+fof(f185_D,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2))) <=> ~$spl32),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl32])])).
+fof(f183,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2))) | ($spl2 | $spl11 | $spl12)),
+  inference(subsumption_resolution,[],[f174,f150])).
+fof(f174,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2))) | ($spl2 | $spl12)),
+  inference(superposition,[],[f142,f151])).
+fof(f151,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) | $spl12),
+  inference(cnf_transformation,[],[f151_D])).
+fof(f151_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f91,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.typeSysProps.typeSysProps_33_prove_ltb',aHL_BOOL_CASES)).
+fof(f144,plain,(
+  p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1)))) | $spl4),
+  inference(cnf_transformation,[],[f144_D])).
+fof(f144_D,plain,(
+  p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1)))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f86,plain,(
+  p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1))))),
+  inference(cnf_transformation,[],[f59])).
+fof(f182,plain,(
+  s(bool,'T_0') = s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1))) | $spl30),
+  inference(cnf_transformation,[],[f182_D])).
+fof(f182_D,plain,(
+  s(bool,'T_0') = s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1))) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f180,plain,(
+  s(bool,'T_0') = s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1))) | ($spl4 | $spl11 | $spl12)),
+  inference(subsumption_resolution,[],[f173,f150])).
+fof(f173,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1))) | ($spl4 | $spl12)),
+  inference(superposition,[],[f144,f151])).
+fof(f164,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X3),s('type.ast.t',X2)))))) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.list.list'('type.ast.t'),X3)))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X3))),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t',X2))))) ) | $spl20),
+  inference(cnf_transformation,[],[f164_D])).
+fof(f164_D,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X3),s('type.ast.t',X2)))))) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.list.list'('type.ast.t'),X3)))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X3))),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t',X2))))) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f132,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X3),s('type.ast.t',X2)))))) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.list.list'('type.ast.t'),X3)))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X3))),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t',X2))))) )),
+  inference(cnf_transformation,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1,X2,X3] : (~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X3))),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t',X2)))) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.list.list'('type.ast.t'),X3)))) | p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X3),s('type.ast.t',X2)))))))),
+  inference(rectify,[],[f58])).
+fof(f58,plain,(
+  ! [X2,X3,X4,X5] : (~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X5))),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.ast.t',X4)))) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.list.list'('type.ast.t'),X5)))) | p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X5),s('type.ast.t',X4)))))))),
+  inference(flattening,[],[f57])).
+fof(f57,plain,(
+  ! [X2,X3,X4,X5] : ((~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X5))),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.ast.t',X4)))) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.list.list'('type.ast.t'),X5))))) | p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X5),s('type.ast.t',X4)))))))),
+  inference(ennf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X2,X3,X4,X5] : ((p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X5))),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.ast.t',X4)))) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.list.list'('type.ast.t'),X5))))) => p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X2),s('type.list.list'('type.list.list'('type.string.char')),X3))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X5),s('type.ast.t',X4)))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X10,X11] : ! [X9,X12,X8,X13,X14,X15] : ((p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),X13))),s('type.list.list'('type.list.list'('type.string.char')),X12))),s('type.ast.t',X8)))) & p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'('type.string.char')),X12))),s('type.list.list'('type.ast.t'),X13))))) => p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X9),s('type.list.list'('type.list.list'('type.string.char')),X12))),s('type.ast.t','const.typeSystem.deBruijn_subst_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.ast.t'),X13),s('type.ast.t',X8)))))))),
+  file('thm.typeSysProps.typeSysProps_33_prove_ltb','thm.typeSysProps.deBruijn_subst_check_freevars2')).
+fof(f150,plain,(
+  ~p(s(bool,'F_0')) | $spl11),
+  inference(cnf_transformation,[],[f150_D])).
+fof(f150_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl11),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl11])])).
+fof(f90,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.typeSysProps.typeSysProps_33_prove_ltb',aHL_FALSITY)).
+fof(f148,plain,(
+  p(s(bool,'T_0')) | $spl8),
+  inference(cnf_transformation,[],[f148_D])).
+fof(f148_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f89,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.typeSysProps.typeSysProps_33_prove_ltb',aHL_TRUTH)).
+fof(f476,plain,(
+  $false | ($spl8 | $spl11 | $spl20 | $spl30 | $spl32 | $spl48)),
+  inference(subsumption_resolution,[],[f475,f148])).
+fof(f475,plain,(
+  ~p(s(bool,'T_0')) | ($spl8 | $spl11 | $spl20 | $spl30 | $spl32 | $spl48)),
+  inference(forward_demodulation,[],[f474,f185])).
+fof(f474,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) | ($spl8 | $spl11 | $spl20 | $spl30 | $spl48)),
+  inference(subsumption_resolution,[],[f473,f148])).
+fof(f473,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) | ($spl11 | $spl20 | $spl30 | $spl48)),
+  inference(forward_demodulation,[],[f472,f182])).
+fof(f472,plain,(
+  ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1)))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) | ($spl11 | $spl20 | $spl48)),
+  inference(subsumption_resolution,[],[f453,f150])).
+fof(f453,plain,(
+  p(s(bool,'F_0')) | ~p(s(bool,'const.list.EVERY_2'(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',sK3),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.list.list'('type.ast.t'),sK1)))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.ast.t'),sK1))),s('type.list.list'('type.list.list'('type.string.char')),'const.list.NIL_0'))),s('type.ast.t',sK2)))) | ($spl20 | $spl48)),
+  inference(superposition,[],[f164,f255])).
+% SZS output end Proof for thm.typeSysProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 23
+% Passive clauses: 49
+% Generated clauses: 379
+% Final active clauses: 18
+% Final passive clauses: 21
+% Input formulas: 21
+% Initial clauses: 49
+% 
+% Duplicate literals: 5
+% Fw subsumption resolutions: 27
+% Fw demodulations: 29
+% Bw demodulations: 8
+% Condensations: 13
+% Global subsumptions: 9
+% 
+% Simple tautologies: 28
+% Equational tautologies: 5
+% Forward subsumptions: 116
+% 
+% Binary resolution: 20
+% Factoring: 1
+% Forward superposition: 68
+% Backward superposition: 72
+% Self superposition: 16
+% Equality factoring: 4
+% 
+% Split clauses: 3
+% Split components: 6
+% SAT solver clauses: 163
+% SAT solver unit clauses: 63
+% SAT solver binary clauses: 16
+% SAT solver learnt clauses: 19
+% 
+% Sat splits: 3
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 126
+% TWLsolver calls for satisfiability: 126
+% 
+% Memory used [KB]: 1279
+% Time elapsed: 0.015 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.65 s

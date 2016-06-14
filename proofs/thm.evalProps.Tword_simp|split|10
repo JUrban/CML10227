@@ -1,0 +1,217 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.evalProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.evalProps
+% SZS output start Proof for thm.evalProps
+fof(f2153,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2152,f1675,f2147,f2092])).
+fof(f2092,plain,(
+  $false | $spl8),
+  inference(subsumption_resolution,[],[f2086,f326])).
+fof(f326,plain,(
+  s('type.ast.tctor','const.ast.TC_char_0') != s('type.ast.tctor','const.ast.TC_word8_0')),
+  inference(cnf_transformation,[],[f148])).
+fof(f148,plain,(
+  s('type.ast.tctor','const.ast.TC_char_0') != s('type.ast.tctor','const.ast.TC_word8_0')),
+  inference(flattening,[],[f35])).
+fof(f35,axiom,(
+  ~s('type.ast.tctor','const.ast.TC_char_0') = s('type.ast.tctor','const.ast.TC_word8_0')),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.tctor_distinct|split|25')).
+fof(f2086,plain,(
+  s('type.ast.tctor','const.ast.TC_char_0') = s('type.ast.tctor','const.ast.TC_word8_0') | $spl8),
+  inference(trivial_inequality_removal,[],[f2083])).
+fof(f2083,plain,(
+  s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tchar_0') | s('type.ast.tctor','const.ast.TC_char_0') = s('type.ast.tctor','const.ast.TC_word8_0') | $spl8),
+  inference(superposition,[],[f1684,f574])).
+fof(f574,plain,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word8_0'))) | $spl8),
+  inference(forward_demodulation,[],[f568,f466])).
+fof(f466,plain,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size','const.ast.W8_0'))) | $spl8),
+  inference(backward_demodulation,[],[f463,f291])).
+fof(f291,plain,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',sK0)))),
+  inference(cnf_transformation,[],[f263])).
+fof(f263,plain,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',sK0)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f258])).
+fof(f258,plain,(
+  ? [X0] : s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X0)))),
+  inference(ennf_transformation,[],[f123])).
+fof(f123,plain,(
+  ~! [X0] : s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X0)))),
+  inference(flattening,[],[f122])).
+fof(f122,plain,(
+  ~! [X0] : ~s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X0)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ~s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X6)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ~s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X6)))),
+  file('thm.evalProps.Tword_simp|split|10','thm.evalProps.Tword_simp|split|10')).
+fof(f463,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0) | $spl8),
+  inference(cnf_transformation,[],[f463_D])).
+fof(f463_D,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f568,plain,(
+  s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size','const.ast.W8_0'))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word8_0')))),
+  inference(superposition,[],[f372,f294])).
+fof(f294,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0')))),
+  inference(cnf_transformation,[],[f97])).
+fof(f97,axiom,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0')))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.TC_word_def|split|0')).
+fof(f372,plain,(
+  ( ! [X0] : (s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X0))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X0)))))) )),
+  inference(cnf_transformation,[],[f194])).
+fof(f194,plain,(
+  ! [X0] : s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X0))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X0)))))),
+  inference(rectify,[],[f99])).
+fof(f99,axiom,(
+  ! [X17] : s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X17))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X17)))))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.Tword_def')).
+fof(f1684,plain,(
+  ( ! [X2,X3] : (s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))) | s('type.ast.tctor','const.ast.TC_char_0') = s('type.ast.tctor',X3)) )),
+  inference(superposition,[],[f435,f299])).
+fof(f299,plain,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_char_0')))),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,axiom,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_char_0')))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.Tchar_def')).
+fof(f435,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X0),s('type.ast.tctor',X1))) != s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))) | s('type.ast.tctor',X1) = s('type.ast.tctor',X3)) )),
+  inference(cnf_transformation,[],[f290])).
+fof(f290,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X0),s('type.ast.tctor',X1))) != s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))) | (s('type.list.list'('type.ast.t'),X0) = s('type.list.list'('type.ast.t'),X2) & s('type.ast.tctor',X1) = s('type.ast.tctor',X3))) & (s('type.list.list'('type.ast.t'),X0) != s('type.list.list'('type.ast.t'),X2) | s('type.ast.tctor',X1) != s('type.ast.tctor',X3) | s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X0),s('type.ast.tctor',X1))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3)))))),
+  inference(flattening,[],[f289])).
+fof(f289,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X0),s('type.ast.tctor',X1))) != s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))) | (s('type.list.list'('type.ast.t'),X0) = s('type.list.list'('type.ast.t'),X2) & s('type.ast.tctor',X1) = s('type.ast.tctor',X3))) & ((s('type.list.list'('type.ast.t'),X0) != s('type.list.list'('type.ast.t'),X2) | s('type.ast.tctor',X1) != s('type.ast.tctor',X3)) | s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X0),s('type.ast.tctor',X1))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3)))))),
+  inference(nnf_transformation,[],[f257])).
+fof(f257,plain,(
+  ! [X0,X1,X2,X3] : (s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X0),s('type.ast.tctor',X1))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))) <=> (s('type.list.list'('type.ast.t'),X0) = s('type.list.list'('type.ast.t'),X2) & s('type.ast.tctor',X1) = s('type.ast.tctor',X3)))),
+  inference(rectify,[],[f91])).
+fof(f91,axiom,(
+  ! [X13,X14,X15,X16] : (s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X13),s('type.ast.tctor',X14))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X15),s('type.ast.tctor',X16))) <=> (s('type.list.list'('type.ast.t'),X13) = s('type.list.list'('type.ast.t'),X15) & s('type.ast.tctor',X14) = s('type.ast.tctor',X16)))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.t_|49||49||split|2')).
+fof(f2147,plain,(
+  $false | ($spl9 | $spl33)),
+  inference(subsumption_resolution,[],[f2146,f462])).
+fof(f462,plain,(
+  s('type.ast.word_size','const.ast.W8_0') != s('type.ast.word_size',sK0) | $spl9),
+  inference(cnf_transformation,[],[f462_D])).
+fof(f462_D,plain,(
+  s('type.ast.word_size','const.ast.W8_0') != s('type.ast.word_size',sK0) <=> ~$spl9),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl9])])).
+fof(f2146,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0) | $spl33),
+  inference(subsumption_resolution,[],[f2133,f1675])).
+fof(f2133,plain,(
+  s('type.ast.t','const.ast.Tchar_0') = s('type.ast.t','const.ast.Tword64_0') | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0)),
+  inference(superposition,[],[f291,f453])).
+fof(f453,plain,(
+  ( ! [X0] : (s('type.ast.t','const.ast.Tword64_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size',X0))) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0)) )),
+  inference(superposition,[],[f296,f373])).
+fof(f373,plain,(
+  ( ! [X0] : (s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X0) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0)) )),
+  inference(cnf_transformation,[],[f195])).
+fof(f195,plain,(
+  ! [X0] : (s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0) | s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X0))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X9] : (s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X9) | s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X9))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.word_size_nchotomy')).
+fof(f296,plain,(
+  s('type.ast.t','const.ast.Tword64_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  inference(cnf_transformation,[],[f101])).
+fof(f101,axiom,(
+  s('type.ast.t','const.ast.Tword64_0') = s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.Tword64_def')).
+fof(f1675,plain,(
+  s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tword64_0') | $spl33),
+  inference(cnf_transformation,[],[f1675_D])).
+fof(f1675_D,plain,(
+  s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tword64_0') <=> ~$spl33),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl33])])).
+fof(f2152,plain,(
+  s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tword64_0')),
+  inference(subsumption_resolution,[],[f2084,f327])).
+fof(f327,plain,(
+  s('type.ast.tctor','const.ast.TC_char_0') != s('type.ast.tctor','const.ast.TC_word64_0')),
+  inference(cnf_transformation,[],[f149])).
+fof(f149,plain,(
+  s('type.ast.tctor','const.ast.TC_char_0') != s('type.ast.tctor','const.ast.TC_word64_0')),
+  inference(flattening,[],[f36])).
+fof(f36,axiom,(
+  ~s('type.ast.tctor','const.ast.TC_char_0') = s('type.ast.tctor','const.ast.TC_word64_0')),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.tctor_distinct|split|26')).
+fof(f2084,plain,(
+  s('type.ast.t','const.ast.Tchar_0') != s('type.ast.t','const.ast.Tword64_0') | s('type.ast.tctor','const.ast.TC_char_0') = s('type.ast.tctor','const.ast.TC_word64_0')),
+  inference(superposition,[],[f1684,f575])).
+fof(f575,plain,(
+  s('type.ast.t','const.ast.Tword64_0') = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word64_0')))),
+  inference(forward_demodulation,[],[f569,f296])).
+fof(f569,plain,(
+  s('type.ast.t','const.ast.Tword_1'(s('type.ast.word_size','const.ast.W64_0'))) = s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),'const.list.NIL_0'),s('type.ast.tctor','const.ast.TC_word64_0')))),
+  inference(superposition,[],[f372,f295])).
+fof(f295,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  inference(cnf_transformation,[],[f98])).
+fof(f98,axiom,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  file('thm.evalProps.Tword_simp|split|10','thm.ast.TC_word_def|split|1')).
+% SZS output end Proof for thm.evalProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 159
+% Passive clauses: 360
+% Generated clauses: 1782
+% Final active clauses: 145
+% Final passive clauses: 156
+% Input formulas: 120
+% Initial clauses: 146
+% 
+% Duplicate literals: 187
+% Trivial inequalities: 33
+% Fw subsumption resolutions: 152
+% Fw demodulations: 37
+% Bw demodulations: 4
+% 
+% Simple tautologies: 100
+% Equational tautologies: 51
+% Forward subsumptions: 756
+% 
+% Binary resolution: 35
+% Factoring: 1
+% Forward superposition: 453
+% Backward superposition: 483
+% Self superposition: 82
+% Equality factoring: 85
+% Equality resolution: 11
+% 
+% Split clauses: 73
+% Split components: 146
+% SAT solver clauses: 126
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 56
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 73
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 125
+% TWLsolver calls for satisfiability: 27
+% 
+% Memory used [KB]: 1407
+% Time elapsed: 0.044 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.048 s

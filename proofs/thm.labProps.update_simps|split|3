@@ -1,0 +1,207 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labProps
+% (136569)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 167
+% Passive clauses: 2453
+% Generated clauses: 25680
+% Final active clauses: 166
+% Final passive clauses: 2127
+% Input formulas: 187
+% Initial clauses: 198
+% 
+% Duplicate literals: 777
+% Trivial inequalities: 187
+% Fw subsumption resolutions: 2288
+% Fw demodulations: 2772
+% 
+% Simple tautologies: 242
+% Equational tautologies: 27
+% Forward subsumptions: 16360
+% 
+% Binary resolution: 3
+% Forward superposition: 11273
+% Backward superposition: 7749
+% Self superposition: 262
+% Equality factoring: 79
+% Equality resolution: 17
+% 
+% Split clauses: 263
+% Split components: 526
+% SAT solver clauses: 702
+% SAT solver unit clauses: 47
+% SAT solver binary clauses: 147
+% 
+% Sat splits: 263
+% 
+% TWLsolver clauses: 702
+% TWLsolver calls for satisfiability: 122
+% 
+% Memory used [KB]: 20596
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.labProps
+% (136589)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 127
+% Passive clauses: 742
+% Generated clauses: 10885
+% Final active clauses: 124
+% Final passive clauses: 586
+% Input formulas: 187
+% Initial clauses: 198
+% 
+% Duplicate literals: 337
+% Trivial inequalities: 82
+% Fw subsumption resolutions: 318
+% Fw demodulations: 883
+% Bw demodulations: 28
+% Condensations: 912
+% Global subsumptions: 4
+% 
+% Simple tautologies: 93
+% Equational tautologies: 20
+% Forward subsumptions: 6396
+% 
+% Binary resolution: 4
+% Forward superposition: 4363
+% Backward superposition: 2860
+% Self superposition: 124
+% Equality factoring: 46
+% Equality resolution: 11
+% 
+% Split clauses: 14
+% Split components: 28
+% SAT solver clauses: 1304
+% SAT solver unit clauses: 376
+% SAT solver binary clauses: 28
+% SAT solver learnt clauses: 8
+% 
+% Sat splits: 14
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 1288
+% TWLsolver calls for satisfiability: 269
+% 
+% Memory used [KB]: 10234
+% Time elapsed: 0.724 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.labProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labProps
+% SZS output start Proof for thm.labProps
+fof(f203425,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f203289])).
+fof(f203289,plain,(
+  s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(sK0,sK1),sK2))) != s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(sK0,sK1),sK2)))),
+  inference(superposition,[],[f566,f199862])).
+fof(f199862,plain,(
+  ( ! [X17,X15,X16] : (s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X15,X16),X17))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X15,X16),'const.labSem.dec_clock_1'(s('type.labSem.state'(X15,X16),X17)))))) )),
+  inference(superposition,[],[f633,f589])).
+fof(f589,plain,(
+  ( ! [X2,X0,X1] : (s('type.labSem.state'(X0,X1),'const.labSem.dec_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.labSem.state'(X0,X1),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.labSem.state'(X0,X1),X2)))) )),
+  inference(cnf_transformation,[],[f202])).
+fof(f202,plain,(
+  ! [X0,X1,X2] : s('type.labSem.state'(X0,X1),'const.labSem.dec_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.labSem.state'(X0,X1),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.labSem.state'(X0,X1),X2)))),
+  inference(flattening,[],[f201])).
+fof(f201,plain,(
+  ! [X0,X1] : ! [X2] : s('type.labSem.state'(X0,X1),'const.labSem.dec_clock_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.labSem.state'(X0,X1),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X0,X1),X2))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.labSem.state'(X0,X1),X2)))),
+  inference(rectify,[],[f186])).
+fof(f186,axiom,(
+  ! [X7,X6] : ! [X8] : s('type.labSem.state'(X7,X6),'const.labSem.dec_clock_1'(s('type.labSem.state'(X7,X6),X8))) = s('type.labSem.state'(X7,X6),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.labSem.state_clock_1'(s('type.labSem.state'(X7,X6),X8))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.labSem.state'(X7,X6),X8)))),
+  file('thm.labProps.update_simps|split|3','thm.labSem.dec_clock_def')).
+fof(f633,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.labSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f290])).
+fof(f290,plain,(
+  ! [X0,X1,X2,X3] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f289])).
+fof(f289,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f59])).
+fof(f59,axiom,(
+  ! [X7,X12] : ! [X8,X13] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X7,X12),X8))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X7,X12),'const.labSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X13),s('type.labSem.state'(X7,X12),X8)))))),
+  file('thm.labProps.update_simps|split|3','thm.labSem.labSem_92_prove_ltb')).
+fof(f566,plain,(
+  s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(sK0,sK1),sK2))) != s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.dec_clock_1'(s('type.labSem.state'(sK0,sK1),sK2)))))),
+  inference(cnf_transformation,[],[f553])).
+fof(f553,plain,(
+  s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(sK0,sK1),sK2))) != s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.dec_clock_1'(s('type.labSem.state'(sK0,sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f551])).
+fof(f551,plain,(
+  ? [X0,X1,X2] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) != s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),'const.labSem.dec_clock_1'(s('type.labSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f190])).
+fof(f190,plain,(
+  ~! [X0,X1,X2] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),'const.labSem.dec_clock_1'(s('type.labSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f189])).
+fof(f189,plain,(
+  ~! [X0,X1] : ! [X2] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),X2))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X0,X1),'const.labSem.dec_clock_1'(s('type.labSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X6,X7),X8))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X6,X7),'const.labSem.dec_clock_1'(s('type.labSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8] : s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X6,X7),X8))) = s('type.num.num','const.labSem.state_pc_1'(s('type.labSem.state'(X6,X7),'const.labSem.dec_clock_1'(s('type.labSem.state'(X6,X7),X8)))))),
+  file('thm.labProps.update_simps|split|3','thm.labProps.update_simps|split|3')).
+% SZS output end Proof for thm.labProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 562
+% Passive clauses: 9357
+% Generated clauses: 184987
+% Final active clauses: 376
+% Final passive clauses: 1462
+% Input formulas: 187
+% Initial clauses: 198
+% Discarded non-redundant clauses: 59848
+% 
+% Duplicate literals: 5796
+% Trivial inequalities: 1513
+% Fw subsumption resolutions: 11948
+% Fw demodulations: 16242
+% Bw demodulations: 5310
+% Condensations: 19660
+% Global subsumptions: 20
+% 
+% Simple tautologies: 1385
+% Equational tautologies: 514
+% Forward subsumptions: 117808
+% Bw demodulations to eq. taut.: 303
+% 
+% Unit resulting resolution: 3822
+% Forward superposition: 61348
+% Backward superposition: 50493
+% Self superposition: 772
+% Equality factoring: 393
+% Equality resolution: 92
+% 
+% Split clauses: 240
+% Split components: 489
+% SAT solver clauses: 9910
+% SAT solver unit clauses: 367
+% SAT solver binary clauses: 1614
+% 
+% Sat splits: 240
+% Sat splitting refutations: 51
+% 
+% Memory used [KB]: 107716
+% Time elapsed: 8.901 s
+% ------------------------------
+% ------------------------------
+% Success in time 10.25 s

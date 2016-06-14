@@ -1,0 +1,296 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bviProps
+% (29039)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 93
+% Passive clauses: 883
+% Generated clauses: 13875
+% Final active clauses: 91
+% Final passive clauses: 654
+% Input formulas: 45
+% Initial clauses: 46
+% 
+% Duplicate literals: 621
+% Trivial inequalities: 151
+% Fw subsumption resolutions: 1473
+% Fw demodulations: 1053
+% 
+% Simple tautologies: 168
+% Equational tautologies: 23
+% Forward subsumptions: 9116
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 4
+% Forward superposition: 5371
+% Backward superposition: 4784
+% Self superposition: 227
+% Equality factoring: 65
+% Equality resolution: 15
+% 
+% Split clauses: 178
+% Split components: 356
+% SAT solver clauses: 519
+% SAT solver unit clauses: 38
+% SAT solver binary clauses: 127
+% 
+% Sat splits: 178
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 519
+% TWLsolver calls for satisfiability: 104
+% 
+% Memory used [KB]: 12281
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bviProps
+% (29065)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 88
+% Passive clauses: 339
+% Generated clauses: 14809
+% Final active clauses: 85
+% Final passive clauses: 248
+% Input formulas: 45
+% Initial clauses: 46
+% 
+% Duplicate literals: 771
+% Trivial inequalities: 175
+% Fw subsumption resolutions: 1024
+% Fw demodulations: 888
+% Bw demodulations: 2
+% Condensations: 2384
+% 
+% Simple tautologies: 169
+% Equational tautologies: 24
+% Forward subsumptions: 8493
+% 
+% Binary resolution: 4
+% Forward superposition: 5331
+% Backward superposition: 4546
+% Self superposition: 248
+% Equality factoring: 70
+% Equality resolution: 16
+% 
+% Split clauses: 32
+% Split components: 64
+% SAT solver clauses: 590
+% SAT solver unit clauses: 88
+% SAT solver binary clauses: 39
+% 
+% Sat splits: 32
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 590
+% TWLsolver calls for satisfiability: 112
+% 
+% Memory used [KB]: 14456
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.bviProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bviProps
+% SZS output start Proof for thm.bviProps
+fof(f32598,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f32536])).
+fof(f32536,plain,(
+  s('type.num.num',sK1) != s('type.num.num',sK1)),
+  inference(superposition,[],[f135,f32038])).
+fof(f32038,plain,(
+  ( ! [X19,X17,X18,X16] : (s('type.num.num',X17) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X16),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X16),X19),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X18),s('type.num.num',X17)))))) )),
+  inference(forward_demodulation,[],[f31936,f184])).
+fof(f184,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f170,f169])).
+fof(f169,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f107])).
+fof(f107,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f106])).
+fof(f106,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f45])).
+fof(f45,axiom,(
+  ! [X17,X6] : ! [X10,X18] : s(X6,X10) = s(X6,'const.combin.K_2'(s(X6,X10),s(X17,X18)))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.combin.K_THM')).
+fof(f170,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f109])).
+fof(f109,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f108])).
+fof(f108,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f46])).
+fof(f46,axiom,(
+  ! [X6,X17] : ! [X19,X20] : s(X6,'const.combin.K_2'(s(X6,X19),s(X17,X20))) = s(X6,happ(s(fun(X17,X6),'const.combin.K_1'(s(X6,X19))),s(X17,X20)))),
+  file('thm.bviProps.initial_state_simp|split|2','ARITY_1_2_const.combin.K')).
+fof(f31936,plain,(
+  ( ! [X19,X17,X18,X16] : (s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X16),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X16),X19),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X18),s('type.num.num',X17))))) = s('type.num.num',happ(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X17))),s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X16),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X16),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X18))),s('type.bviSem.state'(X16),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X16),'type.ffi.ffi_state'(X16)),'const.combin.K_1'(s('type.ffi.ffi_state'(X16),X19))),s('type.bviSem.state'(X16),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X16),'const.bool.ARB_0')))))))))))))) )),
+  inference(superposition,[],[f150,f186])).
+fof(f186,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))) )),
+  inference(backward_demodulation,[],[f179,f185])).
+fof(f185,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))) )),
+  inference(backward_demodulation,[],[f178,f183])).
+fof(f183,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))) )),
+  inference(forward_demodulation,[],[f182,f166])).
+fof(f166,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),X1))))) = s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s('type.bviSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f101])).
+fof(f101,plain,(
+  ! [X0,X1,X2,X3] : s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),X1))))) = s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s('type.bviSem.state'(X0),X1)))))),
+  inference(flattening,[],[f100])).
+fof(f100,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),X1))))) = s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s('type.bviSem.state'(X0),X1)))))),
+  inference(rectify,[],[f39])).
+fof(f39,axiom,(
+  ! [X11] : ! [X12,X14,X8] : s('type.bviSem.state'(X11),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X14),s('type.bviSem.state'(X11),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X8),s('type.bviSem.state'(X11),X12))))) = s('type.bviSem.state'(X11),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X8),s('type.bviSem.state'(X11),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X14),s('type.bviSem.state'(X11),X12)))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviSem.bviSem_56_prove_ltb')).
+fof(f182,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))) )),
+  inference(forward_demodulation,[],[f168,f165])).
+fof(f165,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X2),s('type.bviSem.state'(X0),X1))))) = s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X2),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f99])).
+fof(f99,plain,(
+  ! [X0,X1,X2,X3] : s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X2),s('type.bviSem.state'(X0),X1))))) = s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X2),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),X1)))))),
+  inference(flattening,[],[f98])).
+fof(f98,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X2),s('type.bviSem.state'(X0),X1))))) = s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X2),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),X1)))))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X11] : ! [X12,X14,X8] : s('type.bviSem.state'(X11),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X8),s('type.bviSem.state'(X11),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X14),s('type.bviSem.state'(X11),X12))))) = s('type.bviSem.state'(X11),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),X14),s('type.bviSem.state'(X11),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X8),s('type.bviSem.state'(X11),X12)))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviSem.bviSem_52_prove_ltb')).
+fof(f168,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))) )),
+  inference(cnf_transformation,[],[f105])).
+fof(f105,plain,(
+  ! [X0,X1,X2,X3] : s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))),
+  inference(flattening,[],[f104])).
+fof(f104,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X1),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2),s('type.num.num',X3))) = s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),X1))),s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X2))),s('type.bviSem.state'(X0),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X0),'const.bool.ARB_0')))))))))))),
+  inference(rectify,[],[f44])).
+fof(f44,axiom,(
+  ! [X6] : ! [X15,X16,X7] : s('type.bviSem.state'(X6),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X6),X15),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X16),s('type.num.num',X7))) = s('type.bviSem.state'(X6),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X7))),s('type.bviSem.state'(X6),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X6),'type.ffi.ffi_state'(X6)),'const.combin.K_1'(s('type.ffi.ffi_state'(X6),X15))),s('type.bviSem.state'(X6),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),'const.combin.K_1'(s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X16))),s('type.bviSem.state'(X6),'const.bviSem.state_refs_fupd_2'(s(fun('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v'))),'const.combin.K_1'(s('type.finite_map.fmap'('type.num.num','type.closSem.ref'('type.bvlSem.v')),'const.finite_map.FEMPTY_0'))),s('type.bviSem.state'(X6),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.K_1'(s('type.option.option'('type.num.num'),'const.option.NONE_0'))),s('type.bviSem.state'(X6),'const.bool.ARB_0')))))))))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviSem.initial_state_def')).
+fof(f178,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),X2))))) = s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X1),X2)))))) )),
+  inference(cnf_transformation,[],[f125])).
+fof(f125,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),X2))))) = s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X1),X2)))))),
+  inference(flattening,[],[f124])).
+fof(f124,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.bviSem.state'(X0),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),X2))))) = s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3),s('type.bviSem.state'(X1),X2)))))),
+  inference(rectify,[],[f42])).
+fof(f42,axiom,(
+  ! [X13,X11] : ! [X12,X14,X8] : s('type.bviSem.state'(X13),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X14),s('type.bviSem.state'(X13),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X11),'type.ffi.ffi_state'(X13)),X8),s('type.bviSem.state'(X11),X12))))) = s('type.bviSem.state'(X13),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X11),'type.ffi.ffi_state'(X13)),X8),s('type.bviSem.state'(X11),'const.bviSem.state_global_fupd_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X14),s('type.bviSem.state'(X11),X12)))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviSem.bviSem_59_prove_ltb')).
+fof(f179,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),X2))))) = s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X1),X2)))))) )),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),X2))))) = s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X1),X2)))))),
+  inference(flattening,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.bviSem.state'(X0),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),X2))))) = s('type.bviSem.state'(X0),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X4),s('type.bviSem.state'(X1),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X3),s('type.bviSem.state'(X1),X2)))))),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X13,X11] : ! [X12,X14,X8] : s('type.bviSem.state'(X13),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X14),s('type.bviSem.state'(X13),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X11),'type.ffi.ffi_state'(X13)),X8),s('type.bviSem.state'(X11),X12))))) = s('type.bviSem.state'(X13),'const.bviSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X11),'type.ffi.ffi_state'(X13)),X8),s('type.bviSem.state'(X11),'const.bviSem.state_code_fupd_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),'type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp'))),X14),s('type.bviSem.state'(X11),X12)))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviSem.bviSem_6|48|_prove_ltb')).
+fof(f150,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),X1))))) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bviSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1,X2] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),X1))))) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bviSem.state'(X0),X1)))))),
+  inference(flattening,[],[f68])).
+fof(f68,plain,(
+  ! [X0] : ! [X1,X2] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),X1))))) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bviSem.state'(X0),X1)))))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X11] : ! [X12,X8] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X8),s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X11),X12))))) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X11),'const.bviSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X8),s('type.bviSem.state'(X11),X12)))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviSem.bviSem_39_prove_ltb')).
+fof(f135,plain,(
+  s('type.num.num',sK1) != s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(sK0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(sK0),sK2),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),sK3),s('type.num.num',sK1)))))),
+  inference(cnf_transformation,[],[f132])).
+fof(f132,plain,(
+  s('type.num.num',sK1) != s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(sK0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(sK0),sK2),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),sK3),s('type.num.num',sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f130])).
+fof(f130,plain,(
+  ? [X0,X1,X2,X3] : s('type.num.num',X1) != s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X2),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X3),s('type.num.num',X1)))))),
+  inference(ennf_transformation,[],[f48])).
+fof(f48,plain,(
+  ~! [X0,X1,X2,X3] : s('type.num.num',X1) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X2),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X3),s('type.num.num',X1)))))),
+  inference(flattening,[],[f47])).
+fof(f47,plain,(
+  ~! [X0] : ! [X1,X2,X3] : s('type.num.num',X1) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X0),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X0),X2),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X3),s('type.num.num',X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : s('type.num.num',X7) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X6),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X6),X8),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X9),s('type.num.num',X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : s('type.num.num',X7) = s('type.num.num','const.bviSem.state_clock_1'(s('type.bviSem.state'(X6),'const.bviSem.initial_state_3'(s('type.ffi.ffi_state'(X6),X8),s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvi.exp')),X9),s('type.num.num',X7)))))),
+  file('thm.bviProps.initial_state_simp|split|2','thm.bviProps.initial_state_simp|split|2')).
+% SZS output end Proof for thm.bviProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 119
+% Passive clauses: 631
+% Generated clauses: 32148
+% Final active clauses: 113
+% Final passive clauses: 495
+% Input formulas: 45
+% Initial clauses: 46
+% 
+% Duplicate literals: 1532
+% Trivial inequalities: 266
+% Fw subsumption resolutions: 2748
+% Fw demodulations: 2075
+% Bw demodulations: 21
+% Condensations: 5592
+% Global subsumptions: 7
+% 
+% Simple tautologies: 272
+% Equational tautologies: 118
+% Forward subsumptions: 18715
+% Fw demodulations to eq. taut.: 4
+% 
+% Unit resulting resolution: 403
+% Forward superposition: 9565
+% Backward superposition: 9351
+% Self superposition: 376
+% Equality factoring: 131
+% Equality resolution: 21
+% 
+% Split clauses: 135
+% Split components: 270
+% SAT solver clauses: 911
+% SAT solver unit clauses: 180
+% SAT solver binary clauses: 137
+% 
+% Sat splits: 135
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 22643
+% Time elapsed: 1.448 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.79 s

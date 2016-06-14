@@ -1,0 +1,73 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.inferProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.inferProps
+% SZS output start Proof for thm.inferProps
+fof(f241,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f240])).
+fof(f240,plain,(
+  s('type.one.one','const.one.one_0') != s('type.one.one','const.one.one_0')),
+  inference(superposition,[],[f156,f159])).
+fof(f159,plain,(
+  ( ! [X0] : (s('type.one.one','const.one.one_0') = s('type.one.one',X0)) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : s('type.one.one','const.one.one_0') = s('type.one.one',X0)),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X11] : s('type.one.one','const.one.one_0') = s('type.one.one',X11)),
+  file('thm.inferProps.success_eqns|split|9','thm.one.one')).
+fof(f156,plain,(
+  s('type.one.one','const.one.one_0') != s('type.one.one',sK0)),
+  inference(cnf_transformation,[],[f122])).
+fof(f122,plain,(
+  s('type.one.one','const.one.one_0') != s('type.one.one',sK0)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f120])).
+fof(f120,plain,(
+  ? [X0] : s('type.one.one','const.one.one_0') != s('type.one.one',X0)),
+  inference(ennf_transformation,[],[f46])).
+fof(f46,plain,(
+  ~! [X0] : s('type.one.one','const.one.one_0') = s('type.one.one',X0)),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : s('type.one.one','const.one.one_0') = s('type.one.one',X6)),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : s('type.one.one','const.one.one_0') = s('type.one.one',X6)),
+  file('thm.inferProps.success_eqns|split|9','thm.inferProps.success_eqns|split|9')).
+% SZS output end Proof for thm.inferProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 4
+% Passive clauses: 78
+% Generated clauses: 82
+% Final active clauses: 4
+% Final passive clauses: 73
+% Input formulas: 44
+% Initial clauses: 78
+% 
+% Trivial inequalities: 1
+% 
+% Backward superposition: 1
+% Self superposition: 2
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 3
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 2
+% 
+% Sat splits: 2
+% 
+% TWLsolver clauses: 3
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.016 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.05 s

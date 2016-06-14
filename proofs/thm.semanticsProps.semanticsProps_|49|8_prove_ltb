@@ -1,0 +1,179 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.semanticsProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.semanticsProps
+% SZS output start Proof for thm.semanticsProps
+fof(f2309,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f2308,f71])).
+fof(f71,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb',aHL_TRUTH)).
+fof(f2308,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f2307,f105])).
+fof(f105,plain,(
+  s(bool,'T_0') = s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2)))),
+  inference(subsumption_resolution,[],[f102,f73])).
+fof(f73,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb',aHL_FALSITY)).
+fof(f102,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2)))),
+  inference(superposition,[],[f69,f74])).
+fof(f74,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb',aHL_BOOL_CASES)).
+fof(f69,plain,(
+  p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f59])).
+fof(f59,plain,(
+  p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2)))) & ~p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(sK0),'const.llist.fromList_1'(s('type.list.list'(sK0),sK1))),s('type.llist.llist'(sK0),'const.llist.fromList_1'(s('type.list.list'(sK0),sK2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f57])).
+fof(f57,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) & ~p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X2)))))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) => p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X2)))))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2] : (p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) => p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X2)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))) => p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X6),'const.llist.fromList_1'(s('type.list.list'(X6),X7))),s('type.llist.llist'(X6),'const.llist.fromList_1'(s('type.list.list'(X6),X8)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))) => p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X6),'const.llist.fromList_1'(s('type.list.list'(X6),X7))),s('type.llist.llist'(X6),'const.llist.fromList_1'(s('type.list.list'(X6),X8)))))))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb','thm.semanticsProps.semanticsProps_|49|8_prove_ltb')).
+fof(f2307,plain,(
+  ~p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2))))),
+  inference(forward_demodulation,[],[f70,f2155])).
+fof(f2155,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X1))) = s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X2))),s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1)))))) )),
+  inference(forward_demodulation,[],[f2154,f80])).
+fof(f80,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f35])).
+fof(f35,plain,(
+  ! [X0,X1,X2] : s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),X2)))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))) = s(bool,happ(s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),X2)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X12,X13] : s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X6),X12),s('type.list.list'(X6),X13))) = s(bool,happ(s(fun('type.list.list'(X6),bool),'const.list.isPREFIX_1'(s('type.list.list'(X6),X12))),s('type.list.list'(X6),X13)))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb','ARITY_1_2_const.list.isPREFIX')).
+fof(f2154,plain,(
+  ( ! [X2,X0,X1] : (s(bool,happ(s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X2))),s('type.list.list'(X0),X1))) = s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X2))),s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1)))))) )),
+  inference(forward_demodulation,[],[f2113,f92])).
+fof(f92,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,happ(s(fun(X1,X0),X4),s(X1,X2))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))),s(X0,X3),s(fun(X1,X0),X4)))) )),
+  inference(cnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,happ(s(fun(X1,X0),X4),s(X1,X2))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))),s(X0,X3),s(fun(X1,X0),X4)))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X0,happ(s(fun(X1,X0),X4),s(X1,X2))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))),s(X0,X3),s(fun(X1,X0),X4)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X17,X6] : ! [X31,X18,X19] : s(X17,happ(s(fun(X6,X17),X19),s(X6,X31))) = s(X17,'const.option.option_CASE_3'(s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X31))),s(X17,X18),s(fun(X6,X17),X19)))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb','thm.option.option_case_def|split|1')).
+fof(f2113,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X2))),s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))),s(bool,sK4('const.llist.fromList_1'(s('type.list.list'(X0),X1)),X2,X0)),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X2)))))) )),
+  inference(superposition,[],[f88,f77])).
+fof(f77,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1] : s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : ! [X1] : s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X6] : ! [X9] : s('type.option.option'('type.list.list'(X6)),'const.option.SOME_1'(s('type.list.list'(X6),X9))) = s('type.option.option'('type.list.list'(X6)),'const.llist.toList_1'(s('type.llist.llist'(X6),'const.llist.fromList_1'(s('type.list.list'(X6),X9)))))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb','thm.llist.from_toList')).
+fof(f88,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),X2))),s(bool,sK4(X2,X1,X0)),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,sK4(X2,X1,X0))) | s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2)))) & (s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) != s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) | p(s(bool,sK4(X2,X1,X0)))) & s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),X2))),s(bool,sK4(X2,X1,X0)),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK4])],[f65])).
+fof(f65,plain,(
+  ! [X0,X1,X2] : ? [X3] : ((~p(s(bool,X3)) | s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2)))) & (s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) != s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) | p(s(bool,X3))) & s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),X2))),s(bool,X3),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))))))),
+  inference(flattening,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1,X2] : ? [X3] : (((~p(s(bool,X3)) | s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2)))) & (s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) != s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) | p(s(bool,X3)))) & s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),X2))),s(bool,X3),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))))))),
+  inference(nnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1,X2] : ? [X3] : ((p(s(bool,X3)) <=> s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2)))) & s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),X2))),s(bool,X3),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))))))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : ! [X1,X2] : ? [X3] : ((p(s(bool,X3)) <=> s('type.option.option'('type.list.list'(X0)),'const.option.SOME_1'(s('type.list.list'(X0),X1))) = s('type.option.option'('type.list.list'(X0)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2)))) & s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X0),'const.llist.fromList_1'(s('type.list.list'(X0),X1))),s('type.llist.llist'(X0),X2))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X0)),'const.llist.toList_1'(s('type.llist.llist'(X0),X2))),s(bool,X3),s(fun('type.list.list'(X0),bool),'const.list.isPREFIX_1'(s('type.list.list'(X0),X1))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X9,X10] : ? [X11] : ((p(s(bool,X11)) <=> s('type.option.option'('type.list.list'(X6)),'const.option.SOME_1'(s('type.list.list'(X6),X9))) = s('type.option.option'('type.list.list'(X6)),'const.llist.LTAKE_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X9))),s('type.llist.llist'(X6),X10)))) & s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(X6),'const.llist.fromList_1'(s('type.list.list'(X6),X9))),s('type.llist.llist'(X6),X10))) = s(bool,'const.option.option_CASE_3'(s('type.option.option'('type.list.list'(X6)),'const.llist.toList_1'(s('type.llist.llist'(X6),X10))),s(bool,X11),s(fun('type.list.list'(X6),bool),'const.list.isPREFIX_1'(s('type.list.list'(X6),X9))))))),
+  file('thm.semanticsProps.semanticsProps_|49|8_prove_ltb','thm.llist.LPREFIX_fromList')).
+fof(f70,plain,(
+  ~p(s(bool,'const.llist.LPREFIX_2'(s('type.llist.llist'(sK0),'const.llist.fromList_1'(s('type.list.list'(sK0),sK1))),s('type.llist.llist'(sK0),'const.llist.fromList_1'(s('type.list.list'(sK0),sK2))))))),
+  inference(cnf_transformation,[],[f59])).
+% SZS output end Proof for thm.semanticsProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 61
+% Passive clauses: 422
+% Generated clauses: 2219
+% Final active clauses: 31
+% Final passive clauses: 162
+% Input formulas: 21
+% Initial clauses: 28
+% 
+% Duplicate literals: 134
+% Trivial inequalities: 14
+% Fw subsumption resolutions: 115
+% Fw demodulations: 133
+% Bw demodulations: 11
+% 
+% Simple tautologies: 31
+% Equational tautologies: 20
+% Forward subsumptions: 1284
+% 
+% Binary resolution: 20
+% Forward superposition: 754
+% Backward superposition: 826
+% Self superposition: 93
+% Equality factoring: 38
+% Equality resolution: 2
+% 
+% Split clauses: 67
+% Split components: 134
+% SAT solver clauses: 108
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 35
+% 
+% Sat splits: 67
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 108
+% TWLsolver calls for satisfiability: 19
+% 
+% Memory used [KB]: 2430
+% Time elapsed: 0.069 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.081 s

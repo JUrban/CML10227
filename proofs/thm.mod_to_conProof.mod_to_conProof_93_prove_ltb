@@ -1,0 +1,91 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.mod_to_conProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.mod_to_conProof
+% SZS output start Proof for thm.mod_to_conProof
+fof(f3268,plain,(
+  $false),
+  inference(equality_resolution,[],[f3264])).
+fof(f3264,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),sK1) != s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),X0)) )),
+  inference(superposition,[],[f76,f102])).
+fof(f102,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(flattening,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1] : ! [X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X6,X15] : ! [X8] : s('type.pair.prod'(X6,X15),X8) = s('type.pair.prod'(X6,X15),'const.pair.,_2'(s(X6,'const.pair.FST_1'(s('type.pair.prod'(X6,X15),X8))),s(X15,'const.pair.SND_1'(s('type.pair.prod'(X6,X15),X8)))))),
+  file('thm.mod_to_conProof.mod_to_conProof_93_prove_ltb','thm.pair.PAIR')).
+fof(f76,plain,(
+  ( ! [X2] : (s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),sK1) != s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),X2))),s('type.ffi.ffi_state'(sK0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),X2)))))) )),
+  inference(cnf_transformation,[],[f55])).
+fof(f55,plain,(
+  ! [X2] : s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),sK1) != s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),X2))),s('type.ffi.ffi_state'(sK0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(sK0)),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f51])).
+fof(f51,plain,(
+  ? [X0,X1] : ! [X2] : s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X1) != s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X2))),s('type.ffi.ffi_state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X2)))))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1] : ? [X2] : s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X1) = s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X2))),s('type.ffi.ffi_state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X2)))))),
+  inference(flattening,[],[f22])).
+fof(f22,plain,(
+  ~! [X0] : ! [X1] : ? [X2] : s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X1) = s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X2))),s('type.ffi.ffi_state'(X0),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X0)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ? [X8] : s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),X7) = s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),X8))),s('type.ffi.ffi_state'(X6),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ? [X8] : s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),X7) = s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),'const.pair.,_2'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.pair.FST_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),X8))),s('type.ffi.ffi_state'(X6),'const.pair.SND_1'(s('type.pair.prod'('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.ffi.ffi_state'(X6)),X8)))))),
+  file('thm.mod_to_conProof.mod_to_conProof_93_prove_ltb','thm.mod_to_conProof.mod_to_conProof_93_prove_ltb')).
+% SZS output end Proof for thm.mod_to_conProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 66
+% Passive clauses: 517
+% Generated clauses: 3142
+% Final active clauses: 66
+% Final passive clauses: 402
+% Input formulas: 20
+% Initial clauses: 35
+% 
+% Duplicate literals: 36
+% Trivial inequalities: 131
+% Fw subsumption resolutions: 217
+% Fw demodulations: 831
+% 
+% Simple tautologies: 67
+% Equational tautologies: 10
+% Forward subsumptions: 1379
+% 
+% Binary resolution: 64
+% Factoring: 1
+% Forward superposition: 830
+% Backward superposition: 950
+% Self superposition: 24
+% Equality factoring: 12
+% Equality resolution: 13
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 2
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 1
+% 
+% Sat splits: 1
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 1
+% 
+% Memory used [KB]: 1918
+% Time elapsed: 0.046 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.047 s

@@ -1,0 +1,191 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.decSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.decSem
+% SZS output start Proof for thm.decSem
+fof(f5791,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f5781,f334,f234,f333,f335])).
+fof(f335,plain,(
+  $false | ($spl5 | $spl6)),
+  inference(resolution,[],[f334,f333])).
+fof(f333,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f333_D])).
+fof(f333_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f234,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.decSem.state_induction',aHL_FALSITY)).
+fof(f334,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl6),
+  inference(cnf_transformation,[],[f334_D])).
+fof(f334_D,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f5781,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl5),
+  inference(subsumption_resolution,[],[f5766,f237])).
+fof(f237,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f196])).
+fof(f196,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X16] : (s(bool,'T_0') = s(bool,X16) <=> p(s(bool,X16)))),
+  file('thm.decSem.state_induction','thm.bool.EQ_CLAUSES|split|0')).
+fof(f5766,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl5),
+  inference(superposition,[],[f5675,f518])).
+fof(f518,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),sK2))) | s(bool,'T_0') = s(bool,X4)) ) | $spl5),
+  inference(subsumption_resolution,[],[f512,f333])).
+fof(f512,plain,(
+  ( ! [X4] : (p(s(bool,'F_0')) | s(bool,X4) = s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),sK2))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f367,f342])).
+fof(f342,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),sK2)))),
+  inference(resolution,[],[f231,f242])).
+fof(f242,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f198])).
+fof(f198,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f77])).
+fof(f77,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f76])).
+fof(f76,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X16] : (s(bool,'F_0') = s(bool,X16) <=> ~p(s(bool,X16)))),
+  file('thm.decSem.state_induction','thm.bool.EQ_CLAUSES|split|3')).
+fof(f231,plain,(
+  ~p(s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f195])).
+fof(f195,plain,(
+  ! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X4),s('type.ffi.ffi_state'(sK0),X5),s('type.list.list'('type.option.option'('type.conSem.v')),X6)))))) & ~p(s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f194])).
+fof(f194,plain,(
+  ? [X0,X1] : (! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X4),s('type.ffi.ffi_state'(X0),X5),s('type.list.list'('type.option.option'('type.conSem.v')),X6)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),X2)))))),
+  inference(rectify,[],[f187])).
+fof(f187,plain,(
+  ? [X0,X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.conSem.v')),X5)))))) & ? [X6] : ~p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),X6)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.conSem.v')),X5)))))) => ! [X6] : p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),X6)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0] : ! [X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.conSem.v')),X5)))))) => ! [X6] : p(s(bool,happ(s(fun('type.decSem.state'(X0),bool),X1),s('type.decSem.state'(X0),X6)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.decSem.state'(X6),bool),X7),s('type.decSem.state'(X6),'const.decSem.recordtype|46|state_4'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s('type.list.list'('type.option.option'('type.conSem.v')),X11)))))) => ! [X12] : p(s(bool,happ(s(fun('type.decSem.state'(X6),bool),X7),s('type.decSem.state'(X6),X12)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.decSem.state'(X6),bool),X7),s('type.decSem.state'(X6),'const.decSem.recordtype|46|state_4'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s('type.list.list'('type.option.option'('type.conSem.v')),X11)))))) => ! [X12] : p(s(bool,happ(s(fun('type.decSem.state'(X6),bool),X7),s('type.decSem.state'(X6),X12)))))),
+  file('thm.decSem.state_induction','thm.decSem.state_induction')).
+fof(f367,plain,(
+  ( ! [X2,X1] : (p(s(bool,X1)) | s(bool,X1) = s(bool,X2) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(resolution,[],[f288,f238])).
+fof(f238,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f196])).
+fof(f288,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f190])).
+fof(f190,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f189])).
+fof(f189,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f125])).
+fof(f125,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X13,X14] : ((p(s(bool,X13)) => p(s(bool,X14))) => ((p(s(bool,X14)) => p(s(bool,X13))) => s(bool,X13) = s(bool,X14)))),
+  file('thm.decSem.state_induction','thm.bool.IMP_ANTISYM_AX')).
+fof(f5675,plain,(
+  ( ! [X8] : (p(s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),X8))))) )),
+  inference(superposition,[],[f230,f264])).
+fof(f264,plain,(
+  ( ! [X0,X1] : (s('type.decSem.state'(X0),X1) = s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',sK3(X1,X0)),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),sK4(X1,X0)),s('type.ffi.ffi_state'(X0),sK5(X1,X0)),s('type.list.list'('type.option.option'('type.conSem.v')),sK6(X1,X0))))) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f213,plain,(
+  ! [X0,X1] : s('type.decSem.state'(X0),X1) = s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',sK3(X1,X0)),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),sK4(X1,X0)),s('type.ffi.ffi_state'(X0),sK5(X1,X0)),s('type.list.list'('type.option.option'('type.conSem.v')),sK6(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6])],[f89])).
+fof(f89,plain,(
+  ! [X0,X1] : ? [X2,X3,X4,X5] : s('type.decSem.state'(X0),X1) = s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.conSem.v')),X5)))),
+  inference(flattening,[],[f88])).
+fof(f88,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3,X4,X5] : s('type.decSem.state'(X0),X1) = s('type.decSem.state'(X0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s('type.list.list'('type.option.option'('type.conSem.v')),X5)))),
+  inference(rectify,[],[f37])).
+fof(f37,axiom,(
+  ! [X6] : ! [X48] : ? [X8,X9,X10,X11] : s('type.decSem.state'(X6),X48) = s('type.decSem.state'(X6),'const.decSem.recordtype|46|state_4'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s('type.list.list'('type.option.option'('type.conSem.v')),X11)))),
+  file('thm.decSem.state_induction','thm.decSem.state_nchotomy')).
+fof(f230,plain,(
+  ( ! [X6,X4,X5,X3] : (p(s(bool,happ(s(fun('type.decSem.state'(sK0),bool),sK1),s('type.decSem.state'(sK0),'const.decSem.recordtype|46|state_4'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),X4),s('type.ffi.ffi_state'(sK0),X5),s('type.list.list'('type.option.option'('type.conSem.v')),X6))))))) )),
+  inference(cnf_transformation,[],[f195])).
+% SZS output end Proof for thm.decSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 81
+% Passive clauses: 1070
+% Generated clauses: 5470
+% Final active clauses: 74
+% Final passive clauses: 905
+% Input formulas: 68
+% Initial clauses: 97
+% 
+% Duplicate literals: 243
+% Trivial inequalities: 98
+% Fw subsumption resolutions: 481
+% Fw demodulations: 503
+% Bw demodulations: 4
+% 
+% Simple tautologies: 137
+% Equational tautologies: 32
+% Forward subsumptions: 2834
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 167
+% Factoring: 1
+% Forward superposition: 2243
+% Backward superposition: 1457
+% Self superposition: 79
+% Equality factoring: 56
+% Equality resolution: 11
+% 
+% Split clauses: 78
+% Split components: 162
+% SAT solver clauses: 149
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 60
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 78
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 144
+% TWLsolver calls for satisfiability: 54
+% 
+% Memory used [KB]: 3837
+% Time elapsed: 0.170 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.18 s

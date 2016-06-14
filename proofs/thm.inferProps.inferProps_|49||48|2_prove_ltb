@@ -1,0 +1,139 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.inferProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.inferProps
+% SZS output start Proof for thm.inferProps
+fof(f4072,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f4069,f216,f392,f390,f4027,f217,f393,f391])).
+fof(f391,plain,(
+  s('type.option.option'(sK13),'const.option.NONE_0') != s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) | $spl1),
+  inference(cnf_transformation,[],[f391_D])).
+fof(f391_D,plain,(
+  s('type.option.option'(sK13),'const.option.NONE_0') != s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f393,plain,(
+  p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) | $spl2),
+  inference(cnf_transformation,[],[f393_D])).
+fof(f393_D,plain,(
+  p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f217,plain,(
+  p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) | s('type.option.option'(sK13),'const.option.NONE_0') != s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14)))),
+  inference(cnf_transformation,[],[f138])).
+fof(f138,plain,(
+  (s('type.option.option'(sK13),'const.option.NONE_0') = s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) | ~p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15))))))) & (s('type.option.option'(sK13),'const.option.NONE_0') != s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) | p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13,sK14,sK15])],[f137])).
+fof(f137,plain,(
+  ? [X0,X1,X2,X3] : ((s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X3),s(X0,X2))) | ~p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))))))) & (s('type.option.option'(X1),'const.option.NONE_0') != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X3),s(X0,X2))) | p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))))))))),
+  inference(nnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ? [X0,X1,X2,X3] : (s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X3),s(X0,X2))) <~> ~p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3)))))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1,X2,X3] : (s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X3),s(X0,X2))) <=> ~p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3)))))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1] : ! [X2,X3] : (s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X3),s(X0,X2))) <=> ~p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : (s('type.option.option'(X7),'const.option.NONE_0') = s('type.option.option'(X7),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,X7),X9),s(X6,X8))) <=> ~p(s(bool,'const.bool.IN_2'(s(X6,X8),s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X9)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : (s('type.option.option'(X7),'const.option.NONE_0') = s('type.option.option'(X7),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,X7),X9),s(X6,X8))) <=> ~p(s(bool,'const.bool.IN_2'(s(X6,X8),s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X9)))))))),
+  file('thm.inferProps.inferProps_|49||48|2_prove_ltb','thm.inferProps.inferProps_|49||48|2_prove_ltb')).
+fof(f4027,plain,(
+  $false | ($spl1 | $spl3)),
+  inference(subsumption_resolution,[],[f3982,f391])).
+fof(f3982,plain,(
+  s('type.option.option'(sK13),'const.option.NONE_0') = s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) | $spl3),
+  inference(resolution,[],[f308,f392])).
+fof(f308,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))) | s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f178])).
+fof(f178,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.option.option'(X1),'const.option.NONE_0') != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X2),s(X0,X3))) | ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))))) & (p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))) | s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X2),s(X0,X3)))))),
+  inference(nnf_transformation,[],[f85])).
+fof(f85,plain,(
+  ! [X0,X1,X2,X3] : (s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X2),s(X0,X3))) <=> ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))))),
+  inference(flattening,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1] : ! [X2,X3] : (s('type.option.option'(X1),'const.option.NONE_0') = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X2),s(X0,X3))) <=> ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X7,X6] : ! [X9,X8] : (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X7,X6),X9),s(X7,X8))) <=> ~p(s(bool,'const.bool.IN_2'(s(X7,X8),s(fun(X7,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X7,X6),X9)))))))),
+  file('thm.inferProps.inferProps_|49||48|2_prove_ltb','thm.finite_map.flookup_thm|split|0')).
+fof(f390,plain,(
+  s('type.option.option'(sK13),'const.option.NONE_0') = s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) | $spl0),
+  inference(cnf_transformation,[],[f390_D])).
+fof(f390_D,plain,(
+  s('type.option.option'(sK13),'const.option.NONE_0') = s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f392,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) | $spl3),
+  inference(cnf_transformation,[],[f392_D])).
+fof(f392_D,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f216,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) | s('type.option.option'(sK13),'const.option.NONE_0') = s('type.option.option'(sK13),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK12,sK13),sK15),s(sK12,sK14)))),
+  inference(cnf_transformation,[],[f138])).
+fof(f4069,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) | $spl0),
+  inference(trivial_inequality_removal,[],[f4066])).
+fof(f4066,plain,(
+  s('type.option.option'(sK13),'const.option.NONE_0') != s('type.option.option'(sK13),'const.option.NONE_0') | ~p(s(bool,'const.bool.IN_2'(s(sK12,sK14),s(fun(sK12,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK12,sK13),sK15)))))) | $spl0),
+  inference(superposition,[],[f307,f390])).
+fof(f307,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.option.option'(X1),'const.option.NONE_0') != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X2),s(X0,X3))) | ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))))) )),
+  inference(cnf_transformation,[],[f178])).
+% SZS output end Proof for thm.inferProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 312
+% Passive clauses: 1235
+% Generated clauses: 3850
+% Final active clauses: 310
+% Final passive clauses: 754
+% Input formulas: 37
+% Initial clauses: 170
+% 
+% Duplicate literals: 143
+% Trivial inequalities: 14
+% Fw subsumption resolutions: 254
+% Fw demodulations: 2
+% 
+% Simple tautologies: 145
+% Equational tautologies: 20
+% Forward subsumptions: 2036
+% 
+% Binary resolution: 2346
+% Factoring: 706
+% Forward superposition: 110
+% Backward superposition: 62
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 8
+% 
+% Split clauses: 79
+% Split components: 159
+% SAT solver clauses: 156
+% SAT solver unit clauses: 7
+% SAT solver binary clauses: 33
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 79
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 154
+% TWLsolver calls for satisfiability: 133
+% 
+% Memory used [KB]: 1918
+% Time elapsed: 0.170 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.18 s

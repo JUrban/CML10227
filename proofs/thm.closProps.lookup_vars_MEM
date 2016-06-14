@@ -1,0 +1,240 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.closProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closProps
+% SZS output start Proof for thm.closProps
+fof(f6480,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f6461,f22,f32,f30,f258,f263,f261,f318,f39,f43,f41,f53,f383,f370,f372,f371,f387])).
+fof(f387,plain,(
+  $false | $spl18),
+  inference(equality_resolution,[],[f372])).
+fof(f371,plain,(
+  ( ! [X1] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))))) ) | $spl16),
+  inference(cnf_transformation,[],[f371_D])).
+fof(f371_D,plain,(
+  ( ! [X1] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))))) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f372,plain,(
+  ( ! [X0] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),sK1))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X0)))) ) | $spl18),
+  inference(cnf_transformation,[],[f372_D])).
+fof(f372_D,plain,(
+  ( ! [X0] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),sK1))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X0)))) ) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f370,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),sK1))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X0))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))))) )),
+  inference(superposition,[],[f27,f20])).
+fof(f20,plain,(
+  s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),sK1))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),sK0),s('type.list.list'('type.closSem.v'),sK3)))),
+  inference(cnf_transformation,[],[f18])).
+fof(f18,plain,(
+  s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),sK1))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),sK0),s('type.list.list'('type.closSem.v'),sK3))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))) & (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3)))))) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.closSem.v'),sK1))) != s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f14])).
+fof(f14,plain,(
+  ? [X0,X1,X2,X3] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X1))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0)))))) & (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3)))))) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.closSem.v'),X1))) != s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))))),
+  inference(flattening,[],[f13])).
+fof(f13,plain,(
+  ? [X0,X1,X2,X3] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X1))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0))))))) & (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3)))))) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.closSem.v'),X1))) != s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))))),
+  inference(ennf_transformation,[],[f8])).
+fof(f8,plain,(
+  ~! [X0,X1,X2,X3] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X1))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.closSem.v'),X1))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X2),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X7))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X6),s('type.list.list'('type.closSem.v'),X9))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X8),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X6))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.num.num'),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X9)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.closSem.v'),X7))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.num.num'),X6))),s('type.list.list'('type.closSem.v'),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X7))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X6),s('type.list.list'('type.closSem.v'),X9))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X8),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X6))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.num.num'),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X9)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.closSem.v'),X7))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.num.num'),X6))),s('type.list.list'('type.closSem.v'),X9)))))),
+  file('thm.closProps.lookup_vars_MEM','thm.closProps.lookup_vars_MEM')).
+fof(f27,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X2))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3))))))) )),
+  inference(cnf_transformation,[],[f17])).
+fof(f17,plain,(
+  ! [X0,X1,X2,X3] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X2))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0)))))) | (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.closSem.v'),X2))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))))),
+  inference(flattening,[],[f16])).
+fof(f16,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X2))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0))))))) | (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.closSem.v'),X2))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))))),
+  inference(ennf_transformation,[],[f12])).
+fof(f12,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X2))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X3)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.closSem.v'),X2))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X8,X7,X9] : ((s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X7))) = s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X6),s('type.list.list'('type.closSem.v'),X9))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X8),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X6))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.num.num'),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),X9)))))) & s('type.closSem.v','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.closSem.v'),X7))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X8),s('type.list.list'('type.num.num'),X6))),s('type.list.list'('type.closSem.v'),X9)))))),
+  file('thm.closProps.lookup_vars_MEM','thm.closProps.closProps_66_prove_ltb')).
+fof(f383,plain,(
+  $false | ($spl10 | $spl16)),
+  inference(subsumption_resolution,[],[f382,f24])).
+fof(f24,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f9])).
+fof(f9,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.closProps.lookup_vars_MEM',aHL_FALSITY)).
+fof(f382,plain,(
+  p(s(bool,'F_0')) | ($spl10 | $spl16)),
+  inference(forward_demodulation,[],[f381,f263])).
+fof(f381,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3)))))) | $spl16),
+  inference(subsumption_resolution,[],[f374,f23])).
+fof(f23,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.closProps.lookup_vars_MEM',aHL_TRUTH)).
+fof(f374,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3)))))) | $spl16),
+  inference(superposition,[],[f371,f40])).
+fof(f40,plain,(
+  s(bool,'T_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))),
+  inference(subsumption_resolution,[],[f37,f24])).
+fof(f37,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))),
+  inference(superposition,[],[f21,f25])).
+fof(f25,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.closProps.lookup_vars_MEM',aHL_BOOL_CASES)).
+fof(f21,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0))))))),
+  inference(cnf_transformation,[],[f18])).
+fof(f53,plain,(
+  $false | $spl4),
+  inference(subsumption_resolution,[],[f44,f24])).
+fof(f44,plain,(
+  p(s(bool,'F_0')) | $spl4),
+  inference(backward_demodulation,[],[f41,f21])).
+fof(f41,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) | $spl4),
+  inference(cnf_transformation,[],[f41_D])).
+fof(f41_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f43,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl7),
+  inference(cnf_transformation,[],[f43_D])).
+fof(f43_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl7),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl7])])).
+fof(f39,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'F_0') | s(bool,'F_0') = s(bool,X0)) )),
+  inference(equality_factoring,[],[f25])).
+fof(f318,plain,(
+  $false | ($spl7 | $spl8)),
+  inference(trivial_inequality_removal,[],[f311])).
+fof(f311,plain,(
+  s(bool,'T_0') != s(bool,'T_0') | ($spl7 | $spl8)),
+  inference(superposition,[],[f43,f261])).
+fof(f261,plain,(
+  ( ! [X9] : (s(bool,'T_0') = s(bool,X9)) ) | $spl8),
+  inference(cnf_transformation,[],[f261_D])).
+fof(f261_D,plain,(
+  ( ! [X9] : (s(bool,'T_0') = s(bool,X9)) ) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f263,plain,(
+  s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))) | $spl10),
+  inference(cnf_transformation,[],[f263_D])).
+fof(f263_D,plain,(
+  s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f258,plain,(
+  ( ! [X9] : (s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))) | s(bool,'T_0') = s(bool,X9)) ) | $spl1),
+  inference(duplicate_literal_removal,[],[f224])).
+fof(f224,plain,(
+  ( ! [X9] : (s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))) | s(bool,'T_0') = s(bool,X9) | s(bool,'T_0') = s(bool,X9)) ) | $spl1),
+  inference(superposition,[],[f204,f25])).
+fof(f204,plain,(
+  ( ! [X9] : (s(bool,X9) = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))) | s(bool,'T_0') = s(bool,X9)) ) | $spl1),
+  inference(subsumption_resolution,[],[f130,f23])).
+fof(f130,plain,(
+  ( ! [X9] : (~p(s(bool,'T_0')) | s(bool,X9) = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))) | s(bool,'T_0') = s(bool,X9)) ) | $spl1),
+  inference(superposition,[],[f30,f33])).
+fof(f33,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f25,f25])).
+fof(f30,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3)))))) | $spl1),
+  inference(cnf_transformation,[],[f30_D])).
+fof(f30_D,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3)))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f32,plain,(
+  s('type.closSem.v','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.closSem.v'),sK1))) != s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3))) | $spl3),
+  inference(cnf_transformation,[],[f32_D])).
+fof(f32_D,plain,(
+  s('type.closSem.v','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.closSem.v'),sK1))) != s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f22,plain,(
+  s('type.closSem.v','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.closSem.v'),sK1))) != s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.closSem.v'),sK3))))))),
+  inference(cnf_transformation,[],[f18])).
+fof(f6461,plain,(
+  $false | $spl3),
+  inference(subsumption_resolution,[],[f6460,f32])).
+fof(f6460,plain,(
+  s('type.closSem.v','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.closSem.v'),sK1))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3)))),
+  inference(subsumption_resolution,[],[f6426,f23])).
+fof(f6426,plain,(
+  ~p(s(bool,'T_0')) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.closSem.v'),sK1))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3)))),
+  inference(superposition,[],[f3034,f40])).
+fof(f3034,plain,(
+  ( ! [X0] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',X0),s('type.list.list'('type.closSem.v'),sK1))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X0),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3)))) )),
+  inference(equality_resolution,[],[f434])).
+fof(f434,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),sK1))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X0))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),sK0)))))) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.closSem.v'),X0))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),sK0))),s('type.list.list'('type.closSem.v'),sK3)))) )),
+  inference(superposition,[],[f28,f20])).
+fof(f28,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.option.option'('type.list.list'('type.closSem.v')),'const.option.SOME_1'(s('type.list.list'('type.closSem.v'),X2))) != s('type.option.option'('type.list.list'('type.closSem.v')),'const.closSem.lookup_vars_2'(s('type.list.list'('type.num.num'),X0),s('type.list.list'('type.closSem.v'),X3))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.num.num'),X0)))))) | s('type.closSem.v','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.closSem.v'),X2))) = s('type.closSem.v','const.list.EL_2'(s('type.num.num','const.list.EL_2'(s('type.num.num',X1),s('type.list.list'('type.num.num'),X0))),s('type.list.list'('type.closSem.v'),X3)))) )),
+  inference(cnf_transformation,[],[f17])).
+% SZS output end Proof for thm.closProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 67
+% Passive clauses: 1084
+% Generated clauses: 6228
+% Final active clauses: 48
+% Final passive clauses: 922
+% Input formulas: 6
+% Initial clauses: 9
+% 
+% Duplicate literals: 631
+% Trivial inequalities: 71
+% Fw subsumption resolutions: 575
+% Fw demodulations: 93
+% Bw demodulations: 9
+% 
+% Simple tautologies: 173
+% Equational tautologies: 86
+% Forward subsumptions: 2526
+% 
+% Binary resolution: 21
+% Forward superposition: 2579
+% Backward superposition: 1662
+% Self superposition: 263
+% Equality factoring: 220
+% Equality resolution: 7
+% 
+% Split clauses: 414
+% Split components: 836
+% SAT solver clauses: 1035
+% SAT solver unit clauses: 262
+% SAT solver binary clauses: 320
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 414
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 1021
+% TWLsolver calls for satisfiability: 52
+% 
+% Memory used [KB]: 3070
+% Time elapsed: 0.371 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.381 s

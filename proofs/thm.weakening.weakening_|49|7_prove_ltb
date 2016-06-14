@@ -1,0 +1,336 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.weakening
+% (23259)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 751
+% Passive clauses: 8605
+% Generated clauses: 25982
+% Final active clauses: 738
+% Final passive clauses: 7491
+% Input formulas: 36
+% Initial clauses: 154
+% 
+% Duplicate literals: 947
+% Trivial inequalities: 40
+% Fw subsumption resolutions: 2618
+% Fw demodulations: 689
+% Bw demodulations: 10
+% 
+% Simple tautologies: 246
+% Equational tautologies: 76
+% Forward subsumptions: 8913
+% 
+% Binary resolution: 10046
+% Factoring: 1417
+% Forward superposition: 3908
+% Backward superposition: 5655
+% Self superposition: 110
+% Equality factoring: 110
+% Equality resolution: 8
+% 
+% Split clauses: 1584
+% Split components: 3420
+% SAT solver clauses: 2081
+% SAT solver unit clauses: 19
+% SAT solver binary clauses: 235
+% 
+% Sat splits: 1584
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2076
+% TWLsolver calls for satisfiability: 452
+% 
+% Memory used [KB]: 13816
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.weakening
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.weakening
+% SZS output start Proof for thm.weakening
+fof(f1773,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1772,f204,f381,f252,f402,f478,f482,f201,f379,f218,f389,f1749,f1751,f480,f484,f202,f377,f1692,f1693,f382,f384,f283,f417,f497,f502,f203,f375,f222,f391])).
+fof(f391,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | $spl16),
+  inference(cnf_transformation,[],[f391_D])).
+fof(f391_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f222,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f135])).
+fof(f135,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f49])).
+fof(f49,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X9] : (s(bool,'F_0') = s(bool,X9) <=> ~p(s(bool,X9)))),
+  file('thm.weakening.weakening_|49|7_prove_ltb','thm.bool.EQ_CLAUSES|split|3')).
+fof(f375,plain,(
+  ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) | $spl1),
+  inference(cnf_transformation,[],[f375_D])).
+fof(f375_D,plain,(
+  ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f203,plain,(
+  ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))))),
+  inference(cnf_transformation,[],[f130])).
+fof(f130,plain,(
+  p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10)))) & p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) & ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13])],[f89])).
+fof(f89,plain,(
+  ? [X0,X1,X2,X3] : (p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X1),s('type.typeSystem.tenv_val',X0)))) & p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.list.list'('type.list.list'('type.string.char')),X2),s('type.ast.t',X3)))) & ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1))),s('type.list.list'('type.list.list'('type.string.char')),X2),s('type.ast.t',X3)))))),
+  inference(flattening,[],[f88])).
+fof(f88,plain,(
+  ? [X0,X1,X2,X3] : ((p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X1),s('type.typeSystem.tenv_val',X0)))) & p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.list.list'('type.list.list'('type.string.char')),X2),s('type.ast.t',X3))))) & ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1))),s('type.list.list'('type.list.list'('type.string.char')),X2),s('type.ast.t',X3)))))),
+  inference(ennf_transformation,[],[f38])).
+fof(f38,plain,(
+  ~! [X0,X1,X2,X3] : ((p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X1),s('type.typeSystem.tenv_val',X0)))) & p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.list.list'('type.list.list'('type.string.char')),X2),s('type.ast.t',X3))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1))),s('type.list.list'('type.list.list'('type.string.char')),X2),s('type.ast.t',X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ((p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X7),s('type.typeSystem.tenv_val',X6)))) & p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X6))),s('type.list.list'('type.list.list'('type.string.char')),X8),s('type.ast.t',X9))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X7))),s('type.list.list'('type.list.list'('type.string.char')),X8),s('type.ast.t',X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ((p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X7),s('type.typeSystem.tenv_val',X6)))) & p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X6))),s('type.list.list'('type.list.list'('type.string.char')),X8),s('type.ast.t',X9))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X7))),s('type.list.list'('type.list.list'('type.string.char')),X8),s('type.ast.t',X9)))))),
+  file('thm.weakening.weakening_|49|7_prove_ltb','thm.weakening.weakening_|49|7_prove_ltb')).
+fof(f502,plain,(
+  s(bool,'F_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))) | $spl170),
+  inference(cnf_transformation,[],[f502_D])).
+fof(f502_D,plain,(
+  s(bool,'F_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))) <=> ~$spl170),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl170])])).
+fof(f497,plain,(
+  s(bool,'F_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))) | ($spl1 | $spl16)),
+  inference(resolution,[],[f391,f375])).
+fof(f417,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2)))) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num',X3),s('type.num.num',X0)))) | ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))))) ) | $spl50),
+  inference(cnf_transformation,[],[f417_D])).
+fof(f417_D,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2)))) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num',X3),s('type.num.num',X0)))) | ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))))) ) <=> ~$spl50),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl50])])).
+fof(f283,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2)))) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num',X3),s('type.num.num',X0)))) | ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))))) )),
+  inference(cnf_transformation,[],[f109])).
+fof(f109,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2)))) | ! [X3] : (~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num',X3),s('type.num.num',X0)))) | p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))))))),
+  inference(ennf_transformation,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2)))) => ! [X3] : (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num',X3),s('type.num.num',X0)))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X3),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))))))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X8,X24,X9] : (p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X8),s('type.list.list'('type.list.list'('type.string.char')),X24),s('type.ast.t',X9)))) => ! [X25] : (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num',X25),s('type.num.num',X8)))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X25),s('type.list.list'('type.list.list'('type.string.char')),X24),s('type.ast.t',X9))))))),
+  file('thm.weakening.weakening_|49|7_prove_ltb','thm.typeSysProps.check_freevars_add')).
+fof(f384,plain,(
+  ~p(s(bool,'F_0')) | $spl9),
+  inference(cnf_transformation,[],[f384_D])).
+fof(f384_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl9),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl9])])).
+fof(f382,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(global_subsumption,[],[f207,f204])).
+fof(f207,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f131])).
+fof(f131,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f15])).
+fof(f15,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.weakening.weakening_|49|7_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f1693,plain,(
+  ( ! [X1] : (~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X1),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num',X1))))) ) | $spl638),
+  inference(cnf_transformation,[],[f1693_D])).
+fof(f1693_D,plain,(
+  ( ! [X1] : (~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X1),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num',X1))))) ) <=> ~$spl638),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl638])])).
+fof(f1692,plain,(
+  ( ! [X1] : (~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num',X1)))) | ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X1),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))))) ) | ($spl9 | $spl50 | $spl170)),
+  inference(subsumption_resolution,[],[f1681,f384])).
+fof(f1681,plain,(
+  ( ! [X1] : (p(s(bool,'F_0')) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num',X1)))) | ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X1),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))))) ) | ($spl50 | $spl170)),
+  inference(superposition,[],[f417,f502])).
+fof(f377,plain,(
+  p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) | $spl2),
+  inference(cnf_transformation,[],[f377_D])).
+fof(f377_D,plain,(
+  p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13)))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f202,plain,(
+  p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))))),
+  inference(cnf_transformation,[],[f130])).
+fof(f484,plain,(
+  s(bool,'T_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))) | $spl168),
+  inference(cnf_transformation,[],[f484_D])).
+fof(f484_D,plain,(
+  s(bool,'T_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))) <=> ~$spl168),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl168])])).
+fof(f480,plain,(
+  s(bool,'T_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10))),s('type.list.list'('type.list.list'('type.string.char')),sK12),s('type.ast.t',sK13))) | ($spl2 | $spl12)),
+  inference(resolution,[],[f389,f377])).
+fof(f1751,plain,(
+  ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10)))))) | $spl673),
+  inference(cnf_transformation,[],[f1751_D])).
+fof(f1751_D,plain,(
+  ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10)))))) <=> ~$spl673),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl673])])).
+fof(f1749,plain,(
+  ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10)))))) | ($spl6 | $spl168 | $spl638)),
+  inference(subsumption_resolution,[],[f1730,f381])).
+fof(f1730,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK11))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',sK10)))))) | ($spl168 | $spl638)),
+  inference(superposition,[],[f1693,f484])).
+fof(f389,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl12),
+  inference(cnf_transformation,[],[f389_D])).
+fof(f389_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f218,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f133])).
+fof(f133,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f46])).
+fof(f46,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X9] : (s(bool,'T_0') = s(bool,X9) <=> p(s(bool,X9)))),
+  file('thm.weakening.weakening_|49|7_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f379,plain,(
+  p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10)))) | $spl4),
+  inference(cnf_transformation,[],[f379_D])).
+fof(f379_D,plain,(
+  p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10)))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f201,plain,(
+  p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10))))),
+  inference(cnf_transformation,[],[f130])).
+fof(f482,plain,(
+  s(bool,'T_0') = s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10))) | $spl166),
+  inference(cnf_transformation,[],[f482_D])).
+fof(f482_D,plain,(
+  s(bool,'T_0') = s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10))) <=> ~$spl166),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl166])])).
+fof(f478,plain,(
+  s(bool,'T_0') = s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10))) | ($spl4 | $spl12)),
+  inference(resolution,[],[f389,f379])).
+fof(f402,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | ~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))) ) | $spl30),
+  inference(cnf_transformation,[],[f402_D])).
+fof(f402_D,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | ~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))) ) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f252,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | ~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))) )),
+  inference(cnf_transformation,[],[f157])).
+fof(f157,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1)))) | (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) & ! [X6,X7,X8,X9] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X6),s('type.num.num',X7),s('type.typeSystem.tenv_val',X1))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X8),s('type.ast.t',X9))))) | s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X6),s('type.num.num',X7),s('type.typeSystem.tenv_val',X0))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X8),s('type.ast.t',X9)))))))) & (~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),sK16(X1,X0)),s('type.num.num',sK17(X1,X0)),s('type.typeSystem.tenv_val',X1))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',sK18(X1,X0)),s('type.ast.t',sK19(X1,X0)))))) & s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),sK16(X1,X0)),s('type.num.num',sK17(X1,X0)),s('type.typeSystem.tenv_val',X0))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',sK18(X1,X0)),s('type.ast.t',sK19(X1,X0))))))) | p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK16,sK17,sK18,sK19])],[f156])).
+fof(f156,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1)))) | (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) & ! [X6,X7,X8,X9] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X6),s('type.num.num',X7),s('type.typeSystem.tenv_val',X1))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X8),s('type.ast.t',X9))))) | s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X6),s('type.num.num',X7),s('type.typeSystem.tenv_val',X0))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X8),s('type.ast.t',X9)))))))) & (~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | ? [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) & s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5)))))) | p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))))),
+  inference(rectify,[],[f155])).
+fof(f155,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1)))) | (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) & ! [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) | s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5)))))))) & (~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | ? [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) & s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5)))))) | p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))))),
+  inference(flattening,[],[f154])).
+fof(f154,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1)))) | (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) & ! [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) | s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5)))))))) & ((~p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) | ? [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) & s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))))) | p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1))))))),
+  inference(nnf_transformation,[],[f103])).
+fof(f103,plain,(
+  ! [X0,X1] : (p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1)))) <=> (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) & ! [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) != s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) | s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))))))),
+  inference(ennf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1] : (p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X0),s('type.typeSystem.tenv_val',X1)))) <=> (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X0))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X1)))))) & ! [X2,X3,X4,X5] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X1))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))) => s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X2),s('type.num.num',X3),s('type.typeSystem.tenv_val',X0))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X4),s('type.ast.t',X5))))))))),
+  inference(rectify,[],[f36])).
+fof(f36,axiom,(
+  ! [X6,X7] : (p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',X6),s('type.typeSystem.tenv_val',X7)))) <=> (p(s(bool,'const.arithmetic.>=_2'(s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X6))),s('type.num.num','const.typeSystem.num_tvs_1'(s('type.typeSystem.tenv_val',X7)))))) & ! [X26,X27,X8,X9] : (s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X26),s('type.num.num',X27),s('type.typeSystem.tenv_val',X7))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X8),s('type.ast.t',X9))))) => s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.typeSystem.lookup_tenv_val_3'(s('type.list.list'('type.string.char'),X26),s('type.num.num',X27),s('type.typeSystem.tenv_val',X6))) = s('type.option.option'('type.pair.prod'('type.num.num','type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.num.num','type.ast.t'),'const.pair.,_2'(s('type.num.num',X8),s('type.ast.t',X9))))))))),
+  file('thm.weakening.weakening_|49|7_prove_ltb','thm.weakening.weak_tenvE_def')).
+fof(f381,plain,(
+  p(s(bool,'T_0')) | $spl6),
+  inference(cnf_transformation,[],[f381_D])).
+fof(f381_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f204,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.weakening.weakening_|49|7_prove_ltb',aHL_TRUTH)).
+fof(f1772,plain,(
+  $false | ($spl6 | $spl30 | $spl166 | $spl673)),
+  inference(subsumption_resolution,[],[f1771,f381])).
+fof(f1771,plain,(
+  ~p(s(bool,'T_0')) | ($spl30 | $spl166 | $spl673)),
+  inference(forward_demodulation,[],[f1752,f482])).
+fof(f1752,plain,(
+  ~p(s(bool,'const.weakening.weak_tenvE_2'(s('type.typeSystem.tenv_val',sK11),s('type.typeSystem.tenv_val',sK10)))) | ($spl30 | $spl673)),
+  inference(resolution,[],[f1751,f402])).
+% SZS output end Proof for thm.weakening
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 163
+% Passive clauses: 329
+% Generated clauses: 1552
+% Final active clauses: 160
+% Final passive clauses: 166
+% Input formulas: 36
+% Initial clauses: 154
+% 
+% Duplicate literals: 58
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 136
+% Fw demodulations: 30
+% Bw demodulations: 3
+% Condensations: 32
+% Global subsumptions: 13
+% 
+% Simple tautologies: 136
+% Equational tautologies: 3
+% Forward subsumptions: 412
+% 
+% Binary resolution: 561
+% Factoring: 38
+% Forward superposition: 118
+% Backward superposition: 69
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 1
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 570
+% SAT solver unit clauses: 164
+% SAT solver binary clauses: 52
+% SAT solver learnt clauses: 27
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 2
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 517
+% TWLsolver calls for satisfiability: 1384
+% 
+% Memory used [KB]: 2046
+% Time elapsed: 0.068 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.707 s

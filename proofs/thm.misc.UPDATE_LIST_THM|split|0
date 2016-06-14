@@ -1,0 +1,234 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.misc
+% (52211)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 59
+% Passive clauses: 2083
+% Generated clauses: 11827
+% Final active clauses: 57
+% Final passive clauses: 1968
+% Input formulas: 20
+% Initial clauses: 21
+% 
+% Duplicate literals: 906
+% Trivial inequalities: 138
+% Fw subsumption resolutions: 1287
+% Fw demodulations: 346
+% 
+% Simple tautologies: 255
+% Equational tautologies: 100
+% Forward subsumptions: 5162
+% 
+% Binary resolution: 25
+% Forward superposition: 4777
+% Backward superposition: 3642
+% Self superposition: 368
+% Equality factoring: 286
+% Equality resolution: 11
+% 
+% Split clauses: 507
+% Split components: 1026
+% SAT solver clauses: 1609
+% SAT solver unit clauses: 419
+% SAT solver binary clauses: 562
+% 
+% Sat splits: 507
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1603
+% TWLsolver calls for satisfiability: 44
+% 
+% Memory used [KB]: 8059
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.misc
+% (52226)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 32
+% Passive clauses: 203
+% Generated clauses: 4722
+% Final active clauses: 29
+% Final passive clauses: 168
+% Input formulas: 20
+% Initial clauses: 21
+% 
+% Duplicate literals: 804
+% Trivial inequalities: 49
+% Fw subsumption resolutions: 84
+% Fw demodulations: 83
+% Bw demodulations: 2
+% Condensations: 1296
+% 
+% Simple tautologies: 74
+% Equational tautologies: 48
+% Forward subsumptions: 1499
+% 
+% Binary resolution: 12
+% Forward superposition: 888
+% Backward superposition: 984
+% Self superposition: 199
+% Equality factoring: 164
+% Equality resolution: 2
+% 
+% Split clauses: 41
+% Split components: 82
+% SAT solver clauses: 653
+% SAT solver unit clauses: 38
+% SAT solver binary clauses: 76
+% 
+% Sat splits: 41
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 653
+% TWLsolver calls for satisfiability: 50
+% 
+% Memory used [KB]: 5117
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f82684,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f82650])).
+fof(f82650,plain,(
+  s(fun(sK0,sK1),sK2) != s(fun(sK0,sK1),sK2)),
+  inference(superposition,[],[f59,f82508])).
+fof(f82508,plain,(
+  ( ! [X41,X42,X40] : (s(fun(X40,X41),X42) = s(fun(X40,X41),'const.misc.UPDATE_LIST_2'(s(fun(X40,X41),X42),s('type.list.list'('type.pair.prod'(X40,X41)),'const.list.NIL_0')))) )),
+  inference(superposition,[],[f2020,f68])).
+fof(f68,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X3) = s(X1,'const.list.FOLDL_3'(s(fun(X1,fun(X0,X1)),X2),s(X1,X3),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X3) = s(X1,'const.list.FOLDL_3'(s(fun(X1,fun(X0,X1)),X2),s(X1,X3),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X3) = s(X1,'const.list.FOLDL_3'(s(fun(X1,fun(X0,X1)),X2),s(X1,X3),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6,X7] : ! [X8,X12] : s(X7,X12) = s(X7,'const.list.FOLDL_3'(s(fun(X7,fun(X6,X7)),X8),s(X7,X12),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.misc.UPDATE_LIST_THM|split|0','thm.list.FOLDL|split|0')).
+fof(f2020,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),X3))) = s(fun(X0,X1),'const.list.FOLDL_3'(s(fun(fun(X0,X1),fun('type.pair.prod'(X0,X1),fun(X0,X1))),'const.combin.C_1'(s(fun('type.pair.prod'(X0,X1),fun(fun(X0,X1),fun(X0,X1))),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,fun(fun(X0,X1),fun(X0,X1)))),'const.combin.UPDATE_0'))))),s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),X3)))) )),
+  inference(forward_demodulation,[],[f1997,f69])).
+fof(f69,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),X3))) = s(fun(X0,X1),happ(s(fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1)),happ(s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.misc.UPDATE_LIST_0'),s(fun(X0,X1),X2))),s('type.list.list'('type.pair.prod'(X0,X1)),X3)))) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0,X1,X2,X3] : s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),X3))) = s(fun(X0,X1),happ(s(fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1)),happ(s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.misc.UPDATE_LIST_0'),s(fun(X0,X1),X2))),s('type.list.list'('type.pair.prod'(X0,X1)),X3)))),
+  inference(flattening,[],[f32])).
+fof(f32,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),X3))) = s(fun(X0,X1),happ(s(fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1)),happ(s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.misc.UPDATE_LIST_0'),s(fun(X0,X1),X2))),s('type.list.list'('type.pair.prod'(X0,X1)),X3)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6,X7] : ! [X15,X16] : s(fun(X6,X7),'const.misc.UPDATE_LIST_2'(s(fun(X6,X7),X15),s('type.list.list'('type.pair.prod'(X6,X7)),X16))) = s(fun(X6,X7),happ(s(fun('type.list.list'('type.pair.prod'(X6,X7)),fun(X6,X7)),happ(s(fun(fun(X6,X7),fun('type.list.list'('type.pair.prod'(X6,X7)),fun(X6,X7))),'const.misc.UPDATE_LIST_0'),s(fun(X6,X7),X15))),s('type.list.list'('type.pair.prod'(X6,X7)),X16)))),
+  file('thm.misc.UPDATE_LIST_THM|split|0','ARITY_0_2_const.misc.UPDATE_LIST')).
+fof(f1997,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,X1),happ(s(fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1)),happ(s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.misc.UPDATE_LIST_0'),s(fun(X0,X1),X2))),s('type.list.list'('type.pair.prod'(X0,X1)),X3))) = s(fun(X0,X1),'const.list.FOLDL_3'(s(fun(fun(X0,X1),fun('type.pair.prod'(X0,X1),fun(X0,X1))),'const.combin.C_1'(s(fun('type.pair.prod'(X0,X1),fun(fun(X0,X1),fun(X0,X1))),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,fun(fun(X0,X1),fun(X0,X1)))),'const.combin.UPDATE_0'))))),s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),X3)))) )),
+  inference(superposition,[],[f71,f66])).
+fof(f66,plain,(
+  ( ! [X0,X1] : (s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.misc.UPDATE_LIST_0') = s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.list.FOLDL_1'(s(fun(fun(X0,X1),fun('type.pair.prod'(X0,X1),fun(X0,X1))),'const.combin.C_1'(s(fun('type.pair.prod'(X0,X1),fun(fun(X0,X1),fun(X0,X1))),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,fun(fun(X0,X1),fun(X0,X1)))),'const.combin.UPDATE_0')))))))) )),
+  inference(cnf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0,X1] : s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.misc.UPDATE_LIST_0') = s(fun(fun(X0,X1),fun('type.list.list'('type.pair.prod'(X0,X1)),fun(X0,X1))),'const.list.FOLDL_1'(s(fun(fun(X0,X1),fun('type.pair.prod'(X0,X1),fun(X0,X1))),'const.combin.C_1'(s(fun('type.pair.prod'(X0,X1),fun(fun(X0,X1),fun(X0,X1))),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,fun(fun(X0,X1),fun(X0,X1)))),'const.combin.UPDATE_0')))))))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X7] : s(fun(fun(X6,X7),fun('type.list.list'('type.pair.prod'(X6,X7)),fun(X6,X7))),'const.misc.UPDATE_LIST_0') = s(fun(fun(X6,X7),fun('type.list.list'('type.pair.prod'(X6,X7)),fun(X6,X7))),'const.list.FOLDL_1'(s(fun(fun(X6,X7),fun('type.pair.prod'(X6,X7),fun(X6,X7))),'const.combin.C_1'(s(fun('type.pair.prod'(X6,X7),fun(fun(X6,X7),fun(X6,X7))),'const.pair.UNCURRY_1'(s(fun(X6,fun(X7,fun(fun(X6,X7),fun(X6,X7)))),'const.combin.UPDATE_0')))))))),
+  file('thm.misc.UPDATE_LIST_THM|split|0','thm.misc.UPDATE_LIST_def')).
+fof(f71,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.list.FOLDL_3'(s(fun(X0,fun(X1,X0)),X2),s(X0,X3),s('type.list.list'(X1),X4))) = s(X0,happ(s(fun('type.list.list'(X1),X0),happ(s(fun(X0,fun('type.list.list'(X1),X0)),'const.list.FOLDL_1'(s(fun(X0,fun(X1,X0)),X2))),s(X0,X3))),s('type.list.list'(X1),X4)))) )),
+  inference(cnf_transformation,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,'const.list.FOLDL_3'(s(fun(X0,fun(X1,X0)),X2),s(X0,X3),s('type.list.list'(X1),X4))) = s(X0,happ(s(fun('type.list.list'(X1),X0),happ(s(fun(X0,fun('type.list.list'(X1),X0)),'const.list.FOLDL_1'(s(fun(X0,fun(X1,X0)),X2))),s(X0,X3))),s('type.list.list'(X1),X4)))),
+  inference(flattening,[],[f36])).
+fof(f36,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X0,'const.list.FOLDL_3'(s(fun(X0,fun(X1,X0)),X2),s(X0,X3),s('type.list.list'(X1),X4))) = s(X0,happ(s(fun('type.list.list'(X1),X0),happ(s(fun(X0,fun('type.list.list'(X1),X0)),'const.list.FOLDL_1'(s(fun(X0,fun(X1,X0)),X2))),s(X0,X3))),s('type.list.list'(X1),X4)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X7,X6] : ! [X15,X16,X17] : s(X7,'const.list.FOLDL_3'(s(fun(X7,fun(X6,X7)),X15),s(X7,X16),s('type.list.list'(X6),X17))) = s(X7,happ(s(fun('type.list.list'(X6),X7),happ(s(fun(X7,fun('type.list.list'(X6),X7)),'const.list.FOLDL_1'(s(fun(X7,fun(X6,X7)),X15))),s(X7,X16))),s('type.list.list'(X6),X17)))),
+  file('thm.misc.UPDATE_LIST_THM|split|0','ARITY_1_3_const.list.FOLDL')).
+fof(f59,plain,(
+  s(fun(sK0,sK1),sK2) != s(fun(sK0,sK1),'const.misc.UPDATE_LIST_2'(s(fun(sK0,sK1),sK2),s('type.list.list'('type.pair.prod'(sK0,sK1)),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f56])).
+fof(f56,plain,(
+  s(fun(sK0,sK1),sK2) != s(fun(sK0,sK1),'const.misc.UPDATE_LIST_2'(s(fun(sK0,sK1),sK2),s('type.list.list'('type.pair.prod'(sK0,sK1)),'const.list.NIL_0')))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f54])).
+fof(f54,plain,(
+  ? [X0,X1,X2] : s(fun(X0,X1),X2) != s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),'const.list.NIL_0')))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1,X2] : s(fun(X0,X1),X2) = s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),'const.list.NIL_0')))),
+  inference(flattening,[],[f22])).
+fof(f22,plain,(
+  ~! [X0,X1] : ! [X2] : s(fun(X0,X1),X2) = s(fun(X0,X1),'const.misc.UPDATE_LIST_2'(s(fun(X0,X1),X2),s('type.list.list'('type.pair.prod'(X0,X1)),'const.list.NIL_0')))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8] : s(fun(X6,X7),X8) = s(fun(X6,X7),'const.misc.UPDATE_LIST_2'(s(fun(X6,X7),X8),s('type.list.list'('type.pair.prod'(X6,X7)),'const.list.NIL_0')))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8] : s(fun(X6,X7),X8) = s(fun(X6,X7),'const.misc.UPDATE_LIST_2'(s(fun(X6,X7),X8),s('type.list.list'('type.pair.prod'(X6,X7)),'const.list.NIL_0')))),
+  file('thm.misc.UPDATE_LIST_THM|split|0','thm.misc.UPDATE_LIST_THM|split|0')).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 237
+% Passive clauses: 5199
+% Generated clauses: 92627
+% Final active clauses: 126
+% Final passive clauses: 943
+% Input formulas: 20
+% Initial clauses: 21
+% Discarded non-redundant clauses: 1988
+% 
+% Duplicate literals: 3370
+% Trivial inequalities: 565
+% Fw subsumption resolutions: 5353
+% Fw demodulations: 14276
+% Bw demodulations: 2045
+% Condensations: 6844
+% Global subsumptions: 83
+% 
+% Simple tautologies: 733
+% Equational tautologies: 182
+% Forward subsumptions: 55382
+% Fw demodulations to eq. taut.: 14
+% Bw demodulations to eq. taut.: 616
+% 
+% Unit resulting resolution: 598
+% Forward superposition: 25514
+% Backward superposition: 22215
+% Self superposition: 589
+% Equality factoring: 185
+% Equality resolution: 38
+% 
+% Split clauses: 386
+% Split components: 784
+% SAT solver clauses: 6081
+% SAT solver unit clauses: 95
+% SAT solver binary clauses: 420
+% 
+% Sat splits: 386
+% Sat splitting refutations: 25
+% 
+% Memory used [KB]: 63708
+% Time elapsed: 6.424 s
+% ------------------------------
+% ------------------------------
+% Success in time 7.781 s

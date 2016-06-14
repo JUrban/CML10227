@@ -1,0 +1,407 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.misc
+% (102170)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 134
+% Passive clauses: 1425
+% Generated clauses: 11351
+% Final active clauses: 123
+% Final passive clauses: 1165
+% Input formulas: 21
+% Initial clauses: 50
+% 
+% Duplicate literals: 699
+% Trivial inequalities: 192
+% Fw subsumption resolutions: 1671
+% Fw demodulations: 942
+% Bw demodulations: 7
+% 
+% Simple tautologies: 276
+% Equational tautologies: 41
+% Forward subsumptions: 5046
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 219
+% Forward superposition: 3829
+% Backward superposition: 4501
+% Self superposition: 183
+% Equality factoring: 136
+% Equality resolution: 28
+% 
+% Split clauses: 834
+% Split components: 1761
+% SAT solver clauses: 1185
+% SAT solver unit clauses: 39
+% SAT solver binary clauses: 139
+% 
+% Sat splits: 834
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 1184
+% TWLsolver calls for satisfiability: 142
+% 
+% Memory used [KB]: 7164
+% Time elapsed: 0.690 s
+% ------------------------------
+% ------------------------------
+% remaining time: 142 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f1399,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1392,f87,f156,f89,f158,f174,f177,f85,f153,f92,f160,f188,f192,f86,f151,f96,f162,f491,f114,f168,f239,f214,f240,f90,f159,f91,f161,f246,f1364,f1367,f379,f389,f115,f169,f116,f170,f1304,f1338,f84,f154])).
+fof(f154,plain,(
+  ( ! [X4] : (p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X4)))) | ~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,X4))))) ) | $spl4),
+  inference(cnf_transformation,[],[f154_D])).
+fof(f154_D,plain,(
+  ( ! [X4] : (p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X4)))) | ~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,X4))))) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f84,plain,(
+  ( ! [X4] : (p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X4)))) | ~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,X4))))) )),
+  inference(cnf_transformation,[],[f62])).
+fof(f62,plain,(
+  ! [X4] : (~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,X4)))) | p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X4))))) & p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1)))) & ~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f51])).
+fof(f51,plain,(
+  ? [X0,X1,X2,X3] : (! [X4] : (~p(s(bool,happ(s(fun(X0,bool),X3),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4))))) & p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X3),s('type.option.option'(X0),X1)))) & ~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1)))))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ? [X0,X1,X2,X3] : (! [X4] : (~p(s(bool,happ(s(fun(X0,bool),X3),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4))))) & (p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X3),s('type.option.option'(X0),X1)))) & ~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1))))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2,X3] : (! [X4] : (p(s(bool,happ(s(fun(X0,bool),X3),s(X0,X4)))) => p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4))))) => (p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X3),s('type.option.option'(X0),X1)))) => p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1))))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2,X3] : (! [X4] : (p(s(bool,happ(s(fun(X0,bool),X3),s(X0,X4)))) => p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4))))) => (p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X3),s('type.option.option'(X0),X1)))) => p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : (! [X10] : (p(s(bool,happ(s(fun(X6,bool),X9),s(X6,X10)))) => p(s(bool,happ(s(fun(X6,bool),X8),s(X6,X10))))) => (p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X6,bool),X9),s('type.option.option'(X6),X7)))) => p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X6,bool),X8),s('type.option.option'(X6),X7))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : (! [X10] : (p(s(bool,happ(s(fun(X6,bool),X9),s(X6,X10)))) => p(s(bool,happ(s(fun(X6,bool),X8),s(X6,X10))))) => (p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X6,bool),X9),s('type.option.option'(X6),X7)))) => p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X6,bool),X8),s('type.option.option'(X6),X7))))))),
+  file('thm.misc.OPTION_EVERY_mono','thm.misc.OPTION_EVERY_mono')).
+fof(f1338,plain,(
+  ( ! [X3] : (~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,sK4(X3,sK0))))) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X3)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X3)) ) | $spl260),
+  inference(cnf_transformation,[],[f1338_D])).
+fof(f1338_D,plain,(
+  ( ! [X3] : (~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,sK4(X3,sK0))))) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X3)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X3)) ) <=> ~$spl260),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl260])])).
+fof(f1304,plain,(
+  ( ! [X3] : (p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X3)))) | ~p(s(bool,happ(s(fun(sK0,bool),sK3),s(sK0,sK4(X3,sK0))))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X3)) ) | ($spl4 | $spl70)),
+  inference(superposition,[],[f154,f389])).
+fof(f170,plain,(
+  ( ! [X2,X0,X1] : (s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))) = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))) ) | $spl24),
+  inference(cnf_transformation,[],[f170_D])).
+fof(f170_D,plain,(
+  ( ! [X2,X0,X1] : (s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))) = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))) ) <=> ~$spl24),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl24])])).
+fof(f116,plain,(
+  ( ! [X2,X0,X1] : (s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))) = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1,X2] : s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))) = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))) = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X6] : ! [X9,X18] : s(bool,happ(s(fun(X6,bool),X9),s(X6,X18))) = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X6,bool),X9),s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X18)))))),
+  file('thm.misc.OPTION_EVERY_mono','thm.misc.OPTION_EVERY_def|split|1')).
+fof(f169,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) ) | $spl22),
+  inference(cnf_transformation,[],[f169_D])).
+fof(f169_D,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) ) <=> ~$spl22),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl22])])).
+fof(f115,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) )),
+  inference(cnf_transformation,[],[f77])).
+fof(f77,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK4])],[f41])).
+fof(f41,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0] : ! [X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6] : ! [X19] : (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X19) | ? [X10] : s('type.option.option'(X6),X19) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X10))))),
+  file('thm.misc.OPTION_EVERY_mono','thm.option.option_nchotomy')).
+fof(f389,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1))) = s(bool,happ(s(fun(X0,bool),X2),s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) ) | $spl70),
+  inference(cnf_transformation,[],[f389_D])).
+fof(f389_D,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1))) = s(bool,happ(s(fun(X0,bool),X2),s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) ) <=> ~$spl70),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl70])])).
+fof(f379,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X2),s('type.option.option'(X0),X1))) = s(bool,happ(s(fun(X0,bool),X2),s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) ) | ($spl22 | $spl24)),
+  inference(superposition,[],[f170,f169])).
+fof(f1367,plain,(
+  ( ! [X1] : (~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),X1)))) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X1)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X1)) ) | $spl292),
+  inference(cnf_transformation,[],[f1367_D])).
+fof(f1367_D,plain,(
+  ( ! [X1] : (~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),X1)))) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X1)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X1)) ) <=> ~$spl292),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl292])])).
+fof(f1364,plain,(
+  ( ! [X1] : (~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),X1)))) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X1)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X1)) ) | ($spl70 | $spl260)),
+  inference(duplicate_literal_removal,[],[f1357])).
+fof(f1357,plain,(
+  ( ! [X1] : (~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),X1)))) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),X1)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X1) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X1)) ) | ($spl70 | $spl260)),
+  inference(superposition,[],[f1338,f389])).
+fof(f246,plain,(
+  $false | ($spl9 | $spl46)),
+  inference(resolution,[],[f240,f158])).
+fof(f161,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) ) | $spl14),
+  inference(cnf_transformation,[],[f161_D])).
+fof(f161_D,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) ) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f91,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f63])).
+fof(f63,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f26])).
+fof(f26,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X11] : (s(bool,'T_0') = s(bool,X11) <=> p(s(bool,X11)))),
+  file('thm.misc.OPTION_EVERY_mono','thm.bool.EQ_CLAUSES|split|0')).
+fof(f159,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) | $spl10),
+  inference(cnf_transformation,[],[f159_D])).
+fof(f159_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f90,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.misc.OPTION_EVERY_mono',aHL_BOOL_CASES)).
+fof(f240,plain,(
+  ( ! [X2] : (p(s(bool,X2))) ) | $spl46),
+  inference(cnf_transformation,[],[f240_D])).
+fof(f240_D,plain,(
+  ( ! [X2] : (p(s(bool,X2))) ) <=> ~$spl46),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl46])])).
+fof(f214,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl41),
+  inference(cnf_transformation,[],[f214_D])).
+fof(f214_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl41),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl41])])).
+fof(f239,plain,(
+  ( ! [X2] : (s(bool,'T_0') != s(bool,'F_0') | p(s(bool,X2))) ) | ($spl10 | $spl14)),
+  inference(subsumption_resolution,[],[f227,f161])).
+fof(f227,plain,(
+  ( ! [X2] : (s(bool,'T_0') != s(bool,'F_0') | p(s(bool,X2)) | s(bool,'T_0') = s(bool,X2)) ) | ($spl10 | $spl14)),
+  inference(superposition,[],[f161,f159])).
+fof(f168,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.NONE_0')))) ) | $spl20),
+  inference(cnf_transformation,[],[f168_D])).
+fof(f168_D,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.NONE_0')))) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f114,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.NONE_0')))) )),
+  inference(cnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ! [X0,X1] : s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.NONE_0')))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ! [X0] : ! [X1] : s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X0,bool),X1),s('type.option.option'(X0),'const.option.NONE_0')))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6] : ! [X9] : s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(X6,bool),X9),s('type.option.option'(X6),'const.option.NONE_0')))),
+  file('thm.misc.OPTION_EVERY_mono','thm.misc.OPTION_EVERY_def|split|0')).
+fof(f491,plain,(
+  $false | ($spl20 | $spl36 | $spl41 | $spl92)),
+  inference(subsumption_resolution,[],[f490,f214])).
+fof(f490,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | ($spl20 | $spl36 | $spl92)),
+  inference(forward_demodulation,[],[f487,f168])).
+fof(f487,plain,(
+  s(bool,'F_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),'const.option.NONE_0'))) | ($spl36 | $spl92)),
+  inference(backward_demodulation,[],[f480,f192])).
+fof(f480,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | $spl92),
+  inference(cnf_transformation,[],[f480_D])).
+fof(f480_D,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) <=> ~$spl92),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl92])])).
+fof(f162,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | $spl16),
+  inference(cnf_transformation,[],[f162_D])).
+fof(f162_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f96,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f65])).
+fof(f65,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f29])).
+fof(f29,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X11] : (s(bool,'F_0') = s(bool,X11) <=> ~p(s(bool,X11)))),
+  file('thm.misc.OPTION_EVERY_mono','thm.bool.EQ_CLAUSES|split|2')).
+fof(f151,plain,(
+  ~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1)))) | $spl1),
+  inference(cnf_transformation,[],[f151_D])).
+fof(f151_D,plain,(
+  ~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1)))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f86,plain,(
+  ~p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1))))),
+  inference(cnf_transformation,[],[f62])).
+fof(f192,plain,(
+  s(bool,'F_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1))) | $spl36),
+  inference(cnf_transformation,[],[f192_D])).
+fof(f192_D,plain,(
+  s(bool,'F_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1))) <=> ~$spl36),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl36])])).
+fof(f188,plain,(
+  s(bool,'F_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1))) | ($spl1 | $spl16)),
+  inference(resolution,[],[f162,f151])).
+fof(f160,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl12),
+  inference(cnf_transformation,[],[f160_D])).
+fof(f160_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f92,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f63])).
+fof(f153,plain,(
+  p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1)))) | $spl2),
+  inference(cnf_transformation,[],[f153_D])).
+fof(f153_D,plain,(
+  p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1)))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f85,plain,(
+  p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1))))),
+  inference(cnf_transformation,[],[f62])).
+fof(f177,plain,(
+  s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1))) | $spl30),
+  inference(cnf_transformation,[],[f177_D])).
+fof(f177_D,plain,(
+  s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1))) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f174,plain,(
+  s(bool,'T_0') = s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK3),s('type.option.option'(sK0),sK1))) | ($spl2 | $spl12)),
+  inference(resolution,[],[f160,f153])).
+fof(f158,plain,(
+  ~p(s(bool,'F_0')) | $spl9),
+  inference(cnf_transformation,[],[f158_D])).
+fof(f158_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl9),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl9])])).
+fof(f89,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.misc.OPTION_EVERY_mono',aHL_FALSITY)).
+fof(f156,plain,(
+  p(s(bool,'T_0')) | $spl6),
+  inference(cnf_transformation,[],[f156_D])).
+fof(f156_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f87,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.misc.OPTION_EVERY_mono',aHL_TRUTH)).
+fof(f1392,plain,(
+  $false | ($spl6 | $spl9 | $spl30 | $spl36 | $spl93 | $spl292)),
+  inference(subsumption_resolution,[],[f1391,f158])).
+fof(f1391,plain,(
+  p(s(bool,'F_0')) | ($spl6 | $spl30 | $spl36 | $spl93 | $spl292)),
+  inference(forward_demodulation,[],[f1390,f192])).
+fof(f1390,plain,(
+  p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1)))) | ($spl6 | $spl30 | $spl93 | $spl292)),
+  inference(subsumption_resolution,[],[f1389,f479])).
+fof(f479,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) | $spl93),
+  inference(cnf_transformation,[],[f479_D])).
+fof(f479_D,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) <=> ~$spl93),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl93])])).
+fof(f1389,plain,(
+  p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | ($spl6 | $spl30 | $spl292)),
+  inference(subsumption_resolution,[],[f1375,f156])).
+fof(f1375,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.misc.OPTION_EVERY_2'(s(fun(sK0,bool),sK2),s('type.option.option'(sK0),sK1)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | ($spl30 | $spl292)),
+  inference(superposition,[],[f1367,f177])).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 55
+% Passive clauses: 153
+% Generated clauses: 1303
+% Final active clauses: 33
+% Final passive clauses: 90
+% Input formulas: 21
+% Initial clauses: 50
+% 
+% Duplicate literals: 83
+% Trivial inequalities: 33
+% Fw subsumption resolutions: 78
+% Fw demodulations: 81
+% Bw demodulations: 14
+% Condensations: 91
+% Global subsumptions: 4
+% 
+% Simple tautologies: 57
+% Equational tautologies: 18
+% Forward subsumptions: 440
+% Bw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 33
+% Forward superposition: 275
+% Backward superposition: 326
+% Self superposition: 28
+% Equality factoring: 30
+% Equality resolution: 9
+% 
+% Split clauses: 16
+% Split components: 32
+% SAT solver clauses: 310
+% SAT solver unit clauses: 56
+% SAT solver binary clauses: 28
+% SAT solver learnt clauses: 9
+% 
+% Sat splits: 16
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 293
+% TWLsolver calls for satisfiability: 209
+% 
+% Memory used [KB]: 1918
+% Time elapsed: 0.045 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.77 s

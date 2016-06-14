@@ -1,0 +1,268 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpSem
+% (108725)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 87
+% Passive clauses: 3147
+% Generated clauses: 12739
+% Final active clauses: 80
+% Final passive clauses: 2863
+% Input formulas: 69
+% Initial clauses: 74
+% 
+% Duplicate literals: 580
+% Trivial inequalities: 81
+% Fw subsumption resolutions: 1195
+% Fw demodulations: 558
+% Bw demodulations: 3
+% 
+% Simple tautologies: 189
+% Equational tautologies: 79
+% Forward subsumptions: 5454
+% 
+% Binary resolution: 149
+% Factoring: 2
+% Forward superposition: 4920
+% Backward superposition: 4544
+% Self superposition: 351
+% Equality factoring: 192
+% Equality resolution: 12
+% 
+% Split clauses: 284
+% Split components: 589
+% SAT solver clauses: 869
+% SAT solver unit clauses: 19
+% SAT solver binary clauses: 188
+% 
+% Sat splits: 284
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 864
+% TWLsolver calls for satisfiability: 166
+% 
+% Memory used [KB]: 12537
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvpSem
+% (108754)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 38
+% Passive clauses: 331
+% Generated clauses: 4484
+% Final active clauses: 37
+% Final passive clauses: 278
+% Input formulas: 69
+% Initial clauses: 74
+% 
+% Duplicate literals: 626
+% Trivial inequalities: 37
+% Fw subsumption resolutions: 175
+% Fw demodulations: 62
+% Bw demodulations: 15
+% Condensations: 920
+% 
+% Simple tautologies: 94
+% Equational tautologies: 60
+% Forward subsumptions: 1708
+% 
+% Binary resolution: 63
+% Factoring: 2
+% Forward superposition: 914
+% Backward superposition: 1129
+% Self superposition: 167
+% Equality factoring: 142
+% Equality resolution: 7
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 588
+% SAT solver unit clauses: 132
+% SAT solver binary clauses: 33
+% 
+% Sat splits: 9
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 588
+% TWLsolver calls for satisfiability: 143
+% 
+% Memory used [KB]: 6524
+% Time elapsed: 0.728 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.bvpSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpSem
+% SZS output start Proof for thm.bvpSem
+fof(f5858,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f5857,f211])).
+fof(f211,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7',aHL_TRUTH)).
+fof(f5857,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f5855,f814])).
+fof(f814,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(equality_resolution,[],[f613])).
+fof(f613,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) != s(X0,X2) | s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) )),
+  inference(condensation,[],[f612])).
+fof(f612,plain,(
+  ( ! [X10,X8,X11,X9] : (s(X8,X9) != s(X8,X10) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X10))) | s(bool,'T_0') = s(bool,X11)) )),
+  inference(subsumption_resolution,[],[f609,f288])).
+fof(f288,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f212,f213])).
+fof(f213,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7',aHL_BOOL_CASES)).
+fof(f212,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7',aHL_FALSITY)).
+fof(f609,plain,(
+  ( ! [X10,X8,X11,X9] : (p(s(bool,X11)) | s(X8,X9) != s(X8,X10) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X10))) | s(bool,'T_0') = s(bool,X11)) )),
+  inference(superposition,[],[f243,f286])).
+fof(f286,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f213,f213])).
+fof(f243,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f209])).
+fof(f209,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f120])).
+fof(f120,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f52])).
+fof(f52,axiom,(
+  ! [X43,X44,X45] : (p(s(bool,happ(s(fun(X43,bool),happ(s(fun(X43,fun(X43,bool)),'=_0'),s(X43,X44))),s(X43,X45)))) <=> s(X43,X44) = s(X43,X45))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7',arity_0_HL_EQ)).
+fof(f5855,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),fun(fun(sK0,'type.bvpSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f5820,f2395])).
+fof(f2395,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),fun(fun(sK0,'type.bvpSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),sK3))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f210,f242])).
+fof(f242,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f209])).
+fof(f210,plain,(
+  s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))) != s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),sK3))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f205])).
+fof(f205,plain,(
+  s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))) != s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),sK3))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f201])).
+fof(f201,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X4),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X0,'type.bvpSem.state'(X1)),X2))) != s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X0,'type.bvpSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X4),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X0,'type.bvpSem.state'(X1)),X2))) = s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X0,'type.bvpSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X4),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X0,'type.bvpSem.state'(X1)),X2))) = s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X0,'type.bvpSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X10),s(fun('type.num.num','type.num.num'),X9))))),s(fun(X6,'type.bvpSem.state'(X7)),X8))) = s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X9))),s(fun(X6,'type.bvpSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X10),s(fun('type.num.num','type.num.num'),X9))))),s(fun(X6,'type.bvpSem.state'(X7)),X8))) = s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X9))),s(fun(X6,'type.bvpSem.state'(X7)),X8)))))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7','thm.bvpSem.state_fupdfupds_comp|split|7')).
+fof(f5820,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X1),s(fun('type.num.num','type.num.num'),X2))))),s(fun(X3,'type.bvpSem.state'(X0)),X4))) = s(fun(X3,'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X1))),s(fun(X3,'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun(X3,'type.bvpSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f249,f218])).
+fof(f218,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X1))))) = s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X1)))))) )),
+  inference(cnf_transformation,[],[f83])).
+fof(f83,plain,(
+  ! [X0,X1,X2] : s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X1))))) = s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X1)))))),
+  inference(flattening,[],[f82])).
+fof(f82,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X1))))) = s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X10),s(fun('type.num.num','type.num.num'),X9))))) = s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_handler_fupd_1'(s(fun('type.num.num','type.num.num'),X9)))))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7','thm.bvpSem.state_fupdfupds_comp|split|6')).
+fof(f249,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f132])).
+fof(f132,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f131])).
+fof(f131,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X14,X6,X22,X18] : ! [X10,X9,X8] : s(fun(X22,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X22,X6),'const.combin.o_2'(s(fun(X18,X6),X9),s(fun(X22,X18),X8))))) = s(fun(X22,X14),'const.combin.o_2'(s(fun(X18,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X18,X6),X9))),s(fun(X22,X18),X8)))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|7','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.bvpSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 65
+% Passive clauses: 539
+% Generated clauses: 5509
+% Final active clauses: 58
+% Final passive clauses: 399
+% Input formulas: 69
+% Initial clauses: 74
+% 
+% Duplicate literals: 356
+% Trivial inequalities: 32
+% Fw subsumption resolutions: 125
+% Fw demodulations: 800
+% Bw demodulations: 53
+% Condensations: 306
+% Global subsumptions: 1
+% 
+% Simple tautologies: 86
+% Equational tautologies: 102
+% Forward subsumptions: 3113
+% Fw demodulations to eq. taut.: 3
+% 
+% Unit resulting resolution: 400
+% Factoring: 1
+% Forward superposition: 1374
+% Backward superposition: 1798
+% Self superposition: 127
+% Equality factoring: 54
+% Equality resolution: 1
+% 
+% Split clauses: 22
+% Split components: 49
+% SAT solver clauses: 587
+% SAT solver unit clauses: 172
+% SAT solver binary clauses: 124
+% 
+% Sat splits: 22
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 8955
+% Time elapsed: 0.256 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.631 s

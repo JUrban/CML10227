@@ -1,0 +1,870 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_mtiProof
+% (6496)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 97
+% Passive clauses: 2185
+% Generated clauses: 9258
+% Final active clauses: 86
+% Final passive clauses: 1965
+% Input formulas: 32
+% Initial clauses: 68
+% 
+% Duplicate literals: 466
+% Trivial inequalities: 235
+% Fw subsumption resolutions: 1312
+% Fw demodulations: 658
+% Bw demodulations: 11
+% 
+% Simple tautologies: 249
+% Equational tautologies: 43
+% Forward subsumptions: 3389
+% Fw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 268
+% Factoring: 2
+% Forward superposition: 3151
+% Backward superposition: 2725
+% Self superposition: 137
+% Equality factoring: 101
+% Equality resolution: 28
+% 
+% Split clauses: 304
+% Split components: 621
+% SAT solver clauses: 580
+% SAT solver unit clauses: 34
+% SAT solver binary clauses: 147
+% 
+% Sat splits: 304
+% 
+% TWLsolver clauses: 577
+% TWLsolver calls for satisfiability: 121
+% 
+% Memory used [KB]: 5500
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_mtiProof
+% (6532)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 124
+% Passive clauses: 1253
+% Generated clauses: 16603
+% Final active clauses: 107
+% Final passive clauses: 1014
+% Input formulas: 32
+% Initial clauses: 68
+% 
+% Duplicate literals: 773
+% Trivial inequalities: 294
+% Fw subsumption resolutions: 1494
+% Fw demodulations: 1952
+% Bw demodulations: 82
+% Condensations: 1299
+% Global subsumptions: 9
+% 
+% Simple tautologies: 279
+% Equational tautologies: 35
+% Forward subsumptions: 7214
+% Fw demodulations to eq. taut.: 6
+% Bw demodulations to eq. taut.: 43
+% 
+% Binary resolution: 300
+% Factoring: 2
+% Forward superposition: 4267
+% Backward superposition: 4498
+% Self superposition: 155
+% Equality factoring: 90
+% Equality resolution: 35
+% 
+% Split clauses: 119
+% Split components: 243
+% SAT solver clauses: 2087
+% SAT solver unit clauses: 70
+% SAT solver binary clauses: 60
+% SAT solver learnt clauses: 18
+% 
+% Sat splits: 119
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 2051
+% TWLsolver calls for satisfiability: 320
+% 
+% Memory used [KB]: 12537
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.clos_mtiProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_mtiProof
+% SZS output start Proof for thm.clos_mtiProof
+fof(f1874,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f122,f192,f121,f194,f191,f120,f196,f119,f198,f193,f190,f201,f1040,f1096,f1267,f1266,f1425,f1428,f1431,f1434,f1787,f1793,f1806,f1807,f1808,f1864])).
+fof(f1864,plain,(
+  $false | ($spl1 | $spl5 | $spl6 | $spl8)),
+  inference(subsumption_resolution,[],[f1863,f123])).
+fof(f123,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T',aHL_TRUTH)).
+fof(f1863,plain,(
+  ~p(s(bool,'T_0')) | ($spl1 | $spl5 | $spl6 | $spl8)),
+  inference(forward_demodulation,[],[f1859,f1819])).
+fof(f1819,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | $spl6),
+  inference(unit_resulting_resolution,[],[f196,f129])).
+fof(f129,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f85])).
+fof(f85,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X12] : (s(bool,'T_0') = s(bool,X12) <=> p(s(bool,X12)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.bool.EQ_CLAUSES|split|0')).
+fof(f1859,plain,(
+  ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) | ($spl1 | $spl5 | $spl6 | $spl8)),
+  inference(backward_demodulation,[],[f1844,f1809])).
+fof(f1809,plain,(
+  ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK4(sK1,sK0))))) | ($spl1 | $spl5)),
+  inference(forward_demodulation,[],[f191,f1457])).
+fof(f1457,plain,(
+  ( ! [X2,X0,X1] : (s(X0,happ(s(fun(sK0,X0),X1),s(sK0,sK4(sK1,sK0)))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(X0,X2),s(fun(sK0,X0),X1)))) ) | $spl5),
+  inference(superposition,[],[f185,f1450])).
+fof(f1450,plain,(
+  s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK4(sK1,sK0)))) | $spl5),
+  inference(unit_resulting_resolution,[],[f194,f166])).
+fof(f166,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) )),
+  inference(cnf_transformation,[],[f109])).
+fof(f109,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK4])],[f55])).
+fof(f55,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(flattening,[],[f54])).
+fof(f54,plain,(
+  ! [X0] : ! [X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X6] : ! [X15] : (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X15) | ? [X7] : s('type.option.option'(X6),X15) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X7))))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.option.option_nchotomy')).
+fof(f185,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,happ(s(fun(X1,X0),X4),s(X1,X2))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))),s(X0,X3),s(fun(X1,X0),X4)))) )),
+  inference(cnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,happ(s(fun(X1,X0),X4),s(X1,X2))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))),s(X0,X3),s(fun(X1,X0),X4)))),
+  inference(flattening,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X0,happ(s(fun(X1,X0),X4),s(X1,X2))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))),s(X0,X3),s(fun(X1,X0),X4)))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X16,X6] : ! [X7,X17,X8] : s(X16,happ(s(fun(X6,X16),X8),s(X6,X7))) = s(X16,'const.option.option_CASE_3'(s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X7))),s(X16,X17),s(fun(X6,X16),X8)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.option.option_case_def|split|1')).
+fof(f1844,plain,(
+  s(sK0,sK3) = s(sK0,sK4(sK1,sK0)) | ($spl5 | $spl6 | $spl8)),
+  inference(forward_demodulation,[],[f1843,f1813])).
+fof(f1813,plain,(
+  s(sK0,sK3) = s(sK0,sK5(sK3,sK2,sK0)) | $spl6),
+  inference(unit_resulting_resolution,[],[f196,f177])).
+fof(f177,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(X0,X2) = s(X0,sK5(X2,X1,X0))) )),
+  inference(cnf_transformation,[],[f117])).
+fof(f117,plain,(
+  ! [X0,X1,X2] : ((! [X4] : (s(X0,X2) != s(X0,X4) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | (s(X0,X2) = s(X0,sK5(X2,X1,X0)) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK5(X2,X1,X0))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK5])],[f116])).
+fof(f116,plain,(
+  ! [X0,X1,X2] : ((! [X4] : (s(X0,X2) != s(X0,X4) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(rectify,[],[f115])).
+fof(f115,plain,(
+  ! [X0,X1,X2] : ((! [X3] : (s(X0,X2) != s(X0,X3) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(nnf_transformation,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1,X2] : (? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(flattening,[],[f65])).
+fof(f65,plain,(
+  ! [X0] : ! [X1,X2] : (? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6] : ! [X13,X14] : (? [X7] : (s(X6,X7) = s(X6,X14) & p(s(bool,happ(s(fun(X6,bool),X13),s(X6,X7))))) <=> p(s(bool,happ(s(fun(X6,bool),X13),s(X6,X14)))))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.bool.UNWIND_THM2')).
+fof(f1843,plain,(
+  s(sK0,sK4(sK1,sK0)) = s(sK0,sK5(sK3,sK2,sK0)) | ($spl5 | $spl6 | $spl8)),
+  inference(subsumption_resolution,[],[f1829,f198])).
+fof(f1829,plain,(
+  s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK3))) | s(sK0,sK4(sK1,sK0)) = s(sK0,sK5(sK3,sK2,sK0)) | ($spl5 | $spl6)),
+  inference(superposition,[],[f1458,f1813])).
+fof(f1458,plain,(
+  ( ! [X3] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X3))) | s(sK0,X3) = s(sK0,sK4(sK1,sK0))) ) | $spl5),
+  inference(superposition,[],[f174,f1450])).
+fof(f174,plain,(
+  ( ! [X2,X0,X1] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f114])).
+fof(f114,plain,(
+  ! [X0,X1,X2] : ((s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))))),
+  inference(nnf_transformation,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1,X2] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(flattening,[],[f63])).
+fof(f63,plain,(
+  ! [X0] : ! [X1,X2] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f31])).
+fof(f31,axiom,(
+  ! [X6] : ! [X7,X9] : (s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X7))) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X9))) <=> s(X6,X7) = s(X6,X9))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.option.SOME_|49||49|')).
+fof(f1808,plain,(
+  $false | ($spl2 | $spl6 | $spl8)),
+  inference(global_subsumption,[],[f122,f121,f120,f119,f123,f125,f126,f129,f128,f133,f132,f166,f171,f175,f174,f178,f177,f176,f182,f179,f183,f184,f185,f186,f202,f206,f235,f239,f274,f314,f500,f499,f505,f510,f511,f512,f576,f577,f611,f616,f617,f633,f622,f643,f644,f645,f664,f760,f759,f766,f769,f771,f773,f775,f780,f825,f836,f1271,f830,f765,f621,f516,f493,f192,f1281,f1285,f1296,f1295,f1323,f1312,f1326,f1337,f1338,f1349,f1351,f1373,f1382,f1367,f1370,f1489,f1490,f1492,f1551,f1552,f1581,f1583,f1614,f1615,f1593,f1616,f1626,f1606,f198,f196])).
+fof(f1606,plain,(
+  ( ! [X134,X132,X136,X135,X133,X131] : (~p(s(bool,happ(s(fun(X131,bool),'const.option.option_CASE_3'(s('type.option.option'(X132),X133),s(fun(X131,bool),X134),s(fun(X132,fun(X131,bool)),X135))),s(X131,X136)))) | s(X131,X136) = s(X131,sK5(X136,happ(s(fun(fun(X132,fun(X131,bool)),fun(X131,bool)),happ(s(fun(fun(X131,bool),fun(fun(X132,fun(X131,bool)),fun(X131,bool))),happ(s(fun('type.option.option'(X132),fun(fun(X131,bool),fun(fun(X132,fun(X131,bool)),fun(X131,bool)))),'const.option.option_CASE_0'),s('type.option.option'(X132),X133))),s(fun(X131,bool),X134))),s(fun(X132,fun(X131,bool)),X135)),X131))) )),
+  inference(superposition,[],[f177,f186])).
+fof(f1626,plain,(
+  ( ! [X127,X125,X130,X128,X126,X129] : (~p(s(bool,happ(s(fun(X125,bool),'const.option.option_CASE_3'(s('type.option.option'(X126),X127),s(fun(X125,bool),X128),s(fun(X126,fun(X125,bool)),X129))),s(X125,X130)))) | p(s(bool,happ(s(fun(X125,bool),'const.option.option_CASE_3'(s('type.option.option'(X126),X127),s(fun(X125,bool),X128),s(fun(X126,fun(X125,bool)),X129))),s(X125,sK5(X130,happ(s(fun(fun(X126,fun(X125,bool)),fun(X125,bool)),happ(s(fun(fun(X125,bool),fun(fun(X126,fun(X125,bool)),fun(X125,bool))),happ(s(fun('type.option.option'(X126),fun(fun(X125,bool),fun(fun(X126,fun(X125,bool)),fun(X125,bool)))),'const.option.option_CASE_0'),s('type.option.option'(X126),X127))),s(fun(X125,bool),X128))),s(fun(X126,fun(X125,bool)),X129)),X125)))))) )),
+  inference(forward_demodulation,[],[f1605,f186])).
+fof(f1605,plain,(
+  ( ! [X127,X125,X130,X128,X126,X129] : (p(s(bool,happ(s(fun(X125,bool),'const.option.option_CASE_3'(s('type.option.option'(X126),X127),s(fun(X125,bool),X128),s(fun(X126,fun(X125,bool)),X129))),s(X125,sK5(X130,happ(s(fun(fun(X126,fun(X125,bool)),fun(X125,bool)),happ(s(fun(fun(X125,bool),fun(fun(X126,fun(X125,bool)),fun(X125,bool))),happ(s(fun('type.option.option'(X126),fun(fun(X125,bool),fun(fun(X126,fun(X125,bool)),fun(X125,bool)))),'const.option.option_CASE_0'),s('type.option.option'(X126),X127))),s(fun(X125,bool),X128))),s(fun(X126,fun(X125,bool)),X129)),X125))))) | ~p(s(bool,happ(s(fun(X125,bool),happ(s(fun(fun(X126,fun(X125,bool)),fun(X125,bool)),happ(s(fun(fun(X125,bool),fun(fun(X126,fun(X125,bool)),fun(X125,bool))),happ(s(fun('type.option.option'(X126),fun(fun(X125,bool),fun(fun(X126,fun(X125,bool)),fun(X125,bool)))),'const.option.option_CASE_0'),s('type.option.option'(X126),X127))),s(fun(X125,bool),X128))),s(fun(X126,fun(X125,bool)),X129))),s(X125,X130))))) )),
+  inference(superposition,[],[f178,f186])).
+fof(f1616,plain,(
+  ( ! [X76,X74,X77,X75] : (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X74),X75),s(bool,X76),s(fun(X74,bool),X77)))) | p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X74),X75),s(bool,X76),s(fun(X74,bool),sK5(X77,happ(s(fun(bool,fun(fun(X74,bool),bool)),happ(s(fun('type.option.option'(X74),fun(bool,fun(fun(X74,bool),bool))),'const.option.option_CASE_0'),s('type.option.option'(X74),X75))),s(bool,X76)),fun(X74,bool))))))) )),
+  inference(forward_demodulation,[],[f1594,f186])).
+fof(f1594,plain,(
+  ( ! [X76,X74,X77,X75] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X74),X75),s(bool,X76),s(fun(X74,bool),sK5(X77,happ(s(fun(bool,fun(fun(X74,bool),bool)),happ(s(fun('type.option.option'(X74),fun(bool,fun(fun(X74,bool),bool))),'const.option.option_CASE_0'),s('type.option.option'(X74),X75))),s(bool,X76)),fun(X74,bool)))))) | ~p(s(bool,happ(s(fun(fun(X74,bool),bool),happ(s(fun(bool,fun(fun(X74,bool),bool)),happ(s(fun('type.option.option'(X74),fun(bool,fun(fun(X74,bool),bool))),'const.option.option_CASE_0'),s('type.option.option'(X74),X75))),s(bool,X76))),s(fun(X74,bool),X77))))) )),
+  inference(superposition,[],[f178,f186])).
+fof(f1593,plain,(
+  ( ! [X70,X72,X71,X73] : (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X70),X71),s(bool,X72),s(fun(X70,bool),X73)))) | s(fun(X70,bool),X73) = s(fun(X70,bool),sK5(X73,happ(s(fun(bool,fun(fun(X70,bool),bool)),happ(s(fun('type.option.option'(X70),fun(bool,fun(fun(X70,bool),bool))),'const.option.option_CASE_0'),s('type.option.option'(X70),X71))),s(bool,X72)),fun(X70,bool)))) )),
+  inference(superposition,[],[f177,f186])).
+fof(f1615,plain,(
+  ( ! [X68,X66,X69,X67,X65] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X65),X66),s(bool,X67),s(fun(X65,bool),X69)))) | ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X65),X66),s(bool,X67),s(fun(X65,bool),X68)))) | s(fun(X65,bool),X68) != s(fun(X65,bool),X69)) )),
+  inference(forward_demodulation,[],[f1592,f186])).
+fof(f1592,plain,(
+  ( ! [X68,X66,X69,X67,X65] : (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X65),X66),s(bool,X67),s(fun(X65,bool),X68)))) | p(s(bool,happ(s(fun(fun(X65,bool),bool),happ(s(fun(bool,fun(fun(X65,bool),bool)),happ(s(fun('type.option.option'(X65),fun(bool,fun(fun(X65,bool),bool))),'const.option.option_CASE_0'),s('type.option.option'(X65),X66))),s(bool,X67))),s(fun(X65,bool),X69)))) | s(fun(X65,bool),X68) != s(fun(X65,bool),X69)) )),
+  inference(superposition,[],[f176,f186])).
+fof(f1614,plain,(
+  ( ! [X39,X37,X41,X38,X36,X40] : (s(X36,'const.option.option_CASE_3'(s('type.option.option'(X37),X38),s(X36,X39),s(fun(X37,X36),X40))) = s(X36,sK5(happ(s(fun(fun(X37,X36),X36),happ(s(fun(X36,fun(fun(X37,X36),X36)),happ(s(fun('type.option.option'(X37),fun(X36,fun(fun(X37,X36),X36))),'const.option.option_CASE_0'),s('type.option.option'(X37),X38))),s(X36,X39))),s(fun(X37,X36),X40)),X41,X36)) | ~p(s(bool,happ(s(fun(X36,bool),X41),s(X36,'const.option.option_CASE_3'(s('type.option.option'(X37),X38),s(X36,X39),s(fun(X37,X36),X40))))))) )),
+  inference(forward_demodulation,[],[f1588,f186])).
+fof(f1588,plain,(
+  ( ! [X39,X37,X41,X38,X36,X40] : (~p(s(bool,happ(s(fun(X36,bool),X41),s(X36,'const.option.option_CASE_3'(s('type.option.option'(X37),X38),s(X36,X39),s(fun(X37,X36),X40)))))) | s(X36,happ(s(fun(fun(X37,X36),X36),happ(s(fun(X36,fun(fun(X37,X36),X36)),happ(s(fun('type.option.option'(X37),fun(X36,fun(fun(X37,X36),X36))),'const.option.option_CASE_0'),s('type.option.option'(X37),X38))),s(X36,X39))),s(fun(X37,X36),X40))) = s(X36,sK5(happ(s(fun(fun(X37,X36),X36),happ(s(fun(X36,fun(fun(X37,X36),X36)),happ(s(fun('type.option.option'(X37),fun(X36,fun(fun(X37,X36),X36))),'const.option.option_CASE_0'),s('type.option.option'(X37),X38))),s(X36,X39))),s(fun(X37,X36),X40)),X41,X36))) )),
+  inference(superposition,[],[f177,f186])).
+fof(f1583,plain,(
+  ( ! [X6,X10,X8,X7,X5,X9] : (s('type.option.option'(X5),'const.option.SOME_1'(s(X5,X10))) != s('type.option.option'(X5),'const.option.SOME_1'(s(X5,'const.option.option_CASE_3'(s('type.option.option'(X6),X7),s(X5,X8),s(fun(X6,X5),X9))))) | s(X5,X10) = s(X5,happ(s(fun(fun(X6,X5),X5),happ(s(fun(X5,fun(fun(X6,X5),X5)),happ(s(fun('type.option.option'(X6),fun(X5,fun(fun(X6,X5),X5))),'const.option.option_CASE_0'),s('type.option.option'(X6),X7))),s(X5,X8))),s(fun(X6,X5),X9)))) )),
+  inference(superposition,[],[f174,f186])).
+fof(f1581,plain,(
+  ( ! [X6,X8,X7,X5] : (s(bool,'F_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X5),X6),s(bool,X7),s(fun(X5,bool),X8))) | s(bool,'T_0') = s(bool,happ(s(fun(fun(X5,bool),bool),happ(s(fun(bool,fun(fun(X5,bool),bool)),happ(s(fun('type.option.option'(X5),fun(bool,fun(fun(X5,bool),bool))),'const.option.option_CASE_0'),s('type.option.option'(X5),X6))),s(bool,X7))),s(fun(X5,bool),X8)))) )),
+  inference(superposition,[],[f186,f126])).
+fof(f1552,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'F_0') != s(bool,f(s(X0,sK6(X1,X2,bool,X0)))) | s(fun(X0,bool),X1) = s(fun(X0,bool),X2) | s(bool,'T_0') = s(bool,g(s(X0,sK6(X1,X2,bool,X0))))) )),
+  inference(superposition,[],[f184,f126])).
+fof(f1551,plain,(
+  ( ! [X2,X0,X1] : (s(X2,f(s(bool,'F_0'))) != s(X2,g(s(bool,'F_0'))) | s(fun(bool,X2),X0) = s(fun(bool,X2),X1) | s(bool,'T_0') = s(bool,sK6(X0,X1,X2,bool))) )),
+  inference(superposition,[],[f184,f126])).
+fof(f1492,plain,(
+  ( ! [X24,X23,X21,X22] : (~p(s(bool,happ(s(fun('type.option.option'(X21),bool),X23),s('type.option.option'(X21),X22)))) | p(s(bool,happ(s(fun('type.option.option'(X21),bool),X23),s('type.option.option'(X21),X24)))) | s('type.option.option'(X21),X24) != s('type.option.option'(X21),'const.option.SOME_1'(s(X21,sK4(X22,X21)))) | s('type.option.option'(X21),'const.option.NONE_0') = s('type.option.option'(X21),X22)) )),
+  inference(superposition,[],[f176,f166])).
+fof(f1490,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,happ(s(fun(bool,bool),X17),s(bool,X16)))) | p(s(bool,happ(s(fun(bool,bool),X17),s(bool,X18)))) | s(bool,'F_0') != s(bool,X18) | s(bool,'T_0') = s(bool,X16)) )),
+  inference(superposition,[],[f176,f126])).
+fof(f1489,plain,(
+  ( ! [X14,X15,X13] : (~p(s(bool,happ(s(fun(bool,bool),X14),s(bool,'F_0')))) | p(s(bool,happ(s(fun(bool,bool),X14),s(bool,X15)))) | s(bool,X13) != s(bool,X15) | s(bool,'T_0') = s(bool,X13)) )),
+  inference(superposition,[],[f176,f126])).
+fof(f1370,plain,(
+  ( ! [X107,X105,X108,X106] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,happ(s(fun(X105,sK0),X108),s(X105,X106))))) | s(sK0,sK3) = s(sK0,'const.option.option_CASE_3'(s('type.option.option'(X105),'const.option.SOME_1'(s(X105,X106))),s(sK0,X107),s(fun(X105,sK0),X108)))) ) | $spl8),
+  inference(superposition,[],[f512,f185])).
+fof(f1367,plain,(
+  ( ! [X92,X90,X88,X93,X91,X89] : (~p(s(bool,happ(s(fun(X88,bool),happ(s(fun(X89,fun(X88,bool)),X92),s(X89,X90))),s(X88,X93)))) | s(X88,X93) = s(X88,sK5(X93,'const.option.option_CASE_3'(s('type.option.option'(X89),'const.option.SOME_1'(s(X89,X90))),s(fun(X88,bool),X91),s(fun(X89,fun(X88,bool)),X92)),X88))) )),
+  inference(superposition,[],[f177,f185])).
+fof(f1382,plain,(
+  ( ! [X87,X85,X83,X86,X84,X82] : (~p(s(bool,happ(s(fun(X82,bool),happ(s(fun(X83,fun(X82,bool)),X86),s(X83,X84))),s(X82,X87)))) | p(s(bool,happ(s(fun(X82,bool),happ(s(fun(X83,fun(X82,bool)),X86),s(X83,X84))),s(X82,sK5(X87,'const.option.option_CASE_3'(s('type.option.option'(X83),'const.option.SOME_1'(s(X83,X84))),s(fun(X82,bool),X85),s(fun(X83,fun(X82,bool)),X86)),X82)))))) )),
+  inference(forward_demodulation,[],[f1366,f185])).
+fof(f1366,plain,(
+  ( ! [X87,X85,X83,X86,X84,X82] : (p(s(bool,happ(s(fun(X82,bool),happ(s(fun(X83,fun(X82,bool)),X86),s(X83,X84))),s(X82,sK5(X87,'const.option.option_CASE_3'(s('type.option.option'(X83),'const.option.SOME_1'(s(X83,X84))),s(fun(X82,bool),X85),s(fun(X83,fun(X82,bool)),X86)),X82))))) | ~p(s(bool,happ(s(fun(X82,bool),'const.option.option_CASE_3'(s('type.option.option'(X83),'const.option.SOME_1'(s(X83,X84))),s(fun(X82,bool),X85),s(fun(X83,fun(X82,bool)),X86))),s(X82,X87))))) )),
+  inference(superposition,[],[f178,f185])).
+fof(f1373,plain,(
+  ( ! [X30,X33,X31,X29,X34,X32] : (s(X29,happ(s(fun(X30,X29),X33),s(X30,X31))) = s(X29,sK5('const.option.option_CASE_3'(s('type.option.option'(X30),'const.option.SOME_1'(s(X30,X31))),s(X29,X32),s(fun(X30,X29),X33)),X34,X29)) | ~p(s(bool,happ(s(fun(X29,bool),X34),s(X29,happ(s(fun(X30,X29),X33),s(X30,X31))))))) )),
+  inference(forward_demodulation,[],[f1355,f185])).
+fof(f1355,plain,(
+  ( ! [X30,X33,X31,X29,X34,X32] : (~p(s(bool,happ(s(fun(X29,bool),X34),s(X29,happ(s(fun(X30,X29),X33),s(X30,X31)))))) | s(X29,'const.option.option_CASE_3'(s('type.option.option'(X30),'const.option.SOME_1'(s(X30,X31))),s(X29,X32),s(fun(X30,X29),X33))) = s(X29,sK5('const.option.option_CASE_3'(s('type.option.option'(X30),'const.option.SOME_1'(s(X30,X31))),s(X29,X32),s(fun(X30,X29),X33)),X34,X29))) )),
+  inference(superposition,[],[f177,f185])).
+fof(f1351,plain,(
+  ( ! [X6,X10,X8,X7,X5,X9] : (s('type.option.option'(X5),'const.option.SOME_1'(s(X5,X10))) != s('type.option.option'(X5),'const.option.SOME_1'(s(X5,happ(s(fun(X6,X5),X9),s(X6,X7))))) | s(X5,X10) = s(X5,'const.option.option_CASE_3'(s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X7))),s(X5,X8),s(fun(X6,X5),X9)))) )),
+  inference(superposition,[],[f174,f185])).
+fof(f1349,plain,(
+  ( ! [X6,X8,X7,X5] : (s(bool,'F_0') = s(bool,happ(s(fun(X5,bool),X8),s(X5,X6))) | s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X5),'const.option.SOME_1'(s(X5,X6))),s(bool,X7),s(fun(X5,bool),X8)))) )),
+  inference(superposition,[],[f185,f126])).
+fof(f1338,plain,(
+  ( ! [X6,X4,X7,X5,X3] : (s(X5,happ(s(fun(X3,X5),X6),s(X3,sK4(X4,X3)))) = s(X5,'const.option.option_CASE_3'(s('type.option.option'(X3),X4),s(X5,X7),s(fun(X3,X5),X6))) | s('type.option.option'(X3),'const.option.NONE_0') = s('type.option.option'(X3),X4)) )),
+  inference(superposition,[],[f185,f166])).
+fof(f1337,plain,(
+  ( ! [X2,X0,X1] : (s(X0,happ(s(fun(sK0,X0),X1),s(sK0,sK3))) = s(X0,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(X0,X2),s(fun(sK0,X0),X1)))) ) | $spl8),
+  inference(superposition,[],[f185,f198])).
+fof(f1326,plain,(
+  ( ! [X8] : (s(bool,'F_0') = s(bool,sK5(happ(s(fun(sK0,bool),sK2),s(sK0,sK3)),X8,bool)) | ~p(s(bool,happ(s(fun(bool,bool),X8),s(bool,'F_0'))))) ) | ($spl2 | $spl8)),
+  inference(forward_demodulation,[],[f1316,f1295])).
+fof(f1316,plain,(
+  ( ! [X8] : (~p(s(bool,happ(s(fun(bool,bool),X8),s(bool,'F_0')))) | s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) = s(bool,sK5(happ(s(fun(sK0,bool),sK2),s(sK0,sK3)),X8,bool))) ) | ($spl2 | $spl8)),
+  inference(superposition,[],[f177,f1295])).
+fof(f1312,plain,(
+  ( ! [X4] : (s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0'))) != s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X4))) | s(bool,X4) = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) ) | ($spl2 | $spl8)),
+  inference(superposition,[],[f174,f1295])).
+fof(f1323,plain,(
+  ( ! [X3] : (s(bool,X3) = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | s(bool,'T_0') = s(bool,X3)) ) | ($spl2 | $spl8)),
+  inference(subsumption_resolution,[],[f1310,f125])).
+fof(f1310,plain,(
+  ( ! [X3] : (p(s(bool,'F_0')) | s(bool,X3) = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | s(bool,'T_0') = s(bool,X3)) ) | ($spl2 | $spl8)),
+  inference(superposition,[],[f274,f1295])).
+fof(f1295,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | ($spl2 | $spl8)),
+  inference(unit_resulting_resolution,[],[f1281,f133])).
+fof(f1296,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | ($spl2 | $spl8)),
+  inference(unit_resulting_resolution,[],[f1281,f128])).
+fof(f1285,plain,(
+  ( ! [X0] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),X0) | ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK4(X0,sK0))))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X0)) ) | $spl2),
+  inference(superposition,[],[f192,f166])).
+fof(f1281,plain,(
+  ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) | ($spl2 | $spl8)),
+  inference(unit_resulting_resolution,[],[f198,f192])).
+fof(f493,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) != s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0')))),
+  inference(unit_resulting_resolution,[],[f202,f174])).
+fof(f516,plain,(
+  ( ! [X8,X7] : (s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0'))) != s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X8))) | s(bool,X7) = s(bool,X8) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(superposition,[],[f174,f126])).
+fof(f621,plain,(
+  ( ! [X8,X7] : (~p(s(bool,happ(s(fun(bool,bool),X8),s(bool,'F_0')))) | s(bool,X7) = s(bool,sK5(X7,X8,bool)) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(superposition,[],[f177,f126])).
+fof(f765,plain,(
+  ( ! [X5] : (s('type.option.option'(bool),X5) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0'))) | s('type.option.option'(bool),'const.option.NONE_0') = s('type.option.option'(bool),X5) | s(bool,'T_0') = s(bool,sK4(X5,bool))) )),
+  inference(superposition,[],[f166,f126])).
+fof(f830,plain,(
+  ( ! [X8,X9] : (p(s(bool,happ(s(fun(bool,bool),X9),s(bool,'F_0')))) | ~p(s(bool,happ(s(fun(bool,bool),X9),s(bool,X8)))) | s(bool,'T_0') = s(bool,sK5(X8,X9,bool))) )),
+  inference(superposition,[],[f178,f126])).
+fof(f1271,plain,(
+  ( ! [X12,X13,X11] : (~p(s(bool,happ(s(fun(X11,bool),X12),s(X11,X13)))) | s(bool,'T_0') = s(bool,happ(s(fun(X11,bool),X12),s(X11,sK5(X13,X12,X11))))) )),
+  inference(subsumption_resolution,[],[f835,f125])).
+fof(f835,plain,(
+  ( ! [X12,X13,X11] : (p(s(bool,'F_0')) | ~p(s(bool,happ(s(fun(X11,bool),X12),s(X11,X13)))) | s(bool,'T_0') = s(bool,happ(s(fun(X11,bool),X12),s(X11,sK5(X13,X12,X11))))) )),
+  inference(superposition,[],[f178,f126])).
+fof(f836,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),X2),s(X0,sK5(X4,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.NONE_0'),s(fun(X0,bool),X2),s(fun(X1,fun(X0,bool)),X3)),X0)))))) )),
+  inference(forward_demodulation,[],[f826,f183])).
+fof(f826,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,happ(s(fun(X0,bool),X2),s(X0,sK5(X4,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.NONE_0'),s(fun(X0,bool),X2),s(fun(X1,fun(X0,bool)),X3)),X0))))) | ~p(s(bool,happ(s(fun(X0,bool),'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.NONE_0'),s(fun(X0,bool),X2),s(fun(X1,fun(X0,bool)),X3))),s(X0,X4))))) )),
+  inference(superposition,[],[f178,f183])).
+fof(f825,plain,(
+  ( ! [X4] : (s(sK0,sK3) = s(sK0,sK5(sK4(sK1,sK0),X4,sK0)) | ~p(s(bool,happ(s(fun(sK0,bool),X4),s(sK0,sK3))))) ) | $spl8),
+  inference(forward_demodulation,[],[f817,f780])).
+fof(f817,plain,(
+  ( ! [X4] : (~p(s(bool,happ(s(fun(sK0,bool),X4),s(sK0,sK3)))) | s(sK0,sK4(sK1,sK0)) = s(sK0,sK5(sK4(sK1,sK0),X4,sK0))) ) | $spl8),
+  inference(superposition,[],[f177,f780])).
+fof(f780,plain,(
+  s(sK0,sK3) = s(sK0,sK4(sK1,sK0)) | $spl8),
+  inference(unit_resulting_resolution,[],[f760,f512])).
+fof(f775,plain,(
+  ( ! [X24,X23,X25] : (~p(s(bool,happ(s(fun('type.option.option'(X23),bool),X25),s('type.option.option'(X23),X24)))) | s('type.option.option'(X23),'const.option.SOME_1'(s(X23,sK4(X24,X23)))) = s('type.option.option'(X23),sK5('const.option.SOME_1'(s(X23,sK4(X24,X23))),X25,'type.option.option'(X23))) | s('type.option.option'(X23),'const.option.NONE_0') = s('type.option.option'(X23),X24)) )),
+  inference(superposition,[],[f177,f166])).
+fof(f773,plain,(
+  ( ! [X19,X17,X18] : (s('type.option.option'(X17),X18) != s('type.option.option'(X17),X19) | s('type.option.option'('type.option.option'(X17)),'const.option.SOME_1'(s('type.option.option'(X17),X19))) = s('type.option.option'('type.option.option'(X17)),'const.option.SOME_1'(s('type.option.option'(X17),'const.option.SOME_1'(s(X17,sK4(X18,X17)))))) | s('type.option.option'(X17),'const.option.NONE_0') = s('type.option.option'(X17),X18)) )),
+  inference(superposition,[],[f175,f166])).
+fof(f771,plain,(
+  ( ! [X12,X13,X11] : (s('type.option.option'('type.option.option'(X11)),'const.option.SOME_1'(s('type.option.option'(X11),X12))) != s('type.option.option'('type.option.option'(X11)),'const.option.SOME_1'(s('type.option.option'(X11),X13))) | s('type.option.option'(X11),X13) = s('type.option.option'(X11),'const.option.SOME_1'(s(X11,sK4(X12,X11)))) | s('type.option.option'(X11),'const.option.NONE_0') = s('type.option.option'(X11),X12)) )),
+  inference(superposition,[],[f174,f166])).
+fof(f769,plain,(
+  ( ! [X8] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),X8) | s(sK0,sK3) = s(sK0,sK4(X8,sK0)) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),X8)) ) | $spl8),
+  inference(superposition,[],[f512,f166])).
+fof(f766,plain,(
+  ( ! [X2,X0,X1] : (s('type.option.option'(X0),X1) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) | s(X0,X2) = s(X0,sK4(X1,X0)) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) )),
+  inference(superposition,[],[f174,f166])).
+fof(f759,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK4('const.option.SOME_1'(s(X0,X1)),X0))))) )),
+  inference(unit_resulting_resolution,[],[f171,f166])).
+fof(f760,plain,(
+  s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK4(sK1,sK0)))) | $spl8),
+  inference(unit_resulting_resolution,[],[f235,f166])).
+fof(f664,plain,(
+  ( ! [X4] : (s(sK0,sK3) = s(sK0,sK5(sK5(sK3,sK2,sK0),X4,sK0)) | ~p(s(bool,happ(s(fun(sK0,bool),X4),s(sK0,sK3))))) ) | $spl6),
+  inference(forward_demodulation,[],[f656,f645])).
+fof(f656,plain,(
+  ( ! [X4] : (~p(s(bool,happ(s(fun(sK0,bool),X4),s(sK0,sK3)))) | s(sK0,sK5(sK3,sK2,sK0)) = s(sK0,sK5(sK5(sK3,sK2,sK0),X4,sK0))) ) | $spl6),
+  inference(superposition,[],[f177,f645])).
+fof(f645,plain,(
+  s(sK0,sK3) = s(sK0,sK5(sK3,sK2,sK0)) | $spl6),
+  inference(subsumption_resolution,[],[f629,f123])).
+fof(f629,plain,(
+  ~p(s(bool,'T_0')) | s(sK0,sK3) = s(sK0,sK5(sK3,sK2,sK0)) | $spl6),
+  inference(superposition,[],[f177,f206])).
+fof(f644,plain,(
+  ( ! [X26,X24,X23,X27,X25] : (s(X23,X25) = s(X23,sK5('const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(X23,X25),s(fun(X24,X23),X26)),X27,X23)) | ~p(s(bool,happ(s(fun(X23,bool),X27),s(X23,X25))))) )),
+  inference(forward_demodulation,[],[f628,f183])).
+fof(f628,plain,(
+  ( ! [X26,X24,X23,X27,X25] : (~p(s(bool,happ(s(fun(X23,bool),X27),s(X23,X25)))) | s(X23,'const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(X23,X25),s(fun(X24,X23),X26))) = s(X23,sK5('const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(X23,X25),s(fun(X24,X23),X26)),X27,X23))) )),
+  inference(superposition,[],[f177,f183])).
+fof(f643,plain,(
+  ( ! [X22] : (s(bool,'T_0') = s(bool,sK5(happ(s(fun(sK0,bool),sK2),s(sK0,sK3)),X22,bool)) | ~p(s(bool,happ(s(fun(bool,bool),X22),s(bool,'T_0'))))) ) | $spl6),
+  inference(forward_demodulation,[],[f627,f206])).
+fof(f627,plain,(
+  ( ! [X22] : (~p(s(bool,happ(s(fun(bool,bool),X22),s(bool,'T_0')))) | s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) = s(bool,sK5(happ(s(fun(sK0,bool),sK2),s(sK0,sK3)),X22,bool))) ) | $spl6),
+  inference(superposition,[],[f177,f206])).
+fof(f622,plain,(
+  ( ! [X10,X9] : (~p(s(bool,happ(s(fun(bool,bool),X10),s(bool,X9)))) | s(bool,'F_0') = s(bool,sK5('F_0',X10,bool)) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(superposition,[],[f177,f126])).
+fof(f633,plain,(
+  ( ! [X0] : (s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),sK5('const.option.SOME_1'(s(sK0,sK3)),X0,'type.option.option'(sK0))) | ~p(s(bool,happ(s(fun('type.option.option'(sK0),bool),X0),s('type.option.option'(sK0),sK1))))) ) | $spl8),
+  inference(forward_demodulation,[],[f618,f198])).
+fof(f618,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun('type.option.option'(sK0),bool),X0),s('type.option.option'(sK0),sK1)))) | s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK3))) = s('type.option.option'(sK0),sK5('const.option.SOME_1'(s(sK0,sK3)),X0,'type.option.option'(sK0)))) ) | $spl8),
+  inference(superposition,[],[f177,f198])).
+fof(f617,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4)))) | s(X0,X4) = s(X0,sK5(X4,'const.option.option_CASE_3'(s('type.option.option'(X1),'const.option.NONE_0'),s(fun(X0,bool),X2),s(fun(X1,fun(X0,bool)),X3)),X0))) )),
+  inference(superposition,[],[f177,f183])).
+fof(f616,plain,(
+  s('type.option.option'('type.option.option'('type.option.option'(sK0))),'const.option.SOME_1'(s('type.option.option'('type.option.option'(sK0)),'const.option.SOME_1'(s('type.option.option'(sK0),'const.option.NONE_0'))))) != s('type.option.option'('type.option.option'('type.option.option'(sK0))),'const.option.SOME_1'(s('type.option.option'('type.option.option'(sK0)),'const.option.SOME_1'(s('type.option.option'(sK0),sK1))))) | $spl8),
+  inference(unit_resulting_resolution,[],[f500,f174])).
+fof(f611,plain,(
+  ( ! [X2,X0,X1] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X1))) | s(sK0,sK3) = s(sK0,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(sK0,X1),s(fun(X0,sK0),X2)))) ) | $spl8),
+  inference(superposition,[],[f512,f183])).
+fof(f577,plain,(
+  ( ! [X10,X9] : (s(bool,X9) != s(bool,X10) | s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X10))) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(superposition,[],[f175,f126])).
+fof(f576,plain,(
+  ( ! [X8,X7] : (s(bool,'F_0') != s(bool,X8) | s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X7))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X8))) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(superposition,[],[f175,f126])).
+fof(f512,plain,(
+  ( ! [X0] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X0))) | s(sK0,sK3) = s(sK0,X0)) ) | $spl8),
+  inference(superposition,[],[f174,f198])).
+fof(f511,plain,(
+  ( ! [X26,X24,X23,X27,X25] : (s('type.option.option'(X23),'const.option.SOME_1'(s(X23,X25))) != s('type.option.option'(X23),'const.option.SOME_1'(s(X23,X27))) | s(X23,X27) = s(X23,'const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(X23,X25),s(fun(X24,X23),X26)))) )),
+  inference(superposition,[],[f174,f183])).
+fof(f510,plain,(
+  ( ! [X22] : (s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) != s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X22))) | s(bool,X22) = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) ) | $spl6),
+  inference(superposition,[],[f174,f206])).
+fof(f505,plain,(
+  ( ! [X10,X9] : (s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X9))) != s('type.option.option'(bool),'const.option.SOME_1'(s(bool,X10))) | s(bool,'F_0') = s(bool,X10) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(superposition,[],[f174,f126])).
+fof(f499,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.option.option'(X0)),'const.option.SOME_1'(s('type.option.option'(X0),'const.option.NONE_0'))) != s('type.option.option'('type.option.option'(X0)),'const.option.SOME_1'(s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))))) )),
+  inference(unit_resulting_resolution,[],[f171,f174])).
+fof(f500,plain,(
+  s('type.option.option'('type.option.option'(sK0)),'const.option.SOME_1'(s('type.option.option'(sK0),'const.option.NONE_0'))) != s('type.option.option'('type.option.option'(sK0)),'const.option.SOME_1'(s('type.option.option'(sK0),sK1))) | $spl8),
+  inference(unit_resulting_resolution,[],[f235,f174])).
+fof(f314,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'F_0') = s(bool,X1) | s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(bool,X1),s(fun(X0,bool),X2)))) )),
+  inference(superposition,[],[f183,f126])).
+fof(f274,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(subsumption_resolution,[],[f266,f125])).
+fof(f266,plain,(
+  ( ! [X0,X1] : (p(s(bool,'F_0')) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f179,f126])).
+fof(f239,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f126,f126])).
+fof(f235,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) | $spl8),
+  inference(superposition,[],[f171,f198])).
+fof(f206,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | $spl6),
+  inference(unit_resulting_resolution,[],[f196,f129])).
+fof(f202,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(unit_resulting_resolution,[],[f125,f128])).
+fof(f186,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),X2),s(X1,X3),s(fun(X0,X1),X4))) = s(X1,happ(s(fun(fun(X0,X1),X1),happ(s(fun(X1,fun(fun(X0,X1),X1)),happ(s(fun('type.option.option'(X0),fun(X1,fun(fun(X0,X1),X1))),'const.option.option_CASE_0'),s('type.option.option'(X0),X2))),s(X1,X3))),s(fun(X0,X1),X4)))) )),
+  inference(cnf_transformation,[],[f75])).
+fof(f75,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),X2),s(X1,X3),s(fun(X0,X1),X4))) = s(X1,happ(s(fun(fun(X0,X1),X1),happ(s(fun(X1,fun(fun(X0,X1),X1)),happ(s(fun('type.option.option'(X0),fun(X1,fun(fun(X0,X1),X1))),'const.option.option_CASE_0'),s('type.option.option'(X0),X2))),s(X1,X3))),s(fun(X0,X1),X4)))),
+  inference(flattening,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),X2),s(X1,X3),s(fun(X0,X1),X4))) = s(X1,happ(s(fun(fun(X0,X1),X1),happ(s(fun(X1,fun(fun(X0,X1),X1)),happ(s(fun('type.option.option'(X0),fun(X1,fun(fun(X0,X1),X1))),'const.option.option_CASE_0'),s('type.option.option'(X0),X2))),s(X1,X3))),s(fun(X0,X1),X4)))),
+  inference(rectify,[],[f33])).
+fof(f33,axiom,(
+  ! [X6,X16] : ! [X18,X19,X20] : s(X16,'const.option.option_CASE_3'(s('type.option.option'(X6),X18),s(X16,X19),s(fun(X6,X16),X20))) = s(X16,happ(s(fun(fun(X6,X16),X16),happ(s(fun(X16,fun(fun(X6,X16),X16)),happ(s(fun('type.option.option'(X6),fun(X16,fun(fun(X6,X16),X16))),'const.option.option_CASE_0'),s('type.option.option'(X6),X18))),s(X16,X19))),s(fun(X6,X16),X20)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','ARITY_0_3_const.option.option_CASE')).
+fof(f184,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,f(s(X0,sK6(X3,X2,X1,X0)))) != s(X1,g(s(X0,sK6(X3,X2,X1,X0)))) | s(fun(X0,X1),X2) = s(fun(X0,X1),X3)) )),
+  inference(cnf_transformation,[],[f118])).
+fof(f118,plain,(
+  ! [X0,X1,X2,X3] : (s(X1,f(s(X0,sK6(X3,X2,X1,X0)))) != s(X1,g(s(X0,sK6(X3,X2,X1,X0)))) | s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK6])],[f80])).
+fof(f80,plain,(
+  ! [X0,X1,X2,X3] : (? [X4] : s(X1,f(s(X0,X4))) != s(X1,g(s(X0,X4))) | s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1,X2,X3] : (! [X4] : s(X1,f(s(X0,X4))) = s(X1,g(s(X0,X4))) => s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1] : ! [X2,X3] : (! [X4] : s(X1,f(s(X0,X4))) = s(X1,g(s(X0,X4))) => s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(rectify,[],[f4])).
+fof(f4,axiom,(
+  ! [X1,X2] : ! [X3,X4] : (! [X5] : s(X2,f(s(X1,X5))) = s(X2,g(s(X1,X5))) => s(fun(X1,X2),X3) = s(fun(X1,X2),X4))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T',aHL_EXT)).
+fof(f183,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(X1,X2),s(fun(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(X1,X2),s(fun(X0,X1),X3)))),
+  inference(flattening,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.option.option_CASE_3'(s('type.option.option'(X0),'const.option.NONE_0'),s(X1,X2),s(fun(X0,X1),X3)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X6,X16] : ! [X17,X8] : s(X16,X17) = s(X16,'const.option.option_CASE_3'(s('type.option.option'(X6),'const.option.NONE_0'),s(X16,X17),s(fun(X6,X16),X8)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.option.option_case_def|split|0')).
+fof(f179,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f78])).
+fof(f78,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X10,X11] : ((p(s(bool,X10)) => p(s(bool,X11))) => ((p(s(bool,X11)) => p(s(bool,X10))) => s(bool,X10) = s(bool,X11)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.bool.IMP_ANTISYM_AX')).
+fof(f182,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f79])).
+fof(f176,plain,(
+  ( ! [X4,X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(X0,X2) != s(X0,X4)) )),
+  inference(cnf_transformation,[],[f117])).
+fof(f178,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK5(X2,X1,X0))))) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) )),
+  inference(cnf_transformation,[],[f117])).
+fof(f175,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) != s(X0,X2) | s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1))) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f114])).
+fof(f171,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f60])).
+fof(f60,plain,(
+  ! [X0,X1] : s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))),
+  inference(flattening,[],[f59])).
+fof(f59,plain,(
+  ! [X0] : ! [X1] : ~s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X1)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X6] : ! [X7] : ~s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X7)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.option.NOT_NONE_SOME')).
+fof(f132,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f87])).
+fof(f87,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X12] : (s(bool,'F_0') = s(bool,X12) <=> ~p(s(bool,X12)))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.bool.EQ_CLAUSES|split|3')).
+fof(f133,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f87])).
+fof(f128,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f85])).
+fof(f126,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T',aHL_BOOL_CASES)).
+fof(f125,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f36])).
+fof(f36,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T',aHL_FALSITY)).
+fof(f1807,plain,(
+  $false | ($spl2 | $spl6 | $spl8)),
+  inference(global_subsumption,[],[f122,f121,f120,f119,f123,f125,f126,f129,f128,f133,f132,f166,f171,f175,f174,f178,f177,f176,f182,f179,f183,f184,f185,f186,f196,f202,f206,f235,f239,f274,f314,f500,f499,f505,f510,f511,f512,f576,f577,f611,f616,f617,f633,f622,f643,f644,f645,f664,f760,f759,f766,f769,f771,f773,f775,f780,f825,f836,f1271,f830,f765,f621,f516,f493,f192,f1281,f1285,f1296,f1295,f1323,f1312,f1326,f1337,f1338,f1349,f1351,f1373,f1382,f1367,f1370,f1489,f1490,f1492,f1551,f1552,f1581,f1583,f1614,f1615,f1593,f1616,f1626,f1606,f198])).
+fof(f1806,plain,(
+  $false | ($spl2 | $spl6 | $spl8 | $spl10)),
+  inference(global_subsumption,[],[f1266,f122,f121,f120,f119,f123,f125,f126,f129,f128,f133,f132,f166,f171,f175,f174,f178,f177,f176,f182,f179,f183,f184,f185,f186,f198,f196,f202,f206,f235,f239,f274,f314,f500,f499,f505,f510,f511,f512,f576,f577,f611,f616,f617,f633,f622,f643,f644,f645,f664,f760,f759,f766,f769,f771,f773,f775,f780,f825,f836,f1271,f830,f765,f621,f516,f493,f192,f1281,f1285,f1296,f1295,f1323,f1312,f1326,f1337,f1338,f1349,f1351,f1373,f1382,f1367,f1370,f1489,f1490,f1492,f1551,f1552,f1581,f1583,f1614,f1615,f1593,f1616,f1626,f1606])).
+fof(f1793,plain,(
+  $false | ($spl0 | $spl2 | $spl5)),
+  inference(subsumption_resolution,[],[f1767,f1482])).
+fof(f1482,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK4(sK1,sK0)))) | ($spl2 | $spl5)),
+  inference(unit_resulting_resolution,[],[f1453,f128])).
+fof(f1453,plain,(
+  ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK4(sK1,sK0))))) | ($spl2 | $spl5)),
+  inference(unit_resulting_resolution,[],[f1450,f192])).
+fof(f1767,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK4(sK1,sK0)))) | ($spl0 | $spl5)),
+  inference(superposition,[],[f1277,f1457])).
+fof(f1277,plain,(
+  s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | $spl0),
+  inference(unit_resulting_resolution,[],[f190,f129])).
+fof(f1787,plain,(
+  $false | ($spl0 | $spl2 | $spl5)),
+  inference(subsumption_resolution,[],[f1753,f1482])).
+fof(f1753,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK4(sK1,sK0)))) | ($spl0 | $spl5)),
+  inference(superposition,[],[f1457,f1277])).
+fof(f1434,plain,(
+  $false | ($spl0 | $spl2 | $spl8)),
+  inference(subsumption_resolution,[],[f1433,f125])).
+fof(f1433,plain,(
+  p(s(bool,'F_0')) | ($spl0 | $spl2 | $spl8)),
+  inference(forward_demodulation,[],[f1432,f1295])).
+fof(f1432,plain,(
+  p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) | ($spl0 | $spl8)),
+  inference(forward_demodulation,[],[f1422,f1337])).
+fof(f1422,plain,(
+  p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | $spl0),
+  inference(trivial_inequality_removal,[],[f1405])).
+fof(f1405,plain,(
+  s(bool,'T_0') != s(bool,'T_0') | p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | $spl0),
+  inference(superposition,[],[f128,f1277])).
+fof(f1431,plain,(
+  $false | ($spl0 | $spl2 | $spl8)),
+  inference(subsumption_resolution,[],[f1430,f125])).
+fof(f1430,plain,(
+  p(s(bool,'F_0')) | ($spl0 | $spl2 | $spl8)),
+  inference(forward_demodulation,[],[f1429,f1295])).
+fof(f1429,plain,(
+  p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) | ($spl0 | $spl8)),
+  inference(forward_demodulation,[],[f1400,f1337])).
+fof(f1400,plain,(
+  p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | $spl0),
+  inference(unit_resulting_resolution,[],[f1277,f128])).
+fof(f1428,plain,(
+  $false | ($spl0 | $spl2 | $spl8)),
+  inference(subsumption_resolution,[],[f1427,f493])).
+fof(f1427,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0'))) | ($spl0 | $spl2 | $spl8)),
+  inference(forward_demodulation,[],[f1426,f1295])).
+fof(f1426,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))))) | ($spl0 | $spl8)),
+  inference(forward_demodulation,[],[f1401,f1337])).
+fof(f1401,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))))) | $spl0),
+  inference(unit_resulting_resolution,[],[f1277,f175])).
+fof(f1425,plain,(
+  $false | ($spl0 | $spl2 | $spl8)),
+  inference(subsumption_resolution,[],[f1424,f493])).
+fof(f1424,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'F_0'))) | ($spl0 | $spl2 | $spl8)),
+  inference(forward_demodulation,[],[f1423,f1295])).
+fof(f1423,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))))) | ($spl0 | $spl8)),
+  inference(forward_demodulation,[],[f1402,f1337])).
+fof(f1402,plain,(
+  s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'T_0'))) = s('type.option.option'(bool),'const.option.SOME_1'(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))))) | $spl0),
+  inference(unit_resulting_resolution,[],[f1277,f175])).
+fof(f1266,plain,(
+  ( ! [X26,X23] : (s(bool,X23) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,'F_0') = s(bool,X26) | s(bool,X23) = s(bool,X26)) ) | $spl10),
+  inference(cnf_transformation,[],[f1266_D])).
+fof(f1266_D,plain,(
+  ( ! [X26,X23] : (s(bool,X23) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,'F_0') = s(bool,X26) | s(bool,X23) = s(bool,X26)) ) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f1267,plain,(
+  ( ! [X24,X25] : (s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(bool,'F_0'),s(fun(X24,bool),X25)))) ) | $spl12),
+  inference(cnf_transformation,[],[f1267_D])).
+fof(f1267_D,plain,(
+  ( ! [X24,X25] : (s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(bool,'F_0'),s(fun(X24,bool),X25)))) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f1096,plain,(
+  ( ! [X26,X24,X23,X25] : (s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(bool,'F_0'),s(fun(X24,bool),X25))) | s(bool,X23) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,X23) = s(bool,X26) | s(bool,'F_0') = s(bool,X26)) ) | ($spl1 | $spl6)),
+  inference(superposition,[],[f339,f674])).
+fof(f674,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'F_0') = s(bool,X1) | s(bool,'F_0') = s(bool,X0)) ) | ($spl1 | $spl6)),
+  inference(superposition,[],[f561,f561])).
+fof(f561,plain,(
+  ( ! [X21] : (s(bool,X21) = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | s(bool,'F_0') = s(bool,X21)) ) | ($spl1 | $spl6)),
+  inference(subsumption_resolution,[],[f551,f123])).
+fof(f551,plain,(
+  ( ! [X21] : (~p(s(bool,'T_0')) | s(bool,X21) = s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3))) | s(bool,'F_0') = s(bool,X21)) ) | ($spl1 | $spl6)),
+  inference(superposition,[],[f492,f206])).
+fof(f492,plain,(
+  ( ! [X26,X24] : (~p(s(bool,X26)) | s(bool,X24) = s(bool,X26) | s(bool,'F_0') = s(bool,X24)) ) | $spl1),
+  inference(forward_demodulation,[],[f491,f221])).
+fof(f221,plain,(
+  s(bool,'F_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | $spl1),
+  inference(unit_resulting_resolution,[],[f191,f133])).
+fof(f491,plain,(
+  ( ! [X26,X24] : (s(bool,X24) = s(bool,X26) | ~p(s(bool,X26)) | s(bool,X24) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) ) | $spl1),
+  inference(forward_demodulation,[],[f490,f183])).
+fof(f490,plain,(
+  ( ! [X26,X24,X23,X25] : (~p(s(bool,X26)) | s(bool,X26) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X23),'const.option.NONE_0'),s(bool,X24),s(fun(X23,bool),X25))) | s(bool,X24) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) ) | $spl1),
+  inference(subsumption_resolution,[],[f450,f123])).
+fof(f450,plain,(
+  ( ! [X26,X24,X23,X25] : (~p(s(bool,'T_0')) | ~p(s(bool,X26)) | s(bool,X26) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X23),'const.option.NONE_0'),s(bool,X24),s(fun(X23,bool),X25))) | s(bool,X24) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) ) | $spl1),
+  inference(superposition,[],[f182,f339])).
+fof(f339,plain,(
+  ( ! [X6,X4,X5] : (s(bool,X5) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X4),'const.option.NONE_0'),s(bool,X5),s(fun(X4,bool),X6)))) ) | $spl1),
+  inference(superposition,[],[f304,f183])).
+fof(f304,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,'T_0') = s(bool,X4)) ) | $spl1),
+  inference(subsumption_resolution,[],[f301,f125])).
+fof(f301,plain,(
+  ( ! [X4] : (p(s(bool,'F_0')) | s(bool,X4) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,'T_0') = s(bool,X4)) ) | $spl1),
+  inference(superposition,[],[f274,f221])).
+fof(f1040,plain,(
+  ( ! [X26,X24,X23,X25] : (s(bool,'T_0') = s(bool,'const.option.option_CASE_3'(s('type.option.option'(X24),'const.option.NONE_0'),s(bool,'F_0'),s(fun(X24,bool),X25))) | s(bool,X23) = s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))) | s(bool,X23) = s(bool,X26) | s(bool,'F_0') = s(bool,X26)) ) | ($spl1 | $spl6)),
+  inference(superposition,[],[f339,f674])).
+fof(f201,plain,(
+  $false | ($spl1 | $spl4)),
+  inference(subsumption_resolution,[],[f200,f123])).
+fof(f200,plain,(
+  ~p(s(bool,'T_0')) | ($spl1 | $spl4)),
+  inference(forward_demodulation,[],[f199,f183])).
+fof(f199,plain,(
+  ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),'const.option.NONE_0'),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | ($spl1 | $spl4)),
+  inference(forward_demodulation,[],[f191,f193])).
+fof(f190,plain,(
+  p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | $spl0),
+  inference(cnf_transformation,[],[f190_D])).
+fof(f190_D,plain,(
+  p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f193,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | $spl4),
+  inference(cnf_transformation,[],[f193_D])).
+fof(f193_D,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f198,plain,(
+  s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK3))) | $spl8),
+  inference(cnf_transformation,[],[f198_D])).
+fof(f198_D,plain,(
+  s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK3))) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f119,plain,(
+  s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK3))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))))),
+  inference(cnf_transformation,[],[f84])).
+fof(f84,plain,(
+  (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | (s('type.option.option'(sK0),sK1) = s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,sK3))) & p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))))) & (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | (s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) & ! [X3] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X3))) | ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X3)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f83])).
+fof(f83,plain,(
+  ? [X0,X1,X2] : ((p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X4] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X4))) & p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X4)))))) & (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) | (s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),X1) & ! [X3] : (s('type.option.option'(X0),X1) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) | ~p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3))))))))),
+  inference(rectify,[],[f82])).
+fof(f82,plain,(
+  ? [X0,X1,X2] : ((p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X3] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) & p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3)))))) & (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) | (s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),X1) & ! [X3] : (s('type.option.option'(X0),X1) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) | ~p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3))))))))),
+  inference(flattening,[],[f81])).
+fof(f81,plain,(
+  ? [X0,X1,X2] : ((p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) | (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X3] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) & p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3))))))) & (~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) | (s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),X1) & ! [X3] : (s('type.option.option'(X0),X1) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) | ~p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3))))))))),
+  inference(nnf_transformation,[],[f76])).
+fof(f76,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) <~> (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X3] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) & p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3)))))))),
+  inference(ennf_transformation,[],[f35])).
+fof(f35,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) <=> (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X3] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) & p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3)))))))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ~! [X0] : ! [X1,X2] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X0),X1),s(bool,'T_0'),s(fun(X0,bool),X2)))) <=> (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X3] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X3))) & p(s(bool,happ(s(fun(X0,bool),X2),s(X0,X3)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X6),X7),s(bool,'T_0'),s(fun(X6,bool),X8)))) <=> (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X7) | ? [X9] : (s('type.option.option'(X6),X7) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X9))) & p(s(bool,happ(s(fun(X6,bool),X8),s(X6,X9)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(X6),X7),s(bool,'T_0'),s(fun(X6,bool),X8)))) <=> (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X7) | ? [X9] : (s('type.option.option'(X6),X7) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X9))) & p(s(bool,happ(s(fun(X6,bool),X8),s(X6,X9)))))))),
+  file('thm.clos_mtiProof.option_CASE_NONE_T','thm.clos_mtiProof.option_CASE_NONE_T')).
+fof(f196,plain,(
+  p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) | $spl6),
+  inference(cnf_transformation,[],[f196_D])).
+fof(f196_D,plain,(
+  p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f120,plain,(
+  p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,sK3)))) | s('type.option.option'(sK0),'const.option.NONE_0') = s('type.option.option'(sK0),sK1) | p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))))),
+  inference(cnf_transformation,[],[f84])).
+fof(f191,plain,(
+  ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) | $spl1),
+  inference(cnf_transformation,[],[f191_D])).
+fof(f191_D,plain,(
+  ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2)))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f194,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) | $spl5),
+  inference(cnf_transformation,[],[f194_D])).
+fof(f194_D,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f121,plain,(
+  s('type.option.option'(sK0),'const.option.NONE_0') != s('type.option.option'(sK0),sK1) | ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))))),
+  inference(cnf_transformation,[],[f84])).
+fof(f192,plain,(
+  ( ! [X3] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X3))) | ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X3))))) ) | $spl2),
+  inference(cnf_transformation,[],[f192_D])).
+fof(f192_D,plain,(
+  ( ! [X3] : (s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X3))) | ~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X3))))) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f122,plain,(
+  ( ! [X3] : (~p(s(bool,happ(s(fun(sK0,bool),sK2),s(sK0,X3)))) | s('type.option.option'(sK0),sK1) != s('type.option.option'(sK0),'const.option.SOME_1'(s(sK0,X3))) | ~p(s(bool,'const.option.option_CASE_3'(s('type.option.option'(sK0),sK1),s(bool,'T_0'),s(fun(sK0,bool),sK2))))) )),
+  inference(cnf_transformation,[],[f84])).
+% SZS output end Proof for thm.clos_mtiProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 57
+% Passive clauses: 213
+% Generated clauses: 1751
+% Final active clauses: 25
+% Final passive clauses: 60
+% Input formulas: 32
+% Initial clauses: 68
+% 
+% Duplicate literals: 68
+% Trivial inequalities: 10
+% Fw subsumption resolutions: 74
+% Fw demodulations: 298
+% Bw demodulations: 22
+% Condensations: 63
+% Global subsumptions: 4
+% 
+% Simple tautologies: 55
+% Equational tautologies: 48
+% Forward subsumptions: 870
+% Fw demodulations to eq. taut.: 31
+% 
+% Unit resulting resolution: 159
+% Factoring: 1
+% Forward superposition: 276
+% Backward superposition: 596
+% Self superposition: 44
+% Equality factoring: 32
+% Equality resolution: 3
+% 
+% Split clauses: 6
+% Split components: 14
+% SAT solver clauses: 242
+% SAT solver unit clauses: 10
+% SAT solver binary clauses: 63
+% 
+% Sat splits: 6
+% Sat splitting refutations: 11
+% 
+% Memory used [KB]: 2174
+% Time elapsed: 0.064 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.43 s

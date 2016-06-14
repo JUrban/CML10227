@@ -1,0 +1,167 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.PairingHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.PairingHeap
+% SZS output start Proof for thm.PairingHeap
+fof(f7435,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f7423])).
+fof(f7423,plain,(
+  s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(sK1),sK2))))) != s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(sK1),sK2)))))),
+  inference(superposition,[],[f55,f1970])).
+fof(f1970,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X4),s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.PairingHeap.heap'(X0),X5)))))) )),
+  inference(forward_demodulation,[],[f1969,f66])).
+fof(f66,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X2),s(fun(X0,'type.num.num'),X1))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X2))),s(fun(X0,'type.num.num'),X1)))) )),
+  inference(cnf_transformation,[],[f32])).
+fof(f32,plain,(
+  ! [X0,X1,X2] : s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X2),s(fun(X0,'type.num.num'),X1))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X2))),s(fun(X0,'type.num.num'),X1)))),
+  inference(flattening,[],[f31])).
+fof(f31,plain,(
+  ! [X0] : ! [X1,X2] : s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X2),s(fun(X0,'type.num.num'),X1))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X2))),s(fun(X0,'type.num.num'),X1)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X7] : ! [X15,X19] : s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X19),s(fun(X7,'type.num.num'),X15))) = s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),'const.bag.EL_BAG_1'(s(X7,X19))),s(fun(X7,'type.num.num'),X15)))),
+  file('thm.PairingHeap.insert_bag','thm.bag.BAG_INSERT_UNION')).
+fof(f1969,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X4))),s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.PairingHeap.heap'(X0),X5)))))) )),
+  inference(forward_demodulation,[],[f1958,f450])).
+fof(f450,plain,(
+  ( ! [X0,X1] : (s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X1))) = s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X1),s('type.list.list'('type.PairingHeap.heap'(X0)),'const.list.NIL_0')))))) )),
+  inference(forward_demodulation,[],[f434,f268])).
+fof(f268,plain,(
+  ( ! [X4,X3] : (s(fun(X3,'type.num.num'),'const.bag.EL_BAG_1'(s(X3,X4))) = s(fun(X3,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X3,X4),s(fun(X3,'type.num.num'),'const.bag.EMPTY_BAG_0')))) )),
+  inference(superposition,[],[f66,f63])).
+fof(f63,plain,(
+  ( ! [X0,X1] : (s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0')))) )),
+  inference(cnf_transformation,[],[f28])).
+fof(f28,plain,(
+  ! [X0,X1] : s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0')))),
+  inference(flattening,[],[f27])).
+fof(f27,plain,(
+  ! [X0] : ! [X1] : s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0')))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X7] : ! [X15] : s(fun(X7,'type.num.num'),X15) = s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),X15),s(fun(X7,'type.num.num'),'const.bag.EMPTY_BAG_0')))),
+  file('thm.PairingHeap.insert_bag','thm.bag.BAG_UNION_EMPTY|split|0')).
+fof(f434,plain,(
+  ( ! [X0,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0'))) = s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X1),s('type.list.list'('type.PairingHeap.heap'(X0)),'const.list.NIL_0')))))) )),
+  inference(superposition,[],[f67,f60])).
+fof(f60,plain,(
+  ( ! [X0] : (s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0') = s(fun(X0,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X0)),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0') = s(fun(X0,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X0)),'const.list.NIL_0')))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X7] : s(fun(X7,'type.num.num'),'const.bag.EMPTY_BAG_0') = s(fun(X7,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X7)),'const.list.NIL_0')))),
+  file('thm.PairingHeap.insert_bag','thm.PairingHeap.heap_to_bag_def|split|2')).
+fof(f67,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X1),s('type.list.list'('type.PairingHeap.heap'(X0)),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X0)),X2)))))) )),
+  inference(cnf_transformation,[],[f34])).
+fof(f34,plain,(
+  ! [X0,X1,X2] : s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X1),s('type.list.list'('type.PairingHeap.heap'(X0)),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X0)),X2)))))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ! [X0] : ! [X1,X2] : s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X1),s('type.list.list'('type.PairingHeap.heap'(X0)),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X0)),X2)))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X7] : ! [X11,X12] : s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),'const.PairingHeap.Tree_2'(s(X7,X11),s('type.list.list'('type.PairingHeap.heap'(X7)),X12))))) = s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X11),s(fun(X7,'type.num.num'),'const.PairingHeap.heaps_to_bag_1'(s('type.list.list'('type.PairingHeap.heap'(X7)),X12)))))),
+  file('thm.PairingHeap.insert_bag','thm.PairingHeap.heap_to_bag_def|split|1')).
+fof(f1958,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.PairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X4),s('type.list.list'('type.PairingHeap.heap'(X0)),'const.list.NIL_0'))))),s(fun(X0,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X0),X5)))))) )),
+  inference(superposition,[],[f75,f76])).
+fof(f76,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.PairingHeap.heap'(X1),'const.PairingHeap.insert_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s(X1,X4),s('type.PairingHeap.heap'(X1),X5))) = s('type.PairingHeap.heap'(X1),'const.PairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.PairingHeap.heap'(X1),'const.PairingHeap.Tree_2'(s(X1,X4),s('type.list.list'('type.PairingHeap.heap'(X1)),'const.list.NIL_0'))),s('type.PairingHeap.heap'(X1),X5)))) )),
+  inference(cnf_transformation,[],[f46])).
+fof(f46,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s('type.PairingHeap.heap'(X1),'const.PairingHeap.insert_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s(X1,X4),s('type.PairingHeap.heap'(X1),X5))) = s('type.PairingHeap.heap'(X1),'const.PairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.PairingHeap.heap'(X1),'const.PairingHeap.Tree_2'(s(X1,X4),s('type.list.list'('type.PairingHeap.heap'(X1)),'const.list.NIL_0'))),s('type.PairingHeap.heap'(X1),X5)))),
+  inference(flattening,[],[f45])).
+fof(f45,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : s('type.PairingHeap.heap'(X1),'const.PairingHeap.insert_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s(X1,X4),s('type.PairingHeap.heap'(X1),X5))) = s('type.PairingHeap.heap'(X1),'const.PairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.PairingHeap.heap'(X1),'const.PairingHeap.Tree_2'(s(X1,X4),s('type.list.list'('type.PairingHeap.heap'(X1)),'const.list.NIL_0'))),s('type.PairingHeap.heap'(X1),X5)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X6,X7] : ! [X9,X10,X11,X8] : s('type.PairingHeap.heap'(X7),'const.PairingHeap.insert_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s(X7,X11),s('type.PairingHeap.heap'(X7),X8))) = s('type.PairingHeap.heap'(X7),'const.PairingHeap.merge_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s('type.PairingHeap.heap'(X7),'const.PairingHeap.Tree_2'(s(X7,X11),s('type.list.list'('type.PairingHeap.heap'(X7)),'const.list.NIL_0'))),s('type.PairingHeap.heap'(X7),X8)))),
+  file('thm.PairingHeap.insert_bag','thm.PairingHeap.insert_def')).
+fof(f75,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X1,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X4))),s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X5))))) = s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.PairingHeap.heap'(X1),X4),s('type.PairingHeap.heap'(X1),X5)))))) )),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X4))),s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X5))))) = s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.PairingHeap.heap'(X1),X4),s('type.PairingHeap.heap'(X1),X5)))))),
+  inference(flattening,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X4))),s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X5))))) = s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.PairingHeap.heap'(X1),X4),s('type.PairingHeap.heap'(X1),X5)))))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X7] : ! [X9,X10,X13,X14] : s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),X13))),s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),X14))))) = s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),'const.PairingHeap.merge_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s('type.PairingHeap.heap'(X7),X13),s('type.PairingHeap.heap'(X7),X14)))))),
+  file('thm.PairingHeap.insert_bag','thm.PairingHeap.merge_bag')).
+fof(f55,plain,(
+  s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(sK1),sK2))))) != s(fun(sK1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(sK1),'const.PairingHeap.insert_4'(s(fun(sK1,sK0),sK3),s(fun(sK0,fun(sK0,bool)),sK4),s(sK1,sK5),s('type.PairingHeap.heap'(sK1),sK2)))))),
+  inference(cnf_transformation,[],[f49])).
+fof(f49,plain,(
+  s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(sK1),sK2))))) != s(fun(sK1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(sK1),'const.PairingHeap.insert_4'(s(fun(sK1,sK0),sK3),s(fun(sK0,fun(sK0,bool)),sK4),s(sK1,sK5),s('type.PairingHeap.heap'(sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f47])).
+fof(f47,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X1,X5),s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X2))))) != s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.insert_4'(s(fun(X1,X0),X3),s(fun(X0,fun(X0,bool)),X4),s(X1,X5),s('type.PairingHeap.heap'(X1),X2)))))),
+  inference(ennf_transformation,[],[f21])).
+fof(f21,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X1,X5),s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X2))))) = s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.insert_4'(s(fun(X1,X0),X3),s(fun(X0,fun(X0,bool)),X4),s(X1,X5),s('type.PairingHeap.heap'(X1),X2)))))),
+  inference(flattening,[],[f20])).
+fof(f20,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X1,X5),s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),X2))))) = s(fun(X1,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.insert_4'(s(fun(X1,X0),X3),s(fun(X0,fun(X0,bool)),X4),s(X1,X5),s('type.PairingHeap.heap'(X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10,X11] : s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X11),s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),X8))))) = s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),'const.PairingHeap.insert_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s(X7,X11),s('type.PairingHeap.heap'(X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10,X11] : s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X11),s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),X8))))) = s(fun(X7,'type.num.num'),'const.PairingHeap.heap_to_bag_1'(s('type.PairingHeap.heap'(X7),'const.PairingHeap.insert_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s(X7,X11),s('type.PairingHeap.heap'(X7),X8)))))),
+  file('thm.PairingHeap.insert_bag','thm.PairingHeap.insert_bag')).
+% SZS output end Proof for thm.PairingHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 101
+% Passive clauses: 507
+% Generated clauses: 7022
+% Final active clauses: 93
+% Final passive clauses: 295
+% Input formulas: 18
+% Initial clauses: 22
+% 
+% Duplicate literals: 617
+% Trivial inequalities: 64
+% Fw subsumption resolutions: 412
+% Fw demodulations: 908
+% Bw demodulations: 2
+% 
+% Simple tautologies: 147
+% Equational tautologies: 39
+% Forward subsumptions: 4105
+% 
+% Binary resolution: 9
+% Forward superposition: 3008
+% Backward superposition: 1798
+% Self superposition: 139
+% Equality factoring: 94
+% Equality resolution: 10
+% 
+% Split clauses: 182
+% Split components: 369
+% SAT solver clauses: 291
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 59
+% 
+% Sat splits: 182
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 281
+% TWLsolver calls for satisfiability: 44
+% 
+% Memory used [KB]: 4733
+% Time elapsed: 0.195 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.204 s

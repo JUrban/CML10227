@@ -1,0 +1,303 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.closSem
+% (115610)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 166
+% Passive clauses: 3258
+% Generated clauses: 22491
+% Final active clauses: 111
+% Final passive clauses: 2873
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 814
+% Trivial inequalities: 110
+% Fw subsumption resolutions: 1850
+% Fw demodulations: 3603
+% Bw demodulations: 48
+% 
+% Simple tautologies: 137
+% Equational tautologies: 49
+% Forward subsumptions: 12131
+% 
+% Binary resolution: 496
+% Factoring: 2
+% Forward superposition: 7948
+% Backward superposition: 7072
+% Self superposition: 233
+% Equality factoring: 96
+% Equality resolution: 10
+% 
+% Split clauses: 241
+% Split components: 482
+% SAT solver clauses: 706
+% SAT solver unit clauses: 34
+% SAT solver binary clauses: 133
+% 
+% Sat splits: 241
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 706
+% TWLsolver calls for satisfiability: 149
+% 
+% Memory used [KB]: 20852
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.closSem
+% (115636)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 112
+% Passive clauses: 1157
+% Generated clauses: 13735
+% Final active clauses: 92
+% Final passive clauses: 927
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 423
+% Trivial inequalities: 83
+% Fw subsumption resolutions: 641
+% Fw demodulations: 1519
+% Bw demodulations: 137
+% Condensations: 962
+% 
+% Simple tautologies: 113
+% Equational tautologies: 38
+% Forward subsumptions: 6974
+% 
+% Binary resolution: 264
+% Factoring: 1
+% Forward superposition: 4506
+% Backward superposition: 3654
+% Self superposition: 189
+% Equality factoring: 76
+% Equality resolution: 8
+% 
+% Split clauses: 46
+% Split components: 92
+% SAT solver clauses: 1890
+% SAT solver unit clauses: 131
+% SAT solver binary clauses: 49
+% 
+% Sat splits: 46
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 1890
+% TWLsolver calls for satisfiability: 262
+% 
+% Memory used [KB]: 23027
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.closSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closSem
+% SZS output start Proof for thm.closSem
+fof(f12024,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f12023,f215])).
+fof(f215,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.closSem.state_fupdfupds_comp|split|7',aHL_TRUTH)).
+fof(f12023,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f12021,f4139])).
+fof(f4139,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(condensation,[],[f4138])).
+fof(f4138,plain,(
+  ( ! [X10,X8,X9] : (s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(subsumption_resolution,[],[f4066,f299])).
+fof(f299,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f217,f218])).
+fof(f218,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.closSem.state_fupdfupds_comp|split|7',aHL_BOOL_CASES)).
+fof(f217,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.closSem.state_fupdfupds_comp|split|7',aHL_FALSITY)).
+fof(f4066,plain,(
+  ( ! [X10,X8,X9] : (p(s(bool,X10)) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(superposition,[],[f3383,f297])).
+fof(f297,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f218,f218])).
+fof(f3383,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(backward_demodulation,[],[f3283,f1312])).
+fof(f1312,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),'const.combin.o_3'(s(fun(X0,fun(X0,bool)),'=_0'),s(fun(X0,X0),'_i_0_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f1265,f265])).
+fof(f265,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f138])).
+fof(f138,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(flattening,[],[f137])).
+fof(f137,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X14,X6,X15] : ! [X10,X9,X17] : s(X14,'const.combin.o_3'(s(fun(X6,X14),X10),s(fun(X15,X6),X9),s(X15,X17))) = s(X14,happ(s(fun(X6,X14),X10),s(X6,happ(s(fun(X15,X6),X9),s(X15,X17)))))),
+  file('thm.closSem.state_fupdfupds_comp|split|7','thm.combin.o_THM')).
+fof(f1265,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1))))),s(X0,X1))))) )),
+  inference(unit_resulting_resolution,[],[f219,f262])).
+fof(f262,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f213,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f132])).
+fof(f132,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X45,X46,X47] : (p(s(bool,happ(s(fun(X45,bool),happ(s(fun(X45,fun(X45,bool)),'=_0'),s(X45,X46))),s(X45,X47)))) <=> s(X45,X46) = s(X45,X47))),
+  file('thm.closSem.state_fupdfupds_comp|split|7',arity_0_HL_EQ)).
+fof(f219,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f73])).
+fof(f73,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f62])).
+fof(f62,axiom,(
+  ! [X35] : ! [X37] : s(X35,X37) = s(X35,happ(s(fun(X35,X35),'_i_0_0'),s(X35,X37)))),
+  file('thm.closSem.state_fupdfupds_comp|split|7','_i0_ax')).
+fof(f3283,plain,(
+  ( ! [X76,X74,X75,X73] : (s(X75,happ(s(fun(X73,X75),X76),s(X73,X74))) = s(X75,'const.combin.o_3'(s(fun(X73,X75),X76),s(fun(X73,X73),'_i_0_0'),s(X73,X74)))) )),
+  inference(superposition,[],[f265,f219])).
+fof(f12021,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),fun(fun(sK0,'type.closSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f11985,f4497])).
+fof(f4497,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.closSem.state'(sK1)),fun(fun(sK0,'type.closSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f214,f261])).
+fof(f261,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f213])).
+fof(f214,plain,(
+  s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))) != s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f199])).
+fof(f199,plain,(
+  s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),sK4),s(fun('type.num.num','type.num.num'),sK3))))),s(fun(sK0,'type.closSem.state'(sK1)),sK2))) != s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK4))),s(fun(sK0,'type.closSem.state'(sK1)),'const.combin.o_2'(s(fun('type.closSem.state'(sK1),'type.closSem.state'(sK1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),sK3))),s(fun(sK0,'type.closSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f193])).
+fof(f193,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X4),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X0,'type.closSem.state'(X1)),X2))) != s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X0,'type.closSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X4),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X0,'type.closSem.state'(X1)),X2))) = s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X0,'type.closSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X4),s(fun('type.num.num','type.num.num'),X3))))),s(fun(X0,'type.closSem.state'(X1)),X2))) = s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X4))),s(fun(X0,'type.closSem.state'(X1)),'const.combin.o_2'(s(fun('type.closSem.state'(X1),'type.closSem.state'(X1)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X3))),s(fun(X0,'type.closSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X10),s(fun('type.num.num','type.num.num'),X9))))),s(fun(X6,'type.closSem.state'(X7)),X8))) = s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X9))),s(fun(X6,'type.closSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X10),s(fun('type.num.num','type.num.num'),X9))))),s(fun(X6,'type.closSem.state'(X7)),X8))) = s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun(X6,'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X9))),s(fun(X6,'type.closSem.state'(X7)),X8)))))),
+  file('thm.closSem.state_fupdfupds_comp|split|7','thm.closSem.state_fupdfupds_comp|split|7')).
+fof(f11985,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X1),s(fun('type.num.num','type.num.num'),X2))))),s(fun(X3,'type.closSem.state'(X0)),X4))) = s(fun(X3,'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X1))),s(fun(X3,'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun(X3,'type.closSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f270,f225])).
+fof(f225,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X1))))) = s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X1)))))) )),
+  inference(cnf_transformation,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1,X2] : s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X1))))) = s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X1)))))),
+  inference(flattening,[],[f83])).
+fof(f83,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X2),s(fun('type.num.num','type.num.num'),X1))))) = s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.combin.o_2'(s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X2))),s(fun('type.closSem.state'(X0),'type.closSem.state'(X0)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X10),s(fun('type.num.num','type.num.num'),X9))))) = s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.combin.o_2'(s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X10))),s(fun('type.closSem.state'(X7),'type.closSem.state'(X7)),'const.closSem.state_clock_fupd_1'(s(fun('type.num.num','type.num.num'),X9)))))),
+  file('thm.closSem.state_fupdfupds_comp|split|7','thm.closSem.state_fupdfupds_comp|split|6')).
+fof(f270,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f148])).
+fof(f148,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f147])).
+fof(f147,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X14,X6,X20,X15] : ! [X10,X9,X8] : s(fun(X20,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X20,X6),'const.combin.o_2'(s(fun(X15,X6),X9),s(fun(X20,X15),X8))))) = s(fun(X20,X14),'const.combin.o_2'(s(fun(X15,X14),'const.combin.o_2'(s(fun(X6,X14),X10),s(fun(X15,X6),X9))),s(fun(X20,X15),X8)))),
+  file('thm.closSem.state_fupdfupds_comp|split|7','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.closSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 125
+% Passive clauses: 1173
+% Generated clauses: 13400
+% Final active clauses: 66
+% Final passive clauses: 581
+% Input formulas: 68
+% Initial clauses: 79
+% 
+% Duplicate literals: 454
+% Trivial inequalities: 37
+% Fw subsumption resolutions: 447
+% Fw demodulations: 2478
+% Bw demodulations: 449
+% Condensations: 666
+% Global subsumptions: 349
+% 
+% Simple tautologies: 120
+% Equational tautologies: 129
+% Forward subsumptions: 7115
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 20
+% 
+% Unit resulting resolution: 557
+% Factoring: 1
+% Forward superposition: 3276
+% Backward superposition: 2664
+% Self superposition: 126
+% Equality factoring: 68
+% Equality resolution: 2
+% 
+% Split clauses: 27
+% Split components: 54
+% SAT solver clauses: 1949
+% SAT solver unit clauses: 615
+% SAT solver binary clauses: 638
+% 
+% Sat splits: 27
+% Sat splitting refutations: 371
+% 
+% Memory used [KB]: 13560
+% Time elapsed: 0.467 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.797 s

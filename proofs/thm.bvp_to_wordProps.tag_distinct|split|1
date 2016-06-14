@@ -1,0 +1,379 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvp_to_wordProps
+% (131686)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 160
+% Passive clauses: 3903
+% Generated clauses: 19977
+% Final active clauses: 141
+% Final passive clauses: 3485
+% Input formulas: 68
+% Initial clauses: 102
+% 
+% Duplicate literals: 493
+% Trivial inequalities: 297
+% Fw subsumption resolutions: 1429
+% Fw demodulations: 2807
+% Bw demodulations: 17
+% 
+% Simple tautologies: 220
+% Equational tautologies: 44
+% Forward subsumptions: 10349
+% 
+% Binary resolution: 456
+% Factoring: 1
+% Forward superposition: 6911
+% Backward superposition: 7484
+% Self superposition: 185
+% Equality factoring: 68
+% Equality resolution: 28
+% 
+% Split clauses: 226
+% Split components: 454
+% SAT solver clauses: 598
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 132
+% 
+% Sat splits: 226
+% Sat splitting refutations: 18
+% 
+% TWLsolver clauses: 597
+% TWLsolver calls for satisfiability: 157
+% 
+% Memory used [KB]: 19957
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvp_to_wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_to_wordProps
+% SZS output start Proof for thm.bvp_to_wordProps
+fof(f13391,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f13327,f259,f349,f11339,f11340,f11204,f11205,f274,f360,f304,f389,f309,f393,f7216,f7487,f213,f319,f276,f362,f11336,f11215,f11216,f11242,f11243,f11213,f295,f379,f239,f343,f326,f328])).
+fof(f328,plain,(
+  ~p(s(bool,'F_0')) | $spl9),
+  inference(cnf_transformation,[],[f328_D])).
+fof(f328_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl9),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl9])])).
+fof(f326,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(global_subsumption,[],[f219,f214])).
+fof(f214,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1',aHL_TRUTH)).
+fof(f219,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f175])).
+fof(f175,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f46])).
+fof(f46,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','thm.bool.NOT_CLAUSES|split|2')).
+fof(f343,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | $spl32),
+  inference(cnf_transformation,[],[f343_D])).
+fof(f343_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl32),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl32])])).
+fof(f239,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f179])).
+fof(f179,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f88])).
+fof(f88,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f87])).
+fof(f87,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f31])).
+fof(f31,axiom,(
+  ! [X21] : (s(bool,'F_0') = s(bool,X21) <=> ~p(s(bool,X21)))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','thm.bool.EQ_CLAUSES|split|2')).
+fof(f379,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1))))) ) | $spl96),
+  inference(cnf_transformation,[],[f379_D])).
+fof(f379_D,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1))))) ) <=> ~$spl96),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl96])])).
+fof(f295,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f208])).
+fof(f208,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) | ~p(s(bool,X0)) | p(s(bool,X1))) & ((p(s(bool,X0)) & ~p(s(bool,X1))) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1))))))),
+  inference(flattening,[],[f207])).
+fof(f207,plain,(
+  ! [X0,X1] : ((~p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) | (~p(s(bool,X0)) | p(s(bool,X1)))) & ((p(s(bool,X0)) & ~p(s(bool,X1))) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1))))))),
+  inference(nnf_transformation,[],[f172])).
+fof(f172,plain,(
+  ! [X0,X1] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) <=> (~p(s(bool,X0)) | p(s(bool,X1))))),
+  inference(ennf_transformation,[],[f134])).
+fof(f134,plain,(
+  ! [X0,X1] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X0))),s(bool,X1)))) <=> (p(s(bool,X0)) => p(s(bool,X1))))),
+  inference(rectify,[],[f69])).
+fof(f69,axiom,(
+  ! [X41,X42] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,X41))),s(bool,X42)))) <=> (p(s(bool,X41)) => p(s(bool,X42))))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','==>_HL_0')).
+fof(f11213,plain,(
+  ( ! [X346] : (p(s(bool,happ(s(fun('type.num.num',bool),X346),s('type.num.num',sK0))))) ) | $spl1844),
+  inference(cnf_transformation,[],[f11213_D])).
+fof(f11213_D,plain,(
+  ( ! [X346] : (p(s(bool,happ(s(fun('type.num.num',bool),X346),s('type.num.num',sK0))))) ) <=> ~$spl1844),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1844])])).
+fof(f11243,plain,(
+  ( ! [X459,X454] : (p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun('type.num.num',bool),X454),s(bool,X459))),s('type.num.num',sK1))))) ) | $spl1870),
+  inference(cnf_transformation,[],[f11243_D])).
+fof(f11243_D,plain,(
+  ( ! [X459,X454] : (p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun('type.num.num',bool),X454),s(bool,X459))),s('type.num.num',sK1))))) ) <=> ~$spl1870),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1870])])).
+fof(f11242,plain,(
+  ( ! [X459,X454,X456] : (p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun('type.num.num',bool),X454),s(bool,X459))),s('type.num.num',sK1)))) | p(s(bool,happ(s(fun('type.num.num',bool),X456),s('type.num.num',sK0))))) ) | ($spl58 | $spl96 | $spl124 | $spl1184)),
+  inference(forward_demodulation,[],[f11241,f393])).
+fof(f11241,plain,(
+  ( ! [X459,X454,X456] : (p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,happ(s(fun('type.num.num',bool),X454),s('type.num.num',sK1))))),s(bool,X459)))) | p(s(bool,happ(s(fun('type.num.num',bool),X456),s('type.num.num',sK0))))) ) | ($spl58 | $spl96 | $spl1184)),
+  inference(forward_demodulation,[],[f11085,f360])).
+fof(f11085,plain,(
+  ( ! [X455,X457,X459,X454,X456,X458] : (p(s(bool,happ(s(fun('type.num.num',bool),X456),s('type.num.num',sK0)))) | p(s(bool,happ(s(fun(bool,bool),happ(s(fun(bool,fun(bool,bool)),'==>_0'),s(bool,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',bool),X454),s(bool,X455),s(fun('type.num.num',bool),X456),s(fun(bool,bool),X457),s(bool,X458))))),s(bool,X459))))) ) | ($spl96 | $spl1184)),
+  inference(superposition,[],[f379,f7487])).
+fof(f11216,plain,(
+  ( ! [X349] : (s(bool,'F_0') = s(bool,happ(s(fun('type.num.num',bool),X349),s('type.num.num',sK1)))) ) | $spl1848),
+  inference(cnf_transformation,[],[f11216_D])).
+fof(f11216_D,plain,(
+  ( ! [X349] : (s(bool,'F_0') = s(bool,happ(s(fun('type.num.num',bool),X349),s('type.num.num',sK1)))) ) <=> ~$spl1848),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1848])])).
+fof(f11215,plain,(
+  ( ! [X349,X351] : (s(bool,'F_0') = s(bool,happ(s(fun('type.num.num',bool),X349),s('type.num.num',sK1))) | p(s(bool,happ(s(fun('type.num.num',bool),X351),s('type.num.num',sK0))))) ) | ($spl32 | $spl58 | $spl1184)),
+  inference(forward_demodulation,[],[f11068,f360])).
+fof(f11068,plain,(
+  ( ! [X350,X352,X349,X351,X353] : (p(s(bool,happ(s(fun('type.num.num',bool),X351),s('type.num.num',sK0)))) | s(bool,'F_0') = s(bool,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',bool),X349),s(bool,X350),s(fun('type.num.num',bool),X351),s(fun(bool,bool),X352),s(bool,X353)))) ) | ($spl32 | $spl1184)),
+  inference(superposition,[],[f343,f7487])).
+fof(f11336,plain,(
+  $false | ($spl9 | $spl1848 | $spl1870)),
+  inference(subsumption_resolution,[],[f11331,f328])).
+fof(f11331,plain,(
+  p(s(bool,'F_0')) | ($spl1848 | $spl1870)),
+  inference(backward_demodulation,[],[f11216,f11243])).
+fof(f362,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X4),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))) ) | $spl62),
+  inference(cnf_transformation,[],[f362_D])).
+fof(f362_D,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X4),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))) ) <=> ~$spl62),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl62])])).
+fof(f276,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X4),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))) )),
+  inference(cnf_transformation,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.num.num',X0),X4),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))),
+  inference(flattening,[],[f125])).
+fof(f125,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.num.num',X0),X4),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X16] : ! [X7,X26,X31,X32,X33,X34] : s(X16,happ(s(fun('type.num.num',X16),X32),s('type.num.num',X7))) = s(X16,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X7))),s(fun('type.num.num',X16),X26),s(X16,X31),s(fun('type.num.num',X16),X32),s(fun(bool,X16),X33),s(X16,X34)))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','thm.bvp_to_wordProps.tag_case_def|split|2')).
+fof(f319,plain,(
+  s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',sK0))) | $spl0),
+  inference(cnf_transformation,[],[f319_D])).
+fof(f319_D,plain,(
+  s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',sK0))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f213,plain,(
+  s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',sK0)))),
+  inference(cnf_transformation,[],[f174])).
+fof(f174,plain,(
+  s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',sK0)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f167])).
+fof(f167,plain,(
+  ? [X0,X1] : s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X0)))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))) != s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X0)))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1] : ~s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X0)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ~s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X7))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X6)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ~s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X7))) = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BytesTag_1'(s('type.num.num',X6)))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','thm.bvp_to_wordProps.tag_distinct|split|1')).
+fof(f7487,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X1),s('type.num.num',sK0))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X1),s(fun(bool,X0),X4),s(X0,X5)))) ) | $spl1184),
+  inference(cnf_transformation,[],[f7487_D])).
+fof(f7487_D,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X1),s('type.num.num',sK0))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X1),s(fun(bool,X0),X4),s(X0,X5)))) ) <=> ~$spl1184),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1184])])).
+fof(f7216,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X1),s('type.num.num',sK0))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X1),s(fun(bool,X0),X4),s(X0,X5)))) ) | ($spl0 | $spl62)),
+  inference(superposition,[],[f362,f319])).
+fof(f393,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun(X2,X0),'_dst_x0x1x0_3'(s(fun(X1,fun(X3,X0)),X4),s(fun(X2,X1),X5),s(X3,X6))),s(X2,X7))) = s(X0,happ(s(fun(X3,X0),happ(s(fun(X1,fun(X3,X0)),X4),s(X1,happ(s(fun(X2,X1),X5),s(X2,X7))))),s(X3,X6)))) ) | $spl124),
+  inference(cnf_transformation,[],[f393_D])).
+fof(f393_D,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun(X2,X0),'_dst_x0x1x0_3'(s(fun(X1,fun(X3,X0)),X4),s(fun(X2,X1),X5),s(X3,X6))),s(X2,X7))) = s(X0,happ(s(fun(X3,X0),happ(s(fun(X1,fun(X3,X0)),X4),s(X1,happ(s(fun(X2,X1),X5),s(X2,X7))))),s(X3,X6)))) ) <=> ~$spl124),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl124])])).
+fof(f309,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun(X2,X0),'_dst_x0x1x0_3'(s(fun(X1,fun(X3,X0)),X4),s(fun(X2,X1),X5),s(X3,X6))),s(X2,X7))) = s(X0,happ(s(fun(X3,X0),happ(s(fun(X1,fun(X3,X0)),X4),s(X1,happ(s(fun(X2,X1),X5),s(X2,X7))))),s(X3,X6)))) )),
+  inference(cnf_transformation,[],[f157])).
+fof(f157,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : s(X0,happ(s(fun(X2,X0),'_dst_x0x1x0_3'(s(fun(X1,fun(X3,X0)),X4),s(fun(X2,X1),X5),s(X3,X6))),s(X2,X7))) = s(X0,happ(s(fun(X3,X0),happ(s(fun(X1,fun(X3,X0)),X4),s(X1,happ(s(fun(X2,X1),X5),s(X2,X7))))),s(X3,X6)))),
+  inference(flattening,[],[f156])).
+fof(f156,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6,X7] : s(X0,happ(s(fun(X2,X0),'_dst_x0x1x0_3'(s(fun(X1,fun(X3,X0)),X4),s(fun(X2,X1),X5),s(X3,X6))),s(X2,X7))) = s(X0,happ(s(fun(X3,X0),happ(s(fun(X1,fun(X3,X0)),X4),s(X1,happ(s(fun(X2,X1),X5),s(X2,X7))))),s(X3,X6)))),
+  inference(rectify,[],[f67])).
+fof(f67,axiom,(
+  ! [X10,X11,X12,X37] : ! [X13,X14,X38,X15] : s(X10,happ(s(fun(X12,X10),'_dst_x0x1x0_3'(s(fun(X11,fun(X37,X10)),X13),s(fun(X12,X11),X14),s(X37,X38))),s(X12,X15))) = s(X10,happ(s(fun(X37,X10),happ(s(fun(X11,fun(X37,X10)),X13),s(X11,happ(s(fun(X12,X11),X14),s(X12,X15))))),s(X37,X38)))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','_dst_x0x1x0_ax')).
+fof(f389,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) ) | $spl116),
+  inference(cnf_transformation,[],[f389_D])).
+fof(f389_D,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) ) <=> ~$spl116),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl116])])).
+fof(f304,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,X2) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))) )),
+  inference(cnf_transformation,[],[f211])).
+fof(f211,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f58])).
+fof(f58,axiom,(
+  ! [X40,X41,X42] : (p(s(bool,happ(s(fun(X40,bool),happ(s(fun(X40,fun(X40,bool)),'=_0'),s(X40,X41))),s(X40,X42)))) <=> s(X40,X41) = s(X40,X42))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1',arity_0_HL_EQ)).
+fof(f360,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))) ) | $spl58),
+  inference(cnf_transformation,[],[f360_D])).
+fof(f360_D,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))) ) <=> ~$spl58),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl58])])).
+fof(f274,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))) )),
+  inference(cnf_transformation,[],[f122])).
+fof(f122,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))),
+  inference(flattening,[],[f121])).
+fof(f121,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6] : s(X0,happ(s(fun('type.num.num',X0),X2),s('type.num.num',X1))) = s(X0,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X1))),s(fun('type.num.num',X0),X2),s(X0,X3),s(fun('type.num.num',X0),X4),s(fun(bool,X0),X5),s(X0,X6)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X16] : ! [X7,X26,X31,X32,X33,X34] : s(X16,happ(s(fun('type.num.num',X16),X26),s('type.num.num',X7))) = s(X16,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X7))),s(fun('type.num.num',X16),X26),s(X16,X31),s(fun('type.num.num',X16),X32),s(fun(bool,X16),X33),s(X16,X34)))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','thm.bvp_to_wordProps.tag_case_def|split|0')).
+fof(f11205,plain,(
+  ( ! [X227,X225,X230,X224] : (s(X224,X230) = s(X224,happ(s(fun('type.num.num',X224),X225),s('type.num.num',sK1))) | ~p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(X224,fun(X224,bool)),'=_0'),s(fun('type.num.num',X224),X227),s(X224,X230))),s('type.num.num',sK0))))) ) | $spl1836),
+  inference(cnf_transformation,[],[f11205_D])).
+fof(f11205_D,plain,(
+  ( ! [X227,X225,X230,X224] : (s(X224,X230) = s(X224,happ(s(fun('type.num.num',X224),X225),s('type.num.num',sK1))) | ~p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(X224,fun(X224,bool)),'=_0'),s(fun('type.num.num',X224),X227),s(X224,X230))),s('type.num.num',sK0))))) ) <=> ~$spl1836),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1836])])).
+fof(f11204,plain,(
+  ( ! [X227,X225,X230,X224] : (s(X224,X230) = s(X224,happ(s(fun('type.num.num',X224),X225),s('type.num.num',sK1))) | ~p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(X224,fun(X224,bool)),'=_0'),s(fun('type.num.num',X224),X227),s(X224,X230))),s('type.num.num',sK0))))) ) | ($spl58 | $spl116 | $spl124 | $spl1184)),
+  inference(forward_demodulation,[],[f11203,f360])).
+fof(f11203,plain,(
+  ( ! [X229,X227,X225,X230,X228,X226,X224] : (~p(s(bool,happ(s(fun('type.num.num',bool),'_dst_x0x1x0_3'(s(fun(X224,fun(X224,bool)),'=_0'),s(fun('type.num.num',X224),X227),s(X224,X230))),s('type.num.num',sK0)))) | s(X224,X230) = s(X224,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',X224),X225),s(X224,X226),s(fun('type.num.num',X224),X227),s(fun(bool,X224),X228),s(X224,X229)))) ) | ($spl116 | $spl124 | $spl1184)),
+  inference(forward_demodulation,[],[f11052,f393])).
+fof(f11052,plain,(
+  ( ! [X229,X227,X225,X230,X228,X226,X224] : (~p(s(bool,happ(s(fun(X224,bool),happ(s(fun(X224,fun(X224,bool)),'=_0'),s(X224,happ(s(fun('type.num.num',X224),X227),s('type.num.num',sK0))))),s(X224,X230)))) | s(X224,X230) = s(X224,'const.bvp_to_wordProps.tag_CASE_6'(s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',sK1))),s(fun('type.num.num',X224),X225),s(X224,X226),s(fun('type.num.num',X224),X227),s(fun(bool,X224),X228),s(X224,X229)))) ) | ($spl116 | $spl1184)),
+  inference(superposition,[],[f389,f7487])).
+fof(f11340,plain,(
+  ( ! [X225,X230,X224] : (s(X224,X230) = s(X224,happ(s(fun('type.num.num',X224),X225),s('type.num.num',sK1)))) ) | $spl1938),
+  inference(cnf_transformation,[],[f11340_D])).
+fof(f11340_D,plain,(
+  ( ! [X225,X230,X224] : (s(X224,X230) = s(X224,happ(s(fun('type.num.num',X224),X225),s('type.num.num',sK1)))) ) <=> ~$spl1938),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1938])])).
+fof(f11339,plain,(
+  ( ! [X225,X230,X224] : (s(X224,X230) = s(X224,happ(s(fun('type.num.num',X224),X225),s('type.num.num',sK1)))) ) | ($spl1836 | $spl1844)),
+  inference(subsumption_resolution,[],[f11205,f11213])).
+fof(f349,plain,(
+  ( ! [X0] : (s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') != s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X0)))) ) | $spl36),
+  inference(cnf_transformation,[],[f349_D])).
+fof(f349_D,plain,(
+  ( ! [X0] : (s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') != s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X0)))) ) <=> ~$spl36),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl36])])).
+fof(f259,plain,(
+  ( ! [X0] : (s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') != s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f99])).
+fof(f99,plain,(
+  ! [X0] : s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') != s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X0)))),
+  inference(flattening,[],[f98])).
+fof(f98,plain,(
+  ! [X0] : ~s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X7] : ~s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') = s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.BlockTag_1'(s('type.num.num',X7)))),
+  file('thm.bvp_to_wordProps.tag_distinct|split|1','thm.bvp_to_wordProps.tag_distinct|split|0')).
+fof(f13327,plain,(
+  $false | ($spl36 | $spl1938)),
+  inference(subsumption_resolution,[],[f12935,f11340])).
+fof(f12935,plain,(
+  ( ! [X1022] : (s('type.bvp_to_wordProps.tag','const.bvp_to_wordProps.RefTag_0') != s('type.bvp_to_wordProps.tag',happ(s(fun('type.num.num','type.bvp_to_wordProps.tag'),X1022),s('type.num.num',sK1)))) ) | ($spl36 | $spl1938)),
+  inference(superposition,[],[f349,f11340])).
+% SZS output end Proof for thm.bvp_to_wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 136
+% Passive clauses: 1104
+% Generated clauses: 13044
+% Final active clauses: 127
+% Final passive clauses: 888
+% Input formulas: 68
+% Initial clauses: 102
+% 
+% Duplicate literals: 20
+% Trivial inequalities: 185
+% Fw subsumption resolutions: 376
+% Fw demodulations: 2336
+% Bw demodulations: 67
+% Condensations: 52
+% Global subsumptions: 8
+% 
+% Simple tautologies: 29
+% Equational tautologies: 12
+% Forward subsumptions: 6858
+% Bw demodulations to eq. taut.: 18
+% 
+% Binary resolution: 131
+% Factoring: 1
+% Forward superposition: 4014
+% Backward superposition: 4476
+% Self superposition: 119
+% Equality factoring: 4
+% Equality resolution: 23
+% 
+% Split clauses: 198
+% Split components: 396
+% SAT solver clauses: 2026
+% SAT solver unit clauses: 151
+% SAT solver binary clauses: 57
+% SAT solver learnt clauses: 18
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 198
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 1990
+% TWLsolver calls for satisfiability: 370
+% 
+% Memory used [KB]: 24178
+% Time elapsed: 0.636 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.261 s

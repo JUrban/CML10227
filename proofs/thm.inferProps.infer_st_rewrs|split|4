@@ -1,0 +1,152 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.inferProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.inferProps
+% SZS output start Proof for thm.inferProps
+fof(f2090,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f2050,f1566])).
+fof(f1566,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f106,f104])).
+fof(f104,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f46])).
+fof(f46,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X12,X10] : ! [X11,X13] : s(X10,X11) = s(X10,'const.combin.K_2'(s(X10,X11),s(X12,X13)))),
+  file('thm.inferProps.infer_st_rewrs|split|4','thm.combin.K_THM')).
+fof(f106,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X10,X12] : ! [X21,X22] : s(X10,'const.combin.K_2'(s(X10,X21),s(X12,X22))) = s(X10,happ(s(fun(X12,X10),'const.combin.K_1'(s(X10,X21))),s(X12,X22)))),
+  file('thm.inferProps.infer_st_rewrs|split|4','ARITY_1_2_const.combin.K')).
+fof(f2050,plain,(
+  s('type.num.num',sK2) != s('type.num.num',happ(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.num.num',sK3(sK1,sK0))))),
+  inference(superposition,[],[f74,f2022])).
+fof(f2022,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num',sK3(X1,X0)))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))) )),
+  inference(forward_demodulation,[],[f100,f183])).
+fof(f183,plain,(
+  ( ! [X2,X3] : (s('type.num.num',sK3(X3,X2)) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X2),X3)))) )),
+  inference(superposition,[],[f97,f96])).
+fof(f96,plain,(
+  ( ! [X0,X1] : (s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK3(X1,X0)),s(X0,sK4(X1,X0))))) )),
+  inference(cnf_transformation,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK3(X1,X0)),s(X0,sK4(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4])],[f35])).
+fof(f35,plain,(
+  ! [X0,X1] : ? [X2,X3] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X10] : ! [X20] : ? [X14,X15] : s('type.infer.infer_st'(X10),X20) = s('type.infer.infer_st'(X10),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X14),s(X10,X15)))),
+  file('thm.inferProps.infer_st_rewrs|split|4','thm.infer.infer_st_nchotomy')).
+fof(f97,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',X1) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))) )),
+  inference(cnf_transformation,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1,X2] : s('type.num.num',X1) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))),
+  inference(flattening,[],[f36])).
+fof(f36,plain,(
+  ! [X0] : ! [X1,X2] : s('type.num.num',X1) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X10] : ! [X14,X15] : s('type.num.num',X14) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X10),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X14),s(X10,X15)))))),
+  file('thm.inferProps.infer_st_rewrs|split|4','thm.infer.infer_st_next_uvar')).
+fof(f100,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1,X2] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : ! [X1,X2] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X10] : ! [X16,X17] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X17),s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X10),X16))))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X10),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X17),s('type.infer.infer_st'(X10),X16)))))),
+  file('thm.inferProps.infer_st_rewrs|split|4','thm.infer.infer_45_prove_ltb')).
+fof(f74,plain,(
+  s('type.num.num',sK2) != s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.infer.infer_st'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f58])).
+fof(f58,plain,(
+  s('type.num.num',sK2) != s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.infer.infer_st'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f56])).
+fof(f56,plain,(
+  ? [X0,X1,X2] : s('type.num.num',X2) != s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),X1)))))),
+  inference(ennf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~! [X0,X1,X2] : s('type.num.num',X2) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),X1)))))),
+  inference(flattening,[],[f24])).
+fof(f24,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.num.num',X2) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.num.num',X8) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.infer.infer_st'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.num.num',X8) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.infer.infer_st'(X6),X7)))))),
+  file('thm.inferProps.infer_st_rewrs|split|4','thm.inferProps.infer_st_rewrs|split|4')).
+% SZS output end Proof for thm.inferProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 42
+% Passive clauses: 416
+% Generated clauses: 1996
+% Final active clauses: 40
+% Final passive clauses: 331
+% Input formulas: 22
+% Initial clauses: 35
+% 
+% Duplicate literals: 57
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 6
+% Fw demodulations: 355
+% 
+% Simple tautologies: 27
+% Equational tautologies: 17
+% Forward subsumptions: 1117
+% Fw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 4
+% Forward superposition: 744
+% Backward superposition: 700
+% Self superposition: 59
+% Equality factoring: 26
+% Equality resolution: 2
+% 
+% Split clauses: 5
+% Split components: 10
+% SAT solver clauses: 11
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 6
+% 
+% Sat splits: 5
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 11
+% TWLsolver calls for satisfiability: 7
+% 
+% Memory used [KB]: 2814
+% Time elapsed: 0.060 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.055 s

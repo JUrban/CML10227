@@ -1,0 +1,153 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.conSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.conSem
+% SZS output start Proof for thm.conSem
+fof(f15083,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f14971,f258,f401,f399,f419,f259,f402,f400])).
+fof(f400,plain,(
+  s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) != s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1))) | $spl1),
+  inference(cnf_transformation,[],[f400_D])).
+fof(f400_D,plain,(
+  s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) != s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f402,plain,(
+  s('type.ast.lit',sK0) != s('type.ast.lit',sK1) | $spl3),
+  inference(cnf_transformation,[],[f402_D])).
+fof(f402_D,plain,(
+  s('type.ast.lit',sK0) != s('type.ast.lit',sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f259,plain,(
+  s('type.ast.lit',sK0) != s('type.ast.lit',sK1) | s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) != s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1)))),
+  inference(cnf_transformation,[],[f204])).
+fof(f204,plain,(
+  (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1))) | s('type.ast.lit',sK0) = s('type.ast.lit',sK1)) & (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) != s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1))) | s('type.ast.lit',sK0) != s('type.ast.lit',sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f203])).
+fof(f203,plain,(
+  ? [X0,X1] : ((s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))) | s('type.ast.lit',X0) = s('type.ast.lit',X1)) & (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X0))) != s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))) | s('type.ast.lit',X0) != s('type.ast.lit',X1)))),
+  inference(nnf_transformation,[],[f176])).
+fof(f176,plain,(
+  ? [X0,X1] : (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))) <~> s('type.ast.lit',X0) = s('type.ast.lit',X1))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))) <=> s('type.ast.lit',X0) = s('type.ast.lit',X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X6))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X7))) <=> s('type.ast.lit',X6) = s('type.ast.lit',X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X6))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X7))) <=> s('type.ast.lit',X6) = s('type.ast.lit',X7))),
+  file('thm.conSem.v_|49||49||split|0','thm.conSem.v_|49||49||split|0')).
+fof(f419,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f418])).
+fof(f418,plain,(
+  s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) != s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f400,f401])).
+fof(f399,plain,(
+  s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1))) | $spl0),
+  inference(cnf_transformation,[],[f399_D])).
+fof(f399_D,plain,(
+  s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f401,plain,(
+  s('type.ast.lit',sK0) = s('type.ast.lit',sK1) | $spl2),
+  inference(cnf_transformation,[],[f401_D])).
+fof(f401_D,plain,(
+  s('type.ast.lit',sK0) = s('type.ast.lit',sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f258,plain,(
+  s('type.ast.lit',sK0) = s('type.ast.lit',sK1) | s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))) = s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK1)))),
+  inference(cnf_transformation,[],[f204])).
+fof(f14971,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f14970,f402])).
+fof(f14970,plain,(
+  s('type.ast.lit',sK0) = s('type.ast.lit',sK1) | $spl0),
+  inference(forward_demodulation,[],[f14769,f307])).
+fof(f307,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f95])).
+fof(f95,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X20] : ! [X22] : s(X20,X22) = s(X20,happ(s(fun(X20,X20),'_i_0_0'),s(X20,X22)))),
+  file('thm.conSem.v_|49||49||split|0','_i0_ax')).
+fof(f14769,plain,(
+  s('type.ast.lit',sK1) = s('type.ast.lit',happ(s(fun('type.ast.lit','type.ast.lit'),'_i_0_0'),s('type.ast.lit',sK0))) | $spl0),
+  inference(superposition,[],[f14658,f307])).
+fof(f14658,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.ast.lit',X0),X1),s('type.ast.lit',sK0))) = s(X0,happ(s(fun('type.ast.lit',X0),X1),s('type.ast.lit',sK1)))) ) | $spl0),
+  inference(forward_demodulation,[],[f14365,f325])).
+fof(f325,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun('type.ast.lit',X0),X2),s('type.ast.lit',X1))) = s(X0,'const.conSem.v_CASE_7'(s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))),s(fun('type.ast.lit',X0),X2),s(fun('type.option.option'('type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')),fun('type.list.list'('type.conSem.v'),X0)),X3),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.string.char'),fun('type.conLang.exp',X0))),X4),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.conLang.exp'))),fun('type.list.list'('type.string.char'),X0))),X5),s(fun('type.num.num',X0),X6),s(fun('type.list.list'('type.conSem.v'),X0),X7)))) )),
+  inference(cnf_transformation,[],[f119])).
+fof(f119,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : s(X0,happ(s(fun('type.ast.lit',X0),X2),s('type.ast.lit',X1))) = s(X0,'const.conSem.v_CASE_7'(s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))),s(fun('type.ast.lit',X0),X2),s(fun('type.option.option'('type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')),fun('type.list.list'('type.conSem.v'),X0)),X3),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.string.char'),fun('type.conLang.exp',X0))),X4),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.conLang.exp'))),fun('type.list.list'('type.string.char'),X0))),X5),s(fun('type.num.num',X0),X6),s(fun('type.list.list'('type.conSem.v'),X0),X7)))),
+  inference(flattening,[],[f118])).
+fof(f118,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6,X7] : s(X0,happ(s(fun('type.ast.lit',X0),X2),s('type.ast.lit',X1))) = s(X0,'const.conSem.v_CASE_7'(s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X1))),s(fun('type.ast.lit',X0),X2),s(fun('type.option.option'('type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')),fun('type.list.list'('type.conSem.v'),X0)),X3),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.string.char'),fun('type.conLang.exp',X0))),X4),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.conLang.exp'))),fun('type.list.list'('type.string.char'),X0))),X5),s(fun('type.num.num',X0),X6),s(fun('type.list.list'('type.conSem.v'),X0),X7)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X9] : ! [X6,X10,X11,X12,X13,X14,X15] : s(X9,happ(s(fun('type.ast.lit',X9),X10),s('type.ast.lit',X6))) = s(X9,'const.conSem.v_CASE_7'(s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',X6))),s(fun('type.ast.lit',X9),X10),s(fun('type.option.option'('type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')),fun('type.list.list'('type.conSem.v'),X9)),X11),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.string.char'),fun('type.conLang.exp',X9))),X12),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.conLang.exp'))),fun('type.list.list'('type.string.char'),X9))),X13),s(fun('type.num.num',X9),X14),s(fun('type.list.list'('type.conSem.v'),X9),X15)))),
+  file('thm.conSem.v_|49||49||split|0','thm.conSem.v_case_def|split|0')).
+fof(f14365,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.ast.lit',X0),X1),s('type.ast.lit',sK1))) = s(X0,'const.conSem.v_CASE_7'(s('type.conSem.v','const.conSem.Litv_1'(s('type.ast.lit',sK0))),s(fun('type.ast.lit',X0),X1),s(fun('type.option.option'('type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')),fun('type.list.list'('type.conSem.v'),X0)),X2),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.string.char'),fun('type.conLang.exp',X0))),X3),s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.conLang.exp'))),fun('type.list.list'('type.string.char'),X0))),X4),s(fun('type.num.num',X0),X5),s(fun('type.list.list'('type.conSem.v'),X0),X6)))) ) | $spl0),
+  inference(superposition,[],[f325,f399])).
+% SZS output end Proof for thm.conSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 151
+% Passive clauses: 3137
+% Generated clauses: 14645
+% Final active clauses: 142
+% Final passive clauses: 2814
+% Input formulas: 69
+% Initial clauses: 138
+% 
+% Duplicate literals: 449
+% Trivial inequalities: 369
+% Fw subsumption resolutions: 1265
+% Fw demodulations: 2258
+% Bw demodulations: 6
+% 
+% Simple tautologies: 392
+% Equational tautologies: 40
+% Forward subsumptions: 6492
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 308
+% Factoring: 1
+% Forward superposition: 5374
+% Backward superposition: 4193
+% Self superposition: 118
+% Equality factoring: 64
+% Equality resolution: 34
+% 
+% Split clauses: 175
+% Split components: 355
+% SAT solver clauses: 395
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 95
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 175
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 392
+% TWLsolver calls for satisfiability: 134
+% 
+% Memory used [KB]: 14072
+% Time elapsed: 0.503 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.53 s

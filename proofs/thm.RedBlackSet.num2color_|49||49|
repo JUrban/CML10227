@@ -1,0 +1,152 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.RedBlackSet
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.RedBlackSet
+% SZS output start Proof for thm.RedBlackSet
+fof(f125,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f124,f30,f45,f43,f118,f29,f44,f42])).
+fof(f42,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1))) | $spl0),
+  inference(cnf_transformation,[],[f42_D])).
+fof(f42_D,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f44,plain,(
+  s('type.num.num',sK0) = s('type.num.num',sK1) | $spl2),
+  inference(cnf_transformation,[],[f44_D])).
+fof(f44_D,plain,(
+  s('type.num.num',sK0) = s('type.num.num',sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f29,plain,(
+  s('type.num.num',sK0) = s('type.num.num',sK1) | s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1)))),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1))) | s('type.num.num',sK0) = s('type.num.num',sK1)) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1))) | s('type.num.num',sK0) != s('type.num.num',sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f23])).
+fof(f23,plain,(
+  ? [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) | s('type.num.num',X0) = s('type.num.num',X1)) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) | s('type.num.num',X0) != s('type.num.num',X1)))),
+  inference(flattening,[],[f22])).
+fof(f22,plain,(
+  ? [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & ((s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) | s('type.num.num',X0) = s('type.num.num',X1)) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) | s('type.num.num',X0) != s('type.num.num',X1))))),
+  inference(nnf_transformation,[],[f18])).
+fof(f18,plain,(
+  ? [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) <~> s('type.num.num',X0) = s('type.num.num',X1)))),
+  inference(flattening,[],[f17])).
+fof(f17,plain,(
+  ? [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) & (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) <~> s('type.num.num',X0) = s('type.num.num',X1))))),
+  inference(ennf_transformation,[],[f10])).
+fof(f10,plain,(
+  ~! [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) => (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X1))) <=> s('type.num.num',X0) = s('type.num.num',X1))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X7),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) => (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X6))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X7))) <=> s('type.num.num',X6) = s('type.num.num',X7))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) => (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X7),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) => (s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X6))) = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X7))) <=> s('type.num.num',X6) = s('type.num.num',X7))))),
+  file('thm.RedBlackSet.num2color_|49||49|','thm.RedBlackSet.num2color_|49||49|')).
+fof(f118,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f117,f45])).
+fof(f117,plain,(
+  s('type.num.num',sK0) = s('type.num.num',sK1) | $spl0),
+  inference(forward_demodulation,[],[f114,f108])).
+fof(f108,plain,(
+  s('type.num.num',sK0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0)))))),
+  inference(resolution,[],[f35,f27])).
+fof(f27,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),
+  inference(cnf_transformation,[],[f24])).
+fof(f35,plain,(
+  ( ! [X0] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) | s('type.num.num',X0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0)))))) )),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0] : ((~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) | s('type.num.num',X0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0)))))) & (s('type.num.num',X0) != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))))),
+  inference(nnf_transformation,[],[f13])).
+fof(f13,plain,(
+  ! [X0] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) <=> s('type.num.num',X0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) <=> s('type.num.num',X6) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X6))))))),
+  file('thm.RedBlackSet.num2color_|49||49|','thm.RedBlackSet.color_BIJ|split|1')).
+fof(f114,plain,(
+  s('type.num.num',sK1) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))))) | $spl0),
+  inference(forward_demodulation,[],[f109,f42])).
+fof(f109,plain,(
+  s('type.num.num',sK1) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1)))))),
+  inference(resolution,[],[f35,f28])).
+fof(f28,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK1),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),
+  inference(cnf_transformation,[],[f24])).
+fof(f43,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1))) | $spl1),
+  inference(cnf_transformation,[],[f43_D])).
+fof(f43_D,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f45,plain,(
+  s('type.num.num',sK0) != s('type.num.num',sK1) | $spl3),
+  inference(cnf_transformation,[],[f45_D])).
+fof(f45_D,plain,(
+  s('type.num.num',sK0) != s('type.num.num',sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f30,plain,(
+  s('type.num.num',sK0) != s('type.num.num',sK1) | s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK1)))),
+  inference(cnf_transformation,[],[f24])).
+fof(f124,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f123])).
+fof(f123,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) != s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',sK0))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f43,f44])).
+% SZS output end Proof for thm.RedBlackSet
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 18
+% Passive clauses: 45
+% Generated clauses: 96
+% Final active clauses: 13
+% Final passive clauses: 20
+% Input formulas: 8
+% Initial clauses: 15
+% 
+% Duplicate literals: 1
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 8
+% Fw demodulations: 4
+% Bw demodulations: 1
+% 
+% Simple tautologies: 4
+% Equational tautologies: 4
+% Forward subsumptions: 22
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 21
+% Factoring: 1
+% Forward superposition: 21
+% Backward superposition: 8
+% Self superposition: 5
+% Equality factoring: 2
+% 
+% Split clauses: 5
+% Split components: 10
+% SAT solver clauses: 12
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 7
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 5
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 10
+% TWLsolver calls for satisfiability: 7
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.018 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.07 s

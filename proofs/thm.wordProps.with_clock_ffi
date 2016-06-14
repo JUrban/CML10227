@@ -1,0 +1,87 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordProps
+% SZS output start Proof for thm.wordProps
+fof(f954,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f528,f548])).
+fof(f548,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.wordSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f210])).
+fof(f210,plain,(
+  ! [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f209])).
+fof(f209,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f161])).
+fof(f161,axiom,(
+  ! [X7,X11] : ! [X9,X12] : s('type.ffi.ffi_state'(X11),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X7,X11),X9))) = s('type.ffi.ffi_state'(X11),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X7,X11),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X12),s('type.wordSem.state'(X7,X11),X9)))))),
+  file('thm.wordProps.with_clock_ffi','thm.wordSem.wordSem_22|49|_prove_ltb')).
+fof(f528,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(sK0,sK1),sK3))) != s('type.ffi.ffi_state'(sK1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(sK0,sK1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.wordSem.state'(sK0,sK1),sK3)))))),
+  inference(cnf_transformation,[],[f525])).
+fof(f525,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(sK0,sK1),sK3))) != s('type.ffi.ffi_state'(sK1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(sK0,sK1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.wordSem.state'(sK0,sK1),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f523])).
+fof(f523,plain,(
+  ? [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3))) != s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(ennf_transformation,[],[f179])).
+fof(f179,plain,(
+  ~! [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(flattening,[],[f178])).
+fof(f178,plain,(
+  ~! [X0,X1] : ! [X2,X3] : s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : s('type.ffi.ffi_state'(X7),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X6,X7),X9))) = s('type.ffi.ffi_state'(X7),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X6,X7),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.wordSem.state'(X6,X7),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : s('type.ffi.ffi_state'(X7),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X6,X7),X9))) = s('type.ffi.ffi_state'(X7),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X6,X7),'const.wordSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.wordSem.state'(X6,X7),X9)))))),
+  file('thm.wordProps.with_clock_ffi','thm.wordProps.with_clock_ffi')).
+% SZS output end Proof for thm.wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 45
+% Passive clauses: 250
+% Generated clauses: 414
+% Final active clauses: 43
+% Final passive clauses: 198
+% Input formulas: 176
+% Initial clauses: 177
+% 
+% Duplicate literals: 37
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 1
+% Fw demodulations: 12
+% 
+% Simple tautologies: 16
+% Equational tautologies: 15
+% Forward subsumptions: 81
+% 
+% Binary resolution: 4
+% Forward superposition: 56
+% Backward superposition: 72
+% Self superposition: 24
+% Equality factoring: 26
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 2
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 1
+% 
+% Sat splits: 1
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 1023
+% Time elapsed: 0.023 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.032 s

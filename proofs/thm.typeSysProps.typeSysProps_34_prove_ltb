@@ -1,0 +1,384 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.typeSysProps
+% (24922)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 132
+% Passive clauses: 1864
+% Generated clauses: 18552
+% Final active clauses: 120
+% Final passive clauses: 1633
+% Input formulas: 16
+% Initial clauses: 31
+% 
+% Duplicate literals: 1167
+% Trivial inequalities: 132
+% Fw subsumption resolutions: 2002
+% Fw demodulations: 3410
+% Bw demodulations: 6
+% 
+% Simple tautologies: 287
+% Equational tautologies: 22
+% Forward subsumptions: 8229
+% Fw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 122
+% Forward superposition: 7172
+% Backward superposition: 4105
+% Self superposition: 138
+% Equality factoring: 50
+% Equality resolution: 25
+% 
+% Split clauses: 532
+% Split components: 1086
+% SAT solver clauses: 1077
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 139
+% 
+% Sat splits: 532
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 1066
+% TWLsolver calls for satisfiability: 123
+% 
+% Memory used [KB]: 13304
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.typeSysProps
+% (24945)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 89
+% Passive clauses: 650
+% Generated clauses: 7592
+% Final active clauses: 80
+% Final passive clauses: 446
+% Input formulas: 16
+% Initial clauses: 31
+% 
+% Duplicate literals: 366
+% Trivial inequalities: 190
+% Fw subsumption resolutions: 458
+% Fw demodulations: 896
+% Bw demodulations: 95
+% Condensations: 656
+% 
+% Simple tautologies: 180
+% Equational tautologies: 18
+% Forward subsumptions: 2932
+% Fw demodulations to eq. taut.: 4
+% Bw demodulations to eq. taut.: 28
+% 
+% Binary resolution: 17
+% Forward superposition: 2136
+% Backward superposition: 1879
+% Self superposition: 83
+% Equality factoring: 44
+% Equality resolution: 35
+% 
+% Split clauses: 98
+% Split components: 204
+% SAT solver clauses: 1268
+% SAT solver unit clauses: 33
+% SAT solver binary clauses: 28
+% 
+% Sat splits: 98
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1268
+% TWLsolver calls for satisfiability: 185
+% 
+% Memory used [KB]: 10746
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.typeSysProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.typeSysProps
+% SZS output start Proof for thm.typeSysProps
+fof(f15403,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f15402,f61])).
+fof(f61,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f20])).
+fof(f20,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb',aHL_FALSITY)).
+fof(f15402,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f15401,f136])).
+fof(f136,plain,(
+  s(bool,'F_0') = s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4)))),
+  inference(unit_resulting_resolution,[],[f121,f62])).
+fof(f62,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb',aHL_BOOL_CASES)).
+fof(f121,plain,(
+  s(bool,'T_0') != s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4)))),
+  inference(unit_resulting_resolution,[],[f59,f60,f99])).
+fof(f99,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | s(bool,X0) != s(bool,X1) | p(s(bool,X1))) )),
+  inference(condensation,[],[f98])).
+fof(f98,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,X0)) | p(s(bool,X1)) | s(bool,X0) != s(bool,X1) | s(bool,X0) != s(bool,X2)) )),
+  inference(condensation,[],[f87])).
+fof(f87,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,X2)) | ~p(s(bool,X0)) | ~p(s(bool,X3)) | s(bool,X2) != s(bool,X3) | s(bool,X0) != s(bool,X1)) )),
+  inference(cnf_transformation,[],[f56])).
+fof(f56,plain,(
+  ! [X0,X1,X2,X3] : (s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3)) | (((p(s(bool,X0)) & ~p(s(bool,X2))) | ~p(s(bool,X1)) | p(s(bool,X3))) & ((p(s(bool,X1)) & ~p(s(bool,X3))) | ~p(s(bool,X0)) | p(s(bool,X2)))))),
+  inference(flattening,[],[f55])).
+fof(f55,plain,(
+  ! [X0,X1,X2,X3] : (s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3)) | (((p(s(bool,X0)) & ~p(s(bool,X2))) | (~p(s(bool,X1)) | p(s(bool,X3)))) & ((p(s(bool,X1)) & ~p(s(bool,X3))) | (~p(s(bool,X0)) | p(s(bool,X2))))))),
+  inference(nnf_transformation,[],[f49])).
+fof(f49,plain,(
+  ! [X0,X1,X2,X3] : (s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3)) | ((~p(s(bool,X0)) | p(s(bool,X2))) <=> (~p(s(bool,X1)) | p(s(bool,X3)))))),
+  inference(flattening,[],[f48])).
+fof(f48,plain,(
+  ! [X0,X1,X2,X3] : ((s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3))) | ((~p(s(bool,X0)) | p(s(bool,X2))) <=> (~p(s(bool,X1)) | p(s(bool,X3)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1,X2,X3] : ((s(bool,X0) = s(bool,X1) & (p(s(bool,X1)) => s(bool,X2) = s(bool,X3))) => ((p(s(bool,X0)) => p(s(bool,X2))) <=> (p(s(bool,X1)) => p(s(bool,X3)))))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X11,X16,X12,X17] : ((s(bool,X11) = s(bool,X16) & (p(s(bool,X16)) => s(bool,X12) = s(bool,X17))) => ((p(s(bool,X11)) => p(s(bool,X12))) <=> (p(s(bool,X16)) => p(s(bool,X17)))))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','thm.bool.IMP_CONG')).
+fof(f60,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb',aHL_TRUTH)).
+fof(f59,plain,(
+  ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4))))),
+  inference(cnf_transformation,[],[f50])).
+fof(f50,plain,(
+  p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1),s(sK0,sK2))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4))))) & ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f42])).
+fof(f42,plain,(
+  ? [X0,X1,X2,X3,X4] : (p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X2))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4))))) & ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))),
+  inference(flattening,[],[f41])).
+fof(f41,plain,(
+  ? [X0,X1,X2,X3,X4] : ((p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X2))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))) & ~p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))),
+  inference(ennf_transformation,[],[f19])).
+fof(f19,plain,(
+  ~! [X0,X1,X2,X3,X4] : ((p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X2))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))),
+  inference(flattening,[],[f18])).
+fof(f18,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4] : ((p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X2))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),X3),s('type.ast.t',X4)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X7)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X7),s(X6,X8))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),X9),s('type.ast.t',X10)))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),X9),s('type.ast.t',X10)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X7)))) & s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X7),s(X6,X8))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),X9),s('type.ast.t',X10)))))) => p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),X9),s('type.ast.t',X10)))))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','thm.typeSysProps.typeSysProps_34_prove_ltb')).
+fof(f15401,plain,(
+  p(s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4))))),
+  inference(forward_demodulation,[],[f15400,f70])).
+fof(f70,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))) = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t',X2)))) )),
+  inference(cnf_transformation,[],[f32])).
+fof(f32,plain,(
+  ! [X0,X1,X2] : s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1),s('type.ast.t',X2))) = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))),s('type.ast.t',X2)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X25,X26,X27] : s(bool,'const.typeSystem.check_freevars_3'(s('type.num.num',X25),s('type.list.list'('type.list.list'('type.string.char')),X26),s('type.ast.t',X27))) = s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X25),s('type.list.list'('type.list.list'('type.string.char')),X26))),s('type.ast.t',X27)))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','ARITY_2_3_const.typeSystem.check_freevars')).
+fof(f15400,plain,(
+  p(s(bool,happ(s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num','const.num.|48|_0'),s('type.list.list'('type.list.list'('type.string.char')),sK3))),s('type.ast.t',sK4))))),
+  inference(forward_demodulation,[],[f15399,f66])).
+fof(f66,plain,(
+  ( ! [X0,X1] : (s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))) = s(fun('type.ast.t',bool),happ(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num',X0))),s('type.list.list'('type.list.list'('type.string.char')),X1)))) )),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0,X1] : s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X0),s('type.list.list'('type.list.list'('type.string.char')),X1))) = s(fun('type.ast.t',bool),happ(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num',X0))),s('type.list.list'('type.list.list'('type.string.char')),X1)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X25,X26] : s(fun('type.ast.t',bool),'const.typeSystem.check_freevars_2'(s('type.num.num',X25),s('type.list.list'('type.list.list'('type.string.char')),X26))) = s(fun('type.ast.t',bool),happ(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num',X25))),s('type.list.list'('type.list.list'('type.string.char')),X26)))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','ARITY_1_2_const.typeSystem.check_freevars')).
+fof(f15399,plain,(
+  p(s(bool,happ(s(fun('type.ast.t',bool),happ(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))),s('type.list.list'('type.list.list'('type.string.char')),sK3))),s('type.ast.t',sK4))))),
+  inference(forward_demodulation,[],[f15382,f79])).
+fof(f79,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X4))),s(X2,X5))) = s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),'const.pair.,_2'(s(X1,X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X4))),s(X2,X5))) = s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),'const.pair.,_2'(s(X1,X4),s(X2,X5)))))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,happ(s(fun(X2,X0),happ(s(fun(X1,fun(X2,X0)),X3),s(X1,X4))),s(X2,X5))) = s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),'const.pair.,_2'(s(X1,X4),s(X2,X5)))))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X23,X6,X18] : ! [X21,X11,X12] : s(X23,happ(s(fun(X18,X23),happ(s(fun(X6,fun(X18,X23)),X21),s(X6,X11))),s(X18,X12))) = s(X23,'const.pair.UNCURRY_2'(s(fun(X6,fun(X18,X23)),X21),s('type.pair.prod'(X6,X18),'const.pair.,_2'(s(X6,X11),s(X18,X12)))))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','thm.pair.UNCURRY_DEF')).
+fof(f15382,plain,(
+  p(s(bool,'const.pair.UNCURRY_2'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4))))))),
+  inference(unit_resulting_resolution,[],[f58,f9566])).
+fof(f9566,plain,(
+  ( ! [X0,X1] : (s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X0))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1),s(sK0,X1))) | p(s(bool,'const.pair.UNCURRY_2'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X0))))) )),
+  inference(subsumption_resolution,[],[f9548,f60])).
+fof(f9548,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | p(s(bool,'const.pair.UNCURRY_2'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X0)))) | s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X0))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1),s(sK0,X1)))) )),
+  inference(superposition,[],[f2214,f109])).
+fof(f109,plain,(
+  s(bool,'T_0') = s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1)))),
+  inference(subsumption_resolution,[],[f105,f61])).
+fof(f105,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1)))),
+  inference(superposition,[],[f57,f62])).
+fof(f57,plain,(
+  p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1))))),
+  inference(cnf_transformation,[],[f50])).
+fof(f2214,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) | p(s(bool,'const.pair.UNCURRY_2'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2)))) | s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X3)))) )),
+  inference(forward_demodulation,[],[f2213,f100])).
+fof(f100,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun('type.pair.prod'(X1,X2),X0),'const.pair.UNCURRY_1'(s(fun(X1,fun(X2,X0)),X3))),s('type.pair.prod'(X1,X2),X4)))) )),
+  inference(forward_demodulation,[],[f78,f77])).
+fof(f77,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),happ(s(fun(fun(X0,fun(X1,X2)),fun('type.pair.prod'(X0,X1),X2)),'const.pair.UNCURRY_0'),s(fun(X0,fun(X1,X2)),X3)))) )),
+  inference(cnf_transformation,[],[f35])).
+fof(f35,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),happ(s(fun(fun(X0,fun(X1,X2)),fun('type.pair.prod'(X0,X1),X2)),'const.pair.UNCURRY_0'),s(fun(X0,fun(X1,X2)),X3)))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ! [X0,X1,X2] : ! [X3] : s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),happ(s(fun(fun(X0,fun(X1,X2)),fun('type.pair.prod'(X0,X1),X2)),'const.pair.UNCURRY_0'),s(fun(X0,fun(X1,X2)),X3)))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X6,X18,X23] : ! [X25] : s(fun('type.pair.prod'(X6,X18),X23),'const.pair.UNCURRY_1'(s(fun(X6,fun(X18,X23)),X25))) = s(fun('type.pair.prod'(X6,X18),X23),happ(s(fun(fun(X6,fun(X18,X23)),fun('type.pair.prod'(X6,X18),X23)),'const.pair.UNCURRY_0'),s(fun(X6,fun(X18,X23)),X25)))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','ARITY_0_1_const.pair.UNCURRY')).
+fof(f78,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun('type.pair.prod'(X1,X2),X0),happ(s(fun(fun(X1,fun(X2,X0)),fun('type.pair.prod'(X1,X2),X0)),'const.pair.UNCURRY_0'),s(fun(X1,fun(X2,X0)),X3))),s('type.pair.prod'(X1,X2),X4)))) )),
+  inference(cnf_transformation,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun('type.pair.prod'(X1,X2),X0),happ(s(fun(fun(X1,fun(X2,X0)),fun('type.pair.prod'(X1,X2),X0)),'const.pair.UNCURRY_0'),s(fun(X1,fun(X2,X0)),X3))),s('type.pair.prod'(X1,X2),X4)))),
+  inference(flattening,[],[f36])).
+fof(f36,plain,(
+  ! [X0,X1,X2] : ! [X3,X4] : s(X0,'const.pair.UNCURRY_2'(s(fun(X1,fun(X2,X0)),X3),s('type.pair.prod'(X1,X2),X4))) = s(X0,happ(s(fun('type.pair.prod'(X1,X2),X0),happ(s(fun(fun(X1,fun(X2,X0)),fun('type.pair.prod'(X1,X2),X0)),'const.pair.UNCURRY_0'),s(fun(X1,fun(X2,X0)),X3))),s('type.pair.prod'(X1,X2),X4)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X23,X6,X18] : ! [X25,X26] : s(X23,'const.pair.UNCURRY_2'(s(fun(X6,fun(X18,X23)),X25),s('type.pair.prod'(X6,X18),X26))) = s(X23,happ(s(fun('type.pair.prod'(X6,X18),X23),happ(s(fun(fun(X6,fun(X18,X23)),fun('type.pair.prod'(X6,X18),X23)),'const.pair.UNCURRY_0'),s(fun(X6,fun(X18,X23)),X25))),s('type.pair.prod'(X6,X18),X26)))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','ARITY_0_2_const.pair.UNCURRY')).
+fof(f2213,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2)))) | ~p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) | s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X3)))) )),
+  inference(forward_demodulation,[],[f2212,f67])).
+fof(f67,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))),
+  inference(flattening,[],[f26])).
+fof(f26,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X28,X29] : ! [X30,X31] : s(X29,X30) = s(X29,happ(s(fun(X28,X29),'_dst_x0_1'(s(X29,X30))),s(X28,X31)))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','_dst_x0_ax')).
+fof(f2212,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),happ(s(fun(X0,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))),s(X0,X3))),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2)))) | ~p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) | s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X3)))) )),
+  inference(forward_demodulation,[],[f2211,f79])).
+fof(f2211,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.pair.UNCURRY_2'(s(fun(X0,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))),s('type.pair.prod'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.pair.,_2'(s(X0,X3),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2)))))) | ~p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) | s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X3)))) )),
+  inference(forward_demodulation,[],[f2193,f100])).
+fof(f2193,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) | s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2))) != s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1),s(X0,X3))) | p(s(bool,happ(s(fun('type.pair.prod'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),bool),'const.pair.UNCURRY_1'(s(fun(X0,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))))),s('type.pair.prod'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.pair.,_2'(s(X0,X3),s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),X2))))))) )),
+  inference(superposition,[],[f69,f63])).
+fof(f63,plain,(
+  ( ! [X0,X1] : (s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1))) = s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),bool),'const.pair.UNCURRY_1'(s(fun(X0,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))))),s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))) )),
+  inference(cnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0,X1] : s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1))) = s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),bool),'const.pair.UNCURRY_1'(s(fun(X0,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))))),s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))),
+  inference(flattening,[],[f21])).
+fof(f21,plain,(
+  ! [X0] : ! [X1] : s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1))) = s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),bool),'const.pair.UNCURRY_1'(s(fun(X0,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))))),s('type.finite_map.fmap'(X0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X1)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6] : ! [X24] : s(bool,'const.typeSoundInvariants.flat_tenv_tabbrev_ok_1'(s('type.finite_map.fmap'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X24))) = s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),bool),'const.pair.UNCURRY_1'(s(fun(X6,fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool)),'_dst_x0_1'(s(fun('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),bool),'const.pair.UNCURRY_1'(s(fun('type.list.list'('type.list.list'('type.string.char')),fun('type.ast.t',bool)),'const.typeSystem.check_freevars_1'(s('type.num.num','const.num.|48|_0'))))))))),s('type.finite_map.fmap'(X6,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),X24)))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','thm.typeSoundInvariants.flat_tenv_tabbrev_ok_def')).
+fof(f69,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.finite_map.fmap'(X0,X1),X4)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))) | p(s(bool,happ(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X2))))))) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (~p(s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.finite_map.fmap'(X0,X1),X4)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))) | p(s(bool,happ(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X2)))))))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((~p(s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.finite_map.fmap'(X0,X1),X4)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3)))) | p(s(bool,happ(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X2)))))))),
+  inference(ennf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((p(s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.finite_map.fmap'(X0,X1),X4)))) & s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3)))) => p(s(bool,happ(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X2)))))))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : ((p(s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.finite_map.fmap'(X0,X1),X4)))) & s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3)))) => p(s(bool,happ(s(fun('type.pair.prod'(X0,X1),bool),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X2)))))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6,X18] : ! [X19,X20,X21,X22] : ((p(s(bool,'const.finite_map.FEVERY_2'(s(fun('type.pair.prod'(X6,X18),bool),X22),s('type.finite_map.fmap'(X6,X18),X21)))) & s('type.option.option'(X18),'const.option.SOME_1'(s(X18,X19))) = s('type.option.option'(X18),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,X18),X21),s(X6,X20)))) => p(s(bool,happ(s(fun('type.pair.prod'(X6,X18),bool),X22),s('type.pair.prod'(X6,X18),'const.pair.,_2'(s(X6,X20),s(X18,X19)))))))),
+  file('thm.typeSysProps.typeSysProps_34_prove_ltb','thm.finite_map.FEVERY_FLOOKUP')).
+fof(f58,plain,(
+  s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(sK0,'type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),sK1),s(sK0,sK2))) = s('type.option.option'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t')),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.ast.t'),'const.pair.,_2'(s('type.list.list'('type.list.list'('type.string.char')),sK3),s('type.ast.t',sK4)))))),
+  inference(cnf_transformation,[],[f50])).
+% SZS output end Proof for thm.typeSysProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 134
+% Passive clauses: 927
+% Generated clauses: 15419
+% Final active clauses: 80
+% Final passive clauses: 474
+% Input formulas: 16
+% Initial clauses: 31
+% 
+% Duplicate literals: 942
+% Trivial inequalities: 173
+% Fw subsumption resolutions: 914
+% Fw demodulations: 2305
+% Bw demodulations: 272
+% Condensations: 1180
+% Global subsumptions: 17
+% 
+% Simple tautologies: 238
+% Equational tautologies: 124
+% Forward subsumptions: 8478
+% Fw demodulations to eq. taut.: 6
+% Bw demodulations to eq. taut.: 57
+% 
+% Unit resulting resolution: 508
+% Forward superposition: 4993
+% Backward superposition: 3476
+% Self superposition: 186
+% Equality factoring: 85
+% Equality resolution: 13
+% 
+% Split clauses: 80
+% Split components: 172
+% SAT solver clauses: 1140
+% SAT solver unit clauses: 51
+% SAT solver binary clauses: 143
+% 
+% Sat splits: 80
+% Sat splitting refutations: 34
+% 
+% Memory used [KB]: 13944
+% Time elapsed: 0.855 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.168 s

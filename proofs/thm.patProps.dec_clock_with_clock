@@ -1,0 +1,223 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.patProps
+% (109458)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 81
+% Passive clauses: 2240
+% Generated clauses: 16712
+% Final active clauses: 79
+% Final passive clauses: 2058
+% Input formulas: 14
+% Initial clauses: 15
+% 
+% Duplicate literals: 1080
+% Trivial inequalities: 194
+% Fw subsumption resolutions: 2041
+% Fw demodulations: 894
+% 
+% Simple tautologies: 290
+% Equational tautologies: 99
+% Forward subsumptions: 7491
+% Fw demodulations to eq. taut.: 16
+% 
+% Binary resolution: 28
+% Forward superposition: 6746
+% Backward superposition: 4856
+% Self superposition: 445
+% Equality factoring: 284
+% Equality resolution: 11
+% 
+% Split clauses: 737
+% Split components: 1479
+% SAT solver clauses: 2127
+% SAT solver unit clauses: 243
+% SAT solver binary clauses: 554
+% 
+% Sat splits: 737
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2123
+% TWLsolver calls for satisfiability: 93
+% 
+% Memory used [KB]: 10362
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.patProps
+% (109487)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 43
+% Passive clauses: 180
+% Generated clauses: 6857
+% Final active clauses: 40
+% Final passive clauses: 135
+% Input formulas: 14
+% Initial clauses: 15
+% 
+% Duplicate literals: 1061
+% Trivial inequalities: 75
+% Fw subsumption resolutions: 296
+% Fw demodulations: 85
+% Bw demodulations: 1
+% Condensations: 1763
+% 
+% Simple tautologies: 120
+% Equational tautologies: 64
+% Forward subsumptions: 2571
+% Fw demodulations to eq. taut.: 7
+% 
+% Binary resolution: 16
+% Forward superposition: 1573
+% Backward superposition: 1410
+% Self superposition: 261
+% Equality factoring: 197
+% Equality resolution: 5
+% 
+% Split clauses: 72
+% Split components: 145
+% SAT solver clauses: 492
+% SAT solver unit clauses: 26
+% SAT solver binary clauses: 86
+% 
+% Sat splits: 72
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 492
+% TWLsolver calls for satisfiability: 53
+% 
+% Memory used [KB]: 6268
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.patProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.patProps
+% SZS output start Proof for thm.patProps
+fof(f24512,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f24467])).
+fof(f24467,plain,(
+  s('type.patSem.state'(sK0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK1))),s('type.patSem.state'(sK0),sK2))) != s('type.patSem.state'(sK0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK1))),s('type.patSem.state'(sK0),sK2)))),
+  inference(superposition,[],[f42,f4848])).
+fof(f4848,plain,(
+  ( ! [X2,X0,X1] : (s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.patSem.state'(X0),X1))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X1)))))) )),
+  inference(superposition,[],[f1671,f47])).
+fof(f47,plain,(
+  ( ! [X0,X1] : (s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X1))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.patSem.state_clock_1'(s('type.patSem.state'(X0),X1))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.patSem.state'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f20])).
+fof(f20,plain,(
+  ! [X0,X1] : s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X1))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.patSem.state_clock_1'(s('type.patSem.state'(X0),X1))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.patSem.state'(X0),X1)))),
+  inference(flattening,[],[f19])).
+fof(f19,plain,(
+  ! [X0] : ! [X1] : s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X1))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.patSem.state_clock_1'(s('type.patSem.state'(X0),X1))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.patSem.state'(X0),X1)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6] : ! [X8] : s('type.patSem.state'(X6),'const.patSem.dec_clock_1'(s('type.patSem.state'(X6),X8))) = s('type.patSem.state'(X6),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.patSem.state_clock_1'(s('type.patSem.state'(X6),X8))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))),s('type.patSem.state'(X6),X8)))),
+  file('thm.patProps.dec_clock_with_clock','thm.patSem.dec_clock_def')).
+fof(f1671,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.patSem.state'(X2),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X0))),s('type.patSem.state'(X2),X3))) = s('type.patSem.state'(X2),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X0))),s('type.patSem.state'(X2),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X1),s('type.patSem.state'(X2),X3)))))) )),
+  inference(superposition,[],[f50,f54])).
+fof(f54,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X1,X2),'const.combin.K_1'(s(X2,X4))) = s(fun(X1,X2),'const.combin.o_2'(s(fun(X0,X2),'const.combin.K_1'(s(X2,X4))),s(fun(X1,X0),X3)))) )),
+  inference(cnf_transformation,[],[f32])).
+fof(f32,plain,(
+  ! [X0,X1,X2,X3,X4] : s(fun(X1,X2),'const.combin.K_1'(s(X2,X4))) = s(fun(X1,X2),'const.combin.o_2'(s(fun(X0,X2),'const.combin.K_1'(s(X2,X4))),s(fun(X1,X0),X3)))),
+  inference(flattening,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1,X2] : ! [X3,X4] : s(fun(X1,X2),'const.combin.K_1'(s(X2,X4))) = s(fun(X1,X2),'const.combin.o_2'(s(fun(X0,X2),'const.combin.K_1'(s(X2,X4))),s(fun(X1,X0),X3)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X10,X6,X11] : ! [X12,X13] : s(fun(X6,X11),'const.combin.K_1'(s(X11,X13))) = s(fun(X6,X11),'const.combin.o_2'(s(fun(X10,X11),'const.combin.K_1'(s(X11,X13))),s(fun(X6,X10),X12)))),
+  file('thm.patProps.dec_clock_with_clock','thm.combin.K_o_THM|split|0')).
+fof(f50,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.patSem.state'(X0),X1))))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X3),s(fun('type.num.num','type.num.num'),X2))),s('type.patSem.state'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0,X1,X2,X3] : s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.patSem.state'(X0),X1))))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X3),s(fun('type.num.num','type.num.num'),X2))),s('type.patSem.state'(X0),X1)))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.patSem.state'(X0),X1))))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X3),s(fun('type.num.num','type.num.num'),X2))),s('type.patSem.state'(X0),X1)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X17] : ! [X8,X18,X12] : s('type.patSem.state'(X17),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X12),s('type.patSem.state'(X17),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X18),s('type.patSem.state'(X17),X8))))) = s('type.patSem.state'(X17),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.o_2'(s(fun('type.num.num','type.num.num'),X12),s(fun('type.num.num','type.num.num'),X18))),s('type.patSem.state'(X17),X8)))),
+  file('thm.patProps.dec_clock_with_clock','thm.patSem.patSem_84_prove_ltb')).
+fof(f42,plain,(
+  s('type.patSem.state'(sK0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK1))),s('type.patSem.state'(sK0),sK2))) != s('type.patSem.state'(sK0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK1))),s('type.patSem.state'(sK0),'const.patSem.dec_clock_1'(s('type.patSem.state'(sK0),sK2)))))),
+  inference(cnf_transformation,[],[f39])).
+fof(f39,plain,(
+  s('type.patSem.state'(sK0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK1))),s('type.patSem.state'(sK0),sK2))) != s('type.patSem.state'(sK0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK1))),s('type.patSem.state'(sK0),'const.patSem.dec_clock_1'(s('type.patSem.state'(sK0),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f37])).
+fof(f37,plain,(
+  ? [X0,X1,X2] : s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.patSem.state'(X0),X2))) != s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X2)))))),
+  inference(ennf_transformation,[],[f17])).
+fof(f17,plain,(
+  ~! [X0,X1,X2] : s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.patSem.state'(X0),X2))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X2)))))),
+  inference(flattening,[],[f16])).
+fof(f16,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.patSem.state'(X0),X2))) = s('type.patSem.state'(X0),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.patSem.state'(X0),'const.patSem.dec_clock_1'(s('type.patSem.state'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.patSem.state'(X6),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X7))),s('type.patSem.state'(X6),X8))) = s('type.patSem.state'(X6),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X7))),s('type.patSem.state'(X6),'const.patSem.dec_clock_1'(s('type.patSem.state'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.patSem.state'(X6),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X7))),s('type.patSem.state'(X6),X8))) = s('type.patSem.state'(X6),'const.patSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X7))),s('type.patSem.state'(X6),'const.patSem.dec_clock_1'(s('type.patSem.state'(X6),X8)))))),
+  file('thm.patProps.dec_clock_with_clock','thm.patProps.dec_clock_with_clock')).
+% SZS output end Proof for thm.patProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 131
+% Passive clauses: 947
+% Generated clauses: 24383
+% Final active clauses: 83
+% Final passive clauses: 502
+% Input formulas: 14
+% Initial clauses: 15
+% 
+% Duplicate literals: 2143
+% Trivial inequalities: 233
+% Fw subsumption resolutions: 1484
+% Fw demodulations: 1504
+% Bw demodulations: 112
+% Condensations: 3825
+% Global subsumptions: 9
+% 
+% Simple tautologies: 345
+% Equational tautologies: 513
+% Forward subsumptions: 13123
+% Fw demodulations to eq. taut.: 48
+% Bw demodulations to eq. taut.: 6
+% 
+% Unit resulting resolution: 1064
+% Forward superposition: 7423
+% Backward superposition: 5483
+% Self superposition: 419
+% Equality factoring: 212
+% Equality resolution: 13
+% 
+% Split clauses: 245
+% Split components: 491
+% SAT solver clauses: 1459
+% SAT solver unit clauses: 340
+% SAT solver binary clauses: 149
+% 
+% Sat splits: 245
+% Sat splitting refutations: 11
+% 
+% Memory used [KB]: 23027
+% Time elapsed: 2.350 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.68 s

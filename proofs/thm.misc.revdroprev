@@ -1,0 +1,171 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f3983,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3967,f82,f116,f114,f119])).
+fof(f119,plain,(
+  p(s(bool,'T_0')) | $spl4),
+  inference(cnf_transformation,[],[f119_D])).
+fof(f119_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f114,plain,(
+  p(s(bool,'T_0'))),
+  inference(trivial_inequality_removal,[],[f104])).
+fof(f104,plain,(
+  ( ! [X0,X1] : (p(s(bool,'T_0')) | s(X0,X1) != s(X0,X1)) )),
+  inference(cnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ! [X0,X1] : ((s(X0,X1) != s(X0,X1) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | s(X0,X1) = s(X0,X1)))),
+  inference(nnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1] : (s(X0,X1) = s(X0,X1) <=> p(s(bool,'T_0')))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ! [X0] : ! [X1] : (s(X0,X1) = s(X0,X1) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6] : ! [X10] : (s(X6,X10) = s(X6,X10) <=> p(s(bool,'T_0')))),
+  file('thm.misc.revdroprev','thm.bool.REFL_CLAUSE')).
+fof(f116,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f116_D])).
+fof(f116_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f82,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.misc.revdroprev',aHL_FALSITY)).
+fof(f3967,plain,(
+  $false | ($spl1 | $spl4)),
+  inference(subsumption_resolution,[],[f3966,f3010])).
+fof(f3010,plain,(
+  s('type.list.list'(sK0),'const.rich_list.BUTLASTN_2'(s('type.num.num',sK2),s('type.list.list'(sK0),sK1))) != s('type.list.list'(sK0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))),s('type.num.num',sK2))),s('type.list.list'(sK0),sK1)))),
+  inference(forward_demodulation,[],[f79,f108])).
+fof(f108,plain,(
+  ( ! [X2,X0,X1] : (s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num',X1),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X2)))))))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1,X2] : s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num',X1),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X2)))))))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0] : ! [X1,X2] : s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num',X1),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X2)))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X8,X9] : s('type.list.list'(X6),'const.rich_list.BUTLASTN_2'(s('type.num.num',X8),s('type.list.list'(X6),X9))) = s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),'const.list.DROP_2'(s('type.num.num',X8),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X9)))))))),
+  file('thm.misc.revdroprev','thm.rich_list.BUTLASTN_def')).
+fof(f79,plain,(
+  s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.DROP_2'(s('type.num.num',sK2),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),sK1))))))) != s('type.list.list'(sK0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))),s('type.num.num',sK2))),s('type.list.list'(sK0),sK1)))),
+  inference(cnf_transformation,[],[f60])).
+fof(f60,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1)))))) & s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.DROP_2'(s('type.num.num',sK2),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),sK1))))))) != s('type.list.list'(sK0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))),s('type.num.num',sK2))),s('type.list.list'(sK0),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f49])).
+fof(f49,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1)))))) & s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))))))) != s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.num.num',X2))),s('type.list.list'(X0),X1))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1)))))) => s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))))))) = s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.num.num',X2))),s('type.list.list'(X0),X1))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1)))))) => s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num',X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))))))) = s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.num.num',X2))),s('type.list.list'(X0),X1))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X8),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7)))))) => s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),'const.list.DROP_2'(s('type.num.num',X8),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X7))))))) = s('type.list.list'(X6),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))),s('type.num.num',X8))),s('type.list.list'(X6),X7))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X8),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7)))))) => s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),'const.list.DROP_2'(s('type.num.num',X8),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X7))))))) = s('type.list.list'(X6),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))),s('type.num.num',X8))),s('type.list.list'(X6),X7))))),
+  file('thm.misc.revdroprev','thm.misc.revdroprev')).
+fof(f3966,plain,(
+  s('type.list.list'(sK0),'const.rich_list.BUTLASTN_2'(s('type.num.num',sK2),s('type.list.list'(sK0),sK1))) = s('type.list.list'(sK0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))),s('type.num.num',sK2))),s('type.list.list'(sK0),sK1))) | ($spl1 | $spl4)),
+  inference(subsumption_resolution,[],[f3929,f119])).
+fof(f3929,plain,(
+  ~p(s(bool,'T_0')) | s('type.list.list'(sK0),'const.rich_list.BUTLASTN_2'(s('type.num.num',sK2),s('type.list.list'(sK0),sK1))) = s('type.list.list'(sK0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))),s('type.num.num',sK2))),s('type.list.list'(sK0),sK1))) | $spl1),
+  inference(superposition,[],[f109,f131])).
+fof(f131,plain,(
+  s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))))) | $spl1),
+  inference(subsumption_resolution,[],[f128,f116])).
+fof(f128,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1)))))),
+  inference(superposition,[],[f78,f84])).
+fof(f84,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.misc.revdroprev',aHL_BOOL_CASES)).
+fof(f78,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK0),sK1))))))),
+  inference(cnf_transformation,[],[f60])).
+fof(f109,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2)))))) | s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))),s('type.num.num',X1))),s('type.list.list'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f58])).
+fof(f58,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2)))))) | s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))),s('type.num.num',X1))),s('type.list.list'(X0),X2))))),
+  inference(ennf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2)))))) => s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))),s('type.num.num',X1))),s('type.list.list'(X0),X2))))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2)))))) => s('type.list.list'(X0),'const.rich_list.BUTLASTN_2'(s('type.num.num',X1),s('type.list.list'(X0),X2))) = s('type.list.list'(X0),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X2))),s('type.num.num',X1))),s('type.list.list'(X0),X2))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X8,X7] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X8),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7)))))) => s('type.list.list'(X6),'const.rich_list.BUTLASTN_2'(s('type.num.num',X8),s('type.list.list'(X6),X7))) = s('type.list.list'(X6),'const.list.TAKE_2'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))),s('type.num.num',X8))),s('type.list.list'(X6),X7))))),
+  file('thm.misc.revdroprev','thm.rich_list.BUTLASTN_TAKE')).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 40
+% Passive clauses: 728
+% Generated clauses: 3772
+% Final active clauses: 32
+% Final passive clauses: 638
+% Input formulas: 21
+% Initial clauses: 36
+% 
+% Duplicate literals: 405
+% Trivial inequalities: 48
+% Fw subsumption resolutions: 237
+% Fw demodulations: 38
+% Bw demodulations: 5
+% 
+% Simple tautologies: 122
+% Equational tautologies: 84
+% Forward subsumptions: 1564
+% 
+% Binary resolution: 26
+% Forward superposition: 1193
+% Backward superposition: 1288
+% Self superposition: 247
+% Equality factoring: 214
+% Equality resolution: 1
+% 
+% Split clauses: 207
+% Split components: 415
+% SAT solver clauses: 573
+% SAT solver unit clauses: 228
+% SAT solver binary clauses: 139
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 207
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 567
+% TWLsolver calls for satisfiability: 22
+% 
+% Memory used [KB]: 2046
+% Time elapsed: 0.144 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.16 s

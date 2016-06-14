@@ -1,0 +1,218 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.word_instProof
+% (54302)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 53
+% Passive clauses: 1201
+% Generated clauses: 9442
+% Final active clauses: 51
+% Final passive clauses: 1107
+% Input formulas: 9
+% Initial clauses: 10
+% 
+% Duplicate literals: 783
+% Trivial inequalities: 142
+% Fw subsumption resolutions: 1267
+% Fw demodulations: 196
+% 
+% Simple tautologies: 239
+% Equational tautologies: 96
+% Forward subsumptions: 3871
+% 
+% Binary resolution: 32
+% Forward superposition: 3701
+% Backward superposition: 2618
+% Self superposition: 325
+% Equality factoring: 271
+% Equality resolution: 9
+% 
+% Split clauses: 476
+% Split components: 957
+% SAT solver clauses: 1471
+% SAT solver unit clauses: 248
+% SAT solver binary clauses: 497
+% 
+% Sat splits: 476
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1467
+% TWLsolver calls for satisfiability: 52
+% 
+% Memory used [KB]: 4093
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.word_instProof
+% (54330)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 17
+% Passive clauses: 69
+% Generated clauses: 2332
+% Final active clauses: 16
+% Final passive clauses: 49
+% Input formulas: 9
+% Initial clauses: 10
+% 
+% Duplicate literals: 564
+% Trivial inequalities: 21
+% Fw subsumption resolutions: 30
+% Bw demodulations: 3
+% Condensations: 797
+% 
+% Simple tautologies: 49
+% Equational tautologies: 44
+% Forward subsumptions: 601
+% 
+% Binary resolution: 6
+% Forward superposition: 256
+% Backward superposition: 329
+% Self superposition: 161
+% Equality factoring: 150
+% 
+% Split clauses: 26
+% Split components: 52
+% SAT solver clauses: 226
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 62
+% 
+% Sat splits: 26
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 226
+% TWLsolver calls for satisfiability: 39
+% 
+% Memory used [KB]: 2046
+% Time elapsed: 0.899 s
+% ------------------------------
+% ------------------------------
+% remaining time: 134 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.word_instProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.word_instProof
+% SZS output start Proof for thm.word_instProof
+fof(f2909,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f2885,f1378])).
+fof(f1378,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2),s('type.list.list'('type.wordLang.exp'(X0)),'const.list.NIL_0'))),s('type.list.list'('type.wordLang.exp'(X0)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2))))))) )),
+  inference(superposition,[],[f35,f34])).
+fof(f34,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f15])).
+fof(f15,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f14])).
+fof(f14,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X11] : s('type.list.list'(X7),X11) = s('type.list.list'(X7),'const.list.APPEND_2'(s('type.list.list'(X7),X11),s('type.list.list'(X7),'const.list.NIL_0')))),
+  file('thm.word_instProof.word_instProof_7_prove_ltb','thm.list.APPEND_NIL')).
+fof(f35,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2),s('type.list.list'('type.wordLang.exp'(X0)),X3))),s('type.list.list'('type.wordLang.exp'(X0)),'const.list.APPEND_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2))),s('type.list.list'('type.wordLang.exp'(X0)),X3))))))) )),
+  inference(cnf_transformation,[],[f17])).
+fof(f17,plain,(
+  ! [X0,X1,X2,X3] : p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2),s('type.list.list'('type.wordLang.exp'(X0)),X3))),s('type.list.list'('type.wordLang.exp'(X0)),'const.list.APPEND_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2))),s('type.list.list'('type.wordLang.exp'(X0)),X3))))))),
+  inference(flattening,[],[f16])).
+fof(f16,plain,(
+  ! [X0] : ! [X1,X2,X3] : p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2),s('type.list.list'('type.wordLang.exp'(X0)),X3))),s('type.list.list'('type.wordLang.exp'(X0)),'const.list.APPEND_2'(s('type.list.list'('type.wordLang.exp'(X0)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X1),s('type.list.list'('type.wordLang.exp'(X0)),X2))),s('type.list.list'('type.wordLang.exp'(X0)),X3))))))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X7] : ! [X9,X10,X13] : p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X7)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10),s('type.list.list'('type.wordLang.exp'(X7)),X13))),s('type.list.list'('type.wordLang.exp'(X7)),'const.list.APPEND_2'(s('type.list.list'('type.wordLang.exp'(X7)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10))),s('type.list.list'('type.wordLang.exp'(X7)),X13))))))),
+  file('thm.word_instProof.word_instProof_7_prove_ltb','thm.word_instProof.word_instProof_6_prove_ltb')).
+fof(f2885,plain,(
+  ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(sK1)),'const.word_inst.pull_ops_3'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),sK4),s('type.list.list'('type.wordLang.exp'(sK1)),'const.list.NIL_0'))),s('type.list.list'('type.wordLang.exp'(sK1)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),sK4))))))),
+  inference(unit_resulting_resolution,[],[f29,f30,f37])).
+fof(f37,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),X5)))) | s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))) = s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X5))))) | s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X3)) )),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0,X1,X2,X3] : (s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X3) | ! [X4,X5] : (~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),X5)))) | s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))) = s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X5)))))))),
+  inference(ennf_transformation,[],[f21])).
+fof(f21,plain,(
+  ! [X0,X1,X2,X3] : (s('type.asm.binop','const.asm.Sub_0') != s('type.asm.binop',X3) => ! [X4,X5] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),X5)))) => s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))) = s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X5)))))))),
+  inference(flattening,[],[f20])).
+fof(f20,plain,(
+  ! [X0,X1] : ! [X2,X3] : (~s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X3) => ! [X4,X5] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),X5)))) => s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))) = s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X5)))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6,X7] : ! [X8,X9] : (~s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X9) => ! [X10,X12] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'('type.wordLang.exp'(X7)),X10),s('type.list.list'('type.wordLang.exp'(X7)),X12)))) => s('type.option.option'('type.wordSem.word_loc'(X7)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X7,X6),X8),s('type.wordLang.exp'(X7),'const.wordLang.Op_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10))))) = s('type.option.option'('type.wordSem.word_loc'(X7)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X7,X6),X8),s('type.wordLang.exp'(X7),'const.wordLang.Op_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X12)))))))),
+  file('thm.word_instProof.word_instProof_7_prove_ltb','thm.word_instProof.word_instProof_4_prove_ltb')).
+fof(f30,plain,(
+  s('type.option.option'('type.wordSem.word_loc'(sK1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(sK1,sK0),sK2),s('type.wordLang.exp'(sK1),'const.wordLang.Op_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),sK4))))))) != s('type.option.option'('type.wordSem.word_loc'(sK1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(sK1,sK0),sK2),s('type.wordLang.exp'(sK1),'const.wordLang.Op_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),'const.word_inst.pull_ops_3'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),sK4),s('type.list.list'('type.wordLang.exp'(sK1)),'const.list.NIL_0')))))))),
+  inference(cnf_transformation,[],[f27])).
+fof(f27,plain,(
+  s('type.asm.binop','const.asm.Sub_0') != s('type.asm.binop',sK3) & s('type.option.option'('type.wordSem.word_loc'(sK1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(sK1,sK0),sK2),s('type.wordLang.exp'(sK1),'const.wordLang.Op_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),sK4))))))) != s('type.option.option'('type.wordSem.word_loc'(sK1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(sK1,sK0),sK2),s('type.wordLang.exp'(sK1),'const.wordLang.Op_2'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),'const.word_inst.pull_ops_3'(s('type.asm.binop',sK3),s('type.list.list'('type.wordLang.exp'(sK1)),sK4),s('type.list.list'('type.wordLang.exp'(sK1)),'const.list.NIL_0')))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f24])).
+fof(f24,plain,(
+  ? [X0,X1,X2,X3,X4] : (s('type.asm.binop','const.asm.Sub_0') != s('type.asm.binop',X3) & s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))))) != s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),'const.list.NIL_0'))))))))),
+  inference(ennf_transformation,[],[f12])).
+fof(f12,plain,(
+  ~! [X0,X1,X2,X3,X4] : (s('type.asm.binop','const.asm.Sub_0') != s('type.asm.binop',X3) => s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))))) = s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),'const.list.NIL_0'))))))))),
+  inference(flattening,[],[f11])).
+fof(f11,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : (~s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X3) => s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4))))))) = s('type.option.option'('type.wordSem.word_loc'(X1)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X1,X0),X2),s('type.wordLang.exp'(X1),'const.wordLang.Op_2'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X3),s('type.list.list'('type.wordLang.exp'(X1)),X4),s('type.list.list'('type.wordLang.exp'(X1)),'const.list.NIL_0'))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : (~s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X9) => s('type.option.option'('type.wordSem.word_loc'(X7)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X7,X6),X8),s('type.wordLang.exp'(X7),'const.wordLang.Op_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10))))))) = s('type.option.option'('type.wordSem.word_loc'(X7)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X7,X6),X8),s('type.wordLang.exp'(X7),'const.wordLang.Op_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10),s('type.list.list'('type.wordLang.exp'(X7)),'const.list.NIL_0'))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : (~s('type.asm.binop','const.asm.Sub_0') = s('type.asm.binop',X9) => s('type.option.option'('type.wordSem.word_loc'(X7)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X7,X6),X8),s('type.wordLang.exp'(X7),'const.wordLang.Op_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),'const.word_instProof.pull_ops_simp_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10))))))) = s('type.option.option'('type.wordSem.word_loc'(X7)),'const.wordSem.word_exp_2'(s('type.wordSem.state'(X7,X6),X8),s('type.wordLang.exp'(X7),'const.wordLang.Op_2'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),'const.word_inst.pull_ops_3'(s('type.asm.binop',X9),s('type.list.list'('type.wordLang.exp'(X7)),X10),s('type.list.list'('type.wordLang.exp'(X7)),'const.list.NIL_0'))))))))),
+  file('thm.word_instProof.word_instProof_7_prove_ltb','thm.word_instProof.word_instProof_7_prove_ltb')).
+fof(f29,plain,(
+  s('type.asm.binop','const.asm.Sub_0') != s('type.asm.binop',sK3)),
+  inference(cnf_transformation,[],[f27])).
+% SZS output end Proof for thm.word_instProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 23
+% Passive clauses: 98
+% Generated clauses: 2829
+% Final active clauses: 20
+% Final passive clauses: 49
+% Input formulas: 9
+% Initial clauses: 10
+% 
+% Duplicate literals: 627
+% Trivial inequalities: 27
+% Fw subsumption resolutions: 91
+% Fw demodulations: 2
+% Bw demodulations: 26
+% Condensations: 959
+% 
+% Simple tautologies: 58
+% Equational tautologies: 68
+% Forward subsumptions: 913
+% 
+% Unit resulting resolution: 35
+% Forward superposition: 404
+% Backward superposition: 365
+% Self superposition: 161
+% Equality factoring: 150
+% Equality resolution: 2
+% 
+% Split clauses: 23
+% Split components: 46
+% SAT solver clauses: 147
+% SAT solver unit clauses: 12
+% SAT solver binary clauses: 29
+% 
+% Sat splits: 23
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 1791
+% Time elapsed: 0.433 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.97 s

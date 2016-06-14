@@ -1,0 +1,93 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvp_simpProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_simpProof
+% SZS output start Proof for thm.bvp_simpProof
+fof(f2443,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f2433])).
+fof(f2433,plain,(
+  s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(sK0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvp.prog',sK1),s('type.bvpSem.state'(sK0),sK2))))) != s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(sK0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvp.prog',sK1),s('type.bvpSem.state'(sK0),sK2)))))),
+  inference(superposition,[],[f66,f82])).
+fof(f82,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog',X2),s('type.bvpSem.state'(X0),X1))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X2),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog',X2),s('type.bvpSem.state'(X0),X1))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X2),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f32])).
+fof(f32,plain,(
+  ! [X0] : ! [X1,X2] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog',X2),s('type.bvpSem.state'(X0),X1))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X2),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X8,X7] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X6)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvp.prog',X7),s('type.bvpSem.state'(X6),X8))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X6)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X7),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X6),X8)))))),
+  file('thm.bvp_simpProof.bvp_simpProof_|48|_prove_ltb','thm.bvpProps.Seq_Skip')).
+fof(f66,plain,(
+  s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(sK0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvp.prog',sK1),s('type.bvpSem.state'(sK0),sK2))))) != s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(sK0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',sK1),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(sK0),sK2)))))),
+  inference(cnf_transformation,[],[f57])).
+fof(f57,plain,(
+  s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(sK0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvp.prog',sK1),s('type.bvpSem.state'(sK0),sK2))))) != s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(sK0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',sK1),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(sK0),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f52])).
+fof(f52,plain,(
+  ? [X0,X1,X2] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog',X1),s('type.bvpSem.state'(X0),X2))))) != s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X1),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog',X1),s('type.bvpSem.state'(X0),X2))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X1),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog',X1),s('type.bvpSem.state'(X0),X2))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X0)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X1),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X6)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvp.prog',X7),s('type.bvpSem.state'(X6),X8))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X6)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X7),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X6)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvp.prog',X7),s('type.bvpSem.state'(X6),X8))))) = s('type.pair.prod'('type.option.option'('type.semanticPrimitives.result'('type.bvlSem.v','type.bvlSem.v')),'type.bvpSem.state'(X6)),'const.bvpSem.evaluate_1'(s('type.pair.prod'('type.bvp.prog','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvp.prog','const.bvp.Seq_2'(s('type.bvp.prog',X7),s('type.bvp.prog','const.bvp.Skip_0'))),s('type.bvpSem.state'(X6),X8)))))),
+  file('thm.bvp_simpProof.bvp_simpProof_|48|_prove_ltb','thm.bvp_simpProof.bvp_simpProof_|48|_prove_ltb')).
+% SZS output end Proof for thm.bvp_simpProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 37
+% Passive clauses: 686
+% Generated clauses: 2281
+% Final active clauses: 29
+% Final passive clauses: 571
+% Input formulas: 21
+% Initial clauses: 31
+% 
+% Duplicate literals: 176
+% Trivial inequalities: 33
+% Fw subsumption resolutions: 243
+% Fw demodulations: 35
+% Bw demodulations: 5
+% 
+% Simple tautologies: 68
+% Equational tautologies: 39
+% Forward subsumptions: 911
+% 
+% Binary resolution: 69
+% Factoring: 1
+% Forward superposition: 737
+% Backward superposition: 718
+% Self superposition: 120
+% Equality factoring: 94
+% Equality resolution: 4
+% 
+% Split clauses: 46
+% Split components: 92
+% SAT solver clauses: 149
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 31
+% 
+% Sat splits: 46
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 149
+% TWLsolver calls for satisfiability: 69
+% 
+% Memory used [KB]: 2174
+% Time elapsed: 0.083 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.099 s

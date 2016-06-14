@@ -1,0 +1,105 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvlProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvlProps
+% SZS output start Proof for thm.bvlProps
+fof(f2725,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f2724])).
+fof(f2724,plain,(
+  s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(sK0),sK2))) != s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(sK0),sK2)))),
+  inference(superposition,[],[f99,f2606])).
+fof(f2606,plain,(
+  ( ! [X6,X8,X7] : (s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),X7))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),'const.bvlSem.dec_clock_2'(s('type.num.num',X8),s('type.bvlSem.state'(X6),X7)))))) )),
+  inference(superposition,[],[f110,f123])).
+fof(f123,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvlSem.state'(X0),'const.bvlSem.dec_clock_2'(s('type.num.num',X1),s('type.bvlSem.state'(X0),X2))) = s('type.bvlSem.state'(X0),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvlSem.state_clock_1'(s('type.bvlSem.state'(X0),X2))),s('type.num.num',X1))))),s('type.bvlSem.state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f75])).
+fof(f75,plain,(
+  ! [X0,X1,X2] : s('type.bvlSem.state'(X0),'const.bvlSem.dec_clock_2'(s('type.num.num',X1),s('type.bvlSem.state'(X0),X2))) = s('type.bvlSem.state'(X0),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvlSem.state_clock_1'(s('type.bvlSem.state'(X0),X2))),s('type.num.num',X1))))),s('type.bvlSem.state'(X0),X2)))),
+  inference(flattening,[],[f74])).
+fof(f74,plain,(
+  ! [X0] : ! [X1,X2] : s('type.bvlSem.state'(X0),'const.bvlSem.dec_clock_2'(s('type.num.num',X1),s('type.bvlSem.state'(X0),X2))) = s('type.bvlSem.state'(X0),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvlSem.state_clock_1'(s('type.bvlSem.state'(X0),X2))),s('type.num.num',X1))))),s('type.bvlSem.state'(X0),X2)))),
+  inference(rectify,[],[f34])).
+fof(f34,axiom,(
+  ! [X9] : ! [X7,X8] : s('type.bvlSem.state'(X9),'const.bvlSem.dec_clock_2'(s('type.num.num',X7),s('type.bvlSem.state'(X9),X8))) = s('type.bvlSem.state'(X9),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.-_2'(s('type.num.num','const.bvlSem.state_clock_1'(s('type.bvlSem.state'(X9),X8))),s('type.num.num',X7))))),s('type.bvlSem.state'(X9),X8)))),
+  file('thm.bvlProps.dec_clock_code','thm.bvlSem.dec_clock_def')).
+fof(f110,plain,(
+  ( ! [X2,X0,X1] : (s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),X1))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvlSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f49])).
+fof(f49,plain,(
+  ! [X0,X1,X2] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),X1))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvlSem.state'(X0),X1)))))),
+  inference(flattening,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : ! [X1,X2] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),X1))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvlSem.state'(X0),X1)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X8,X11] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),X8))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),'const.bvlSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X11),s('type.bvlSem.state'(X6),X8)))))),
+  file('thm.bvlProps.dec_clock_code','thm.bvlSem.bvlSem_6|48|_prove_ltb')).
+fof(f99,plain,(
+  s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(sK0),sK2))) != s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(sK0),'const.bvlSem.dec_clock_2'(s('type.num.num',sK1),s('type.bvlSem.state'(sK0),sK2)))))),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,plain,(
+  s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(sK0),sK2))) != s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(sK0),'const.bvlSem.dec_clock_2'(s('type.num.num',sK1),s('type.bvlSem.state'(sK0),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f94])).
+fof(f94,plain,(
+  ? [X0,X1,X2] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),X2))) != s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),'const.bvlSem.dec_clock_2'(s('type.num.num',X1),s('type.bvlSem.state'(X0),X2)))))),
+  inference(ennf_transformation,[],[f36])).
+fof(f36,plain,(
+  ~! [X0,X1,X2] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),X2))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),'const.bvlSem.dec_clock_2'(s('type.num.num',X1),s('type.bvlSem.state'(X0),X2)))))),
+  inference(flattening,[],[f35])).
+fof(f35,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),X2))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X0),'const.bvlSem.dec_clock_2'(s('type.num.num',X1),s('type.bvlSem.state'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),X8))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),'const.bvlSem.dec_clock_2'(s('type.num.num',X7),s('type.bvlSem.state'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),X8))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.bvl.exp')),'const.bvlSem.state_code_1'(s('type.bvlSem.state'(X6),'const.bvlSem.dec_clock_2'(s('type.num.num',X7),s('type.bvlSem.state'(X6),X8)))))),
+  file('thm.bvlProps.dec_clock_code','thm.bvlProps.dec_clock_code')).
+% SZS output end Proof for thm.bvlProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 48
+% Passive clauses: 512
+% Generated clauses: 2518
+% Final active clauses: 46
+% Final passive clauses: 446
+% Input formulas: 33
+% Initial clauses: 34
+% 
+% Duplicate literals: 291
+% Trivial inequalities: 32
+% Fw subsumption resolutions: 118
+% 
+% Simple tautologies: 91
+% Equational tautologies: 80
+% Forward subsumptions: 1029
+% 
+% Binary resolution: 16
+% Forward superposition: 779
+% Backward superposition: 812
+% Self superposition: 224
+% Equality factoring: 202
+% Equality resolution: 1
+% 
+% Split clauses: 122
+% Split components: 244
+% SAT solver clauses: 379
+% SAT solver unit clauses: 217
+% SAT solver binary clauses: 86
+% 
+% Sat splits: 122
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 379
+% TWLsolver calls for satisfiability: 12
+% 
+% Memory used [KB]: 1791
+% Time elapsed: 0.181 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.19 s

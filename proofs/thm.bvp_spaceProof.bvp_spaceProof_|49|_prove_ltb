@@ -1,0 +1,149 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.bvp_spaceProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_spaceProof
+% SZS output start Proof for thm.bvp_spaceProof
+fof(f375,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f374,f75])).
+fof(f75,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(resolution,[],[f57,f55])).
+fof(f55,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f19])).
+fof(f19,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb',aHL_FALSITY)).
+fof(f57,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f20])).
+fof(f20,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X10] : (s(bool,'T_0') = s(bool,X10) <=> p(s(bool,X10)))),
+  file('thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f374,plain,(
+  s(bool,'T_0') = s(bool,'F_0')),
+  inference(forward_demodulation,[],[f372,f102])).
+fof(f102,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,'T_0') = s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X1),s('type.sptree.spt'(X2),X3)))))) )),
+  inference(resolution,[],[f70,f58])).
+fof(f58,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f70,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3))))))) )),
+  inference(cnf_transformation,[],[f32])).
+fof(f32,plain,(
+  ! [X0,X1,X2,X3] : p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3))))))),
+  inference(flattening,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1] : ! [X2,X3] : p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3))))))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X6,X7] : ! [X12,X13] : p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X6),'const.sptree.inter_2'(s('type.sptree.spt'(X6),X12),s('type.sptree.spt'(X7),X13))))))),
+  file('thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb','thm.sptree.wf_inter')).
+fof(f372,plain,(
+  s(bool,'F_0') = s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3)))))),
+  inference(trivial_inequality_removal,[],[f371])).
+fof(f371,plain,(
+  s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3))) != s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3))) | s(bool,'F_0') = s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3)))))),
+  inference(superposition,[],[f52,f112])).
+fof(f112,plain,(
+  ( ! [X4,X5] : (s('type.sptree.spt'(X4),X5) = s('type.sptree.spt'(X4),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X4),X5))) | s(bool,'F_0') = s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X4),X5)))) )),
+  inference(resolution,[],[f65,f62])).
+fof(f62,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f23])).
+fof(f23,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f22])).
+fof(f22,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X10] : (s(bool,'F_0') = s(bool,X10) <=> ~p(s(bool,X10)))),
+  file('thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb','thm.bool.EQ_CLAUSES|split|3')).
+fof(f65,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),X1)))) | s('type.sptree.spt'(X0),X1) = s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),X1)))) | s('type.sptree.spt'(X0),X1) = s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),X1))))),
+  inference(ennf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0,X1] : (p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),X1)))) => s('type.sptree.spt'(X0),X1) = s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),X1))))),
+  inference(flattening,[],[f26])).
+fof(f26,plain,(
+  ! [X0] : ! [X1] : (p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X0),X1)))) => s('type.sptree.spt'(X0),X1) = s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),X1))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6] : ! [X10] : (p(s(bool,'const.sptree.wf_1'(s('type.sptree.spt'(X6),X10)))) => s('type.sptree.spt'(X6),X10) = s('type.sptree.spt'(X6),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X6),X10))))),
+  file('thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb','thm.sptree.wf_mk_id')).
+fof(f52,plain,(
+  s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3))) != s('type.sptree.spt'(sK0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3)))))),
+  inference(cnf_transformation,[],[f40])).
+fof(f40,plain,(
+  s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3))) != s('type.sptree.spt'(sK0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(sK0),'const.sptree.inter_2'(s('type.sptree.spt'(sK0),sK2),s('type.sptree.spt'(sK1),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f37])).
+fof(f37,plain,(
+  ? [X0,X1,X2,X3] : s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3))) != s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3)))))),
+  inference(ennf_transformation,[],[f18])).
+fof(f18,plain,(
+  ~! [X0,X1,X2,X3] : s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3))) = s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3)))))),
+  inference(flattening,[],[f17])).
+fof(f17,plain,(
+  ~! [X0,X1] : ! [X2,X3] : s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3))) = s('type.sptree.spt'(X0),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X0),'const.sptree.inter_2'(s('type.sptree.spt'(X0),X2),s('type.sptree.spt'(X1),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : s('type.sptree.spt'(X6),'const.sptree.inter_2'(s('type.sptree.spt'(X6),X8),s('type.sptree.spt'(X7),X9))) = s('type.sptree.spt'(X6),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X6),'const.sptree.inter_2'(s('type.sptree.spt'(X6),X8),s('type.sptree.spt'(X7),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : s('type.sptree.spt'(X6),'const.sptree.inter_2'(s('type.sptree.spt'(X6),X8),s('type.sptree.spt'(X7),X9))) = s('type.sptree.spt'(X6),'const.sptree.mk_wf_1'(s('type.sptree.spt'(X6),'const.sptree.inter_2'(s('type.sptree.spt'(X6),X8),s('type.sptree.spt'(X7),X9)))))),
+  file('thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb','thm.bvp_spaceProof.bvp_spaceProof_|49|_prove_ltb')).
+% SZS output end Proof for thm.bvp_spaceProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 18
+% Passive clauses: 57
+% Generated clauses: 306
+% Final active clauses: 17
+% Final passive clauses: 26
+% Input formulas: 15
+% Initial clauses: 22
+% 
+% Duplicate literals: 46
+% Trivial inequalities: 11
+% Fw subsumption resolutions: 24
+% Fw demodulations: 1
+% Bw demodulations: 1
+% 
+% Simple tautologies: 35
+% Equational tautologies: 16
+% Forward subsumptions: 128
+% 
+% Binary resolution: 17
+% Forward superposition: 52
+% Backward superposition: 80
+% Self superposition: 23
+% Equality factoring: 26
+% Equality resolution: 3
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.042 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.046 s

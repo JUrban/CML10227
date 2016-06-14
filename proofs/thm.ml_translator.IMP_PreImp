@@ -1,0 +1,208 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f319,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f316,f75,f125,f123,f121,f76,f120,f295,f80,f130,f232,f78,f128])).
+fof(f128,plain,(
+  p(s(bool,'T_0')) | $spl8),
+  inference(cnf_transformation,[],[f128_D])).
+fof(f128_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f78,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.ml_translator.IMP_PreImp',aHL_TRUTH)).
+fof(f232,plain,(
+  $false | ($spl8 | $spl18)),
+  inference(resolution,[],[f221,f180])).
+fof(f180,plain,(
+  ~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,sK1),s(bool,'T_0')))) | $spl18),
+  inference(backward_demodulation,[],[f157,f77])).
+fof(f77,plain,(
+  ~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,sK1),s(bool,sK2))))),
+  inference(cnf_transformation,[],[f51])).
+fof(f51,plain,(
+  (~p(s(bool,sK0)) | ~p(s(bool,sK1)) | p(s(bool,sK2))) & p(s(bool,sK0)) & ~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,sK1),s(bool,sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f43])).
+fof(f43,plain,(
+  ? [X0,X1,X2] : ((~p(s(bool,X0)) | ~p(s(bool,X1)) | p(s(bool,X2))) & p(s(bool,X0)) & ~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X1),s(bool,X2)))))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ? [X0,X1,X2] : (((~p(s(bool,X0)) | ~p(s(bool,X1))) | p(s(bool,X2))) & (p(s(bool,X0)) & ~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X1),s(bool,X2))))))),
+  inference(ennf_transformation,[],[f22])).
+fof(f22,plain,(
+  ~! [X0,X1,X2] : (((p(s(bool,X0)) & p(s(bool,X1))) => p(s(bool,X2))) => (p(s(bool,X0)) => p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X1),s(bool,X2))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : (((p(s(bool,X6)) & p(s(bool,X7))) => p(s(bool,X8))) => (p(s(bool,X6)) => p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X7),s(bool,X8))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : (((p(s(bool,X6)) & p(s(bool,X7))) => p(s(bool,X8))) => (p(s(bool,X6)) => p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X7),s(bool,X8))))))),
+  file('thm.ml_translator.IMP_PreImp','thm.ml_translator.IMP_PreImp')).
+fof(f157,plain,(
+  s(bool,'T_0') = s(bool,sK2) | $spl18),
+  inference(cnf_transformation,[],[f157_D])).
+fof(f157_D,plain,(
+  s(bool,'T_0') = s(bool,sK2) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f221,plain,(
+  ( ! [X0] : (p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,'T_0'))))) ) | $spl8),
+  inference(resolution,[],[f116,f128])).
+fof(f116,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1))))) )),
+  inference(cnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1)))) | ~p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) | p(s(bool,X1))) & ((p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) & ~p(s(bool,X1))) | p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1))))))),
+  inference(flattening,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1)))) | (~p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) | p(s(bool,X1)))) & ((p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) & ~p(s(bool,X1))) | p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1))))))),
+  inference(nnf_transformation,[],[f49])).
+fof(f49,plain,(
+  ! [X0,X1] : (p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1)))) <=> (~p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) | p(s(bool,X1))))),
+  inference(ennf_transformation,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1] : (p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1)))) <=> (p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) => p(s(bool,X1))))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X6,X7] : (p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X6),s(bool,X7)))) <=> (p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X6)))) => p(s(bool,X7))))),
+  file('thm.ml_translator.IMP_PreImp','thm.ml_translator.PreImp_def')).
+fof(f130,plain,(
+  ~p(s(bool,'F_0')) | $spl11),
+  inference(cnf_transformation,[],[f130_D])).
+fof(f130_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl11),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl11])])).
+fof(f80,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.ml_translator.IMP_PreImp',aHL_FALSITY)).
+fof(f295,plain,(
+  $false | $spl3),
+  inference(subsumption_resolution,[],[f277,f123])).
+fof(f277,plain,(
+  p(s(bool,sK1))),
+  inference(resolution,[],[f254,f77])).
+fof(f254,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1)))) | p(s(bool,X0))) )),
+  inference(forward_demodulation,[],[f115,f81])).
+fof(f81,plain,(
+  ( ! [X0] : (s(bool,X0) = s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))) )),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : s(bool,X0) = s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X12] : s(bool,X12) = s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X12)))),
+  file('thm.ml_translator.IMP_PreImp','thm.ml_translator.PRECONDITION_def')).
+fof(f115,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.ml_translator.PreImp_2'(s(bool,X0),s(bool,X1)))) | p(s(bool,'const.ml_translator.PRECONDITION_1'(s(bool,X0))))) )),
+  inference(cnf_transformation,[],[f73])).
+fof(f120,plain,(
+  p(s(bool,sK0)) | $spl0),
+  inference(cnf_transformation,[],[f120_D])).
+fof(f120_D,plain,(
+  p(s(bool,sK0)) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f76,plain,(
+  p(s(bool,sK0))),
+  inference(cnf_transformation,[],[f51])).
+fof(f121,plain,(
+  ~p(s(bool,sK0)) | $spl1),
+  inference(cnf_transformation,[],[f121_D])).
+fof(f121_D,plain,(
+  ~p(s(bool,sK0)) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f123,plain,(
+  ~p(s(bool,sK1)) | $spl3),
+  inference(cnf_transformation,[],[f123_D])).
+fof(f123_D,plain,(
+  ~p(s(bool,sK1)) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f125,plain,(
+  p(s(bool,sK2)) | $spl4),
+  inference(cnf_transformation,[],[f125_D])).
+fof(f125_D,plain,(
+  p(s(bool,sK2)) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f75,plain,(
+  p(s(bool,sK2)) | ~p(s(bool,sK1)) | ~p(s(bool,sK0))),
+  inference(cnf_transformation,[],[f51])).
+fof(f316,plain,(
+  $false | ($spl4 | $spl11 | $spl19)),
+  inference(subsumption_resolution,[],[f314,f156])).
+fof(f156,plain,(
+  s(bool,'T_0') != s(bool,sK2) | $spl19),
+  inference(cnf_transformation,[],[f156_D])).
+fof(f156_D,plain,(
+  s(bool,'T_0') != s(bool,sK2) <=> ~$spl19),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl19])])).
+fof(f314,plain,(
+  s(bool,'T_0') = s(bool,sK2) | ($spl4 | $spl11)),
+  inference(resolution,[],[f125,f139])).
+fof(f139,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl11),
+  inference(superposition,[],[f130,f82])).
+fof(f82,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.ml_translator.IMP_PreImp',aHL_BOOL_CASES)).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 32
+% Passive clauses: 69
+% Generated clauses: 248
+% Final active clauses: 15
+% Final passive clauses: 16
+% Input formulas: 20
+% Initial clauses: 44
+% 
+% Duplicate literals: 2
+% Fw subsumption resolutions: 25
+% Fw demodulations: 11
+% Bw demodulations: 6
+% 
+% Simple tautologies: 20
+% Equational tautologies: 3
+% Forward subsumptions: 82
+% 
+% Binary resolution: 19
+% Forward superposition: 72
+% Backward superposition: 30
+% Self superposition: 6
+% Equality factoring: 2
+% 
+% Split clauses: 21
+% Split components: 44
+% SAT solver clauses: 48
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 29
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 21
+% Sat splitting refutations: 13
+% 
+% TWLsolver clauses: 46
+% TWLsolver calls for satisfiability: 17
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.017 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.05 s

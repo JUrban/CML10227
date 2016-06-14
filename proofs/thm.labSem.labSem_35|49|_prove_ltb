@@ -1,0 +1,106 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labSem
+% SZS output start Proof for thm.labSem
+fof(f1217,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1216,f217,f390,f388,f1215])).
+fof(f1215,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f390,f218])).
+fof(f218,plain,(
+  ( ! [X4,X3] : (s('type.wordSem.word_loc'(sK12),sK13) != s('type.wordSem.word_loc'(sK12),'const.wordSem.Loc_2'(s('type.num.num',X3),s('type.num.num',X4)))) )),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  (s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK12),sK14))) | s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Loc_2'(s('type.num.num',sK15),s('type.num.num',sK16)))) & ! [X3,X4] : s('type.wordSem.word_loc'(sK12),sK13) != s('type.wordSem.word_loc'(sK12),'const.wordSem.Loc_2'(s('type.num.num',X3),s('type.num.num',X4))) & ! [X2] : s('type.wordSem.word_loc'(sK12),sK13) != s('type.wordSem.word_loc'(sK12),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK12),X2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13,sK14,sK15,sK16])],[f135])).
+fof(f135,plain,(
+  ? [X0,X1] : ((? [X7] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X7))) | ? [X5,X6] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X5),s('type.num.num',X6)))) & ! [X3,X4] : s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X3),s('type.num.num',X4))) & ! [X2] : s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X2))))),
+  inference(rectify,[],[f95])).
+fof(f95,plain,(
+  ? [X0,X1] : ((? [X4] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4))) | ? [X2,X3] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3)))) & ! [X6,X7] : s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X6),s('type.num.num',X7))) & ! [X5] : s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X5))))),
+  inference(flattening,[],[f94])).
+fof(f94,plain,(
+  ? [X0,X1] : ((? [X4] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4))) | ? [X2,X3] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3)))) & (! [X6,X7] : s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X6),s('type.num.num',X7))) & ! [X5] : s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X5)))))),
+  inference(ennf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1] : ((? [X4] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4))) | ? [X2,X3] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3)))) => (? [X6,X7] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X6),s('type.num.num',X7))) | ? [X5] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X5)))))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ~! [X0] : ! [X1] : ((? [X4] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4))) | ? [X2,X3] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3)))) => (? [X6,X7] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X6),s('type.num.num',X7))) | ? [X5] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X5)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((? [X8] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8))) | ? [X9,X10] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10)))) => (? [X9,X10] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10))) | ? [X8] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((? [X8] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8))) | ? [X9,X10] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10)))) => (? [X9,X10] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10))) | ? [X8] : s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8)))))),
+  file('thm.labSem.labSem_35|49|_prove_ltb','thm.labSem.labSem_35|49|_prove_ltb')).
+fof(f388,plain,(
+  s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK12),sK14))) | $spl0),
+  inference(cnf_transformation,[],[f388_D])).
+fof(f388_D,plain,(
+  s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK12),sK14))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f390,plain,(
+  s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Loc_2'(s('type.num.num',sK15),s('type.num.num',sK16))) | $spl2),
+  inference(cnf_transformation,[],[f390_D])).
+fof(f390_D,plain,(
+  s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Loc_2'(s('type.num.num',sK15),s('type.num.num',sK16))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f217,plain,(
+  s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Loc_2'(s('type.num.num',sK15),s('type.num.num',sK16))) | s('type.wordSem.word_loc'(sK12),sK13) = s('type.wordSem.word_loc'(sK12),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK12),sK14)))),
+  inference(cnf_transformation,[],[f136])).
+fof(f1216,plain,(
+  $false | $spl0),
+  inference(subsumption_resolution,[],[f388,f219])).
+fof(f219,plain,(
+  ( ! [X2] : (s('type.wordSem.word_loc'(sK12),sK13) != s('type.wordSem.word_loc'(sK12),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK12),X2)))) )),
+  inference(cnf_transformation,[],[f136])).
+% SZS output end Proof for thm.labSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 135
+% Passive clauses: 276
+% Generated clauses: 993
+% Final active clauses: 135
+% Final passive clauses: 114
+% Input formulas: 36
+% Initial clauses: 166
+% 
+% Duplicate literals: 27
+% Trivial inequalities: 5
+% Fw subsumption resolutions: 68
+% 
+% Simple tautologies: 66
+% Equational tautologies: 3
+% Forward subsumptions: 523
+% 
+% Binary resolution: 506
+% Factoring: 140
+% Backward superposition: 59
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 3
+% 
+% Split clauses: 35
+% Split components: 71
+% SAT solver clauses: 53
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 18
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 35
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 52
+% TWLsolver calls for satisfiability: 32
+% 
+% Memory used [KB]: 1023
+% Time elapsed: 0.026 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.028 s

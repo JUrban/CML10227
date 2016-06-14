@@ -1,0 +1,278 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordSem
+% (107203)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 138
+% Passive clauses: 3164
+% Generated clauses: 24890
+% Final active clauses: 123
+% Final passive clauses: 2870
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 867
+% Trivial inequalities: 306
+% Fw subsumption resolutions: 2716
+% Fw demodulations: 4463
+% Bw demodulations: 10
+% 
+% Simple tautologies: 295
+% Equational tautologies: 64
+% Forward subsumptions: 11957
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 147
+% Factoring: 1
+% Forward superposition: 7946
+% Backward superposition: 7750
+% Self superposition: 271
+% Equality factoring: 156
+% Equality resolution: 27
+% 
+% Split clauses: 241
+% Split components: 482
+% SAT solver clauses: 712
+% SAT solver unit clauses: 12
+% SAT solver binary clauses: 53
+% 
+% Sat splits: 241
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 712
+% TWLsolver calls for satisfiability: 97
+% 
+% Memory used [KB]: 14456
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.wordSem
+% (107236)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 131
+% Passive clauses: 1242
+% Generated clauses: 15042
+% Final active clauses: 72
+% Final passive clauses: 576
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 573
+% Trivial inequalities: 75
+% Fw subsumption resolutions: 767
+% Fw demodulations: 1801
+% Bw demodulations: 554
+% Condensations: 1267
+% 
+% Simple tautologies: 99
+% Equational tautologies: 42
+% Forward subsumptions: 7829
+% Bw demodulations to eq. taut.: 30
+% 
+% Binary resolution: 247
+% Factoring: 1
+% Forward superposition: 4445
+% Backward superposition: 3676
+% Self superposition: 137
+% Equality factoring: 82
+% Equality resolution: 8
+% 
+% Split clauses: 71
+% Split components: 142
+% SAT solver clauses: 1440
+% SAT solver unit clauses: 258
+% SAT solver binary clauses: 30
+% 
+% Sat splits: 71
+% Sat splitting refutations: 13
+% 
+% TWLsolver clauses: 1440
+% TWLsolver calls for satisfiability: 297
+% 
+% Memory used [KB]: 14456
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.wordSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordSem
+% SZS output start Proof for thm.wordSem
+fof(f44341,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f44340,f406])).
+fof(f406,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21',aHL_TRUTH)).
+fof(f44340,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f44338,f2506])).
+fof(f2506,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f2421,f551])).
+fof(f551,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f408,f409])).
+fof(f409,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21',aHL_BOOL_CASES)).
+fof(f408,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21',aHL_FALSITY)).
+fof(f2421,plain,(
+  ( ! [X2,X0] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X2))),s(X0,X2))))) )),
+  inference(forward_demodulation,[],[f2346,f431])).
+fof(f431,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))) )),
+  inference(cnf_transformation,[],[f161])).
+fof(f161,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))),
+  inference(flattening,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))),
+  inference(rectify,[],[f76])).
+fof(f76,axiom,(
+  ! [X6,X7] : ! [X17,X33] : s(X7,X17) = s(X7,'const.pair.FST_1'(s('type.pair.prod'(X7,X6),'const.pair.,_2'(s(X7,X17),s(X6,X33)))))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21','thm.pair.FST')).
+fof(f2346,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))))))),s(X0,X2))))) )),
+  inference(unit_resulting_resolution,[],[f431,f487])).
+fof(f487,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f404])).
+fof(f404,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f269])).
+fof(f269,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f84])).
+fof(f84,axiom,(
+  ! [X65,X66,X67] : (p(s(bool,happ(s(fun(X65,bool),happ(s(fun(X65,fun(X65,bool)),'=_0'),s(X65,X66))),s(X65,X67)))) <=> s(X65,X66) = s(X65,X67))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21',arity_0_HL_EQ)).
+fof(f44338,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))))),
+  inference(backward_demodulation,[],[f44257,f26393])).
+fof(f26393,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))))))),
+  inference(unit_resulting_resolution,[],[f405,f486])).
+fof(f486,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f404])).
+fof(f405,plain,(
+  s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3)))))),
+  inference(cnf_transformation,[],[f391])).
+fof(f391,plain,(
+  s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK5))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(sK1)))),sK4))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f386])).
+fof(f386,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X4))))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3))) != s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X5))),s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X4))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X4))))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3))) = s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X5))),s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X4))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5] : s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X5),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X4))))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3))) = s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X5))),s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X4))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X11),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X10))))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9))) = s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X11))),s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X10))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X11),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X10))))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9))) = s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X11))),s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X10))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9)))))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21','thm.wordSem.state_fupdfupds_comp|split|21')).
+fof(f44257,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X4,'type.wordSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.wordSem.state'(X0,X1),'type.wordSem.state'(X0,X1)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0)))),X2),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0)))),X3))))),s(fun(X4,'type.wordSem.state'(X0,X1)),X5))) = s(fun(X4,'type.wordSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.wordSem.state'(X0,X1),'type.wordSem.state'(X0,X1)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0)))),X2))),s(fun(X4,'type.wordSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.wordSem.state'(X0,X1),'type.wordSem.state'(X0,X1)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0)))),X3))),s(fun(X4,'type.wordSem.state'(X0,X1)),X5)))))) )),
+  inference(superposition,[],[f493,f445])).
+fof(f445,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X3),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X2))))) = s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X3))),s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X2)))))) )),
+  inference(cnf_transformation,[],[f189])).
+fof(f189,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X3),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X2))))) = s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X3))),s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X2)))))),
+  inference(flattening,[],[f188])).
+fof(f188,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X3),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X2))))) = s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X3))),s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X1)))),X2)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X8,X7] : ! [X10,X11] : s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),'const.combin.o_2'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X11),s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X10))))) = s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X11))),s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_code_fupd_1'(s(fun('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7))),'type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X7)))),X10)))))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21','thm.wordSem.state_fupdfupds_comp|split|20')).
+fof(f493,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f281])).
+fof(f281,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f280])).
+fof(f280,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X6,X7,X32,X15] : ! [X11,X10,X9] : s(fun(X32,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X32,X7),'const.combin.o_2'(s(fun(X15,X7),X10),s(fun(X32,X15),X9))))) = s(fun(X32,X6),'const.combin.o_2'(s(fun(X15,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X15,X7),X10))),s(fun(X32,X15),X9)))),
+  file('thm.wordSem.state_fupdfupds_comp|split|21','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.wordSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 245
+% Passive clauses: 3392
+% Generated clauses: 45101
+% Final active clauses: 137
+% Final passive clauses: 1885
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 1369
+% Trivial inequalities: 166
+% Fw subsumption resolutions: 1250
+% Fw demodulations: 6163
+% Bw demodulations: 1139
+% Condensations: 2106
+% Global subsumptions: 3
+% 
+% Simple tautologies: 230
+% Equational tautologies: 262
+% Forward subsumptions: 29965
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 24
+% 
+% Unit resulting resolution: 1489
+% Factoring: 1
+% Forward superposition: 15568
+% Backward superposition: 13654
+% Self superposition: 455
+% Equality factoring: 152
+% Equality resolution: 16
+% 
+% Split clauses: 76
+% Split components: 152
+% SAT solver clauses: 3596
+% SAT solver unit clauses: 983
+% SAT solver binary clauses: 1364
+% 
+% Sat splits: 76
+% Sat splitting refutations: 47
+% 
+% Memory used [KB]: 71512
+% Time elapsed: 2.482 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.84 s

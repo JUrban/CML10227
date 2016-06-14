@@ -1,0 +1,190 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.weakening
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.weakening
+% SZS output start Proof for thm.weakening
+fof(f16869,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f16865,f225,f401])).
+fof(f401,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f401_D])).
+fof(f401_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f225,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.weakening.disjoint_env_weakCT',aHL_FALSITY)).
+fof(f16865,plain,(
+  $false | $spl3),
+  inference(subsumption_resolution,[],[f16864,f401])).
+fof(f16864,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f16794,f4058])).
+fof(f4058,plain,(
+  s(bool,'F_0') = s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(sK13,sK14),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(sK13,sK14),sK16),s('type.finite_map.fmap'(sK13,sK14),sK15))),s('type.finite_map.fmap'(sK13,sK14),sK15)))),
+  inference(resolution,[],[f218,f237])).
+fof(f237,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f51])).
+fof(f51,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X10] : (s(bool,'F_0') = s(bool,X10) <=> ~p(s(bool,X10)))),
+  file('thm.weakening.disjoint_env_weakCT','thm.bool.EQ_CLAUSES|split|2')).
+fof(f218,plain,(
+  ~p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(sK13,sK14),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(sK13,sK14),sK16),s('type.finite_map.fmap'(sK13,sK14),sK15))),s('type.finite_map.fmap'(sK13,sK14),sK15))))),
+  inference(cnf_transformation,[],[f142])).
+fof(f142,plain,(
+  p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(sK13,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK13,sK14),sK16))),s(fun(sK13,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK13,sK14),sK15)))))) & ~p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(sK13,sK14),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(sK13,sK14),sK16),s('type.finite_map.fmap'(sK13,sK14),sK15))),s('type.finite_map.fmap'(sK13,sK14),sK15))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13,sK14,sK15,sK16])],[f97])).
+fof(f97,plain,(
+  ? [X0,X1,X2,X3] : (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))) & ~p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2))),s('type.finite_map.fmap'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f41])).
+fof(f41,plain,(
+  ~! [X0,X1,X2,X3] : (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))) => p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2))),s('type.finite_map.fmap'(X0,X1),X2)))))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : ! [X2,X3] : (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))) => p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2))),s('type.finite_map.fmap'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X9))),s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X8)))))) => p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X6,X7),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X6,X7),X9),s('type.finite_map.fmap'(X6,X7),X8))),s('type.finite_map.fmap'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X9))),s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X8)))))) => p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X6,X7),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X6,X7),X9),s('type.finite_map.fmap'(X6,X7),X8))),s('type.finite_map.fmap'(X6,X7),X8)))))),
+  file('thm.weakening.disjoint_env_weakCT','thm.weakening.disjoint_env_weakCT')).
+fof(f16794,plain,(
+  p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(sK13,sK14),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(sK13,sK14),sK16),s('type.finite_map.fmap'(sK13,sK14),sK15))),s('type.finite_map.fmap'(sK13,sK14),sK15))))),
+  inference(resolution,[],[f4638,f4082])).
+fof(f4082,plain,(
+  p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(sK13,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK13,sK14),sK15))),s(fun(sK13,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK13,sK14),sK16))))))),
+  inference(backward_demodulation,[],[f259,f217])).
+fof(f217,plain,(
+  p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(sK13,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK13,sK14),sK16))),s(fun(sK13,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK13,sK14),sK15))))))),
+  inference(cnf_transformation,[],[f142])).
+fof(f259,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))) )),
+  inference(cnf_transformation,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1,X2] : s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))),
+  inference(flattening,[],[f65])).
+fof(f65,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6] : ! [X23,X10] : s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),X10),s(fun(X6,bool),X23))) = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),X23),s(fun(X6,bool),X10)))),
+  file('thm.weakening.disjoint_env_weakCT','thm.pred_set.DISJOINT_SYM')).
+fof(f4638,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2)))))) | p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))),s('type.finite_map.fmap'(X0,X1),X3))))) )),
+  inference(resolution,[],[f4555,f4276])).
+fof(f4276,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X2))))) )),
+  inference(backward_demodulation,[],[f290,f289])).
+fof(f289,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X2))))) )),
+  inference(cnf_transformation,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1,X2] : p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X2))))),
+  inference(flattening,[],[f78])).
+fof(f78,plain,(
+  ! [X0,X1] : ! [X2] : p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X2))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X7] : ! [X19] : p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X19),s('type.finite_map.fmap'(X6,X7),X19))))),
+  file('thm.weakening.disjoint_env_weakCT','thm.finite_map.SUBMAP_REFL')).
+fof(f290,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2)))) )),
+  inference(cnf_transformation,[],[f81])).
+fof(f81,plain,(
+  ! [X0,X1,X2,X3] : s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2)))),
+  inference(flattening,[],[f80])).
+fof(f80,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2)))),
+  inference(rectify,[],[f39])).
+fof(f39,axiom,(
+  ! [X6,X7] : ! [X27,X28] : s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X6,X7),X27),s('type.finite_map.fmap'(X6,X7),X28))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X28),s('type.finite_map.fmap'(X6,X7),X27)))),
+  file('thm.weakening.disjoint_env_weakCT','thm.weakening.weakCT_def')).
+fof(f4555,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X4),s('type.finite_map.fmap'(X0,X1),X2)))) | p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X4))),s('type.finite_map.fmap'(X0,X1),X2)))) | ~p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))))))) )),
+  inference(forward_demodulation,[],[f4554,f290])).
+fof(f4554,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X4))),s('type.finite_map.fmap'(X0,X1),X2)))) | ~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X4)))) | ~p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))))))) )),
+  inference(forward_demodulation,[],[f293,f290])).
+fof(f293,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X4)))))) | ~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X4)))) | ~p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3))))))) )),
+  inference(cnf_transformation,[],[f116])).
+fof(f116,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3)))) & (~p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3)))))) | ~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X4)))))) | p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X4)))))))),
+  inference(ennf_transformation,[],[f85])).
+fof(f85,plain,(
+  ! [X0,X1,X2,X3,X4] : ((p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3)))) | (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3)))))) & p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X4)))))) => p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X4)))))))),
+  inference(flattening,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : ((p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3)))) | (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X3)))))) & p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X4)))))) => p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X4)))))))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X6,X7] : ! [X20,X21,X22] : ((p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X20),s('type.finite_map.fmap'(X6,X7),X21)))) | (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X20))),s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X7),X21)))))) & p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X20),s('type.finite_map.fmap'(X6,X7),X22)))))) => p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X20),s('type.finite_map.fmap'(X6,X7),'const.finite_map.FUNION_2'(s('type.finite_map.fmap'(X6,X7),X21),s('type.finite_map.fmap'(X6,X7),X22)))))))),
+  file('thm.weakening.disjoint_env_weakCT','thm.finite_map.SUBMAP_FUNION')).
+% SZS output end Proof for thm.weakening
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 607
+% Passive clauses: 8489
+% Generated clauses: 16565
+% Final active clauses: 598
+% Final passive clauses: 7495
+% Input formulas: 38
+% Initial clauses: 175
+% 
+% Duplicate literals: 299
+% Trivial inequalities: 66
+% Fw subsumption resolutions: 1655
+% Fw demodulations: 170
+% Bw demodulations: 6
+% 
+% Simple tautologies: 211
+% Equational tautologies: 56
+% Forward subsumptions: 5301
+% 
+% Binary resolution: 9291
+% Factoring: 1036
+% Forward superposition: 1931
+% Backward superposition: 1741
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 22
+% 
+% Split clauses: 393
+% Split components: 793
+% SAT solver clauses: 715
+% SAT solver unit clauses: 24
+% SAT solver binary clauses: 129
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 393
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 714
+% TWLsolver calls for satisfiability: 369
+% 
+% Memory used [KB]: 6908
+% Time elapsed: 0.584 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.59 s

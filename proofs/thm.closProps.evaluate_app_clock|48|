@@ -1,0 +1,250 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.closProps
+% (30645)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 920
+% Passive clauses: 7045
+% Generated clauses: 38322
+% Final active clauses: 850
+% Final passive clauses: 5677
+% Input formulas: 132
+% Initial clauses: 292
+% 
+% Duplicate literals: 219
+% Trivial inequalities: 36
+% Fw subsumption resolutions: 1662
+% Fw demodulations: 3258
+% Bw demodulations: 19
+% 
+% Simple tautologies: 219
+% Equational tautologies: 25
+% Forward subsumptions: 25634
+% Fw demodulations to eq. taut.: 21
+% 
+% Binary resolution: 5637
+% Factoring: 1244
+% Forward superposition: 11903
+% Backward superposition: 14499
+% Self superposition: 105
+% Equality factoring: 2
+% Equality resolution: 12
+% 
+% Split clauses: 293
+% Split components: 586
+% SAT solver clauses: 481
+% SAT solver unit clauses: 12
+% SAT solver binary clauses: 54
+% 
+% Sat splits: 293
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 481
+% TWLsolver calls for satisfiability: 376
+% 
+% Memory used [KB]: 28144
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.closProps
+% (30668)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 458
+% Passive clauses: 2952
+% Generated clauses: 25092
+% Final active clauses: 386
+% Final passive clauses: 2192
+% Input formulas: 132
+% Initial clauses: 292
+% 
+% Duplicate literals: 75
+% Trivial inequalities: 27
+% Fw subsumption resolutions: 841
+% Fw demodulations: 4176
+% Bw demodulations: 288
+% Condensations: 27
+% Global subsumptions: 20
+% 
+% Simple tautologies: 271
+% Equational tautologies: 16
+% Forward subsumptions: 12701
+% Fw demodulations to eq. taut.: 24
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 1932
+% Factoring: 52
+% Forward superposition: 8108
+% Backward superposition: 5609
+% Self superposition: 91
+% Equality factoring: 2
+% Equality resolution: 8
+% 
+% Split clauses: 33
+% Split components: 66
+% SAT solver clauses: 3923
+% SAT solver unit clauses: 356
+% SAT solver binary clauses: 96
+% SAT solver learnt clauses: 41
+% SAT solver learnt literals: 14
+% 
+% Sat splits: 33
+% Sat splitting refutations: 55
+% 
+% TWLsolver clauses: 3842
+% TWLsolver calls for satisfiability: 1855
+% 
+% Memory used [KB]: 27888
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.closProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.closProps
+% SZS output start Proof for thm.closProps
+fof(f61482,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f61481,f743])).
+fof(f743,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f455,f449])).
+fof(f449,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.closProps.evaluate_app_clock|48|',aHL_TRUTH)).
+fof(f455,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f346])).
+fof(f346,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f80])).
+fof(f80,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.closProps.evaluate_app_clock|48|','thm.bool.NOT_CLAUSES|split|1')).
+fof(f61481,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f61480,f464])).
+fof(f464,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f144])).
+fof(f144,plain,(
+  ! [X0] : s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f77])).
+fof(f77,axiom,(
+  ! [X18] : s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X18),s('type.num.num','const.num.|48|_0')))),
+  file('thm.closProps.evaluate_app_clock|48|','thm.numeral.numeral_distrib|split|20')).
+fof(f61480,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13))),s('type.num.num','const.num.|48|_0'))))),
+  inference(forward_demodulation,[],[f61442,f446])).
+fof(f446,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK12)))),
+  inference(cnf_transformation,[],[f345])).
+fof(f345,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK12))) & s('type.list.list'('type.closSem.v'),'const.list.NIL_0') != s('type.list.list'('type.closSem.v'),sK16) & s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),sK11))),s('type.closSem.state'(sK10),sK13))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),sK15),s('type.closSem.v',sK14),s('type.list.list'('type.closSem.v'),sK16),s('type.closSem.state'(sK10),sK12)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14,sK15,sK16])],[f306])).
+fof(f306,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : (s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X2))) & s('type.list.list'('type.closSem.v'),'const.list.NIL_0') != s('type.list.list'('type.closSem.v'),X6) & s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X1))),s('type.closSem.state'(X0),X3))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X5),s('type.closSem.v',X4),s('type.list.list'('type.closSem.v'),X6),s('type.closSem.state'(X0),X2))))),
+  inference(flattening,[],[f305])).
+fof(f305,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X2))) & s('type.list.list'('type.closSem.v'),'const.list.NIL_0') != s('type.list.list'('type.closSem.v'),X6)) & s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X1))),s('type.closSem.state'(X0),X3))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X5),s('type.closSem.v',X4),s('type.list.list'('type.closSem.v'),X6),s('type.closSem.state'(X0),X2))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X2))) & s('type.list.list'('type.closSem.v'),'const.list.NIL_0') != s('type.list.list'('type.closSem.v'),X6)) => s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X1))),s('type.closSem.state'(X0),X3))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X5),s('type.closSem.v',X4),s('type.list.list'('type.closSem.v'),X6),s('type.closSem.state'(X0),X2))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4,X5,X6] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X2))) & ~s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X6)) => ~s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X1))),s('type.closSem.state'(X0),X3))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X5),s('type.closSem.v',X4),s('type.list.list'('type.closSem.v'),X6),s('type.closSem.state'(X0),X2))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10,X11,X12] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X8))) & ~s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X12)) => ~s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X7))),s('type.closSem.state'(X6),X9))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X11),s('type.closSem.v',X10),s('type.list.list'('type.closSem.v'),X12),s('type.closSem.state'(X6),X8))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10,X11,X12] : ((s('type.num.num','const.num.|48|_0') = s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X8))) & ~s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X12)) => ~s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X7))),s('type.closSem.state'(X6),X9))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X11),s('type.closSem.v',X10),s('type.list.list'('type.closSem.v'),X12),s('type.closSem.state'(X6),X8))))),
+  file('thm.closProps.evaluate_app_clock|48|','thm.closProps.evaluate_app_clock|48|')).
+fof(f61442,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK13))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(sK10),sK12))))))),
+  inference(unit_resulting_resolution,[],[f447,f448,f556])).
+fof(f556,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X6))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X4)))))) | s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X5))),s('type.closSem.state'(X0),X6))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X1),s('type.closSem.v',X2),s('type.list.list'('type.closSem.v'),X3),s('type.closSem.state'(X0),X4))) | s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X3)) )),
+  inference(cnf_transformation,[],[f314])).
+fof(f314,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : (s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X3) | s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X5))),s('type.closSem.state'(X0),X6))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X1),s('type.closSem.v',X2),s('type.list.list'('type.closSem.v'),X3),s('type.closSem.state'(X0),X4))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X6))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X4)))))))),
+  inference(flattening,[],[f313])).
+fof(f313,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ((s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X3) | s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X5))),s('type.closSem.state'(X0),X6))) != s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X1),s('type.closSem.v',X2),s('type.list.list'('type.closSem.v'),X3),s('type.closSem.state'(X0),X4)))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X6))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X4)))))))),
+  inference(ennf_transformation,[],[f212])).
+fof(f212,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : ((s('type.list.list'('type.closSem.v'),'const.list.NIL_0') != s('type.list.list'('type.closSem.v'),X3) & s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X5))),s('type.closSem.state'(X0),X6))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X1),s('type.closSem.v',X2),s('type.list.list'('type.closSem.v'),X3),s('type.closSem.state'(X0),X4)))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X6))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X4)))))))),
+  inference(flattening,[],[f211])).
+fof(f211,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6] : ((~s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X3) & s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X5))),s('type.closSem.state'(X0),X6))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X0)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X1),s('type.closSem.v',X2),s('type.list.list'('type.closSem.v'),X3),s('type.closSem.state'(X0),X4)))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X6))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X0),X4)))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X13,X14,X12,X15,X7,X16] : ((~s('type.list.list'('type.closSem.v'),'const.list.NIL_0') = s('type.list.list'('type.closSem.v'),X12) & s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),X7))),s('type.closSem.state'(X6),X16))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(X6)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),X13),s('type.closSem.v',X14),s('type.list.list'('type.closSem.v'),X12),s('type.closSem.state'(X6),X15)))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X16))),s('type.num.num','const.closSem.state_clock_1'(s('type.closSem.state'(X6),X15)))))))),
+  file('thm.closProps.evaluate_app_clock|48|','thm.closProps.evaluate_app_clock_less')).
+fof(f448,plain,(
+  s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.pair.,_2'(s('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'const.semanticPrimitives.Rval_1'(s('type.list.list'('type.closSem.v'),sK11))),s('type.closSem.state'(sK10),sK13))) = s('type.pair.prod'('type.semanticPrimitives.result'('type.list.list'('type.closSem.v'),'type.closSem.v'),'type.closSem.state'(sK10)),'const.closSem.evaluate_app_4'(s('type.option.option'('type.num.num'),sK15),s('type.closSem.v',sK14),s('type.list.list'('type.closSem.v'),sK16),s('type.closSem.state'(sK10),sK12)))),
+  inference(cnf_transformation,[],[f345])).
+fof(f447,plain,(
+  s('type.list.list'('type.closSem.v'),'const.list.NIL_0') != s('type.list.list'('type.closSem.v'),sK16)),
+  inference(cnf_transformation,[],[f345])).
+% SZS output end Proof for thm.closProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 434
+% Passive clauses: 3478
+% Generated clauses: 61027
+% Final active clauses: 430
+% Final passive clauses: 2949
+% Input formulas: 132
+% Initial clauses: 292
+% 
+% Duplicate literals: 7
+% Trivial inequalities: 13
+% Fw subsumption resolutions: 114
+% Fw demodulations: 22858
+% Bw demodulations: 48
+% Condensations: 1
+% 
+% Simple tautologies: 104
+% Equational tautologies: 18
+% Forward subsumptions: 21076
+% Fw demodulations to eq. taut.: 13318
+% Bw demodulations to eq. taut.: 51
+% 
+% Unit resulting resolution: 21411
+% Factoring: 1
+% Forward superposition: 9098
+% Backward superposition: 7017
+% Self superposition: 155
+% Equality factoring: 2
+% Equality resolution: 8
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 3484
+% SAT solver unit clauses: 2253
+% SAT solver binary clauses: 597
+% 
+% Sat splits: 2
+% 
+% Memory used [KB]: 49125
+% Time elapsed: 2.858 s
+% ------------------------------
+% ------------------------------
+% Success in time 4.17 s

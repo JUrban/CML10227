@@ -1,0 +1,188 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.okasaki_misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.okasaki_misc
+% SZS output start Proof for thm.okasaki_misc
+fof(f7281,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f7227,f7226,f197,f339,f337,f204,f341,f196,f338,f336])).
+fof(f336,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) | $spl0),
+  inference(cnf_transformation,[],[f336_D])).
+fof(f336_D,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f338,plain,(
+  p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) | $spl2),
+  inference(cnf_transformation,[],[f338_D])).
+fof(f338_D,plain,(
+  p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f196,plain,(
+  p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) | s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12)))),
+  inference(cnf_transformation,[],[f138])).
+fof(f138,plain,(
+  (s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12))))) & (s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) != s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) | ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12])],[f137])).
+fof(f137,plain,(
+  ? [X0,X1,X2] : ((s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))) & (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) != s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) | ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(nnf_transformation,[],[f93])).
+fof(f93,plain,(
+  ? [X0,X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) <~> p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(ennf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) <=> p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ~! [X0] : ! [X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) <=> p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X7))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X8))) <=> p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X7))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X8))) <=> p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))))),
+  file('thm.okasaki_misc.list_to_bag_perm','thm.okasaki_misc.list_to_bag_perm')).
+fof(f341,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f341_D])).
+fof(f341_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f204,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.okasaki_misc.list_to_bag_perm',aHL_FALSITY)).
+fof(f337,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) != s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) | $spl1),
+  inference(cnf_transformation,[],[f337_D])).
+fof(f337_D,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) != s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f339,plain,(
+  ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) | $spl3),
+  inference(cnf_transformation,[],[f339_D])).
+fof(f339_D,plain,(
+  ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f197,plain,(
+  ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) | s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) != s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12)))),
+  inference(cnf_transformation,[],[f138])).
+fof(f7226,plain,(
+  $false | ($spl0 | $spl3 | $spl5)),
+  inference(subsumption_resolution,[],[f7225,f341])).
+fof(f7225,plain,(
+  p(s(bool,'F_0')) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f7222,f653])).
+fof(f653,plain,(
+  s(bool,'F_0') = s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12))) | $spl3),
+  inference(resolution,[],[f339,f217])).
+fof(f217,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f143])).
+fof(f143,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f51])).
+fof(f51,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X11] : (s(bool,'F_0') = s(bool,X11) <=> ~p(s(bool,X11)))),
+  file('thm.okasaki_misc.list_to_bag_perm','thm.bool.EQ_CLAUSES|split|3')).
+fof(f7222,plain,(
+  p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))) | $spl0),
+  inference(equality_resolution,[],[f3778])).
+fof(f3778,plain,(
+  ( ! [X0] : (s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) != s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),X0))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),X0),s('type.list.list'(sK10),sK12))))) ) | $spl0),
+  inference(superposition,[],[f241,f336])).
+fof(f241,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) != s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f105])).
+fof(f105,plain,(
+  ! [X0,X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) != s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(ennf_transformation,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(flattening,[],[f69])).
+fof(f69,plain,(
+  ! [X0] : ! [X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X7,X8] : (s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X7))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X8))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))))),
+  file('thm.okasaki_misc.list_to_bag_perm','thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb')).
+fof(f7227,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) | $spl2),
+  inference(resolution,[],[f338,f240])).
+fof(f240,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) | s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) | s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))))),
+  inference(ennf_transformation,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) => s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))))),
+  inference(flattening,[],[f67])).
+fof(f67,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) => s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6] : ! [X7,X8] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))) => s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X7))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X8))))),
+  file('thm.okasaki_misc.list_to_bag_perm','thm.okasaki_misc.okasaki_misc_8_prove_ltb')).
+% SZS output end Proof for thm.okasaki_misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 428
+% Passive clauses: 2238
+% Generated clauses: 7076
+% Final active clauses: 375
+% Final passive clauses: 1446
+% Input formulas: 36
+% Initial clauses: 137
+% 
+% Duplicate literals: 208
+% Trivial inequalities: 89
+% Fw subsumption resolutions: 748
+% Fw demodulations: 39
+% Bw demodulations: 35
+% 
+% Simple tautologies: 147
+% Equational tautologies: 50
+% Forward subsumptions: 3477
+% 
+% Binary resolution: 3371
+% Factoring: 783
+% Forward superposition: 480
+% Backward superposition: 1012
+% Self superposition: 24
+% Equality factoring: 26
+% Equality resolution: 31
+% 
+% Split clauses: 165
+% Split components: 331
+% SAT solver clauses: 306
+% SAT solver unit clauses: 10
+% SAT solver binary clauses: 80
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 165
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 299
+% TWLsolver calls for satisfiability: 193
+% 
+% Memory used [KB]: 3070
+% Time elapsed: 0.158 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.171 s

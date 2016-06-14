@@ -1,0 +1,95 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.BatchedQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BatchedQueue
+% SZS output start Proof for thm.BatchedQueue
+fof(f71,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f70,f24])).
+fof(f24,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.BatchedQueue.datatype_queue','thm.bool.TRUTH')).
+fof(f70,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f23,f28])).
+fof(f28,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'const.bool.DATATYPE_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f14])).
+fof(f14,plain,(
+  ! [X0,X1] : s(bool,'T_0') = s(bool,'const.bool.DATATYPE_1'(s(X0,X1)))),
+  inference(flattening,[],[f13])).
+fof(f13,plain,(
+  ! [X0] : ! [X1] : s(bool,'T_0') = s(bool,'const.bool.DATATYPE_1'(s(X0,X1)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X8] : s(bool,'T_0') = s(bool,'const.bool.DATATYPE_1'(s(X6,X8)))),
+  file('thm.BatchedQueue.datatype_queue','thm.bool.DATATYPE_TAG_THM')).
+fof(f23,plain,(
+  ~p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(sK0),fun('type.list.list'(sK0),'type.BatchedQueue.queue'(sK0))),bool),sK1),s(fun('type.list.list'(sK0),fun('type.list.list'(sK0),'type.BatchedQueue.queue'(sK0))),'const.BatchedQueue.QUEUE_0'))))))),
+  inference(cnf_transformation,[],[f21])).
+fof(f21,plain,(
+  ~p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(sK0),fun('type.list.list'(sK0),'type.BatchedQueue.queue'(sK0))),bool),sK1),s(fun('type.list.list'(sK0),fun('type.list.list'(sK0),'type.BatchedQueue.queue'(sK0))),'const.BatchedQueue.QUEUE_0'))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f19])).
+fof(f19,plain,(
+  ? [X0,X1] : ~p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),'type.BatchedQueue.queue'(X0))),bool),X1),s(fun('type.list.list'(X0),fun('type.list.list'(X0),'type.BatchedQueue.queue'(X0))),'const.BatchedQueue.QUEUE_0'))))))),
+  inference(ennf_transformation,[],[f11])).
+fof(f11,plain,(
+  ~! [X0,X1] : p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),'type.BatchedQueue.queue'(X0))),bool),X1),s(fun('type.list.list'(X0),fun('type.list.list'(X0),'type.BatchedQueue.queue'(X0))),'const.BatchedQueue.QUEUE_0'))))))),
+  inference(flattening,[],[f10])).
+fof(f10,plain,(
+  ~! [X0] : ! [X1] : p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(X0),fun('type.list.list'(X0),'type.BatchedQueue.queue'(X0))),bool),X1),s(fun('type.list.list'(X0),fun('type.list.list'(X0),'type.BatchedQueue.queue'(X0))),'const.BatchedQueue.QUEUE_0'))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(X6),fun('type.list.list'(X6),'type.BatchedQueue.queue'(X6))),bool),X7),s(fun('type.list.list'(X6),fun('type.list.list'(X6),'type.BatchedQueue.queue'(X6))),'const.BatchedQueue.QUEUE_0'))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : p(s(bool,'const.bool.DATATYPE_1'(s(bool,happ(s(fun(fun('type.list.list'(X6),fun('type.list.list'(X6),'type.BatchedQueue.queue'(X6))),bool),X7),s(fun('type.list.list'(X6),fun('type.list.list'(X6),'type.BatchedQueue.queue'(X6))),'const.BatchedQueue.QUEUE_0'))))))),
+  file('thm.BatchedQueue.datatype_queue','thm.BatchedQueue.datatype_queue')).
+% SZS output end Proof for thm.BatchedQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 8
+% Passive clauses: 16
+% Generated clauses: 48
+% Final active clauses: 6
+% Final passive clauses: 3
+% Input formulas: 8
+% Initial clauses: 8
+% 
+% Duplicate literals: 1
+% Fw subsumption resolutions: 1
+% Fw demodulations: 1
+% 
+% Simple tautologies: 2
+% Equational tautologies: 2
+% Forward subsumptions: 24
+% 
+% Binary resolution: 2
+% Forward superposition: 14
+% Backward superposition: 12
+% Self superposition: 5
+% Equality factoring: 2
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 2
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 1
+% 
+% Sat splits: 1
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.012 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.004 s

@@ -1,0 +1,163 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.BinaryRandomAccessLists
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BinaryRandomAccessLists
+% SZS output start Proof for thm.BinaryRandomAccessLists
+fof(f508,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f504,f85])).
+fof(f85,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),'const.list.NIL_0')))),
+  inference(resolution,[],[f55,f64])).
+fof(f64,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f21])).
+fof(f21,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X11] : (s(bool,'T_0') = s(bool,X11) <=> p(s(bool,X11)))),
+  file('thm.BinaryRandomAccessLists.is_empty_ind','thm.bool.EQ_CLAUSES|split|1')).
+fof(f55,plain,(
+  p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),'const.list.NIL_0'))))),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),'const.list.NIL_0')))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,X3),s('type.list.list'(sK0),X4)))))) & ~p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f43])).
+fof(f43,plain,(
+  ? [X0,X1] : (p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.NIL_0')))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X3),s('type.list.list'(X0),X4)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),X2)))))),
+  inference(rectify,[],[f38])).
+fof(f38,plain,(
+  ? [X0,X1] : (p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.NIL_0')))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3)))))) & ? [X4] : ~p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),X4)))))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ? [X0,X1] : ((p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.NIL_0')))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))))) & ? [X4] : ~p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),X4)))))),
+  inference(ennf_transformation,[],[f18])).
+fof(f18,plain,(
+  ~! [X0,X1] : ((p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.NIL_0')))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))))) => ! [X4] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),X4)))))),
+  inference(flattening,[],[f17])).
+fof(f17,plain,(
+  ~! [X0] : ! [X1] : ((p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.NIL_0')))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))))) => ! [X4] : p(s(bool,happ(s(fun('type.list.list'(X0),bool),X1),s('type.list.list'(X0),X4)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((p(s(bool,happ(s(fun('type.list.list'(X6),bool),X7),s('type.list.list'(X6),'const.list.NIL_0')))) & ! [X8,X9] : p(s(bool,happ(s(fun('type.list.list'(X6),bool),X7),s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X9))))))) => ! [X8] : p(s(bool,happ(s(fun('type.list.list'(X6),bool),X7),s('type.list.list'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((p(s(bool,happ(s(fun('type.list.list'(X6),bool),X7),s('type.list.list'(X6),'const.list.NIL_0')))) & ! [X8,X9] : p(s(bool,happ(s(fun('type.list.list'(X6),bool),X7),s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X8),s('type.list.list'(X6),X9))))))) => ! [X8] : p(s(bool,happ(s(fun('type.list.list'(X6),bool),X7),s('type.list.list'(X6),X8)))))),
+  file('thm.BinaryRandomAccessLists.is_empty_ind','thm.BinaryRandomAccessLists.is_empty_ind')).
+fof(f504,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),'const.list.NIL_0')))),
+  inference(backward_demodulation,[],[f499,f87])).
+fof(f87,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),sK2)))),
+  inference(resolution,[],[f57,f63])).
+fof(f63,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f57,plain,(
+  ~p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f44])).
+fof(f499,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK2)),
+  inference(subsumption_resolution,[],[f493,f60])).
+fof(f60,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f19])).
+fof(f19,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.BinaryRandomAccessLists.is_empty_ind',aHL_FALSITY)).
+fof(f493,plain,(
+  p(s(bool,'F_0')) | s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK2)),
+  inference(superposition,[],[f142,f86])).
+fof(f86,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),sK2)))),
+  inference(resolution,[],[f57,f68])).
+fof(f68,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X11] : (s(bool,'F_0') = s(bool,X11) <=> ~p(s(bool,X11)))),
+  file('thm.BinaryRandomAccessLists.is_empty_ind','thm.bool.EQ_CLAUSES|split|2')).
+fof(f142,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),X0)))) | s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),X0)) )),
+  inference(superposition,[],[f56,f72])).
+fof(f72,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK3(X1,X0)),s('type.list.list'(X0),sK4(X1,X0)))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(cnf_transformation,[],[f49])).
+fof(f49,plain,(
+  ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,sK3(X1,X0)),s('type.list.list'(X0),sK4(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4])],[f30])).
+fof(f30,plain,(
+  ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | ? [X2,X3] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))),
+  inference(flattening,[],[f29])).
+fof(f29,plain,(
+  ! [X0] : ! [X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1) | ? [X2,X3] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.CONS_2'(s(X0,X2),s('type.list.list'(X0),X3))))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X6] : ! [X12] : (s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X12) | ? [X13,X11] : s('type.list.list'(X6),X12) = s('type.list.list'(X6),'const.list.CONS_2'(s(X6,X13),s('type.list.list'(X6),X11))))),
+  file('thm.BinaryRandomAccessLists.is_empty_ind','thm.list.list_CASES')).
+fof(f56,plain,(
+  ( ! [X4,X3] : (p(s(bool,happ(s(fun('type.list.list'(sK0),bool),sK1),s('type.list.list'(sK0),'const.list.CONS_2'(s(sK0,X3),s('type.list.list'(sK0),X4))))))) )),
+  inference(cnf_transformation,[],[f44])).
+% SZS output end Proof for thm.BinaryRandomAccessLists
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 26
+% Passive clauses: 93
+% Generated clauses: 434
+% Final active clauses: 21
+% Final passive clauses: 52
+% Input formulas: 15
+% Initial clauses: 23
+% 
+% Duplicate literals: 53
+% Trivial inequalities: 13
+% Fw subsumption resolutions: 40
+% Fw demodulations: 10
+% Bw demodulations: 5
+% 
+% Simple tautologies: 41
+% Equational tautologies: 15
+% Forward subsumptions: 175
+% 
+% Binary resolution: 19
+% Forward superposition: 102
+% Backward superposition: 115
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 4
+% 
+% Split clauses: 4
+% Split components: 8
+% SAT solver clauses: 5
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 4
+% 
+% Sat splits: 4
+% 
+% TWLsolver clauses: 5
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.021 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.05 s

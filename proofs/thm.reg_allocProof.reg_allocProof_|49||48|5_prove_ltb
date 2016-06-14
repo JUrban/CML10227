@@ -1,0 +1,168 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.reg_allocProof
+% (65836)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 886
+% Passive clauses: 8296
+% Generated clauses: 24147
+% Final active clauses: 785
+% Final passive clauses: 6908
+% Input formulas: 260
+% Initial clauses: 541
+% 
+% Duplicate literals: 176
+% Trivial inequalities: 109
+% Fw subsumption resolutions: 1051
+% Fw demodulations: 3833
+% Bw demodulations: 100
+% 
+% Simple tautologies: 346
+% Equational tautologies: 25
+% Forward subsumptions: 10117
+% 
+% Binary resolution: 5895
+% Factoring: 419
+% Forward superposition: 5789
+% Backward superposition: 5938
+% Self superposition: 37
+% Equality factoring: 2
+% Equality resolution: 24
+% 
+% Split clauses: 393
+% Split components: 788
+% SAT solver clauses: 536
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 108
+% 
+% Sat splits: 393
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 532
+% TWLsolver calls for satisfiability: 334
+% 
+% Memory used [KB]: 15607
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.reg_allocProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.reg_allocProof
+% SZS output start Proof for thm.reg_allocProof
+fof(f8481,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f8480,f8424,f8452,f1002,f1571,f1300,f1770])).
+fof(f1770,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK73(X2,X1,X0)),s(X1,sK74(X2,X1,X0))))) ) | $spl350),
+  inference(cnf_transformation,[],[f1770_D])).
+fof(f1770_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK73(X2,X1,X0)),s(X1,sK74(X2,X1,X0))))) ) <=> ~$spl350),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl350])])).
+fof(f1300,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK73(X2,X1,X0)),s(X1,sK74(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f936])).
+fof(f936,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK73(X2,X1,X0)),s(X1,sK74(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK73,sK74])],[f507])).
+fof(f507,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f506])).
+fof(f506,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f187])).
+fof(f187,axiom,(
+  ! [X12,X11] : ! [X36] : ? [X97,X50] : s('type.pair.prod'(X12,X11),X36) = s('type.pair.prod'(X12,X11),'const.pair.,_2'(s(X12,X97),s(X11,X50)))),
+  file('thm.reg_allocProof.reg_allocProof_|49||48|5_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f1571,plain,(
+  ( ! [X4,X3] : (s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X3),s('type.list.list'('type.num.num'),X4))) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))) ) | $spl0),
+  inference(cnf_transformation,[],[f1571_D])).
+fof(f1571_D,plain,(
+  ( ! [X4,X3] : (s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X3),s('type.list.list'('type.num.num'),X4))) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f1002,plain,(
+  ( ! [X4,X3] : (s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X3),s('type.list.list'('type.num.num'),X4))) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))) )),
+  inference(cnf_transformation,[],[f794])).
+fof(f794,plain,(
+  ! [X3,X4] : s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X3),s('type.list.list'('type.num.num'),X4))) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK15,sK16,sK17])],[f691])).
+fof(f691,plain,(
+  ? [X0,X1,X2] : ! [X3,X4] : s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X3),s('type.list.list'('type.num.num'),X4))) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',X1),s('type.list.list'('type.num.num'),X0),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X2)))),
+  inference(ennf_transformation,[],[f262])).
+fof(f262,plain,(
+  ~! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X3),s('type.list.list'('type.num.num'),X4))) = s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',X1),s('type.list.list'('type.num.num'),X0),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X2)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ? [X9,X10] : s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X9),s('type.list.list'('type.num.num'),X10))) = s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',X7),s('type.list.list'('type.num.num'),X6),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X8)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ? [X9,X10] : s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.pair.,_2'(s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X9),s('type.list.list'('type.num.num'),X10))) = s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',X7),s('type.list.list'('type.num.num'),X6),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),X8)))),
+  file('thm.reg_allocProof.reg_allocProof_|49||48|5_prove_ltb','thm.reg_allocProof.reg_allocProof_|49||48|5_prove_ltb')).
+fof(f8452,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),X0) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))) ) | $spl3558),
+  inference(cnf_transformation,[],[f8452_D])).
+fof(f8452_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),X0) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))) ) <=> ~$spl3558),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3558])])).
+fof(f8424,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),X0) != s('type.pair.prod'('type.sptree.spt'('type.sptree.spt'('type.one.one')),'type.list.list'('type.num.num')),'const.reg_alloc.clash_tree_to_spg_3'(s('type.reg_alloc.clash_tree',sK16),s('type.list.list'('type.num.num'),sK15),s('type.sptree.spt'('type.sptree.spt'('type.one.one')),sK17)))) ) | ($spl0 | $spl350)),
+  inference(superposition,[],[f1571,f1770])).
+fof(f8480,plain,(
+  $false | $spl3558),
+  inference(equality_resolution,[],[f8452])).
+% SZS output end Proof for thm.reg_allocProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 310
+% Passive clauses: 1733
+% Generated clauses: 7445
+% Final active clauses: 306
+% Final passive clauses: 1396
+% Input formulas: 260
+% Initial clauses: 541
+% 
+% Duplicate literals: 83
+% Trivial inequalities: 2
+% Fw subsumption resolutions: 272
+% Fw demodulations: 649
+% Bw demodulations: 31
+% Condensations: 57
+% Global subsumptions: 23
+% 
+% Simple tautologies: 263
+% Equational tautologies: 10
+% Forward subsumptions: 2383
+% 
+% Binary resolution: 1403
+% Factoring: 90
+% Forward superposition: 1406
+% Backward superposition: 1074
+% Self superposition: 33
+% Equality factoring: 2
+% Equality resolution: 2
+% 
+% Split clauses: 10
+% Split components: 20
+% SAT solver clauses: 2514
+% SAT solver unit clauses: 653
+% SAT solver binary clauses: 135
+% SAT solver learnt clauses: 47
+% SAT solver learnt literals: 12
+% 
+% Sat splits: 10
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2421
+% TWLsolver calls for satisfiability: 5345
+% 
+% Memory used [KB]: 14072
+% Time elapsed: 0.441 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.12 s

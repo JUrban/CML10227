@@ -1,0 +1,304 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.funBigStepProps
+% (37934)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 561
+% Passive clauses: 8783
+% Generated clauses: 16150
+% Final active clauses: 561
+% Final passive clauses: 7888
+% Input formulas: 62
+% Initial clauses: 217
+% 
+% Duplicate literals: 264
+% Trivial inequalities: 51
+% Fw subsumption resolutions: 1042
+% Fw demodulations: 262
+% 
+% Simple tautologies: 237
+% Equational tautologies: 60
+% Forward subsumptions: 5161
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 9776
+% Factoring: 948
+% Forward superposition: 1559
+% Backward superposition: 1830
+% Self superposition: 26
+% Equality factoring: 26
+% Equality resolution: 28
+% 
+% Split clauses: 272
+% Split components: 546
+% SAT solver clauses: 552
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 151
+% 
+% Sat splits: 272
+% 
+% TWLsolver clauses: 552
+% TWLsolver calls for satisfiability: 315
+% 
+% Memory used [KB]: 8699
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.funBigStepProps
+% (37957)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 347
+% Passive clauses: 1660
+% Generated clauses: 8101
+% Final active clauses: 337
+% Final passive clauses: 1254
+% Input formulas: 62
+% Initial clauses: 217
+% 
+% Duplicate literals: 165
+% Trivial inequalities: 27
+% Fw subsumption resolutions: 628
+% Fw demodulations: 165
+% Bw demodulations: 60
+% Condensations: 294
+% Global subsumptions: 18
+% 
+% Simple tautologies: 249
+% Equational tautologies: 26
+% Forward subsumptions: 2824
+% 
+% Binary resolution: 2795
+% Factoring: 325
+% Forward superposition: 756
+% Backward superposition: 899
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 17
+% 
+% Split clauses: 19
+% Split components: 38
+% SAT solver clauses: 2266
+% SAT solver unit clauses: 208
+% SAT solver binary clauses: 75
+% SAT solver learnt clauses: 36
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 19
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 2194
+% TWLsolver calls for satisfiability: 1809
+% 
+% Memory used [KB]: 8827
+% Time elapsed: 0.721 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.funBigStepProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.funBigStepProps
+% SZS output start Proof for thm.funBigStepProps
+fof(f6521,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f6520,f328])).
+fof(f328,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.funBigStepProps.evaluate_add_to_clock',aHL_TRUTH)).
+fof(f6520,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f6519,f3671])).
+fof(f3671,plain,(
+  s(bool,'T_0') = s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.semanticPrimitives.state'(sK10),sK12),s('type.list.list'('type.ast.exp'),sK14),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13)))))),
+  inference(unit_resulting_resolution,[],[f328,f3299,f421])).
+fof(f421,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f184])).
+fof(f184,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f183])).
+fof(f183,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X22,X23] : ((p(s(bool,X22)) => p(s(bool,X23))) => ((p(s(bool,X23)) => p(s(bool,X22))) => s(bool,X22) = s(bool,X23)))),
+  file('thm.funBigStepProps.evaluate_add_to_clock','thm.bool.IMP_ANTISYM_AX')).
+fof(f3299,plain,(
+  p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.semanticPrimitives.state'(sK10),sK12),s('type.list.list'('type.ast.exp'),sK14),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))))))),
+  inference(unit_resulting_resolution,[],[f325,f414])).
+fof(f414,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.list.list'('type.ast.exp'),X4))) | p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.semanticPrimitives.state'(X0),X2),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))))))) )),
+  inference(cnf_transformation,[],[f271])).
+fof(f271,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.list.list'('type.ast.exp'),X4))) | p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.semanticPrimitives.state'(X0),X2),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))))))) & (~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.semanticPrimitives.state'(X0),X2),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3)))))) | s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.list.list'('type.ast.exp'),X4)))))),
+  inference(nnf_transformation,[],[f121])).
+fof(f121,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.list.list'('type.ast.exp'),X4))) <=> p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.semanticPrimitives.state'(X0),X2),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3)))))))),
+  inference(flattening,[],[f120])).
+fof(f120,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5] : (s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.list.list'('type.ast.exp'),X4))) <=> p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.semanticPrimitives.state'(X0),X2),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3)))))))),
+  inference(rectify,[],[f46])).
+fof(f46,axiom,(
+  ! [X6] : ! [X7,X8,X9,X18,X15] : (s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X6),X7),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9))) = s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X6),X8),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X15),s('type.list.list'('type.ast.exp'),X18))) <=> p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X15),s('type.semanticPrimitives.state'(X6),X8),s('type.list.list'('type.ast.exp'),X18),s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X6),X7),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9)))))))),
+  file('thm.funBigStepProps.evaluate_add_to_clock','thm.funBigStepEquiv.functional_evaluate_list')).
+fof(f325,plain,(
+  s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))) = s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(sK10),sK12),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.list.list'('type.ast.exp'),sK14)))),
+  inference(cnf_transformation,[],[f219])).
+fof(f219,plain,(
+  s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))) = s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(sK10),sK12),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.list.list'('type.ast.exp'),sK14))) & s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13) != s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) & s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK10),sK11))),s('type.num.num',sK15))))),s('type.semanticPrimitives.state'(sK10),sK11))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))) != s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(sK10),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK10),sK12))),s('type.num.num',sK15))))),s('type.semanticPrimitives.state'(sK10),sK12))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.list.list'('type.ast.exp'),sK14)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14,sK15,sK16])],[f161])).
+fof(f161,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : (s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))) & s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3) != s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) & s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X1))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X2))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X2))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))))),
+  inference(flattening,[],[f160])).
+fof(f160,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))) & s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3) != s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0')))))) & s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X1))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X2))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X2))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))))),
+  inference(ennf_transformation,[],[f65])).
+fof(f65,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))) & s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3) != s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0')))))) => s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X1))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X2))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X2))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))))),
+  inference(flattening,[],[f64])).
+fof(f64,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4,X5,X6] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))) & ~s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0')))))) => s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X1))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X2))),s('type.num.num',X5))))),s('type.semanticPrimitives.state'(X0),X2))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X6),s('type.list.list'('type.ast.exp'),X4))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10,X11,X12] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X6),X7),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9))) = s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X6),X8),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X12),s('type.list.list'('type.ast.exp'),X10))) & ~s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0')))))) => s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X6),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),X7))),s('type.num.num',X11))))),s('type.semanticPrimitives.state'(X6),X7))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9))) = s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X6),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),X8))),s('type.num.num',X11))))),s('type.semanticPrimitives.state'(X6),X8))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X12),s('type.list.list'('type.ast.exp'),X10))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10,X11,X12] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X6),X7),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9))) = s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X6),X8),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X12),s('type.list.list'('type.ast.exp'),X10))) & ~s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0')))))) => s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X6),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),X7))),s('type.num.num',X11))))),s('type.semanticPrimitives.state'(X6),X7))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X9))) = s('type.pair.prod'('type.semanticPrimitives.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X6),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),X8))),s('type.num.num',X11))))),s('type.semanticPrimitives.state'(X6),X8))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X12),s('type.list.list'('type.ast.exp'),X10))))),
+  file('thm.funBigStepProps.evaluate_add_to_clock','thm.funBigStepProps.evaluate_add_to_clock')).
+fof(f6519,plain,(
+  ~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.semanticPrimitives.state'(sK10),sK12),s('type.list.list'('type.ast.exp'),sK14),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))))))),
+  inference(forward_demodulation,[],[f6518,f1708])).
+fof(f1708,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X1) = s(X0,sK30('const.pair.,_2'(s(X2,X3),s(X0,X1)),X0,X2))) )),
+  inference(unit_resulting_resolution,[],[f460,f463])).
+fof(f463,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X1,X3) = s(X1,X5)) )),
+  inference(cnf_transformation,[],[f290])).
+fof(f290,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5))) & (s(X0,X2) != s(X0,X4) | s(X1,X3) != s(X1,X5) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))))),
+  inference(flattening,[],[f289])).
+fof(f289,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5))) & ((s(X0,X2) != s(X0,X4) | s(X1,X3) != s(X1,X5)) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))))),
+  inference(nnf_transformation,[],[f150])).
+fof(f150,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) <=> (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5)))),
+  inference(flattening,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) <=> (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5)))),
+  inference(rectify,[],[f47])).
+fof(f47,axiom,(
+  ! [X6,X29] : ! [X25,X26,X36,X37] : (s('type.pair.prod'(X6,X29),'const.pair.,_2'(s(X6,X25),s(X29,X26))) = s('type.pair.prod'(X6,X29),'const.pair.,_2'(s(X6,X36),s(X29,X37))) <=> (s(X6,X25) = s(X6,X36) & s(X29,X26) = s(X29,X37)))),
+  file('thm.funBigStepProps.evaluate_add_to_clock','thm.pair.CLOSED_PAIR_EQ')).
+fof(f460,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK29(X2,X1,X0)),s(X1,sK30(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f287])).
+fof(f287,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK29(X2,X1,X0)),s(X1,sK30(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK29,sK30])],[f146])).
+fof(f146,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f145])).
+fof(f145,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f48])).
+fof(f48,axiom,(
+  ! [X6,X29] : ! [X25] : ? [X38,X9] : s('type.pair.prod'(X6,X29),X25) = s('type.pair.prod'(X6,X29),'const.pair.,_2'(s(X6,X38),s(X29,X9)))),
+  file('thm.funBigStepProps.evaluate_add_to_clock','thm.pair.ABS_PAIR_THM')).
+fof(f6518,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,sK30('const.pair.,_2'(s(X0,X1),s(bool,'T_0')),bool,X0)),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.semanticPrimitives.state'(sK10),sK12),s('type.list.list'('type.ast.exp'),sK14),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))))))) )),
+  inference(forward_demodulation,[],[f6249,f1708])).
+fof(f6249,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,sK30('const.pair.,_2'(s(X0,X1),s(bool,'T_0')),bool,X0)),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.semanticPrimitives.state'(sK10),sK12),s('type.list.list'('type.ast.exp'),sK14),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),sK30('const.pair.,_2'(s(X2,X3),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),sK11),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13)))),'type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X2)))))) )),
+  inference(unit_resulting_resolution,[],[f1708,f326,f1708,f3387,f413])).
+fof(f413,plain,(
+  ( ! [X6,X4,X2,X0,X8,X7,X5,X3,X1] : (s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X6),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))) | s(bool,'T_0') != s(bool,X1) | s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) | p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X3))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X3))),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X6))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X6))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7)))))) | ~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,X1),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),X3),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5))))) )),
+  inference(cnf_transformation,[],[f179])).
+fof(f179,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,X1),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),X3),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5)))) | ! [X6,X7,X8] : (s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X6),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))) | s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) | s(bool,'T_0') != s(bool,X1) | p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X3))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X3))),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X6))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X6))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))))))))),
+  inference(flattening,[],[f178])).
+fof(f178,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,X1),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),X3),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5)))) | ! [X6,X7,X8] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5) != s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X6),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))) | s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) | s(bool,'T_0') != s(bool,X1)) | p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X3))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X3))),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X6))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X6))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))))))))),
+  inference(ennf_transformation,[],[f119])).
+fof(f119,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,X1),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),X3),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5)))) => ! [X6,X7,X8] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X6),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))) & s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7) != s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) & s(bool,'T_0') = s(bool,X1)) => p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X3))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X3))),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X6))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X6))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))))))))),
+  inference(flattening,[],[f118])).
+fof(f118,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5] : (p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,X1),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),X3),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5)))) => ! [X6,X7,X8] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X5) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X6),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))) & ~s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) & s(bool,'T_0') = s(bool,X1)) => p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X2),s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X3))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X3))),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X6))),s('type.num.num',X8))))),s('type.semanticPrimitives.state'(X0),X6))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X7))))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X13] : ! [X14,X15,X8,X18,X16] : (p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,X14),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X15),s('type.semanticPrimitives.state'(X13),X8),s('type.list.list'('type.ast.exp'),X18),s('type.pair.prod'('type.semanticPrimitives.state'(X13),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X16)))) => ! [X7,X17,X11] : ((s('type.pair.prod'('type.semanticPrimitives.state'(X13),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),X16) = s('type.pair.prod'('type.semanticPrimitives.state'(X13),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X13),X7),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X17))) & ~s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X17) = s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0'))))) & s(bool,'T_0') = s(bool,X14)) => p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X15),s('type.semanticPrimitives.state'(X13),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X13),X8))),s('type.num.num',X11))))),s('type.semanticPrimitives.state'(X13),X8))),s('type.list.list'('type.ast.exp'),X18),s('type.pair.prod'('type.semanticPrimitives.state'(X13),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X13),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X13),X7))),s('type.num.num',X11))))),s('type.semanticPrimitives.state'(X13),X7))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X17))))))))),
+  file('thm.funBigStepProps.evaluate_add_to_clock','thm.bigClock.add_to_counter|split|1')).
+fof(f3387,plain,(
+  ~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.semanticPrimitives.state'(sK10),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK10),sK12))),s('type.num.num',sK15))))),s('type.semanticPrimitives.state'(sK10),sK12))),s('type.list.list'('type.ast.exp'),sK14),s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK10),sK11))),s('type.num.num',sK15))))),s('type.semanticPrimitives.state'(sK10),sK11))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))))))),
+  inference(unit_resulting_resolution,[],[f327,f415])).
+fof(f415,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.bigStep.evaluate_list_5'(s(bool,'T_0'),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.semanticPrimitives.state'(X0),X2),s('type.list.list'('type.ast.exp'),X4),s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3)))))) | s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),X3))) = s('type.pair.prod'('type.semanticPrimitives.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(X0),X2),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),X5),s('type.list.list'('type.ast.exp'),X4)))) )),
+  inference(cnf_transformation,[],[f271])).
+fof(f327,plain,(
+  s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.pair.,_2'(s('type.semanticPrimitives.state'(sK10),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK10),sK11))),s('type.num.num',sK15))))),s('type.semanticPrimitives.state'(sK10),sK11))),s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13))) != s('type.pair.prod'('type.semanticPrimitives.state'(sK10),'type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v')),'const.funBigStep.evaluate_3'(s('type.semanticPrimitives.state'(sK10),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK10),sK12))),s('type.num.num',sK15))))),s('type.semanticPrimitives.state'(sK10),sK12))),s('type.semanticPrimitives.environment'('type.semanticPrimitives.v'),sK16),s('type.list.list'('type.ast.exp'),sK14)))),
+  inference(cnf_transformation,[],[f219])).
+fof(f326,plain,(
+  s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),sK13) != s('type.semanticPrimitives.result'('type.list.list'('type.semanticPrimitives.v'),'type.semanticPrimitives.v'),'const.semanticPrimitives.Rerr_1'(s('type.semanticPrimitives.error_result'('type.semanticPrimitives.v'),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort','const.semanticPrimitives.Rtimeout_error_0')))))),
+  inference(cnf_transformation,[],[f219])).
+% SZS output end Proof for thm.funBigStepProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 284
+% Passive clauses: 1006
+% Generated clauses: 6075
+% Final active clauses: 276
+% Final passive clauses: 677
+% Input formulas: 62
+% Initial clauses: 217
+% 
+% Duplicate literals: 205
+% Trivial inequalities: 14
+% Fw subsumption resolutions: 194
+% Fw demodulations: 581
+% Bw demodulations: 51
+% Condensations: 352
+% Global subsumptions: 7
+% 
+% Simple tautologies: 94
+% Equational tautologies: 56
+% Forward subsumptions: 3332
+% Fw demodulations to eq. taut.: 166
+% Bw demodulations to eq. taut.: 1
+% 
+% Unit resulting resolution: 1526
+% Factoring: 1
+% Forward superposition: 2042
+% Backward superposition: 764
+% Self superposition: 27
+% Equality factoring: 26
+% Equality resolution: 16
+% 
+% Split clauses: 45
+% Split components: 95
+% SAT solver clauses: 1111
+% SAT solver unit clauses: 285
+% SAT solver binary clauses: 248
+% 
+% Sat splits: 45
+% Sat splitting refutations: 6
+% 
+% Memory used [KB]: 6652
+% Time elapsed: 0.244 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.591 s

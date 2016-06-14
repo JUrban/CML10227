@@ -1,0 +1,93 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_knownProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_knownProof
+% SZS output start Proof for thm.clos_knownProof
+fof(f2684,plain,(
+  $false),
+  inference(equality_resolution,[],[f2675])).
+fof(f2675,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),X0) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),sK3)))) )),
+  inference(superposition,[],[f253,f339])).
+fof(f339,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK5(X2,X1,X0)),s(X1,sK6(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f233])).
+fof(f233,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK5(X2,X1,X0)),s(X1,sK6(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK5,sK6])],[f131])).
+fof(f131,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f130])).
+fof(f130,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X21,X19] : ! [X27] : ? [X34,X35] : s('type.pair.prod'(X21,X19),X27) = s('type.pair.prod'(X21,X19),'const.pair.,_2'(s(X21,X34),s(X19,X35)))),
+  file('thm.clos_knownProof.clos_knownProof_2|48||49|_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f253,plain,(
+  ( ! [X2,X3] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X2),s('type.closLang.exp',X3))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),sK3)))) )),
+  inference(cnf_transformation,[],[f194])).
+fof(f194,plain,(
+  ! [X2,X3] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X2),s('type.closLang.exp',X3))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',sK2),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),sK3)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3])],[f168])).
+fof(f168,plain,(
+  ? [X0,X1] : ! [X2,X3] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X2),s('type.closLang.exp',X3))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',X0),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),X1)))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : ? [X2,X3] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X2),s('type.closLang.exp',X3))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',X0),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ? [X8,X9] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X8),s('type.closLang.exp',X9))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',X6),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ? [X8,X9] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X8),s('type.closLang.exp',X9))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.list.EL_2'(s('type.num.num',X6),s('type.list.list'('type.pair.prod'('type.num.num','type.closLang.exp')),X7)))),
+  file('thm.clos_knownProof.clos_knownProof_2|48||49|_prove_ltb','thm.clos_knownProof.clos_knownProof_2|48||49|_prove_ltb')).
+% SZS output end Proof for thm.clos_knownProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 70
+% Passive clauses: 455
+% Generated clauses: 2383
+% Final active clauses: 55
+% Final passive clauses: 336
+% Input formulas: 69
+% Initial clauses: 142
+% 
+% Duplicate literals: 104
+% Trivial inequalities: 79
+% Fw subsumption resolutions: 150
+% Fw demodulations: 272
+% Bw demodulations: 14
+% 
+% Simple tautologies: 135
+% Equational tautologies: 17
+% Forward subsumptions: 1137
+% Fw demodulations to eq. taut.: 6
+% 
+% Binary resolution: 45
+% Forward superposition: 795
+% Backward superposition: 682
+% Self superposition: 50
+% Equality factoring: 26
+% Equality resolution: 8
+% 
+% Split clauses: 39
+% Split components: 80
+% SAT solver clauses: 72
+% SAT solver unit clauses: 7
+% SAT solver binary clauses: 37
+% 
+% Sat splits: 39
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 72
+% TWLsolver calls for satisfiability: 21
+% 
+% Memory used [KB]: 1791
+% Time elapsed: 0.059 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.07 s

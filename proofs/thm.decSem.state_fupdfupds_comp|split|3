@@ -1,0 +1,265 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.decSem
+% (30983)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 112
+% Passive clauses: 1780
+% Generated clauses: 22969
+% Final active clauses: 108
+% Final passive clauses: 1592
+% Input formulas: 37
+% Initial clauses: 39
+% 
+% Duplicate literals: 1655
+% Trivial inequalities: 25
+% Fw subsumption resolutions: 2533
+% Fw demodulations: 4053
+% Bw demodulations: 2
+% 
+% Simple tautologies: 201
+% Equational tautologies: 19
+% Forward subsumptions: 11523
+% 
+% Binary resolution: 15
+% Forward superposition: 8719
+% Backward superposition: 5587
+% Self superposition: 229
+% Equality factoring: 34
+% Equality resolution: 5
+% 
+% Split clauses: 675
+% Split components: 1355
+% SAT solver clauses: 1253
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 21
+% 
+% Sat splits: 675
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1253
+% TWLsolver calls for satisfiability: 90
+% 
+% Memory used [KB]: 15991
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.decSem
+% (31013)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 86
+% Passive clauses: 1131
+% Generated clauses: 12890
+% Final active clauses: 85
+% Final passive clauses: 1014
+% Input formulas: 37
+% Initial clauses: 39
+% 
+% Duplicate literals: 717
+% Trivial inequalities: 19
+% Fw subsumption resolutions: 533
+% Fw demodulations: 1260
+% Bw demodulations: 31
+% Condensations: 804
+% 
+% Simple tautologies: 115
+% Equational tautologies: 18
+% Forward subsumptions: 6627
+% Fw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 11
+% Forward superposition: 4679
+% Backward superposition: 3409
+% Self superposition: 220
+% Equality factoring: 32
+% Equality resolution: 3
+% 
+% Split clauses: 12
+% Split components: 29
+% SAT solver clauses: 1393
+% SAT solver unit clauses: 68
+% SAT solver binary clauses: 40
+% 
+% Sat splits: 12
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1393
+% TWLsolver calls for satisfiability: 134
+% 
+% Memory used [KB]: 23666
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.decSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.decSem
+% SZS output start Proof for thm.decSem
+fof(f12064,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f12063,f114])).
+fof(f114,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.decSem.state_fupdfupds_comp|split|3',aHL_TRUTH)).
+fof(f12063,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f12061,f607])).
+fof(f607,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(equality_resolution,[],[f371])).
+fof(f371,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) != s(X0,X2) | s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) )),
+  inference(condensation,[],[f370])).
+fof(f370,plain,(
+  ( ! [X10,X8,X11,X9] : (s(X8,X9) != s(X8,X10) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X10))) | s(bool,'T_0') = s(bool,X11)) )),
+  inference(subsumption_resolution,[],[f367,f156])).
+fof(f156,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f115,f116])).
+fof(f116,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.decSem.state_fupdfupds_comp|split|3',aHL_BOOL_CASES)).
+fof(f115,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.decSem.state_fupdfupds_comp|split|3',aHL_FALSITY)).
+fof(f367,plain,(
+  ( ! [X10,X8,X11,X9] : (p(s(bool,X11)) | s(X8,X9) != s(X8,X10) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X10))) | s(bool,'T_0') = s(bool,X11)) )),
+  inference(superposition,[],[f132,f154])).
+fof(f154,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f116,f116])).
+fof(f132,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f112])).
+fof(f112,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X35,X36,X37] : (p(s(bool,happ(s(fun(X35,bool),happ(s(fun(X35,fun(X35,bool)),'=_0'),s(X35,X36))),s(X35,X37)))) <=> s(X35,X36) = s(X35,X37))),
+  file('thm.decSem.state_fupdfupds_comp|split|3',arity_0_HL_EQ)).
+fof(f12061,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.decSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.decSem.state'(sK1)),fun(fun(sK0,'type.decSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))))),s(fun(sK0,'type.decSem.state'(sK1)),sK2))))),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))))),s(fun(sK0,'type.decSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f12011,f2092])).
+fof(f2092,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.decSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.decSem.state'(sK1)),fun(fun(sK0,'type.decSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))))),s(fun(sK0,'type.decSem.state'(sK1)),sK2))))),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4))),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))),s(fun(sK0,'type.decSem.state'(sK1)),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f113,f131])).
+fof(f131,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f112])).
+fof(f113,plain,(
+  s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))))),s(fun(sK0,'type.decSem.state'(sK1)),sK2))) != s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4))),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))),s(fun(sK0,'type.decSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))))),s(fun(sK0,'type.decSem.state'(sK1)),sK2))) != s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK4))),s(fun(sK0,'type.decSem.state'(sK1)),'const.combin.o_2'(s(fun('type.decSem.state'(sK1),'type.decSem.state'(sK1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),sK3))),s(fun(sK0,'type.decSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f106])).
+fof(f106,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3))))),s(fun(X0,'type.decSem.state'(X1)),X2))) != s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X4))),s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3))),s(fun(X0,'type.decSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3))))),s(fun(X0,'type.decSem.state'(X1)),X2))) = s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X4))),s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3))),s(fun(X0,'type.decSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X4),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3))))),s(fun(X0,'type.decSem.state'(X1)),X2))) = s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X4))),s(fun(X0,'type.decSem.state'(X1)),'const.combin.o_2'(s(fun('type.decSem.state'(X1),'type.decSem.state'(X1)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3))),s(fun(X0,'type.decSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X10),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X9))))),s(fun(X6,'type.decSem.state'(X7)),X8))) = s(fun(X6,'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X10))),s(fun(X6,'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X9))),s(fun(X6,'type.decSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X10),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X9))))),s(fun(X6,'type.decSem.state'(X7)),X8))) = s(fun(X6,'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X10))),s(fun(X6,'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X9))),s(fun(X6,'type.decSem.state'(X7)),X8)))))),
+  file('thm.decSem.state_fupdfupds_comp|split|3','thm.decSem.state_fupdfupds_comp|split|3')).
+fof(f12011,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.decSem.state'(X0)),'const.combin.o_2'(s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2))))),s(fun(X3,'type.decSem.state'(X0)),X4))) = s(fun(X3,'type.decSem.state'(X0)),'const.combin.o_2'(s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1))),s(fun(X3,'type.decSem.state'(X0)),'const.combin.o_2'(s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2))),s(fun(X3,'type.decSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f138,f120])).
+fof(f120,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1))))) = s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.combin.o_2'(s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2))),s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1)))))) )),
+  inference(cnf_transformation,[],[f49])).
+fof(f49,plain,(
+  ! [X0,X1,X2] : s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1))))) = s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.combin.o_2'(s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2))),s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1)))))),
+  inference(flattening,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1))))) = s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.combin.o_2'(s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2))),s(fun('type.decSem.state'(X0),'type.decSem.state'(X0)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.o_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X10),s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X9))))) = s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.combin.o_2'(s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X10))),s(fun('type.decSem.state'(X7),'type.decSem.state'(X7)),'const.decSem.state_refs_fupd_1'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X9)))))),
+  file('thm.decSem.state_fupdfupds_comp|split|3','thm.decSem.state_fupdfupds_comp|split|2')).
+fof(f138,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f78])).
+fof(f78,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X13,X6,X18,X19] : ! [X10,X9,X8] : s(fun(X18,X13),'const.combin.o_2'(s(fun(X6,X13),X10),s(fun(X18,X6),'const.combin.o_2'(s(fun(X19,X6),X9),s(fun(X18,X19),X8))))) = s(fun(X18,X13),'const.combin.o_2'(s(fun(X19,X13),'const.combin.o_2'(s(fun(X6,X13),X10),s(fun(X19,X6),X9))),s(fun(X18,X19),X8)))),
+  file('thm.decSem.state_fupdfupds_comp|split|3','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.decSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 80
+% Passive clauses: 1054
+% Generated clauses: 11829
+% Final active clauses: 78
+% Final passive clauses: 917
+% Input formulas: 37
+% Initial clauses: 39
+% 
+% Duplicate literals: 711
+% Trivial inequalities: 23
+% Fw subsumption resolutions: 513
+% Fw demodulations: 1915
+% Bw demodulations: 59
+% Condensations: 728
+% 
+% Simple tautologies: 103
+% Equational tautologies: 59
+% Forward subsumptions: 6659
+% Fw demodulations to eq. taut.: 11
+% 
+% Unit resulting resolution: 363
+% Forward superposition: 4007
+% Backward superposition: 3229
+% Self superposition: 200
+% Equality factoring: 36
+% Equality resolution: 1
+% 
+% Split clauses: 8
+% Split components: 21
+% SAT solver clauses: 1072
+% SAT solver unit clauses: 299
+% SAT solver binary clauses: 213
+% 
+% Sat splits: 8
+% 
+% Memory used [KB]: 15863
+% Time elapsed: 0.716 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.05 s

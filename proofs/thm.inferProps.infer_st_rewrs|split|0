@@ -1,0 +1,455 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.inferProps
+% (116815)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 161
+% Passive clauses: 4985
+% Generated clauses: 20756
+% Final active clauses: 158
+% Final passive clauses: 4671
+% Input formulas: 69
+% Initial clauses: 103
+% 
+% Duplicate literals: 388
+% Trivial inequalities: 255
+% Fw subsumption resolutions: 931
+% Fw demodulations: 3821
+% Bw demodulations: 3
+% 
+% Simple tautologies: 230
+% Equational tautologies: 40
+% Forward subsumptions: 9986
+% Fw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 239
+% Factoring: 2
+% Forward superposition: 7740
+% Backward superposition: 7058
+% Self superposition: 140
+% Equality factoring: 60
+% Equality resolution: 26
+% 
+% Split clauses: 120
+% Split components: 244
+% SAT solver clauses: 270
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 87
+% 
+% Sat splits: 120
+% 
+% TWLsolver clauses: 270
+% TWLsolver calls for satisfiability: 92
+% 
+% Memory used [KB]: 19061
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.inferProps
+% (116846)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 106
+% Passive clauses: 1237
+% Generated clauses: 11163
+% Final active clauses: 95
+% Final passive clauses: 985
+% Input formulas: 69
+% Initial clauses: 103
+% 
+% Duplicate literals: 198
+% Trivial inequalities: 37
+% Fw subsumption resolutions: 132
+% Fw demodulations: 1810
+% Bw demodulations: 142
+% Condensations: 365
+% Global subsumptions: 4
+% 
+% Simple tautologies: 75
+% Equational tautologies: 34
+% Forward subsumptions: 5127
+% Fw demodulations to eq. taut.: 5
+% Bw demodulations to eq. taut.: 7
+% 
+% Binary resolution: 100
+% Factoring: 1
+% Forward superposition: 3164
+% Backward superposition: 3663
+% Self superposition: 106
+% Equality factoring: 50
+% Equality resolution: 11
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 2181
+% SAT solver unit clauses: 142
+% SAT solver binary clauses: 52
+% SAT solver learnt clauses: 8
+% 
+% Sat splits: 9
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 2165
+% TWLsolver calls for satisfiability: 424
+% 
+% Memory used [KB]: 14967
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.inferProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.inferProps
+% SZS output start Proof for thm.inferProps
+fof(f262718,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f262717,f281])).
+fof(f281,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X2) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))) )),
+  inference(cnf_transformation,[],[f97])).
+fof(f97,plain,(
+  ! [X0,X1,X2] : s(X0,X2) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))),
+  inference(flattening,[],[f96])).
+fof(f96,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X2) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6] : ! [X12,X21] : s(X6,X21) = s(X6,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X12),s(X6,X21)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_subst')).
+fof(f262717,plain,(
+  ( ! [X0] : (s('type.infer.infer_st'(sK0),sK1) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_subst_1'(s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X0),s('type.infer.infer_st'(sK0),sK1)))))) )),
+  inference(forward_demodulation,[],[f262713,f279])).
+fof(f279,plain,(
+  ( ! [X0,X1] : (s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK4(X1,X0)),s(X0,sK5(X1,X0))))) )),
+  inference(cnf_transformation,[],[f219])).
+fof(f219,plain,(
+  ! [X0,X1] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK4(X1,X0)),s(X0,sK5(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK4,sK5])],[f93])).
+fof(f93,plain,(
+  ! [X0,X1] : ? [X2,X3] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))),
+  inference(flattening,[],[f92])).
+fof(f92,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))),
+  inference(rectify,[],[f59])).
+fof(f59,axiom,(
+  ! [X6] : ! [X45] : ? [X12,X21] : s('type.infer.infer_st'(X6),X45) = s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X12),s(X6,X21)))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_nchotomy')).
+fof(f262713,plain,(
+  ( ! [X0] : (s('type.infer.infer_st'(sK0),sK1) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_subst_1'(s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X0),s('type.infer.infer_st'(sK0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK4(sK1,sK0)),s(sK0,sK5(sK1,sK0))))))))) )),
+  inference(backward_demodulation,[],[f262650,f25887])).
+fof(f25887,plain,(
+  ( ! [X0] : (s('type.infer.infer_st'(sK0),sK1) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_subst_1'(s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X0),s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK4(sK1,sK0)))),s('type.infer.infer_st'(sK0),sK1)))))))) )),
+  inference(forward_demodulation,[],[f25806,f281])).
+fof(f25806,plain,(
+  ( ! [X0] : (s('type.infer.infer_st'(sK0),'const.infer.infer_st_subst_1'(s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X0),s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK4(sK1,sK0)))),s('type.infer.infer_st'(sK0),sK1))))))) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_subst_1'(s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X0),s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK4(sK1,sK0)))),s('type.infer.infer_st'(sK0),sK1))))))),s('type.infer.infer_st'(sK0),sK1)))))) )),
+  inference(unit_resulting_resolution,[],[f2422,f280,f292])).
+fof(f292,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) != s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) | s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) != s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2))) | s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),X2)) )),
+  inference(cnf_transformation,[],[f223])).
+fof(f223,plain,(
+  ! [X0,X1,X2] : ((s('type.infer.infer_st'(X0),X1) != s('type.infer.infer_st'(X0),X2) | (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) & s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2))))) & (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) != s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) | s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) != s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2))) | s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),X2)))),
+  inference(flattening,[],[f222])).
+fof(f222,plain,(
+  ! [X0,X1,X2] : ((s('type.infer.infer_st'(X0),X1) != s('type.infer.infer_st'(X0),X2) | (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) & s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2))))) & ((s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) != s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) | s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) != s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2)))) | s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),X2)))),
+  inference(nnf_transformation,[],[f111])).
+fof(f111,plain,(
+  ! [X0,X1,X2] : (s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),X2) <=> (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) & s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2)))))),
+  inference(flattening,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : ! [X1,X2] : (s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),X2) <=> (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X2))) & s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2)))))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6] : ! [X16,X15] : (s('type.infer.infer_st'(X6),X15) = s('type.infer.infer_st'(X6),X16) <=> (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),X15))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),X16))) & s(X6,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X6),X15))) = s(X6,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X6),X16)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_component_equality')).
+fof(f280,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',X1) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))) )),
+  inference(cnf_transformation,[],[f95])).
+fof(f95,plain,(
+  ! [X0,X1,X2] : s('type.num.num',X1) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))),
+  inference(flattening,[],[f94])).
+fof(f94,plain,(
+  ! [X0] : ! [X1,X2] : s('type.num.num',X1) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2)))))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X6] : ! [X12,X21] : s('type.num.num',X12) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X12),s(X6,X21)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_next_uvar')).
+fof(f2422,plain,(
+  ( ! [X0,X1] : (s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X0),s('type.infer.infer_st'(sK0),sK1))) != s('type.infer.infer_st'('type.infer.infer_st'(sK0)),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK4(sK1,sK0)))),s('type.infer.infer_st'(sK0),sK1)))))) )),
+  inference(unit_resulting_resolution,[],[f688,f306])).
+fof(f306,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) != s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4))) | s(X0,X2) = s(X0,X4)) )),
+  inference(cnf_transformation,[],[f230])).
+fof(f230,plain,(
+  ! [X0,X1,X2,X3,X4] : ((s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) != s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4))) | (s('type.num.num',X1) = s('type.num.num',X3) & s(X0,X2) = s(X0,X4))) & (s('type.num.num',X1) != s('type.num.num',X3) | s(X0,X2) != s(X0,X4) | s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4)))))),
+  inference(flattening,[],[f229])).
+fof(f229,plain,(
+  ! [X0,X1,X2,X3,X4] : ((s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) != s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4))) | (s('type.num.num',X1) = s('type.num.num',X3) & s(X0,X2) = s(X0,X4))) & ((s('type.num.num',X1) != s('type.num.num',X3) | s(X0,X2) != s(X0,X4)) | s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4)))))),
+  inference(nnf_transformation,[],[f129])).
+fof(f129,plain,(
+  ! [X0,X1,X2,X3,X4] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4))) <=> (s('type.num.num',X1) = s('type.num.num',X3) & s(X0,X2) = s(X0,X4)))),
+  inference(flattening,[],[f128])).
+fof(f128,plain,(
+  ! [X0] : ! [X1,X2,X3,X4] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X1),s(X0,X2))) = s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X4))) <=> (s('type.num.num',X1) = s('type.num.num',X3) & s(X0,X2) = s(X0,X4)))),
+  inference(rectify,[],[f60])).
+fof(f60,axiom,(
+  ! [X6] : ! [X39,X40,X46,X47] : (s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X39),s(X6,X40))) = s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X46),s(X6,X47))) <=> (s('type.num.num',X39) = s('type.num.num',X46) & s(X6,X40) = s(X6,X47)))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_|49||49|')).
+fof(f688,plain,(
+  s('type.infer.infer_st'(sK0),sK1) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK4(sK1,sK0)))),s('type.infer.infer_st'(sK0),sK1)))),
+  inference(backward_demodulation,[],[f673,f244])).
+fof(f244,plain,(
+  s('type.infer.infer_st'(sK0),sK1) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(sK0),sK1))))),s('type.infer.infer_st'(sK0),sK1)))),
+  inference(cnf_transformation,[],[f199])).
+fof(f199,plain,(
+  s('type.infer.infer_st'(sK0),sK1) != s('type.infer.infer_st'(sK0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(sK0),sK1))))),s('type.infer.infer_st'(sK0),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f191])).
+fof(f191,plain,(
+  ? [X0,X1] : s('type.infer.infer_st'(X0),X1) != s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))))),s('type.infer.infer_st'(X0),X1)))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))))),s('type.infer.infer_st'(X0),X1)))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0] : ! [X1] : s('type.infer.infer_st'(X0),X1) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),X1))))),s('type.infer.infer_st'(X0),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s('type.infer.infer_st'(X6),X7) = s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),X7))))),s('type.infer.infer_st'(X6),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s('type.infer.infer_st'(X6),X7) = s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),X7))))),s('type.infer.infer_st'(X6),X7)))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.inferProps.infer_st_rewrs|split|0')).
+fof(f673,plain,(
+  ( ! [X2,X3] : (s('type.num.num',sK4(X3,X2)) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X2),X3)))) )),
+  inference(superposition,[],[f280,f279])).
+fof(f262650,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,sK5(X1,X0)))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),X1)))) )),
+  inference(superposition,[],[f105972,f279])).
+fof(f105972,plain,(
+  ( ! [X2,X0,X5,X3] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X5),s(X0,X2))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X5))),s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,X2)))))) )),
+  inference(forward_demodulation,[],[f105675,f349])).
+fof(f349,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f328,f324])).
+fof(f324,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f152])).
+fof(f152,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f151])).
+fof(f151,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f34])).
+fof(f34,axiom,(
+  ! [X8,X6] : ! [X19,X26] : s(X6,X19) = s(X6,'const.combin.K_2'(s(X6,X19),s(X8,X26)))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.combin.K_THM')).
+fof(f328,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f159])).
+fof(f159,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X6,X8] : ! [X9,X27] : s(X6,'const.combin.K_2'(s(X6,X9),s(X8,X27))) = s(X6,happ(s(fun(X8,X6),'const.combin.K_1'(s(X6,X9))),s(X8,X27)))),
+  file('thm.inferProps.infer_st_rewrs|split|0','ARITY_1_2_const.combin.K')).
+fof(f105675,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X5),s(X0,X2))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X5))),s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X4)))))))) )),
+  inference(superposition,[],[f102191,f333])).
+fof(f333,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X2),s('type.infer.infer_st'(X1),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X1,X4)))))) )),
+  inference(cnf_transformation,[],[f170])).
+fof(f170,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X2),s('type.infer.infer_st'(X1),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X1,X4)))))),
+  inference(flattening,[],[f169])).
+fof(f169,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X2),s('type.infer.infer_st'(X1),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X3),s(X1,X4)))))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X8,X6] : ! [X20,X12,X21] : s('type.infer.infer_st'(X8),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X12),s(X8,happ(s(fun(X6,X8),X20),s(X6,X21))))) = s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),X20),s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X12),s(X6,X21)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_subst_fupd')).
+fof(f102191,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X4))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),X3)))))) )),
+  inference(forward_demodulation,[],[f102190,f349])).
+fof(f102190,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',happ(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.num.num',sK4('const.bool.ARB_0',X1)))),s(X0,X4))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),X3)))))) )),
+  inference(forward_demodulation,[],[f102100,f300])).
+fof(f300,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X1),s('type.num.num',X2))),s(X0,X3))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X1),s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))))) )),
+  inference(cnf_transformation,[],[f119])).
+fof(f119,plain,(
+  ! [X0,X1,X2,X3] : s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X1),s('type.num.num',X2))),s(X0,X3))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X1),s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))))),
+  inference(flattening,[],[f118])).
+fof(f118,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X1),s('type.num.num',X2))),s(X0,X3))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X1),s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X2),s(X0,X3)))))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X6] : ! [X20,X12,X21] : s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X20),s('type.num.num',X12))),s(X6,X21))) = s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X20),s('type.infer.infer_st'(X6),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',X12),s(X6,X21)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_st_next_uvar_fupd')).
+fof(f102100,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK4('const.bool.ARB_0',X1)),s(X0,X4))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),X3)))))) )),
+  inference(backward_demodulation,[],[f102097,f336])).
+fof(f336,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),'const.bool.ARB_0'))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),X3)))))) )),
+  inference(cnf_transformation,[],[f176])).
+fof(f176,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),'const.bool.ARB_0'))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),X3)))))),
+  inference(flattening,[],[f175])).
+fof(f175,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),'const.bool.ARB_0'))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X4))),s('type.infer.infer_st'(X1),X3)))))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X8,X6] : ! [X12,X13,X14] : s('type.infer.infer_st'(X8),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X12))),s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),'const.combin.K_1'(s(X8,X14))),s('type.infer.infer_st'(X6),'const.bool.ARB_0'))))) = s('type.infer.infer_st'(X8),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X12))),s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),'const.combin.K_1'(s(X8,X14))),s('type.infer.infer_st'(X6),X13)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_57_prove_ltb')).
+fof(f102097,plain,(
+  ( ! [X12,X13,X11] : (s('type.infer.infer_st'(X11),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK4('const.bool.ARB_0',X12)),s(X11,X13))) = s('type.infer.infer_st'(X11),'const.infer.infer_st_subst_fupd_2'(s(fun(X12,X11),'const.combin.K_1'(s(X11,X13))),s('type.infer.infer_st'(X12),'const.bool.ARB_0')))) )),
+  inference(forward_demodulation,[],[f101345,f1386])).
+fof(f1386,plain,(
+  ( ! [X6,X4,X7,X5] : (s('type.num.num',sK4(X7,X5)) = s('type.num.num',sK4('const.infer.infer_st_subst_fupd_2'(s(fun(X5,X4),X6),s('type.infer.infer_st'(X5),X7)),X4))) )),
+  inference(superposition,[],[f692,f673])).
+fof(f692,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.num.num',sK4(X2,X1)) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))) )),
+  inference(backward_demodulation,[],[f673,f327])).
+fof(f327,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X1),X2))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))) )),
+  inference(cnf_transformation,[],[f158])).
+fof(f158,plain,(
+  ! [X0,X1,X2,X3] : s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X1),X2))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))),
+  inference(flattening,[],[f157])).
+fof(f157,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X1),X2))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X8,X6] : ! [X13,X20] : s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X6),X13))) = s('type.num.num','const.infer.infer_st_next_uvar_1'(s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),X20),s('type.infer.infer_st'(X6),X13)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_43_prove_ltb')).
+fof(f101345,plain,(
+  ( ! [X12,X13,X11] : (s('type.infer.infer_st'(X11),'const.infer.infer_st_subst_fupd_2'(s(fun(X12,X11),'const.combin.K_1'(s(X11,X13))),s('type.infer.infer_st'(X12),'const.bool.ARB_0'))) = s('type.infer.infer_st'(X11),'const.infer.recordtype|46|infer_st_2'(s('type.num.num',sK4('const.infer.infer_st_subst_fupd_2'(s(fun(X12,X11),'const.combin.K_1'(s(X11,X13))),s('type.infer.infer_st'(X12),'const.bool.ARB_0')),X11)),s(X11,X13)))) )),
+  inference(superposition,[],[f279,f87379])).
+fof(f87379,plain,(
+  ( ! [X2,X0,X3] : (s(X0,X3) = s(X0,sK5('const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),'const.bool.ARB_0')),X0))) )),
+  inference(backward_demodulation,[],[f86144,f45355])).
+fof(f45355,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,sK5('const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),'const.bool.ARB_0')),X0)) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),X4)))))))) )),
+  inference(forward_demodulation,[],[f45354,f1118])).
+fof(f1118,plain,(
+  ( ! [X4,X5,X3] : (s(X3,sK5(X5,X3)) = s(X3,sK5('const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X4),s('type.infer.infer_st'(X3),X5)),X3))) )),
+  inference(superposition,[],[f686,f672])).
+fof(f672,plain,(
+  ( ! [X0,X1] : (s(X0,sK5(X1,X0)) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1)))) )),
+  inference(superposition,[],[f281,f279])).
+fof(f686,plain,(
+  ( ! [X2,X0,X1] : (s(X0,sK5(X1,X0)) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))) )),
+  inference(backward_demodulation,[],[f672,f283])).
+fof(f283,plain,(
+  ( ! [X2,X0,X1] : (s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f101])).
+fof(f101,plain,(
+  ! [X0,X1,X2] : s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))),
+  inference(flattening,[],[f100])).
+fof(f100,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.infer.infer_st'(X0),X1)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X13,X20] : s(X6,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X6),X13))) = s(X6,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X20),s('type.infer.infer_st'(X6),X13)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_44_prove_ltb')).
+fof(f45354,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,sK5('const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),'const.bool.ARB_0')))),X0)) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),X4)))))))) )),
+  inference(forward_demodulation,[],[f44801,f672])).
+fof(f44801,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),'const.bool.ARB_0'))))))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X1))),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X2,X0),'const.combin.K_1'(s(X0,X3))),s('type.infer.infer_st'(X2),X4)))))))) )),
+  inference(unit_resulting_resolution,[],[f336,f291])).
+fof(f291,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer.infer_st'(X0),X1) != s('type.infer.infer_st'(X0),X2) | s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X1))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f223])).
+fof(f86144,plain,(
+  ( ! [X6,X8,X7,X5,X9] : (s(X5,X7) = s(X5,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X5),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X8),s('type.infer.infer_st'(X5),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X5),'const.combin.K_1'(s(X5,X7))),s('type.infer.infer_st'(X6),X9)))))))) )),
+  inference(superposition,[],[f2999,f335])).
+fof(f335,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X4),s('type.infer.infer_st'(X1),X2))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X4),s('type.infer.infer_st'(X1),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.infer.infer_st'(X1),X2)))))) )),
+  inference(cnf_transformation,[],[f174])).
+fof(f174,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X4),s('type.infer.infer_st'(X1),X2))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X4),s('type.infer.infer_st'(X1),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.infer.infer_st'(X1),X2)))))),
+  inference(flattening,[],[f173])).
+fof(f173,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.infer.infer_st'(X0),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X4),s('type.infer.infer_st'(X1),X2))))) = s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X4),s('type.infer.infer_st'(X1),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.infer.infer_st'(X1),X2)))))),
+  inference(rectify,[],[f47])).
+fof(f47,axiom,(
+  ! [X8,X6] : ! [X13,X38,X20] : s('type.infer.infer_st'(X8),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X38),s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),X20),s('type.infer.infer_st'(X6),X13))))) = s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),X20),s('type.infer.infer_st'(X6),'const.infer.infer_st_next_uvar_fupd_2'(s(fun('type.num.num','type.num.num'),X38),s('type.infer.infer_st'(X6),X13)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_52_prove_ltb')).
+fof(f2999,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s('type.infer.infer_st'(X1),X3)))))) )),
+  inference(superposition,[],[f687,f349])).
+fof(f687,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun(X1,X0),X3),s(X1,sK5(X2,X1)))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))) )),
+  inference(backward_demodulation,[],[f672,f329])).
+fof(f329,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun(X1,X0),X3),s(X1,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X1),X2))))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))) )),
+  inference(cnf_transformation,[],[f162])).
+fof(f162,plain,(
+  ! [X0,X1,X2,X3] : s(X0,happ(s(fun(X1,X0),X3),s(X1,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X1),X2))))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))),
+  inference(flattening,[],[f161])).
+fof(f161,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,happ(s(fun(X1,X0),X3),s(X1,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X1),X2))))) = s(X0,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X0),'const.infer.infer_st_subst_fupd_2'(s(fun(X1,X0),X3),s('type.infer.infer_st'(X1),X2)))))),
+  inference(rectify,[],[f48])).
+fof(f48,axiom,(
+  ! [X8,X6] : ! [X13,X20] : s(X8,happ(s(fun(X6,X8),X20),s(X6,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X6),X13))))) = s(X8,'const.infer.infer_st_subst_1'(s('type.infer.infer_st'(X8),'const.infer.infer_st_subst_fupd_2'(s(fun(X6,X8),X20),s('type.infer.infer_st'(X6),X13)))))),
+  file('thm.inferProps.infer_st_rewrs|split|0','thm.infer.infer_46_prove_ltb')).
+% SZS output end Proof for thm.inferProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 545
+% Passive clauses: 8395
+% Generated clauses: 259241
+% Final active clauses: 317
+% Final passive clauses: 1269
+% Input formulas: 69
+% Initial clauses: 103
+% Discarded non-redundant clauses: 107431
+% 
+% Duplicate literals: 1628
+% Trivial inequalities: 1121
+% Fw subsumption resolutions: 2773
+% Fw demodulations: 58961
+% Bw demodulations: 3802
+% Condensations: 2261
+% Global subsumptions: 251
+% 
+% Simple tautologies: 584
+% Equational tautologies: 420
+% Forward subsumptions: 64542
+% Fw demodulations to eq. taut.: 30735
+% Bw demodulations to eq. taut.: 323
+% 
+% Unit resulting resolution: 128342
+% Factoring: 1
+% Forward superposition: 28456
+% Backward superposition: 27432
+% Self superposition: 264
+% Equality factoring: 92
+% Equality resolution: 44
+% 
+% Split clauses: 23
+% Split components: 46
+% SAT solver clauses: 9254
+% SAT solver unit clauses: 1036
+% SAT solver binary clauses: 3421
+% 
+% Sat splits: 23
+% Sat splitting refutations: 560
+% 
+% Memory used [KB]: 167715
+% Time elapsed: 9.552 s
+% ------------------------------
+% ------------------------------
+% Success in time 10.91 s

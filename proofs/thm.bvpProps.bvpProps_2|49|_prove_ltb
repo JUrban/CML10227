@@ -1,0 +1,95 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpProps
+% SZS output start Proof for thm.bvpProps
+fof(f574,plain,(
+  $false),
+  inference(equality_resolution,[],[f560])).
+fof(f560,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(sK0)),sK1) != s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(sK0)),X0)) )),
+  inference(superposition,[],[f137,f181])).
+fof(f181,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK2(X2,X1,X0)),s(X1,sK3(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f129])).
+fof(f129,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK2(X2,X1,X0)),s(X1,sK3(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3])],[f71])).
+fof(f71,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X6,X17] : ! [X8] : ? [X37,X38] : s('type.pair.prod'(X6,X17),X8) = s('type.pair.prod'(X6,X17),'const.pair.,_2'(s(X6,X37),s(X17,X38)))),
+  file('thm.bvpProps.bvpProps_2|49|_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f137,plain,(
+  ( ! [X2,X3] : (s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(sK0)),sK1) != s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvlSem.v',X2),s('type.bvpSem.state'(sK0),X3)))) )),
+  inference(cnf_transformation,[],[f113])).
+fof(f113,plain,(
+  ! [X2,X3] : s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(sK0)),sK1) != s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(sK0)),'const.pair.,_2'(s('type.bvlSem.v',X2),s('type.bvpSem.state'(sK0),X3)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f96])).
+fof(f96,plain,(
+  ? [X0,X1] : ! [X2,X3] : s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X0)),X1) != s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvlSem.v',X2),s('type.bvpSem.state'(X0),X3)))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : ? [X2,X3] : s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X0)),X1) = s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvlSem.v',X2),s('type.bvpSem.state'(X0),X3)))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1] : ? [X2,X3] : s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X0)),X1) = s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X0)),'const.pair.,_2'(s('type.bvlSem.v',X2),s('type.bvpSem.state'(X0),X3)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ? [X8,X9] : s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X6)),X7) = s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvlSem.v',X8),s('type.bvpSem.state'(X6),X9)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ? [X8,X9] : s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X6)),X7) = s('type.pair.prod'('type.bvlSem.v','type.bvpSem.state'(X6)),'const.pair.,_2'(s('type.bvlSem.v',X8),s('type.bvpSem.state'(X6),X9)))),
+  file('thm.bvpProps.bvpProps_2|49|_prove_ltb','thm.bvpProps.bvpProps_2|49|_prove_ltb')).
+% SZS output end Proof for thm.bvpProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 30
+% Passive clauses: 122
+% Generated clauses: 431
+% Final active clauses: 26
+% Final passive clauses: 78
+% Input formulas: 37
+% Initial clauses: 72
+% 
+% Duplicate literals: 3
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 14
+% Fw demodulations: 58
+% 
+% Simple tautologies: 30
+% Equational tautologies: 4
+% Forward subsumptions: 185
+% 
+% Binary resolution: 56
+% Factoring: 1
+% Forward superposition: 113
+% Backward superposition: 88
+% Self superposition: 11
+% Equality factoring: 2
+% Equality resolution: 5
+% 
+% Split clauses: 16
+% Split components: 34
+% SAT solver clauses: 24
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 17
+% 
+% Sat splits: 16
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 24
+% TWLsolver calls for satisfiability: 10
+% 
+% Memory used [KB]: 895
+% Time elapsed: 0.025 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.049 s

@@ -1,0 +1,435 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% (85077)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 318
+% Passive clauses: 2304
+% Generated clauses: 22262
+% Final active clauses: 176
+% Final passive clauses: 1770
+% Input formulas: 122
+% Initial clauses: 153
+% 
+% Duplicate literals: 274
+% Trivial inequalities: 135
+% Fw subsumption resolutions: 772
+% Fw demodulations: 3339
+% Bw demodulations: 117
+% 
+% Simple tautologies: 180
+% Equational tautologies: 24
+% Forward subsumptions: 15230
+% Fw demodulations to eq. taut.: 51
+% Bw demodulations to eq. taut.: 5
+% 
+% Binary resolution: 85
+% Forward superposition: 9243
+% Backward superposition: 7896
+% Self superposition: 104
+% Equality factoring: 38
+% Equality resolution: 18
+% 
+% Split clauses: 68
+% Split components: 136
+% SAT solver clauses: 146
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 41
+% 
+% Sat splits: 68
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 146
+% TWLsolver calls for satisfiability: 45
+% 
+% Memory used [KB]: 12920
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.ml_translator
+% (85102)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 330
+% Passive clauses: 1474
+% Generated clauses: 31444
+% Final active clauses: 174
+% Final passive clauses: 551
+% Input formulas: 122
+% Initial clauses: 153
+% 
+% Duplicate literals: 11
+% Trivial inequalities: 51
+% Fw subsumption resolutions: 365
+% Fw demodulations: 7153
+% Bw demodulations: 632
+% Global subsumptions: 6
+% 
+% Simple tautologies: 38
+% Equational tautologies: 5
+% Forward subsumptions: 20031
+% Fw demodulations to eq. taut.: 88
+% Bw demodulations to eq. taut.: 24
+% 
+% Binary resolution: 106
+% Factoring: 1
+% Forward superposition: 11335
+% Backward superposition: 9423
+% Self superposition: 119
+% Equality factoring: 2
+% Equality resolution: 5
+% 
+% Split clauses: 13
+% Split components: 26
+% SAT solver clauses: 2218
+% SAT solver unit clauses: 251
+% SAT solver binary clauses: 38
+% SAT solver learnt clauses: 16
+% SAT solver learnt literals: 7
+% 
+% Sat splits: 13
+% Sat splitting refutations: 32
+% 
+% TWLsolver clauses: 2190
+% TWLsolver calls for satisfiability: 536
+% 
+% Memory used [KB]: 25713
+% Time elapsed: 0.733 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f20391,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f20390,f441])).
+fof(f441,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f299,f289])).
+fof(f289,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.ml_translator.v_size_lemmas|split|0',aHL_TRUTH)).
+fof(f299,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f261])).
+fof(f261,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f125])).
+fof(f125,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f29])).
+fof(f29,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.bool.NOT_CLAUSES|split|2')).
+fof(f20390,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f20389,f511])).
+fof(f511,plain,(
+  s(bool,'F_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2)))))),
+  inference(unit_resulting_resolution,[],[f288,f353])).
+fof(f353,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f265])).
+fof(f265,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f175])).
+fof(f175,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f174])).
+fof(f174,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X13] : (s(bool,'F_0') = s(bool,X13) <=> ~p(s(bool,X13)))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.bool.EQ_CLAUSES|split|2')).
+fof(f288,plain,(
+  ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))),
+  inference(cnf_transformation,[],[f260])).
+fof(f260,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),sK1),s('type.semanticPrimitives.v',sK0))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2)))))) & ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f247])).
+fof(f247,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X1),s('type.semanticPrimitives.v',X0))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X2)))))) & ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X2)))))))),
+  inference(ennf_transformation,[],[f124])).
+fof(f124,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X1),s('type.semanticPrimitives.v',X0))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X2)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X2)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : (p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X7),s('type.semanticPrimitives.v',X6))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X8)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X6))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X8)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : (p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X7),s('type.semanticPrimitives.v',X6))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X8)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X6))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X8)))))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.ml_translator.v_size_lemmas|split|0')).
+fof(f20389,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))),
+  inference(forward_demodulation,[],[f20388,f374])).
+fof(f374,plain,(
+  ( ! [X0,X1] : (s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1)))))) )),
+  inference(cnf_transformation,[],[f192])).
+fof(f192,plain,(
+  ! [X0,X1] : s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1)))))),
+  inference(rectify,[],[f105])).
+fof(f105,axiom,(
+  ! [X10,X9] : s(bool,'const.arithmetic.<=_2'(s('type.num.num',X10),s('type.num.num',X9))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X10))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X9)))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.numeral.numeral_lte|split|6')).
+fof(f20388,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))))),
+  inference(subsumption_resolution,[],[f20285,f289])).
+fof(f20285,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))))),
+  inference(superposition,[],[f20007,f14609])).
+fof(f14609,plain,(
+  ( ! [X2] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X2))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X2)))))) )),
+  inference(superposition,[],[f14178,f320])).
+fof(f320,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))) = s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))))) )),
+  inference(cnf_transformation,[],[f145])).
+fof(f145,plain,(
+  ! [X0] : s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))) = s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0)))))),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X10] : s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X10))) = s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X10)))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.numeral.numeral_suc|split|1')).
+fof(f14178,plain,(
+  ( ! [X5] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',X5),s('type.num.num','const.num.SUC_1'(s('type.num.num',X5)))))) )),
+  inference(superposition,[],[f14054,f2940])).
+fof(f2940,plain,(
+  ( ! [X1] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X1),s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0')))))) )),
+  inference(superposition,[],[f450,f371])).
+fof(f371,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X1),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f189])).
+fof(f189,plain,(
+  ! [X0,X1] : s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X1),s('type.num.num',X0)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X9,X10] : s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X9),s('type.num.num',X10))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X10),s('type.num.num',X9)))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.ADD_SYM')).
+fof(f450,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))),s('type.num.num',X0)))) )),
+  inference(forward_demodulation,[],[f449,f440])).
+fof(f440,plain,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(forward_demodulation,[],[f296,f294])).
+fof(f294,plain,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.ZERO_0'))) = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,axiom,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.ZERO_0'))) = s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.numeral.numeral_suc|split|0')).
+fof(f296,plain,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(cnf_transformation,[],[f58])).
+fof(f58,axiom,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.numeral.numeral_distrib|split|13')).
+fof(f449,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X0)))) )),
+  inference(forward_demodulation,[],[f343,f294])).
+fof(f343,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f168])).
+fof(f168,plain,(
+  ! [X0] : s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X0)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X10] : s('type.num.num','const.num.SUC_1'(s('type.num.num',X10))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X10)))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.SUC_ONE_ADD')).
+fof(f14054,plain,(
+  ( ! [X6,X7] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X7)))))) )),
+  inference(forward_demodulation,[],[f13918,f310])).
+fof(f310,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f135])).
+fof(f135,plain,(
+  ! [X0] : s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))),
+  inference(rectify,[],[f71])).
+fof(f71,axiom,(
+  ! [X10] : s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X10)))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.numeral.numeral_distrib|split|26')).
+fof(f13918,plain,(
+  ( ! [X6,X7] : (s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X7))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X7)))))) )),
+  inference(superposition,[],[f428,f308])).
+fof(f308,plain,(
+  ( ! [X0] : (s('type.num.num',X0) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f133])).
+fof(f133,plain,(
+  ! [X0] : s('type.num.num',X0) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X9] : s('type.num.num',X9) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X9),s('type.num.num','const.num.|48|_0')))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.ADD_|48|')).
+fof(f428,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X2)))))) )),
+  inference(cnf_transformation,[],[f240])).
+fof(f240,plain,(
+  ! [X0,X1,X2] : s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X9,X10,X11] : s(bool,'const.arithmetic.<=_2'(s('type.num.num',X10),s('type.num.num',X11))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X9),s('type.num.num',X10))),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X9),s('type.num.num',X11)))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.ADD_MONO_LESS_EQ')).
+fof(f20007,plain,(
+  ( ! [X0] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))),s('type.num.num',X0))))) )),
+  inference(subsumption_resolution,[],[f19996,f289])).
+fof(f19996,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))),s('type.num.num',X0))))) )),
+  inference(superposition,[],[f433,f19775])).
+fof(f19775,plain,(
+  s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2)))))))),
+  inference(unit_resulting_resolution,[],[f19306,f349])).
+fof(f349,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f263])).
+fof(f263,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f172])).
+fof(f172,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X13] : (s(bool,'T_0') = s(bool,X13) <=> p(s(bool,X13)))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.bool.EQ_CLAUSES|split|0')).
+fof(f19306,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f19300,f411])).
+fof(f411,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X1)))))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0))))) )),
+  inference(cnf_transformation,[],[f276])).
+fof(f276,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X1)))))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0))))) & (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X1))))))))),
+  inference(nnf_transformation,[],[f228])).
+fof(f228,plain,(
+  ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X1)))))) <=> ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))))),
+  inference(flattening,[],[f227])).
+fof(f227,plain,(
+  ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X1)))))) <=> ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))))),
+  inference(rectify,[],[f104])).
+fof(f104,axiom,(
+  ! [X10,X9] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X10))),s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X9)))))) <=> ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X9),s('type.num.num',X10)))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.numeral.numeral_lte|split|5')).
+fof(f19300,plain,(
+  ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))),s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))))))),
+  inference(unit_resulting_resolution,[],[f19299,f480])).
+fof(f480,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))))) )),
+  inference(forward_demodulation,[],[f417,f372])).
+fof(f372,plain,(
+  ( ! [X0,X1] : (s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))) )),
+  inference(cnf_transformation,[],[f190])).
+fof(f190,plain,(
+  ! [X0,X1] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X9,X10] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X9),s('type.num.num',X10))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X9))),s('type.num.num',X10)))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.LESS_EQ')).
+fof(f417,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))),s('type.num.num',X0))))) )),
+  inference(cnf_transformation,[],[f279])).
+fof(f279,plain,(
+  ! [X0,X1] : ((p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))),s('type.num.num',X0))))) & (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))),s('type.num.num',X0)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))))))),
+  inference(nnf_transformation,[],[f232])).
+fof(f232,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) <=> p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))),s('type.num.num',X0)))))),
+  inference(flattening,[],[f231])).
+fof(f231,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) <=> p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))),s('type.num.num',X0)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X9,X10] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X9),s('type.num.num',X10)))) <=> p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X10))),s('type.num.num',X9)))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.NOT_LEQ')).
+fof(f19299,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))),
+  inference(subsumption_resolution,[],[f19295,f289])).
+fof(f19295,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',sK0))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))),
+  inference(superposition,[],[f432,f763])).
+fof(f763,plain,(
+  s(bool,'T_0') = s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),sK1),s('type.semanticPrimitives.v',sK0))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2)))))),
+  inference(unit_resulting_resolution,[],[f287,f349])).
+fof(f287,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),sK1),s('type.semanticPrimitives.v',sK0))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK2))))))),
+  inference(cnf_transformation,[],[f260])).
+fof(f432,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X1),s('type.semanticPrimitives.v',X2))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X0)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X2))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X0))))))) )),
+  inference(cnf_transformation,[],[f255])).
+fof(f255,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X1),s('type.semanticPrimitives.v',X2))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X0)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X2))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X0)))))))),
+  inference(ennf_transformation,[],[f244])).
+fof(f244,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X1),s('type.semanticPrimitives.v',X2))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X0)))))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X2))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X0)))))))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X20,X7,X19] : (p(s(bool,'const.bool.IN_2'(s('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),'const.pair.,_2'(s('type.list.list'('type.string.char'),X7),s('type.semanticPrimitives.v',X19))),s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X20)))))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.semanticPrimitives.v_size_1'(s('type.semanticPrimitives.v',X19))),s('type.num.num','const.semanticPrimitives.v4_size_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X20)))))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.ml_translator.ml_translator_5|48|2_prove_ltb')).
+fof(f433,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2))))) )),
+  inference(cnf_transformation,[],[f257])).
+fof(f257,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(flattening,[],[f256])).
+fof(f256,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(ennf_transformation,[],[f245])).
+fof(f245,plain,(
+  ! [X0,X1,X2] : ((p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X9,X10,X11] : ((p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X9),s('type.num.num',X10)))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X10),s('type.num.num',X11))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X9),s('type.num.num',X11)))))),
+  file('thm.ml_translator.v_size_lemmas|split|0','thm.arithmetic.LESS_EQ_TRANS')).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 270
+% Passive clauses: 1032
+% Generated clauses: 20088
+% Final active clauses: 180
+% Final passive clauses: 567
+% Input formulas: 122
+% Initial clauses: 153
+% 
+% Duplicate literals: 1
+% Trivial inequalities: 54
+% Fw subsumption resolutions: 151
+% Fw demodulations: 3790
+% Bw demodulations: 272
+% 
+% Simple tautologies: 32
+% Equational tautologies: 9
+% Forward subsumptions: 14811
+% Fw demodulations to eq. taut.: 197
+% Bw demodulations to eq. taut.: 13
+% 
+% Unit resulting resolution: 505
+% Forward superposition: 8272
+% Backward superposition: 6802
+% Self superposition: 77
+% Equality factoring: 2
+% Equality resolution: 5
+% 
+% Split clauses: 5
+% Split components: 10
+% SAT solver clauses: 1044
+% SAT solver unit clauses: 639
+% SAT solver binary clauses: 375
+% 
+% Sat splits: 5
+% 
+% Memory used [KB]: 18677
+% Time elapsed: 0.523 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.9 s

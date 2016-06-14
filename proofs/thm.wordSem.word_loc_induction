@@ -1,0 +1,242 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordSem
+% (20528)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 123
+% Passive clauses: 2858
+% Generated clauses: 15648
+% Final active clauses: 115
+% Final passive clauses: 2577
+% Input formulas: 37
+% Initial clauses: 57
+% 
+% Duplicate literals: 648
+% Trivial inequalities: 264
+% Fw subsumption resolutions: 1662
+% Fw demodulations: 1793
+% Bw demodulations: 6
+% 
+% Simple tautologies: 326
+% Equational tautologies: 52
+% Forward subsumptions: 7453
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 234
+% Factoring: 2
+% Forward superposition: 5482
+% Backward superposition: 5076
+% Self superposition: 197
+% Equality factoring: 126
+% Equality resolution: 31
+% 
+% Split clauses: 289
+% Split components: 584
+% SAT solver clauses: 573
+% SAT solver unit clauses: 24
+% SAT solver binary clauses: 110
+% 
+% Sat splits: 288
+% 
+% TWLsolver clauses: 572
+% TWLsolver calls for satisfiability: 126
+% 
+% Memory used [KB]: 14583
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.wordSem
+% (20558)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 133
+% Passive clauses: 992
+% Generated clauses: 14708
+% Final active clauses: 124
+% Final passive clauses: 850
+% Input formulas: 37
+% Initial clauses: 57
+% 
+% Duplicate literals: 389
+% Trivial inequalities: 382
+% Fw subsumption resolutions: 854
+% Fw demodulations: 2026
+% Bw demodulations: 11
+% Condensations: 683
+% Global subsumptions: 4
+% 
+% Simple tautologies: 157
+% Equational tautologies: 25
+% Forward subsumptions: 7591
+% 
+% Binary resolution: 53
+% Factoring: 2
+% Forward superposition: 3914
+% Backward superposition: 5116
+% Self superposition: 115
+% Equality factoring: 39
+% Equality resolution: 36
+% 
+% Split clauses: 20
+% Split components: 40
+% SAT solver clauses: 1657
+% SAT solver unit clauses: 90
+% SAT solver binary clauses: 46
+% SAT solver learnt clauses: 9
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 20
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 1640
+% TWLsolver calls for satisfiability: 365
+% 
+% Memory used [KB]: 21236
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.wordSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordSem
+% SZS output start Proof for thm.wordSem
+fof(f4069,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f4046,f188])).
+fof(f188,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),sK2)))),
+  inference(unit_resulting_resolution,[],[f129,f140])).
+fof(f140,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f114])).
+fof(f114,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f46])).
+fof(f46,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f31])).
+fof(f31,axiom,(
+  ! [X12] : (s(bool,'T_0') = s(bool,X12) <=> p(s(bool,X12)))),
+  file('thm.wordSem.word_loc_induction','thm.bool.EQ_CLAUSES|split|1')).
+fof(f129,plain,(
+  ~p(s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f111])).
+fof(f111,plain,(
+  ! [X5] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK0),X5)))))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',X3),s('type.num.num',X4)))))) & ~p(s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f110])).
+fof(f110,plain,(
+  ? [X0,X1] : (! [X5] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X5)))))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X3),s('type.num.num',X4)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),X2)))))),
+  inference(rectify,[],[f102])).
+fof(f102,plain,(
+  ? [X0,X1] : (! [X4] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3)))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),X5)))))),
+  inference(flattening,[],[f101])).
+fof(f101,plain,(
+  ? [X0,X1] : ((! [X4] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3))))))) & ? [X5] : ~p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),X5)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : ((! [X4] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3))))))) => ! [X5] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),X5)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1] : ((! [X4] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3))))))) => ! [X5] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),X1),s('type.wordSem.word_loc'(X0),X5)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((! [X8] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),X7),s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8)))))) & ! [X9,X10] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),X7),s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10))))))) => ! [X11] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),X7),s('type.wordSem.word_loc'(X6),X11)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((! [X8] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),X7),s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8)))))) & ! [X9,X10] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),X7),s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10))))))) => ! [X11] : p(s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),X7),s('type.wordSem.word_loc'(X6),X11)))))),
+  file('thm.wordSem.word_loc_induction','thm.wordSem.word_loc_induction')).
+fof(f4046,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),sK2)))),
+  inference(superposition,[],[f191,f3893])).
+fof(f3893,plain,(
+  s('type.wordSem.word_loc'(sK0),sK2) = s('type.wordSem.word_loc'(sK0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK0),sK3(sK2,sK0))))),
+  inference(unit_resulting_resolution,[],[f188,f1494])).
+fof(f1494,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),X0))) | s('type.wordSem.word_loc'(sK0),X0) = s('type.wordSem.word_loc'(sK0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK0),sK3(X0,sK0))))) )),
+  inference(superposition,[],[f192,f151])).
+fof(f151,plain,(
+  ( ! [X0,X1] : (s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',sK4(X1,X0)),s('type.num.num',sK5(X1,X0)))) | s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),sK3(X1,X0))))) )),
+  inference(cnf_transformation,[],[f119])).
+fof(f119,plain,(
+  ! [X0,X1] : (s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),sK3(X1,X0)))) | s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',sK4(X1,X0)),s('type.num.num',sK5(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5])],[f57])).
+fof(f57,plain,(
+  ! [X0,X1] : (? [X4] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4))) | ? [X2,X3] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3))))),
+  inference(flattening,[],[f56])).
+fof(f56,plain,(
+  ! [X0] : ! [X1] : (? [X4] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X0),X4))) | ? [X2,X3] : s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X3))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6] : ! [X41] : (? [X8] : s('type.wordSem.word_loc'(X6),X41) = s('type.wordSem.word_loc'(X6),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,X6),X8))) | ? [X9,X10] : s('type.wordSem.word_loc'(X6),X41) = s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X9),s('type.num.num',X10))))),
+  file('thm.wordSem.word_loc_induction','thm.wordSem.word_loc_nchotomy')).
+fof(f192,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',X0),s('type.num.num',X1)))))) )),
+  inference(unit_resulting_resolution,[],[f128,f141])).
+fof(f141,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f114])).
+fof(f128,plain,(
+  ( ! [X4,X3] : (p(s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',X3),s('type.num.num',X4))))))) )),
+  inference(cnf_transformation,[],[f111])).
+fof(f191,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK0),X0)))))) )),
+  inference(unit_resulting_resolution,[],[f127,f141])).
+fof(f127,plain,(
+  ( ! [X5] : (p(s(bool,happ(s(fun('type.wordSem.word_loc'(sK0),bool),sK1),s('type.wordSem.word_loc'(sK0),'const.wordSem.Word_1'(s('type.fcp.cart'(bool,sK0),X5))))))) )),
+  inference(cnf_transformation,[],[f111])).
+% SZS output end Proof for thm.wordSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 105
+% Passive clauses: 744
+% Generated clauses: 4045
+% Final active clauses: 81
+% Final passive clauses: 542
+% Input formulas: 37
+% Initial clauses: 57
+% 
+% Duplicate literals: 83
+% Trivial inequalities: 52
+% Fw subsumption resolutions: 170
+% Fw demodulations: 560
+% Bw demodulations: 64
+% Condensations: 30
+% 
+% Simple tautologies: 27
+% Equational tautologies: 25
+% Forward subsumptions: 2269
+% Fw demodulations to eq. taut.: 24
+% Bw demodulations to eq. taut.: 46
+% 
+% Unit resulting resolution: 167
+% Factoring: 2
+% Forward superposition: 1545
+% Backward superposition: 1151
+% Self superposition: 46
+% Equality factoring: 5
+% Equality resolution: 7
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 788
+% SAT solver unit clauses: 101
+% SAT solver binary clauses: 241
+% 
+% Sat splits: 2
+% Sat splitting refutations: 38
+% 
+% Memory used [KB]: 13816
+% Time elapsed: 0.285 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.595 s

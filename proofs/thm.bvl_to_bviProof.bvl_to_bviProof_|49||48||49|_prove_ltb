@@ -1,0 +1,162 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvl_to_bviProof
+% (37985)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 55
+% Passive clauses: 1560
+% Generated clauses: 8146
+% Final active clauses: 54
+% Final passive clauses: 1430
+% Input formulas: 36
+% Initial clauses: 86
+% 
+% Duplicate literals: 610
+% Trivial inequalities: 98
+% Fw subsumption resolutions: 949
+% Fw demodulations: 24
+% 
+% Simple tautologies: 200
+% Equational tautologies: 110
+% Forward subsumptions: 3373
+% 
+% Binary resolution: 24
+% Forward superposition: 3020
+% Backward superposition: 2567
+% Self superposition: 394
+% Equality factoring: 326
+% Equality resolution: 11
+% 
+% Split clauses: 393
+% Split components: 791
+% SAT solver clauses: 1190
+% SAT solver unit clauses: 225
+% SAT solver binary clauses: 396
+% 
+% Sat splits: 393
+% 
+% TWLsolver clauses: 1186
+% TWLsolver calls for satisfiability: 38
+% 
+% Memory used [KB]: 5117
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvl_to_bviProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvl_to_bviProof
+% SZS output start Proof for thm.bvl_to_bviProof
+fof(f552,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f551,f546,f549,f154,f252,f225,f307])).
+fof(f307,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK53(X2,X1,X0)),s(X1,sK54(X2,X1,X0))))) ) | $spl88),
+  inference(cnf_transformation,[],[f307_D])).
+fof(f307_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK53(X2,X1,X0)),s(X1,sK54(X2,X1,X0))))) ) <=> ~$spl88),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl88])])).
+fof(f225,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK53(X2,X1,X0)),s(X1,sK54(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f152])).
+fof(f152,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK53(X2,X1,X0)),s(X1,sK54(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK53,sK54])],[f62])).
+fof(f62,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f61])).
+fof(f61,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X50,X49] : ! [X17] : ? [X67,X68] : s('type.pair.prod'(X50,X49),X17) = s('type.pair.prod'(X50,X49),'const.pair.,_2'(s(X50,X67),s(X49,X68)))),
+  file('thm.bvl_to_bviProof.bvl_to_bviProof_|49||48||49|_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f252,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X4),s('type.num.num',X5))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))) ) | $spl0),
+  inference(cnf_transformation,[],[f252_D])).
+fof(f252_D,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X4),s('type.num.num',X5))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f154,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X4),s('type.num.num',X5))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X4,X5] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X4),s('type.num.num',X5))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK8,sK9,sK10,sK11])],[f90])).
+fof(f90,plain,(
+  ? [X0,X1,X2,X3] : ! [X4,X5] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X4),s('type.num.num',X5))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',X3),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',X2),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.bvl.exp',X0)))))))),
+  inference(ennf_transformation,[],[f38])).
+fof(f38,plain,(
+  ~! [X0,X1,X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X4),s('type.num.num',X5))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',X3),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',X2),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.bvl.exp',X0)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X10),s('type.num.num',X11))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',X9),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',X8),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',X7),s('type.bvl.exp',X6)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.pair.,_2'(s('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),X10),s('type.num.num',X11))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',X9),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',X8),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',X7),s('type.bvl.exp',X6)))))))),
+  file('thm.bvl_to_bviProof.bvl_to_bviProof_|49||48||49|_prove_ltb','thm.bvl_to_bviProof.bvl_to_bviProof_|49||48||49|_prove_ltb')).
+fof(f549,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),X0) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))) ) | $spl194),
+  inference(cnf_transformation,[],[f549_D])).
+fof(f549_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),X0) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))) ) <=> ~$spl194),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl194])])).
+fof(f546,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),X0) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvi.exp'))),'type.num.num'),'const.bvl_to_bvi.compile_single_2'(s('type.num.num',sK11),s('type.pair.prod'('type.num.num','type.pair.prod'('type.num.num','type.bvl.exp')),'const.pair.,_2'(s('type.num.num',sK10),s('type.pair.prod'('type.num.num','type.bvl.exp'),'const.pair.,_2'(s('type.num.num',sK9),s('type.bvl.exp',sK8)))))))) ) | ($spl0 | $spl88)),
+  inference(superposition,[],[f252,f307])).
+fof(f551,plain,(
+  $false | $spl194),
+  inference(equality_resolution,[],[f549])).
+% SZS output end Proof for thm.bvl_to_bviProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 21
+% Passive clauses: 91
+% Generated clauses: 451
+% Final active clauses: 18
+% Final passive clauses: 34
+% Input formulas: 36
+% Initial clauses: 86
+% 
+% Duplicate literals: 2
+% Fw subsumption resolutions: 79
+% Fw demodulations: 13
+% Bw demodulations: 35
+% Condensations: 14
+% Global subsumptions: 9
+% 
+% Simple tautologies: 16
+% Equational tautologies: 3
+% Forward subsumptions: 95
+% 
+% Binary resolution: 2
+% Forward superposition: 25
+% Backward superposition: 19
+% Self superposition: 10
+% Equality factoring: 2
+% Equality resolution: 1
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 236
+% SAT solver unit clauses: 125
+% SAT solver binary clauses: 30
+% SAT solver learnt clauses: 19
+% 
+% Sat splits: 1
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 199
+% TWLsolver calls for satisfiability: 3861
+% 
+% Memory used [KB]: 2430
+% Time elapsed: 0.027 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.661 s

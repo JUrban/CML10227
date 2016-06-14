@@ -1,0 +1,364 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.PairingHeap
+% (26098)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 149
+% Passive clauses: 3613
+% Generated clauses: 19405
+% Final active clauses: 145
+% Final passive clauses: 3312
+% Input formulas: 69
+% Initial clauses: 139
+% 
+% Duplicate literals: 653
+% Trivial inequalities: 398
+% Fw subsumption resolutions: 2039
+% Fw demodulations: 2759
+% Bw demodulations: 4
+% 
+% Simple tautologies: 426
+% Equational tautologies: 50
+% Forward subsumptions: 8634
+% 
+% Binary resolution: 310
+% Factoring: 1
+% Forward superposition: 6340
+% Backward superposition: 6357
+% Self superposition: 185
+% Equality factoring: 100
+% Equality resolution: 37
+% 
+% Split clauses: 252
+% Split components: 511
+% SAT solver clauses: 535
+% SAT solver unit clauses: 10
+% SAT solver binary clauses: 118
+% 
+% Sat splits: 252
+% 
+% TWLsolver clauses: 535
+% TWLsolver calls for satisfiability: 132
+% 
+% Memory used [KB]: 14839
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.PairingHeap
+% (26124)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 113
+% Passive clauses: 925
+% Generated clauses: 7566
+% Final active clauses: 110
+% Final passive clauses: 810
+% Input formulas: 69
+% Initial clauses: 139
+% 
+% Duplicate literals: 98
+% Trivial inequalities: 50
+% Fw subsumption resolutions: 146
+% Fw demodulations: 1499
+% Bw demodulations: 4
+% Condensations: 206
+% Global subsumptions: 8
+% 
+% Simple tautologies: 101
+% Equational tautologies: 25
+% Forward subsumptions: 3189
+% 
+% Binary resolution: 134
+% Factoring: 1
+% Forward superposition: 2537
+% Backward superposition: 1702
+% Self superposition: 69
+% Equality factoring: 30
+% Equality resolution: 16
+% 
+% Split clauses: 50
+% Split components: 100
+% SAT solver clauses: 1445
+% SAT solver unit clauses: 152
+% SAT solver binary clauses: 39
+% SAT solver learnt clauses: 16
+% 
+% Sat splits: 50
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1413
+% TWLsolver calls for satisfiability: 537
+% 
+% Memory used [KB]: 15863
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.PairingHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.PairingHeap
+% SZS output start Proof for thm.PairingHeap
+fof(f38096,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f37960,f36859])).
+fof(f36859,plain,(
+  ( ! [X239] : (~p(s(bool,X239))) )),
+  inference(forward_demodulation,[],[f36858,f344])).
+fof(f344,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Empty_0'),s(X1,X2),s(fun(X0,fun('type.list.list'('type.PairingHeap.heap'(X0)),X1)),X3)))) )),
+  inference(cnf_transformation,[],[f142])).
+fof(f142,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Empty_0'),s(X1,X2),s(fun(X0,fun('type.list.list'('type.PairingHeap.heap'(X0)),X1)),X3)))),
+  inference(flattening,[],[f141])).
+fof(f141,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X0),'const.PairingHeap.Empty_0'),s(X1,X2),s(fun(X0,fun('type.list.list'('type.PairingHeap.heap'(X0)),X1)),X3)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X13] : ! [X14,X15] : s(X13,X14) = s(X13,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X6),'const.PairingHeap.Empty_0'),s(X13,X14),s(fun(X6,fun('type.list.list'('type.PairingHeap.heap'(X6)),X13)),X15)))),
+  file('thm.PairingHeap.heap_distinct','thm.PairingHeap.heap_case_def|split|0')).
+fof(f36858,plain,(
+  ( ! [X239,X240] : (~p(s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X239),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X240))))) )),
+  inference(subsumption_resolution,[],[f36089,f35971])).
+fof(f35971,plain,(
+  ( ! [X4,X5,X3] : (s(X3,X4) = s(X3,happ(s(fun('type.list.list'('type.PairingHeap.heap'(sK0)),X3),happ(s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),X3)),X5),s(sK0,sK2))),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))) )),
+  inference(superposition,[],[f24022,f344])).
+fof(f24022,plain,(
+  ( ! [X2,X0,X1] : (s(X0,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(X0,X2),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),X0)),X1))) = s(X0,happ(s(fun('type.list.list'('type.PairingHeap.heap'(sK0)),X0),happ(s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),X0)),X1),s(sK0,sK2))),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))) )),
+  inference(superposition,[],[f360,f263])).
+fof(f263,plain,(
+  s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0') = s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Tree_2'(s(sK0,sK2),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))),
+  inference(cnf_transformation,[],[f209])).
+fof(f209,plain,(
+  s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0') = s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Tree_2'(s(sK0,sK2),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f183])).
+fof(f183,plain,(
+  ? [X0,X1,X2] : s('type.PairingHeap.heap'(X0),'const.PairingHeap.Empty_0') = s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X2),s('type.list.list'('type.PairingHeap.heap'(X0)),X1)))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1,X2] : s('type.PairingHeap.heap'(X0),'const.PairingHeap.Empty_0') != s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X2),s('type.list.list'('type.PairingHeap.heap'(X0)),X1)))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0] : ! [X1,X2] : ~s('type.PairingHeap.heap'(X0),'const.PairingHeap.Empty_0') = s('type.PairingHeap.heap'(X0),'const.PairingHeap.Tree_2'(s(X0,X2),s('type.list.list'('type.PairingHeap.heap'(X0)),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : ~s('type.PairingHeap.heap'(X6),'const.PairingHeap.Empty_0') = s('type.PairingHeap.heap'(X6),'const.PairingHeap.Tree_2'(s(X6,X8),s('type.list.list'('type.PairingHeap.heap'(X6)),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : ~s('type.PairingHeap.heap'(X6),'const.PairingHeap.Empty_0') = s('type.PairingHeap.heap'(X6),'const.PairingHeap.Tree_2'(s(X6,X8),s('type.list.list'('type.PairingHeap.heap'(X6)),X7)))),
+  file('thm.PairingHeap.heap_distinct','thm.PairingHeap.heap_distinct')).
+fof(f360,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.list.list'('type.PairingHeap.heap'(X1)),X0),happ(s(fun(X1,fun('type.list.list'('type.PairingHeap.heap'(X1)),X0)),X5),s(X1,X2))),s('type.list.list'('type.PairingHeap.heap'(X1)),X3))) = s(X0,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.Tree_2'(s(X1,X2),s('type.list.list'('type.PairingHeap.heap'(X1)),X3))),s(X0,X4),s(fun(X1,fun('type.list.list'('type.PairingHeap.heap'(X1)),X0)),X5)))) )),
+  inference(cnf_transformation,[],[f156])).
+fof(f156,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun('type.list.list'('type.PairingHeap.heap'(X1)),X0),happ(s(fun(X1,fun('type.list.list'('type.PairingHeap.heap'(X1)),X0)),X5),s(X1,X2))),s('type.list.list'('type.PairingHeap.heap'(X1)),X3))) = s(X0,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.Tree_2'(s(X1,X2),s('type.list.list'('type.PairingHeap.heap'(X1)),X3))),s(X0,X4),s(fun(X1,fun('type.list.list'('type.PairingHeap.heap'(X1)),X0)),X5)))),
+  inference(flattening,[],[f155])).
+fof(f155,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : s(X0,happ(s(fun('type.list.list'('type.PairingHeap.heap'(X1)),X0),happ(s(fun(X1,fun('type.list.list'('type.PairingHeap.heap'(X1)),X0)),X5),s(X1,X2))),s('type.list.list'('type.PairingHeap.heap'(X1)),X3))) = s(X0,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X1),'const.PairingHeap.Tree_2'(s(X1,X2),s('type.list.list'('type.PairingHeap.heap'(X1)),X3))),s(X0,X4),s(fun(X1,fun('type.list.list'('type.PairingHeap.heap'(X1)),X0)),X5)))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X13,X6] : ! [X8,X7,X14,X15] : s(X13,happ(s(fun('type.list.list'('type.PairingHeap.heap'(X6)),X13),happ(s(fun(X6,fun('type.list.list'('type.PairingHeap.heap'(X6)),X13)),X15),s(X6,X8))),s('type.list.list'('type.PairingHeap.heap'(X6)),X7))) = s(X13,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(X6),'const.PairingHeap.Tree_2'(s(X6,X8),s('type.list.list'('type.PairingHeap.heap'(X6)),X7))),s(X13,X14),s(fun(X6,fun('type.list.list'('type.PairingHeap.heap'(X6)),X13)),X15)))),
+  file('thm.PairingHeap.heap_distinct','thm.PairingHeap.heap_case_def|split|1')).
+fof(f36089,plain,(
+  ( ! [X239,X240] : (s(bool,'F_0') != s(bool,happ(s(fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool),happ(s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X240),s(sK0,sK2))),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1))) | ~p(s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X239),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X240))))) )),
+  inference(superposition,[],[f273,f24022])).
+fof(f273,plain,(
+  ( ! [X0] : (s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f212])).
+fof(f212,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f78])).
+fof(f78,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f77])).
+fof(f77,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f53])).
+fof(f53,axiom,(
+  ! [X23] : (s(bool,'F_0') = s(bool,X23) <=> ~p(s(bool,X23)))),
+  file('thm.PairingHeap.heap_distinct','thm.bool.EQ_CLAUSES|split|3')).
+fof(f37960,plain,(
+  p(s(bool,'F_0'))),
+  inference(backward_demodulation,[],[f36864,f423])).
+fof(f423,plain,(
+  ( ! [X0] : (p(s(bool,'const.bool.TYPE_DEFINITION_2'(s(fun('type.ind_type.recspace'(X0),bool),'_dst_x0x1_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool))),'_dst_x000x011x110_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11x11_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x011x101_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x01x11_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),'const.ind_type.CONSTR_3'(s('type.num.num','const.num.|48|_0'),s(X0,'const.bool.ARB_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x11_2'(s(fun(fun(X0,bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x0111x1001_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun(X0,fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x10x01_3'(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(fun(X0,X0),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111x011_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x001x111_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),'const.ind_type.CONSTR_3'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(X0,'const.bool.ARB_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))))),'_dst_x00000x00111x11011_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x11_2'(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0)))),'_dst_x00x10x01_3'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1010x0101_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dstsel_1_x10_1'(s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'))))))))),s(fun('type.PairingHeap.heap'(X0),'type.ind_type.recspace'(X0)),sK8(X0)))))) )),
+  inference(forward_demodulation,[],[f422,f328])).
+fof(f328,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.ind_type.recspace'(X0),'const.ind_type.CONSTR_3'(s('type.num.num',X1),s(X0,X2),s(fun('type.num.num','type.ind_type.recspace'(X0)),X3))) = s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num',X1))),s(X0,X2))),s(fun('type.num.num','type.ind_type.recspace'(X0)),X3)))) )),
+  inference(cnf_transformation,[],[f122])).
+fof(f122,plain,(
+  ! [X0,X1,X2,X3] : s('type.ind_type.recspace'(X0),'const.ind_type.CONSTR_3'(s('type.num.num',X1),s(X0,X2),s(fun('type.num.num','type.ind_type.recspace'(X0)),X3))) = s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num',X1))),s(X0,X2))),s(fun('type.num.num','type.ind_type.recspace'(X0)),X3)))),
+  inference(flattening,[],[f121])).
+fof(f121,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.ind_type.recspace'(X0),'const.ind_type.CONSTR_3'(s('type.num.num',X1),s(X0,X2),s(fun('type.num.num','type.ind_type.recspace'(X0)),X3))) = s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num',X1))),s(X0,X2))),s(fun('type.num.num','type.ind_type.recspace'(X0)),X3)))),
+  inference(rectify,[],[f36])).
+fof(f36,axiom,(
+  ! [X6] : ! [X9,X10,X38] : s('type.ind_type.recspace'(X6),'const.ind_type.CONSTR_3'(s('type.num.num',X9),s(X6,X10),s(fun('type.num.num','type.ind_type.recspace'(X6)),X38))) = s('type.ind_type.recspace'(X6),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6)),happ(s(fun(X6,fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6))),'const.ind_type.CONSTR_1'(s('type.num.num',X9))),s(X6,X10))),s(fun('type.num.num','type.ind_type.recspace'(X6)),X38)))),
+  file('thm.PairingHeap.heap_distinct','ARITY_1_3_const.ind_type.CONSTR')).
+fof(f422,plain,(
+  ( ! [X0] : (p(s(bool,'const.bool.TYPE_DEFINITION_2'(s(fun('type.ind_type.recspace'(X0),bool),'_dst_x0x1_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool))),'_dst_x000x011x110_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11x11_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x011x101_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x01x11_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.|48|_0'))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x11_2'(s(fun(fun(X0,bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x0111x1001_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun(X0,fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x10x01_3'(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(fun(X0,X0),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111x011_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x001x111_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),'const.ind_type.CONSTR_3'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(X0,'const.bool.ARB_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))))),'_dst_x00000x00111x11011_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x11_2'(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0)))),'_dst_x00x10x01_3'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1010x0101_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dstsel_1_x10_1'(s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'))))))))),s(fun('type.PairingHeap.heap'(X0),'type.ind_type.recspace'(X0)),sK8(X0)))))) )),
+  inference(forward_demodulation,[],[f335,f328])).
+fof(f335,plain,(
+  ( ! [X0] : (p(s(bool,'const.bool.TYPE_DEFINITION_2'(s(fun('type.ind_type.recspace'(X0),bool),'_dst_x0x1_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool))),'_dst_x000x011x110_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11x11_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x011x101_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x01x11_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.|48|_0'))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x11_2'(s(fun(fun(X0,bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x0111x1001_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun(X0,fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x10x01_3'(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(fun(X0,X0),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111x011_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x001x111_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))))),'_dst_x00000x00111x11011_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x11_2'(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0)))),'_dst_x00x10x01_3'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1010x0101_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dstsel_1_x10_1'(s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'))))))))),s(fun('type.PairingHeap.heap'(X0),'type.ind_type.recspace'(X0)),sK8(X0)))))) )),
+  inference(cnf_transformation,[],[f245])).
+fof(f245,plain,(
+  ! [X0] : p(s(bool,'const.bool.TYPE_DEFINITION_2'(s(fun('type.ind_type.recspace'(X0),bool),'_dst_x0x1_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool))),'_dst_x000x011x110_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11x11_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x011x101_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x01x11_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.|48|_0'))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x11_2'(s(fun(fun(X0,bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x0111x1001_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun(X0,fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x10x01_3'(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(fun(X0,X0),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111x011_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x001x111_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))))),'_dst_x00000x00111x11011_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x11_2'(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0)))),'_dst_x00x10x01_3'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1010x0101_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dstsel_1_x10_1'(s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'))))))))),s(fun('type.PairingHeap.heap'(X0),'type.ind_type.recspace'(X0)),sK8(X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK8])],[f131])).
+fof(f131,plain,(
+  ! [X0] : ? [X1] : p(s(bool,'const.bool.TYPE_DEFINITION_2'(s(fun('type.ind_type.recspace'(X0),bool),'_dst_x0x1_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun(fun('type.ind_type.recspace'(X0),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool))),'_dst_x000x011x110_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11x11_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x011x101_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x01x11_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.|48|_0'))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_dst_x00x11_2'(s(fun(fun(X0,bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x0111x1001_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun(X0,fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun(X0,fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x10x01_3'(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(fun(X0,X0),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111x011_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x001x111_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X0),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s('type.ind_type.recspace'(X0),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1111_2'(s(fun(fun('type.ind_type.recspace'(X0),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))))),'_dst_x00000x00111x11011_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)),'=_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0))),'_dst_x00x11_2'(s(fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0)),happ(s(fun(X0,fun(fun('type.num.num','type.ind_type.recspace'(X0)),'type.ind_type.recspace'(X0))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))))),s(X0,'const.bool.ARB_0'))),s(fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0)))),'_dst_x00x10x01_3'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'),s(fun('type.ind_type.recspace'(X0),fun('type.num.num','type.ind_type.recspace'(X0))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X0),fun(fun('type.num.num','type.ind_type.recspace'(X0)),fun('type.num.num','type.ind_type.recspace'(X0)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X0)),'_dst_x0_1'(s('type.ind_type.recspace'(X0),'const.ind_type.BOTTOM_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),fun('type.ind_type.recspace'(X0),bool)))),'_dst_x0000x1010x0101_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X0),bool),fun('type.ind_type.recspace'(X0),bool)),'_i_0_0'))))))),s(fun('type.ind_type.recspace'(X0),fun(fun('type.ind_type.recspace'(X0),bool),bool)),'_dstsel_1_x10_1'(s(fun('type.ind_type.recspace'(X0),'type.ind_type.recspace'(X0)),'_i_0_0'))))))))),s(fun('type.PairingHeap.heap'(X0),'type.ind_type.recspace'(X0)),X1))))),
+  inference(rectify,[],[f63])).
+fof(f63,axiom,(
+  ! [X6] : ? [X54] : p(s(bool,'const.bool.TYPE_DEFINITION_2'(s(fun('type.ind_type.recspace'(X6),bool),'_dst_x0x1_2'(s(fun(fun(fun('type.ind_type.recspace'(X6),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X6),fun(fun('type.ind_type.recspace'(X6),bool),bool)),'_dst_x00x11_2'(s(fun(fun(fun('type.ind_type.recspace'(X6),bool),bool),bool),'!_0'),s(fun('type.ind_type.recspace'(X6),fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),bool))),'_dst_x000x011x110_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),bool)),'_dst_x00x11x11_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X6),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool))),'_dst_x000x011x101_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_dst_x00x01x11_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X6),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool)),'=_0'),s('type.ind_type.recspace'(X6),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6)),happ(s(fun(X6,fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.|48|_0'))),s(X6,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X6)),'_dst_x0_1'(s('type.ind_type.recspace'(X6),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_dst_x00x11_2'(s(fun(fun(X6,bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),fun(X6,bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X6),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),fun(X6,fun('type.ind_type.recspace'(X6),bool)))),'_dst_x0000x0111x1001_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X6),fun(X6,fun('type.ind_type.recspace'(X6),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool)),'=_0'),s(fun('type.ind_type.recspace'(X6),'type.ind_type.recspace'(X6)),'_i_0_0'),s(fun(X6,fun('type.ind_type.recspace'(X6),'type.ind_type.recspace'(X6))),'_dst_x00x10x01_3'(s(fun(X6,fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))),s(fun(X6,X6),'_i_0_0'),s(fun('type.ind_type.recspace'(X6),fun('type.num.num','type.ind_type.recspace'(X6))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X6),fun(fun('type.num.num','type.ind_type.recspace'(X6)),fun('type.num.num','type.ind_type.recspace'(X6)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X6)),'_dst_x0_1'(s('type.ind_type.recspace'(X6),'const.ind_type.BOTTOM_0'))))))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_i_0_0'))))))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_i_0_0'))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),bool)),'_dst_x00x11_2'(s(fun(fun('type.ind_type.recspace'(X6),bool),bool),'!_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool))),'_dst_x000x111x011_3'(s(fun(bool,fun(bool,bool)),'==>_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool))),'_dst_x000x001x111_3'(s(fun(bool,fun(bool,bool)),'|bslash||slash|_0'),s(fun('type.ind_type.recspace'(X6),bool),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool)),'=_0'),s('type.ind_type.recspace'(X6),happ(s(fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6)),happ(s(fun(X6,fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))),s(X6,'const.bool.ARB_0'))),s(fun('type.num.num','type.ind_type.recspace'(X6)),'_dst_x0_1'(s('type.ind_type.recspace'(X6),'const.ind_type.BOTTOM_0'))))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool))),'_dst_x000x111_2'(s(fun(fun('type.ind_type.recspace'(X6),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool)))),'_dst_x0000x1111_2'(s(fun(fun('type.ind_type.recspace'(X6),bool),bool),'?_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool))))),'_dst_x00000x00111x11011_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool))),'_dst_x000x100x011_3'(s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool)),'=_0'),s(fun('type.ind_type.recspace'(X6),'type.ind_type.recspace'(X6)),'_i_0_0'),s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),'type.ind_type.recspace'(X6))),'_dst_x00x11_2'(s(fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6)),happ(s(fun(X6,fun(fun('type.num.num','type.ind_type.recspace'(X6)),'type.ind_type.recspace'(X6))),'const.ind_type.CONSTR_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))))),s(X6,'const.bool.ARB_0'))),s(fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),fun('type.num.num','type.ind_type.recspace'(X6)))),'_dst_x00x10x01_3'(s(fun('type.ind_type.recspace'(X6),fun(fun('type.num.num','type.ind_type.recspace'(X6)),fun('type.num.num','type.ind_type.recspace'(X6)))),'const.ind_type.FCONS_0'),s(fun('type.ind_type.recspace'(X6),'type.ind_type.recspace'(X6)),'_i_0_0'),s(fun('type.ind_type.recspace'(X6),fun('type.num.num','type.ind_type.recspace'(X6))),'_dst_x1x0_2'(s(fun('type.ind_type.recspace'(X6),fun(fun('type.num.num','type.ind_type.recspace'(X6)),fun('type.num.num','type.ind_type.recspace'(X6)))),'const.ind_type.FCONS_0'),s(fun('type.num.num','type.ind_type.recspace'(X6)),'_dst_x0_1'(s('type.ind_type.recspace'(X6),'const.ind_type.BOTTOM_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),fun('type.ind_type.recspace'(X6),bool)))),'_dst_x0000x1010x0101_3'(s(fun(bool,fun(bool,bool)),'|slash||bslash|_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_i_0_0'),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_i_0_0'))))))))))),s(fun(fun('type.ind_type.recspace'(X6),bool),fun('type.ind_type.recspace'(X6),bool)),'_i_0_0'))))))),s(fun('type.ind_type.recspace'(X6),fun(fun('type.ind_type.recspace'(X6),bool),bool)),'_dstsel_1_x10_1'(s(fun('type.ind_type.recspace'(X6),'type.ind_type.recspace'(X6)),'_i_0_0'))))))))),s(fun('type.PairingHeap.heap'(X6),'type.ind_type.recspace'(X6)),X54))))),
+  file('thm.PairingHeap.heap_distinct','thm.PairingHeap.heap_TY_DEF')).
+fof(f36864,plain,(
+  ( ! [X296] : (s(bool,'F_0') = s(bool,X296)) )),
+  inference(subsumption_resolution,[],[f36863,f36862])).
+fof(f36862,plain,(
+  ( ! [X243,X244,X245] : (s(bool,X245) = s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X243),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X244)))) )),
+  inference(subsumption_resolution,[],[f36861,f36859])).
+fof(f36861,plain,(
+  ( ! [X243,X244,X245] : (p(s(bool,happ(s(fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool),happ(s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X244),s(sK0,sK2))),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))) | s(bool,X245) = s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X243),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X244)))) )),
+  inference(subsumption_resolution,[],[f36091,f36859])).
+fof(f36091,plain,(
+  ( ! [X243,X244,X245] : (p(s(bool,happ(s(fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool),happ(s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X244),s(sK0,sK2))),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))) | p(s(bool,X245)) | s(bool,X245) = s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X243),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X244)))) )),
+  inference(superposition,[],[f336,f24022])).
+fof(f336,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f196])).
+fof(f196,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f195])).
+fof(f195,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f132])).
+fof(f132,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X30,X31] : ((p(s(bool,X30)) => p(s(bool,X31))) => ((p(s(bool,X31)) => p(s(bool,X30))) => s(bool,X30) = s(bool,X31)))),
+  file('thm.PairingHeap.heap_distinct','thm.bool.IMP_ANTISYM_AX')).
+fof(f36863,plain,(
+  ( ! [X294,X296,X295] : (s(bool,X296) != s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X294),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X295))) | s(bool,'F_0') = s(bool,X296)) )),
+  inference(subsumption_resolution,[],[f36108,f36859])).
+fof(f36108,plain,(
+  ( ! [X294,X296,X295] : (p(s(bool,happ(s(fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool),happ(s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X295),s(sK0,sK2))),s('type.list.list'('type.PairingHeap.heap'(sK0)),sK1)))) | s(bool,X296) != s(bool,'const.PairingHeap.heap_CASE_3'(s('type.PairingHeap.heap'(sK0),'const.PairingHeap.Empty_0'),s(bool,X294),s(fun(sK0,fun('type.list.list'('type.PairingHeap.heap'(sK0)),bool)),X295))) | s(bool,'F_0') = s(bool,X296)) )),
+  inference(superposition,[],[f1282,f24022])).
+fof(f1282,plain,(
+  ( ! [X12,X11] : (p(s(bool,X12)) | s(bool,X11) != s(bool,X12) | s(bool,'F_0') = s(bool,X11)) )),
+  inference(forward_demodulation,[],[f1281,f308])).
+fof(f308,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f95])).
+fof(f95,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f94])).
+fof(f94,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X26] : ! [X28] : s(X26,X28) = s(X26,happ(s(fun(X26,X26),'_i_0_0'),s(X26,X28)))),
+  file('thm.PairingHeap.heap_distinct','_i0_ax')).
+fof(f1281,plain,(
+  ( ! [X12,X11] : (s(bool,X12) != s(bool,happ(s(fun(bool,bool),'_i_0_0'),s(bool,X11))) | p(s(bool,X12)) | s(bool,'F_0') = s(bool,X11)) )),
+  inference(subsumption_resolution,[],[f1254,f264])).
+fof(f264,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.PairingHeap.heap_distinct',aHL_TRUTH)).
+fof(f1254,plain,(
+  ( ! [X12,X11] : (~p(s(bool,'T_0')) | s(bool,X12) != s(bool,happ(s(fun(bool,bool),'_i_0_0'),s(bool,X11))) | p(s(bool,X12)) | s(bool,'F_0') = s(bool,X11)) )),
+  inference(superposition,[],[f413,f478])).
+fof(f478,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,happ(s(fun(bool,bool),'_i_0_0'),s(bool,X0))) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(superposition,[],[f308,f268])).
+fof(f268,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.PairingHeap.heap_distinct',aHL_BOOL_CASES)).
+fof(f413,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X0)) | s(bool,X0) != s(bool,X1) | p(s(bool,X1))) )),
+  inference(condensation,[],[f412])).
+fof(f412,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,X0)) | p(s(bool,X1)) | s(bool,X0) != s(bool,X1) | s(bool,X0) != s(bool,X2)) )),
+  inference(condensation,[],[f376])).
+fof(f376,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,X2)) | ~p(s(bool,X0)) | ~p(s(bool,X3)) | s(bool,X2) != s(bool,X3) | s(bool,X0) != s(bool,X1)) )),
+  inference(cnf_transformation,[],[f262])).
+fof(f262,plain,(
+  ! [X0,X1,X2,X3] : (s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3)) | (((p(s(bool,X0)) & ~p(s(bool,X2))) | ~p(s(bool,X1)) | p(s(bool,X3))) & ((p(s(bool,X1)) & ~p(s(bool,X3))) | ~p(s(bool,X0)) | p(s(bool,X2)))))),
+  inference(flattening,[],[f261])).
+fof(f261,plain,(
+  ! [X0,X1,X2,X3] : (s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3)) | (((p(s(bool,X0)) & ~p(s(bool,X2))) | (~p(s(bool,X1)) | p(s(bool,X3)))) & ((p(s(bool,X1)) & ~p(s(bool,X3))) | (~p(s(bool,X0)) | p(s(bool,X2))))))),
+  inference(nnf_transformation,[],[f202])).
+fof(f202,plain,(
+  ! [X0,X1,X2,X3] : (s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3)) | ((~p(s(bool,X0)) | p(s(bool,X2))) <=> (~p(s(bool,X1)) | p(s(bool,X3)))))),
+  inference(flattening,[],[f201])).
+fof(f201,plain,(
+  ! [X0,X1,X2,X3] : ((s(bool,X0) != s(bool,X1) | (p(s(bool,X1)) & s(bool,X2) != s(bool,X3))) | ((~p(s(bool,X0)) | p(s(bool,X2))) <=> (~p(s(bool,X1)) | p(s(bool,X3)))))),
+  inference(ennf_transformation,[],[f162])).
+fof(f162,plain,(
+  ! [X0,X1,X2,X3] : ((s(bool,X0) = s(bool,X1) & (p(s(bool,X1)) => s(bool,X2) = s(bool,X3))) => ((p(s(bool,X0)) => p(s(bool,X2))) <=> (p(s(bool,X1)) => p(s(bool,X3)))))),
+  inference(rectify,[],[f50])).
+fof(f50,axiom,(
+  ! [X17,X51,X19,X52] : ((s(bool,X17) = s(bool,X51) & (p(s(bool,X51)) => s(bool,X19) = s(bool,X52))) => ((p(s(bool,X17)) => p(s(bool,X19))) <=> (p(s(bool,X51)) => p(s(bool,X52)))))),
+  file('thm.PairingHeap.heap_distinct','thm.bool.IMP_CONG')).
+% SZS output end Proof for thm.PairingHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 238
+% Passive clauses: 3559
+% Generated clauses: 39033
+% Final active clauses: 123
+% Final passive clauses: 1117
+% Input formulas: 69
+% Initial clauses: 139
+% 
+% Duplicate literals: 983
+% Trivial inequalities: 264
+% Fw subsumption resolutions: 1574
+% Fw demodulations: 7509
+% Bw demodulations: 2040
+% Condensations: 1471
+% Global subsumptions: 47
+% 
+% Simple tautologies: 354
+% Equational tautologies: 191
+% Forward subsumptions: 20721
+% Fw demodulations to eq. taut.: 1816
+% Bw demodulations to eq. taut.: 90
+% 
+% Unit resulting resolution: 4228
+% Factoring: 1
+% Forward superposition: 9990
+% Backward superposition: 8994
+% Self superposition: 236
+% Equality factoring: 90
+% Equality resolution: 31
+% 
+% Split clauses: 78
+% Split components: 156
+% SAT solver clauses: 3842
+% SAT solver unit clauses: 605
+% SAT solver binary clauses: 1164
+% 
+% Sat splits: 78
+% Sat splitting refutations: 78
+% 
+% Memory used [KB]: 50660
+% Time elapsed: 2.092 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.45 s

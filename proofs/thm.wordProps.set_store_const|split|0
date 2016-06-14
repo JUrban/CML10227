@@ -1,0 +1,237 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordProps
+% (119165)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 170
+% Passive clauses: 3036
+% Generated clauses: 21619
+% Final active clauses: 162
+% Final passive clauses: 2643
+% Input formulas: 131
+% Initial clauses: 177
+% 
+% Duplicate literals: 716
+% Trivial inequalities: 455
+% Fw subsumption resolutions: 1467
+% Fw demodulations: 3093
+% Bw demodulations: 6
+% 
+% Simple tautologies: 392
+% Equational tautologies: 48
+% Forward subsumptions: 12332
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 157
+% Factoring: 1
+% Forward superposition: 8880
+% Backward superposition: 6493
+% Self superposition: 147
+% Equality factoring: 72
+% Equality resolution: 41
+% 
+% Split clauses: 144
+% Split components: 300
+% SAT solver clauses: 302
+% SAT solver unit clauses: 10
+% SAT solver binary clauses: 68
+% 
+% Sat splits: 144
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 302
+% TWLsolver calls for satisfiability: 107
+% 
+% Memory used [KB]: 14200
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.wordProps
+% (119190)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 191
+% Passive clauses: 1228
+% Generated clauses: 21663
+% Final active clauses: 184
+% Final passive clauses: 1004
+% Input formulas: 131
+% Initial clauses: 177
+% 
+% Duplicate literals: 612
+% Trivial inequalities: 735
+% Fw subsumption resolutions: 1357
+% Fw demodulations: 2583
+% Bw demodulations: 32
+% Condensations: 997
+% Global subsumptions: 4
+% 
+% Simple tautologies: 347
+% Equational tautologies: 43
+% Forward subsumptions: 11420
+% Fw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 69
+% Factoring: 1
+% Forward superposition: 7211
+% Backward superposition: 6393
+% Self superposition: 145
+% Equality factoring: 64
+% Equality resolution: 35
+% 
+% Split clauses: 27
+% Split components: 54
+% SAT solver clauses: 2290
+% SAT solver unit clauses: 285
+% SAT solver binary clauses: 83
+% SAT solver learnt clauses: 8
+% 
+% Sat splits: 27
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 2274
+% TWLsolver calls for satisfiability: 1236
+% 
+% Memory used [KB]: 19829
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordProps
+% SZS output start Proof for thm.wordProps
+fof(f111752,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f111689])).
+fof(f111689,plain,(
+  s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(sK0,sK1),sK2))) != s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(sK0,sK1),sK2)))),
+  inference(superposition,[],[f413,f61414])).
+fof(f61414,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X4))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X4)))))) )),
+  inference(forward_demodulation,[],[f61154,f479])).
+fof(f479,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),X3),s('type.wordSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f210])).
+fof(f210,plain,(
+  ! [X0,X1,X2,X3] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f209])).
+fof(f209,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X11] : ! [X17,X22] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X11),X17))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X11),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6))),X22),s('type.wordSem.state'(X6,X11),X17)))))),
+  file('thm.wordProps.set_store_const|split|0','thm.wordSem.wordSem_|49|66_prove_ltb')).
+fof(f61154,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X4))))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.wordSem.state'(X0,X1),X4)))))) )),
+  inference(unit_resulting_resolution,[],[f535,f512])).
+fof(f512,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.wordSem.state'(X0,X1),X2) != s('type.wordSem.state'(X0,X1),X3) | s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f410])).
+fof(f410,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.wordSem.state'(X0,X1),X2) != s('type.wordSem.state'(X0,X1),X3) | (s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X3))) & s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X2))) = s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3))))) & (s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X3))) | s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X2))) != s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.wordSem.state'(X0,X1),X2) = s('type.wordSem.state'(X0,X1),X3)))),
+  inference(flattening,[],[f409])).
+fof(f409,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.wordSem.state'(X0,X1),X2) != s('type.wordSem.state'(X0,X1),X3) | (s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X3))) & s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X2))) = s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3))))) & ((s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X3))) | s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X2))) != s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X3))) | s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X2))) != s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X3))) | s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3)))) | s('type.wordSem.state'(X0,X1),X2) = s('type.wordSem.state'(X0,X1),X3)))),
+  inference(nnf_transformation,[],[f260])).
+fof(f260,plain,(
+  ! [X0,X1,X2,X3] : (s('type.wordSem.state'(X0,X1),X2) = s('type.wordSem.state'(X0,X1),X3) <=> (s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X3))) & s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X2))) = s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(flattening,[],[f259])).
+fof(f259,plain,(
+  ! [X0,X1] : ! [X2,X3] : (s('type.wordSem.state'(X0,X1),X2) = s('type.wordSem.state'(X0,X1),X3) <=> (s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.wordSem.word_loc'(X0)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.list.list'('type.wordSem.stack_frame'(X0)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X0,X1),X3))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X2))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X0)),'type.pair.prod'(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X0))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X0,X1),X3))) & s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X2))) = s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X0,X1),X3))) & s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X0,X1),X3)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X11] : ! [X12,X13] : (s('type.wordSem.state'(X6,X11),X12) = s('type.wordSem.state'(X6,X11),X13) <=> (s('type.sptree.spt'('type.wordSem.word_loc'(X6)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.sptree.spt'('type.wordSem.word_loc'(X6)),'const.wordSem.state_locals_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.list.list'('type.wordSem.stack_frame'(X6)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.list.list'('type.wordSem.stack_frame'(X6)),'const.wordSem.state_stack_1'(s('type.wordSem.state'(X6,X11),X13))) & s(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X6,X11),X12))) = s(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'const.wordSem.state_memory_1'(s('type.wordSem.state'(X6,X11),X13))) & s(fun('type.fcp.cart'(bool,X6),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X6,X11),X12))) = s(fun('type.fcp.cart'(bool,X6),bool),'const.wordSem.state_mdomain_1'(s('type.wordSem.state'(X6,X11),X13))) & s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X6,X11),X12))) = s(fun('type.num.num',fun('type.num.num','type.num.num')),'const.wordSem.state_permute_1'(s('type.wordSem.state'(X6,X11),X13))) & s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X6)),'type.pair.prod'(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'type.pair.prod'(fun('type.fcp.cart'(bool,X6),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X6)),'type.pair.prod'(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X6,X11),X12))) = s(fun('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X6)),'type.pair.prod'(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'type.pair.prod'(fun('type.fcp.cart'(bool,X6),bool),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6))))),'type.option.option'('type.pair.prod'('type.list.list'('type.wordSem.word_loc'(X6)),'type.pair.prod'(fun('type.fcp.cart'(bool,X6),'type.wordSem.word_loc'(X6)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)))))),'const.wordSem.state_gc_fun_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.num.num','const.wordSem.state_handler_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.num.num','const.wordSem.state_termdep_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X6))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.sptree.spt'('type.pair.prod'('type.num.num','type.wordLang.prog'(X6))),'const.wordSem.state_code_1'(s('type.wordSem.state'(X6,X11),X13))) & s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X6,X11),X12))) = s(bool,'const.wordSem.state_be_1'(s('type.wordSem.state'(X6,X11),X13))) & s('type.ffi.ffi_state'(X11),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X6,X11),X12))) = s('type.ffi.ffi_state'(X11),'const.wordSem.state_ffi_1'(s('type.wordSem.state'(X6,X11),X13)))))),
+  file('thm.wordProps.set_store_const|split|0','thm.wordSem.wordSem_334_prove_ltb')).
+fof(f535,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X4))) = s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.wordSem.state'(X0,X1),X4)))) )),
+  inference(cnf_transformation,[],[f270])).
+fof(f270,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X4))) = s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.wordSem.state'(X0,X1),X4)))),
+  inference(flattening,[],[f269])).
+fof(f269,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X4))) = s('type.wordSem.state'(X0,X1),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X0,X1),X4))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X0)),'const.pair.,_2'(s('type.wordLang.store_name',X2),s('type.wordSem.word_loc'(X0),X3))))))),s('type.wordSem.state'(X0,X1),X4)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6,X11] : ! [X18,X10,X17] : s('type.wordSem.state'(X6,X11),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X18),s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.state'(X6,X11),X17))) = s('type.wordSem.state'(X6,X11),'const.wordSem.state_store_fupd_2'(s(fun('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6))),'const.combin.K_1'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'const.wordSem.state_store_1'(s('type.wordSem.state'(X6,X11),X17))),s('type.pair.prod'('type.wordLang.store_name','type.wordSem.word_loc'(X6)),'const.pair.,_2'(s('type.wordLang.store_name',X18),s('type.wordSem.word_loc'(X6),X10))))))),s('type.wordSem.state'(X6,X11),X17)))),
+  file('thm.wordProps.set_store_const|split|0','thm.wordSem.set_store_def')).
+fof(f413,plain,(
+  s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(sK0,sK1),sK2))) != s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(sK0,sK1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',sK4),s('type.wordSem.word_loc'(sK0),sK3),s('type.wordSem.state'(sK0,sK1),sK2)))))),
+  inference(cnf_transformation,[],[f387])).
+fof(f387,plain,(
+  s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(sK0,sK1),sK2))) != s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(sK0,sK1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',sK4),s('type.wordSem.word_loc'(sK0),sK3),s('type.wordSem.state'(sK0,sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f379])).
+fof(f379,plain,(
+  ? [X0,X1,X2,X3,X4] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) != s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X4),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1,X2,X3,X4] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X4),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f133])).
+fof(f133,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),X2))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X0,X1),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X4),s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X7),X8))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X7),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X10),s('type.wordSem.word_loc'(X6),X9),s('type.wordSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X7),X8))) = s('type.num.num','const.wordSem.state_clock_1'(s('type.wordSem.state'(X6,X7),'const.wordSem.set_store_3'(s('type.wordLang.store_name',X10),s('type.wordSem.word_loc'(X6),X9),s('type.wordSem.state'(X6,X7),X8)))))),
+  file('thm.wordProps.set_store_const|split|0','thm.wordProps.set_store_const|split|0')).
+% SZS output end Proof for thm.wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 449
+% Passive clauses: 6832
+% Generated clauses: 111146
+% Final active clauses: 280
+% Final passive clauses: 1754
+% Input formulas: 131
+% Initial clauses: 177
+% Discarded non-redundant clauses: 38664
+% 
+% Duplicate literals: 3190
+% Trivial inequalities: 1167
+% Fw subsumption resolutions: 4317
+% Fw demodulations: 15318
+% Bw demodulations: 2427
+% Condensations: 5962
+% Global subsumptions: 14
+% 
+% Simple tautologies: 985
+% Equational tautologies: 485
+% Forward subsumptions: 70923
+% Fw demodulations to eq. taut.: 880
+% Bw demodulations to eq. taut.: 312
+% 
+% Unit resulting resolution: 6561
+% Factoring: 1
+% Forward superposition: 35294
+% Backward superposition: 33192
+% Self superposition: 494
+% Equality factoring: 214
+% Equality resolution: 74
+% 
+% Split clauses: 78
+% Split components: 156
+% SAT solver clauses: 7196
+% SAT solver unit clauses: 887
+% SAT solver binary clauses: 2697
+% 
+% Sat splits: 78
+% Sat splitting refutations: 192
+% 
+% Memory used [KB]: 90574
+% Time elapsed: 6.778 s
+% ------------------------------
+% ------------------------------
+% Success in time 8.13 s

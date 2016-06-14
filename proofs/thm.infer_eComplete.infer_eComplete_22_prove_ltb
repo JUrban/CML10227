@@ -1,0 +1,99 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.infer_eComplete
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.infer_eComplete
+% SZS output start Proof for thm.infer_eComplete
+fof(f743,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f742,f176])).
+fof(f176,plain,(
+  s('type.option.option'(sK7),'const.option.NONE_0') != s('type.option.option'(sK7),sK8)),
+  inference(cnf_transformation,[],[f128])).
+fof(f128,plain,(
+  ! [X2] : s('type.option.option'(sK7),sK8) != s('type.option.option'(sK7),'const.option.SOME_1'(s(sK7,X2))) & s('type.option.option'(sK7),'const.option.NONE_0') != s('type.option.option'(sK7),sK8)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK7,sK8])],[f90])).
+fof(f90,plain,(
+  ? [X0,X1] : (! [X2] : s('type.option.option'(X0),X1) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) & s('type.option.option'(X0),'const.option.NONE_0') != s('type.option.option'(X0),X1))),
+  inference(ennf_transformation,[],[f38])).
+fof(f38,plain,(
+  ~! [X0,X1] : (! [X2] : s('type.option.option'(X0),X1) != s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) => s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ~! [X0] : ! [X1] : (! [X2] : ~s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))) => s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8] : ~s('type.option.option'(X6),X7) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X8))) => s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8] : ~s('type.option.option'(X6),X7) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X8))) => s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X7))),
+  file('thm.infer_eComplete.infer_eComplete_22_prove_ltb','thm.infer_eComplete.infer_eComplete_22_prove_ltb')).
+fof(f742,plain,(
+  s('type.option.option'(sK7),'const.option.NONE_0') = s('type.option.option'(sK7),sK8)),
+  inference(equality_resolution,[],[f738])).
+fof(f738,plain,(
+  ( ! [X0] : (s('type.option.option'(sK7),sK8) != s('type.option.option'(sK7),X0) | s('type.option.option'(sK7),'const.option.NONE_0') = s('type.option.option'(sK7),X0)) )),
+  inference(superposition,[],[f175,f220])).
+fof(f220,plain,(
+  ( ! [X0,X1] : (s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK9(X1,X0)))) | s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1)) )),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,sK9(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK9])],[f69])).
+fof(f69,plain,(
+  ! [X0,X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(flattening,[],[f68])).
+fof(f68,plain,(
+  ! [X0] : ! [X1] : (s('type.option.option'(X0),'const.option.NONE_0') = s('type.option.option'(X0),X1) | ? [X2] : s('type.option.option'(X0),X1) = s('type.option.option'(X0),'const.option.SOME_1'(s(X0,X2))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6] : ! [X13] : (s('type.option.option'(X6),'const.option.NONE_0') = s('type.option.option'(X6),X13) | ? [X8] : s('type.option.option'(X6),X13) = s('type.option.option'(X6),'const.option.SOME_1'(s(X6,X8))))),
+  file('thm.infer_eComplete.infer_eComplete_22_prove_ltb','thm.option.option_nchotomy')).
+fof(f175,plain,(
+  ( ! [X2] : (s('type.option.option'(sK7),sK8) != s('type.option.option'(sK7),'const.option.SOME_1'(s(sK7,X2)))) )),
+  inference(cnf_transformation,[],[f128])).
+% SZS output end Proof for thm.infer_eComplete
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 106
+% Passive clauses: 207
+% Generated clauses: 563
+% Final active clauses: 106
+% Final passive clauses: 73
+% Input formulas: 35
+% Initial clauses: 111
+% 
+% Duplicate literals: 27
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 32
+% 
+% Simple tautologies: 84
+% Equational tautologies: 9
+% Forward subsumptions: 197
+% 
+% Binary resolution: 320
+% Factoring: 6
+% Forward superposition: 28
+% Backward superposition: 24
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 3
+% 
+% Split clauses: 27
+% Split components: 55
+% SAT solver clauses: 36
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 22
+% 
+% Sat splits: 27
+% 
+% TWLsolver clauses: 36
+% TWLsolver calls for satisfiability: 19
+% 
+% Memory used [KB]: 895
+% Time elapsed: 0.028 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.05 s

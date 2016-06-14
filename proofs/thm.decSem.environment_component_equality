@@ -1,0 +1,167 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.decSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.decSem
+% SZS output start Proof for thm.decSem
+fof(f2514,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2513,f2495,f21,f33,f22,f35,f31,f23,f36,f34,f32,f2511])).
+fof(f2511,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(trivial_inequality_removal,[],[f2510])).
+fof(f2510,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) | ($spl0 | $spl3)),
+  inference(forward_demodulation,[],[f34,f31])).
+fof(f32,plain,(
+  s('type.decSem.environment',sK0) != s('type.decSem.environment',sK1) | $spl1),
+  inference(cnf_transformation,[],[f32_D])).
+fof(f32_D,plain,(
+  s('type.decSem.environment',sK0) != s('type.decSem.environment',sK1) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f34,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) | $spl3),
+  inference(cnf_transformation,[],[f34_D])).
+fof(f34_D,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f36,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))) | $spl5),
+  inference(cnf_transformation,[],[f36_D])).
+fof(f36_D,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f23,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) | s('type.decSem.environment',sK0) != s('type.decSem.environment',sK1)),
+  inference(cnf_transformation,[],[f17])).
+fof(f17,plain,(
+  (s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))))) & (s('type.decSem.environment',sK0) != s('type.decSem.environment',sK1) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) | s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f16])).
+fof(f16,plain,(
+  ? [X0,X1] : ((s('type.decSem.environment',X0) = s('type.decSem.environment',X1) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))))) & (s('type.decSem.environment',X0) != s('type.decSem.environment',X1) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) | s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1)))))),
+  inference(flattening,[],[f15])).
+fof(f15,plain,(
+  ? [X0,X1] : ((s('type.decSem.environment',X0) = s('type.decSem.environment',X1) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))))) & (s('type.decSem.environment',X0) != s('type.decSem.environment',X1) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) | s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))))))),
+  inference(nnf_transformation,[],[f13])).
+fof(f13,plain,(
+  ? [X0,X1] : (s('type.decSem.environment',X0) = s('type.decSem.environment',X1) <~> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1)))))),
+  inference(ennf_transformation,[],[f8])).
+fof(f8,plain,(
+  ~! [X0,X1] : (s('type.decSem.environment',X0) = s('type.decSem.environment',X1) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (s('type.decSem.environment',X6) = s('type.decSem.environment',X7) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X6))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X7))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X6))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (s('type.decSem.environment',X6) = s('type.decSem.environment',X7) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X6))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X7))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X6))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X7)))))),
+  file('thm.decSem.environment_component_equality','thm.decSem.environment_component_equality')).
+fof(f31,plain,(
+  s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1) | $spl0),
+  inference(cnf_transformation,[],[f31_D])).
+fof(f31_D,plain,(
+  s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f35,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))) | $spl4),
+  inference(cnf_transformation,[],[f35_D])).
+fof(f35_D,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f22,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK1))) | s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1)),
+  inference(cnf_transformation,[],[f17])).
+fof(f33,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) | $spl2),
+  inference(cnf_transformation,[],[f33_D])).
+fof(f33_D,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f21,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) | s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1)),
+  inference(cnf_transformation,[],[f17])).
+fof(f2495,plain,(
+  $false | ($spl1 | $spl2 | $spl4)),
+  inference(subsumption_resolution,[],[f2494,f32])).
+fof(f2494,plain,(
+  s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1) | ($spl2 | $spl4)),
+  inference(trivial_inequality_removal,[],[f2493])).
+fof(f2493,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) | s('type.decSem.environment',sK0) = s('type.decSem.environment',sK1) | ($spl2 | $spl4)),
+  inference(equality_resolution,[],[f230])).
+fof(f230,plain,(
+  ( ! [X0] : (s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) | s('type.decSem.environment',sK1) = s('type.decSem.environment',X0)) ) | ($spl2 | $spl4)),
+  inference(forward_demodulation,[],[f227,f33])).
+fof(f227,plain,(
+  ( ! [X0] : (s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) | s('type.decSem.environment',sK1) = s('type.decSem.environment',X0) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',sK1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0)))) ) | $spl4),
+  inference(superposition,[],[f29,f35])).
+fof(f29,plain,(
+  ( ! [X0,X1] : (s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))) | s('type.decSem.environment',X0) = s('type.decSem.environment',X1) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1)))) )),
+  inference(cnf_transformation,[],[f19])).
+fof(f19,plain,(
+  ! [X0,X1] : ((s('type.decSem.environment',X0) != s('type.decSem.environment',X1) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))))) & (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) | s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))) | s('type.decSem.environment',X0) = s('type.decSem.environment',X1)))),
+  inference(flattening,[],[f18])).
+fof(f18,plain,(
+  ! [X0,X1] : ((s('type.decSem.environment',X0) != s('type.decSem.environment',X1) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1))))) & ((s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) | s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1)))) | s('type.decSem.environment',X0) = s('type.decSem.environment',X1)))),
+  inference(nnf_transformation,[],[f10])).
+fof(f10,plain,(
+  ! [X0,X1] : (s('type.decSem.environment',X0) = s('type.decSem.environment',X1) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X0))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X1))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X0))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7,X6] : (s('type.decSem.environment',X6) = s('type.decSem.environment',X7) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X6))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.conSem.v')),'const.decSem.environment_v_1'(s('type.decSem.environment',X7))) & s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X6))) = s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',X7)))))),
+  file('thm.decSem.environment_component_equality','thm.decSem.decSem_89_prove_ltb')).
+fof(f2513,plain,(
+  $false | ($spl0 | $spl5)),
+  inference(trivial_inequality_removal,[],[f2512])).
+fof(f2512,plain,(
+  s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) != s('type.finite_map.fmap'('type.ast.id'('type.list.list'('type.string.char')),'type.sptree.spt'('type.num.num')),'const.decSem.environment_exh_1'(s('type.decSem.environment',sK0))) | ($spl0 | $spl5)),
+  inference(forward_demodulation,[],[f36,f31])).
+% SZS output end Proof for thm.decSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 30
+% Passive clauses: 320
+% Generated clauses: 2367
+% Final active clauses: 23
+% Final passive clauses: 264
+% Input formulas: 6
+% Initial clauses: 10
+% 
+% Duplicate literals: 350
+% Trivial inequalities: 22
+% Fw subsumption resolutions: 136
+% Fw demodulations: 20
+% 
+% Simple tautologies: 72
+% Equational tautologies: 71
+% Forward subsumptions: 1085
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 12
+% Forward superposition: 718
+% Backward superposition: 690
+% Self superposition: 190
+% Equality factoring: 180
+% Equality resolution: 4
+% 
+% Split clauses: 185
+% Split components: 372
+% SAT solver clauses: 299
+% SAT solver unit clauses: 60
+% SAT solver binary clauses: 110
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 185
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 297
+% TWLsolver calls for satisfiability: 17
+% 
+% Memory used [KB]: 1407
+% Time elapsed: 0.080 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.081 s

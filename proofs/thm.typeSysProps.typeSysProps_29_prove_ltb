@@ -1,0 +1,191 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.typeSysProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.typeSysProps
+% SZS output start Proof for thm.typeSysProps
+fof(f568,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f486,f40,f72,f42,f44,f65,f565,f505,f503,f43,f67,f41,f71,f69])).
+fof(f69,plain,(
+  p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2)))) | $spl4),
+  inference(cnf_transformation,[],[f69_D])).
+fof(f69_D,plain,(
+  p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2)))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f71,plain,(
+  p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4)))) | $spl6),
+  inference(cnf_transformation,[],[f71_D])).
+fof(f71_D,plain,(
+  p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4)))) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f41,plain,(
+  p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4)))) | p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2))))),
+  inference(cnf_transformation,[],[f32])).
+fof(f32,plain,(
+  (! [X8] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),X8)))) | ! [X9] : p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9))))))) | ! [X6] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),X6)))) | ! [X7] : p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X6),s('type.ast.tctor',X7)))))))) & ((p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2)))) & ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK2),s('type.ast.tctor',sK3))))))) | (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4)))) & ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK4),s('type.ast.tctor',sK5))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f31])).
+fof(f31,plain,(
+  ? [X0,X1] : ((! [X8] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X8)))) | ! [X9] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9))))))) | ! [X6] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X6)))) | ! [X7] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X6),s('type.ast.tctor',X7)))))))) & (? [X4] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X4)))) & ? [X5] : ~p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X4),s('type.ast.tctor',X5))))))) | ? [X2] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X2)))) & ? [X3] : ~p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3)))))))))),
+  inference(rectify,[],[f30])).
+fof(f30,plain,(
+  ? [X0,X1] : ((! [X2] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X2)))) | ! [X3] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))))))) | ! [X4] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X4)))) | ! [X5] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X4),s('type.ast.tctor',X5)))))))) & (? [X2] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X2)))) & ? [X3] : ~p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))))))) | ? [X4] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X4)))) & ? [X5] : ~p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X4),s('type.ast.tctor',X5)))))))))),
+  inference(nnf_transformation,[],[f26])).
+fof(f26,plain,(
+  ? [X0,X1] : (! [X2] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X2)))) | ! [X3] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))))))) <~> ! [X4] : (~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X4)))) | ! [X5] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X4),s('type.ast.tctor',X5))))))))),
+  inference(ennf_transformation,[],[f14])).
+fof(f14,plain,(
+  ~! [X0,X1] : (! [X2] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X2)))) => ! [X3] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X2),s('type.ast.tctor',X3))))))) <=> ! [X4] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X0),s('type.list.list'('type.ast.t'),X4)))) => ! [X5] : p(s(bool,happ(s(fun('type.ast.t',bool),X1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X4),s('type.ast.tctor',X5))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (! [X8] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X6),s('type.list.list'('type.ast.t'),X8)))) => ! [X9] : p(s(bool,happ(s(fun('type.ast.t',bool),X7),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9))))))) <=> ! [X8] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X6),s('type.list.list'('type.ast.t'),X8)))) => ! [X9] : p(s(bool,happ(s(fun('type.ast.t',bool),X7),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (! [X8] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X6),s('type.list.list'('type.ast.t'),X8)))) => ! [X9] : p(s(bool,happ(s(fun('type.ast.t',bool),X7),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9))))))) <=> ! [X8] : (p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),X6),s('type.list.list'('type.ast.t'),X8)))) => ! [X9] : p(s(bool,happ(s(fun('type.ast.t',bool),X7),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9))))))))),
+  file('thm.typeSysProps.typeSysProps_29_prove_ltb','thm.typeSysProps.typeSysProps_29_prove_ltb')).
+fof(f67,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK4),s('type.ast.tctor',sK5)))))) | $spl3),
+  inference(cnf_transformation,[],[f67_D])).
+fof(f67_D,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK4),s('type.ast.tctor',sK5)))))) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f43,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK4),s('type.ast.tctor',sK5)))))) | p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2))))),
+  inference(cnf_transformation,[],[f32])).
+fof(f503,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4))) | $spl14),
+  inference(cnf_transformation,[],[f503_D])).
+fof(f503_D,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4))) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f505,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4))) | $spl6),
+  inference(subsumption_resolution,[],[f500,f47])).
+fof(f47,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f15])).
+fof(f15,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.typeSysProps.typeSysProps_29_prove_ltb',aHL_FALSITY)).
+fof(f500,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4))) | $spl6),
+  inference(superposition,[],[f71,f48])).
+fof(f48,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.typeSysProps.typeSysProps_29_prove_ltb',aHL_BOOL_CASES)).
+fof(f565,plain,(
+  $false | ($spl3 | $spl8 | $spl14)),
+  inference(subsumption_resolution,[],[f564,f45])).
+fof(f45,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.typeSysProps.typeSysProps_29_prove_ltb',aHL_TRUTH)).
+fof(f564,plain,(
+  ~p(s(bool,'T_0')) | ($spl3 | $spl8 | $spl14)),
+  inference(forward_demodulation,[],[f553,f503])).
+fof(f553,plain,(
+  ~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4)))) | ($spl3 | $spl8)),
+  inference(resolution,[],[f67,f72])).
+fof(f65,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK2),s('type.ast.tctor',sK3)))))) | $spl1),
+  inference(cnf_transformation,[],[f65_D])).
+fof(f65_D,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK2),s('type.ast.tctor',sK3)))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f44,plain,(
+  ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK4),s('type.ast.tctor',sK5)))))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK2),s('type.ast.tctor',sK3))))))),
+  inference(cnf_transformation,[],[f32])).
+fof(f42,plain,(
+  p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK4)))) | ~p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),sK2),s('type.ast.tctor',sK3))))))),
+  inference(cnf_transformation,[],[f32])).
+fof(f72,plain,(
+  ( ! [X8,X9] : (p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9)))))) | ~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),X8))))) ) | $spl8),
+  inference(cnf_transformation,[],[f72_D])).
+fof(f72_D,plain,(
+  ( ! [X8,X9] : (p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9)))))) | ~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),X8))))) ) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f40,plain,(
+  ( ! [X6,X8,X7,X9] : (p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X6),s('type.ast.tctor',X7)))))) | ~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),X6)))) | p(s(bool,happ(s(fun('type.ast.t',bool),sK1),s('type.ast.t','const.ast.Tapp_2'(s('type.list.list'('type.ast.t'),X8),s('type.ast.tctor',X9)))))) | ~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),X8))))) )),
+  inference(cnf_transformation,[],[f32])).
+fof(f486,plain,(
+  $false | ($spl1 | $spl4 | $spl8)),
+  inference(subsumption_resolution,[],[f485,f45])).
+fof(f485,plain,(
+  ~p(s(bool,'T_0')) | ($spl1 | $spl4 | $spl8)),
+  inference(forward_demodulation,[],[f475,f79])).
+fof(f79,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2))) | $spl4),
+  inference(resolution,[],[f69,f50])).
+fof(f50,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f16])).
+fof(f16,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X9] : (s(bool,'T_0') = s(bool,X9) <=> p(s(bool,X9)))),
+  file('thm.typeSysProps.typeSysProps_29_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f475,plain,(
+  ~p(s(bool,happ(s(fun('type.list.list'('type.ast.t'),bool),sK0),s('type.list.list'('type.ast.t'),sK2)))) | ($spl1 | $spl8)),
+  inference(resolution,[],[f72,f65])).
+% SZS output end Proof for thm.typeSysProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 26
+% Passive clauses: 114
+% Generated clauses: 502
+% Final active clauses: 23
+% Final passive clauses: 68
+% Input formulas: 12
+% Initial clauses: 24
+% 
+% Duplicate literals: 53
+% Trivial inequalities: 16
+% Fw subsumption resolutions: 57
+% Fw demodulations: 7
+% Bw demodulations: 2
+% 
+% Simple tautologies: 41
+% Equational tautologies: 16
+% Forward subsumptions: 194
+% 
+% Binary resolution: 55
+% Factoring: 1
+% Forward superposition: 83
+% Backward superposition: 143
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 4
+% 
+% Split clauses: 11
+% Split components: 22
+% SAT solver clauses: 20
+% SAT solver unit clauses: 2
+% SAT solver binary clauses: 9
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 11
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 17
+% TWLsolver calls for satisfiability: 6
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.022 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.01 s

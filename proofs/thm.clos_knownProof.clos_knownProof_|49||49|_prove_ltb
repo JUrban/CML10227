@@ -1,0 +1,168 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_knownProof
+% (69032)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 661
+% Passive clauses: 5795
+% Generated clauses: 20302
+% Final active clauses: 655
+% Final passive clauses: 4881
+% Input formulas: 132
+% Initial clauses: 282
+% 
+% Duplicate literals: 166
+% Trivial inequalities: 11
+% Fw subsumption resolutions: 868
+% Fw demodulations: 2520
+% Bw demodulations: 5
+% 
+% Simple tautologies: 205
+% Equational tautologies: 20
+% Forward subsumptions: 10474
+% Fw demodulations to eq. taut.: 18
+% 
+% Binary resolution: 4162
+% Factoring: 864
+% Forward superposition: 3951
+% Backward superposition: 7306
+% Self superposition: 94
+% Equality factoring: 2
+% Equality resolution: 4
+% 
+% Split clauses: 334
+% Split components: 669
+% SAT solver clauses: 482
+% SAT solver unit clauses: 12
+% SAT solver binary clauses: 48
+% 
+% Sat splits: 334
+% 
+% TWLsolver clauses: 482
+% TWLsolver calls for satisfiability: 288
+% 
+% Memory used [KB]: 20084
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_knownProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_knownProof
+% SZS output start Proof for thm.clos_knownProof
+fof(f4430,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f4429,f4403,f4415,f474,f774,f628,f856])).
+fof(f856,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK13(X2,X1,X0)),s(X1,sK14(X2,X1,X0))))) ) | $spl120),
+  inference(cnf_transformation,[],[f856_D])).
+fof(f856_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK13(X2,X1,X0)),s(X1,sK14(X2,X1,X0))))) ) <=> ~$spl120),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl120])])).
+fof(f628,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK13(X2,X1,X0)),s(X1,sK14(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f437])).
+fof(f437,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK13(X2,X1,X0)),s(X1,sK14(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13,sK14])],[f235])).
+fof(f235,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f234])).
+fof(f234,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f103])).
+fof(f103,axiom,(
+  ! [X16,X15] : ! [X23] : ? [X45,X44] : s('type.pair.prod'(X16,X15),X23) = s('type.pair.prod'(X16,X15),'const.pair.,_2'(s(X16,X45),s(X15,X44)))),
+  file('thm.clos_knownProof.clos_knownProof_|49||49|_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f774,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))) ) | $spl0),
+  inference(cnf_transformation,[],[f774_D])).
+fof(f774_D,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f474,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))) )),
+  inference(cnf_transformation,[],[f380])).
+fof(f380,plain,(
+  ! [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10])],[f335])).
+fof(f335,plain,(
+  ? [X0] : ! [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(ennf_transformation,[],[f134])).
+fof(f134,plain,(
+  ~! [X0] : ? [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ? [X7,X8] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X6))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X7),s('type.clos_known.val_approx',X8)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ? [X7,X8] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X6))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X7),s('type.clos_known.val_approx',X8)))),
+  file('thm.clos_knownProof.clos_knownProof_|49||49|_prove_ltb','thm.clos_knownProof.clos_knownProof_|49||49|_prove_ltb')).
+fof(f4415,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),X0) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10)))) ) | $spl1604),
+  inference(cnf_transformation,[],[f4415_D])).
+fof(f4415_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),X0) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10)))) ) <=> ~$spl1604),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1604])])).
+fof(f4403,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),X0) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK10)))) ) | ($spl0 | $spl120)),
+  inference(superposition,[],[f774,f856])).
+fof(f4429,plain,(
+  $false | $spl1604),
+  inference(equality_resolution,[],[f4415])).
+% SZS output end Proof for thm.clos_knownProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 222
+% Passive clauses: 833
+% Generated clauses: 3981
+% Final active clauses: 210
+% Final passive clauses: 568
+% Input formulas: 132
+% Initial clauses: 282
+% 
+% Duplicate literals: 67
+% Trivial inequalities: 4
+% Fw subsumption resolutions: 184
+% Fw demodulations: 219
+% Bw demodulations: 52
+% Condensations: 41
+% Global subsumptions: 19
+% 
+% Simple tautologies: 182
+% Equational tautologies: 5
+% Forward subsumptions: 1506
+% 
+% Binary resolution: 1002
+% Factoring: 76
+% Forward superposition: 661
+% Backward superposition: 501
+% Self superposition: 26
+% Equality factoring: 2
+% Equality resolution: 3
+% 
+% Split clauses: 7
+% Split components: 14
+% SAT solver clauses: 1218
+% SAT solver unit clauses: 353
+% SAT solver binary clauses: 68
+% SAT solver learnt clauses: 39
+% SAT solver learnt literals: 12
+% 
+% Sat splits: 7
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 1141
+% TWLsolver calls for satisfiability: 1663
+% 
+% Memory used [KB]: 4733
+% Time elapsed: 0.132 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.75 s

@@ -1,0 +1,218 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.RedBlackSet
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.RedBlackSet
+% SZS output start Proof for thm.RedBlackSet
+fof(f13845,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f13825,f2953,f2955,f2954,f141,f207,f3035,f337,f341,f339,f356])).
+fof(f356,plain,(
+  $false | ($spl1 | $spl14)),
+  inference(subsumption_resolution,[],[f343,f207])).
+fof(f343,plain,(
+  p(s(bool,'F_0')) | $spl14),
+  inference(backward_demodulation,[],[f339,f136])).
+fof(f136,plain,(
+  p(s(bool,'const.arithmetic.EVEN_1'(s('type.num.num','const.num.|48|_0'))))),
+  inference(cnf_transformation,[],[f48])).
+fof(f48,axiom,(
+  p(s(bool,'const.arithmetic.EVEN_1'(s('type.num.num','const.num.|48|_0'))))),
+  file('thm.RedBlackSet.color_case_def|split|0','thm.numeral.numeral_distrib|split|35')).
+fof(f339,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) | $spl14),
+  inference(cnf_transformation,[],[f339_D])).
+fof(f339_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f341,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl17),
+  inference(cnf_transformation,[],[f341_D])).
+fof(f341_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl17),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl17])])).
+fof(f337,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'F_0') | s(bool,'F_0') = s(bool,X0)) )),
+  inference(equality_factoring,[],[f163])).
+fof(f163,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.RedBlackSet.color_case_def|split|0',aHL_BOOL_CASES)).
+fof(f3035,plain,(
+  $false | ($spl17 | $spl34)),
+  inference(trivial_inequality_removal,[],[f3027])).
+fof(f3027,plain,(
+  s(bool,'T_0') != s(bool,'T_0') | ($spl17 | $spl34)),
+  inference(superposition,[],[f341,f2954])).
+fof(f207,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f207_D])).
+fof(f207_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f141,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f60])).
+fof(f60,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.RedBlackSet.color_case_def|split|0',aHL_FALSITY)).
+fof(f2954,plain,(
+  ( ! [X58] : (s(bool,'T_0') = s(bool,X58)) ) | $spl34),
+  inference(cnf_transformation,[],[f2954_D])).
+fof(f2954_D,plain,(
+  ( ! [X58] : (s(bool,'T_0') = s(bool,X58)) ) <=> ~$spl34),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl34])])).
+fof(f2955,plain,(
+  ( ! [X57,X54,X56,X55] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X56))) | s(bool,'T_0') = s(bool,sK3(X54,X55,X56,X57))) ) | $spl36),
+  inference(cnf_transformation,[],[f2955_D])).
+fof(f2955_D,plain,(
+  ( ! [X57,X54,X56,X55] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X56))) | s(bool,'T_0') = s(bool,sK3(X54,X55,X56,X57))) ) <=> ~$spl36),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl36])])).
+fof(f2953,plain,(
+  ( ! [X57,X54,X58,X56,X55] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X56))) | s(bool,'T_0') = s(bool,X58) | s(bool,'T_0') = s(bool,sK3(X54,X55,X56,X57))) ) | $spl1),
+  inference(subsumption_resolution,[],[f2721,f330])).
+fof(f330,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl1),
+  inference(superposition,[],[f207,f163])).
+fof(f2721,plain,(
+  ( ! [X57,X54,X58,X56,X55] : (p(s(bool,X58)) | s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X56))) | s(bool,'T_0') = s(bool,X58) | s(bool,'T_0') = s(bool,sK3(X54,X55,X56,X57))) )),
+  inference(superposition,[],[f184,f326])).
+fof(f326,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f163,f163])).
+fof(f184,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,sK3(X3,X2,X1,X0))) | s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1)))) )),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,sK3(X3,X2,X1,X0))) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1)))) & (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1))) | p(s(bool,sK3(X3,X2,X1,X0)))) & s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X1),s(X0,X2),s(X0,X3))) = s(X0,'const.bool.COND_3'(s(bool,sK3(X3,X2,X1,X0)),s(X0,X2),s(X0,X3))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3])],[f126])).
+fof(f126,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : ((~p(s(bool,X4)) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1)))) & (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1))) | p(s(bool,X4))) & s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X1),s(X0,X2),s(X0,X3))) = s(X0,'const.bool.COND_3'(s(bool,X4),s(X0,X2),s(X0,X3))))),
+  inference(flattening,[],[f125])).
+fof(f125,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : (((~p(s(bool,X4)) | s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1)))) & (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1))) | p(s(bool,X4)))) & s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X1),s(X0,X2),s(X0,X3))) = s(X0,'const.bool.COND_3'(s(bool,X4),s(X0,X2),s(X0,X3))))),
+  inference(nnf_transformation,[],[f98])).
+fof(f98,plain,(
+  ! [X0,X1,X2,X3] : ? [X4] : ((p(s(bool,X4)) <=> s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1)))) & s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X1),s(X0,X2),s(X0,X3))) = s(X0,'const.bool.COND_3'(s(bool,X4),s(X0,X2),s(X0,X3))))),
+  inference(flattening,[],[f97])).
+fof(f97,plain,(
+  ! [X0] : ! [X1,X2,X3] : ? [X4] : ((p(s(bool,X4)) <=> s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X1)))) & s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X1),s(X0,X2),s(X0,X3))) = s(X0,'const.bool.COND_3'(s(bool,X4),s(X0,X2),s(X0,X3))))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6] : ! [X9,X7,X8] : ? [X10] : ((p(s(bool,X10)) <=> s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color',X9)))) & s(X6,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X9),s(X6,X7),s(X6,X8))) = s(X6,'const.bool.COND_3'(s(bool,X10),s(X6,X7),s(X6,X8))))),
+  file('thm.RedBlackSet.color_case_def|split|0','thm.RedBlackSet.color_CASE')).
+fof(f13825,plain,(
+  $false | $spl36),
+  inference(trivial_inequality_removal,[],[f13824])).
+fof(f13824,plain,(
+  s(sK0,sK1) != s(sK0,sK1) | $spl36),
+  inference(superposition,[],[f134,f13585])).
+fof(f13585,plain,(
+  ( ! [X2,X0,X1] : (s(X2,X1) = s(X2,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X2,X1),s(X2,X0)))) ) | $spl36),
+  inference(forward_demodulation,[],[f13561,f181])).
+fof(f181,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f94])).
+fof(f94,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f93])).
+fof(f93,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.bool.COND_3'(s(bool,'T_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X6] : ! [X11,X12] : s(X6,X11) = s(X6,'const.bool.COND_3'(s(bool,'T_0'),s(X6,X11),s(X6,X12)))),
+  file('thm.RedBlackSet.color_case_def|split|0','thm.bool.COND_CLAUSES|split|0')).
+fof(f13561,plain,(
+  ( ! [X2,X0,X1] : (s(X2,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X2,X1),s(X2,X0))) = s(X2,'const.bool.COND_3'(s(bool,'T_0'),s(X2,X1),s(X2,X0)))) ) | $spl36),
+  inference(superposition,[],[f185,f13553])).
+fof(f13553,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'T_0') = s(bool,sK3(X0,X1,'const.RedBlackSet.Red_0',X2))) ) | $spl36),
+  inference(trivial_inequality_removal,[],[f13552])).
+fof(f13552,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num','const.num.|48|_0') != s('type.num.num','const.num.|48|_0') | s(bool,'T_0') = s(bool,sK3(X0,X1,'const.RedBlackSet.Red_0',X2))) ) | $spl36),
+  inference(superposition,[],[f2955,f138])).
+fof(f138,plain,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0')))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  s('type.num.num','const.num.|48|_0') = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0')))),
+  file('thm.RedBlackSet.color_case_def|split|0','thm.RedBlackSet.color2num_thm|split|0')).
+fof(f185,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color',X1),s(X0,X2),s(X0,X3))) = s(X0,'const.bool.COND_3'(s(bool,sK3(X3,X2,X1,X0)),s(X0,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f127])).
+fof(f134,plain,(
+  s(sK0,sK1) != s(sK0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(sK0,sK1),s(sK0,sK2)))),
+  inference(cnf_transformation,[],[f116])).
+fof(f116,plain,(
+  s(sK0,sK1) != s(sK0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(sK0,sK1),s(sK0,sK2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f114])).
+fof(f114,plain,(
+  ? [X0,X1,X2] : s(X0,X1) != s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X0,X1),s(X0,X2)))),
+  inference(ennf_transformation,[],[f59])).
+fof(f59,plain,(
+  ~! [X0,X1,X2] : s(X0,X1) = s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f58])).
+fof(f58,plain,(
+  ~! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s(X6,X7) = s(X6,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X6,X7),s(X6,X8)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s(X6,X7) = s(X6,'const.RedBlackSet.color_CASE_3'(s('type.RedBlackSet.color','const.RedBlackSet.Red_0'),s(X6,X7),s(X6,X8)))),
+  file('thm.RedBlackSet.color_case_def|split|0','thm.RedBlackSet.color_case_def|split|0')).
+% SZS output end Proof for thm.RedBlackSet
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 304
+% Passive clauses: 2244
+% Generated clauses: 13819
+% Final active clauses: 98
+% Final passive clauses: 1292
+% Input formulas: 56
+% Initial clauses: 71
+% 
+% Duplicate literals: 292
+% Trivial inequalities: 97
+% Fw subsumption resolutions: 501
+% Fw demodulations: 2000
+% Bw demodulations: 143
+% 
+% Simple tautologies: 91
+% Equational tautologies: 28
+% Forward subsumptions: 8671
+% Fw demodulations to eq. taut.: 6
+% 
+% Binary resolution: 32
+% Forward superposition: 5026
+% Backward superposition: 5305
+% Self superposition: 87
+% Equality factoring: 40
+% Equality resolution: 8
+% 
+% Split clauses: 58
+% Split components: 116
+% SAT solver clauses: 121
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 44
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 58
+% Sat splitting refutations: 16
+% 
+% TWLsolver clauses: 119
+% TWLsolver calls for satisfiability: 43
+% 
+% Memory used [KB]: 6652
+% Time elapsed: 0.289 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.3 s

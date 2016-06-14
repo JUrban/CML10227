@@ -1,0 +1,176 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_removeProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_removeProof
+% SZS output start Proof for thm.clos_removeProof
+fof(f513,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f508,f101,f104,f102,f115,f351,f356,f354,f418])).
+fof(f418,plain,(
+  $false | ($spl3 | $spl4)),
+  inference(trivial_inequality_removal,[],[f412])).
+fof(f412,plain,(
+  s(bool,'T_0') != s(bool,'T_0') | ($spl3 | $spl4)),
+  inference(superposition,[],[f104,f354])).
+fof(f354,plain,(
+  ( ! [X9] : (s(bool,'T_0') = s(bool,X9)) ) | $spl4),
+  inference(cnf_transformation,[],[f354_D])).
+fof(f354_D,plain,(
+  ( ! [X9] : (s(bool,'T_0') = s(bool,X9)) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f356,plain,(
+  s(bool,'F_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))) | $spl6),
+  inference(cnf_transformation,[],[f356_D])).
+fof(f356_D,plain,(
+  s(bool,'F_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f351,plain,(
+  ( ! [X9] : (s(bool,'F_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(duplicate_literal_removal,[],[f313])).
+fof(f313,plain,(
+  ( ! [X9] : (s(bool,'F_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))) | s(bool,'T_0') = s(bool,X9) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(superposition,[],[f276,f66])).
+fof(f66,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|',aHL_BOOL_CASES)).
+fof(f276,plain,(
+  ( ! [X9] : (s(bool,X9) = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(subsumption_resolution,[],[f198,f58])).
+fof(f58,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|',aHL_TRUTH)).
+fof(f198,plain,(
+  ( ! [X9] : (~p(s(bool,'T_0')) | s(bool,X9) = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))) | s(bool,'T_0') = s(bool,X9)) )),
+  inference(superposition,[],[f57,f94])).
+fof(f94,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f66,f66])).
+fof(f57,plain,(
+  ~p(s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))))),
+  inference(cnf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~p(s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))))),
+  inference(flattening,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~p(s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  p(s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))))))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|','thm.clos_removeProof.every_Fn_SOME_const_|48|')).
+fof(f115,plain,(
+  $false | $spl0),
+  inference(resolution,[],[f111,f58])).
+fof(f111,plain,(
+  ( ! [X2] : (~p(s(bool,X2))) ) | $spl0),
+  inference(superposition,[],[f62,f102])).
+fof(f62,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|',aHL_FALSITY)).
+fof(f102,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) | $spl0),
+  inference(cnf_transformation,[],[f102_D])).
+fof(f102_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f104,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl3),
+  inference(cnf_transformation,[],[f104_D])).
+fof(f104_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f101,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'F_0') | s(bool,'F_0') = s(bool,X0)) )),
+  inference(equality_factoring,[],[f66])).
+fof(f508,plain,(
+  $false | ($spl3 | $spl6)),
+  inference(subsumption_resolution,[],[f507,f104])).
+fof(f507,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | $spl6),
+  inference(forward_demodulation,[],[f506,f60])).
+fof(f60,plain,(
+  s(bool,'T_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f8])).
+fof(f8,axiom,(
+  s(bool,'T_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|','thm.closProps.every_Fn_SOME_def|split|0')).
+fof(f506,plain,(
+  s(bool,'F_0') = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))) | $spl6),
+  inference(forward_demodulation,[],[f491,f356])).
+fof(f491,plain,(
+  s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.NIL_0'))) = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.clos_remove.const_|48|_0'),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  inference(superposition,[],[f68,f61])).
+fof(f61,plain,(
+  s('type.closLang.exp','const.clos_remove.const_|48|_0') = s('type.closLang.exp','const.closLang.Op_2'(s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num','const.num.|48|_0'))))),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))),
+  inference(cnf_transformation,[],[f21])).
+fof(f21,axiom,(
+  s('type.closLang.exp','const.clos_remove.const_|48|_0') = s('type.closLang.exp','const.closLang.Op_2'(s('type.closLang.op','const.closLang.Const_1'(s('type.integer.int','const.integer.int_of_num_1'(s('type.num.num','const.num.|48|_0'))))),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|','thm.clos_remove.const_|48|_def')).
+fof(f68,plain,(
+  ( ! [X0,X1] : (s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),X0))) = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.closLang.Op_2'(s('type.closLang.op',X1),s('type.list.list'('type.closLang.exp'),X0))),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) )),
+  inference(cnf_transformation,[],[f29])).
+fof(f29,plain,(
+  ! [X0,X1] : s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),X0))) = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.closLang.Op_2'(s('type.closLang.op',X1),s('type.list.list'('type.closLang.exp'),X0))),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X7,X13] : s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),X7))) = s(bool,'const.closProps.every_Fn_SOME_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp','const.closLang.Op_2'(s('type.closLang.op',X13),s('type.list.list'('type.closLang.exp'),X7))),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  file('thm.clos_removeProof.every_Fn_SOME_const_|48|','thm.closProps.every_Fn_SOME_def|split|7')).
+% SZS output end Proof for thm.clos_removeProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 23
+% Passive clauses: 110
+% Generated clauses: 438
+% Final active clauses: 16
+% Final passive clauses: 78
+% Input formulas: 21
+% Initial clauses: 37
+% 
+% Duplicate literals: 67
+% Trivial inequalities: 5
+% Fw subsumption resolutions: 5
+% Fw demodulations: 14
+% Bw demodulations: 4
+% 
+% Simple tautologies: 20
+% Equational tautologies: 15
+% Forward subsumptions: 197
+% 
+% Binary resolution: 7
+% Forward superposition: 118
+% Backward superposition: 116
+% Self superposition: 29
+% Equality factoring: 28
+% 
+% Split clauses: 4
+% Split components: 8
+% SAT solver clauses: 10
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 6
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 4
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 9
+% TWLsolver calls for satisfiability: 4
+% 
+% Memory used [KB]: 895
+% Time elapsed: 0.020 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.019 s

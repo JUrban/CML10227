@@ -1,0 +1,187 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_relationProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_relationProps
+% SZS output start Proof for thm.clos_relationProps
+fof(f18383,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f18380,f236,f377,f375,f221,f376])).
+fof(f376,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f376_D])).
+fof(f376_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f221,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.clos_relationProps.exp_rel_rtc_semantics',aHL_FALSITY)).
+fof(f375,plain,(
+  p(s(bool,'F_0')) | $spl0),
+  inference(cnf_transformation,[],[f375_D])).
+fof(f375_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f377,plain,(
+  p(s(bool,'T_0')) | $spl2),
+  inference(cnf_transformation,[],[f377_D])).
+fof(f377_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f236,plain,(
+  p(s(bool,'T_0')) | p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f148])).
+fof(f148,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')) | p(s(bool,X0))))),
+  inference(flattening,[],[f147])).
+fof(f147,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | (~p(s(bool,'F_0')) | p(s(bool,X0)))))),
+  inference(nnf_transformation,[],[f102])).
+fof(f102,plain,(
+  ! [X0] : ((~p(s(bool,'F_0')) | p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(ennf_transformation,[],[f54])).
+fof(f54,plain,(
+  ! [X0] : ((p(s(bool,'F_0')) => p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X17] : ((p(s(bool,'F_0')) => p(s(bool,X17))) <=> p(s(bool,'T_0')))),
+  file('thm.clos_relationProps.exp_rel_rtc_semantics','thm.bool.IMP_CLAUSES|split|2')).
+fof(f18380,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f18379,f214])).
+fof(f214,plain,(
+  s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK16),s('type.list.list'('type.closLang.exp'),sK14)))),
+  inference(cnf_transformation,[],[f140])).
+fof(f140,plain,(
+  p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(sK12),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),sK13),s('type.list.list'('type.closLang.exp'),sK14)))) & ! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(sK12),sK15),s('type.closSem.state'(sK12),sK16)))) & s('type.ffi.behaviour','const.ffi.Fail_0') != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) & s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK16),s('type.list.list'('type.closLang.exp'),sK14)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13,sK14,sK15,sK16])],[f97])).
+fof(f97,plain,(
+  ? [X0,X1,X2,X3,X4] : (p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) & ! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) & s('type.ffi.behaviour','const.ffi.Fail_0') != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) & s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2))))),
+  inference(flattening,[],[f96])).
+fof(f96,plain,(
+  ? [X0,X1,X2,X3,X4] : ((p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) & ! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) & s('type.ffi.behaviour','const.ffi.Fail_0') != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1)))) & s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1,X2,X3,X4] : ((p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) & ! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) & s('type.ffi.behaviour','const.ffi.Fail_0') != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4] : ((p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) & ! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) & ~s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X6),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X7),s('type.list.list'('type.closLang.exp'),X8)))) & ! [X11] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X11),s('type.closSem.state'(X6),X9),s('type.closSem.state'(X6),X10)))) & ~s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X9),s('type.list.list'('type.closLang.exp'),X7)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X9),s('type.list.list'('type.closLang.exp'),X7))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X10),s('type.list.list'('type.closLang.exp'),X8))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X6),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X7),s('type.list.list'('type.closLang.exp'),X8)))) & ! [X11] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X11),s('type.closSem.state'(X6),X9),s('type.closSem.state'(X6),X10)))) & ~s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X9),s('type.list.list'('type.closLang.exp'),X7)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X9),s('type.list.list'('type.closLang.exp'),X7))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X10),s('type.list.list'('type.closLang.exp'),X8))))),
+  file('thm.clos_relationProps.exp_rel_rtc_semantics','thm.clos_relationProps.exp_rel_rtc_semantics')).
+fof(f18379,plain,(
+  s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK16),s('type.list.list'('type.closLang.exp'),sK14))) | $spl2),
+  inference(subsumption_resolution,[],[f18378,f213])).
+fof(f213,plain,(
+  s('type.ffi.behaviour','const.ffi.Fail_0') != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13)))),
+  inference(cnf_transformation,[],[f140])).
+fof(f18378,plain,(
+  s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK16),s('type.list.list'('type.closLang.exp'),sK14))) | $spl2),
+  inference(subsumption_resolution,[],[f18372,f377])).
+fof(f18372,plain,(
+  ~p(s(bool,'T_0')) | s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK15),s('type.list.list'('type.closLang.exp'),sK13))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),sK16),s('type.list.list'('type.closLang.exp'),sK14)))),
+  inference(superposition,[],[f4672,f991])).
+fof(f991,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X0),s('type.closSem.state'(sK12),sK15),s('type.closSem.state'(sK12),sK16)))) )),
+  inference(resolution,[],[f212,f229])).
+fof(f229,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f143])).
+fof(f143,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X17] : (s(bool,'T_0') = s(bool,X17) <=> p(s(bool,X17)))),
+  file('thm.clos_relationProps.exp_rel_rtc_semantics','thm.bool.EQ_CLAUSES|split|1')).
+fof(f212,plain,(
+  ( ! [X5] : (p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(sK12),sK15),s('type.closSem.state'(sK12),sK16))))) )),
+  inference(cnf_transformation,[],[f140])).
+fof(f4672,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',sK17(X1,X0,sK14,sK13,sK12)),s('type.closSem.state'(sK12),X0),s('type.closSem.state'(sK12),X1)))) | s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),X0),s('type.list.list'('type.closLang.exp'),sK13))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),X0),s('type.list.list'('type.closLang.exp'),sK13))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(sK12),X1),s('type.list.list'('type.closLang.exp'),sK14)))) )),
+  inference(resolution,[],[f257,f211])).
+fof(f211,plain,(
+  p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(sK12),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),sK13),s('type.list.list'('type.closLang.exp'),sK14))))),
+  inference(cnf_transformation,[],[f140])).
+fof(f257,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) | s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) | ~p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',sK17(X4,X3,X2,X1,X0)),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2)))) )),
+  inference(cnf_transformation,[],[f159])).
+fof(f159,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) | ! [X3,X4] : (~p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',sK17(X4,X3,X2,X1,X0)),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) | s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK17])],[f109])).
+fof(f109,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) | ! [X3,X4] : (? [X5] : ~p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) | s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2)))))),
+  inference(flattening,[],[f108])).
+fof(f108,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) | ! [X3,X4] : ((? [X5] : ~p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) | s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1)))) | s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2)))))),
+  inference(ennf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) => ! [X3,X4] : ((! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) & s('type.ffi.behaviour','const.ffi.Fail_0') != s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2)))))),
+  inference(flattening,[],[f68])).
+fof(f68,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X0),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X1),s('type.list.list'('type.closLang.exp'),X2)))) => ! [X3,X4] : ((! [X5] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X5),s('type.closSem.state'(X0),X3),s('type.closSem.state'(X0),X4)))) & ~s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X3),s('type.list.list'('type.closLang.exp'),X1))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X0),X4),s('type.list.list'('type.closLang.exp'),X2)))))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X6] : ! [X7,X8] : (p(s(bool,'const.relation.RTC_3'(s(fun('type.list.list'('type.closLang.exp'),fun('type.list.list'('type.closLang.exp'),bool)),'const.clos_relation.exp_rel_1'(s('type.bool.itself'(X6),'const.bool.the_value_0'))),s('type.list.list'('type.closLang.exp'),X7),s('type.list.list'('type.closLang.exp'),X8)))) => ! [X9,X10] : ((! [X11] : p(s(bool,'const.clos_relation.state_rel_3'(s('type.num.num',X11),s('type.closSem.state'(X6),X9),s('type.closSem.state'(X6),X10)))) & ~s('type.ffi.behaviour','const.ffi.Fail_0') = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X9),s('type.list.list'('type.closLang.exp'),X7)))) => s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X9),s('type.list.list'('type.closLang.exp'),X7))) = s('type.ffi.behaviour','const.closSem.semantics_3'(s('type.list.list'('type.closSem.v'),'const.list.NIL_0'),s('type.closSem.state'(X6),X10),s('type.list.list'('type.closLang.exp'),X8)))))),
+  file('thm.clos_relationProps.exp_rel_rtc_semantics','thm.clos_relationProps.clos_relationProps_2|48|_prove_ltb')).
+% SZS output end Proof for thm.clos_relationProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 642
+% Passive clauses: 9145
+% Generated clauses: 18053
+% Final active clauses: 639
+% Final passive clauses: 8159
+% Input formulas: 37
+% Initial clauses: 160
+% 
+% Duplicate literals: 385
+% Trivial inequalities: 46
+% Fw subsumption resolutions: 1661
+% Fw demodulations: 308
+% Bw demodulations: 3
+% 
+% Simple tautologies: 210
+% Equational tautologies: 55
+% Forward subsumptions: 5983
+% 
+% Binary resolution: 10034
+% Factoring: 1145
+% Forward superposition: 2092
+% Backward superposition: 2017
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 17
+% 
+% Split clauses: 298
+% Split components: 602
+% SAT solver clauses: 614
+% SAT solver unit clauses: 18
+% SAT solver binary clauses: 154
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 298
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 613
+% TWLsolver calls for satisfiability: 385
+% 
+% Memory used [KB]: 9083
+% Time elapsed: 0.565 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.58 s

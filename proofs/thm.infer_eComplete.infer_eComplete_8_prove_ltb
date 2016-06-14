@@ -1,0 +1,272 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.infer_eComplete
+% (40518)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 879
+% Passive clauses: 5639
+% Generated clauses: 33881
+% Final active clauses: 734
+% Final passive clauses: 4142
+% Input formulas: 133
+% Initial clauses: 274
+% 
+% Duplicate literals: 216
+% Trivial inequalities: 36
+% Fw subsumption resolutions: 1579
+% Fw demodulations: 3538
+% Bw demodulations: 143
+% 
+% Simple tautologies: 176
+% Equational tautologies: 26
+% Forward subsumptions: 22150
+% Fw demodulations to eq. taut.: 25
+% 
+% Binary resolution: 5433
+% Factoring: 1214
+% Forward superposition: 8486
+% Backward superposition: 12745
+% Self superposition: 90
+% Equality factoring: 2
+% Equality resolution: 11
+% 
+% Split clauses: 211
+% Split components: 422
+% SAT solver clauses: 405
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 48
+% 
+% Sat splits: 211
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 405
+% TWLsolver calls for satisfiability: 376
+% 
+% Memory used [KB]: 24690
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.infer_eComplete
+% (40541)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 515
+% Passive clauses: 2453
+% Generated clauses: 23046
+% Final active clauses: 385
+% Final passive clauses: 1434
+% Input formulas: 133
+% Initial clauses: 274
+% 
+% Duplicate literals: 80
+% Trivial inequalities: 36
+% Fw subsumption resolutions: 787
+% Fw demodulations: 2966
+% Bw demodulations: 557
+% Condensations: 63
+% Global subsumptions: 14
+% 
+% Simple tautologies: 181
+% Equational tautologies: 9
+% Forward subsumptions: 13362
+% Fw demodulations to eq. taut.: 26
+% Bw demodulations to eq. taut.: 6
+% 
+% Binary resolution: 1895
+% Factoring: 169
+% Forward superposition: 7128
+% Backward superposition: 6351
+% Self superposition: 85
+% Equality factoring: 2
+% Equality resolution: 11
+% 
+% Split clauses: 17
+% Split components: 34
+% SAT solver clauses: 3219
+% SAT solver unit clauses: 354
+% SAT solver binary clauses: 90
+% SAT solver learnt clauses: 28
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 17
+% Sat splitting refutations: 29
+% 
+% TWLsolver clauses: 3163
+% TWLsolver calls for satisfiability: 1740
+% 
+% Memory used [KB]: 20340
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.infer_eComplete
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.infer_eComplete
+% SZS output start Proof for thm.infer_eComplete
+fof(f19084,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f19083,f18784])).
+fof(f18784,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.bool.IN_2'(s(X0,X1),s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))))))) )),
+  inference(forward_demodulation,[],[f18566,f510])).
+fof(f510,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f206])).
+fof(f206,plain,(
+  ! [X0,X1,X2] : s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))),
+  inference(flattening,[],[f205])).
+fof(f205,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X2) = s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X1),s(X0,X2)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X6] : ! [X20,X21] : s(X6,X21) = s(X6,'const.bool.COND_3'(s(bool,'F_0'),s(X6,X20),s(X6,X21)))),
+  file('thm.infer_eComplete.infer_eComplete_8_prove_ltb','thm.bool.COND_CLAUSES|split|1')).
+fof(f18566,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.bool.IN_2'(s(X0,X1),s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,'const.bool.COND_3'(s(bool,'F_0'),s(X0,X2),s(X0,X1))))))))) )),
+  inference(unit_resulting_resolution,[],[f510,f709])).
+fof(f709,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1)))))) | s(X0,X1) != s(X0,X2)) )),
+  inference(forward_demodulation,[],[f613,f511])).
+fof(f511,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),X1))) = s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f208])).
+fof(f208,plain,(
+  ! [X0,X1,X2] : s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),X1))) = s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))),
+  inference(flattening,[],[f207])).
+fof(f207,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),X1))) = s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X6] : ! [X35,X15] : s(bool,'const.bool.IN_2'(s(X6,X15),s(fun(X6,bool),X35))) = s(bool,happ(s(fun(X6,bool),X35),s(X6,X15)))),
+  file('thm.infer_eComplete.infer_eComplete_8_prove_ltb','thm.pred_set.SPECIFICATION')).
+fof(f613,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f383])).
+fof(f383,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f284])).
+fof(f284,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X17,X18,X19] : (p(s(bool,happ(s(fun(X17,bool),happ(s(fun(X17,fun(X17,bool)),'=_0'),s(X17,X18))),s(X17,X19)))) <=> s(X17,X18) = s(X17,X19))),
+  file('thm.infer_eComplete.infer_eComplete_8_prove_ltb',arity_0_HL_EQ)).
+fof(f19083,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))),s(fun(fun('type.num.num',bool),bool),happ(s(fun(fun('type.num.num',bool),fun(fun('type.num.num',bool),bool)),'=_0'),s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))))))))),
+  inference(forward_demodulation,[],[f19082,f466])).
+fof(f466,plain,(
+  ( ! [X0] : (s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))))) = s(fun('type.num.num',bool),'const.pred_set.INSERT_2'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X0)))))) )),
+  inference(cnf_transformation,[],[f178])).
+fof(f178,plain,(
+  ! [X0] : s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))))) = s(fun('type.num.num',bool),'const.pred_set.INSERT_2'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X0)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X9] : s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X9))))) = s(fun('type.num.num',bool),'const.pred_set.INSERT_2'(s('type.num.num',X9),s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X9)))))),
+  file('thm.infer_eComplete.infer_eComplete_8_prove_ltb','thm.pred_set.COUNT_SUC')).
+fof(f19082,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))),s(fun(fun('type.num.num',bool),bool),happ(s(fun(fun('type.num.num',bool),fun(fun('type.num.num',bool),bool)),'=_0'),s(fun('type.num.num',bool),'const.pred_set.INSERT_2'(s('type.num.num',sK12),s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',sK12))))))))))),
+  inference(forward_demodulation,[],[f19081,f417])).
+fof(f417,plain,(
+  s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',sK12))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK10),sK11)))),
+  inference(cnf_transformation,[],[f329])).
+fof(f329,plain,(
+  s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',sK12))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK10),sK11))) & s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))) != s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK10),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',sK10),sK11),s('type.pair.prod'('type.num.num',sK10),'const.pair.,_2'(s('type.num.num',sK12),s(sK10,sK13)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13])],[f298])).
+fof(f298,plain,(
+  ? [X0,X1,X2,X3] : (s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X2))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),X1))) & s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X2))))) != s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',X0),X1),s('type.pair.prod'('type.num.num',X0),'const.pair.,_2'(s('type.num.num',X2),s(X0,X3))))))))),
+  inference(ennf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~! [X0,X1,X2,X3] : (s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X2))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),X1))) => s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X2))))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',X0),X1),s('type.pair.prod'('type.num.num',X0),'const.pair.,_2'(s('type.num.num',X2),s(X0,X3))))))))),
+  inference(flattening,[],[f135])).
+fof(f135,plain,(
+  ~! [X0] : ! [X1,X2,X3] : (s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X2))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),X1))) => s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X2))))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',X0),X1),s('type.pair.prod'('type.num.num',X0),'const.pair.,_2'(s('type.num.num',X2),s(X0,X3))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : (s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X8))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X6),X7))) => s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X8))))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X6),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',X6),X7),s('type.pair.prod'('type.num.num',X6),'const.pair.,_2'(s('type.num.num',X8),s(X6,X9))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : (s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num',X8))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X6),X7))) => s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X8))))) = s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X6),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',X6),X7),s('type.pair.prod'('type.num.num',X6),'const.pair.,_2'(s('type.num.num',X8),s(X6,X9))))))))),
+  file('thm.infer_eComplete.infer_eComplete_8_prove_ltb','thm.infer_eComplete.infer_eComplete_8_prove_ltb')).
+fof(f19081,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))),s(fun(fun('type.num.num',bool),bool),happ(s(fun(fun('type.num.num',bool),fun(fun('type.num.num',bool),bool)),'=_0'),s(fun('type.num.num',bool),'const.pred_set.INSERT_2'(s('type.num.num',sK12),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK10),sK11))))))))))),
+  inference(forward_demodulation,[],[f18967,f604])).
+fof(f604,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X0,bool),'const.pred_set.INSERT_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))) = s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))))))) )),
+  inference(cnf_transformation,[],[f276])).
+fof(f276,plain,(
+  ! [X0,X1,X2,X3,X4] : s(fun(X0,bool),'const.pred_set.INSERT_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))) = s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))))))),
+  inference(flattening,[],[f275])).
+fof(f275,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,bool),'const.pred_set.INSERT_2'(s(X0,X3),s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))) = s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6,X10] : ! [X11,X12,X13] : s(fun(X6,bool),'const.pred_set.INSERT_2'(s(X6,X12),s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X10),X11))))) = s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X10),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'(X6,X10),X11),s('type.pair.prod'(X6,X10),'const.pair.,_2'(s(X6,X12),s(X10,X13)))))))),
+  file('thm.infer_eComplete.infer_eComplete_8_prove_ltb','thm.finite_map.FDOM_FUPDATE')).
+fof(f18967,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))),s(fun(fun('type.num.num',bool),bool),happ(s(fun(fun('type.num.num',bool),fun(fun('type.num.num',bool),bool)),'=_0'),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK10),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',sK10),sK11),s('type.pair.prod'('type.num.num',sK10),'const.pair.,_2'(s('type.num.num',sK12),s(sK10,sK13))))))))))))),
+  inference(unit_resulting_resolution,[],[f418,f710])).
+fof(f710,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.bool.IN_2'(s(X0,X2),s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1)))))) | s(X0,X1) = s(X0,X2)) )),
+  inference(forward_demodulation,[],[f612,f511])).
+fof(f612,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,X2) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))) )),
+  inference(cnf_transformation,[],[f383])).
+fof(f418,plain,(
+  s(fun('type.num.num',bool),'const.pred_set.count_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num',sK12))))) != s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK10),'const.finite_map.FUPDATE_2'(s('type.finite_map.fmap'('type.num.num',sK10),sK11),s('type.pair.prod'('type.num.num',sK10),'const.pair.,_2'(s('type.num.num',sK12),s(sK10,sK13)))))))),
+  inference(cnf_transformation,[],[f329])).
+% SZS output end Proof for thm.infer_eComplete
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 491
+% Passive clauses: 2127
+% Generated clauses: 18666
+% Final active clauses: 361
+% Final passive clauses: 1293
+% Input formulas: 133
+% Initial clauses: 274
+% 
+% Duplicate literals: 5
+% Trivial inequalities: 20
+% Fw subsumption resolutions: 142
+% Fw demodulations: 3070
+% Bw demodulations: 452
+% Condensations: 1
+% 
+% Simple tautologies: 59
+% Equational tautologies: 18
+% Forward subsumptions: 12991
+% Fw demodulations to eq. taut.: 99
+% Bw demodulations to eq. taut.: 13
+% 
+% Unit resulting resolution: 3589
+% Factoring: 2
+% Forward superposition: 4427
+% Backward superposition: 6598
+% Self superposition: 59
+% Equality factoring: 2
+% Equality resolution: 6
+% 
+% Split clauses: 8
+% Split components: 16
+% SAT solver clauses: 2146
+% SAT solver unit clauses: 1072
+% SAT solver binary clauses: 803
+% 
+% Sat splits: 8
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 13176
+% Time elapsed: 0.494 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.83 s

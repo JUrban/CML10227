@@ -1,0 +1,239 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_relation
+% (5367)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 1037
+% Passive clauses: 8355
+% Generated clauses: 32346
+% Final active clauses: 975
+% Final passive clauses: 6981
+% Input formulas: 261
+% Initial clauses: 467
+% 
+% Duplicate literals: 220
+% Trivial inequalities: 113
+% Fw subsumption resolutions: 1566
+% Fw demodulations: 3961
+% Bw demodulations: 50
+% 
+% Simple tautologies: 317
+% Equational tautologies: 38
+% Forward subsumptions: 17490
+% Fw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 7848
+% Factoring: 515
+% Forward superposition: 10402
+% Backward superposition: 6944
+% Self superposition: 52
+% Equality factoring: 2
+% Equality resolution: 25
+% 
+% Split clauses: 386
+% Split components: 774
+% SAT solver clauses: 544
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 67
+% 
+% Sat splits: 386
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 543
+% TWLsolver calls for satisfiability: 403
+% 
+% Memory used [KB]: 17142
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_relation
+% (5385)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 557
+% Passive clauses: 3530
+% Generated clauses: 26052
+% Final active clauses: 533
+% Final passive clauses: 2833
+% Input formulas: 261
+% Initial clauses: 467
+% 
+% Duplicate literals: 84
+% Trivial inequalities: 20
+% Fw subsumption resolutions: 890
+% Fw demodulations: 3957
+% Bw demodulations: 163
+% Condensations: 113
+% Global subsumptions: 24
+% 
+% Simple tautologies: 259
+% Equational tautologies: 15
+% Forward subsumptions: 12934
+% Fw demodulations to eq. taut.: 16
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 2860
+% Factoring: 213
+% Forward superposition: 8517
+% Backward superposition: 5327
+% Self superposition: 79
+% Equality factoring: 2
+% Equality resolution: 11
+% 
+% Split clauses: 12
+% Split components: 24
+% SAT solver clauses: 4712
+% SAT solver unit clauses: 625
+% SAT solver binary clauses: 142
+% SAT solver learnt clauses: 48
+% SAT solver learnt literals: 12
+% 
+% Sat splits: 12
+% 
+% TWLsolver clauses: 4616
+% TWLsolver calls for satisfiability: 2408
+% 
+% Memory used [KB]: 23411
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.clos_relation
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_relation
+% SZS output start Proof for thm.clos_relation
+fof(f10794,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f10793,f881])).
+fof(f881,plain,(
+  ( ! [X0] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f278])).
+fof(f278,plain,(
+  ! [X0] : s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f62])).
+fof(f62,axiom,(
+  ! [X6] : s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.clos_relation.clos_relation_56_prove_ltb','thm.list.REVERSE_DEF|split|0')).
+fof(f10793,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),'const.list.REVERSE_1'(s('type.list.list'(sK10),'const.list.NIL_0')))),
+  inference(forward_demodulation,[],[f10773,f9175])).
+fof(f9175,plain,(
+  ( ! [X2,X1] : (s('type.list.list'(X1),'const.list.NIL_0') = s('type.list.list'(X1),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X1),X2))),s('type.list.list'(X1),'const.list.REVERSE_1'(s('type.list.list'(X1),X2)))))) )),
+  inference(superposition,[],[f1008,f1007])).
+fof(f1007,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f377])).
+fof(f377,plain,(
+  ! [X0,X1] : s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f376])).
+fof(f376,plain,(
+  ! [X0] : ! [X1] : s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f216])).
+fof(f216,axiom,(
+  ! [X6] : ! [X7] : s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))) = s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X7)))))),
+  file('thm.clos_relation.clos_relation_56_prove_ltb','thm.list.LENGTH_REVERSE')).
+fof(f1008,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f379])).
+fof(f379,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),X1)))),
+  inference(flattening,[],[f378])).
+fof(f378,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X7] : s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))),s('type.list.list'(X6),X7)))),
+  file('thm.clos_relation.clos_relation_56_prove_ltb','thm.rich_list.DROP_LENGTH_NIL')).
+fof(f10773,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),'const.list.REVERSE_1'(s('type.list.list'(sK10),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))),s('type.list.list'(sK10),'const.list.REVERSE_1'(s('type.list.list'(sK10),sK11)))))))),
+  inference(unit_resulting_resolution,[],[f860,f1018])).
+fof(f1018,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(cnf_transformation,[],[f763])).
+fof(f763,plain,(
+  ! [X0,X1] : ((s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) & (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))),
+  inference(nnf_transformation,[],[f393])).
+fof(f393,plain,(
+  ! [X0,X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(flattening,[],[f392])).
+fof(f392,plain,(
+  ! [X0] : ! [X1] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(rectify,[],[f215])).
+fof(f215,axiom,(
+  ! [X6] : ! [X7] : (s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X7))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  file('thm.clos_relation.clos_relation_56_prove_ltb','thm.list.REVERSE_EQ_NIL')).
+fof(f860,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))),s('type.list.list'(sK10),'const.list.REVERSE_1'(s('type.list.list'(sK10),sK11)))))),
+  inference(cnf_transformation,[],[f710])).
+fof(f710,plain,(
+  s('type.list.list'(sK10),'const.list.NIL_0') != s('type.list.list'(sK10),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK10),sK11))),s('type.list.list'(sK10),'const.list.REVERSE_1'(s('type.list.list'(sK10),sK11)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11])],[f644])).
+fof(f644,plain,(
+  ? [X0,X1] : s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))),
+  inference(ennf_transformation,[],[f264])).
+fof(f264,plain,(
+  ~! [X0,X1] : s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))),
+  inference(flattening,[],[f263])).
+fof(f263,plain,(
+  ~! [X0] : ! [X1] : s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X0),X1))),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),'const.list.DROP_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X6),X7))),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X7)))))),
+  file('thm.clos_relation.clos_relation_56_prove_ltb','thm.clos_relation.clos_relation_56_prove_ltb')).
+% SZS output end Proof for thm.clos_relation
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 425
+% Passive clauses: 2031
+% Generated clauses: 9924
+% Final active clauses: 401
+% Final passive clauses: 1400
+% Input formulas: 261
+% Initial clauses: 467
+% 
+% Duplicate literals: 7
+% Trivial inequalities: 15
+% Fw subsumption resolutions: 143
+% Fw demodulations: 1759
+% Bw demodulations: 230
+% Condensations: 21
+% 
+% Simple tautologies: 93
+% Equational tautologies: 20
+% Forward subsumptions: 5690
+% Fw demodulations to eq. taut.: 124
+% 
+% Unit resulting resolution: 2459
+% Factoring: 1
+% Forward superposition: 2610
+% Backward superposition: 2158
+% Self superposition: 41
+% Equality factoring: 2
+% Equality resolution: 6
+% 
+% Split clauses: 5
+% Split components: 10
+% SAT solver clauses: 2043
+% SAT solver unit clauses: 1507
+% SAT solver binary clauses: 405
+% 
+% Sat splits: 5
+% 
+% Memory used [KB]: 8187
+% Time elapsed: 0.217 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.541 s

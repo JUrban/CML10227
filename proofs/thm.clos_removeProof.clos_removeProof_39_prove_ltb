@@ -1,0 +1,168 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_removeProof
+% (125242)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 1040
+% Passive clauses: 8785
+% Generated clauses: 34053
+% Final active clauses: 809
+% Final passive clauses: 7195
+% Input formulas: 260
+% Initial clauses: 445
+% 
+% Duplicate literals: 260
+% Trivial inequalities: 52
+% Fw subsumption resolutions: 1980
+% Fw demodulations: 3876
+% Bw demodulations: 218
+% 
+% Simple tautologies: 257
+% Equational tautologies: 41
+% Forward subsumptions: 17957
+% Fw demodulations to eq. taut.: 14
+% 
+% Binary resolution: 8891
+% Factoring: 549
+% Forward superposition: 7814
+% Backward superposition: 9654
+% Self superposition: 43
+% Equality factoring: 2
+% Equality resolution: 14
+% 
+% Split clauses: 936
+% Split components: 1873
+% SAT solver clauses: 1240
+% SAT solver unit clauses: 14
+% SAT solver binary clauses: 92
+% 
+% Sat splits: 936
+% Sat splitting refutations: 13
+% 
+% TWLsolver clauses: 1235
+% TWLsolver calls for satisfiability: 409
+% 
+% Memory used [KB]: 18166
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_removeProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_removeProof
+% SZS output start Proof for thm.clos_removeProof
+fof(f17201,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f17200,f17179,f17190,f833,f1297,f1107,f1500])).
+fof(f1500,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) ) | $spl330),
+  inference(cnf_transformation,[],[f1500_D])).
+fof(f1500_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) ) <=> ~$spl330),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl330])])).
+fof(f1107,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f465])).
+fof(f465,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(flattening,[],[f464])).
+fof(f464,plain,(
+  ! [X0,X1] : ! [X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(rectify,[],[f253])).
+fof(f253,axiom,(
+  ! [X17,X22] : ! [X10] : s('type.pair.prod'(X17,X22),X10) = s('type.pair.prod'(X17,X22),'const.pair.,_2'(s(X17,'const.pair.FST_1'(s('type.pair.prod'(X17,X22),X10))),s(X22,'const.pair.SND_1'(s('type.pair.prod'(X17,X22),X10)))))),
+  file('thm.clos_removeProof.clos_removeProof_39_prove_ltb','thm.pair.PAIR')).
+fof(f1297,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.db_vars.db_var_set',X2))) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) ) | $spl0),
+  inference(cnf_transformation,[],[f1297_D])).
+fof(f1297_D,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.db_vars.db_var_set',X2))) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f833,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.db_vars.db_var_set',X2))) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) )),
+  inference(cnf_transformation,[],[f702])).
+fof(f702,plain,(
+  ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.db_vars.db_var_set',X2))) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10])],[f646])).
+fof(f646,plain,(
+  ? [X0] : ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.db_vars.db_var_set',X2))) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',X0),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  inference(ennf_transformation,[],[f262])).
+fof(f262,plain,(
+  ~! [X0] : ? [X1,X2] : s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X1),s('type.db_vars.db_var_set',X2))) = s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',X0),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ? [X7,X8] : s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X7),s('type.db_vars.db_var_set',X8))) = s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',X6),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ? [X7,X8] : s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.pair.,_2'(s('type.list.list'('type.closLang.exp'),X7),s('type.db_vars.db_var_set',X8))) = s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',X6),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))),
+  file('thm.clos_removeProof.clos_removeProof_39_prove_ltb','thm.clos_removeProof.clos_removeProof_39_prove_ltb')).
+fof(f17190,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),X0) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) ) | $spl5692),
+  inference(cnf_transformation,[],[f17190_D])).
+fof(f17190_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),X0) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) ) <=> ~$spl5692),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5692])])).
+fof(f17179,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),X0) != s('type.pair.prod'('type.list.list'('type.closLang.exp'),'type.db_vars.db_var_set'),'const.clos_remove.remove_1'(s('type.list.list'('type.closLang.exp'),'const.list.CONS_2'(s('type.closLang.exp',sK10),s('type.list.list'('type.closLang.exp'),'const.list.NIL_0')))))) ) | ($spl0 | $spl330)),
+  inference(superposition,[],[f1297,f1500])).
+fof(f17200,plain,(
+  $false | $spl5692),
+  inference(equality_resolution,[],[f17190])).
+% SZS output end Proof for thm.clos_removeProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 459
+% Passive clauses: 2814
+% Generated clauses: 16293
+% Final active clauses: 399
+% Final passive clauses: 2272
+% Input formulas: 260
+% Initial clauses: 445
+% 
+% Duplicate literals: 82
+% Trivial inequalities: 15
+% Fw subsumption resolutions: 692
+% Fw demodulations: 2180
+% Bw demodulations: 138
+% Condensations: 62
+% Global subsumptions: 32
+% 
+% Simple tautologies: 217
+% Equational tautologies: 12
+% Forward subsumptions: 6945
+% Fw demodulations to eq. taut.: 10
+% Bw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 2081
+% Factoring: 99
+% Forward superposition: 4092
+% Backward superposition: 3475
+% Self superposition: 42
+% Equality factoring: 2
+% Equality resolution: 11
+% 
+% Split clauses: 15
+% Split components: 30
+% SAT solver clauses: 3768
+% SAT solver unit clauses: 649
+% SAT solver binary clauses: 119
+% SAT solver learnt clauses: 65
+% SAT solver learnt literals: 12
+% 
+% Sat splits: 15
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 3639
+% TWLsolver calls for satisfiability: 2312
+% 
+% Memory used [KB]: 15607
+% Time elapsed: 0.409 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.041 s

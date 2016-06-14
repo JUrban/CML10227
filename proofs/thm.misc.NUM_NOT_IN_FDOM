@@ -1,0 +1,210 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f1399,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1392,f65,f100,f66,f102])).
+fof(f102,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f102_D])).
+fof(f102_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f66,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.misc.NUM_NOT_IN_FDOM',aHL_FALSITY)).
+fof(f100,plain,(
+  p(s(bool,'T_0')) | $spl2),
+  inference(cnf_transformation,[],[f100_D])).
+fof(f100_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f65,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.misc.NUM_NOT_IN_FDOM',aHL_TRUTH)).
+fof(f1392,plain,(
+  $false | ($spl2 | $spl5)),
+  inference(subsumption_resolution,[],[f1382,f102])).
+fof(f1382,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(superposition,[],[f1372,f109])).
+fof(f109,plain,(
+  s(bool,'F_0') = s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))),
+  inference(resolution,[],[f74,f67])).
+fof(f67,plain,(
+  ~p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),'const.pred_set.UNIV_0'))))),
+  inference(cnf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),'const.pred_set.UNIV_0'))))),
+  inference(flattening,[],[f19])).
+fof(f19,axiom,(
+  ~p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),'const.pred_set.UNIV_0'))))),
+  file('thm.misc.NUM_NOT_IN_FDOM','thm.pred_set.INFINITE_NUM_UNIV')).
+fof(f74,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f26])).
+fof(f26,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X9] : (s(bool,'F_0') = s(bool,X9) <=> ~p(s(bool,X9)))),
+  file('thm.misc.NUM_NOT_IN_FDOM','thm.bool.EQ_CLAUSES|split|2')).
+fof(f1372,plain,(
+  ( ! [X2] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),X2))))) ) | $spl2),
+  inference(subsumption_resolution,[],[f1371,f107])).
+fof(f107,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl2),
+  inference(resolution,[],[f73,f100])).
+fof(f73,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f50])).
+fof(f1371,plain,(
+  ( ! [X2] : (s(bool,'T_0') = s(bool,'F_0') | p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),X2))))) ) | $spl2),
+  inference(forward_demodulation,[],[f1370,f144])).
+fof(f144,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'T_0') = s(bool,'const.pred_set.FINITE_1'(s(fun(X3,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X3,X4),X5)))))) )),
+  inference(resolution,[],[f95,f70])).
+fof(f70,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X9] : (s(bool,'T_0') = s(bool,X9) <=> p(s(bool,X9)))),
+  file('thm.misc.NUM_NOT_IN_FDOM','thm.bool.EQ_CLAUSES|split|1')).
+fof(f95,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))))) )),
+  inference(cnf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1,X2] : p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ! [X0,X1] : ! [X2] : p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X0,X1),X2))))))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X6,X10] : ! [X11] : p(s(bool,'const.pred_set.FINITE_1'(s(fun(X6,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X6,X10),X11))))))),
+  file('thm.misc.NUM_NOT_IN_FDOM','thm.finite_map.FDOM_FINITE')).
+fof(f1370,plain,(
+  ( ! [X2] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),X2)))) | s(bool,'F_0') = s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK0),sK1)))))) ) | $spl2),
+  inference(subsumption_resolution,[],[f1358,f100])).
+fof(f1358,plain,(
+  ( ! [X2] : (~p(s(bool,'T_0')) | p(s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),X2)))) | s(bool,'F_0') = s(bool,'const.pred_set.FINITE_1'(s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK0),sK1)))))) )),
+  inference(superposition,[],[f697,f169])).
+fof(f169,plain,(
+  ( ! [X1] : (s(bool,'T_0') = s(bool,'const.bool.IN_2'(s('type.num.num',X1),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK0),sK1)))))) )),
+  inference(resolution,[],[f64,f70])).
+fof(f64,plain,(
+  ( ! [X2] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK0),sK1))))))) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X2] : p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',sK0),sK1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f43])).
+fof(f43,plain,(
+  ? [X0,X1] : ! [X2] : p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),X1))))))),
+  inference(ennf_transformation,[],[f21])).
+fof(f21,plain,(
+  ~! [X0,X1] : ? [X2] : ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),X1))))))),
+  inference(flattening,[],[f20])).
+fof(f20,plain,(
+  ~! [X0] : ! [X1] : ? [X2] : ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X0),X1))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ? [X8] : ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X8),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X6),X7))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ? [X8] : ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X8),s(fun('type.num.num',bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'('type.num.num',X6),X7))))))),
+  file('thm.misc.NUM_NOT_IN_FDOM','thm.misc.NUM_NOT_IN_FDOM')).
+fof(f697,plain,(
+  ( ! [X10,X11,X9] : (~p(s(bool,'const.bool.IN_2'(s(X9,sK2(X10,X11,X9)),s(fun(X9,bool),X10)))) | p(s(bool,'const.pred_set.FINITE_1'(s(fun(X9,bool),X11)))) | s(bool,'F_0') = s(bool,'const.pred_set.FINITE_1'(s(fun(X9,bool),X10)))) )),
+  inference(resolution,[],[f94,f74])).
+fof(f94,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X2)))) | ~p(s(bool,'const.bool.IN_2'(s(X0,sK2(X2,X1,X0)),s(fun(X0,bool),X2)))) | p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X1))))) )),
+  inference(cnf_transformation,[],[f62])).
+fof(f62,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X1)))) | ~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X2)))) | (p(s(bool,'const.bool.IN_2'(s(X0,sK2(X2,X1,X0)),s(fun(X0,bool),X1)))) & ~p(s(bool,'const.bool.IN_2'(s(X0,sK2(X2,X1,X0)),s(fun(X0,bool),X2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2])],[f45])).
+fof(f45,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X1)))) | ~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X2)))) | ? [X3] : (p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X1)))) & ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X2))))))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1,X2] : ((p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X1)))) | ~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X2))))) | ? [X3] : (p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X1)))) & ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X2))))))),
+  inference(ennf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X1)))) & p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X2))))) => ? [X3] : (p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X1)))) & ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X2))))))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ! [X0] : ! [X1,X2] : ((~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X1)))) & p(s(bool,'const.pred_set.FINITE_1'(s(fun(X0,bool),X2))))) => ? [X3] : (p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X1)))) & ~p(s(bool,'const.bool.IN_2'(s(X0,X3),s(fun(X0,bool),X2))))))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X6] : ! [X12,X9] : ((~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X6,bool),X12)))) & p(s(bool,'const.pred_set.FINITE_1'(s(fun(X6,bool),X9))))) => ? [X8] : (p(s(bool,'const.bool.IN_2'(s(X6,X8),s(fun(X6,bool),X12)))) & ~p(s(bool,'const.bool.IN_2'(s(X6,X8),s(fun(X6,bool),X9))))))),
+  file('thm.misc.NUM_NOT_IN_FDOM','thm.pred_set.IN_INFINITE_NOT_FINITE')).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 50
+% Passive clauses: 208
+% Generated clauses: 1297
+% Final active clauses: 38
+% Final passive clauses: 106
+% Input formulas: 18
+% Initial clauses: 33
+% 
+% Duplicate literals: 118
+% Trivial inequalities: 33
+% Fw subsumption resolutions: 146
+% Fw demodulations: 76
+% Bw demodulations: 10
+% 
+% Simple tautologies: 60
+% Equational tautologies: 17
+% Forward subsumptions: 605
+% 
+% Binary resolution: 49
+% Forward superposition: 478
+% Backward superposition: 271
+% Self superposition: 30
+% Equality factoring: 30
+% Equality resolution: 5
+% 
+% Split clauses: 40
+% Split components: 85
+% SAT solver clauses: 77
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 25
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 40
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 73
+% TWLsolver calls for satisfiability: 25
+% 
+% Memory used [KB]: 1151
+% Time elapsed: 0.069 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.09 s

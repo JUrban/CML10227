@@ -1,0 +1,278 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stackSem
+% (19597)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 109
+% Passive clauses: 3682
+% Generated clauses: 12952
+% Final active clauses: 102
+% Final passive clauses: 3423
+% Input formulas: 21
+% Initial clauses: 31
+% 
+% Duplicate literals: 566
+% Trivial inequalities: 187
+% Fw subsumption resolutions: 1771
+% Fw demodulations: 588
+% Bw demodulations: 6
+% 
+% Simple tautologies: 283
+% Equational tautologies: 74
+% Forward subsumptions: 4790
+% 
+% Binary resolution: 478
+% Factoring: 4
+% Forward superposition: 4595
+% Backward superposition: 4186
+% Self superposition: 233
+% Equality factoring: 170
+% Equality resolution: 21
+% 
+% Split clauses: 355
+% Split components: 735
+% SAT solver clauses: 985
+% SAT solver unit clauses: 89
+% SAT solver binary clauses: 413
+% 
+% Sat splits: 355
+% 
+% TWLsolver clauses: 984
+% TWLsolver calls for satisfiability: 166
+% 
+% Memory used [KB]: 9338
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stackSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stackSem
+% SZS output start Proof for thm.stackSem
+fof(f3701,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3700,f2990,f2991,f101,f130,f73,f106,f104,f3133,f3659,f3583,f3584,f94,f125,f86,f117,f85,f116,f72,f105,f103])).
+fof(f103,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) = s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) | $spl0),
+  inference(cnf_transformation,[],[f103_D])).
+fof(f103_D,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) = s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f105,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) = s('type.wordSem.word_loc'(sK0),sK2) | $spl2),
+  inference(cnf_transformation,[],[f105_D])).
+fof(f105_D,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) = s('type.wordSem.word_loc'(sK0),sK2) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f72,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) = s('type.wordSem.word_loc'(sK0),sK2) | s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) = s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2)))),
+  inference(cnf_transformation,[],[f63])).
+fof(f63,plain,(
+  (s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) = s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) | s('type.wordSem.word_loc'(sK0),sK1) = s('type.wordSem.word_loc'(sK0),sK2)) & (s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) != s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) | s('type.wordSem.word_loc'(sK0),sK1) != s('type.wordSem.word_loc'(sK0),sK2))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f62])).
+fof(f62,plain,(
+  ? [X0,X1,X2] : ((s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X2))) | s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),X2)) & (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) != s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X2))) | s('type.wordSem.word_loc'(X0),X1) != s('type.wordSem.word_loc'(X0),X2)))),
+  inference(nnf_transformation,[],[f57])).
+fof(f57,plain,(
+  ? [X0,X1,X2] : (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X2))) <~> s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),X2))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X2))) <=> s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),X2))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2] : (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X2))) <=> s('type.wordSem.word_loc'(X0),X1) = s('type.wordSem.word_loc'(X0),X2))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (s('type.stackSem.result'(X6),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X6),X7))) = s('type.stackSem.result'(X6),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X6),X8))) <=> s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),X8))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (s('type.stackSem.result'(X6),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X6),X7))) = s('type.stackSem.result'(X6),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X6),X8))) <=> s('type.wordSem.word_loc'(X6),X7) = s('type.wordSem.word_loc'(X6),X8))),
+  file('thm.stackSem.result_|49||49||split|2','thm.stackSem.result_|49||49||split|2')).
+fof(f116,plain,(
+  ( ! [X0,X1] : (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),happ(s(fun('type.wordSem.word_loc'(X0),'type.stackSem.result'(X0)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(X0),X1)))) ) | $spl18),
+  inference(cnf_transformation,[],[f116_D])).
+fof(f116_D,plain,(
+  ( ! [X0,X1] : (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),happ(s(fun('type.wordSem.word_loc'(X0),'type.stackSem.result'(X0)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(X0),X1)))) ) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f85,plain,(
+  ( ! [X0,X1] : (s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),happ(s(fun('type.wordSem.word_loc'(X0),'type.stackSem.result'(X0)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0,X1] : s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),happ(s(fun('type.wordSem.word_loc'(X0),'type.stackSem.result'(X0)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(X0),X1)))),
+  inference(flattening,[],[f32])).
+fof(f32,plain,(
+  ! [X0] : ! [X1] : s('type.stackSem.result'(X0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X0),X1))) = s('type.stackSem.result'(X0),happ(s(fun('type.wordSem.word_loc'(X0),'type.stackSem.result'(X0)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(X0),X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X9] : s('type.stackSem.result'(X6),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X6),X9))) = s('type.stackSem.result'(X6),happ(s(fun('type.wordSem.word_loc'(X6),'type.stackSem.result'(X6)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(X6),X9)))),
+  file('thm.stackSem.result_|49||49||split|2','ARITY_0_1_const.stackSem.Halt')).
+fof(f117,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) ) | $spl20),
+  inference(cnf_transformation,[],[f117_D])).
+fof(f117_D,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f86,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f35])).
+fof(f35,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X10] : ! [X7,X11] : s(X10,X7) = s(X10,'const.ind_type.FCONS_3'(s(X10,X7),s(fun('type.num.num',X10),X11),s('type.num.num','const.num.|48|_0')))),
+  file('thm.stackSem.result_|49||49||split|2','thm.ind_type.FCONS|split|0')).
+fof(f125,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) ) | $spl36),
+  inference(cnf_transformation,[],[f125_D])).
+fof(f125_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) ) <=> ~$spl36),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl36])])).
+fof(f94,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(flattening,[],[f46])).
+fof(f46,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X10] : ! [X9,X22,X23] : s(X10,'const.ind_type.FCONS_3'(s(X10,X9),s(fun('type.num.num',X10),X22),s('type.num.num',X23))) = s(X10,happ(s(fun('type.num.num',X10),happ(s(fun(fun('type.num.num',X10),fun('type.num.num',X10)),happ(s(fun(X10,fun(fun('type.num.num',X10),fun('type.num.num',X10))),'const.ind_type.FCONS_0'),s(X10,X9))),s(fun('type.num.num',X10),X22))),s('type.num.num',X23)))),
+  file('thm.stackSem.result_|49||49||split|2','ARITY_0_3_const.ind_type.FCONS')).
+fof(f3584,plain,(
+  ( ! [X4,X5] : (s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK1),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5))) = s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK2),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5)))) ) | $spl520),
+  inference(cnf_transformation,[],[f3584_D])).
+fof(f3584_D,plain,(
+  ( ! [X4,X5] : (s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK1),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5))) = s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK2),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5)))) ) <=> ~$spl520),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl520])])).
+fof(f3583,plain,(
+  ( ! [X4,X5] : (s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK1),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5))) = s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK2),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5)))) ) | ($spl36 | $spl430)),
+  inference(forward_demodulation,[],[f3477,f125])).
+fof(f3477,plain,(
+  ( ! [X4,X5] : (s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK2),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4),s('type.num.num',X5))) = s('type.wordSem.word_loc'(sK0),happ(s(fun('type.num.num','type.wordSem.word_loc'(sK0)),happ(s(fun(fun('type.num.num','type.wordSem.word_loc'(sK0)),fun('type.num.num','type.wordSem.word_loc'(sK0))),happ(s(fun('type.wordSem.word_loc'(sK0),fun(fun('type.num.num','type.wordSem.word_loc'(sK0)),fun('type.num.num','type.wordSem.word_loc'(sK0)))),'const.ind_type.FCONS_0'),s('type.wordSem.word_loc'(sK0),sK1))),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X4))),s('type.num.num',X5)))) ) | ($spl36 | $spl430)),
+  inference(superposition,[],[f125,f2991])).
+fof(f3659,plain,(
+  $false | ($spl3 | $spl20 | $spl520)),
+  inference(subsumption_resolution,[],[f3658,f106])).
+fof(f3658,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) = s('type.wordSem.word_loc'(sK0),sK2) | ($spl20 | $spl520)),
+  inference(forward_demodulation,[],[f3639,f117])).
+fof(f3639,plain,(
+  ( ! [X2] : (s('type.wordSem.word_loc'(sK0),sK2) = s('type.wordSem.word_loc'(sK0),'const.ind_type.FCONS_3'(s('type.wordSem.word_loc'(sK0),sK1),s(fun('type.num.num','type.wordSem.word_loc'(sK0)),X2),s('type.num.num','const.num.|48|_0')))) ) | ($spl20 | $spl520)),
+  inference(superposition,[],[f3584,f117])).
+fof(f3133,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) = s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) | ($spl18 | $spl430)),
+  inference(forward_demodulation,[],[f3092,f116])).
+fof(f3092,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) = s('type.stackSem.result'(sK0),happ(s(fun('type.wordSem.word_loc'(sK0),'type.stackSem.result'(sK0)),'const.stackSem.Halt_0'),s('type.wordSem.word_loc'(sK0),sK1))) | ($spl18 | $spl430)),
+  inference(superposition,[],[f116,f2991])).
+fof(f104,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) != s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) | $spl1),
+  inference(cnf_transformation,[],[f104_D])).
+fof(f104_D,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) != s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f106,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) != s('type.wordSem.word_loc'(sK0),sK2) | $spl3),
+  inference(cnf_transformation,[],[f106_D])).
+fof(f106_D,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) != s('type.wordSem.word_loc'(sK0),sK2) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f73,plain,(
+  s('type.wordSem.word_loc'(sK0),sK1) != s('type.wordSem.word_loc'(sK0),sK2) | s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) != s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK2)))),
+  inference(cnf_transformation,[],[f63])).
+fof(f130,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(X1),X0),X5),s('type.wordSem.word_loc'(X1),X2))) = s(X0,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(X1),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X1),X2))),s(fun('type.wordSem.word_loc'(X1),X0),X3),s(fun('type.wordSem.word_loc'(X1),X0),X4),s(fun('type.wordSem.word_loc'(X1),X0),X5),s(X0,X6),s(X0,X7)))) ) | $spl46),
+  inference(cnf_transformation,[],[f130_D])).
+fof(f130_D,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(X1),X0),X5),s('type.wordSem.word_loc'(X1),X2))) = s(X0,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(X1),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X1),X2))),s(fun('type.wordSem.word_loc'(X1),X0),X3),s(fun('type.wordSem.word_loc'(X1),X0),X4),s(fun('type.wordSem.word_loc'(X1),X0),X5),s(X0,X6),s(X0,X7)))) ) <=> ~$spl46),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl46])])).
+fof(f101,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(X1),X0),X5),s('type.wordSem.word_loc'(X1),X2))) = s(X0,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(X1),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X1),X2))),s(fun('type.wordSem.word_loc'(X1),X0),X3),s(fun('type.wordSem.word_loc'(X1),X0),X4),s(fun('type.wordSem.word_loc'(X1),X0),X5),s(X0,X6),s(X0,X7)))) )),
+  inference(cnf_transformation,[],[f54])).
+fof(f54,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : s(X0,happ(s(fun('type.wordSem.word_loc'(X1),X0),X5),s('type.wordSem.word_loc'(X1),X2))) = s(X0,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(X1),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X1),X2))),s(fun('type.wordSem.word_loc'(X1),X0),X3),s(fun('type.wordSem.word_loc'(X1),X0),X4),s(fun('type.wordSem.word_loc'(X1),X0),X5),s(X0,X6),s(X0,X7)))),
+  inference(flattening,[],[f53])).
+fof(f53,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5,X6,X7] : s(X0,happ(s(fun('type.wordSem.word_loc'(X1),X0),X5),s('type.wordSem.word_loc'(X1),X2))) = s(X0,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(X1),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X1),X2))),s(fun('type.wordSem.word_loc'(X1),X0),X3),s(fun('type.wordSem.word_loc'(X1),X0),X4),s(fun('type.wordSem.word_loc'(X1),X0),X5),s(X0,X6),s(X0,X7)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X10,X6] : ! [X7,X11,X12,X13,X14,X15] : s(X10,happ(s(fun('type.wordSem.word_loc'(X6),X10),X13),s('type.wordSem.word_loc'(X6),X7))) = s(X10,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(X6),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(X6),X7))),s(fun('type.wordSem.word_loc'(X6),X10),X11),s(fun('type.wordSem.word_loc'(X6),X10),X12),s(fun('type.wordSem.word_loc'(X6),X10),X13),s(X10,X14),s(X10,X15)))),
+  file('thm.stackSem.result_|49||49||split|2','thm.stackSem.result_case_def|split|2')).
+fof(f2991,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK1))) = s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK2)))) ) | $spl430),
+  inference(cnf_transformation,[],[f2991_D])).
+fof(f2991_D,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK1))) = s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK2)))) ) <=> ~$spl430),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl430])])).
+fof(f2990,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK1))) = s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK2)))) ) | ($spl0 | $spl46)),
+  inference(forward_demodulation,[],[f2813,f130])).
+fof(f2813,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.wordSem.word_loc'(sK0),X0),X1),s('type.wordSem.word_loc'(sK0),sK2))) = s(X0,'const.stackSem.result_CASE_6'(s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))),s(fun('type.wordSem.word_loc'(sK0),X0),X2),s(fun('type.wordSem.word_loc'(sK0),X0),X3),s(fun('type.wordSem.word_loc'(sK0),X0),X1),s(X0,X4),s(X0,X5)))) ) | ($spl0 | $spl46)),
+  inference(superposition,[],[f130,f103])).
+fof(f3700,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f3699])).
+fof(f3699,plain,(
+  s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) != s('type.stackSem.result'(sK0),'const.stackSem.Halt_1'(s('type.wordSem.word_loc'(sK0),sK1))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f104,f105])).
+% SZS output end Proof for thm.stackSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 54
+% Passive clauses: 283
+% Generated clauses: 3575
+% Final active clauses: 41
+% Final passive clauses: 197
+% Input formulas: 21
+% Initial clauses: 31
+% 
+% Duplicate literals: 212
+% Trivial inequalities: 49
+% Fw subsumption resolutions: 201
+% Fw demodulations: 200
+% Bw demodulations: 34
+% Condensations: 423
+% 
+% Simple tautologies: 88
+% Equational tautologies: 33
+% Forward subsumptions: 1528
+% Bw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 42
+% Factoring: 1
+% Forward superposition: 881
+% Backward superposition: 1040
+% Self superposition: 92
+% Equality factoring: 66
+% Equality resolution: 9
+% 
+% Split clauses: 13
+% Split components: 26
+% SAT solver clauses: 588
+% SAT solver unit clauses: 39
+% SAT solver binary clauses: 51
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 13
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 586
+% TWLsolver calls for satisfiability: 162
+% 
+% Memory used [KB]: 5245
+% Time elapsed: 0.123 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.74 s

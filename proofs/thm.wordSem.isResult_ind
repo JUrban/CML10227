@@ -1,0 +1,220 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordSem
+% SZS output start Proof for thm.wordSem
+fof(f8229,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f8212,f125,f136])).
+fof(f136,plain,(
+  ( ! [X4] : (p(s(bool,X4)) | s(bool,'F_0') = s(bool,X4)) ) | $spl4),
+  inference(cnf_transformation,[],[f136_D])).
+fof(f136_D,plain,(
+  ( ! [X4] : (p(s(bool,X4)) | s(bool,'F_0') = s(bool,X4)) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f125,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(resolution,[],[f90,f79])).
+fof(f79,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.wordSem.isResult_ind',aHL_FALSITY)).
+fof(f90,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f62])).
+fof(f62,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f61])).
+fof(f61,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X13,X14] : ((p(s(bool,X13)) => p(s(bool,X14))) => ((p(s(bool,X14)) => p(s(bool,X13))) => s(bool,X13) = s(bool,X14)))),
+  file('thm.wordSem.isResult_ind','thm.bool.IMP_ANTISYM_AX')).
+fof(f8212,plain,(
+  $false | $spl4),
+  inference(subsumption_resolution,[],[f8189,f79])).
+fof(f8189,plain,(
+  p(s(bool,'F_0')) | $spl4),
+  inference(superposition,[],[f8086,f188])).
+fof(f188,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),sK2))) | $spl4),
+  inference(resolution,[],[f76,f136])).
+fof(f76,plain,(
+  ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f65])).
+fof(f65,plain,(
+  ! [X5,X6] : p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK0),X5),s('type.wordSem.word_loc'(sK0),X6)))))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK0),X3),s('type.wordSem.word_loc'(sK0),X4)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Error_0')))) & ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f64])).
+fof(f64,plain,(
+  ? [X0,X1] : (! [X5,X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X5),s('type.wordSem.word_loc'(X0),X6)))))) & ! [X3,X4] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.word_loc'(X0),X4)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0')))) & ? [X2] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X2)))))),
+  inference(rectify,[],[f58])).
+fof(f58,plain,(
+  ? [X0,X1] : (! [X4,X5] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0')))) & ? [X6] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(flattening,[],[f57])).
+fof(f57,plain,(
+  ? [X0,X1] : ((! [X4,X5] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0'))))) & ? [X6] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1] : ((! [X4,X5] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0'))))) => ! [X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1] : ((! [X4,X5] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0'))))) => ! [X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((! [X8,X9] : p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X6),X8),s('type.wordSem.word_loc'(X6),X9)))))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.word_loc'(X6),X11)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.Error_0'))))) => ! [X12] : p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),X12)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((! [X8,X9] : p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X6),X8),s('type.wordSem.word_loc'(X6),X9)))))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.word_loc'(X6),X11)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),'const.wordSem.Error_0'))))) => ! [X12] : p(s(bool,happ(s(fun('type.wordSem.result'(X6),bool),X7),s('type.wordSem.result'(X6),X12)))))),
+  file('thm.wordSem.isResult_ind','thm.wordSem.isResult_ind')).
+fof(f8086,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(subsumption_resolution,[],[f8085,f77])).
+fof(f77,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f14])).
+fof(f14,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.wordSem.isResult_ind','thm.bool.TRUTH')).
+fof(f8085,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(forward_demodulation,[],[f8084,f119])).
+fof(f119,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))),
+  inference(subsumption_resolution,[],[f111,f79])).
+fof(f111,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))),
+  inference(superposition,[],[f73,f80])).
+fof(f80,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.wordSem.isResult_ind',aHL_BOOL_CASES)).
+fof(f73,plain,(
+  p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0'))))),
+  inference(cnf_transformation,[],[f65])).
+fof(f8084,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(subsumption_resolution,[],[f8083,f77])).
+fof(f8083,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(forward_demodulation,[],[f8082,f120])).
+fof(f120,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))),
+  inference(subsumption_resolution,[],[f112,f79])).
+fof(f112,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))),
+  inference(superposition,[],[f74,f80])).
+fof(f74,plain,(
+  p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0'))))),
+  inference(cnf_transformation,[],[f65])).
+fof(f8082,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(subsumption_resolution,[],[f8081,f77])).
+fof(f8081,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(forward_demodulation,[],[f8080,f121])).
+fof(f121,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Error_0')))),
+  inference(subsumption_resolution,[],[f113,f79])).
+fof(f113,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Error_0')))),
+  inference(superposition,[],[f75,f80])).
+fof(f75,plain,(
+  p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Error_0'))))),
+  inference(cnf_transformation,[],[f65])).
+fof(f8080,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Error_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0))))) )),
+  inference(subsumption_resolution,[],[f8040,f71])).
+fof(f71,plain,(
+  ( ! [X6,X5] : (p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK0),X5),s('type.wordSem.word_loc'(sK0),X6))))))) )),
+  inference(cnf_transformation,[],[f65])).
+fof(f8040,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Error_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),X0)))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK0),sK3(sK1,sK0)),s('type.wordSem.word_loc'(sK0),sK4(sK1,sK0)))))))) )),
+  inference(resolution,[],[f83,f72])).
+fof(f72,plain,(
+  ( ! [X4,X3] : (p(s(bool,happ(s(fun('type.wordSem.result'(sK0),bool),sK1),s('type.wordSem.result'(sK0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK0),X3),s('type.wordSem.word_loc'(sK0),X4))))))) )),
+  inference(cnf_transformation,[],[f65])).
+fof(f83,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),sK5(X1,X0)),s('type.wordSem.word_loc'(X0),sK6(X1,X0))))))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) | p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X2)))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),sK3(X1,X0)),s('type.wordSem.word_loc'(X0),sK4(X1,X0)))))))) )),
+  inference(cnf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X0,X1] : (~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),sK3(X1,X0)),s('type.wordSem.word_loc'(X0),sK4(X1,X0))))))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),sK5(X1,X0)),s('type.wordSem.word_loc'(X0),sK6(X1,X0))))))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0')))) | ! [X2] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6])],[f66])).
+fof(f66,plain,(
+  ! [X0,X1] : (? [X5,X6] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X5),s('type.wordSem.word_loc'(X0),X6)))))) | ? [X3,X4] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X3),s('type.wordSem.word_loc'(X0),X4)))))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0')))) | ! [X2] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X2)))))),
+  inference(rectify,[],[f60])).
+fof(f60,plain,(
+  ! [X0,X1] : (? [X4,X5] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) | ? [X2,X3] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0')))) | ! [X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(flattening,[],[f59])).
+fof(f59,plain,(
+  ! [X0,X1] : ((? [X4,X5] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) | ? [X2,X3] : ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) | ~p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0'))))) | ! [X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(ennf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1] : ((! [X4,X5] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0'))))) => ! [X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : ! [X1] : ((! [X4,X5] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5)))))) & ! [X2,X3] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),'const.wordSem.Error_0'))))) => ! [X6] : p(s(bool,happ(s(fun('type.wordSem.result'(X0),bool),X1),s('type.wordSem.result'(X0),X6)))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X15] : ! [X7] : ((! [X16,X17] : p(s(bool,happ(s(fun('type.wordSem.result'(X15),bool),X7),s('type.wordSem.result'(X15),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X15),X16),s('type.wordSem.word_loc'(X15),X17)))))) & ! [X16,X17] : p(s(bool,happ(s(fun('type.wordSem.result'(X15),bool),X7),s('type.wordSem.result'(X15),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X15),X16),s('type.wordSem.word_loc'(X15),X17)))))) & p(s(bool,happ(s(fun('type.wordSem.result'(X15),bool),X7),s('type.wordSem.result'(X15),'const.wordSem.TimeOut_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X15),bool),X7),s('type.wordSem.result'(X15),'const.wordSem.NotEnoughSpace_0')))) & p(s(bool,happ(s(fun('type.wordSem.result'(X15),bool),X7),s('type.wordSem.result'(X15),'const.wordSem.Error_0'))))) => ! [X18] : p(s(bool,happ(s(fun('type.wordSem.result'(X15),bool),X7),s('type.wordSem.result'(X15),X18)))))),
+  file('thm.wordSem.isResult_ind','thm.wordSem.result_induction')).
+% SZS output end Proof for thm.wordSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 77
+% Passive clauses: 1358
+% Generated clauses: 8025
+% Final active clauses: 63
+% Final passive clauses: 1140
+% Input formulas: 21
+% Initial clauses: 33
+% 
+% Duplicate literals: 388
+% Trivial inequalities: 72
+% Fw subsumption resolutions: 842
+% Fw demodulations: 1071
+% Bw demodulations: 10
+% 
+% Simple tautologies: 118
+% Equational tautologies: 42
+% Forward subsumptions: 3954
+% 
+% Binary resolution: 61
+% Factoring: 1
+% Forward superposition: 2870
+% Backward superposition: 2359
+% Self superposition: 160
+% Equality factoring: 102
+% Equality resolution: 16
+% 
+% Split clauses: 142
+% Split components: 286
+% SAT solver clauses: 257
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 63
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 142
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 244
+% TWLsolver calls for satisfiability: 43
+% 
+% Memory used [KB]: 6396
+% Time elapsed: 0.283 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.29 s

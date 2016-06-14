@@ -1,0 +1,225 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvp_to_wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_to_wordProps
+% SZS output start Proof for thm.bvp_to_wordProps
+fof(f14493,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f14457,f160,f164,f162,f178])).
+fof(f178,plain,(
+  $false | $spl0),
+  inference(subsumption_resolution,[],[f165,f113])).
+fof(f113,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1',aHL_FALSITY)).
+fof(f165,plain,(
+  p(s(bool,'F_0')) | $spl0),
+  inference(backward_demodulation,[],[f162,f114])).
+fof(f114,plain,(
+  ( ! [X0] : (p(s(bool,'const.relation.WF_1'(s(fun(X0,fun(X0,bool)),'const.relation.EMPTY_REL_0'))))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0] : p(s(bool,'const.relation.WF_1'(s(fun(X0,fun(X0,bool)),'const.relation.EMPTY_REL_0'))))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X6] : p(s(bool,'const.relation.WF_1'(s(fun(X6,fun(X6,bool)),'const.relation.EMPTY_REL_0'))))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','thm.relation.WF_EMPTY_REL')).
+fof(f162,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) | $spl0),
+  inference(cnf_transformation,[],[f162_D])).
+fof(f162_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f164,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl3),
+  inference(cnf_transformation,[],[f164_D])).
+fof(f164_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f160,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'F_0') | s(bool,'F_0') = s(bool,X0)) )),
+  inference(equality_factoring,[],[f117])).
+fof(f117,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1',aHL_BOOL_CASES)).
+fof(f14457,plain,(
+  $false | $spl3),
+  inference(subsumption_resolution,[],[f14358,f164])).
+fof(f14358,plain,(
+  s(bool,'T_0') = s(bool,'F_0')),
+  inference(superposition,[],[f14168,f201])).
+fof(f201,plain,(
+  s(bool,'T_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',sK2),s('type.num.num',sK1)))))),
+  inference(trivial_inequality_removal,[],[f200])).
+fof(f200,plain,(
+  s(bool,'F_0') != s(bool,'F_0') | s(bool,'T_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',sK2),s('type.num.num',sK1)))))),
+  inference(superposition,[],[f111,f117])).
+fof(f111,plain,(
+  s(bool,'F_0') != s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',sK2),s('type.num.num',sK1)))))),
+  inference(cnf_transformation,[],[f105])).
+fof(f105,plain,(
+  s(bool,'F_0') != s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(sK0),'const.wordSem.Loc_2'(s('type.num.num',sK2),s('type.num.num',sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f100])).
+fof(f100,plain,(
+  ? [X0,X1,X2] : s(bool,'F_0') != s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X1)))))),
+  inference(ennf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1,X2] : s(bool,'F_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X1)))))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ~! [X0] : ! [X1,X2] : s(bool,'F_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s(bool,'F_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X8),s('type.num.num',X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s(bool,'F_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X8),s('type.num.num',X7)))))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','thm.bvp_to_wordProps.isWord_def|split|1')).
+fof(f14168,plain,(
+  ( ! [X6,X4,X5] : (s(bool,'F_0') = s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X4),'const.wordSem.Loc_2'(s('type.num.num',X5),s('type.num.num',X6)))))) )),
+  inference(superposition,[],[f13968,f124])).
+fof(f124,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'F_0') = s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X1)))))) )),
+  inference(cnf_transformation,[],[f57])).
+fof(f57,plain,(
+  ! [X0,X1,X2] : s(bool,'F_0') = s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X1)))))),
+  inference(flattening,[],[f56])).
+fof(f56,plain,(
+  ! [X0] : ! [X1,X2] : s(bool,'F_0') = s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),'const.wordSem.Loc_2'(s('type.num.num',X2),s('type.num.num',X1)))))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X6] : ! [X7,X8] : s(bool,'F_0') = s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X6),'const.wordSem.Loc_2'(s('type.num.num',X8),s('type.num.num',X7)))))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','thm.wordSem.is_word_def|split|1')).
+fof(f13968,plain,(
+  ( ! [X0,X1] : (s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),X1)))) )),
+  inference(forward_demodulation,[],[f13923,f122])).
+fof(f122,plain,(
+  ( ! [X0,X1] : (s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0'),s('type.wordSem.word_loc'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0,X1] : s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0'),s('type.wordSem.word_loc'(X0),X1)))),
+  inference(flattening,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : ! [X1] : s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0'),s('type.wordSem.word_loc'(X0),X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X9] : s(bool,'const.bvp_to_wordProps.isWord_1'(s('type.wordSem.word_loc'(X6),X9))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),'const.bvp_to_wordProps.isWord_0'),s('type.wordSem.word_loc'(X6),X9)))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','ARITY_0_1_const.bvp_to_wordProps.isWord')).
+fof(f13923,plain,(
+  ( ! [X0,X1] : (s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0'),s('type.wordSem.word_loc'(X0),X1)))) )),
+  inference(backward_demodulation,[],[f13835,f121])).
+fof(f121,plain,(
+  ( ! [X0,X1] : (s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0'),s('type.wordSem.word_loc'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0,X1] : s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0'),s('type.wordSem.word_loc'(X0),X1)))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : ! [X1] : s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X0),X1))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0'),s('type.wordSem.word_loc'(X0),X1)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6] : ! [X9] : s(bool,'const.wordSem.is_word_1'(s('type.wordSem.word_loc'(X6),X9))) = s(bool,happ(s(fun('type.wordSem.word_loc'(X6),bool),'const.wordSem.is_word_0'),s('type.wordSem.word_loc'(X6),X9)))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','ARITY_0_1_const.wordSem.is_word')).
+fof(f13835,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0')) )),
+  inference(backward_demodulation,[],[f13553,f13050])).
+fof(f13050,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'T_0'))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) )),
+  inference(forward_demodulation,[],[f13049,f118])).
+fof(f118,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,'const.combin.I_1'(s(X0,X1)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6] : ! [X19] : s(X6,X19) = s(X6,'const.combin.I_1'(s(X6,X19)))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','thm.combin.I_THM')).
+fof(f13049,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) )),
+  inference(forward_demodulation,[],[f115,f118])).
+fof(f115,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) )),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : s(fun('type.wordSem.word_loc'(X0),bool),'const.wordSem.is_word_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : s(fun('type.wordSem.word_loc'(X6),bool),'const.wordSem.is_word_0') = s(fun('type.wordSem.word_loc'(X6),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X6),fun('type.wordSem.word_loc'(X6),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X6),fun('type.wordSem.word_loc'(X6),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X6),bool),fun('type.wordSem.word_loc'(X6),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X6),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X6),fun(fun('type.fcp.cart'(bool,X6),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X6),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','thm.wordSem.is_word_primitive_def')).
+fof(f13553,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'T_0'))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) )),
+  inference(forward_demodulation,[],[f13552,f118])).
+fof(f13552,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'F_0')))))))))))) )),
+  inference(forward_demodulation,[],[f116,f118])).
+fof(f116,plain,(
+  ( ! [X0] : (s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : s(fun('type.wordSem.word_loc'(X0),bool),'const.bvp_to_wordProps.isWord_0') = s(fun('type.wordSem.word_loc'(X0),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X0),fun('type.wordSem.word_loc'(X0),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X0),bool),fun('type.wordSem.word_loc'(X0),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X0),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X0),fun(fun('type.fcp.cart'(bool,X0),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X0),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6] : s(fun('type.wordSem.word_loc'(X6),bool),'const.bvp_to_wordProps.isWord_0') = s(fun('type.wordSem.word_loc'(X6),bool),'const.relation.WFREC_2'(s(fun('type.wordSem.word_loc'(X6),fun('type.wordSem.word_loc'(X6),bool)),'const.min.@_1'(s(fun(fun('type.wordSem.word_loc'(X6),fun('type.wordSem.word_loc'(X6),bool)),bool),'const.relation.WF_0'))),s(fun(fun('type.wordSem.word_loc'(X6),bool),fun('type.wordSem.word_loc'(X6),bool)),'_dst_x0_1'(s(fun('type.wordSem.word_loc'(X6),bool),'_dst_x1x0x0_3'(s(fun('type.wordSem.word_loc'(X6),fun(fun('type.fcp.cart'(bool,X6),bool),fun(fun('type.num.num',fun('type.num.num',bool)),bool))),'const.wordSem.word_loc_CASE_0'),s(fun('type.fcp.cart'(bool,X6),bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'T_0'))))),s(fun('type.num.num',fun('type.num.num',bool)),'_dst_x0_1'(s(fun('type.num.num',bool),'_dst_x0_1'(s(bool,'const.combin.I_1'(s(bool,'F_0')))))))))))))),
+  file('thm.bvp_to_wordProps.isWord_def|split|1','thm.bvp_to_wordProps.isWord_primitive_def')).
+% SZS output end Proof for thm.bvp_to_wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 135
+% Passive clauses: 2412
+% Generated clauses: 14226
+% Final active clauses: 104
+% Final passive clauses: 2167
+% Input formulas: 36
+% Initial clauses: 38
+% 
+% Duplicate literals: 468
+% Trivial inequalities: 192
+% Fw subsumption resolutions: 947
+% Fw demodulations: 2140
+% Bw demodulations: 30
+% 
+% Simple tautologies: 127
+% Equational tautologies: 22
+% Forward subsumptions: 7542
+% 
+% Binary resolution: 121
+% Forward superposition: 5768
+% Backward superposition: 4170
+% Self superposition: 192
+% Equality factoring: 51
+% Equality resolution: 15
+% 
+% Split clauses: 278
+% Split components: 557
+% SAT solver clauses: 484
+% SAT solver unit clauses: 25
+% SAT solver binary clauses: 139
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 278
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 481
+% TWLsolver calls for satisfiability: 93
+% 
+% Memory used [KB]: 19445
+% Time elapsed: 0.571 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.581 s

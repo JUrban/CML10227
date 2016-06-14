@@ -1,0 +1,94 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.patProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.patProps
+% SZS output start Proof for thm.patProps
+fof(f2452,plain,(
+  $false),
+  inference(equality_resolution,[],[f2442])).
+fof(f2442,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.patSem.state'(sK0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),sK1) != s('type.pair.prod'('type.patSem.state'(sK0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),X0)) )),
+  inference(superposition,[],[f230,f294])).
+fof(f294,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK2(X2,X1,X0)),s(X1,sK3(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f222])).
+fof(f222,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK2(X2,X1,X0)),s(X1,sK3(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3])],[f114])).
+fof(f114,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f113])).
+fof(f113,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6,X15] : ! [X29] : ? [X39,X9] : s('type.pair.prod'(X6,X15),X29) = s('type.pair.prod'(X6,X15),'const.pair.,_2'(s(X6,X39),s(X15,X9)))),
+  file('thm.patProps.patProps_24_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f230,plain,(
+  ( ! [X2,X3] : (s('type.pair.prod'('type.patSem.state'(sK0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),sK1) != s('type.pair.prod'('type.patSem.state'(sK0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(sK0),X2),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X3)))) )),
+  inference(cnf_transformation,[],[f197])).
+fof(f197,plain,(
+  ! [X2,X3] : s('type.pair.prod'('type.patSem.state'(sK0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),sK1) != s('type.pair.prod'('type.patSem.state'(sK0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(sK0),X2),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X3)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f185])).
+fof(f185,plain,(
+  ? [X0,X1] : ! [X2,X3] : s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),X1) != s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X0),X2),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X3)))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1] : ? [X2,X3] : s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),X1) = s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X0),X2),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X3)))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0] : ! [X1] : ? [X2,X3] : s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),X1) = s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X0),X2),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X3)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ? [X8,X9] : s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),X7) = s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X6),X8),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X9)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ? [X8,X9] : s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),X7) = s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.patSem.v','type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X6),X8),s('type.semanticPrimitives.result'('type.patSem.v','type.patSem.v'),X9)))),
+  file('thm.patProps.patProps_24_prove_ltb','thm.patProps.patProps_24_prove_ltb')).
+% SZS output end Proof for thm.patProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 37
+% Passive clauses: 513
+% Generated clauses: 2138
+% Final active clauses: 37
+% Final passive clauses: 454
+% Input formulas: 68
+% Initial clauses: 109
+% 
+% Duplicate literals: 126
+% Trivial inequalities: 31
+% Fw subsumption resolutions: 152
+% Fw demodulations: 106
+% 
+% Simple tautologies: 95
+% Equational tautologies: 30
+% Forward subsumptions: 1077
+% 
+% Binary resolution: 41
+% Factoring: 1
+% Forward superposition: 667
+% Backward superposition: 788
+% Self superposition: 66
+% Equality factoring: 50
+% Equality resolution: 6
+% 
+% Split clauses: 15
+% Split components: 30
+% SAT solver clauses: 29
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 23
+% 
+% Sat splits: 15
+% 
+% TWLsolver clauses: 29
+% TWLsolver calls for satisfiability: 11
+% 
+% Memory used [KB]: 1663
+% Time elapsed: 0.055 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.061 s

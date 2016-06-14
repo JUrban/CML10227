@@ -1,0 +1,88 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_knownProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_knownProof
+% SZS output start Proof for thm.clos_knownProof
+fof(f1087,plain,(
+  $false),
+  inference(equality_resolution,[],[f397])).
+fof(f397,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK0))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0)))) )),
+  inference(superposition,[],[f67,f90])).
+fof(f90,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',sK2(X0)),s('type.clos_known.val_approx',sK3(X0))))) )),
+  inference(cnf_transformation,[],[f62])).
+fof(f62,plain,(
+  ! [X0] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',sK2(X0)),s('type.clos_known.val_approx',sK3(X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3])],[f41])).
+fof(f41,plain,(
+  ! [X0] : ? [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ? [X9,X8] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X6))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X9),s('type.clos_known.val_approx',X8)))),
+  file('thm.clos_knownProof.clos_knownProof_|49|3_prove_ltb','thm.clos_knownProof.clos_knownProof_|49||49|_prove_ltb')).
+fof(f67,plain,(
+  ( ! [X2,X1] : (s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK0))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))) )),
+  inference(cnf_transformation,[],[f52])).
+fof(f52,plain,(
+  ! [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),sK0))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f50])).
+fof(f50,plain,(
+  ? [X0] : ! [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) != s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ? [X1,X2] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X0))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X1),s('type.clos_known.val_approx',X2)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ? [X7,X8] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X6))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X7),s('type.clos_known.val_approx',X8)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ? [X7,X8] : s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.list.HD_1'(s('type.list.list'('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx')),X6))) = s('type.pair.prod'('type.closLang.exp','type.clos_known.val_approx'),'const.pair.,_2'(s('type.closLang.exp',X7),s('type.clos_known.val_approx',X8)))),
+  file('thm.clos_knownProof.clos_knownProof_|49|3_prove_ltb','thm.clos_knownProof.clos_knownProof_|49|3_prove_ltb')).
+% SZS output end Proof for thm.clos_knownProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 43
+% Passive clauses: 216
+% Generated clauses: 994
+% Final active clauses: 42
+% Final passive clauses: 140
+% Input formulas: 21
+% Initial clauses: 30
+% 
+% Duplicate literals: 91
+% Trivial inequalities: 82
+% Fw subsumption resolutions: 36
+% Fw demodulations: 24
+% 
+% Simple tautologies: 46
+% Equational tautologies: 15
+% Forward subsumptions: 512
+% 
+% Binary resolution: 14
+% Forward superposition: 312
+% Backward superposition: 334
+% Self superposition: 39
+% Equality factoring: 26
+% Equality resolution: 7
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 4
+% SAT solver unit clauses: 2
+% SAT solver binary clauses: 2
+% 
+% Sat splits: 1
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 4
+% TWLsolver calls for satisfiability: 4
+% 
+% Memory used [KB]: 1407
+% Time elapsed: 0.128 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.14 s

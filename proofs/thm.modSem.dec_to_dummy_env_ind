@@ -1,0 +1,261 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.modSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.modSem
+% SZS output start Proof for thm.modSem
+fof(f5756,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f5730,f606,f5628,f5634,f5632,f5630,f675,f674,f652,f654,f5651,f540,f5690,f386,f384])).
+fof(f384,plain,(
+  ( ! [X10,X8,X9] : (s(bool,'T_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X8),s('type.list.list'('type.string.char'),X9),s('type.list.list'('type.ast.t'),X10)))))) ) | $spl4),
+  inference(cnf_transformation,[],[f384_D])).
+fof(f384_D,plain,(
+  ( ! [X10,X8,X9] : (s(bool,'T_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X8),s('type.list.list'('type.string.char'),X9),s('type.list.list'('type.ast.t'),X10)))))) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f386,plain,(
+  ( ! [X17,X18,X16] : (s(bool,'T_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X16),s('type.list.list'('type.string.char'),X17),s('type.list.list'('type.ast.t'),X18)))))) )),
+  inference(subsumption_resolution,[],[f382,f59])).
+fof(f59,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f18])).
+fof(f18,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.modSem.dec_to_dummy_env_ind',aHL_FALSITY)).
+fof(f382,plain,(
+  ( ! [X17,X18,X16] : (p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X16),s('type.list.list'('type.string.char'),X17),s('type.list.list'('type.ast.t'),X18)))))) )),
+  inference(superposition,[],[f55,f61])).
+fof(f61,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.modSem.dec_to_dummy_env_ind',aHL_BOOL_CASES)).
+fof(f55,plain,(
+  ( ! [X4,X2,X3] : (p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X2),s('type.list.list'('type.string.char'),X3),s('type.list.list'('type.ast.t'),X4))))))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X8,X9] : p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X8),s('type.modLang.exp',X9)))))) & ! [X7] : p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X7)))))) & ! [X5,X6] : p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X5),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X6)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X2),s('type.list.list'('type.string.char'),X3),s('type.list.list'('type.ast.t'),X4)))))) & ~p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f40])).
+fof(f40,plain,(
+  ? [X0] : (! [X8,X9] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X8),s('type.modLang.exp',X9)))))) & ! [X7] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X7)))))) & ! [X5,X6] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X5),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X6)))))) & ! [X2,X3,X4] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X2),s('type.list.list'('type.string.char'),X3),s('type.list.list'('type.ast.t'),X4)))))) & ? [X1] : ~p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec',X1)))))),
+  inference(rectify,[],[f35])).
+fof(f35,plain,(
+  ? [X0] : (! [X7,X8] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8)))))) & ! [X6] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X6)))))) & ! [X4,X5] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X4),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X5)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X1),s('type.list.list'('type.string.char'),X2),s('type.list.list'('type.ast.t'),X3)))))) & ? [X9] : ~p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec',X9)))))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ? [X0] : ((! [X7,X8] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8)))))) & ! [X6] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X6)))))) & ! [X4,X5] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X4),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X5)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X1),s('type.list.list'('type.string.char'),X2),s('type.list.list'('type.ast.t'),X3))))))) & ? [X9] : ~p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec',X9)))))),
+  inference(ennf_transformation,[],[f17])).
+fof(f17,plain,(
+  ~! [X0] : ((! [X7,X8] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8)))))) & ! [X6] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X6)))))) & ! [X4,X5] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X4),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X5)))))) & ! [X1,X2,X3] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X1),s('type.list.list'('type.string.char'),X2),s('type.list.list'('type.ast.t'),X3))))))) => ! [X9] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X0),s('type.modLang.dec',X9)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ((! [X7,X8] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8)))))) & ! [X9] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X9)))))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X10),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X11)))))) & ! [X12,X13,X14] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X12),s('type.list.list'('type.string.char'),X13),s('type.list.list'('type.ast.t'),X14))))))) => ! [X15] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec',X15)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ((! [X7,X8] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8)))))) & ! [X9] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X9)))))) & ! [X10,X11] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X10),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X11)))))) & ! [X12,X13,X14] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X12),s('type.list.list'('type.string.char'),X13),s('type.list.list'('type.ast.t'),X14))))))) => ! [X15] : p(s(bool,happ(s(fun('type.modLang.dec',bool),X6),s('type.modLang.dec',X15)))))),
+  file('thm.modSem.dec_to_dummy_env_ind','thm.modSem.dec_to_dummy_env_ind')).
+fof(f5690,plain,(
+  $false | ($spl4 | $spl112)),
+  inference(subsumption_resolution,[],[f5684,f87])).
+fof(f87,plain,(
+  s(bool,'T_0') != s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1)))),
+  inference(resolution,[],[f56,f67])).
+fof(f67,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X16] : (s(bool,'T_0') = s(bool,X16) <=> p(s(bool,X16)))),
+  file('thm.modSem.dec_to_dummy_env_ind','thm.bool.EQ_CLAUSES|split|0')).
+fof(f56,plain,(
+  ~p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))))),
+  inference(cnf_transformation,[],[f41])).
+fof(f5684,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | ($spl4 | $spl112)),
+  inference(superposition,[],[f384,f5634])).
+fof(f540,plain,(
+  ( ! [X15] : (s(bool,'T_0') = s(bool,X15)) ) | $spl6),
+  inference(cnf_transformation,[],[f540_D])).
+fof(f540_D,plain,(
+  ( ! [X15] : (s(bool,'T_0') = s(bool,X15)) ) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f5651,plain,(
+  ( ! [X1] : (s(bool,'T_0') = s(bool,X1)) ) | $spl110),
+  inference(subsumption_resolution,[],[f5645,f298])).
+fof(f298,plain,(
+  ( ! [X20] : (s(bool,X20) = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | s(bool,'T_0') = s(bool,X20)) )),
+  inference(trivial_inequality_removal,[],[f265])).
+fof(f265,plain,(
+  ( ! [X20] : (s(bool,'T_0') != s(bool,'T_0') | s(bool,X20) = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | s(bool,'T_0') = s(bool,X20)) )),
+  inference(superposition,[],[f87,f88])).
+fof(f88,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f61,f61])).
+fof(f5645,plain,(
+  ( ! [X1] : (s(bool,X1) != s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | s(bool,'T_0') = s(bool,X1)) ) | $spl110),
+  inference(superposition,[],[f150,f5632])).
+fof(f150,plain,(
+  ( ! [X0,X1] : (s(bool,X0) != s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X1))))) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(resolution,[],[f53,f90])).
+fof(f90,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | s(bool,X0) != s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f71,f61])).
+fof(f71,plain,(
+  ( ! [X0] : (s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X16] : (s(bool,'F_0') = s(bool,X16) <=> ~p(s(bool,X16)))),
+  file('thm.modSem.dec_to_dummy_env_ind','thm.bool.EQ_CLAUSES|split|3')).
+fof(f53,plain,(
+  ( ! [X7] : (p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X7))))))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f654,plain,(
+  ~p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1)))) | $spl11),
+  inference(cnf_transformation,[],[f654_D])).
+fof(f654_D,plain,(
+  ~p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1)))) <=> ~$spl11),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl11])])).
+fof(f652,plain,(
+  ( ! [X13] : (~p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1)))) | s(bool,'T_0') = s(bool,X13)) )),
+  inference(subsumption_resolution,[],[f644,f61])).
+fof(f644,plain,(
+  ( ! [X13] : (s(bool,'F_0') != s(bool,X13) | ~p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1)))) | s(bool,'T_0') = s(bool,X13)) )),
+  inference(superposition,[],[f71,f298])).
+fof(f674,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | $spl12),
+  inference(cnf_transformation,[],[f674_D])).
+fof(f674_D,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f675,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | $spl11),
+  inference(resolution,[],[f654,f72])).
+fof(f72,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f5630,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(sK1)),s('type.modLang.exp',sK3(sK1)))) | $spl108),
+  inference(cnf_transformation,[],[f5630_D])).
+fof(f5630_D,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(sK1)),s('type.modLang.exp',sK3(sK1)))) <=> ~$spl108),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl108])])).
+fof(f5632,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(sK1)))) | $spl110),
+  inference(cnf_transformation,[],[f5632_D])).
+fof(f5632_D,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(sK1)))) <=> ~$spl110),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl110])])).
+fof(f5634,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(sK1)),s('type.list.list'('type.string.char'),sK8(sK1)),s('type.list.list'('type.ast.t'),sK9(sK1)))) | $spl112),
+  inference(cnf_transformation,[],[f5634_D])).
+fof(f5634_D,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(sK1)),s('type.list.list'('type.string.char'),sK8(sK1)),s('type.list.list'('type.ast.t'),sK9(sK1)))) <=> ~$spl112),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl112])])).
+fof(f5628,plain,(
+  s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(sK1)),s('type.list.list'('type.string.char'),sK8(sK1)),s('type.list.list'('type.ast.t'),sK9(sK1)))) | s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(sK1)))) | s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(sK1)),s('type.modLang.exp',sK3(sK1)))) | $spl12),
+  inference(subsumption_resolution,[],[f5617,f59])).
+fof(f5617,plain,(
+  p(s(bool,'F_0')) | s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(sK1)),s('type.list.list'('type.string.char'),sK8(sK1)),s('type.list.list'('type.ast.t'),sK9(sK1)))) | s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(sK1)))) | s('type.modLang.dec',sK1) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(sK1)),s('type.modLang.exp',sK3(sK1)))) | $spl12),
+  inference(superposition,[],[f1577,f674])).
+fof(f1577,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(X0)),s('type.list.list'('type.string.char'),sK8(X0)),s('type.list.list'('type.ast.t'),sK9(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(X0)),s('type.modLang.exp',sK3(X0))))) )),
+  inference(superposition,[],[f54,f62])).
+fof(f62,plain,(
+  ( ! [X0] : (s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(X0)),s('type.list.list'('type.string.char'),sK8(X0)),s('type.list.list'('type.ast.t'),sK9(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),sK5(X0)),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),sK6(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(X0)),s('type.modLang.exp',sK3(X0))))) )),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : (s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',sK2(X0)),s('type.modLang.exp',sK3(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),sK4(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),sK5(X0)),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),sK6(X0)))) | s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),sK7(X0)),s('type.list.list'('type.string.char'),sK8(X0)),s('type.list.list'('type.ast.t'),sK9(X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3,sK4,sK5,sK6,sK7,sK8,sK9])],[f20])).
+fof(f20,plain,(
+  ! [X0] : (? [X7,X8] : s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8))) | ? [X6] : s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X6))) | ? [X4,X5] : s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X4),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X5))) | ? [X1,X2,X3] : s('type.modLang.dec',X0) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X1),s('type.list.list'('type.string.char'),X2),s('type.list.list'('type.ast.t'),X3))))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X17] : (? [X7,X8] : s('type.modLang.dec',X17) = s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X7),s('type.modLang.exp',X8))) | ? [X18] : s('type.modLang.dec',X17) = s('type.modLang.dec','const.modLang.Dletrec_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.list.list'('type.string.char'),'type.modLang.exp'))),X18))) | ? [X19,X18] : s('type.modLang.dec',X17) = s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X19),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X18))) | ? [X19,X20,X18] : s('type.modLang.dec',X17) = s('type.modLang.dec','const.modLang.Dexn_3'(s('type.option.option'('type.list.list'('type.string.char')),X19),s('type.list.list'('type.string.char'),X20),s('type.list.list'('type.ast.t'),X18))))),
+  file('thm.modSem.dec_to_dummy_env_ind','thm.modLang.dec_nchotomy')).
+fof(f54,plain,(
+  ( ! [X6,X5] : (p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dtype_2'(s('type.option.option'('type.list.list'('type.string.char')),X5),s('type.list.list'('type.pair.prod'('type.list.list'('type.list.list'('type.string.char')),'type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.ast.t')))))),X6))))))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f606,plain,(
+  $false | $spl6),
+  inference(trivial_inequality_removal,[],[f604])).
+fof(f604,plain,(
+  s(bool,'T_0') != s(bool,'T_0') | $spl6),
+  inference(superposition,[],[f87,f540])).
+fof(f5730,plain,(
+  ( ! [X1] : (s(bool,'T_0') = s(bool,X1)) ) | $spl108),
+  inference(subsumption_resolution,[],[f5725,f298])).
+fof(f5725,plain,(
+  ( ! [X1] : (s(bool,X1) != s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec',sK1))) | s(bool,'T_0') = s(bool,X1)) ) | $spl108),
+  inference(superposition,[],[f135,f5630])).
+fof(f135,plain,(
+  ( ! [X6,X7,X5] : (s(bool,X5) != s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X6),s('type.modLang.exp',X7))))) | s(bool,'T_0') = s(bool,X5)) )),
+  inference(resolution,[],[f90,f52])).
+fof(f52,plain,(
+  ( ! [X8,X9] : (p(s(bool,happ(s(fun('type.modLang.dec',bool),sK0),s('type.modLang.dec','const.modLang.Dlet_2'(s('type.num.num',X8),s('type.modLang.exp',X9))))))) )),
+  inference(cnf_transformation,[],[f41])).
+% SZS output end Proof for thm.modSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 110
+% Passive clauses: 586
+% Generated clauses: 5546
+% Final active clauses: 93
+% Final passive clauses: 368
+% Input formulas: 15
+% Initial clauses: 27
+% 
+% Duplicate literals: 393
+% Trivial inequalities: 80
+% Fw subsumption resolutions: 738
+% Fw demodulations: 781
+% Bw demodulations: 14
+% 
+% Simple tautologies: 169
+% Equational tautologies: 18
+% Forward subsumptions: 2587
+% 
+% Binary resolution: 151
+% Forward superposition: 2325
+% Backward superposition: 893
+% Self superposition: 42
+% Equality factoring: 30
+% Equality resolution: 23
+% 
+% Split clauses: 127
+% Split components: 283
+% SAT solver clauses: 299
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 83
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 127
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 295
+% TWLsolver calls for satisfiability: 99
+% 
+% Memory used [KB]: 3454
+% Time elapsed: 0.153 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.151 s

@@ -1,0 +1,463 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.BinomialHeap
+% (82241)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 338
+% Passive clauses: 2935
+% Generated clauses: 25585
+% Final active clauses: 192
+% Final passive clauses: 2293
+% Input formulas: 101
+% Initial clauses: 134
+% 
+% Duplicate literals: 447
+% Trivial inequalities: 187
+% Fw subsumption resolutions: 1036
+% Fw demodulations: 5018
+% Bw demodulations: 120
+% 
+% Simple tautologies: 237
+% Equational tautologies: 26
+% Forward subsumptions: 15622
+% Fw demodulations to eq. taut.: 40
+% Bw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 146
+% Forward superposition: 10272
+% Backward superposition: 8184
+% Self superposition: 110
+% Equality factoring: 42
+% Equality resolution: 29
+% 
+% Split clauses: 103
+% Split components: 206
+% SAT solver clauses: 277
+% SAT solver unit clauses: 12
+% SAT solver binary clauses: 52
+% 
+% Sat splits: 103
+% Sat splitting refutations: 11
+% 
+% TWLsolver clauses: 277
+% TWLsolver calls for satisfiability: 65
+% 
+% Memory used [KB]: 15479
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.BinomialHeap
+% (82263)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 321
+% Passive clauses: 1798
+% Generated clauses: 31668
+% Final active clauses: 129
+% Final passive clauses: 595
+% Input formulas: 101
+% Initial clauses: 134
+% 
+% Duplicate literals: 369
+% Trivial inequalities: 192
+% Fw subsumption resolutions: 1002
+% Fw demodulations: 5941
+% Bw demodulations: 967
+% Condensations: 288
+% Global subsumptions: 6
+% 
+% Simple tautologies: 208
+% Equational tautologies: 26
+% Forward subsumptions: 19465
+% Fw demodulations to eq. taut.: 68
+% Bw demodulations to eq. taut.: 36
+% 
+% Binary resolution: 145
+% Factoring: 1
+% Forward superposition: 11835
+% Backward superposition: 8396
+% Self superposition: 139
+% Equality factoring: 42
+% Equality resolution: 22
+% 
+% Split clauses: 56
+% Split components: 112
+% SAT solver clauses: 2310
+% SAT solver unit clauses: 209
+% SAT solver binary clauses: 50
+% SAT solver learnt clauses: 15
+% SAT solver learnt literals: 8
+% 
+% Sat splits: 56
+% Sat splitting refutations: 112
+% 
+% TWLsolver clauses: 2283
+% TWLsolver calls for satisfiability: 508
+% 
+% Memory used [KB]: 24178
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.BinomialHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BinomialHeap
+% SZS output start Proof for thm.BinomialHeap
+fof(f32990,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f32989,f382])).
+fof(f382,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f255,f249])).
+fof(f249,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb',aHL_TRUTH)).
+fof(f255,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f219])).
+fof(f219,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f30])).
+fof(f30,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f32989,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f32988,f17732])).
+fof(f17732,plain,(
+  s(bool,'F_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num'))))),
+  inference(unit_resulting_resolution,[],[f17703,f303])).
+fof(f303,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f223])).
+fof(f223,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f148])).
+fof(f148,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f147])).
+fof(f147,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f33])).
+fof(f33,axiom,(
+  ! [X10] : (s(bool,'F_0') = s(bool,X10) <=> ~p(s(bool,X10)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f17703,plain,(
+  ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')))))),
+  inference(unit_resulting_resolution,[],[f17696,f401])).
+fof(f401,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.arithmetic.>_2'(s('type.num.num',X1),s('type.num.num',X0)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0))))) )),
+  inference(forward_demodulation,[],[f363,f323])).
+fof(f323,plain,(
+  ( ! [X0,X1] : (s(bool,'const.arithmetic.>_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1] : s(bool,'const.arithmetic.>_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X7] : s(bool,'const.arithmetic.>_2'(s('type.num.num',X6),s('type.num.num',X7))) = s(bool,'const.prim_rec.<_2'(s('type.num.num',X7),s('type.num.num',X6)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.GREATER_DEF')).
+fof(f363,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0))))) )),
+  inference(cnf_transformation,[],[f240])).
+fof(f240,plain,(
+  ! [X0,X1] : ((p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0))))) & (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))))))),
+  inference(nnf_transformation,[],[f197])).
+fof(f197,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1)))) <=> p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))))),
+  inference(flattening,[],[f196])).
+fof(f196,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1)))) <=> p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X6,X7] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num',X7)))) <=> p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X7),s('type.num.num',X6)))))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.NOT_LESS')).
+fof(f17696,plain,(
+  p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')))))),
+  inference(subsumption_resolution,[],[f17695,f382])).
+fof(f17695,plain,(
+  p(s(bool,'F_0')) | p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')))))),
+  inference(forward_demodulation,[],[f17677,f424])).
+fof(f424,plain,(
+  s(bool,'F_0') = s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0')))),
+  inference(unit_resulting_resolution,[],[f248,f303])).
+fof(f248,plain,(
+  ~p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  inference(cnf_transformation,[],[f103])).
+fof(f103,plain,(
+  ~p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  inference(flattening,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb')).
+fof(f17677,plain,(
+  p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num'))))) | p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  inference(superposition,[],[f318,f341])).
+fof(f341,plain,(
+  ( ! [X0,X1] : (s(bool,'const.arithmetic.>_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'),s('type.num.num',X0))),s('type.num.num',X1)))) )),
+  inference(cnf_transformation,[],[f178])).
+fof(f178,plain,(
+  ! [X0,X1] : s(bool,'const.arithmetic.>_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'),s('type.num.num',X0))),s('type.num.num',X1)))),
+  inference(rectify,[],[f102])).
+fof(f102,axiom,(
+  ! [X19,X20] : s(bool,'const.arithmetic.>_2'(s('type.num.num',X19),s('type.num.num',X20))) = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'),s('type.num.num',X19))),s('type.num.num',X20)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','ARITY_0_2_const.arithmetic.>')).
+fof(f318,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK0(X1,X0)))),s(X0,sK1(X1,X0))))) | p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1))))) )),
+  inference(cnf_transformation,[],[f233])).
+fof(f233,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) | ! [X5,X6,X7] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X5))),s(X0,X6)))) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X6))),s(X0,X7)))) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X5))),s(X0,X7)))))) & ((p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK0(X1,X0)))),s(X0,sK1(X1,X0))))) & p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK1(X1,X0)))),s(X0,sK2(X1,X0))))) & ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK0(X1,X0)))),s(X0,sK2(X1,X0)))))) | p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f232])).
+fof(f232,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) | ! [X5,X6,X7] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X5))),s(X0,X6)))) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X6))),s(X0,X7)))) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X5))),s(X0,X7)))))) & (? [X2,X3,X4] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) & p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4)))) & ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4))))) | p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1))))))),
+  inference(rectify,[],[f231])).
+fof(f231,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) | ! [X2,X3,X4] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4)))))) & (? [X2,X3,X4] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) & p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4)))) & ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4))))) | p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1))))))),
+  inference(nnf_transformation,[],[f210])).
+fof(f210,plain,(
+  ! [X0,X1] : (p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) <=> ! [X2,X3,X4] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4))))))),
+  inference(flattening,[],[f209])).
+fof(f209,plain,(
+  ! [X0,X1] : (p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) <=> ! [X2,X3,X4] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) | ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4))))))),
+  inference(ennf_transformation,[],[f158])).
+fof(f158,plain,(
+  ! [X0,X1] : (p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) <=> ! [X2,X3,X4] : ((p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) & p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4))))) => p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4))))))),
+  inference(flattening,[],[f157])).
+fof(f157,plain,(
+  ! [X0] : ! [X1] : (p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1)))) <=> ! [X2,X3,X4] : ((p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X3)))) & p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X4))))) => p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X4))))))),
+  inference(rectify,[],[f101])).
+fof(f101,axiom,(
+  ! [X9] : ! [X16] : (p(s(bool,'const.relation.transitive_1'(s(fun(X9,fun(X9,bool)),X16)))) <=> ! [X11,X17,X18] : ((p(s(bool,happ(s(fun(X9,bool),happ(s(fun(X9,fun(X9,bool)),X16),s(X9,X11))),s(X9,X17)))) & p(s(bool,happ(s(fun(X9,bool),happ(s(fun(X9,fun(X9,bool)),X16),s(X9,X17))),s(X9,X18))))) => p(s(bool,happ(s(fun(X9,bool),happ(s(fun(X9,fun(X9,bool)),X16),s(X9,X11))),s(X9,X18))))))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.relation.transitive_def')).
+fof(f32988,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')))))),
+  inference(subsumption_resolution,[],[f32905,f249])).
+fof(f32905,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')))))),
+  inference(superposition,[],[f19623,f18139])).
+fof(f18139,plain,(
+  s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num'))))),
+  inference(unit_resulting_resolution,[],[f17808,f299])).
+fof(f299,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f221])).
+fof(f221,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f145])).
+fof(f145,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X10] : (s(bool,'T_0') = s(bool,X10) <=> p(s(bool,X10)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f17808,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')))))),
+  inference(unit_resulting_resolution,[],[f17802,f12396])).
+fof(f12396,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.arithmetic.>_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))))) )),
+  inference(forward_demodulation,[],[f12395,f390])).
+fof(f390,plain,(
+  ( ! [X0,X1] : (s(bool,'const.arithmetic.>_2'(s('type.num.num',X1),s('type.num.num',X0))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))) )),
+  inference(forward_demodulation,[],[f325,f323])).
+fof(f325,plain,(
+  ( ! [X0,X1] : (s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))) )),
+  inference(cnf_transformation,[],[f162])).
+fof(f162,plain,(
+  ! [X0,X1] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X6,X7] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num',X7))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X6))),s('type.num.num',X7)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.LESS_EQ')).
+fof(f12395,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))))) )),
+  inference(subsumption_resolution,[],[f12371,f249])).
+fof(f12371,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))),s('type.num.num',X1)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1))))) )),
+  inference(superposition,[],[f375,f11938])).
+fof(f11938,plain,(
+  ( ! [X5] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',X5),s('type.num.num','const.num.SUC_1'(s('type.num.num',X5)))))) )),
+  inference(superposition,[],[f11849,f2049])).
+fof(f2049,plain,(
+  ( ! [X1] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X1))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X1),s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0')))))) )),
+  inference(superposition,[],[f387,f324])).
+fof(f324,plain,(
+  ( ! [X0,X1] : (s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X1),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f161])).
+fof(f161,plain,(
+  ! [X0,X1] : s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X1),s('type.num.num',X0)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X7] : s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X7))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X7),s('type.num.num',X6)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.ADD_SYM')).
+fof(f387,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))),s('type.num.num',X0)))) )),
+  inference(forward_demodulation,[],[f295,f253])).
+fof(f253,plain,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,axiom,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.numeral.numeral_distrib|split|13')).
+fof(f295,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f143])).
+fof(f143,plain,(
+  ! [X0] : s('type.num.num','const.num.SUC_1'(s('type.num.num',X0))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X0)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X7] : s('type.num.num','const.num.SUC_1'(s('type.num.num',X7))) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))),s('type.num.num',X7)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.SUC_ONE_ADD')).
+fof(f11849,plain,(
+  ( ! [X6,X7] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X7)))))) )),
+  inference(forward_demodulation,[],[f11740,f270])).
+fof(f270,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))) )),
+  inference(cnf_transformation,[],[f118])).
+fof(f118,plain,(
+  ! [X0] : s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X0)))),
+  inference(rectify,[],[f66])).
+fof(f66,axiom,(
+  ! [X7] : s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X7)))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.numeral.numeral_distrib|split|26')).
+fof(f11740,plain,(
+  ( ! [X6,X7] : (s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.num.|48|_0'),s('type.num.num',X7))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X7)))))) )),
+  inference(superposition,[],[f373,f263])).
+fof(f263,plain,(
+  ( ! [X0] : (s('type.num.num',X0) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f111])).
+fof(f111,plain,(
+  ! [X0] : s('type.num.num',X0) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6] : s('type.num.num',X6) = s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num','const.num.|48|_0')))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.ADD_|48|')).
+fof(f373,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X2)))))) )),
+  inference(cnf_transformation,[],[f204])).
+fof(f204,plain,(
+  ! [X0,X1,X2] : s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X1))),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X7,X8] : s(bool,'const.arithmetic.<=_2'(s('type.num.num',X7),s('type.num.num',X8))) = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X7))),s('type.num.num','const.arithmetic.+_2'(s('type.num.num',X6),s('type.num.num',X8)))))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.ADD_MONO_LESS_EQ')).
+fof(f375,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2))))) )),
+  inference(cnf_transformation,[],[f216])).
+fof(f216,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(flattening,[],[f215])).
+fof(f215,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(ennf_transformation,[],[f206])).
+fof(f206,plain,(
+  ! [X0,X1,X2] : ((p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X1)))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X2))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X0),s('type.num.num',X2)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6,X7,X8] : ((p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X6),s('type.num.num',X7)))) & p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X7),s('type.num.num',X8))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X6),s('type.num.num',X8)))))),
+  file('thm.BinomialHeap.BinomialHeap_|49|38_prove_ltb','thm.arithmetic.LESS_EQ_TRANS')).
+fof(f17802,plain,(
+  p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')))))),
+  inference(subsumption_resolution,[],[f17801,f382])).
+fof(f17801,plain,(
+  p(s(bool,'F_0')) | p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')))))),
+  inference(forward_demodulation,[],[f17783,f424])).
+fof(f17783,plain,(
+  p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK1('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num'))))) | p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  inference(superposition,[],[f319,f341])).
+fof(f319,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK1(X1,X0)))),s(X0,sK2(X1,X0))))) | p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1))))) )),
+  inference(cnf_transformation,[],[f233])).
+fof(f19623,plain,(
+  ( ! [X0] : (~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',X0))))) )),
+  inference(subsumption_resolution,[],[f19599,f249])).
+fof(f19599,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',X0))))) )),
+  inference(superposition,[],[f375,f17962])).
+fof(f17962,plain,(
+  s(bool,'T_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num'))))),
+  inference(unit_resulting_resolution,[],[f17914,f299])).
+fof(f17914,plain,(
+  p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')))))),
+  inference(unit_resulting_resolution,[],[f17908,f402])).
+fof(f402,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.arithmetic.>_2'(s('type.num.num',X1),s('type.num.num',X0))))) )),
+  inference(forward_demodulation,[],[f362,f323])).
+fof(f362,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))))) )),
+  inference(cnf_transformation,[],[f240])).
+fof(f17908,plain,(
+  ~p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')))))),
+  inference(subsumption_resolution,[],[f17907,f382])).
+fof(f17907,plain,(
+  p(s(bool,'F_0')) | ~p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num')))))),
+  inference(forward_demodulation,[],[f17889,f424])).
+fof(f17889,plain,(
+  ~p(s(bool,'const.arithmetic.>_2'(s('type.num.num',sK0('const.arithmetic.>_0','type.num.num')),s('type.num.num',sK2('const.arithmetic.>_0','type.num.num'))))) | p(s(bool,'const.relation.transitive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.arithmetic.>_0'))))),
+  inference(superposition,[],[f320,f341])).
+fof(f320,plain,(
+  ( ! [X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK0(X1,X0)))),s(X0,sK2(X1,X0))))) | p(s(bool,'const.relation.transitive_1'(s(fun(X0,fun(X0,bool)),X1))))) )),
+  inference(cnf_transformation,[],[f233])).
+% SZS output end Proof for thm.BinomialHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 348
+% Passive clauses: 1820
+% Generated clauses: 32688
+% Final active clauses: 225
+% Final passive clauses: 1191
+% Input formulas: 101
+% Initial clauses: 134
+% 
+% Duplicate literals: 377
+% Trivial inequalities: 146
+% Fw subsumption resolutions: 563
+% Fw demodulations: 7967
+% Bw demodulations: 377
+% Condensations: 311
+% 
+% Simple tautologies: 133
+% Equational tautologies: 200
+% Forward subsumptions: 20859
+% Fw demodulations to eq. taut.: 278
+% Bw demodulations to eq. taut.: 22
+% 
+% Unit resulting resolution: 2243
+% Forward superposition: 11190
+% Backward superposition: 9185
+% Self superposition: 133
+% Equality factoring: 42
+% Equality resolution: 9
+% 
+% Split clauses: 20
+% Split components: 40
+% SAT solver clauses: 1863
+% SAT solver unit clauses: 467
+% SAT solver binary clauses: 941
+% 
+% Sat splits: 20
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 21364
+% Time elapsed: 0.774 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.11 s

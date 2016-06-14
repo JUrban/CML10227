@@ -1,0 +1,279 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.BinaryRandomAccessLists
+% (60190)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 118
+% Passive clauses: 3555
+% Generated clauses: 23384
+% Final active clauses: 107
+% Final passive clauses: 3212
+% Input formulas: 21
+% Initial clauses: 26
+% 
+% Duplicate literals: 572
+% Trivial inequalities: 190
+% Fw subsumption resolutions: 2996
+% Fw demodulations: 4455
+% Bw demodulations: 7
+% 
+% Simple tautologies: 228
+% Equational tautologies: 51
+% Forward subsumptions: 10640
+% 
+% Binary resolution: 230
+% Factoring: 3
+% Forward superposition: 8160
+% Backward superposition: 6278
+% Self superposition: 316
+% Equality factoring: 142
+% Equality resolution: 19
+% 
+% Split clauses: 578
+% Split components: 1182
+% SAT solver clauses: 880
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 108
+% 
+% Sat splits: 578
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 877
+% TWLsolver calls for satisfiability: 146
+% 
+% Memory used [KB]: 15991
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.BinaryRandomAccessLists
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BinaryRandomAccessLists
+% SZS output start Proof for thm.BinaryRandomAccessLists
+fof(f4262,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f4261,f2476,f2477,f91,f118,f68,f96,f94,f2608,f4193,f4106,f4107,f82,f111,f76,f105,f74,f103,f67,f95,f93])).
+fof(f93,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) | $spl0),
+  inference(cnf_transformation,[],[f93_D])).
+fof(f93_D,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f95,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) = s('type.BinaryRandomAccessLists.tree'(sK0),sK2) | $spl2),
+  inference(cnf_transformation,[],[f95_D])).
+fof(f95_D,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) = s('type.BinaryRandomAccessLists.tree'(sK0),sK2) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f67,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) = s('type.BinaryRandomAccessLists.tree'(sK0),sK2) | s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2)))),
+  inference(cnf_transformation,[],[f62])).
+fof(f62,plain,(
+  (s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) | s('type.BinaryRandomAccessLists.tree'(sK0),sK1) = s('type.BinaryRandomAccessLists.tree'(sK0),sK2)) & (s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) != s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) | s('type.BinaryRandomAccessLists.tree'(sK0),sK1) != s('type.BinaryRandomAccessLists.tree'(sK0),sK2))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f61])).
+fof(f61,plain,(
+  ? [X0,X1,X2] : ((s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X2))) | s('type.BinaryRandomAccessLists.tree'(X0),X1) = s('type.BinaryRandomAccessLists.tree'(X0),X2)) & (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) != s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X2))) | s('type.BinaryRandomAccessLists.tree'(X0),X1) != s('type.BinaryRandomAccessLists.tree'(X0),X2)))),
+  inference(nnf_transformation,[],[f56])).
+fof(f56,plain,(
+  ? [X0,X1,X2] : (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X2))) <~> s('type.BinaryRandomAccessLists.tree'(X0),X1) = s('type.BinaryRandomAccessLists.tree'(X0),X2))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X2))) <=> s('type.BinaryRandomAccessLists.tree'(X0),X1) = s('type.BinaryRandomAccessLists.tree'(X0),X2))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2] : (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X2))) <=> s('type.BinaryRandomAccessLists.tree'(X0),X1) = s('type.BinaryRandomAccessLists.tree'(X0),X2))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (s('type.BinaryRandomAccessLists.digit'(X6),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X6),X7))) = s('type.BinaryRandomAccessLists.digit'(X6),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X6),X8))) <=> s('type.BinaryRandomAccessLists.tree'(X6),X7) = s('type.BinaryRandomAccessLists.tree'(X6),X8))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (s('type.BinaryRandomAccessLists.digit'(X6),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X6),X7))) = s('type.BinaryRandomAccessLists.digit'(X6),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X6),X8))) <=> s('type.BinaryRandomAccessLists.tree'(X6),X7) = s('type.BinaryRandomAccessLists.tree'(X6),X8))),
+  file('thm.BinaryRandomAccessLists.digit_|49||49|','thm.BinaryRandomAccessLists.digit_|49||49|')).
+fof(f103,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),happ(s(fun('type.BinaryRandomAccessLists.tree'(X0),'type.BinaryRandomAccessLists.digit'(X0)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(X0),X1)))) ) | $spl12),
+  inference(cnf_transformation,[],[f103_D])).
+fof(f103_D,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),happ(s(fun('type.BinaryRandomAccessLists.tree'(X0),'type.BinaryRandomAccessLists.digit'(X0)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(X0),X1)))) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f74,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),happ(s(fun('type.BinaryRandomAccessLists.tree'(X0),'type.BinaryRandomAccessLists.digit'(X0)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f29])).
+fof(f29,plain,(
+  ! [X0,X1] : s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),happ(s(fun('type.BinaryRandomAccessLists.tree'(X0),'type.BinaryRandomAccessLists.digit'(X0)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(X0),X1)))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ! [X0] : ! [X1] : s('type.BinaryRandomAccessLists.digit'(X0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X0),X1))) = s('type.BinaryRandomAccessLists.digit'(X0),happ(s(fun('type.BinaryRandomAccessLists.tree'(X0),'type.BinaryRandomAccessLists.digit'(X0)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(X0),X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X9] : s('type.BinaryRandomAccessLists.digit'(X6),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X6),X9))) = s('type.BinaryRandomAccessLists.digit'(X6),happ(s(fun('type.BinaryRandomAccessLists.tree'(X6),'type.BinaryRandomAccessLists.digit'(X6)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(X6),X9)))),
+  file('thm.BinaryRandomAccessLists.digit_|49||49|','ARITY_0_1_const.BinaryRandomAccessLists.One')).
+fof(f105,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) ) | $spl16),
+  inference(cnf_transformation,[],[f105_D])).
+fof(f105_D,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f76,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0,X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(flattening,[],[f32])).
+fof(f32,plain,(
+  ! [X0] : ! [X1,X2] : s(X0,X1) = s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X6] : ! [X7,X10] : s(X6,X7) = s(X6,'const.ind_type.FCONS_3'(s(X6,X7),s(fun('type.num.num',X6),X10),s('type.num.num','const.num.|48|_0')))),
+  file('thm.BinaryRandomAccessLists.digit_|49||49|','thm.ind_type.FCONS|split|0')).
+fof(f111,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) ) | $spl28),
+  inference(cnf_transformation,[],[f111_D])).
+fof(f111_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) ) <=> ~$spl28),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl28])])).
+fof(f82,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,'const.ind_type.FCONS_3'(s(X0,X1),s(fun('type.num.num',X0),X2),s('type.num.num',X3))) = s(X0,happ(s(fun('type.num.num',X0),happ(s(fun(fun('type.num.num',X0),fun('type.num.num',X0)),happ(s(fun(X0,fun(fun('type.num.num',X0),fun('type.num.num',X0))),'const.ind_type.FCONS_0'),s(X0,X1))),s(fun('type.num.num',X0),X2))),s('type.num.num',X3)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6] : ! [X9,X25,X26] : s(X6,'const.ind_type.FCONS_3'(s(X6,X9),s(fun('type.num.num',X6),X25),s('type.num.num',X26))) = s(X6,happ(s(fun('type.num.num',X6),happ(s(fun(fun('type.num.num',X6),fun('type.num.num',X6)),happ(s(fun(X6,fun(fun('type.num.num',X6),fun('type.num.num',X6))),'const.ind_type.FCONS_0'),s(X6,X9))),s(fun('type.num.num',X6),X25))),s('type.num.num',X26)))),
+  file('thm.BinaryRandomAccessLists.digit_|49||49|','ARITY_0_3_const.ind_type.FCONS')).
+fof(f4107,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1))) = s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1)))) ) | $spl522),
+  inference(cnf_transformation,[],[f4107_D])).
+fof(f4107_D,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1))) = s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1)))) ) <=> ~$spl522),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl522])])).
+fof(f4106,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1))) = s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1)))) ) | ($spl28 | $spl300)),
+  inference(forward_demodulation,[],[f3994,f111])).
+fof(f3994,plain,(
+  ( ! [X0,X1] : (s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0),s('type.num.num',X1))) = s('type.BinaryRandomAccessLists.tree'(sK0),happ(s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),happ(s(fun(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0))),happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),fun(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)))),'const.ind_type.FCONS_0'),s('type.BinaryRandomAccessLists.tree'(sK0),sK1))),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X0))),s('type.num.num',X1)))) ) | ($spl28 | $spl300)),
+  inference(superposition,[],[f111,f2477])).
+fof(f4193,plain,(
+  $false | ($spl3 | $spl16 | $spl522)),
+  inference(subsumption_resolution,[],[f4192,f96])).
+fof(f4192,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) = s('type.BinaryRandomAccessLists.tree'(sK0),sK2) | ($spl16 | $spl522)),
+  inference(forward_demodulation,[],[f4175,f105])).
+fof(f4175,plain,(
+  ( ! [X2] : (s('type.BinaryRandomAccessLists.tree'(sK0),sK2) = s('type.BinaryRandomAccessLists.tree'(sK0),'const.ind_type.FCONS_3'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1),s(fun('type.num.num','type.BinaryRandomAccessLists.tree'(sK0)),X2),s('type.num.num','const.num.|48|_0')))) ) | ($spl16 | $spl522)),
+  inference(superposition,[],[f4107,f105])).
+fof(f2608,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) | ($spl12 | $spl300)),
+  inference(forward_demodulation,[],[f2571,f103])).
+fof(f2571,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) = s('type.BinaryRandomAccessLists.digit'(sK0),happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),'type.BinaryRandomAccessLists.digit'(sK0)),'const.BinaryRandomAccessLists.One_0'),s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) | ($spl12 | $spl300)),
+  inference(superposition,[],[f103,f2477])).
+fof(f94,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) != s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) | $spl1),
+  inference(cnf_transformation,[],[f94_D])).
+fof(f94_D,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) != s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f96,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) != s('type.BinaryRandomAccessLists.tree'(sK0),sK2) | $spl3),
+  inference(cnf_transformation,[],[f96_D])).
+fof(f96_D,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) != s('type.BinaryRandomAccessLists.tree'(sK0),sK2) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f68,plain,(
+  s('type.BinaryRandomAccessLists.tree'(sK0),sK1) != s('type.BinaryRandomAccessLists.tree'(sK0),sK2) | s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) != s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK2)))),
+  inference(cnf_transformation,[],[f62])).
+fof(f118,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4),s('type.BinaryRandomAccessLists.tree'(X1),X2))) = s(X0,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(X1),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X1),X2))),s(X0,X3),s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4)))) ) | $spl42),
+  inference(cnf_transformation,[],[f118_D])).
+fof(f118_D,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4),s('type.BinaryRandomAccessLists.tree'(X1),X2))) = s(X0,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(X1),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X1),X2))),s(X0,X3),s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4)))) ) <=> ~$spl42),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl42])])).
+fof(f91,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4),s('type.BinaryRandomAccessLists.tree'(X1),X2))) = s(X0,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(X1),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X1),X2))),s(X0,X3),s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4)))) )),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4),s('type.BinaryRandomAccessLists.tree'(X1),X2))) = s(X0,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(X1),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X1),X2))),s(X0,X3),s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4)))),
+  inference(flattening,[],[f52])).
+fof(f52,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4),s('type.BinaryRandomAccessLists.tree'(X1),X2))) = s(X0,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(X1),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X1),X2))),s(X0,X3),s(fun('type.BinaryRandomAccessLists.tree'(X1),X0),X4)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X11,X6] : ! [X7,X12,X10] : s(X11,happ(s(fun('type.BinaryRandomAccessLists.tree'(X6),X11),X10),s('type.BinaryRandomAccessLists.tree'(X6),X7))) = s(X11,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(X6),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(X6),X7))),s(X11,X12),s(fun('type.BinaryRandomAccessLists.tree'(X6),X11),X10)))),
+  file('thm.BinaryRandomAccessLists.digit_|49||49|','thm.BinaryRandomAccessLists.digit_case_def|split|1')).
+fof(f2477,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK2)))) ) | $spl300),
+  inference(cnf_transformation,[],[f2477_D])).
+fof(f2477_D,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK2)))) ) <=> ~$spl300),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl300])])).
+fof(f2476,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) = s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK2)))) ) | ($spl0 | $spl42)),
+  inference(forward_demodulation,[],[f2377,f118])).
+fof(f2377,plain,(
+  ( ! [X2,X0,X1] : (s(X0,happ(s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1),s('type.BinaryRandomAccessLists.tree'(sK0),sK2))) = s(X0,'const.BinaryRandomAccessLists.digit_CASE_3'(s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))),s(X0,X2),s(fun('type.BinaryRandomAccessLists.tree'(sK0),X0),X1)))) ) | ($spl0 | $spl42)),
+  inference(superposition,[],[f118,f93])).
+fof(f4261,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(trivial_inequality_removal,[],[f4260])).
+fof(f4260,plain,(
+  s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) != s('type.BinaryRandomAccessLists.digit'(sK0),'const.BinaryRandomAccessLists.One_1'(s('type.BinaryRandomAccessLists.tree'(sK0),sK1))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f94,f95])).
+% SZS output end Proof for thm.BinaryRandomAccessLists
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 45
+% Passive clauses: 272
+% Generated clauses: 4128
+% Final active clauses: 34
+% Final passive clauses: 177
+% Input formulas: 21
+% Initial clauses: 26
+% 
+% Duplicate literals: 283
+% Trivial inequalities: 37
+% Fw subsumption resolutions: 184
+% Fw demodulations: 340
+% Bw demodulations: 56
+% Condensations: 460
+% 
+% Simple tautologies: 72
+% Equational tautologies: 33
+% Forward subsumptions: 1868
+% Bw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 32
+% Factoring: 1
+% Forward superposition: 1119
+% Backward superposition: 1129
+% Self superposition: 108
+% Equality factoring: 72
+% Equality resolution: 5
+% 
+% Split clauses: 16
+% Split components: 32
+% SAT solver clauses: 609
+% SAT solver unit clauses: 39
+% SAT solver binary clauses: 31
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 16
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 607
+% TWLsolver calls for satisfiability: 108
+% 
+% Memory used [KB]: 5628
+% Time elapsed: 0.139 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.77 s

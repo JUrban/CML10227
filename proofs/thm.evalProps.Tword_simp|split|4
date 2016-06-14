@@ -1,0 +1,146 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.evalProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.evalProps
+% SZS output start Proof for thm.evalProps
+fof(f499,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f498,f459,f465,f463,f470])).
+fof(f470,plain,(
+  $false | $spl8),
+  inference(subsumption_resolution,[],[f469,f352])).
+fof(f352,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') != s('type.ast.tctor','const.ast.TC_word8_0')),
+  inference(cnf_transformation,[],[f174])).
+fof(f174,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') != s('type.ast.tctor','const.ast.TC_word8_0')),
+  inference(flattening,[],[f61])).
+fof(f61,axiom,(
+  ~s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word8_0')),
+  file('thm.evalProps.Tword_simp|split|4','thm.ast.tctor_distinct|split|51')).
+fof(f469,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word8_0') | $spl8),
+  inference(backward_demodulation,[],[f466,f294])).
+fof(f294,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0')))),
+  inference(cnf_transformation,[],[f97])).
+fof(f97,axiom,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0')))),
+  file('thm.evalProps.Tword_simp|split|4','thm.ast.TC_word_def|split|0')).
+fof(f466,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0'))) | $spl8),
+  inference(backward_demodulation,[],[f463,f291])).
+fof(f291,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',sK0)))),
+  inference(cnf_transformation,[],[f263])).
+fof(f263,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',sK0)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f258])).
+fof(f258,plain,(
+  ? [X0] : s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X0)))),
+  inference(ennf_transformation,[],[f123])).
+fof(f123,plain,(
+  ~! [X0] : s('type.ast.tctor','const.ast.TC_word8array_0') != s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X0)))),
+  inference(flattening,[],[f122])).
+fof(f122,plain,(
+  ~! [X0] : ~s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X0)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ~s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X6)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ~s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X6)))),
+  file('thm.evalProps.Tword_simp|split|4','thm.evalProps.Tword_simp|split|4')).
+fof(f463,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0) | $spl8),
+  inference(cnf_transformation,[],[f463_D])).
+fof(f463_D,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f465,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0'))) | $spl10),
+  inference(cnf_transformation,[],[f465_D])).
+fof(f465_D,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0'))) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f459,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0'))) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK0)),
+  inference(superposition,[],[f291,f373])).
+fof(f373,plain,(
+  ( ! [X0] : (s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X0) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0)) )),
+  inference(cnf_transformation,[],[f195])).
+fof(f195,plain,(
+  ! [X0] : (s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0) | s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X0))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X9] : (s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X9) | s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X9))),
+  file('thm.evalProps.Tword_simp|split|4','thm.ast.word_size_nchotomy')).
+fof(f498,plain,(
+  $false | $spl10),
+  inference(subsumption_resolution,[],[f495,f358])).
+fof(f358,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') != s('type.ast.tctor','const.ast.TC_word64_0')),
+  inference(cnf_transformation,[],[f180])).
+fof(f180,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') != s('type.ast.tctor','const.ast.TC_word64_0')),
+  inference(flattening,[],[f67])).
+fof(f67,axiom,(
+  ~s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word64_0')),
+  file('thm.evalProps.Tword_simp|split|4','thm.ast.tctor_distinct|split|57')).
+fof(f495,plain,(
+  s('type.ast.tctor','const.ast.TC_word8array_0') = s('type.ast.tctor','const.ast.TC_word64_0') | $spl10),
+  inference(backward_demodulation,[],[f465,f295])).
+fof(f295,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  inference(cnf_transformation,[],[f98])).
+fof(f98,axiom,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  file('thm.evalProps.Tword_simp|split|4','thm.ast.TC_word_def|split|1')).
+% SZS output end Proof for thm.evalProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 101
+% Passive clauses: 132
+% Generated clauses: 204
+% Final active clauses: 96
+% Final passive clauses: 25
+% Input formulas: 120
+% Initial clauses: 146
+% 
+% Duplicate literals: 2
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 3
+% Bw demodulations: 3
+% 
+% Simple tautologies: 23
+% Equational tautologies: 6
+% Forward subsumptions: 24
+% 
+% Binary resolution: 5
+% Forward superposition: 5
+% Backward superposition: 21
+% Self superposition: 4
+% Equality factoring: 4
+% Equality resolution: 1
+% 
+% Split clauses: 10
+% Split components: 20
+% SAT solver clauses: 18
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 11
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 10
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 17
+% TWLsolver calls for satisfiability: 6
+% 
+% Memory used [KB]: 895
+% Time elapsed: 0.015 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.019 s

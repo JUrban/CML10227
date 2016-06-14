@@ -1,0 +1,244 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.clos_mtiProof
+% (87195)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 82
+% Passive clauses: 1915
+% Generated clauses: 13751
+% Final active clauses: 79
+% Final passive clauses: 1761
+% Input formulas: 14
+% Initial clauses: 18
+% 
+% Duplicate literals: 980
+% Trivial inequalities: 195
+% Fw subsumption resolutions: 2049
+% Fw demodulations: 437
+% Bw demodulations: 1
+% 
+% Simple tautologies: 315
+% Equational tautologies: 105
+% Forward subsumptions: 5744
+% 
+% Binary resolution: 51
+% Forward superposition: 6081
+% Backward superposition: 3163
+% Self superposition: 353
+% Equality factoring: 285
+% Equality resolution: 20
+% 
+% Split clauses: 814
+% Split components: 1642
+% SAT solver clauses: 2088
+% SAT solver unit clauses: 249
+% SAT solver binary clauses: 624
+% 
+% Sat splits: 814
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2080
+% TWLsolver calls for satisfiability: 82
+% 
+% Memory used [KB]: 5756
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_mtiProof
+% (87237)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 34
+% Passive clauses: 139
+% Generated clauses: 5342
+% Final active clauses: 31
+% Final passive clauses: 102
+% Input formulas: 14
+% Initial clauses: 18
+% 
+% Duplicate literals: 1158
+% Trivial inequalities: 61
+% Fw subsumption resolutions: 137
+% Fw demodulations: 6
+% Bw demodulations: 2
+% Condensations: 1609
+% 
+% Simple tautologies: 122
+% Equational tautologies: 82
+% Forward subsumptions: 1237
+% 
+% Binary resolution: 16
+% Forward superposition: 1017
+% Backward superposition: 933
+% Self superposition: 239
+% Equality factoring: 222
+% Equality resolution: 9
+% 
+% Split clauses: 27
+% Split components: 54
+% SAT solver clauses: 343
+% SAT solver unit clauses: 24
+% SAT solver binary clauses: 70
+% 
+% Sat splits: 27
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 343
+% TWLsolver calls for satisfiability: 59
+% 
+% Memory used [KB]: 3709
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.clos_mtiProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_mtiProof
+% SZS output start Proof for thm.clos_mtiProof
+fof(f6863,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f6862,f60])).
+fof(f60,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',X0))),s('type.closLang.exp',X1)))) )),
+  inference(forward_demodulation,[],[f51,f50])).
+fof(f50,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec_2'(s('type.num.num',X0),s('type.closLang.exp',X1)))) )),
+  inference(cnf_transformation,[],[f21])).
+fof(f21,plain,(
+  ! [X0,X1] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec_2'(s('type.num.num',X0),s('type.closLang.exp',X1)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X12,X13] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X12),s('type.closLang.exp',X13))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec_2'(s('type.num.num',X12),s('type.closLang.exp',X13)))),
+  file('thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args','thm.clos_mtiProof.collect_args_mti_letrec')).
+fof(f51,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',X0))),s('type.closLang.exp',X1)))) )),
+  inference(cnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0,X1] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',X0))),s('type.closLang.exp',X1)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X15,X16] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec_2'(s('type.num.num',X15),s('type.closLang.exp',X16))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',X15))),s('type.closLang.exp',X16)))),
+  file('thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args','ARITY_0_2_const.clos_mtiProof.mti_letrec')).
+fof(f6862,plain,(
+  s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))),s('type.closLang.exp',sK1(happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),'type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))))),s('type.closLang.exp',sK1(happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),'type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))))),
+  inference(forward_demodulation,[],[f6859,f52])).
+fof(f52,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',X0))),s('type.closLang.exp',X1)))) )),
+  inference(cnf_transformation,[],[f23])).
+fof(f23,plain,(
+  ! [X0,X1] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X0),s('type.closLang.exp',X1))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',X0))),s('type.closLang.exp',X1)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X15,X16] : s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mti.collect_args_2'(s('type.num.num',X15),s('type.closLang.exp',X16))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',X15))),s('type.closLang.exp',X16)))),
+  file('thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args','ARITY_0_2_const.clos_mti.collect_args')).
+fof(f6859,plain,(
+  s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))))),s('type.closLang.exp',sK1(happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),'type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),happ(s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))))),s('type.closLang.exp',sK1(happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))),'type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))))),
+  inference(unit_resulting_resolution,[],[f6009,f55])).
+fof(f55,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun(X1,X0),X2),s(X1,sK1(X3,X2,X1,X0)))) != s(X0,happ(s(fun(X1,X0),X3),s(X1,sK1(X3,X2,X1,X0)))) | s(fun(X1,X0),X2) = s(fun(X1,X0),X3)) )),
+  inference(cnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ! [X0,X1,X2,X3] : ((s(fun(X1,X0),X2) != s(fun(X1,X0),X3) | ! [X5] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,X5)))) & (s(X0,happ(s(fun(X1,X0),X2),s(X1,sK1(X3,X2,X1,X0)))) != s(X0,happ(s(fun(X1,X0),X3),s(X1,sK1(X3,X2,X1,X0)))) | s(fun(X1,X0),X2) = s(fun(X1,X0),X3)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK1])],[f38])).
+fof(f38,plain,(
+  ! [X0,X1,X2,X3] : ((s(fun(X1,X0),X2) != s(fun(X1,X0),X3) | ! [X5] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,X5)))) & (? [X4] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) != s(X0,happ(s(fun(X1,X0),X3),s(X1,X4))) | s(fun(X1,X0),X2) = s(fun(X1,X0),X3)))),
+  inference(rectify,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1,X2,X3] : ((s(fun(X1,X0),X2) != s(fun(X1,X0),X3) | ! [X4] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,X4)))) & (? [X4] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) != s(X0,happ(s(fun(X1,X0),X3),s(X1,X4))) | s(fun(X1,X0),X2) = s(fun(X1,X0),X3)))),
+  inference(nnf_transformation,[],[f27])).
+fof(f27,plain,(
+  ! [X0,X1,X2,X3] : (s(fun(X1,X0),X2) = s(fun(X1,X0),X3) <=> ! [X4] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,X4))))),
+  inference(flattening,[],[f26])).
+fof(f26,plain,(
+  ! [X0,X1] : ! [X2,X3] : (s(fun(X1,X0),X2) = s(fun(X1,X0),X3) <=> ! [X4] : s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,X4))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X9,X6] : ! [X10,X11] : (s(fun(X6,X9),X10) = s(fun(X6,X9),X11) <=> ! [X8] : s(X9,happ(s(fun(X6,X9),X10),s(X6,X8))) = s(X9,happ(s(fun(X6,X9),X11),s(X6,X8))))),
+  file('thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args','thm.bool.FUN_EQ_THM')).
+fof(f6009,plain,(
+  s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')))))) != s(fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp')),happ(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0'),s('type.num.num',sK1('const.clos_mti.collect_args_0','const.clos_mtiProof.mti_letrec_0','type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))))))),
+  inference(unit_resulting_resolution,[],[f6003,f55])).
+fof(f6003,plain,(
+  s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0') != s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0')),
+  inference(unit_resulting_resolution,[],[f41,f58])).
+fof(f58,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X0,fun(X1,X2)),X3) != s(fun(X0,fun(X1,X2)),X4) | s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X4)))) )),
+  inference(cnf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1,X2,X3,X4] : ((s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) != s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X4))) | s(fun(X0,fun(X1,X2)),X3) = s(fun(X0,fun(X1,X2)),X4)) & (s(fun(X0,fun(X1,X2)),X3) != s(fun(X0,fun(X1,X2)),X4) | s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X4)))))),
+  inference(nnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0,X1,X2,X3,X4] : (s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X4))) <=> s(fun(X0,fun(X1,X2)),X3) = s(fun(X0,fun(X1,X2)),X4))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0,X1,X2] : ! [X3,X4] : (s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X3))) = s(fun('type.pair.prod'(X0,X1),X2),'const.pair.UNCURRY_1'(s(fun(X0,fun(X1,X2)),X4))) <=> s(fun(X0,fun(X1,X2)),X3) = s(fun(X0,fun(X1,X2)),X4))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X6,X9,X14] : ! [X11,X10] : (s(fun('type.pair.prod'(X6,X9),X14),'const.pair.UNCURRY_1'(s(fun(X6,fun(X9,X14)),X10))) = s(fun('type.pair.prod'(X6,X9),X14),'const.pair.UNCURRY_1'(s(fun(X6,fun(X9,X14)),X11))) <=> s(fun(X6,fun(X9,X14)),X10) = s(fun(X6,fun(X9,X14)),X11))),
+  file('thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args','thm.pair.UNCURRY_ONE_ONE_THM')).
+fof(f41,plain,(
+  s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'))) != s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0')))),
+  inference(cnf_transformation,[],[f16])).
+fof(f16,plain,(
+  s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'))) != s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0')))),
+  inference(flattening,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'))) = s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0')))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mtiProof.mti_letrec_0'))) = s(fun('type.pair.prod'('type.num.num','type.closLang.exp'),'type.pair.prod'('type.num.num','type.closLang.exp')),'const.pair.UNCURRY_1'(s(fun('type.num.num',fun('type.closLang.exp','type.pair.prod'('type.num.num','type.closLang.exp'))),'const.clos_mti.collect_args_0')))),
+  file('thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args','thm.clos_mtiProof.UNCURRY_mti_letrec_UNCURRY_collect_args')).
+% SZS output end Proof for thm.clos_mtiProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 39
+% Passive clauses: 206
+% Generated clauses: 6679
+% Final active clauses: 37
+% Final passive clauses: 144
+% Input formulas: 14
+% Initial clauses: 18
+% 
+% Duplicate literals: 1320
+% Trivial inequalities: 63
+% Fw subsumption resolutions: 249
+% Fw demodulations: 8
+% Bw demodulations: 23
+% Condensations: 1857
+% 
+% Simple tautologies: 137
+% Equational tautologies: 132
+% Forward subsumptions: 2803
+% Fw demodulations to eq. taut.: 4
+% 
+% Unit resulting resolution: 81
+% Forward superposition: 1222
+% Backward superposition: 1407
+% Self superposition: 273
+% Equality factoring: 246
+% Equality resolution: 9
+% 
+% Split clauses: 24
+% Split components: 48
+% SAT solver clauses: 257
+% SAT solver unit clauses: 27
+% SAT solver binary clauses: 43
+% 
+% Sat splits: 24
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 3070
+% Time elapsed: 1.098 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.47 s

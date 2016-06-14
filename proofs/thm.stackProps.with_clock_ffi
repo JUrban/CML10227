@@ -1,0 +1,87 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stackProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stackProps
+% SZS output start Proof for thm.stackProps
+fof(f1722,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f789,f830])).
+fof(f830,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.stackSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f339])).
+fof(f339,plain,(
+  ! [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f338])).
+fof(f338,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f215])).
+fof(f215,axiom,(
+  ! [X7,X11] : ! [X8,X12] : s('type.ffi.ffi_state'(X11),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X7,X11),X8))) = s('type.ffi.ffi_state'(X11),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X7,X11),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X12),s('type.stackSem.state'(X7,X11),X8)))))),
+  file('thm.stackProps.with_clock_ffi','thm.stackSem.stackSem_284_prove_ltb')).
+fof(f789,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),sK2))) != s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK3))),s('type.stackSem.state'(sK0,sK1),sK2)))))),
+  inference(cnf_transformation,[],[f786])).
+fof(f786,plain,(
+  s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),sK2))) != s('type.ffi.ffi_state'(sK1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(sK0,sK1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK3))),s('type.stackSem.state'(sK0,sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f784])).
+fof(f784,plain,(
+  ? [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) != s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(ennf_transformation,[],[f266])).
+fof(f266,plain,(
+  ~! [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f265])).
+fof(f265,plain,(
+  ~! [X0,X1] : ! [X2,X3] : s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.ffi_state'(X1),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X0,X1),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X3))),s('type.stackSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),X8))) = s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X9))),s('type.stackSem.state'(X6,X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),X8))) = s('type.ffi.ffi_state'(X7),'const.stackSem.state_ffi_1'(s('type.stackSem.state'(X6,X7),'const.stackSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X9))),s('type.stackSem.state'(X6,X7),X8)))))),
+  file('thm.stackProps.with_clock_ffi','thm.stackProps.with_clock_ffi')).
+% SZS output end Proof for thm.stackProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 87
+% Passive clauses: 637
+% Generated clauses: 921
+% Final active clauses: 85
+% Final passive clauses: 543
+% Input formulas: 263
+% Initial clauses: 264
+% 
+% Duplicate literals: 37
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 1
+% Fw demodulations: 72
+% 
+% Simple tautologies: 16
+% Equational tautologies: 15
+% Forward subsumptions: 141
+% 
+% Binary resolution: 4
+% Forward superposition: 206
+% Backward superposition: 282
+% Self superposition: 24
+% Equality factoring: 26
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 2
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 1
+% 
+% Sat splits: 1
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 1407
+% Time elapsed: 0.037 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.049 s

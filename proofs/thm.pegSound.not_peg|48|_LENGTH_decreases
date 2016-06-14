@@ -1,0 +1,142 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.pegSound
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.pegSound
+% SZS output start Proof for thm.pegSound
+fof(f5086,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f5084,f4916,f4830])).
+fof(f4830,plain,(
+  s('type.list.list'(sK16),sK19) = s('type.list.list'(sK16),sK20) | $spl100),
+  inference(cnf_transformation,[],[f4830_D])).
+fof(f4830_D,plain,(
+  s('type.list.list'(sK16),sK19) = s('type.list.list'(sK16),sK20) <=> ~$spl100),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl100])])).
+fof(f4916,plain,(
+  s('type.list.list'(sK16),sK19) = s('type.list.list'(sK16),sK20)),
+  inference(subsumption_resolution,[],[f4889,f266])).
+fof(f266,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK16),sK20))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK16),sK19))))))),
+  inference(cnf_transformation,[],[f176])).
+fof(f176,plain,(
+  ~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(sK16,sK14,sK15),sK21),s('type.peg.pegsym'(sK16,sK14,sK15),sK17)))) & p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(sK16,sK14,sK15),sK21),s('type.pair.prod'('type.list.list'(sK16),'type.peg.pegsym'(sK16,sK14,sK15)),'const.pair.,_2'(s('type.list.list'(sK16),sK19),s('type.peg.pegsym'(sK16,sK14,sK15),sK17))),s('type.option.option'('type.pair.prod'('type.list.list'(sK16),sK15)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(sK16),sK15),'const.pair.,_2'(s('type.list.list'(sK16),sK20),s(sK15,sK18)))))))) & ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK16),sK20))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK16),sK19))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK14,sK15,sK16,sK17,sK18,sK19,sK20,sK21])],[f120])).
+fof(f120,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7] : (~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X2,X0,X1),X7),s('type.peg.pegsym'(X2,X0,X1),X3)))) & p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X5),s('type.peg.pegsym'(X2,X0,X1),X3))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X6),s(X1,X4)))))))) & ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X5)))))))),
+  inference(flattening,[],[f119])).
+fof(f119,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7] : (~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X2,X0,X1),X7),s('type.peg.pegsym'(X2,X0,X1),X3)))) & (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X5),s('type.peg.pegsym'(X2,X0,X1),X3))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X6),s(X1,X4)))))))) & ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X5))))))))),
+  inference(ennf_transformation,[],[f48])).
+fof(f48,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6,X7] : (~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X2,X0,X1),X7),s('type.peg.pegsym'(X2,X0,X1),X3)))) => (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X5),s('type.peg.pegsym'(X2,X0,X1),X3))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X6),s(X1,X4)))))))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X5))))))))),
+  inference(flattening,[],[f47])).
+fof(f47,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5,X6,X7] : (~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X2,X0,X1),X7),s('type.peg.pegsym'(X2,X0,X1),X3)))) => (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X5),s('type.peg.pegsym'(X2,X0,X1),X3))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X6),s(X1,X4)))))))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X6))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X5))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11,X12,X13] : (~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X8,X6,X7),X13),s('type.peg.pegsym'(X8,X6,X7),X9)))) => (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X8,X6,X7),X13),s('type.pair.prod'('type.list.list'(X8),'type.peg.pegsym'(X8,X6,X7)),'const.pair.,_2'(s('type.list.list'(X8),X11),s('type.peg.pegsym'(X8,X6,X7),X9))),s('type.option.option'('type.pair.prod'('type.list.list'(X8),X7)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X8),X7),'const.pair.,_2'(s('type.list.list'(X8),X12),s(X7,X10)))))))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X8),X12))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X8),X11))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11,X12,X13] : (~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X8,X6,X7),X13),s('type.peg.pegsym'(X8,X6,X7),X9)))) => (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X8,X6,X7),X13),s('type.pair.prod'('type.list.list'(X8),'type.peg.pegsym'(X8,X6,X7)),'const.pair.,_2'(s('type.list.list'(X8),X11),s('type.peg.pegsym'(X8,X6,X7),X9))),s('type.option.option'('type.pair.prod'('type.list.list'(X8),X7)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X8),X7),'const.pair.,_2'(s('type.list.list'(X8),X12),s(X7,X10)))))))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X8),X12))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X8),X11))))))))),
+  file('thm.pegSound.not_peg|48|_LENGTH_decreases','thm.pegSound.not_peg|48|_LENGTH_decreases')).
+fof(f4889,plain,(
+  s('type.list.list'(sK16),sK19) = s('type.list.list'(sK16),sK20) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK16),sK20))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(sK16),sK19))))))),
+  inference(resolution,[],[f450,f265])).
+fof(f265,plain,(
+  p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(sK16,sK14,sK15),sK21),s('type.pair.prod'('type.list.list'(sK16),'type.peg.pegsym'(sK16,sK14,sK15)),'const.pair.,_2'(s('type.list.list'(sK16),sK19),s('type.peg.pegsym'(sK16,sK14,sK15),sK17))),s('type.option.option'('type.pair.prod'('type.list.list'(sK16),sK15)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(sK16),sK15),'const.pair.,_2'(s('type.list.list'(sK16),sK20),s(sK15,sK18))))))))),
+  inference(cnf_transformation,[],[f176])).
+fof(f450,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (~p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X3),s('type.peg.pegsym'(X2,X0,X1),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X4),s(X1,X6)))))))) | s('type.list.list'(X2),X3) = s('type.list.list'(X2),X4) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X4))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X3))))))) )),
+  inference(cnf_transformation,[],[f149])).
+fof(f149,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : (~p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X3),s('type.peg.pegsym'(X2,X0,X1),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X4),s(X1,X6)))))))) | s('type.list.list'(X2),X3) = s('type.list.list'(X2),X4) | (p(s(bool,'const.rich_list.IS_SUFFIX_2'(s('type.list.list'(X2),X3),s('type.list.list'(X2),X4)))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X4))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X3))))))))),
+  inference(flattening,[],[f148])).
+fof(f148,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : (~p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X3),s('type.peg.pegsym'(X2,X0,X1),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X4),s(X1,X6)))))))) | (s('type.list.list'(X2),X3) = s('type.list.list'(X2),X4) | (p(s(bool,'const.rich_list.IS_SUFFIX_2'(s('type.list.list'(X2),X3),s('type.list.list'(X2),X4)))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X4))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X3)))))))))),
+  inference(ennf_transformation,[],[f114])).
+fof(f114,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X3),s('type.peg.pegsym'(X2,X0,X1),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X4),s(X1,X6)))))))) => (s('type.list.list'(X2),X3) = s('type.list.list'(X2),X4) | (p(s(bool,'const.rich_list.IS_SUFFIX_2'(s('type.list.list'(X2),X3),s('type.list.list'(X2),X4)))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X4))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X3)))))))))),
+  inference(flattening,[],[f113])).
+fof(f113,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5,X6,X7] : (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X2,X0,X1),X7),s('type.pair.prod'('type.list.list'(X2),'type.peg.pegsym'(X2,X0,X1)),'const.pair.,_2'(s('type.list.list'(X2),X3),s('type.peg.pegsym'(X2,X0,X1),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X2),X1)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X2),X1),'const.pair.,_2'(s('type.list.list'(X2),X4),s(X1,X6)))))))) => (s('type.list.list'(X2),X3) = s('type.list.list'(X2),X4) | (p(s(bool,'const.rich_list.IS_SUFFIX_2'(s('type.list.list'(X2),X3),s('type.list.list'(X2),X4)))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X4))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X2),X3)))))))))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6,X7,X8] : ! [X19,X9,X20,X21,X13] : (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X8,X6,X7),X13),s('type.pair.prod'('type.list.list'(X8),'type.peg.pegsym'(X8,X6,X7)),'const.pair.,_2'(s('type.list.list'(X8),X19),s('type.peg.pegsym'(X8,X6,X7),X20))),s('type.option.option'('type.pair.prod'('type.list.list'(X8),X7)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X8),X7),'const.pair.,_2'(s('type.list.list'(X8),X9),s(X7,X21)))))))) => (s('type.list.list'(X8),X9) = s('type.list.list'(X8),X19) | (p(s(bool,'const.rich_list.IS_SUFFIX_2'(s('type.list.list'(X8),X19),s('type.list.list'(X8),X9)))) & p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X8),X9))),s('type.num.num','const.list.LENGTH_1'(s('type.list.list'(X8),X19)))))))))),
+  file('thm.pegSound.not_peg|48|_LENGTH_decreases','thm.peg.peg_eval_suffix|39|')).
+fof(f5084,plain,(
+  $false | $spl100),
+  inference(subsumption_resolution,[],[f5037,f264])).
+fof(f264,plain,(
+  ~p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(sK16,sK14,sK15),sK21),s('type.peg.pegsym'(sK16,sK14,sK15),sK17))))),
+  inference(cnf_transformation,[],[f176])).
+fof(f5037,plain,(
+  p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(sK16,sK14,sK15),sK21),s('type.peg.pegsym'(sK16,sK14,sK15),sK17)))) | $spl100),
+  inference(resolution,[],[f4917,f448])).
+fof(f448,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X0,X1,X2),X3),s('type.pair.prod'('type.list.list'(X0),'type.peg.pegsym'(X0,X1,X2)),'const.pair.,_2'(s('type.list.list'(X0),X4),s('type.peg.pegsym'(X0,X1,X2),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X0),X2)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X0),X2),'const.pair.,_2'(s('type.list.list'(X0),X4),s(X2,X6)))))))) | p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X0,X1,X2),X3),s('type.peg.pegsym'(X0,X1,X2),X5))))) )),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : (~p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X0,X1,X2),X3),s('type.pair.prod'('type.list.list'(X0),'type.peg.pegsym'(X0,X1,X2)),'const.pair.,_2'(s('type.list.list'(X0),X4),s('type.peg.pegsym'(X0,X1,X2),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X0),X2)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X0),X2),'const.pair.,_2'(s('type.list.list'(X0),X4),s(X2,X6)))))))) | p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X0,X1,X2),X3),s('type.peg.pegsym'(X0,X1,X2),X5)))))),
+  inference(ennf_transformation,[],[f112])).
+fof(f112,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X0,X1,X2),X3),s('type.pair.prod'('type.list.list'(X0),'type.peg.pegsym'(X0,X1,X2)),'const.pair.,_2'(s('type.list.list'(X0),X4),s('type.peg.pegsym'(X0,X1,X2),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X0),X2)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X0),X2),'const.pair.,_2'(s('type.list.list'(X0),X4),s(X2,X6)))))))) => p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X0,X1,X2),X3),s('type.peg.pegsym'(X0,X1,X2),X5)))))),
+  inference(flattening,[],[f111])).
+fof(f111,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5,X6] : (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X0,X1,X2),X3),s('type.pair.prod'('type.list.list'(X0),'type.peg.pegsym'(X0,X1,X2)),'const.pair.,_2'(s('type.list.list'(X0),X4),s('type.peg.pegsym'(X0,X1,X2),X5))),s('type.option.option'('type.pair.prod'('type.list.list'(X0),X2)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X0),X2),'const.pair.,_2'(s('type.list.list'(X0),X4),s(X2,X6)))))))) => p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X0,X1,X2),X3),s('type.peg.pegsym'(X0,X1,X2),X5)))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X8,X6,X7] : ! [X13,X19,X20,X21] : (p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(X8,X6,X7),X13),s('type.pair.prod'('type.list.list'(X8),'type.peg.pegsym'(X8,X6,X7)),'const.pair.,_2'(s('type.list.list'(X8),X19),s('type.peg.pegsym'(X8,X6,X7),X20))),s('type.option.option'('type.pair.prod'('type.list.list'(X8),X7)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(X8),X7),'const.pair.,_2'(s('type.list.list'(X8),X19),s(X7,X21)))))))) => p(s(bool,'const.peg.peg|48|_2'(s('type.peg.peg'(X8,X6,X7),X13),s('type.peg.pegsym'(X8,X6,X7),X20)))))),
+  file('thm.pegSound.not_peg|48|_LENGTH_decreases','thm.peg.lemma4_|49|a|split|0')).
+fof(f4917,plain,(
+  p(s(bool,'const.peg.peg_eval_3'(s('type.peg.peg'(sK16,sK14,sK15),sK21),s('type.pair.prod'('type.list.list'(sK16),'type.peg.pegsym'(sK16,sK14,sK15)),'const.pair.,_2'(s('type.list.list'(sK16),sK19),s('type.peg.pegsym'(sK16,sK14,sK15),sK17))),s('type.option.option'('type.pair.prod'('type.list.list'(sK16),sK15)),'const.option.SOME_1'(s('type.pair.prod'('type.list.list'(sK16),sK15),'const.pair.,_2'(s('type.list.list'(sK16),sK19),s(sK15,sK18)))))))) | $spl100),
+  inference(backward_demodulation,[],[f4830,f265])).
+% SZS output end Proof for thm.pegSound
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 392
+% Passive clauses: 1843
+% Generated clauses: 4813
+% Final active clauses: 383
+% Final passive clauses: 1281
+% Input formulas: 45
+% Initial clauses: 189
+% 
+% Duplicate literals: 155
+% Trivial inequalities: 17
+% Fw subsumption resolutions: 298
+% Fw demodulations: 10
+% Bw demodulations: 9
+% 
+% Simple tautologies: 152
+% Equational tautologies: 32
+% Forward subsumptions: 2300
+% 
+% Binary resolution: 3091
+% Factoring: 767
+% Forward superposition: 150
+% Backward superposition: 70
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 10
+% 
+% Split clauses: 104
+% Split components: 209
+% SAT solver clauses: 186
+% SAT solver unit clauses: 8
+% SAT solver binary clauses: 32
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 104
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 185
+% TWLsolver calls for satisfiability: 159
+% 
+% Memory used [KB]: 2814
+% Time elapsed: 0.085 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.09 s

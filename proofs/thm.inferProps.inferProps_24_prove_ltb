@@ -1,0 +1,352 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.inferProps
+% (59004)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 114
+% Passive clauses: 1679
+% Generated clauses: 11748
+% Final active clauses: 100
+% Final passive clauses: 1224
+% Input formulas: 12
+% Initial clauses: 19
+% 
+% Duplicate literals: 1020
+% Trivial inequalities: 97
+% Fw subsumption resolutions: 1139
+% Fw demodulations: 1210
+% Bw demodulations: 5
+% 
+% Simple tautologies: 152
+% Equational tautologies: 47
+% Forward subsumptions: 5500
+% Fw demodulations to eq. taut.: 18
+% 
+% Binary resolution: 13
+% Forward superposition: 3924
+% Backward superposition: 3899
+% Self superposition: 180
+% Equality factoring: 108
+% Equality resolution: 30
+% 
+% Split clauses: 424
+% Split components: 869
+% SAT solver clauses: 770
+% SAT solver unit clauses: 7
+% SAT solver binary clauses: 79
+% SAT solver learnt clauses: 1
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 424
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 750
+% TWLsolver calls for satisfiability: 83
+% 
+% Memory used [KB]: 7675
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.inferProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.inferProps
+% SZS output start Proof for thm.inferProps
+fof(f1182,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1111,f85,f42,f64,f43,f66,f62,f59,f81,f56,f80,f757,f788,f809,f811,f868,f896,f52,f75,f990,f1088,f44,f67,f65,f63,f640,f691,f1071,f548,f599,f991,f993,f57,f79])).
+fof(f79,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X1,X3) = s(X1,X5)) ) | $spl24),
+  inference(cnf_transformation,[],[f79_D])).
+fof(f79_D,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X1,X3) = s(X1,X5)) ) <=> ~$spl24),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl24])])).
+fof(f57,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X1,X3) = s(X1,X5) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5))) & (s(X0,X2) != s(X0,X4) | s(X1,X3) != s(X1,X5) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5))) & ((s(X0,X2) != s(X0,X4) | s(X1,X3) != s(X1,X5)) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))))),
+  inference(nnf_transformation,[],[f26])).
+fof(f26,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) <=> (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5)))),
+  inference(flattening,[],[f25])).
+fof(f25,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) <=> (s(X0,X2) = s(X0,X4) & s(X1,X3) = s(X1,X5)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X7,X8] : ! [X13,X16,X14,X17] : (s('type.pair.prod'(X7,X8),'const.pair.,_2'(s(X7,X13),s(X8,X16))) = s('type.pair.prod'(X7,X8),'const.pair.,_2'(s(X7,X14),s(X8,X17))) <=> (s(X7,X13) = s(X7,X14) & s(X8,X16) = s(X8,X17)))),
+  file('thm.inferProps.inferProps_24_prove_ltb','thm.pair.CLOSED_PAIR_EQ')).
+fof(f993,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))),s(sK2,sK6))) | $spl222),
+  inference(cnf_transformation,[],[f993_D])).
+fof(f993_D,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))),s(sK2,sK6))) <=> ~$spl222),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl222])])).
+fof(f991,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))),s(sK2,sK6))) | ($spl0 | $spl176)),
+  inference(forward_demodulation,[],[f62,f811])).
+fof(f599,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s(sK2,sK4) = s(sK2,X1)) ) | $spl134),
+  inference(cnf_transformation,[],[f599_D])).
+fof(f599_D,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s(sK2,sK4) = s(sK2,X1)) ) <=> ~$spl134),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl134])])).
+fof(f548,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s(sK2,sK4) = s(sK2,X1)) ) | ($spl24 | $spl32)),
+  inference(superposition,[],[f79,f88])).
+fof(f88,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK4))) | $spl32),
+  inference(cnf_transformation,[],[f88_D])).
+fof(f88_D,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK4))) <=> ~$spl32),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl32])])).
+fof(f1071,plain,(
+  $false | ($spl5 | $spl134 | $spl222)),
+  inference(subsumption_resolution,[],[f1067,f67])).
+fof(f1067,plain,(
+  s(sK2,sK4) = s(sK2,sK6) | ($spl134 | $spl222)),
+  inference(trivial_inequality_removal,[],[f1039])).
+fof(f1039,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) | s(sK2,sK4) = s(sK2,sK6) | ($spl134 | $spl222)),
+  inference(superposition,[],[f599,f993])).
+fof(f691,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),X0) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5)))) ) | $spl148),
+  inference(cnf_transformation,[],[f691_D])).
+fof(f691_D,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),X0) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5)))) ) <=> ~$spl148),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl148])])).
+fof(f640,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),X0) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5)))) ) | ($spl26 | $spl32)),
+  inference(superposition,[],[f80,f88])).
+fof(f63,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6))) | $spl1),
+  inference(cnf_transformation,[],[f63_D])).
+fof(f63_D,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f65,plain,(
+  s(sK1,sK3) != s(sK1,sK5) | $spl3),
+  inference(cnf_transformation,[],[f65_D])).
+fof(f65_D,plain,(
+  s(sK1,sK3) != s(sK1,sK5) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f67,plain,(
+  s(sK2,sK4) != s(sK2,sK6) | $spl5),
+  inference(cnf_transformation,[],[f67_D])).
+fof(f67_D,plain,(
+  s(sK2,sK4) != s(sK2,sK6) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f44,plain,(
+  s(sK2,sK4) != s(sK2,sK6) | s(sK1,sK3) != s(sK1,sK5) | s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6)))),
+  inference(cnf_transformation,[],[f35])).
+fof(f35,plain,(
+  (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6))) | (s(sK1,sK3) = s(sK1,sK5) & s(sK2,sK4) = s(sK2,sK6))) & (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6))) | s(sK1,sK3) != s(sK1,sK5) | s(sK2,sK4) != s(sK2,sK6))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5,sK6])],[f34])).
+fof(f34,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : ((s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) | (s(X1,X3) = s(X1,X5) & s(X2,X4) = s(X2,X6))) & (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) != s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) | s(X1,X3) != s(X1,X5) | s(X2,X4) != s(X2,X6)))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : ((s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) | (s(X1,X3) = s(X1,X5) & s(X2,X4) = s(X2,X6))) & (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) != s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) | (s(X1,X3) != s(X1,X5) | s(X2,X4) != s(X2,X6))))),
+  inference(nnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6] : (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) <~> (s(X1,X3) = s(X1,X5) & s(X2,X4) = s(X2,X6)))),
+  inference(ennf_transformation,[],[f15])).
+fof(f15,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6] : (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) <=> (s(X1,X3) = s(X1,X5) & s(X2,X4) = s(X2,X6)))),
+  inference(flattening,[],[f14])).
+fof(f14,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5,X6] : (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X5))),s(X2,X6))) <=> (s(X1,X3) = s(X1,X5) & s(X2,X4) = s(X2,X6)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11,X12] : (s('type.pair.prod'('type.infer.exc'(X7,X6),X8),'const.infer.st_ex_return_2'(s(X7,X9),s(X8,X10))) = s('type.pair.prod'('type.infer.exc'(X7,X6),X8),'const.pair.,_2'(s('type.infer.exc'(X7,X6),'const.infer.Success_1'(s(X7,X11))),s(X8,X12))) <=> (s(X7,X9) = s(X7,X11) & s(X8,X10) = s(X8,X12)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11,X12] : (s('type.pair.prod'('type.infer.exc'(X7,X6),X8),'const.infer.st_ex_return_2'(s(X7,X9),s(X8,X10))) = s('type.pair.prod'('type.infer.exc'(X7,X6),X8),'const.pair.,_2'(s('type.infer.exc'(X7,X6),'const.infer.Success_1'(s(X7,X11))),s(X8,X12))) <=> (s(X7,X9) = s(X7,X11) & s(X8,X10) = s(X8,X12)))),
+  file('thm.inferProps.inferProps_24_prove_ltb','thm.inferProps.inferProps_24_prove_ltb')).
+fof(f1088,plain,(
+  $false | ($spl2 | $spl28 | $spl33)),
+  inference(subsumption_resolution,[],[f1087,f81])).
+fof(f1087,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))),s(sK2,sK4))) | ($spl2 | $spl33)),
+  inference(forward_demodulation,[],[f87,f64])).
+fof(f87,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK4))) | $spl33),
+  inference(cnf_transformation,[],[f87_D])).
+fof(f87_D,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK4))) <=> ~$spl33),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl33])])).
+fof(f990,plain,(
+  $false | ($spl3 | $spl204)),
+  inference(subsumption_resolution,[],[f987,f65])).
+fof(f987,plain,(
+  s(sK1,sK3) = s(sK1,sK5) | $spl204),
+  inference(equality_resolution,[],[f896])).
+fof(f75,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) != s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))) | s(X1,X2) = s(X1,X3)) ) | $spl16),
+  inference(cnf_transformation,[],[f75_D])).
+fof(f75_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) != s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))) | s(X1,X2) = s(X1,X3)) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f52,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,X3) | s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) != s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) != s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))) | s(X1,X2) = s(X1,X3)) & (s(X1,X2) != s(X1,X3) | s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) = s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3)))))),
+  inference(nnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0,X1,X2,X3] : (s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) = s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))) <=> s(X1,X2) = s(X1,X3))),
+  inference(flattening,[],[f21])).
+fof(f21,plain,(
+  ! [X0,X1] : ! [X2,X3] : (s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X2))) = s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))) <=> s(X1,X2) = s(X1,X3))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X8,X7] : ! [X14,X15] : (s('type.infer.exc'(X7,X8),'const.infer.Success_1'(s(X7,X14))) = s('type.infer.exc'(X7,X8),'const.infer.Success_1'(s(X7,X15))) <=> s(X7,X14) = s(X7,X15))),
+  file('thm.inferProps.inferProps_24_prove_ltb','thm.infer.exc_|49||49||split|0')).
+fof(f896,plain,(
+  ( ! [X2] : (s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))) != s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,X2))) | s(sK1,sK5) = s(sK1,X2)) ) | $spl204),
+  inference(cnf_transformation,[],[f896_D])).
+fof(f896_D,plain,(
+  ( ! [X2] : (s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))) != s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,X2))) | s(sK1,sK5) = s(sK1,X2)) ) <=> ~$spl204),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl204])])).
+fof(f868,plain,(
+  ( ! [X2] : (s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))) != s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,X2))) | s(sK1,sK5) = s(sK1,X2)) ) | ($spl16 | $spl176)),
+  inference(superposition,[],[f75,f811])).
+fof(f811,plain,(
+  s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))) | $spl176),
+  inference(cnf_transformation,[],[f811_D])).
+fof(f811_D,plain,(
+  s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))) <=> ~$spl176),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl176])])).
+fof(f809,plain,(
+  s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))) | $spl168),
+  inference(equality_resolution,[],[f788])).
+fof(f788,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,X0)))) ) | $spl168),
+  inference(cnf_transformation,[],[f788_D])).
+fof(f788_D,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,X0)))) ) <=> ~$spl168),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl168])])).
+fof(f757,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,X0)))) ) | ($spl28 | $spl148)),
+  inference(superposition,[],[f691,f81])).
+fof(f80,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X0,X2) = s(X0,X4)) ) | $spl26),
+  inference(cnf_transformation,[],[f80_D])).
+fof(f80_D,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5))) | s(X0,X2) = s(X0,X4)) ) <=> ~$spl26),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl26])])).
+fof(f56,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,X2) = s(X0,X4) | s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))) != s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X5)))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f81,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))),s(X2,X4)))) ) | $spl28),
+  inference(cnf_transformation,[],[f81_D])).
+fof(f81_D,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))),s(X2,X4)))) ) <=> ~$spl28),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl28])])).
+fof(f59,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))),s(X2,X4)))) )),
+  inference(cnf_transformation,[],[f28])).
+fof(f28,plain,(
+  ! [X0,X1,X2,X3,X4] : s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))),s(X2,X4)))),
+  inference(flattening,[],[f27])).
+fof(f27,plain,(
+  ! [X0,X1,X2] : ! [X3,X4] : s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.infer.st_ex_return_2'(s(X1,X3),s(X2,X4))) = s('type.pair.prod'('type.infer.exc'(X1,X0),X2),'const.pair.,_2'(s('type.infer.exc'(X1,X0),'const.infer.Success_1'(s(X1,X3))),s(X2,X4)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X6,X8,X7] : ! [X13,X5] : s('type.pair.prod'('type.infer.exc'(X8,X6),X7),'const.infer.st_ex_return_2'(s(X8,X13),s(X7,X5))) = s('type.pair.prod'('type.infer.exc'(X8,X6),X7),'const.pair.,_2'(s('type.infer.exc'(X8,X6),'const.infer.Success_1'(s(X8,X13))),s(X7,X5)))),
+  file('thm.inferProps.inferProps_24_prove_ltb','thm.infer.st_ex_return_def')).
+fof(f62,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6))) | $spl0),
+  inference(cnf_transformation,[],[f62_D])).
+fof(f62_D,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f66,plain,(
+  s(sK2,sK4) = s(sK2,sK6) | $spl4),
+  inference(cnf_transformation,[],[f66_D])).
+fof(f66_D,plain,(
+  s(sK2,sK4) = s(sK2,sK6) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f43,plain,(
+  s(sK2,sK4) = s(sK2,sK6) | s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6)))),
+  inference(cnf_transformation,[],[f35])).
+fof(f64,plain,(
+  s(sK1,sK3) = s(sK1,sK5) | $spl2),
+  inference(cnf_transformation,[],[f64_D])).
+fof(f64_D,plain,(
+  s(sK1,sK3) = s(sK1,sK5) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f42,plain,(
+  s(sK1,sK3) = s(sK1,sK5) | s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) = s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK6)))),
+  inference(cnf_transformation,[],[f35])).
+fof(f85,plain,(
+  $false | ($spl1 | $spl2 | $spl4 | $spl28)),
+  inference(subsumption_resolution,[],[f84,f81])).
+fof(f84,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK3))),s(sK2,sK4))) | ($spl1 | $spl2 | $spl4)),
+  inference(forward_demodulation,[],[f83,f64])).
+fof(f83,plain,(
+  s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5))),s(sK2,sK4))) | ($spl1 | $spl4)),
+  inference(forward_demodulation,[],[f63,f66])).
+fof(f1111,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.infer.st_ex_return_2'(s(sK1,sK3),s(sK2,sK4))) != s('type.pair.prod'('type.infer.exc'(sK1,sK0),sK2),'const.pair.,_2'(s('type.infer.exc'(sK1,sK0),X0),s(sK2,X1))) | s('type.infer.exc'(sK1,sK0),X0) = s('type.infer.exc'(sK1,sK0),'const.infer.Success_1'(s(sK1,sK5)))) ) | ($spl0 | $spl26)),
+  inference(superposition,[],[f80,f62])).
+% SZS output end Proof for thm.inferProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 38
+% Passive clauses: 124
+% Generated clauses: 1169
+% Final active clauses: 22
+% Final passive clauses: 80
+% Input formulas: 12
+% Initial clauses: 19
+% 
+% Duplicate literals: 39
+% Trivial inequalities: 5
+% Fw subsumption resolutions: 6
+% Fw demodulations: 176
+% Bw demodulations: 13
+% Condensations: 64
+% 
+% Simple tautologies: 16
+% Equational tautologies: 20
+% Forward subsumptions: 378
+% Bw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 3
+% Forward superposition: 341
+% Backward superposition: 245
+% Self superposition: 42
+% Equality factoring: 26
+% Equality resolution: 13
+% 
+% Split clauses: 4
+% Split components: 9
+% SAT solver clauses: 321
+% SAT solver unit clauses: 23
+% SAT solver binary clauses: 42
+% SAT solver learnt clauses: 3
+% SAT solver learnt literals: 2
+% 
+% Sat splits: 4
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 317
+% TWLsolver calls for satisfiability: 110
+% 
+% Memory used [KB]: 2046
+% Time elapsed: 0.111 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.74 s

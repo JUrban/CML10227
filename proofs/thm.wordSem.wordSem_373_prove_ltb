@@ -1,0 +1,152 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordSem
+% SZS output start Proof for thm.wordSem
+fof(f1409,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1408,f133,f239,f237,f235,f233,f231,f137,f236,f138,f238,f136,f234,f1407])).
+fof(f1407,plain,(
+  $false | $spl0),
+  inference(subsumption_resolution,[],[f231,f134])).
+fof(f134,plain,(
+  ( ! [X4,X5] : (s('type.wordSem.result'(sK6),sK7) != s('type.wordSem.result'(sK6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK6),X4),s('type.wordSem.word_loc'(sK6),X5)))) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f91,plain,(
+  (s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK6),sK8),s('type.wordSem.word_loc'(sK6),sK9))) | s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK6),sK10),s('type.wordSem.word_loc'(sK6),sK11))) | s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(sK6),sK7) | s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(sK6),sK7) | s('type.wordSem.result'(sK6),'const.wordSem.Error_0') = s('type.wordSem.result'(sK6),sK7)) & ! [X4,X5] : s('type.wordSem.result'(sK6),sK7) != s('type.wordSem.result'(sK6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK6),X4),s('type.wordSem.word_loc'(sK6),X5))) & ! [X2,X3] : s('type.wordSem.result'(sK6),sK7) != s('type.wordSem.result'(sK6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK6),X2),s('type.wordSem.word_loc'(sK6),X3))) & s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(sK6),sK7) & s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(sK6),sK7) & s('type.wordSem.result'(sK6),'const.wordSem.Error_0') != s('type.wordSem.result'(sK6),sK7)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK6,sK7,sK8,sK9,sK10,sK11])],[f90])).
+fof(f90,plain,(
+  ? [X0,X1] : ((? [X8,X9] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X8),s('type.wordSem.word_loc'(X0),X9))) | ? [X6,X7] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X6),s('type.wordSem.word_loc'(X0),X7))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)) & ! [X4,X5] : s('type.wordSem.result'(X0),X1) != s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5))) & ! [X2,X3] : s('type.wordSem.result'(X0),X1) != s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3))) & s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(X0),X1) & s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(X0),X1) & s('type.wordSem.result'(X0),'const.wordSem.Error_0') != s('type.wordSem.result'(X0),X1))),
+  inference(rectify,[],[f65])).
+fof(f65,plain,(
+  ? [X0,X1] : ((? [X4,X5] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5))) | ? [X2,X3] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)) & ! [X8,X9] : s('type.wordSem.result'(X0),X1) != s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X8),s('type.wordSem.word_loc'(X0),X9))) & ! [X6,X7] : s('type.wordSem.result'(X0),X1) != s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X6),s('type.wordSem.word_loc'(X0),X7))) & s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(X0),X1) & s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(X0),X1) & s('type.wordSem.result'(X0),'const.wordSem.Error_0') != s('type.wordSem.result'(X0),X1))),
+  inference(flattening,[],[f64])).
+fof(f64,plain,(
+  ? [X0,X1] : ((? [X4,X5] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5))) | ? [X2,X3] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)) & (! [X8,X9] : s('type.wordSem.result'(X0),X1) != s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X8),s('type.wordSem.word_loc'(X0),X9))) & ! [X6,X7] : s('type.wordSem.result'(X0),X1) != s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X6),s('type.wordSem.word_loc'(X0),X7))) & s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(X0),X1) & s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(X0),X1) & s('type.wordSem.result'(X0),'const.wordSem.Error_0') != s('type.wordSem.result'(X0),X1)))),
+  inference(ennf_transformation,[],[f29])).
+fof(f29,plain,(
+  ~! [X0,X1] : ((? [X4,X5] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5))) | ? [X2,X3] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)) => (? [X8,X9] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X8),s('type.wordSem.word_loc'(X0),X9))) | ? [X6,X7] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X6),s('type.wordSem.word_loc'(X0),X7))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ~! [X0] : ! [X1] : ((? [X4,X5] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X4),s('type.wordSem.word_loc'(X0),X5))) | ? [X2,X3] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X2),s('type.wordSem.word_loc'(X0),X3))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)) => (? [X8,X9] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X0),X8),s('type.wordSem.word_loc'(X0),X9))) | ? [X6,X7] : s('type.wordSem.result'(X0),X1) = s('type.wordSem.result'(X0),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X0),X6),s('type.wordSem.word_loc'(X0),X7))) | s('type.wordSem.result'(X0),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X0),X1) | s('type.wordSem.result'(X0),'const.wordSem.Error_0') = s('type.wordSem.result'(X0),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ((? [X8,X9] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X6),X8),s('type.wordSem.word_loc'(X6),X9))) | ? [X10,X11] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.word_loc'(X6),X11))) | s('type.wordSem.result'(X6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.Error_0') = s('type.wordSem.result'(X6),X7)) => (? [X8,X9] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X6),X8),s('type.wordSem.word_loc'(X6),X9))) | ? [X10,X11] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.word_loc'(X6),X11))) | s('type.wordSem.result'(X6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.Error_0') = s('type.wordSem.result'(X6),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ((? [X8,X9] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X6),X8),s('type.wordSem.word_loc'(X6),X9))) | ? [X10,X11] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.word_loc'(X6),X11))) | s('type.wordSem.result'(X6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.Error_0') = s('type.wordSem.result'(X6),X7)) => (? [X8,X9] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(X6),X8),s('type.wordSem.word_loc'(X6),X9))) | ? [X10,X11] : s('type.wordSem.result'(X6),X7) = s('type.wordSem.result'(X6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(X6),X10),s('type.wordSem.word_loc'(X6),X11))) | s('type.wordSem.result'(X6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(X6),X7) | s('type.wordSem.result'(X6),'const.wordSem.Error_0') = s('type.wordSem.result'(X6),X7)))),
+  file('thm.wordSem.wordSem_373_prove_ltb','thm.wordSem.wordSem_373_prove_ltb')).
+fof(f234,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(sK6),sK7) | $spl5),
+  inference(cnf_transformation,[],[f234_D])).
+fof(f234_D,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(sK6),sK7) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f136,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') != s('type.wordSem.result'(sK6),sK7)),
+  inference(cnf_transformation,[],[f91])).
+fof(f238,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.Error_0') != s('type.wordSem.result'(sK6),sK7) | $spl9),
+  inference(cnf_transformation,[],[f238_D])).
+fof(f238_D,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.Error_0') != s('type.wordSem.result'(sK6),sK7) <=> ~$spl9),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl9])])).
+fof(f138,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.Error_0') != s('type.wordSem.result'(sK6),sK7)),
+  inference(cnf_transformation,[],[f91])).
+fof(f236,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(sK6),sK7) | $spl7),
+  inference(cnf_transformation,[],[f236_D])).
+fof(f236_D,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(sK6),sK7) <=> ~$spl7),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl7])])).
+fof(f137,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') != s('type.wordSem.result'(sK6),sK7)),
+  inference(cnf_transformation,[],[f91])).
+fof(f231,plain,(
+  s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK6),sK8),s('type.wordSem.word_loc'(sK6),sK9))) | $spl0),
+  inference(cnf_transformation,[],[f231_D])).
+fof(f231_D,plain,(
+  s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK6),sK8),s('type.wordSem.word_loc'(sK6),sK9))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f233,plain,(
+  s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK6),sK10),s('type.wordSem.word_loc'(sK6),sK11))) | $spl2),
+  inference(cnf_transformation,[],[f233_D])).
+fof(f233_D,plain,(
+  s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK6),sK10),s('type.wordSem.word_loc'(sK6),sK11))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f235,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(sK6),sK7) | $spl4),
+  inference(cnf_transformation,[],[f235_D])).
+fof(f235_D,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(sK6),sK7) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f237,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(sK6),sK7) | $spl6),
+  inference(cnf_transformation,[],[f237_D])).
+fof(f237_D,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(sK6),sK7) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f239,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.Error_0') = s('type.wordSem.result'(sK6),sK7) | $spl8),
+  inference(cnf_transformation,[],[f239_D])).
+fof(f239_D,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.Error_0') = s('type.wordSem.result'(sK6),sK7) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f133,plain,(
+  s('type.wordSem.result'(sK6),'const.wordSem.Error_0') = s('type.wordSem.result'(sK6),sK7) | s('type.wordSem.result'(sK6),'const.wordSem.NotEnoughSpace_0') = s('type.wordSem.result'(sK6),sK7) | s('type.wordSem.result'(sK6),'const.wordSem.TimeOut_0') = s('type.wordSem.result'(sK6),sK7) | s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK6),sK10),s('type.wordSem.word_loc'(sK6),sK11))) | s('type.wordSem.result'(sK6),sK7) = s('type.wordSem.result'(sK6),'const.wordSem.Result_2'(s('type.wordSem.word_loc'(sK6),sK8),s('type.wordSem.word_loc'(sK6),sK9)))),
+  inference(cnf_transformation,[],[f91])).
+fof(f1408,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f233,f135])).
+fof(f135,plain,(
+  ( ! [X2,X3] : (s('type.wordSem.result'(sK6),sK7) != s('type.wordSem.result'(sK6),'const.wordSem.Exception_2'(s('type.wordSem.word_loc'(sK6),X2),s('type.wordSem.word_loc'(sK6),X3)))) )),
+  inference(cnf_transformation,[],[f91])).
+% SZS output end Proof for thm.wordSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 147
+% Passive clauses: 335
+% Generated clauses: 1266
+% Final active clauses: 147
+% Final passive clauses: 149
+% Input formulas: 26
+% Initial clauses: 96
+% 
+% Duplicate literals: 32
+% Trivial inequalities: 13
+% Fw subsumption resolutions: 105
+% 
+% Simple tautologies: 51
+% Equational tautologies: 7
+% Forward subsumptions: 686
+% 
+% Binary resolution: 711
+% Factoring: 184
+% Forward superposition: 38
+% Backward superposition: 53
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 7
+% 
+% Split clauses: 43
+% Split components: 90
+% SAT solver clauses: 77
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 29
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 43
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 76
+% TWLsolver calls for satisfiability: 56
+% 
+% Memory used [KB]: 1023
+% Time elapsed: 0.031 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.033 s

@@ -1,0 +1,295 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.RedBlackSet
+% (13881)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 450
+% Passive clauses: 4684
+% Generated clauses: 41825
+% Final active clauses: 297
+% Final passive clauses: 3316
+% Input formulas: 69
+% Initial clauses: 91
+% 
+% Duplicate literals: 526
+% Trivial inequalities: 1269
+% Fw subsumption resolutions: 2441
+% Fw demodulations: 11588
+% Bw demodulations: 114
+% 
+% Simple tautologies: 254
+% Equational tautologies: 45
+% Forward subsumptions: 21160
+% Fw demodulations to eq. taut.: 6
+% 
+% Binary resolution: 209
+% Factoring: 1
+% Forward superposition: 10276
+% Backward superposition: 14886
+% Self superposition: 144
+% Equality factoring: 78
+% Equality resolution: 35
+% 
+% Split clauses: 222
+% Split components: 445
+% SAT solver clauses: 440
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 53
+% 
+% Sat splits: 222
+% Sat splitting refutations: 13
+% 
+% TWLsolver clauses: 437
+% TWLsolver calls for satisfiability: 81
+% 
+% Memory used [KB]: 19317
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.RedBlackSet
+% (13898)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 323
+% Passive clauses: 1488
+% Generated clauses: 28630
+% Final active clauses: 225
+% Final passive clauses: 782
+% Input formulas: 69
+% Initial clauses: 91
+% 
+% Duplicate literals: 435
+% Trivial inequalities: 564
+% Fw subsumption resolutions: 1547
+% Fw demodulations: 7195
+% Bw demodulations: 452
+% Condensations: 461
+% Global subsumptions: 4
+% 
+% Simple tautologies: 155
+% Equational tautologies: 45
+% Forward subsumptions: 14042
+% Fw demodulations to eq. taut.: 3
+% Bw demodulations to eq. taut.: 16
+% 
+% Binary resolution: 194
+% Factoring: 1
+% Forward superposition: 6998
+% Backward superposition: 8905
+% Self superposition: 118
+% Equality factoring: 70
+% Equality resolution: 27
+% 
+% Split clauses: 53
+% Split components: 106
+% SAT solver clauses: 2741
+% SAT solver unit clauses: 151
+% SAT solver binary clauses: 50
+% SAT solver learnt clauses: 10
+% SAT solver learnt literals: 4
+% 
+% Sat splits: 53
+% Sat splitting refutations: 16
+% 
+% TWLsolver clauses: 2723
+% TWLsolver calls for satisfiability: 535
+% 
+% Memory used [KB]: 19189
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.RedBlackSet
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.RedBlackSet
+% SZS output start Proof for thm.RedBlackSet
+fof(f4044,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f4043,f260])).
+fof(f260,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f177,f169])).
+fof(f169,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.RedBlackSet.color2num_thm|split|1',aHL_TRUTH)).
+fof(f177,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f144])).
+fof(f144,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f69])).
+fof(f69,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.bool.NOT_CLAUSES|split|1')).
+fof(f4043,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f4020,f192])).
+fof(f192,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.ZERO_0')))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,plain,(
+  ! [X0] : s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.ZERO_0')))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X26] : s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X26),s('type.num.num','const.arithmetic.ZERO_0')))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.numeral.numeral_lt|split|2')).
+fof(f4020,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.ZERO_0'),s('type.num.num','const.arithmetic.ZERO_0'))))),
+  inference(unit_resulting_resolution,[],[f4019,f252])).
+fof(f252,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1)))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0))))) )),
+  inference(cnf_transformation,[],[f162])).
+fof(f162,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1)))))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0))))) & (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0)))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1))))))))),
+  inference(nnf_transformation,[],[f130])).
+fof(f130,plain,(
+  ! [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1)))))) <=> ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0)))))),
+  inference(flattening,[],[f129])).
+fof(f129,plain,(
+  ! [X0,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X1)))))) <=> ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X1),s('type.num.num',X0)))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X26,X27] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num',X26))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num',X27)))))) <=> ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X27),s('type.num.num',X26)))))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.numeral.numeral_lt|split|5')).
+fof(f4019,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(subsumption_resolution,[],[f4018,f514])).
+fof(f514,plain,(
+  s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Black_0'))) != s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0')))),
+  inference(superposition,[],[f168,f174])).
+fof(f174,plain,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,axiom,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.numeral.numeral_distrib|split|13')).
+fof(f168,plain,(
+  s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Black_0'))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(cnf_transformation,[],[f71])).
+fof(f71,plain,(
+  s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Black_0'))) != s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(flattening,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Black_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Black_0'))) = s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.RedBlackSet.color2num_thm|split|1')).
+fof(f4018,plain,(
+  s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.Black_0'))) = s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(forward_demodulation,[],[f4017,f259])).
+fof(f259,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.Black_0') = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0')))))),
+  inference(forward_demodulation,[],[f175,f174])).
+fof(f175,plain,(
+  s('type.RedBlackSet.color','const.RedBlackSet.Black_0') = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))),
+  inference(cnf_transformation,[],[f10])).
+fof(f10,axiom,(
+  s('type.RedBlackSet.color','const.RedBlackSet.Black_0') = s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.RedBlackSet.num2color_thm|split|1')).
+fof(f4017,plain,(
+  s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))))))) | ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))),
+  inference(forward_demodulation,[],[f3965,f261])).
+fof(f261,plain,(
+  ( ! [X0] : (s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))) )),
+  inference(forward_demodulation,[],[f201,f174])).
+fof(f201,plain,(
+  ( ! [X0] : (s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) = s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))) )),
+  inference(cnf_transformation,[],[f95])).
+fof(f95,plain,(
+  ! [X0] : s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) = s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X0),s('type.num.num','const.num.|48|_0')))),
+  inference(rectify,[],[f54])).
+fof(f54,axiom,(
+  ! [X26] : s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))))) = s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X26),s('type.num.num','const.num.|48|_0')))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.numeral.numeral_distrib|split|11')).
+fof(f3965,plain,(
+  ( ! [X2] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))),s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))) | s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X2),s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X2),s('type.num.num','const.num.|48|_0')))))))) )),
+  inference(forward_demodulation,[],[f3918,f1803])).
+fof(f1803,plain,(
+  ( ! [X0] : (s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.BIT|49|_1'(s('type.num.num','const.arithmetic.ZERO_0'))),s('type.num.num',X0))) = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0)))))) )),
+  inference(superposition,[],[f230,f174])).
+fof(f230,plain,(
+  ( ! [X0,X1] : (s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X1)))))) )),
+  inference(cnf_transformation,[],[f114])).
+fof(f114,plain,(
+  ! [X0,X1] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X0))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X1)))))),
+  inference(rectify,[],[f47])).
+fof(f47,axiom,(
+  ! [X26,X27] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X26),s('type.num.num',X27))) = s(bool,'const.prim_rec.<_2'(s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X26))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num',X27)))))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.numeral.numeral_distrib|split|22')).
+fof(f3918,plain,(
+  ( ! [X2] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.num.SUC_1'(s('type.num.num','const.num.|48|_0'))),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) | s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X2),s('type.num.num','const.num.|48|_0'))) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num','const.arithmetic.EXP_2'(s('type.num.num',X2),s('type.num.num','const.num.|48|_0')))))))) )),
+  inference(superposition,[],[f221,f261])).
+fof(f221,plain,(
+  ( ! [X0] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) | s('type.num.num',X0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0)))))) )),
+  inference(cnf_transformation,[],[f153])).
+fof(f153,plain,(
+  ! [X0] : ((~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) | s('type.num.num',X0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0)))))) & (s('type.num.num',X0) != s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0'))))))))))),
+  inference(nnf_transformation,[],[f109])).
+fof(f109,plain,(
+  ! [X0] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) <=> s('type.num.num',X0) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X0))))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num','const.arithmetic.NUMERAL_1'(s('type.num.num','const.arithmetic.BIT2_1'(s('type.num.num','const.arithmetic.ZERO_0')))))))) <=> s('type.num.num',X6) = s('type.num.num','const.RedBlackSet.color2num_1'(s('type.RedBlackSet.color','const.RedBlackSet.num2color_1'(s('type.num.num',X6))))))),
+  file('thm.RedBlackSet.color2num_thm|split|1','thm.RedBlackSet.color2num_num2color')).
+% SZS output end Proof for thm.RedBlackSet
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 132
+% Passive clauses: 283
+% Generated clauses: 3859
+% Final active clauses: 116
+% Final passive clauses: 145
+% Input formulas: 69
+% Initial clauses: 91
+% 
+% Duplicate literals: 9
+% Trivial inequalities: 25
+% Fw subsumption resolutions: 136
+% Fw demodulations: 914
+% Bw demodulations: 18
+% Condensations: 7
+% 
+% Simple tautologies: 11
+% Equational tautologies: 34
+% Forward subsumptions: 2341
+% Fw demodulations to eq. taut.: 70
+% 
+% Unit resulting resolution: 309
+% Factoring: 1
+% Forward superposition: 1157
+% Backward superposition: 1141
+% Self superposition: 24
+% Equality factoring: 6
+% Equality resolution: 6
+% 
+% Split clauses: 22
+% Split components: 44
+% SAT solver clauses: 332
+% SAT solver unit clauses: 137
+% SAT solver binary clauses: 182
+% 
+% Sat splits: 22
+% Sat splitting refutations: 3
+% 
+% Memory used [KB]: 2814
+% Time elapsed: 0.072 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.41 s

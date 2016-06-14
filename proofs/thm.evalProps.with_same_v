@@ -1,0 +1,267 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.evalProps
+% (2097)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 173
+% Passive clauses: 1806
+% Generated clauses: 26676
+% Final active clauses: 153
+% Final passive clauses: 1329
+% Input formulas: 28
+% Initial clauses: 46
+% 
+% Duplicate literals: 1191
+% Trivial inequalities: 397
+% Fw subsumption resolutions: 3279
+% Fw demodulations: 3163
+% Bw demodulations: 11
+% 
+% Simple tautologies: 489
+% Equational tautologies: 32
+% Forward subsumptions: 15185
+% Fw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 106
+% Forward superposition: 9892
+% Backward superposition: 8368
+% Self superposition: 246
+% Equality factoring: 70
+% Equality resolution: 41
+% 
+% Split clauses: 696
+% Split components: 1404
+% SAT solver clauses: 1364
+% SAT solver unit clauses: 32
+% SAT solver binary clauses: 178
+% 
+% Sat splits: 696
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 1361
+% TWLsolver calls for satisfiability: 190
+% 
+% Memory used [KB]: 19317
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.evalProps
+% (2122)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 119
+% Passive clauses: 478
+% Generated clauses: 17882
+% Final active clauses: 111
+% Final passive clauses: 339
+% Input formulas: 28
+% Initial clauses: 46
+% 
+% Duplicate literals: 1054
+% Trivial inequalities: 168
+% Fw subsumption resolutions: 1266
+% Fw demodulations: 1630
+% Bw demodulations: 20
+% Condensations: 2322
+% Global subsumptions: 4
+% 
+% Simple tautologies: 234
+% Equational tautologies: 32
+% Forward subsumptions: 9806
+% Fw demodulations to eq. taut.: 4
+% 
+% Binary resolution: 48
+% Forward superposition: 5413
+% Backward superposition: 5247
+% Self superposition: 194
+% Equality factoring: 66
+% Equality resolution: 23
+% 
+% Split clauses: 94
+% Split components: 196
+% SAT solver clauses: 941
+% SAT solver unit clauses: 62
+% SAT solver binary clauses: 49
+% SAT solver learnt clauses: 8
+% 
+% Sat splits: 94
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 925
+% TWLsolver calls for satisfiability: 226
+% 
+% Memory used [KB]: 18421
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.evalProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.evalProps
+% SZS output start Proof for thm.evalProps
+fof(f3377,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f3367,f1528])).
+fof(f1528,plain,(
+  ( ! [X4,X5,X3] : (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X3)),X4) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X3)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X3),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X3)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X3))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X3)),X4))),s('type.semanticPrimitives.environment'(X3),X5)))))) )),
+  inference(superposition,[],[f125,f141])).
+fof(f141,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f137,f136])).
+fof(f136,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X11,X9] : ! [X10,X12] : s(X9,X10) = s(X9,'const.combin.K_2'(s(X9,X10),s(X11,X12)))),
+  file('thm.evalProps.with_same_v','thm.combin.K_THM')).
+fof(f137,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X9,X11] : ! [X17,X18] : s(X9,'const.combin.K_2'(s(X9,X17),s(X11,X18))) = s(X9,happ(s(fun(X11,X9),'const.combin.K_1'(s(X9,X17))),s(X11,X18)))),
+  file('thm.evalProps.with_same_v','ARITY_1_2_const.combin.K')).
+fof(f125,plain,(
+  ( ! [X2,X0,X1] : (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2))))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),happ(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0,X1,X2] : s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2))))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),happ(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : ! [X1,X2] : s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2))))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),happ(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X6] : ! [X13,X14] : s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X6),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6))),X13),s('type.semanticPrimitives.environment'(X6),X14))))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),happ(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6))),X13),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X6),X14)))))),
+  file('thm.evalProps.with_same_v','thm.semanticPrimitives.semanticPrimitives_38_prove_ltb')).
+fof(f3367,plain,(
+  s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(sK0),sK1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(sK0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(sK0),sK1))))),s('type.semanticPrimitives.environment'(sK0),sK1)))))),
+  inference(unit_resulting_resolution,[],[f93,f123,f126,f135])).
+fof(f135,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),X2) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f91,plain,(
+  ! [X0,X1,X2] : ((s('type.semanticPrimitives.environment'(X0),X1) != s('type.semanticPrimitives.environment'(X0),X2) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))))) & (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),X2)))),
+  inference(flattening,[],[f90])).
+fof(f90,plain,(
+  ! [X0,X1,X2] : ((s('type.semanticPrimitives.environment'(X0),X1) != s('type.semanticPrimitives.environment'(X0),X2) | (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))))) & ((s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) | s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) != s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2)))) | s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),X2)))),
+  inference(nnf_transformation,[],[f65])).
+fof(f65,plain,(
+  ! [X0,X1,X2] : (s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),X2) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(flattening,[],[f64])).
+fof(f64,plain,(
+  ! [X0] : ! [X1,X2] : (s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),X2) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) & s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X1))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X6] : ! [X15,X16] : (s('type.semanticPrimitives.environment'(X6),X15) = s('type.semanticPrimitives.environment'(X6),X16) <=> (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X6),X15))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X6),X16))) & s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X6),X15))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X6),X16))) & s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X6),X15))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X6),X16)))))),
+  file('thm.evalProps.with_same_v','thm.semanticPrimitives.environment_component_equality')).
+fof(f126,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(flattening,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : ! [X1,X2] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),X2))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X6] : ! [X13,X14] : s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X6),X14))) = s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),'const.semanticPrimitives.environment_c_1'(s('type.semanticPrimitives.environment'(X6),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6))),X13),s('type.semanticPrimitives.environment'(X6),X14)))))),
+  file('thm.evalProps.with_same_v','thm.semanticPrimitives.semanticPrimitives_34_prove_ltb')).
+fof(f123,plain,(
+  ( ! [X2,X0,X1] : (s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0,X1,X2] : s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(flattening,[],[f46])).
+fof(f46,plain,(
+  ! [X0] : ! [X1,X2] : s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),X2))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),X1),s('type.semanticPrimitives.environment'(X0),X2)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X13,X14] : s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X6),X14))) = s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)))),'const.semanticPrimitives.environment_m_1'(s('type.semanticPrimitives.environment'(X6),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6))),X13),s('type.semanticPrimitives.environment'(X6),X14)))))),
+  file('thm.evalProps.with_same_v','thm.semanticPrimitives.semanticPrimitives_36_prove_ltb')).
+fof(f93,plain,(
+  s('type.semanticPrimitives.environment'(sK0),sK1) != s('type.semanticPrimitives.environment'(sK0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(sK0),sK1))))),s('type.semanticPrimitives.environment'(sK0),sK1)))),
+  inference(cnf_transformation,[],[f74])).
+fof(f74,plain,(
+  s('type.semanticPrimitives.environment'(sK0),sK1) != s('type.semanticPrimitives.environment'(sK0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),sK0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(sK0),sK1))))),s('type.semanticPrimitives.environment'(sK0),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f72])).
+fof(f72,plain,(
+  ? [X0,X1] : s('type.semanticPrimitives.environment'(X0),X1) != s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))))),s('type.semanticPrimitives.environment'(X0),X1)))),
+  inference(ennf_transformation,[],[f31])).
+fof(f31,plain,(
+  ~! [X0,X1] : s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))))),s('type.semanticPrimitives.environment'(X0),X1)))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ~! [X0] : ! [X1] : s('type.semanticPrimitives.environment'(X0),X1) = s('type.semanticPrimitives.environment'(X0),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X0)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X0),X1))))),s('type.semanticPrimitives.environment'(X0),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s('type.semanticPrimitives.environment'(X6),X7) = s('type.semanticPrimitives.environment'(X6),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X6),X7))))),s('type.semanticPrimitives.environment'(X6),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s('type.semanticPrimitives.environment'(X6),X7) = s('type.semanticPrimitives.environment'(X6),'const.semanticPrimitives.environment_v_fupd_2'(s(fun('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6))),'const.combin.K_1'(s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),X6)),'const.semanticPrimitives.environment_v_1'(s('type.semanticPrimitives.environment'(X6),X7))))),s('type.semanticPrimitives.environment'(X6),X7)))),
+  file('thm.evalProps.with_same_v','thm.evalProps.with_same_v')).
+% SZS output end Proof for thm.evalProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 53
+% Passive clauses: 161
+% Generated clauses: 3279
+% Final active clauses: 39
+% Final passive clauses: 59
+% Input formulas: 28
+% Initial clauses: 46
+% 
+% Duplicate literals: 180
+% Trivial inequalities: 47
+% Fw subsumption resolutions: 155
+% Fw demodulations: 212
+% Bw demodulations: 53
+% Condensations: 405
+% Global subsumptions: 4
+% 
+% Simple tautologies: 86
+% Equational tautologies: 53
+% Forward subsumptions: 1929
+% Fw demodulations to eq. taut.: 12
+% 
+% Unit resulting resolution: 145
+% Forward superposition: 1102
+% Backward superposition: 738
+% Self superposition: 88
+% Equality factoring: 33
+% Equality resolution: 11
+% 
+% Split clauses: 16
+% Split components: 32
+% SAT solver clauses: 208
+% SAT solver unit clauses: 32
+% SAT solver binary clauses: 69
+% 
+% Sat splits: 16
+% Sat splitting refutations: 9
+% 
+% Memory used [KB]: 2686
+% Time elapsed: 0.123 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.47 s

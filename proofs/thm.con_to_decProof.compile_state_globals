@@ -1,0 +1,296 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.con_to_decProof
+% (106113)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 116
+% Passive clauses: 1094
+% Generated clauses: 18616
+% Final active clauses: 112
+% Final passive clauses: 784
+% Input formulas: 32
+% Initial clauses: 33
+% 
+% Duplicate literals: 832
+% Trivial inequalities: 192
+% Fw subsumption resolutions: 2030
+% Fw demodulations: 1556
+% Bw demodulations: 2
+% 
+% Simple tautologies: 211
+% Equational tautologies: 24
+% Forward subsumptions: 11663
+% 
+% Binary resolution: 6
+% Forward superposition: 7202
+% Backward superposition: 6320
+% Self superposition: 241
+% Equality factoring: 67
+% Equality resolution: 16
+% 
+% Split clauses: 361
+% Split components: 733
+% SAT solver clauses: 889
+% SAT solver unit clauses: 39
+% SAT solver binary clauses: 176
+% 
+% Sat splits: 361
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 889
+% TWLsolver calls for satisfiability: 135
+% 
+% Memory used [KB]: 14200
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.con_to_decProof
+% (106144)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 72
+% Passive clauses: 277
+% Generated clauses: 11094
+% Final active clauses: 69
+% Final passive clauses: 202
+% Input formulas: 32
+% Initial clauses: 33
+% 
+% Duplicate literals: 618
+% Trivial inequalities: 148
+% Fw subsumption resolutions: 645
+% Fw demodulations: 607
+% Bw demodulations: 2
+% Condensations: 1723
+% 
+% Simple tautologies: 141
+% Equational tautologies: 23
+% Forward subsumptions: 5947
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 4
+% Forward superposition: 3717
+% Backward superposition: 3184
+% Self superposition: 199
+% Equality factoring: 64
+% Equality resolution: 13
+% 
+% Split clauses: 32
+% Split components: 64
+% SAT solver clauses: 502
+% SAT solver unit clauses: 62
+% SAT solver binary clauses: 37
+% 
+% Sat splits: 32
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 502
+% TWLsolver calls for satisfiability: 90
+% 
+% Memory used [KB]: 9850
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.con_to_decProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.con_to_decProof
+% SZS output start Proof for thm.con_to_decProof
+fof(f14442,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f14395])).
+fof(f14395,plain,(
+  s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(sK0),sK1))) != s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(sK0),sK1)))),
+  inference(superposition,[],[f96,f14342])).
+fof(f14342,plain,(
+  ( ! [X8,X9] : (s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X8),X9))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X8),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X8),X9)))))) )),
+  inference(forward_demodulation,[],[f14269,f7520])).
+fof(f7520,plain,(
+  ( ! [X4,X5,X3] : (s('type.list.list'('type.option.option'('type.conSem.v')),X3) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X4),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),X3))),s('type.decSem.state'(X4),X5)))))) )),
+  inference(superposition,[],[f115,f133])).
+fof(f133,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f120,f119])).
+fof(f119,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X9,X6] : ! [X8,X10] : s(X6,X8) = s(X6,'const.combin.K_2'(s(X6,X8),s(X9,X10)))),
+  file('thm.con_to_decProof.compile_state_globals','thm.combin.K_THM')).
+fof(f120,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f73])).
+fof(f73,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f33])).
+fof(f33,axiom,(
+  ! [X6,X9] : ! [X15,X16] : s(X6,'const.combin.K_2'(s(X6,X15),s(X9,X16))) = s(X6,happ(s(fun(X9,X6),'const.combin.K_1'(s(X6,X15))),s(X9,X16)))),
+  file('thm.con_to_decProof.compile_state_globals','ARITY_1_2_const.combin.K')).
+fof(f115,plain,(
+  ( ! [X2,X0,X1] : (s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X2),s('type.decSem.state'(X0),X1))))) = s('type.list.list'('type.option.option'('type.conSem.v')),happ(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X2),s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1,X2] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X2),s('type.decSem.state'(X0),X1))))) = s('type.list.list'('type.option.option'('type.conSem.v')),happ(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X2),s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),X1)))))),
+  inference(flattening,[],[f63])).
+fof(f63,plain,(
+  ! [X0] : ! [X1,X2] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X2),s('type.decSem.state'(X0),X1))))) = s('type.list.list'('type.option.option'('type.conSem.v')),happ(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X2),s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),X1)))))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X11] : ! [X7,X12] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X11),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X12),s('type.decSem.state'(X11),X7))))) = s('type.list.list'('type.option.option'('type.conSem.v')),happ(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X12),s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X11),X7)))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.decSem.decSem_3|49|_prove_ltb')).
+fof(f14269,plain,(
+  ( ! [X8,X9] : (s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X8),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X8),X9))))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X8),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X8),X9))))),s('type.decSem.state'(X8),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X8),X9))))),s('type.decSem.state'(X8),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X8),X9))))),s('type.decSem.state'(X8),'const.bool.ARB_0')))))))))) )),
+  inference(superposition,[],[f123,f132])).
+fof(f132,plain,(
+  ( ! [X0,X1] : (s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1))) = s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),'const.conSem.state_ffi_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.bool.ARB_0')))))))))) )),
+  inference(forward_demodulation,[],[f131,f117])).
+fof(f117,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1,X2,X3] : s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1)))))),
+  inference(flattening,[],[f67])).
+fof(f67,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1)))))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X11] : ! [X7,X14,X12] : s('type.decSem.state'(X11),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X12),s('type.decSem.state'(X11),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X14),s('type.decSem.state'(X11),X7))))) = s('type.decSem.state'(X11),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X14),s('type.decSem.state'(X11),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X12),s('type.decSem.state'(X11),X7)))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.decSem.decSem_42_prove_ltb')).
+fof(f131,plain,(
+  ( ! [X0,X1] : (s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1))) = s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),'const.conSem.state_ffi_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.bool.ARB_0')))))))))) )),
+  inference(backward_demodulation,[],[f118,f130])).
+fof(f130,plain,(
+  ( ! [X0,X1] : (s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1))) = s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),'const.conSem.state_ffi_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.bool.ARB_0')))))))))) )),
+  inference(backward_demodulation,[],[f116,f101])).
+fof(f101,plain,(
+  ( ! [X0,X1] : (s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1))) = s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),'const.conSem.state_ffi_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.bool.ARB_0')))))))))) )),
+  inference(cnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1] : s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1))) = s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),'const.conSem.state_ffi_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.bool.ARB_0')))))))))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ! [X0] : ! [X1] : s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1))) = s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X0),'type.ffi.ffi_state'(X0)),'const.combin.K_1'(s('type.ffi.ffi_state'(X0),'const.conSem.state_ffi_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))))),s('type.decSem.state'(X0),'const.bool.ARB_0')))))))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X11] : ! [X7] : s('type.decSem.state'(X11),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X11),X7))) = s('type.decSem.state'(X11),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X11),'type.ffi.ffi_state'(X11)),'const.combin.K_1'(s('type.ffi.ffi_state'(X11),'const.conSem.state_ffi_1'(s('type.conSem.state'(X11),X7))))),s('type.decSem.state'(X11),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'const.conSem.state_refs_1'(s('type.conSem.state'(X11),X7))))),s('type.decSem.state'(X11),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.conSem.state_clock_1'(s('type.conSem.state'(X11),X7))))),s('type.decSem.state'(X11),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),'const.combin.K_1'(s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X11),X7))))),s('type.decSem.state'(X11),'const.bool.ARB_0')))))))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.con_to_decProof.compile_state_def')).
+fof(f116,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f66])).
+fof(f66,plain,(
+  ! [X0,X1,X2,X3] : s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),X1)))))),
+  inference(flattening,[],[f65])).
+fof(f65,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.decSem.state'(X0),X1)))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X11] : ! [X7,X14,X12] : s('type.decSem.state'(X11),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X14),s('type.decSem.state'(X11),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X12),s('type.decSem.state'(X11),X7))))) = s('type.decSem.state'(X11),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X12),s('type.decSem.state'(X11),'const.decSem.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X14),s('type.decSem.state'(X11),X7)))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.decSem.decSem_39_prove_ltb')).
+fof(f118,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1,X2,X3] : s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1)))))),
+  inference(flattening,[],[f69])).
+fof(f69,plain,(
+  ! [X0] : ! [X1,X2,X3] : s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s('type.decSem.state'(X0),X1))))) = s('type.decSem.state'(X0),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X2),s('type.decSem.state'(X0),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X3),s('type.decSem.state'(X0),X1)))))),
+  inference(rectify,[],[f31])).
+fof(f31,axiom,(
+  ! [X11] : ! [X7,X14,X12] : s('type.decSem.state'(X11),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X12),s('type.decSem.state'(X11),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X14),s('type.decSem.state'(X11),X7))))) = s('type.decSem.state'(X11),'const.decSem.state_refs_fupd_2'(s(fun('type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v')),'type.list.list'('type.semanticPrimitives.store_v'('type.conSem.v'))),X14),s('type.decSem.state'(X11),'const.decSem.state_globals_fupd_2'(s(fun('type.list.list'('type.option.option'('type.conSem.v')),'type.list.list'('type.option.option'('type.conSem.v'))),X12),s('type.decSem.state'(X11),X7)))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.decSem.decSem_43_prove_ltb')).
+fof(f123,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X1),X2))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X3),s('type.decSem.state'(X1),X2)))))) )),
+  inference(cnf_transformation,[],[f80])).
+fof(f80,plain,(
+  ! [X0,X1,X2,X3] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X1),X2))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X3),s('type.decSem.state'(X1),X2)))))),
+  inference(flattening,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X1),X2))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X1),'type.ffi.ffi_state'(X0)),X3),s('type.decSem.state'(X1),X2)))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X13,X11] : ! [X7,X12] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X11),X7))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X13),'const.decSem.state_ffi_fupd_2'(s(fun('type.ffi.ffi_state'(X11),'type.ffi.ffi_state'(X13)),X12),s('type.decSem.state'(X11),X7)))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.decSem.decSem_27_prove_ltb')).
+fof(f96,plain,(
+  s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(sK0),sK1))) != s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(sK0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f93])).
+fof(f93,plain,(
+  s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(sK0),sK1))) != s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(sK0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f91])).
+fof(f91,plain,(
+  ? [X0,X1] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))) != s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1)))))),
+  inference(ennf_transformation,[],[f35])).
+fof(f35,plain,(
+  ~! [X0,X1] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1)))))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ~! [X0] : ! [X1] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X0),X1))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X0),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X6),X7))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X6),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s('type.list.list'('type.option.option'('type.conSem.v')),'const.conSem.state_globals_1'(s('type.conSem.state'(X6),X7))) = s('type.list.list'('type.option.option'('type.conSem.v')),'const.decSem.state_globals_1'(s('type.decSem.state'(X6),'const.con_to_decProof.compile_state_1'(s('type.conSem.state'(X6),X7)))))),
+  file('thm.con_to_decProof.compile_state_globals','thm.con_to_decProof.compile_state_globals')).
+% SZS output end Proof for thm.con_to_decProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 85
+% Passive clauses: 339
+% Generated clauses: 14216
+% Final active clauses: 79
+% Final passive clauses: 237
+% Input formulas: 32
+% Initial clauses: 33
+% 
+% Duplicate literals: 749
+% Trivial inequalities: 152
+% Fw subsumption resolutions: 869
+% Fw demodulations: 986
+% Bw demodulations: 21
+% Condensations: 2130
+% 
+% Simple tautologies: 150
+% Equational tautologies: 79
+% Forward subsumptions: 8705
+% Fw demodulations to eq. taut.: 1
+% 
+% Unit resulting resolution: 298
+% Forward superposition: 4785
+% Backward superposition: 3866
+% Self superposition: 228
+% Equality factoring: 67
+% Equality resolution: 15
+% 
+% Split clauses: 12
+% Split components: 24
+% SAT solver clauses: 366
+% SAT solver unit clauses: 107
+% SAT solver binary clauses: 56
+% 
+% Sat splits: 12
+% Sat splitting refutations: 1
+% 
+% Memory used [KB]: 10874
+% Time elapsed: 0.569 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.89 s

@@ -1,0 +1,295 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_knownProof
+% (2429)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 266
+% Passive clauses: 1588
+% Generated clauses: 12800
+% Final active clauses: 196
+% Final passive clauses: 1130
+% Input formulas: 35
+% Initial clauses: 123
+% 
+% Duplicate literals: 736
+% Trivial inequalities: 156
+% Fw subsumption resolutions: 2083
+% Fw demodulations: 1210
+% Bw demodulations: 65
+% 
+% Simple tautologies: 350
+% Equational tautologies: 63
+% Forward subsumptions: 5457
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 845
+% Factoring: 21
+% Forward superposition: 3591
+% Backward superposition: 3432
+% Self superposition: 159
+% Equality factoring: 150
+% Equality resolution: 23
+% 
+% Split clauses: 874
+% Split components: 1817
+% SAT solver clauses: 1332
+% SAT solver unit clauses: 26
+% SAT solver binary clauses: 183
+% 
+% Sat splits: 874
+% Sat splitting refutations: 8
+% 
+% TWLsolver clauses: 1313
+% TWLsolver calls for satisfiability: 196
+% 
+% Memory used [KB]: 5245
+% Time elapsed: 0.660 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_knownProof
+% (2471)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 200
+% Passive clauses: 857
+% Generated clauses: 13554
+% Final active clauses: 188
+% Final passive clauses: 647
+% Input formulas: 35
+% Initial clauses: 123
+% 
+% Duplicate literals: 1064
+% Trivial inequalities: 146
+% Fw subsumption resolutions: 1199
+% Fw demodulations: 1024
+% Bw demodulations: 15
+% Condensations: 1356
+% Global subsumptions: 13
+% 
+% Simple tautologies: 312
+% Equational tautologies: 60
+% Forward subsumptions: 4741
+% Fw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 739
+% Factoring: 12
+% Forward superposition: 3122
+% Backward superposition: 3591
+% Self superposition: 161
+% Equality factoring: 146
+% Equality resolution: 18
+% 
+% Split clauses: 113
+% Split components: 234
+% SAT solver clauses: 1398
+% SAT solver unit clauses: 134
+% SAT solver binary clauses: 83
+% SAT solver learnt clauses: 26
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 113
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 1346
+% TWLsolver calls for satisfiability: 1022
+% 
+% Memory used [KB]: 8699
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.clos_knownProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_knownProof
+% SZS output start Proof for thm.clos_knownProof
+fof(f6635,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f6634,f319])).
+fof(f319,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f184,f181])).
+fof(f181,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.clos_knownProof.subapprox_trans','thm.bool.TRUTH')).
+fof(f184,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f38])).
+fof(f38,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f15])).
+fof(f15,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.clos_knownProof.subapprox_trans','thm.bool.NOT_CLAUSES|split|2')).
+fof(f6634,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f6618,f379])).
+fof(f379,plain,(
+  s(bool,'F_0') = s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK7)))),
+  inference(unit_resulting_resolution,[],[f180,f200])).
+fof(f200,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f131])).
+fof(f131,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f49])).
+fof(f49,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X9] : (s(bool,'F_0') = s(bool,X9) <=> ~p(s(bool,X9)))),
+  file('thm.clos_knownProof.subapprox_trans','thm.bool.EQ_CLAUSES|split|3')).
+fof(f180,plain,(
+  ~p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK7))))),
+  inference(cnf_transformation,[],[f126])).
+fof(f126,plain,(
+  p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK8)))) & p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',sK7)))) & ~p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK7))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK7,sK8,sK9])],[f87])).
+fof(f87,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X2),s('type.clos_known.val_approx',X1)))) & p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X1),s('type.clos_known.val_approx',X0)))) & ~p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X2),s('type.clos_known.val_approx',X0)))))),
+  inference(flattening,[],[f86])).
+fof(f86,plain,(
+  ? [X0,X1,X2] : ((p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X2),s('type.clos_known.val_approx',X1)))) & p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X1),s('type.clos_known.val_approx',X0))))) & ~p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X2),s('type.clos_known.val_approx',X0)))))),
+  inference(ennf_transformation,[],[f37])).
+fof(f37,plain,(
+  ~! [X0,X1,X2] : ((p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X2),s('type.clos_known.val_approx',X1)))) & p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X1),s('type.clos_known.val_approx',X0))))) => p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X2),s('type.clos_known.val_approx',X0)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ((p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X7)))) & p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X7),s('type.clos_known.val_approx',X6))))) => p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X6)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ((p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X7)))) & p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X7),s('type.clos_known.val_approx',X6))))) => p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X6)))))),
+  file('thm.clos_knownProof.subapprox_trans','thm.clos_knownProof.subapprox_trans')).
+fof(f6618,plain,(
+  p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK7))))),
+  inference(unit_resulting_resolution,[],[f6586,f229])).
+fof(f229,plain,(
+  ( ! [X0,X1] : (s('type.clos_known.val_approx',X1) != s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))) | p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))))) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f146,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1)))) | s('type.clos_known.val_approx',X1) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1)))) & (s('type.clos_known.val_approx',X1) != s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))) | p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))))))),
+  inference(nnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1] : (p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1)))) <=> s('type.clos_known.val_approx',X1) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X8,X7] : (p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X7)))) <=> s('type.clos_known.val_approx',X7) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X7))))),
+  file('thm.clos_knownProof.subapprox_trans','thm.clos_knownProof.subapprox_def')).
+fof(f6586,plain,(
+  s('type.clos_known.val_approx',sK7) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK7)))),
+  inference(superposition,[],[f1664,f895])).
+fof(f895,plain,(
+  s('type.clos_known.val_approx',sK7) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',sK7)))),
+  inference(subsumption_resolution,[],[f892,f181])).
+fof(f892,plain,(
+  ~p(s(bool,'T_0')) | s('type.clos_known.val_approx',sK7) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',sK7)))),
+  inference(superposition,[],[f228,f362])).
+fof(f362,plain,(
+  s(bool,'T_0') = s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',sK7)))),
+  inference(unit_resulting_resolution,[],[f179,f196])).
+fof(f196,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f129])).
+fof(f129,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X9] : (s(bool,'T_0') = s(bool,X9) <=> p(s(bool,X9)))),
+  file('thm.clos_knownProof.subapprox_trans','thm.bool.EQ_CLAUSES|split|1')).
+fof(f179,plain,(
+  p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',sK7))))),
+  inference(cnf_transformation,[],[f126])).
+fof(f228,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1)))) | s('type.clos_known.val_approx',X1) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1)))) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f1664,plain,(
+  ( ! [X0] : (s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',X0))) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK8),s('type.clos_known.val_approx',X0)))))) )),
+  inference(superposition,[],[f246,f894])).
+fof(f894,plain,(
+  s('type.clos_known.val_approx',sK8) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK8)))),
+  inference(subsumption_resolution,[],[f890,f181])).
+fof(f890,plain,(
+  ~p(s(bool,'T_0')) | s('type.clos_known.val_approx',sK8) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK8)))),
+  inference(superposition,[],[f228,f361])).
+fof(f361,plain,(
+  s(bool,'T_0') = s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK8)))),
+  inference(unit_resulting_resolution,[],[f178,f196])).
+fof(f178,plain,(
+  p(s(bool,'const.clos_knownProof.subapprox_2'(s('type.clos_known.val_approx',sK9),s('type.clos_known.val_approx',sK8))))),
+  inference(cnf_transformation,[],[f126])).
+fof(f246,plain,(
+  ( ! [X2,X0,X1] : (s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X1),s('type.clos_known.val_approx',X2))))) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))),s('type.clos_known.val_approx',X2)))) )),
+  inference(cnf_transformation,[],[f79])).
+fof(f79,plain,(
+  ! [X0,X1,X2] : s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X1),s('type.clos_known.val_approx',X2))))) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X0),s('type.clos_known.val_approx',X1))),s('type.clos_known.val_approx',X2)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X8,X7,X6] : s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X7),s('type.clos_known.val_approx',X6))))) = s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx','const.clos_known.merge_2'(s('type.clos_known.val_approx',X8),s('type.clos_known.val_approx',X7))),s('type.clos_known.val_approx',X6)))),
+  file('thm.clos_knownProof.subapprox_trans','thm.clos_knownProof.merge_assoc')).
+% SZS output end Proof for thm.clos_knownProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 310
+% Passive clauses: 514
+% Generated clauses: 6437
+% Final active clauses: 285
+% Final passive clauses: 131
+% Input formulas: 35
+% Initial clauses: 123
+% 
+% Duplicate literals: 183
+% Trivial inequalities: 43
+% Fw subsumption resolutions: 287
+% Fw demodulations: 678
+% Bw demodulations: 82
+% Condensations: 130
+% Global subsumptions: 205
+% 
+% Simple tautologies: 68
+% Equational tautologies: 221
+% Forward subsumptions: 3594
+% Fw demodulations to eq. taut.: 2
+% Bw demodulations to eq. taut.: 7
+% 
+% Unit resulting resolution: 3425
+% Forward superposition: 594
+% Backward superposition: 515
+% Self superposition: 41
+% Equality factoring: 30
+% Equality resolution: 2
+% 
+% Split clauses: 29
+% Split components: 63
+% SAT solver clauses: 1247
+% SAT solver unit clauses: 582
+% SAT solver binary clauses: 388
+% 
+% Sat splits: 29
+% Sat splitting refutations: 468
+% 
+% Memory used [KB]: 4605
+% Time elapsed: 0.155 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.55 s

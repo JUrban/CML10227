@@ -1,0 +1,261 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpSem
+% (28538)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 102
+% Passive clauses: 2287
+% Generated clauses: 12890
+% Final active clauses: 88
+% Final passive clauses: 2030
+% Input formulas: 68
+% Initial clauses: 75
+% 
+% Duplicate literals: 594
+% Trivial inequalities: 147
+% Fw subsumption resolutions: 1510
+% Fw demodulations: 1336
+% Bw demodulations: 11
+% 
+% Simple tautologies: 224
+% Equational tautologies: 55
+% Forward subsumptions: 6300
+% 
+% Binary resolution: 173
+% Factoring: 2
+% Forward superposition: 4436
+% Backward superposition: 4075
+% Self superposition: 272
+% Equality factoring: 142
+% Equality resolution: 18
+% 
+% Split clauses: 261
+% Split components: 523
+% SAT solver clauses: 587
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 65
+% 
+% Sat splits: 261
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 587
+% TWLsolver calls for satisfiability: 133
+% 
+% Memory used [KB]: 12281
+% Time elapsed: 0.611 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvpSem
+% (28555)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 43
+% Passive clauses: 357
+% Generated clauses: 5617
+% Final active clauses: 41
+% Final passive clauses: 302
+% Input formulas: 68
+% Initial clauses: 75
+% 
+% Duplicate literals: 677
+% Trivial inequalities: 37
+% Fw subsumption resolutions: 213
+% Fw demodulations: 60
+% Bw demodulations: 13
+% Condensations: 993
+% 
+% Simple tautologies: 109
+% Equational tautologies: 71
+% Forward subsumptions: 1895
+% 
+% Binary resolution: 116
+% Factoring: 2
+% Forward superposition: 1160
+% Backward superposition: 1615
+% Self superposition: 195
+% Equality factoring: 166
+% Equality resolution: 6
+% 
+% Split clauses: 12
+% Split components: 24
+% SAT solver clauses: 625
+% SAT solver unit clauses: 130
+% SAT solver binary clauses: 36
+% 
+% Sat splits: 12
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 625
+% TWLsolver calls for satisfiability: 164
+% 
+% Memory used [KB]: 7036
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.bvpSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpSem
+% SZS output start Proof for thm.bvpSem
+fof(f15457,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f15456,f212])).
+fof(f212,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5',aHL_TRUTH)).
+fof(f15456,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f15454,f697])).
+fof(f697,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f666,f290])).
+fof(f290,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f213,f214])).
+fof(f214,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5',aHL_BOOL_CASES)).
+fof(f213,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5',aHL_FALSITY)).
+fof(f666,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(equality_resolution,[],[f245])).
+fof(f245,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))) )),
+  inference(cnf_transformation,[],[f210])).
+fof(f210,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f115])).
+fof(f115,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X43,X44,X45] : (p(s(bool,happ(s(fun(X43,bool),happ(s(fun(X43,fun(X43,bool)),'=_0'),s(X43,X44))),s(X43,X45)))) <=> s(X43,X44) = s(X43,X45))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5',arity_0_HL_EQ)).
+fof(f15454,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),fun(fun(sK0,'type.bvpSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f15414,f2914])).
+fof(f2914,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.bvpSem.state'(sK1)),fun(fun(sK0,'type.bvpSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))))))),
+  inference(unit_resulting_resolution,[],[f211,f244])).
+fof(f244,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f210])).
+fof(f211,plain,(
+  s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))) != s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f200])).
+fof(f200,plain,(
+  s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2))) != s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK4))),s(fun(sK0,'type.bvpSem.state'(sK1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(sK1),'type.bvpSem.state'(sK1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),sK3))),s(fun(sK0,'type.bvpSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f196])).
+fof(f196,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3))))),s(fun(X0,'type.bvpSem.state'(X1)),X2))) != s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X4))),s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3))),s(fun(X0,'type.bvpSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3))))),s(fun(X0,'type.bvpSem.state'(X1)),X2))) = s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X4))),s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3))),s(fun(X0,'type.bvpSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X4),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3))))),s(fun(X0,'type.bvpSem.state'(X1)),X2))) = s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X4))),s(fun(X0,'type.bvpSem.state'(X1)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X1),'type.bvpSem.state'(X1)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X3))),s(fun(X0,'type.bvpSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X10),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X9))))),s(fun(X6,'type.bvpSem.state'(X7)),X8))) = s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X10))),s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X9))),s(fun(X6,'type.bvpSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X10),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X9))))),s(fun(X6,'type.bvpSem.state'(X7)),X8))) = s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X10))),s(fun(X6,'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X9))),s(fun(X6,'type.bvpSem.state'(X7)),X8)))))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5','thm.bvpSem.state_fupdfupds_comp|split|5')).
+fof(f15414,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(fun(X3,'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2))))),s(fun(X3,'type.bvpSem.state'(X0)),X4))) = s(fun(X3,'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1))),s(fun(X3,'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2))),s(fun(X3,'type.bvpSem.state'(X0)),X4)))))) )),
+  inference(superposition,[],[f251,f218])).
+fof(f218,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1))))) = s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2))),s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1)))))) )),
+  inference(cnf_transformation,[],[f80])).
+fof(f80,plain,(
+  ! [X0,X1,X2] : s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1))))) = s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2))),s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1)))))),
+  inference(flattening,[],[f79])).
+fof(f79,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1))))) = s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X2))),s(fun('type.bvpSem.state'(X0),'type.bvpSem.state'(X0)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),'const.combin.o_2'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X10),s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X9))))) = s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.combin.o_2'(s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X10))),s(fun('type.bvpSem.state'(X7),'type.bvpSem.state'(X7)),'const.bvpSem.state_global_fupd_1'(s(fun('type.option.option'('type.num.num'),'type.option.option'('type.num.num')),X9)))))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5','thm.bvpSem.state_fupdfupds_comp|split|4')).
+fof(f251,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X13,X6,X17,X14] : ! [X10,X9,X8] : s(fun(X17,X13),'const.combin.o_2'(s(fun(X6,X13),X10),s(fun(X17,X6),'const.combin.o_2'(s(fun(X14,X6),X9),s(fun(X17,X14),X8))))) = s(fun(X17,X13),'const.combin.o_2'(s(fun(X14,X13),'const.combin.o_2'(s(fun(X6,X13),X10),s(fun(X14,X6),X9))),s(fun(X17,X14),X8)))),
+  file('thm.bvpSem.state_fupdfupds_comp|split|5','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.bvpSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 143
+% Passive clauses: 1921
+% Generated clauses: 16138
+% Final active clauses: 75
+% Final passive clauses: 769
+% Input formulas: 68
+% Initial clauses: 75
+% 
+% Duplicate literals: 609
+% Trivial inequalities: 66
+% Fw subsumption resolutions: 500
+% Fw demodulations: 2576
+% Bw demodulations: 976
+% Condensations: 819
+% Global subsumptions: 8
+% 
+% Simple tautologies: 167
+% Equational tautologies: 232
+% Forward subsumptions: 9148
+% Fw demodulations to eq. taut.: 5
+% Bw demodulations to eq. taut.: 20
+% 
+% Unit resulting resolution: 1133
+% Factoring: 1
+% Forward superposition: 4322
+% Backward superposition: 3613
+% Self superposition: 203
+% Equality factoring: 82
+% Equality resolution: 9
+% 
+% Split clauses: 26
+% Split components: 52
+% SAT solver clauses: 2014
+% SAT solver unit clauses: 317
+% SAT solver binary clauses: 706
+% 
+% Sat splits: 26
+% Sat splitting refutations: 31
+% 
+% Memory used [KB]: 16247
+% Time elapsed: 0.831 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.15 s

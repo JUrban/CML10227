@@ -1,0 +1,109 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.infer_eComplete
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.infer_eComplete
+% SZS output start Proof for thm.infer_eComplete
+fof(f3604,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f3603,f188])).
+fof(f188,plain,(
+  s('type.infer_t.infer_t',sK12) != s('type.infer_t.infer_t',sK13)),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK12))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK13))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',sK10),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK13)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',sK11),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK12)))) & s('type.infer_t.infer_t',sK12) != s('type.infer_t.infer_t',sK13)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13])],[f86])).
+fof(f86,plain,(
+  ? [X0,X1,X2,X3] : (s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X2))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X3))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X3)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X1),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2)))) & s('type.infer_t.infer_t',X2) != s('type.infer_t.infer_t',X3))),
+  inference(flattening,[],[f85])).
+fof(f85,plain,(
+  ? [X0,X1,X2,X3] : ((s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X2))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X3))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X3)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X1),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2))))) & s('type.infer_t.infer_t',X2) != s('type.infer_t.infer_t',X3))),
+  inference(ennf_transformation,[],[f36])).
+fof(f36,plain,(
+  ~! [X0,X1,X2,X3] : ((s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X2))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X3))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X3)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X1),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2))))) => s('type.infer_t.infer_t',X2) = s('type.infer_t.infer_t',X3))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ((s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X8))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X9))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X6),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X9)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X7),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X8))))) => s('type.infer_t.infer_t',X8) = s('type.infer_t.infer_t',X9))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ((s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X8))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X9))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X6),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X9)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num',X7),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X8))))) => s('type.infer_t.infer_t',X8) = s('type.infer_t.infer_t',X9))),
+  file('thm.infer_eComplete.convert_bi_remove','thm.infer_eComplete.convert_bi_remove')).
+fof(f3603,plain,(
+  s('type.infer_t.infer_t',sK12) = s('type.infer_t.infer_t',sK13)),
+  inference(forward_demodulation,[],[f3599,f3574])).
+fof(f3574,plain,(
+  s('type.infer_t.infer_t',sK12) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK12)))))),
+  inference(resolution,[],[f231,f187])).
+fof(f187,plain,(
+  p(s(bool,'const.infer.check_t_3'(s('type.num.num',sK11),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK12))))),
+  inference(cnf_transformation,[],[f127])).
+fof(f231,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.infer.check_t_3'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) | s('type.infer_t.infer_t',X1) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X1)))))) )),
+  inference(cnf_transformation,[],[f97])).
+fof(f97,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.infer.check_t_3'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) | s('type.infer_t.infer_t',X1) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X1))))))),
+  inference(ennf_transformation,[],[f63])).
+fof(f63,plain,(
+  ! [X0,X1] : (p(s(bool,'const.infer.check_t_3'(s('type.num.num',X0),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) => s('type.infer_t.infer_t',X1) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X1))))))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X6,X10] : (p(s(bool,'const.infer.check_t_3'(s('type.num.num',X6),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X10)))) => s('type.infer_t.infer_t',X10) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',X10))))))),
+  file('thm.infer_eComplete.convert_bi_remove','thm.inferProps.check_t_empty_unconvert_convert_id')).
+fof(f3599,plain,(
+  s('type.infer_t.infer_t',sK13) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK12)))))),
+  inference(forward_demodulation,[],[f3573,f185])).
+fof(f185,plain,(
+  s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK12))) = s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK13)))),
+  inference(cnf_transformation,[],[f127])).
+fof(f3573,plain,(
+  s('type.infer_t.infer_t',sK13) = s('type.infer_t.infer_t','const.inferProps.unconvert_t_1'(s('type.ast.t','const.inferProps.convert_t_1'(s('type.infer_t.infer_t',sK13)))))),
+  inference(resolution,[],[f231,f186])).
+fof(f186,plain,(
+  p(s(bool,'const.infer.check_t_3'(s('type.num.num',sK10),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK13))))),
+  inference(cnf_transformation,[],[f127])).
+% SZS output end Proof for thm.infer_eComplete
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 283
+% Passive clauses: 1223
+% Generated clauses: 3414
+% Final active clauses: 283
+% Final passive clauses: 851
+% Input formulas: 34
+% Initial clauses: 134
+% 
+% Duplicate literals: 111
+% Trivial inequalities: 13
+% Fw subsumption resolutions: 219
+% Fw demodulations: 3
+% 
+% Simple tautologies: 102
+% Equational tautologies: 20
+% Forward subsumptions: 1682
+% 
+% Binary resolution: 2171
+% Factoring: 556
+% Forward superposition: 105
+% Backward superposition: 61
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 8
+% 
+% Split clauses: 72
+% Split components: 145
+% SAT solver clauses: 133
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 28
+% 
+% Sat splits: 72
+% 
+% TWLsolver clauses: 133
+% TWLsolver calls for satisfiability: 116
+% 
+% Memory used [KB]: 1791
+% Time elapsed: 0.161 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.26 s

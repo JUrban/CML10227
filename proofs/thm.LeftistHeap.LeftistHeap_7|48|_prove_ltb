@@ -1,0 +1,381 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.LeftistHeap
+% (64987)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 572
+% Passive clauses: 6094
+% Generated clauses: 14861
+% Final active clauses: 566
+% Final passive clauses: 5333
+% Input formulas: 69
+% Initial clauses: 233
+% 
+% Duplicate literals: 316
+% Trivial inequalities: 94
+% Fw subsumption resolutions: 895
+% Fw demodulations: 931
+% Bw demodulations: 2
+% 
+% Simple tautologies: 270
+% Equational tautologies: 74
+% Forward subsumptions: 6331
+% 
+% Binary resolution: 7450
+% Factoring: 936
+% Forward superposition: 2299
+% Backward superposition: 1611
+% Self superposition: 44
+% Equality factoring: 2
+% Equality resolution: 31
+% 
+% Split clauses: 41
+% Split components: 84
+% SAT solver clauses: 50
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 27
+% 
+% Sat splits: 41
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 50
+% TWLsolver calls for satisfiability: 20
+% 
+% Memory used [KB]: 13432
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.LeftistHeap
+% (65006)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 333
+% Passive clauses: 2308
+% Generated clauses: 9835
+% Final active clauses: 329
+% Final passive clauses: 1973
+% Input formulas: 69
+% Initial clauses: 233
+% 
+% Duplicate literals: 145
+% Trivial inequalities: 20
+% Fw subsumption resolutions: 513
+% Fw demodulations: 935
+% Bw demodulations: 3
+% Condensations: 201
+% Global subsumptions: 13
+% 
+% Simple tautologies: 223
+% Equational tautologies: 12
+% Forward subsumptions: 2952
+% 
+% Binary resolution: 2441
+% Factoring: 375
+% Forward superposition: 1637
+% Backward superposition: 935
+% Self superposition: 44
+% Equality factoring: 2
+% Equality resolution: 10
+% 
+% Split clauses: 4
+% Split components: 8
+% SAT solver clauses: 2703
+% SAT solver unit clauses: 227
+% SAT solver binary clauses: 94
+% SAT solver learnt clauses: 26
+% 
+% Sat splits: 4
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2651
+% TWLsolver calls for satisfiability: 1885
+% 
+% Memory used [KB]: 18038
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.LeftistHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.LeftistHeap
+% SZS output start Proof for thm.LeftistHeap
+fof(f4636,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f329,f587,f585,f328,f586,f584,f4606,f4635])).
+fof(f4635,plain,(
+  $false | ($spl0 | $spl2)),
+  inference(subsumption_resolution,[],[f4634,f588])).
+fof(f588,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f333,f330])).
+fof(f330,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb',aHL_TRUTH)).
+fof(f333,plain,(
+  ~p(s(bool,'T_0')) | ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f231])).
+fof(f231,plain,(
+  (p(s(bool,'T_0')) | p(s(bool,'F_0'))) & (~p(s(bool,'F_0')) | ~p(s(bool,'T_0')))),
+  inference(nnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  inference(flattening,[],[f11])).
+fof(f11,axiom,(
+  ~p(s(bool,'T_0')) <=> p(s(bool,'F_0'))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.bool.NOT_CLAUSES|split|1')).
+fof(f4634,plain,(
+  p(s(bool,'F_0')) | ($spl0 | $spl2)),
+  inference(forward_demodulation,[],[f4633,f1109])).
+fof(f1109,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0')))) )),
+  inference(unit_resulting_resolution,[],[f588,f1100,f412])).
+fof(f412,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f194])).
+fof(f194,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f193])).
+fof(f193,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f132])).
+fof(f132,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X25,X26] : ((p(s(bool,X25)) => p(s(bool,X26))) => ((p(s(bool,X26)) => p(s(bool,X25))) => s(bool,X25) = s(bool,X26)))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.bool.IMP_ANTISYM_AX')).
+fof(f1100,plain,(
+  ( ! [X0] : (~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0'))))) )),
+  inference(forward_demodulation,[],[f1097,f393])).
+fof(f393,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,sK17(X1,X0))) )),
+  inference(cnf_transformation,[],[f265])).
+fof(f265,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,sK17(X1,X0))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK17])],[f107])).
+fof(f107,plain,(
+  ! [X0,X1] : ? [X2] : s(X0,X1) = s(X0,X2)),
+  inference(flattening,[],[f106])).
+fof(f106,plain,(
+  ! [X0] : ! [X1] : ? [X2] : s(X0,X1) = s(X0,X2)),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X6] : ! [X38] : ? [X10] : s(X6,X10) = s(X6,X38)),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.bool.EXISTS_REFL')).
+fof(f1097,plain,(
+  ( ! [X0] : (~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),sK17('const.LeftistHeap.Empty_0','type.LeftistHeap.heap'(X0))))))) )),
+  inference(unit_resulting_resolution,[],[f393,f388])).
+fof(f388,plain,(
+  ( ! [X0,X1] : (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1) | ~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1))))) )),
+  inference(cnf_transformation,[],[f262])).
+fof(f262,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1) & s('type.LeftistHeap.heap'(X0),X1) = s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',sK13(X1,X0)),s(X0,sK14(X1,X0)),s('type.LeftistHeap.heap'(X0),sK15(X1,X0)),s('type.LeftistHeap.heap'(X0),sK16(X1,X0)))))) & (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1) | ! [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) != s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5))) | p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13,sK14,sK15,sK16])],[f261])).
+fof(f261,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1) & ? [X6,X7,X8,X9] : s('type.LeftistHeap.heap'(X0),X1) = s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X6),s(X0,X7),s('type.LeftistHeap.heap'(X0),X8),s('type.LeftistHeap.heap'(X0),X9))))) & (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1) | ! [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) != s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5))) | p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1))))))),
+  inference(rectify,[],[f260])).
+fof(f260,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1) & ? [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) = s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5))))) & (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1) | ! [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) != s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5))) | p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1))))))),
+  inference(flattening,[],[f259])).
+fof(f259,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1) & ? [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) = s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5))))) & ((s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1) | ! [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) != s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5)))) | p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1))))))),
+  inference(nnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X0,X1] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) <=> (s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1) & ? [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) = s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5)))))),
+  inference(flattening,[],[f103])).
+fof(f103,plain,(
+  ! [X0] : ! [X1] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) <=> (~s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1) & ? [X2,X3,X4,X5] : s('type.LeftistHeap.heap'(X0),X1) = s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X8] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X6),X8)))) <=> (~s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X6),X8) & ? [X9,X10,X11,X12] : s('type.LeftistHeap.heap'(X6),X8) = s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Tree_4'(s('type.num.num',X9),s(X6,X10),s('type.LeftistHeap.heap'(X6),X11),s('type.LeftistHeap.heap'(X6),X12)))))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.LeftistHeap.find_min_side_def')).
+fof(f4633,plain,(
+  p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0')))) | ($spl0 | $spl2)),
+  inference(forward_demodulation,[],[f584,f587])).
+fof(f4606,plain,(
+  $false | ($spl1 | $spl3)),
+  inference(subsumption_resolution,[],[f4299,f2323])).
+fof(f2323,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.LeftistHeap.heap'(sK11),sK12) != s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Tree_4'(s('type.num.num',X0),s(sK11,X1),s('type.LeftistHeap.heap'(sK11),X2),s('type.LeftistHeap.heap'(sK11),X3)))) ) | ($spl1 | $spl3)),
+  inference(subsumption_resolution,[],[f2322,f586])).
+fof(f2322,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.LeftistHeap.heap'(sK11),sK12) != s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Tree_4'(s('type.num.num',X0),s(sK11,X1),s('type.LeftistHeap.heap'(sK11),X2),s('type.LeftistHeap.heap'(sK11),X3))) | s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(sK11),sK12)) ) | $spl1),
+  inference(subsumption_resolution,[],[f2306,f588])).
+fof(f2306,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'F_0')) | s('type.LeftistHeap.heap'(sK11),sK12) != s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Tree_4'(s('type.num.num',X0),s(sK11,X1),s('type.LeftistHeap.heap'(sK11),X2),s('type.LeftistHeap.heap'(sK11),X3))) | s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(sK11),sK12)) ) | $spl1),
+  inference(superposition,[],[f390,f632])).
+fof(f632,plain,(
+  s(bool,'F_0') = s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12))) | $spl1),
+  inference(unit_resulting_resolution,[],[f585,f351])).
+fof(f351,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f235])).
+fof(f235,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f85])).
+fof(f85,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f84])).
+fof(f84,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X16] : (s(bool,'F_0') = s(bool,X16) <=> ~p(s(bool,X16)))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f390,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | s('type.LeftistHeap.heap'(X0),X1) != s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Tree_4'(s('type.num.num',X2),s(X0,X3),s('type.LeftistHeap.heap'(X0),X4),s('type.LeftistHeap.heap'(X0),X5))) | s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1)) )),
+  inference(cnf_transformation,[],[f262])).
+fof(f4299,plain,(
+  ( ! [X2,X0,X1] : (s('type.LeftistHeap.heap'(sK11),sK12) = s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Tree_4'(s('type.num.num',sK24(sK12,X0,X1,sK11,X2)),s(sK11,sK25(sK12,X0,X1,sK11,X2)),s('type.LeftistHeap.heap'(sK11),sK26(sK12,X0,X1,sK11,X2)),s('type.LeftistHeap.heap'(sK11),sK27(sK12,X0,X1,sK11,X2))))) ) | $spl3),
+  inference(unit_resulting_resolution,[],[f2094,f444])).
+fof(f444,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',sK24(X4,X3,X2,X1,X0)),s(X1,sK25(X4,X3,X2,X1,X0)),s('type.LeftistHeap.heap'(X1),sK26(X4,X3,X2,X1,X0)),s('type.LeftistHeap.heap'(X1),sK27(X4,X3,X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f285])).
+fof(f285,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | (s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',sK24(X4,X3,X2,X1,X0)),s(X1,sK25(X4,X3,X2,X1,X0)),s('type.LeftistHeap.heap'(X1),sK26(X4,X3,X2,X1,X0)),s('type.LeftistHeap.heap'(X1),sK27(X4,X3,X2,X1,X0)))) & s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4))) & (! [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) != s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) | s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4) | p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK24,sK25,sK26,sK27])],[f284])).
+fof(f284,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | (? [X9,X10,X11,X12] : s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X9),s(X1,X10),s('type.LeftistHeap.heap'(X1),X11),s('type.LeftistHeap.heap'(X1),X12))) & s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4))) & (! [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) != s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) | s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4) | p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4))))))),
+  inference(rectify,[],[f283])).
+fof(f283,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | (? [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) & s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4))) & (! [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) != s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) | s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4) | p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4))))))),
+  inference(flattening,[],[f282])).
+fof(f282,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | (? [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) & s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4))) & ((! [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) != s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) | s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4)) | p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4))))))),
+  inference(nnf_transformation,[],[f159])).
+fof(f159,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) <=> (? [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) & s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4)))),
+  inference(flattening,[],[f158])).
+fof(f158,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) <=> (? [X5,X6,X7,X8] : s('type.LeftistHeap.heap'(X1),X4) = s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Tree_4'(s('type.num.num',X5),s(X1,X6),s('type.LeftistHeap.heap'(X1),X7),s('type.LeftistHeap.heap'(X1),X8))) & ~s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4)))),
+  inference(rectify,[],[f44])).
+fof(f44,axiom,(
+  ! [X13,X6] : ! [X8,X40,X41] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X6,X13),X8),s(fun(X13,fun(X13,bool)),X40),s('type.LeftistHeap.heap'(X6),X41)))) <=> (? [X9,X10,X38,X42] : s('type.LeftistHeap.heap'(X6),X41) = s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Tree_4'(s('type.num.num',X9),s(X6,X10),s('type.LeftistHeap.heap'(X6),X38),s('type.LeftistHeap.heap'(X6),X42))) & ~s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X6),X41)))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.LeftistHeap.delete_min_side_def')).
+fof(f2094,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(sK11,X0),X1),s(fun(X0,fun(X0,bool)),X2),s('type.LeftistHeap.heap'(sK11),sK12))))) ) | $spl3),
+  inference(unit_resulting_resolution,[],[f586,f448])).
+fof(f448,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4)) )),
+  inference(cnf_transformation,[],[f286])).
+fof(f286,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) | s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4)) & (s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4) | p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4))))))),
+  inference(nnf_transformation,[],[f161])).
+fof(f161,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) <=> s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X1),X4))),
+  inference(flattening,[],[f160])).
+fof(f160,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LeftistHeap.heap'(X1),X4)))) <=> ~s('type.LeftistHeap.heap'(X1),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X1),X4))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X13,X6] : ! [X14,X15,X7] : (p(s(bool,'const.LeftistHeap.delete_min_side_3'(s(fun(X6,X13),X14),s(fun(X13,fun(X13,bool)),X15),s('type.LeftistHeap.heap'(X6),X7)))) <=> ~s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X6),X7))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.LeftistHeap.LeftistHeap_69_prove_ltb')).
+fof(f584,plain,(
+  p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12)))) | $spl0),
+  inference(cnf_transformation,[],[f584_D])).
+fof(f584_D,plain,(
+  p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12)))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f586,plain,(
+  s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(sK11),sK12) | $spl3),
+  inference(cnf_transformation,[],[f586_D])).
+fof(f586_D,plain,(
+  s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(sK11),sK12) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f328,plain,(
+  s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(sK11),sK12) | p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12))))),
+  inference(cnf_transformation,[],[f230])).
+fof(f230,plain,(
+  (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12)))) | s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(sK11),sK12)) & (~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12)))) | s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(sK11),sK12))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK11,sK12])],[f229])).
+fof(f229,plain,(
+  ? [X0,X1] : ((p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1)) & (~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) | s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1)))),
+  inference(nnf_transformation,[],[f180])).
+fof(f180,plain,(
+  ? [X0,X1] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) <~> s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) <=> s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') != s('type.LeftistHeap.heap'(X0),X1))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0] : ! [X1] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X0),X1)))) <=> ~s('type.LeftistHeap.heap'(X0),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X0),X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X6),X7)))) <=> ~s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X6),X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(X6),X7)))) <=> ~s('type.LeftistHeap.heap'(X6),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(X6),X7))),
+  file('thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb','thm.LeftistHeap.LeftistHeap_7|48|_prove_ltb')).
+fof(f585,plain,(
+  ~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12)))) | $spl1),
+  inference(cnf_transformation,[],[f585_D])).
+fof(f585_D,plain,(
+  ~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12)))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f587,plain,(
+  s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(sK11),sK12) | $spl2),
+  inference(cnf_transformation,[],[f587_D])).
+fof(f587_D,plain,(
+  s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(sK11),sK12) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f329,plain,(
+  s('type.LeftistHeap.heap'(sK11),'const.LeftistHeap.Empty_0') = s('type.LeftistHeap.heap'(sK11),sK12) | ~p(s(bool,'const.LeftistHeap.find_min_side_1'(s('type.LeftistHeap.heap'(sK11),sK12))))),
+  inference(cnf_transformation,[],[f230])).
+% SZS output end Proof for thm.LeftistHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 301
+% Passive clauses: 922
+% Generated clauses: 4307
+% Final active clauses: 253
+% Final passive clauses: 511
+% Input formulas: 69
+% Initial clauses: 233
+% 
+% Duplicate literals: 7
+% Trivial inequalities: 2
+% Fw subsumption resolutions: 26
+% Fw demodulations: 806
+% Bw demodulations: 6
+% Condensations: 17
+% 
+% Simple tautologies: 68
+% Equational tautologies: 17
+% Forward subsumptions: 2416
+% Fw demodulations to eq. taut.: 22
+% 
+% Unit resulting resolution: 1319
+% Factoring: 1
+% Forward superposition: 1158
+% Backward superposition: 678
+% Self superposition: 44
+% Equality factoring: 2
+% Equality resolution: 4
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 930
+% SAT solver unit clauses: 237
+% SAT solver binary clauses: 437
+% 
+% Sat splits: 2
+% Sat splitting refutations: 2
+% 
+% Memory used [KB]: 10234
+% Time elapsed: 0.252 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.59 s

@@ -1,0 +1,177 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stack_namesProof
+% (87660)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 556
+% Passive clauses: 4629
+% Generated clauses: 12123
+% Final active clauses: 526
+% Final passive clauses: 3737
+% Input formulas: 69
+% Initial clauses: 232
+% 
+% Duplicate literals: 181
+% Trivial inequalities: 14
+% Fw subsumption resolutions: 734
+% Fw demodulations: 901
+% Bw demodulations: 27
+% 
+% Simple tautologies: 172
+% Equational tautologies: 27
+% Forward subsumptions: 5427
+% 
+% Binary resolution: 4467
+% Factoring: 998
+% Forward superposition: 1601
+% Backward superposition: 2785
+% Self superposition: 88
+% Equality factoring: 2
+% Equality resolution: 9
+% 
+% Split clauses: 146
+% Split components: 294
+% SAT solver clauses: 274
+% SAT solver unit clauses: 13
+% SAT solver binary clauses: 58
+% 
+% Sat splits: 146
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 272
+% TWLsolver calls for satisfiability: 207
+% 
+% Memory used [KB]: 14328
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stack_namesProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stack_namesProof
+% SZS output start Proof for thm.stack_namesProof
+fof(f2693,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2692,f2685,f2686,f471,f660,f2667,f2675,f335,f592])).
+fof(f592,plain,(
+  ( ! [X4,X2,X3] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))) ) | $spl0),
+  inference(cnf_transformation,[],[f592_D])).
+fof(f592_D,plain,(
+  ( ! [X4,X2,X3] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f335,plain,(
+  ( ! [X4,X2,X3] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))) )),
+  inference(cnf_transformation,[],[f229])).
+fof(f229,plain,(
+  ! [X2,X3,X4] : s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13])],[f178])).
+fof(f178,plain,(
+  ? [X0,X1] : ! [X2,X3,X4] : s('type.pair.prod'('type.stackLang.prog'(X0),'type.pair.prod'('type.num.num','type.num.num')),X1) != s('type.pair.prod'('type.stackLang.prog'(X0),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(X0),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1] : ? [X2,X3,X4] : s('type.pair.prod'('type.stackLang.prog'(X0),'type.pair.prod'('type.num.num','type.num.num')),X1) = s('type.pair.prod'('type.stackLang.prog'(X0),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(X0),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0] : ! [X1] : ? [X2,X3,X4] : s('type.pair.prod'('type.stackLang.prog'(X0),'type.pair.prod'('type.num.num','type.num.num')),X1) = s('type.pair.prod'('type.stackLang.prog'(X0),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(X0),X2),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X3),s('type.num.num',X4)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ? [X8,X9,X10] : s('type.pair.prod'('type.stackLang.prog'(X6),'type.pair.prod'('type.num.num','type.num.num')),X7) = s('type.pair.prod'('type.stackLang.prog'(X6),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(X6),X8),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X9),s('type.num.num',X10)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ? [X8,X9,X10] : s('type.pair.prod'('type.stackLang.prog'(X6),'type.pair.prod'('type.num.num','type.num.num')),X7) = s('type.pair.prod'('type.stackLang.prog'(X6),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(X6),X8),s('type.pair.prod'('type.num.num','type.num.num'),'const.pair.,_2'(s('type.num.num',X9),s('type.num.num',X10)))))),
+  file('thm.stack_namesProof.stack_namesProof_22_prove_ltb','thm.stack_namesProof.stack_namesProof_22_prove_ltb')).
+fof(f2675,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X1),s('type.pair.prod'('type.num.num','type.num.num'),X0)))) ) | $spl1068),
+  inference(cnf_transformation,[],[f2675_D])).
+fof(f2675_D,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X1),s('type.pair.prod'('type.num.num','type.num.num'),X0)))) ) <=> ~$spl1068),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1068])])).
+fof(f2667,plain,(
+  ( ! [X0,X1] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),'const.pair.,_2'(s('type.stackLang.prog'(sK12),X1),s('type.pair.prod'('type.num.num','type.num.num'),X0)))) ) | ($spl0 | $spl94)),
+  inference(superposition,[],[f592,f660])).
+fof(f660,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) ) | $spl94),
+  inference(cnf_transformation,[],[f660_D])).
+fof(f660_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) ) <=> ~$spl94),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl94])])).
+fof(f471,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f139])).
+fof(f139,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(flattening,[],[f138])).
+fof(f138,plain,(
+  ! [X0,X1] : ! [X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),X2))),s(X1,'const.pair.SND_1'(s('type.pair.prod'(X0,X1),X2)))))),
+  inference(rectify,[],[f49])).
+fof(f49,axiom,(
+  ! [X6,X73] : ! [X85] : s('type.pair.prod'(X6,X73),X85) = s('type.pair.prod'(X6,X73),'const.pair.,_2'(s(X6,'const.pair.FST_1'(s('type.pair.prod'(X6,X73),X85))),s(X73,'const.pair.SND_1'(s('type.pair.prod'(X6,X73),X85)))))),
+  file('thm.stack_namesProof.stack_namesProof_22_prove_ltb','thm.pair.PAIR')).
+fof(f2686,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),X0)) ) | $spl1070),
+  inference(cnf_transformation,[],[f2686_D])).
+fof(f2686_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),X0)) ) <=> ~$spl1070),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1070])])).
+fof(f2685,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),sK13) != s('type.pair.prod'('type.stackLang.prog'(sK12),'type.pair.prod'('type.num.num','type.num.num')),X0)) ) | ($spl94 | $spl1068)),
+  inference(superposition,[],[f2675,f660])).
+fof(f2692,plain,(
+  $false | $spl1070),
+  inference(equality_resolution,[],[f2686])).
+% SZS output end Proof for thm.stack_namesProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 172
+% Passive clauses: 579
+% Generated clauses: 2460
+% Final active clauses: 169
+% Final passive clauses: 340
+% Input formulas: 69
+% Initial clauses: 232
+% 
+% Duplicate literals: 60
+% Trivial inequalities: 4
+% Fw subsumption resolutions: 169
+% Fw demodulations: 67
+% Bw demodulations: 64
+% Condensations: 43
+% Global subsumptions: 19
+% 
+% Simple tautologies: 171
+% Equational tautologies: 5
+% Forward subsumptions: 696
+% 
+% Binary resolution: 735
+% Factoring: 51
+% Forward superposition: 163
+% Backward superposition: 193
+% Self superposition: 12
+% Equality factoring: 2
+% Equality resolution: 4
+% 
+% Split clauses: 7
+% Split components: 14
+% SAT solver clauses: 899
+% SAT solver unit clauses: 250
+% SAT solver binary clauses: 78
+% SAT solver learnt clauses: 41
+% SAT solver learnt literals: 14
+% 
+% Sat splits: 7
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 820
+% TWLsolver calls for satisfiability: 9155
+% 
+% Memory used [KB]: 3454
+% Time elapsed: 0.090 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.703 s

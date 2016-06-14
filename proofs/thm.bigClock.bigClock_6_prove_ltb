@@ -1,0 +1,118 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bigClock
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bigClock
+% SZS output start Proof for thm.bigClock
+fof(f6430,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f6397,f377])).
+fof(f377,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f130,f129])).
+fof(f129,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f82])).
+fof(f82,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f81])).
+fof(f81,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X10,X6] : ! [X9,X11] : s(X6,X9) = s(X6,'const.combin.K_2'(s(X6,X9),s(X10,X11)))),
+  file('thm.bigClock.bigClock_6_prove_ltb','thm.combin.K_THM')).
+fof(f130,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f83])).
+fof(f83,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X6,X10] : ! [X15,X16] : s(X6,'const.combin.K_2'(s(X6,X15),s(X10,X16))) = s(X6,happ(s(fun(X10,X6),'const.combin.K_1'(s(X6,X15))),s(X10,X16)))),
+  file('thm.bigClock.bigClock_6_prove_ltb','ARITY_1_2_const.combin.K')).
+fof(f6397,plain,(
+  s('type.num.num',sK2) != s('type.num.num',happ(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK0),sK1)))))),
+  inference(superposition,[],[f102,f120])).
+fof(f120,plain,(
+  ( ! [X2,X0,X1] : (s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))))) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.semanticPrimitives.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f64])).
+fof(f64,plain,(
+  ! [X0,X1,X2] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))))) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.semanticPrimitives.state'(X0),X1)))))),
+  inference(flattening,[],[f63])).
+fof(f63,plain,(
+  ! [X0] : ! [X1,X2] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X2),s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))))) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.semanticPrimitives.state'(X0),X1)))))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X12] : ! [X7,X13] : s('type.num.num',happ(s(fun('type.num.num','type.num.num'),X13),s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X12),X7))))) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X12),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),X13),s('type.semanticPrimitives.state'(X12),X7)))))),
+  file('thm.bigClock.bigClock_6_prove_ltb','thm.semanticPrimitives.semanticPrimitives_237_prove_ltb')).
+fof(f102,plain,(
+  s('type.num.num',sK2) != s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.semanticPrimitives.state'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f99])).
+fof(f99,plain,(
+  s('type.num.num',sK2) != s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(sK0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',sK2))),s('type.semanticPrimitives.state'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f97])).
+fof(f97,plain,(
+  ? [X0,X1,X2] : s('type.num.num',X2) != s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.semanticPrimitives.state'(X0),X1)))))),
+  inference(ennf_transformation,[],[f37])).
+fof(f37,plain,(
+  ~! [X0,X1,X2] : s('type.num.num',X2) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.semanticPrimitives.state'(X0),X1)))))),
+  inference(flattening,[],[f36])).
+fof(f36,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.num.num',X2) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.semanticPrimitives.state'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.num.num',X8) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.semanticPrimitives.state'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.num.num',X8) = s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),'const.semanticPrimitives.state_clock_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.semanticPrimitives.state'(X6),X7)))))),
+  file('thm.bigClock.bigClock_6_prove_ltb','thm.bigClock.bigClock_6_prove_ltb')).
+% SZS output end Proof for thm.bigClock
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 58
+% Passive clauses: 457
+% Generated clauses: 6231
+% Final active clauses: 56
+% Final passive clauses: 340
+% Input formulas: 34
+% Initial clauses: 35
+% 
+% Duplicate literals: 304
+% Trivial inequalities: 94
+% Fw subsumption resolutions: 609
+% Fw demodulations: 503
+% 
+% Simple tautologies: 97
+% Equational tautologies: 19
+% Forward subsumptions: 3988
+% 
+% Binary resolution: 4
+% Forward superposition: 2668
+% Backward superposition: 1782
+% Self superposition: 145
+% Equality factoring: 47
+% Equality resolution: 10
+% 
+% Split clauses: 70
+% Split components: 140
+% SAT solver clauses: 183
+% SAT solver unit clauses: 21
+% SAT solver binary clauses: 64
+% 
+% Sat splits: 70
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 183
+% TWLsolver calls for satisfiability: 41
+% 
+% Memory used [KB]: 4349
+% Time elapsed: 0.320 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.32 s

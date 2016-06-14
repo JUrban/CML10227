@@ -1,0 +1,277 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.modSem
+% (131905)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 186
+% Passive clauses: 3413
+% Generated clauses: 26242
+% Final active clauses: 147
+% Final passive clauses: 2957
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 1077
+% Trivial inequalities: 188
+% Fw subsumption resolutions: 2060
+% Fw demodulations: 3854
+% Bw demodulations: 32
+% 
+% Simple tautologies: 235
+% Equational tautologies: 56
+% Forward subsumptions: 14202
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 425
+% Factoring: 2
+% Forward superposition: 10128
+% Backward superposition: 7860
+% Self superposition: 225
+% Equality factoring: 124
+% Equality resolution: 20
+% 
+% Split clauses: 237
+% Split components: 474
+% SAT solver clauses: 695
+% SAT solver unit clauses: 38
+% SAT solver binary clauses: 117
+% 
+% Sat splits: 237
+% Sat splitting refutations: 11
+% 
+% TWLsolver clauses: 695
+% TWLsolver calls for satisfiability: 153
+% 
+% Memory used [KB]: 15607
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.modSem
+% (131920)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 145
+% Passive clauses: 1076
+% Generated clauses: 18606
+% Final active clauses: 119
+% Final passive clauses: 771
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 699
+% Trivial inequalities: 113
+% Fw subsumption resolutions: 868
+% Fw demodulations: 1940
+% Bw demodulations: 180
+% Condensations: 1356
+% 
+% Simple tautologies: 167
+% Equational tautologies: 45
+% Forward subsumptions: 9640
+% 
+% Binary resolution: 268
+% Factoring: 1
+% Forward superposition: 6387
+% Backward superposition: 5230
+% Self superposition: 190
+% Equality factoring: 98
+% Equality resolution: 10
+% 
+% Split clauses: 45
+% Split components: 90
+% SAT solver clauses: 1760
+% SAT solver unit clauses: 258
+% SAT solver binary clauses: 37
+% 
+% Sat splits: 45
+% Sat splitting refutations: 8
+% 
+% TWLsolver clauses: 1760
+% TWLsolver calls for satisfiability: 325
+% 
+% Memory used [KB]: 19061
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.modSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.modSem
+% SZS output start Proof for thm.modSem
+fof(f69997,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f69996,f396])).
+fof(f396,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.modSem.state_fupdfupds_comp|split|9','thm.bool.TRUTH')).
+fof(f69996,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f69994,f3812])).
+fof(f3812,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f1768,f543])).
+fof(f543,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f398,f399])).
+fof(f399,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.modSem.state_fupdfupds_comp|split|9',aHL_BOOL_CASES)).
+fof(f398,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.modSem.state_fupdfupds_comp|split|9',aHL_FALSITY)).
+fof(f1768,plain,(
+  ( ! [X2,X0] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X2))),s(X0,X2))))) )),
+  inference(forward_demodulation,[],[f1712,f472])).
+fof(f472,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))) )),
+  inference(cnf_transformation,[],[f258])).
+fof(f258,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))),
+  inference(flattening,[],[f257])).
+fof(f257,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.pair.FST_1'(s('type.pair.prod'(X1,X0),'const.pair.,_2'(s(X1,X2),s(X0,X3)))))),
+  inference(rectify,[],[f91])).
+fof(f91,axiom,(
+  ! [X11,X6] : ! [X13,X18] : s(X6,X13) = s(X6,'const.pair.FST_1'(s('type.pair.prod'(X6,X11),'const.pair.,_2'(s(X6,X13),s(X11,X18)))))),
+  file('thm.modSem.state_fupdfupds_comp|split|9','thm.pair.FST')).
+fof(f1712,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,'const.pair.FST_1'(s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X2),s(X1,X3))))))),s(X0,X2))))) )),
+  inference(unit_resulting_resolution,[],[f472,f488])).
+fof(f488,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f394])).
+fof(f394,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f284])).
+fof(f284,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f104])).
+fof(f104,axiom,(
+  ! [X48,X49,X50] : (p(s(bool,happ(s(fun(X48,bool),happ(s(fun(X48,fun(X48,bool)),'=_0'),s(X48,X49))),s(X48,X50)))) <=> s(X48,X49) = s(X48,X50))),
+  file('thm.modSem.state_fupdfupds_comp|split|9',arity_0_HL_EQ)).
+fof(f69994,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),fun(fun(sK0,'type.modSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))))),
+  inference(backward_demodulation,[],[f69921,f21990])).
+fof(f21990,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),bool),happ(s(fun(fun(sK0,'type.modSem.state'(sK1)),fun(fun(sK0,'type.modSem.state'(sK1)),bool)),'=_0'),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))))))))),
+  inference(unit_resulting_resolution,[],[f395,f487])).
+fof(f487,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f394])).
+fof(f395,plain,(
+  s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))) != s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))),s(fun(sK0,'type.modSem.state'(sK1)),sK2)))))),
+  inference(cnf_transformation,[],[f381])).
+fof(f381,plain,(
+  s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))))),s(fun(sK0,'type.modSem.state'(sK1)),sK2))) != s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK4))),s(fun(sK0,'type.modSem.state'(sK1)),'const.combin.o_2'(s(fun('type.modSem.state'(sK1),'type.modSem.state'(sK1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),sK3))),s(fun(sK0,'type.modSem.state'(sK1)),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f376])).
+fof(f376,plain,(
+  ? [X0,X1,X2,X3,X4] : s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X3))))),s(fun(X0,'type.modSem.state'(X1)),X2))) != s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X4))),s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X3))),s(fun(X0,'type.modSem.state'(X1)),X2)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4] : s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X3))))),s(fun(X0,'type.modSem.state'(X1)),X2))) = s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X4))),s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X3))),s(fun(X0,'type.modSem.state'(X1)),X2)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X4),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X3))))),s(fun(X0,'type.modSem.state'(X1)),X2))) = s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X4))),s(fun(X0,'type.modSem.state'(X1)),'const.combin.o_2'(s(fun('type.modSem.state'(X1),'type.modSem.state'(X1)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X3))),s(fun(X0,'type.modSem.state'(X1)),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X10),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X9))))),s(fun(X6,'type.modSem.state'(X7)),X8))) = s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X10))),s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X9))),s(fun(X6,'type.modSem.state'(X7)),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X10),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X9))))),s(fun(X6,'type.modSem.state'(X7)),X8))) = s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X10))),s(fun(X6,'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X9))),s(fun(X6,'type.modSem.state'(X7)),X8)))))),
+  file('thm.modSem.state_fupdfupds_comp|split|9','thm.modSem.state_fupdfupds_comp|split|9')).
+fof(f69921,plain,(
+  ( ! [X6,X8,X7,X5,X9] : (s(fun(X8,'type.modSem.state'(X5)),'const.combin.o_2'(s(fun('type.modSem.state'(X5),'type.modSem.state'(X5)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X6),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X7))))),s(fun(X8,'type.modSem.state'(X5)),X9))) = s(fun(X8,'type.modSem.state'(X5)),'const.combin.o_2'(s(fun('type.modSem.state'(X5),'type.modSem.state'(X5)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X6))),s(fun(X8,'type.modSem.state'(X5)),'const.combin.o_2'(s(fun('type.modSem.state'(X5),'type.modSem.state'(X5)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X7))),s(fun(X8,'type.modSem.state'(X5)),X9)))))) )),
+  inference(superposition,[],[f508,f420])).
+fof(f420,plain,(
+  ( ! [X2,X0,X1] : (s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X2),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X1))))) = s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X2))),s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X1)))))) )),
+  inference(cnf_transformation,[],[f176])).
+fof(f176,plain,(
+  ! [X0,X1,X2] : s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X2),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X1))))) = s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X2))),s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X1)))))),
+  inference(flattening,[],[f175])).
+fof(f175,plain,(
+  ! [X0] : ! [X1,X2] : s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X2),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X1))))) = s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.combin.o_2'(s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X2))),s(fun('type.modSem.state'(X0),'type.modSem.state'(X0)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : ! [X9,X10] : s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),'const.combin.o_2'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X10),s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X9))))) = s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.combin.o_2'(s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X10))),s(fun('type.modSem.state'(X7),'type.modSem.state'(X7)),'const.modSem.state_defined_mods_fupd_1'(s(fun(fun('type.list.list'('type.string.char'),bool),fun('type.list.list'('type.string.char'),bool)),X9)))))),
+  file('thm.modSem.state_fupdfupds_comp|split|9','thm.modSem.state_fupdfupds_comp|split|8')).
+fof(f508,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f321])).
+fof(f321,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f320])).
+fof(f320,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X11,X6,X17,X12] : ! [X10,X9,X8] : s(fun(X17,X11),'const.combin.o_2'(s(fun(X6,X11),X10),s(fun(X17,X6),'const.combin.o_2'(s(fun(X12,X6),X9),s(fun(X17,X12),X8))))) = s(fun(X17,X11),'const.combin.o_2'(s(fun(X12,X11),'const.combin.o_2'(s(fun(X6,X11),X10),s(fun(X12,X6),X9))),s(fun(X17,X12),X8)))),
+  file('thm.modSem.state_fupdfupds_comp|split|9','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.modSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 362
+% Passive clauses: 6339
+% Generated clauses: 73656
+% Final active clauses: 168
+% Final passive clauses: 1866
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 2036
+% Trivial inequalities: 199
+% Fw subsumption resolutions: 2247
+% Fw demodulations: 10983
+% Bw demodulations: 3888
+% Condensations: 2840
+% Global subsumptions: 7
+% 
+% Simple tautologies: 233
+% Equational tautologies: 300
+% Forward subsumptions: 48256
+% Fw demodulations to eq. taut.: 5
+% Bw demodulations to eq. taut.: 129
+% 
+% Unit resulting resolution: 2044
+% Factoring: 1
+% Forward superposition: 23472
+% Backward superposition: 20713
+% Self superposition: 511
+% Equality factoring: 186
+% Equality resolution: 15
+% 
+% Split clauses: 73
+% Split components: 146
+% SAT solver clauses: 6569
+% SAT solver unit clauses: 1050
+% SAT solver binary clauses: 3275
+% 
+% Sat splits: 73
+% Sat splitting refutations: 75
+% 
+% Memory used [KB]: 75990
+% Time elapsed: 3.610 s
+% ------------------------------
+% ------------------------------
+% Success in time 4.96 s

@@ -1,0 +1,404 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.LazyPairingHeap
+% (60574)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 836
+% Passive clauses: 8929
+% Generated clauses: 22621
+% Final active clauses: 819
+% Final passive clauses: 7661
+% Input formulas: 133
+% Initial clauses: 367
+% 
+% Duplicate literals: 266
+% Trivial inequalities: 12
+% Fw subsumption resolutions: 1185
+% Fw demodulations: 1785
+% Bw demodulations: 6
+% 
+% Simple tautologies: 298
+% Equational tautologies: 25
+% Forward subsumptions: 9504
+% Fw demodulations to eq. taut.: 22
+% 
+% Binary resolution: 9350
+% Factoring: 1197
+% Forward superposition: 4080
+% Backward superposition: 4174
+% Self superposition: 62
+% Equality factoring: 2
+% Equality resolution: 10
+% 
+% Split clauses: 251
+% Split components: 504
+% SAT solver clauses: 401
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 60
+% 
+% Sat splits: 251
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 401
+% TWLsolver calls for satisfiability: 331
+% 
+% Memory used [KB]: 15351
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.LazyPairingHeap
+% (60596)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 431
+% Passive clauses: 3245
+% Generated clauses: 14474
+% Final active clauses: 421
+% Final passive clauses: 2797
+% Input formulas: 133
+% Initial clauses: 367
+% 
+% Duplicate literals: 106
+% Trivial inequalities: 13
+% Fw subsumption resolutions: 384
+% Fw demodulations: 1644
+% Bw demodulations: 27
+% Condensations: 53
+% Global subsumptions: 22
+% 
+% Simple tautologies: 260
+% Equational tautologies: 9
+% Forward subsumptions: 5146
+% Fw demodulations to eq. taut.: 24
+% 
+% Binary resolution: 2275
+% Factoring: 66
+% Forward superposition: 3513
+% Backward superposition: 2664
+% Self superposition: 66
+% Equality factoring: 2
+% Equality resolution: 7
+% 
+% Split clauses: 6
+% Split components: 12
+% SAT solver clauses: 3905
+% SAT solver unit clauses: 385
+% SAT solver binary clauses: 112
+% SAT solver learnt clauses: 44
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 6
+% 
+% TWLsolver clauses: 3817
+% TWLsolver calls for satisfiability: 2831
+% 
+% Memory used [KB]: 21236
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.LazyPairingHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.LazyPairingHeap
+% SZS output start Proof for thm.LazyPairingHeap
+fof(f13873,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f571,f969,f967,f570,f968,f966,f9358,f9371,f9369,f13824,f13868,f13872])).
+fof(f13872,plain,(
+  $false | ($spl0 | $spl2)),
+  inference(subsumption_resolution,[],[f13871,f970])).
+fof(f970,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f577,f572])).
+fof(f572,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb',aHL_TRUTH)).
+fof(f577,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f414])).
+fof(f414,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f137])).
+fof(f137,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f35])).
+fof(f35,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f13871,plain,(
+  p(s(bool,'F_0')) | ($spl0 | $spl2)),
+  inference(forward_demodulation,[],[f13870,f2302])).
+fof(f2302,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0')))) )),
+  inference(unit_resulting_resolution,[],[f970,f2294,f725])).
+fof(f725,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f359])).
+fof(f359,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f358])).
+fof(f358,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f249])).
+fof(f249,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X44,X45] : ((p(s(bool,X44)) => p(s(bool,X45))) => ((p(s(bool,X45)) => p(s(bool,X44))) => s(bool,X44) = s(bool,X45)))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.bool.IMP_ANTISYM_AX')).
+fof(f2294,plain,(
+  ( ! [X0] : (~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0'))))) )),
+  inference(forward_demodulation,[],[f2289,f678])).
+fof(f678,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,sK25(X1,X0))) )),
+  inference(cnf_transformation,[],[f468])).
+fof(f468,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,sK25(X1,X0))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK25])],[f203])).
+fof(f203,plain,(
+  ! [X0,X1] : ? [X2] : s(X0,X1) = s(X0,X2)),
+  inference(flattening,[],[f202])).
+fof(f202,plain,(
+  ! [X0] : ! [X1] : ? [X2] : s(X0,X1) = s(X0,X2)),
+  inference(rectify,[],[f80])).
+fof(f80,axiom,(
+  ! [X6] : ! [X15] : ? [X9] : s(X6,X9) = s(X6,X15)),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.bool.EXISTS_REFL')).
+fof(f2289,plain,(
+  ( ! [X0] : (~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),sK25('const.LazyPairingHeap.Empty_0','type.LazyPairingHeap.heap'(X0))))))) )),
+  inference(unit_resulting_resolution,[],[f678,f663])).
+fof(f663,plain,(
+  ( ! [X0,X1] : (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1) | ~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1))))) )),
+  inference(cnf_transformation,[],[f458])).
+fof(f458,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1) & s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,sK21(X1,X0)),s('type.LazyPairingHeap.heap'(X0),sK22(X1,X0)),s('type.LazyPairingHeap.heap'(X0),sK23(X1,X0)))))) & (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | ! [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) != s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))) | p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK21,sK22,sK23])],[f457])).
+fof(f457,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1) & ? [X5,X6,X7] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X5),s('type.LazyPairingHeap.heap'(X0),X6),s('type.LazyPairingHeap.heap'(X0),X7))))) & (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | ! [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) != s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))) | p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1))))))),
+  inference(rectify,[],[f456])).
+fof(f456,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1) & ? [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))))) & (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | ! [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) != s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))) | p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1))))))),
+  inference(flattening,[],[f455])).
+fof(f455,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1) & ? [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))))) & ((s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | ! [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) != s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4)))) | p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1))))))),
+  inference(nnf_transformation,[],[f192])).
+fof(f192,plain,(
+  ! [X0,X1] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) <=> (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1) & ? [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4)))))),
+  inference(flattening,[],[f191])).
+fof(f191,plain,(
+  ! [X0] : ! [X1] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) <=> (~s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) & ? [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X8] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X6),X8)))) <=> (~s('type.LazyPairingHeap.heap'(X6),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X6),X8) & ? [X9,X10,X11] : s('type.LazyPairingHeap.heap'(X6),X8) = s('type.LazyPairingHeap.heap'(X6),'const.LazyPairingHeap.Tree_3'(s(X6,X9),s('type.LazyPairingHeap.heap'(X6),X10),s('type.LazyPairingHeap.heap'(X6),X11)))))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.LazyPairingHeap.find_min_side_def')).
+fof(f13870,plain,(
+  p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0')))) | ($spl0 | $spl2)),
+  inference(forward_demodulation,[],[f966,f969])).
+fof(f13868,plain,(
+  $false | ($spl1 | $spl3)),
+  inference(subsumption_resolution,[],[f13823,f968])).
+fof(f13823,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14) | ($spl1 | $spl3)),
+  inference(unit_resulting_resolution,[],[f9288,f658])).
+fof(f658,plain,(
+  ( ! [X0,X1] : (s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,sK15(X1,X0)),s('type.LazyPairingHeap.heap'(X0),sK16(X1,X0)),s('type.LazyPairingHeap.heap'(X0),sK17(X1,X0)))) | s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1)) )),
+  inference(cnf_transformation,[],[f451])).
+fof(f451,plain,(
+  ! [X0,X1] : (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,sK15(X1,X0)),s('type.LazyPairingHeap.heap'(X0),sK16(X1,X0)),s('type.LazyPairingHeap.heap'(X0),sK17(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK15,sK16,sK17])],[f186])).
+fof(f186,plain,(
+  ! [X0,X1] : (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | ? [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))))),
+  inference(flattening,[],[f185])).
+fof(f185,plain,(
+  ! [X0] : ! [X1] : (s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1) | ? [X2,X3,X4] : s('type.LazyPairingHeap.heap'(X0),X1) = s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X6] : ! [X29] : (s('type.LazyPairingHeap.heap'(X6),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X6),X29) | ? [X15,X7,X30] : s('type.LazyPairingHeap.heap'(X6),X29) = s('type.LazyPairingHeap.heap'(X6),'const.LazyPairingHeap.Tree_3'(s(X6,X15),s('type.LazyPairingHeap.heap'(X6),X7),s('type.LazyPairingHeap.heap'(X6),X30))))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.LazyPairingHeap.heap_nchotomy')).
+fof(f9288,plain,(
+  ( ! [X2,X0,X1] : (s('type.LazyPairingHeap.heap'(sK13),sK14) != s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Tree_3'(s(sK13,X0),s('type.LazyPairingHeap.heap'(sK13),X1),s('type.LazyPairingHeap.heap'(sK13),X2)))) ) | ($spl1 | $spl3)),
+  inference(subsumption_resolution,[],[f9287,f968])).
+fof(f9287,plain,(
+  ( ! [X2,X0,X1] : (s('type.LazyPairingHeap.heap'(sK13),sK14) != s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Tree_3'(s(sK13,X0),s('type.LazyPairingHeap.heap'(sK13),X1),s('type.LazyPairingHeap.heap'(sK13),X2))) | s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14)) ) | $spl1),
+  inference(subsumption_resolution,[],[f9271,f970])).
+fof(f9271,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'F_0')) | s('type.LazyPairingHeap.heap'(sK13),sK14) != s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Tree_3'(s(sK13,X0),s('type.LazyPairingHeap.heap'(sK13),X1),s('type.LazyPairingHeap.heap'(sK13),X2))) | s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14)) ) | $spl1),
+  inference(superposition,[],[f665,f1082])).
+fof(f1082,plain,(
+  s(bool,'F_0') = s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14))) | $spl1),
+  inference(unit_resulting_resolution,[],[f967,f607])).
+fof(f607,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f418])).
+fof(f418,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f162])).
+fof(f162,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f161])).
+fof(f161,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X43] : (s(bool,'F_0') = s(bool,X43) <=> ~p(s(bool,X43)))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f665,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | s('type.LazyPairingHeap.heap'(X0),X1) != s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X2),s('type.LazyPairingHeap.heap'(X0),X3),s('type.LazyPairingHeap.heap'(X0),X4))) | s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1)) )),
+  inference(cnf_transformation,[],[f458])).
+fof(f13824,plain,(
+  $false | ($spl1 | $spl3)),
+  inference(unit_resulting_resolution,[],[f968,f9288,f658])).
+fof(f9369,plain,(
+  p(s(bool,'const.relation.reflexive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.prim_rec.<_0')))) | $spl4),
+  inference(cnf_transformation,[],[f9369_D])).
+fof(f9369_D,plain,(
+  p(s(bool,'const.relation.reflexive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.prim_rec.<_0')))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f9371,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK24('const.prim_rec.<_0','type.num.num')),s('type.num.num',sK24('const.prim_rec.<_0','type.num.num'))))) | $spl7),
+  inference(cnf_transformation,[],[f9371_D])).
+fof(f9371_D,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK24('const.prim_rec.<_0','type.num.num')),s('type.num.num',sK24('const.prim_rec.<_0','type.num.num'))))) <=> ~$spl7),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl7])])).
+fof(f9358,plain,(
+  ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',sK24('const.prim_rec.<_0','type.num.num')),s('type.num.num',sK24('const.prim_rec.<_0','type.num.num'))))) | p(s(bool,'const.relation.reflexive_1'(s(fun('type.num.num',fun('type.num.num',bool)),'const.prim_rec.<_0'))))),
+  inference(superposition,[],[f674,f724])).
+fof(f724,plain,(
+  ( ! [X0,X1] : (s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'const.prim_rec.<_0'),s('type.num.num',X0))),s('type.num.num',X1)))) )),
+  inference(cnf_transformation,[],[f248])).
+fof(f248,plain,(
+  ! [X0,X1] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X1))) = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'const.prim_rec.<_0'),s('type.num.num',X0))),s('type.num.num',X1)))),
+  inference(rectify,[],[f129])).
+fof(f129,axiom,(
+  ! [X61,X62] : s(bool,'const.prim_rec.<_2'(s('type.num.num',X61),s('type.num.num',X62))) = s(bool,happ(s(fun('type.num.num',bool),happ(s(fun('type.num.num',fun('type.num.num',bool)),'const.prim_rec.<_0'),s('type.num.num',X61))),s('type.num.num',X62)))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','ARITY_0_2_const.prim_rec.<')).
+fof(f674,plain,(
+  ( ! [X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK24(X1,X0)))),s(X0,sK24(X1,X0))))) | p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1))))) )),
+  inference(cnf_transformation,[],[f465])).
+fof(f465,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1)))) | ! [X3] : p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X3))))) & (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,sK24(X1,X0)))),s(X0,sK24(X1,X0))))) | p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK24])],[f464])).
+fof(f464,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1)))) | ! [X3] : p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X3))),s(X0,X3))))) & (? [X2] : ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X2)))) | p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1))))))),
+  inference(rectify,[],[f463])).
+fof(f463,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1)))) | ! [X2] : p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X2))))) & (? [X2] : ~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X2)))) | p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1))))))),
+  inference(nnf_transformation,[],[f198])).
+fof(f198,plain,(
+  ! [X0,X1] : (p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1)))) <=> ! [X2] : p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X2)))))),
+  inference(flattening,[],[f197])).
+fof(f197,plain,(
+  ! [X0] : ! [X1] : (p(s(bool,'const.relation.reflexive_1'(s(fun(X0,fun(X0,bool)),X1)))) <=> ! [X2] : p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),X1),s(X0,X2))),s(X0,X2)))))),
+  inference(rectify,[],[f95])).
+fof(f95,axiom,(
+  ! [X6] : ! [X71] : (p(s(bool,'const.relation.reflexive_1'(s(fun(X6,fun(X6,bool)),X71)))) <=> ! [X9] : p(s(bool,happ(s(fun(X6,bool),happ(s(fun(X6,fun(X6,bool)),X71),s(X6,X9))),s(X6,X9)))))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.relation.reflexive_def')).
+fof(f966,plain,(
+  p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14)))) | $spl0),
+  inference(cnf_transformation,[],[f966_D])).
+fof(f966_D,plain,(
+  p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14)))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f968,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(sK13),sK14) | $spl3),
+  inference(cnf_transformation,[],[f968_D])).
+fof(f968_D,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(sK13),sK14) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f570,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(sK13),sK14) | p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14))))),
+  inference(cnf_transformation,[],[f413])).
+fof(f413,plain,(
+  (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14)))) | s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(sK13),sK14)) & (~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14)))) | s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13,sK14])],[f412])).
+fof(f412,plain,(
+  ? [X0,X1] : ((p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1)) & (~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) | s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1)))),
+  inference(nnf_transformation,[],[f338])).
+fof(f338,plain,(
+  ? [X0,X1] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) <~> s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1))),
+  inference(ennf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~! [X0,X1] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) <=> s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') != s('type.LazyPairingHeap.heap'(X0),X1))),
+  inference(flattening,[],[f135])).
+fof(f135,plain,(
+  ~! [X0] : ! [X1] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X0),X1)))) <=> ~s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X0),X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X6),X7)))) <=> ~s('type.LazyPairingHeap.heap'(X6),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X6),X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(X6),X7)))) <=> ~s('type.LazyPairingHeap.heap'(X6),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(X6),X7))),
+  file('thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb','thm.LazyPairingHeap.LazyPairingHeap_7|48|_prove_ltb')).
+fof(f967,plain,(
+  ~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14)))) | $spl1),
+  inference(cnf_transformation,[],[f967_D])).
+fof(f967_D,plain,(
+  ~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14)))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f969,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14) | $spl2),
+  inference(cnf_transformation,[],[f969_D])).
+fof(f969_D,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f571,plain,(
+  s('type.LazyPairingHeap.heap'(sK13),'const.LazyPairingHeap.Empty_0') = s('type.LazyPairingHeap.heap'(sK13),sK14) | ~p(s(bool,'const.LazyPairingHeap.find_min_side_1'(s('type.LazyPairingHeap.heap'(sK13),sK14))))),
+  inference(cnf_transformation,[],[f413])).
+% SZS output end Proof for thm.LazyPairingHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 499
+% Passive clauses: 2054
+% Generated clauses: 13299
+% Final active clauses: 376
+% Final passive clauses: 1295
+% Input formulas: 133
+% Initial clauses: 367
+% 
+% Duplicate literals: 9
+% Trivial inequalities: 6
+% Fw subsumption resolutions: 71
+% Fw demodulations: 2082
+% Bw demodulations: 26
+% Condensations: 25
+% 
+% Simple tautologies: 117
+% Equational tautologies: 17
+% Forward subsumptions: 8864
+% Fw demodulations to eq. taut.: 48
+% 
+% Unit resulting resolution: 2585
+% Factoring: 1
+% Forward superposition: 4072
+% Backward superposition: 3975
+% Self superposition: 68
+% Equality factoring: 2
+% Equality resolution: 5
+% 
+% Split clauses: 3
+% Split components: 6
+% SAT solver clauses: 2065
+% SAT solver unit clauses: 499
+% SAT solver binary clauses: 880
+% 
+% Sat splits: 3
+% Sat splitting refutations: 3
+% 
+% Memory used [KB]: 16502
+% Time elapsed: 0.393 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.726 s

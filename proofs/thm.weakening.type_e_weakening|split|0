@@ -1,0 +1,196 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.weakening
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.weakening
+% SZS output start Proof for thm.weakening
+fof(f17197,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f17192,f240,f359,f361,f216,f362])).
+fof(f362,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f362_D])).
+fof(f362_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f216,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.weakening.type_e_weakening|split|0',aHL_FALSITY)).
+fof(f361,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(cnf_transformation,[],[f361_D])).
+fof(f361_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f359,plain,(
+  p(s(bool,'T_0')) | $spl0),
+  inference(cnf_transformation,[],[f359_D])).
+fof(f359_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f240,plain,(
+  p(s(bool,'T_0')) | p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f146])).
+fof(f146,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')) | p(s(bool,X0))))),
+  inference(flattening,[],[f145])).
+fof(f145,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | (~p(s(bool,'F_0')) | p(s(bool,X0)))))),
+  inference(nnf_transformation,[],[f102])).
+fof(f102,plain,(
+  ! [X0] : ((~p(s(bool,'F_0')) | p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(ennf_transformation,[],[f56])).
+fof(f56,plain,(
+  ! [X0] : ((p(s(bool,'F_0')) => p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X8] : ((p(s(bool,'F_0')) => p(s(bool,X8))) <=> p(s(bool,'T_0')))),
+  file('thm.weakening.type_e_weakening|split|0','thm.bool.IMP_CLAUSES|split|2')).
+fof(f17192,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f17191,f362])).
+fof(f17191,plain,(
+  p(s(bool,'F_0')) | $spl0),
+  inference(forward_demodulation,[],[f17190,f847])).
+fof(f847,plain,(
+  s(bool,'F_0') = s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',sK11),s('type.ast.t',sK12)))),
+  inference(resolution,[],[f209,f228])).
+fof(f228,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f137])).
+fof(f137,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f49])).
+fof(f49,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X8] : (s(bool,'F_0') = s(bool,X8) <=> ~p(s(bool,X8)))),
+  file('thm.weakening.type_e_weakening|split|0','thm.bool.EQ_CLAUSES|split|2')).
+fof(f209,plain,(
+  ~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',sK11),s('type.ast.t',sK12))))),
+  inference(cnf_transformation,[],[f132])).
+fof(f132,plain,(
+  p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK10),s('type.ast.exp',sK11),s('type.ast.t',sK12)))) & p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',sK13),s('type.typeSystem.type_environment',sK10)))) & ~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',sK11),s('type.ast.t',sK12))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13])],[f94])).
+fof(f94,plain,(
+  ? [X0,X1,X2,X3] : (p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X0),s('type.ast.exp',X1),s('type.ast.t',X2)))) & p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X3),s('type.typeSystem.type_environment',X0)))) & ~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X3),s('type.ast.exp',X1),s('type.ast.t',X2)))))),
+  inference(flattening,[],[f93])).
+fof(f93,plain,(
+  ? [X0,X1,X2,X3] : ((p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X0),s('type.ast.exp',X1),s('type.ast.t',X2)))) & p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X3),s('type.typeSystem.type_environment',X0))))) & ~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X3),s('type.ast.exp',X1),s('type.ast.t',X2)))))),
+  inference(ennf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~! [X0,X1,X2,X3] : ((p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X0),s('type.ast.exp',X1),s('type.ast.t',X2)))) & p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X3),s('type.typeSystem.type_environment',X0))))) => p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X3),s('type.ast.exp',X1),s('type.ast.t',X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ((p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X6),s('type.ast.exp',X7),s('type.ast.t',X8)))) & p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X9),s('type.typeSystem.type_environment',X6))))) => p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X9),s('type.ast.exp',X7),s('type.ast.t',X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ((p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X6),s('type.ast.exp',X7),s('type.ast.t',X8)))) & p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X9),s('type.typeSystem.type_environment',X6))))) => p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X9),s('type.ast.exp',X7),s('type.ast.t',X8)))))),
+  file('thm.weakening.type_e_weakening|split|0','thm.weakening.type_e_weakening|split|0')).
+fof(f17190,plain,(
+  p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',sK11),s('type.ast.t',sK12)))) | $spl0),
+  inference(subsumption_resolution,[],[f17182,f359])).
+fof(f17182,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',sK11),s('type.ast.t',sK12)))) | $spl0),
+  inference(superposition,[],[f4100,f791])).
+fof(f791,plain,(
+  s(bool,'T_0') = s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK10),s('type.ast.exp',sK11),s('type.ast.t',sK12)))),
+  inference(resolution,[],[f207,f224])).
+fof(f224,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f135])).
+fof(f135,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X8] : (s(bool,'T_0') = s(bool,X8) <=> p(s(bool,X8)))),
+  file('thm.weakening.type_e_weakening|split|0','thm.bool.EQ_CLAUSES|split|1')).
+fof(f207,plain,(
+  p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK10),s('type.ast.exp',sK11),s('type.ast.t',sK12))))),
+  inference(cnf_transformation,[],[f132])).
+fof(f4100,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK10),s('type.ast.exp',X0),s('type.ast.t',X1)))) | p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',X0),s('type.ast.t',X1))))) ) | $spl0),
+  inference(subsumption_resolution,[],[f4098,f359])).
+fof(f4098,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK13),s('type.ast.exp',X0),s('type.ast.t',X1)))) | ~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',sK10),s('type.ast.exp',X0),s('type.ast.t',X1))))) )),
+  inference(superposition,[],[f296,f374])).
+fof(f374,plain,(
+  s(bool,'T_0') = s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',sK13),s('type.typeSystem.type_environment',sK10)))),
+  inference(resolution,[],[f224,f208])).
+fof(f208,plain,(
+  p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',sK13),s('type.typeSystem.type_environment',sK10))))),
+  inference(cnf_transformation,[],[f132])).
+fof(f296,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X3),s('type.typeSystem.type_environment',X0)))) | p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X3),s('type.ast.exp',X1),s('type.ast.t',X2)))) | ~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X0),s('type.ast.exp',X1),s('type.ast.t',X2))))) )),
+  inference(cnf_transformation,[],[f113])).
+fof(f113,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X0),s('type.ast.exp',X1),s('type.ast.t',X2)))) | ! [X3] : (~p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X3),s('type.typeSystem.type_environment',X0)))) | p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X3),s('type.ast.exp',X1),s('type.ast.t',X2))))))),
+  inference(ennf_transformation,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X0),s('type.ast.exp',X1),s('type.ast.t',X2)))) => ! [X3] : (p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X3),s('type.typeSystem.type_environment',X0)))) => p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X3),s('type.ast.exp',X1),s('type.ast.t',X2))))))),
+  inference(rectify,[],[f36])).
+fof(f36,axiom,(
+  ! [X6,X7,X8] : (p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X6),s('type.ast.exp',X7),s('type.ast.t',X8)))) => ! [X9] : (p(s(bool,'const.weakening.weak_2'(s('type.typeSystem.type_environment',X9),s('type.typeSystem.type_environment',X6)))) => p(s(bool,'const.typeSystem.type_e_3'(s('type.typeSystem.type_environment',X9),s('type.ast.exp',X7),s('type.ast.t',X8))))))),
+  file('thm.weakening.type_e_weakening|split|0','thm.weakening.weakening_29_prove_ltb|split|0')).
+% SZS output end Proof for thm.weakening
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 739
+% Passive clauses: 5891
+% Generated clauses: 16682
+% Final active clauses: 696
+% Final passive clauses: 4751
+% Input formulas: 37
+% Initial clauses: 149
+% 
+% Duplicate literals: 589
+% Trivial inequalities: 28
+% Fw subsumption resolutions: 1800
+% Fw demodulations: 531
+% Bw demodulations: 42
+% 
+% Simple tautologies: 193
+% Equational tautologies: 61
+% Forward subsumptions: 6936
+% 
+% Binary resolution: 7465
+% Factoring: 1332
+% Forward superposition: 2613
+% Backward superposition: 1814
+% Self superposition: 28
+% Equality factoring: 30
+% Equality resolution: 7
+% 
+% Split clauses: 611
+% Split components: 1240
+% SAT solver clauses: 1023
+% SAT solver unit clauses: 15
+% SAT solver binary clauses: 116
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 611
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 1019
+% TWLsolver calls for satisfiability: 457
+% 
+% Memory used [KB]: 7931
+% Time elapsed: 0.462 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.47 s

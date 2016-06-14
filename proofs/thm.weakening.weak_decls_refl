@@ -1,0 +1,195 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.weakening
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.weakening
+% SZS output start Proof for thm.weakening
+fof(f777,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f772,f97,f101,f64,f103])).
+fof(f103,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f103_D])).
+fof(f103_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f64,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f21])).
+fof(f21,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.weakening.weak_decls_refl',aHL_FALSITY)).
+fof(f101,plain,(
+  p(s(bool,'T_0')) | $spl2),
+  inference(cnf_transformation,[],[f101_D])).
+fof(f101_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f97,plain,(
+  p(s(bool,'T_0'))),
+  inference(trivial_inequality_removal,[],[f90])).
+fof(f90,plain,(
+  ( ! [X0,X1] : (p(s(bool,'T_0')) | s(X0,X1) != s(X0,X1)) )),
+  inference(cnf_transformation,[],[f57])).
+fof(f57,plain,(
+  ! [X0,X1] : ((s(X0,X1) != s(X0,X1) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | s(X0,X1) = s(X0,X1)))),
+  inference(nnf_transformation,[],[f36])).
+fof(f36,plain,(
+  ! [X0,X1] : (s(X0,X1) = s(X0,X1) <=> p(s(bool,'T_0')))),
+  inference(flattening,[],[f35])).
+fof(f35,plain,(
+  ! [X0] : ! [X1] : (s(X0,X1) = s(X0,X1) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X8] : ! [X9] : (s(X8,X9) = s(X8,X9) <=> p(s(bool,'T_0')))),
+  file('thm.weakening.weak_decls_refl','thm.bool.REFL_CLAUSE')).
+fof(f772,plain,(
+  $false | ($spl2 | $spl5)),
+  inference(subsumption_resolution,[],[f763,f103])).
+fof(f763,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(superposition,[],[f758,f109])).
+fof(f109,plain,(
+  s(bool,'F_0') = s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',sK0),s('type.typeSystem.decls',sK0)))),
+  inference(resolution,[],[f71,f61])).
+fof(f61,plain,(
+  ~p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',sK0),s('type.typeSystem.decls',sK0))))),
+  inference(cnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',sK0),s('type.typeSystem.decls',sK0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f40])).
+fof(f40,plain,(
+  ? [X0] : ~p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))),
+  inference(ennf_transformation,[],[f20])).
+fof(f20,plain,(
+  ~! [X0] : p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X6),s('type.typeSystem.decls',X6))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X6),s('type.typeSystem.decls',X6))))),
+  file('thm.weakening.weak_decls_refl','thm.weakening.weak_decls_refl')).
+fof(f71,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f17])).
+fof(f17,axiom,(
+  ! [X7] : (s(bool,'F_0') = s(bool,X7) <=> ~p(s(bool,X7)))),
+  file('thm.weakening.weak_decls_refl','thm.bool.EQ_CLAUSES|split|3')).
+fof(f758,plain,(
+  ( ! [X0] : (p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))) ) | $spl2),
+  inference(subsumption_resolution,[],[f757,f101])).
+fof(f757,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))) ) | $spl2),
+  inference(forward_demodulation,[],[f756,f136])).
+fof(f136,plain,(
+  ( ! [X2,X3] : (s(bool,'T_0') = s(bool,'const.pred_set.SUBSET_2'(s(fun(X2,bool),X3),s(fun(X2,bool),X3)))) )),
+  inference(resolution,[],[f89,f67])).
+fof(f67,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f22])).
+fof(f22,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X7] : (s(bool,'T_0') = s(bool,X7) <=> p(s(bool,X7)))),
+  file('thm.weakening.weak_decls_refl','thm.bool.EQ_CLAUSES|split|1')).
+fof(f89,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.pred_set.SUBSET_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X1))))) )),
+  inference(cnf_transformation,[],[f34])).
+fof(f34,plain,(
+  ! [X0,X1] : p(s(bool,'const.pred_set.SUBSET_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X1))))),
+  inference(flattening,[],[f33])).
+fof(f33,plain,(
+  ! [X0] : ! [X1] : p(s(bool,'const.pred_set.SUBSET_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X1))))),
+  inference(rectify,[],[f18])).
+fof(f18,axiom,(
+  ! [X8] : ! [X10] : p(s(bool,'const.pred_set.SUBSET_2'(s(fun(X8,bool),X10),s(fun(X8,bool),X10))))),
+  file('thm.weakening.weak_decls_refl','thm.pred_set.SUBSET_REFL')).
+fof(f756,plain,(
+  ( ! [X0] : (~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))) ) | $spl2),
+  inference(subsumption_resolution,[],[f755,f101])).
+fof(f755,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))) )),
+  inference(forward_demodulation,[],[f754,f136])).
+fof(f754,plain,(
+  ( ! [X0] : (~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0)))))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X0))))) )),
+  inference(equality_resolution,[],[f95])).
+fof(f95,plain,(
+  ( ! [X0,X1] : (s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X0))) != s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X1))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0)))))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X1))))) )),
+  inference(cnf_transformation,[],[f59])).
+fof(f59,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X1)))) | (s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X0))) = s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X1))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0)))))))) & (s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X0))) != s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X1))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0)))))) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X1))))))),
+  inference(flattening,[],[f58])).
+fof(f58,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X1)))) | (s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X0))) = s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X1))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0)))))))) & ((s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X0))) != s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X1))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) | ~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0))))))) | p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X1))))))),
+  inference(nnf_transformation,[],[f37])).
+fof(f37,plain,(
+  ! [X0,X1] : (p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X0),s('type.typeSystem.decls',X1)))) <=> (s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X0))) = s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X1))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X0)))))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X0))))))))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X11,X12] : (p(s(bool,'const.typeSystem.weak_decls_2'(s('type.typeSystem.decls',X11),s('type.typeSystem.decls',X12)))) <=> (s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X11))) = s(fun('type.list.list'('type.string.char'),bool),'const.typeSystem.decls_defined_mods_1'(s('type.typeSystem.decls',X12))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X12))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_types_1'(s('type.typeSystem.decls',X11)))))) & p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X12))),s(fun('type.ast.id'('type.list.list'('type.string.char')),bool),'const.typeSystem.decls_defined_exns_1'(s('type.typeSystem.decls',X11))))))))),
+  file('thm.weakening.weak_decls_refl','thm.typeSystem.weak_decls_def')).
+% SZS output end Proof for thm.weakening
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 32
+% Passive clauses: 126
+% Generated clauses: 679
+% Final active clauses: 28
+% Final passive clauses: 59
+% Input formulas: 18
+% Initial clauses: 36
+% 
+% Duplicate literals: 62
+% Trivial inequalities: 24
+% Fw subsumption resolutions: 79
+% Fw demodulations: 20
+% Bw demodulations: 3
+% 
+% Simple tautologies: 39
+% Equational tautologies: 18
+% Forward subsumptions: 292
+% 
+% Binary resolution: 24
+% Forward superposition: 214
+% Backward superposition: 141
+% Self superposition: 30
+% Equality factoring: 28
+% Equality resolution: 6
+% 
+% Split clauses: 23
+% Split components: 51
+% SAT solver clauses: 47
+% SAT solver unit clauses: 6
+% SAT solver binary clauses: 23
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 23
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 44
+% TWLsolver calls for satisfiability: 19
+% 
+% Memory used [KB]: 895
+% Time elapsed: 0.024 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.023 s

@@ -1,0 +1,243 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.weakening
+% (69277)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 708
+% Passive clauses: 6789
+% Generated clauses: 22871
+% Final active clauses: 700
+% Final passive clauses: 5747
+% Input formulas: 39
+% Initial clauses: 167
+% 
+% Duplicate literals: 944
+% Trivial inequalities: 86
+% Fw subsumption resolutions: 2977
+% Fw demodulations: 428
+% Bw demodulations: 5
+% 
+% Simple tautologies: 262
+% Equational tautologies: 77
+% Forward subsumptions: 8675
+% 
+% Binary resolution: 7419
+% Factoring: 1378
+% Forward superposition: 3331
+% Backward superposition: 5374
+% Self superposition: 114
+% Equality factoring: 112
+% Equality resolution: 23
+% 
+% Split clauses: 1917
+% Split components: 4089
+% SAT solver clauses: 2386
+% SAT solver unit clauses: 34
+% SAT solver binary clauses: 182
+% 
+% Sat splits: 1917
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2379
+% TWLsolver calls for satisfiability: 434
+% 
+% Memory used [KB]: 10746
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.weakening
+% (69375)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 385
+% Passive clauses: 2020
+% Generated clauses: 9532
+% Final active clauses: 382
+% Final passive clauses: 1620
+% Input formulas: 39
+% Initial clauses: 167
+% 
+% Duplicate literals: 250
+% Trivial inequalities: 25
+% Fw subsumption resolutions: 976
+% Fw demodulations: 128
+% Bw demodulations: 17
+% Condensations: 271
+% Global subsumptions: 13
+% 
+% Simple tautologies: 260
+% Equational tautologies: 24
+% Forward subsumptions: 3115
+% 
+% Binary resolution: 3439
+% Factoring: 350
+% Forward superposition: 1100
+% Backward superposition: 755
+% Self superposition: 24
+% Equality factoring: 28
+% Equality resolution: 7
+% 
+% Split clauses: 159
+% Split components: 323
+% SAT solver clauses: 2623
+% SAT solver unit clauses: 175
+% SAT solver binary clauses: 78
+% SAT solver learnt clauses: 26
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 159
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 2571
+% TWLsolver calls for satisfiability: 1705
+% 
+% Memory used [KB]: 9978
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.weakening
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.weakening
+% SZS output start Proof for thm.weakening
+fof(f1180,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f1179,f224])).
+fof(f224,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.weakening.weakening_33_prove_ltb','thm.bool.TRUTH')).
+fof(f1179,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f1176,f445])).
+fof(f445,plain,(
+  s(bool,'T_0') = s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK18),s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK17)))),
+  inference(unit_resulting_resolution,[],[f221,f239])).
+fof(f239,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f154])).
+fof(f154,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f52])).
+fof(f52,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X16] : (s(bool,'T_0') = s(bool,X16) <=> p(s(bool,X16)))),
+  file('thm.weakening.weakening_33_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f221,plain,(
+  p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK18),s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK17))))),
+  inference(cnf_transformation,[],[f151])).
+fof(f151,plain,(
+  p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK18),s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK17)))) & s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.option.SOME_1'(s('type.pair.prod'(sK14,sK15),'const.pair.,_2'(s(sK14,sK19),s(sK15,sK20))))) = s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK17),s('type.pair.prod'(sK12,sK13),'const.pair.,_2'(s(sK12,sK16),s(sK13,sK21))))) & s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.option.SOME_1'(s('type.pair.prod'(sK14,sK15),'const.pair.,_2'(s(sK14,sK19),s(sK15,sK20))))) != s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK18),s('type.pair.prod'(sK12,sK13),'const.pair.,_2'(s(sK12,sK16),s(sK13,sK21)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13,sK14,sK15,sK16,sK17,sK18,sK19,sK20,sK21])],[f102])).
+fof(f102,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7,X8,X9] : (p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5)))) & s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) = s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9))))) & s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) != s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9))))))),
+  inference(flattening,[],[f101])).
+fof(f101,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7,X8,X9] : ((p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5)))) & s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) = s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9)))))) & s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) != s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9))))))),
+  inference(ennf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6,X7,X8,X9] : ((p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5)))) & s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) = s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9)))))) => s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) = s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9))))))),
+  inference(flattening,[],[f41])).
+fof(f41,plain,(
+  ~! [X0,X1,X2,X3] : ! [X4,X5,X6,X7,X8,X9] : ((p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5)))) & s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) = s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X5),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9)))))) => s('type.option.option'('type.pair.prod'(X2,X3)),'const.option.SOME_1'(s('type.pair.prod'(X2,X3),'const.pair.,_2'(s(X2,X7),s(X3,X8))))) = s('type.option.option'('type.pair.prod'(X2,X3)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X0,X1),'type.pair.prod'(X2,X3)),X6),s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X4),s(X1,X9))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9] : ! [X10,X11,X12,X13,X14,X15] : ((p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X12),s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X11)))) & s('type.option.option'('type.pair.prod'(X8,X9)),'const.option.SOME_1'(s('type.pair.prod'(X8,X9),'const.pair.,_2'(s(X8,X13),s(X9,X14))))) = s('type.option.option'('type.pair.prod'(X8,X9)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X11),s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X15)))))) => s('type.option.option'('type.pair.prod'(X8,X9)),'const.option.SOME_1'(s('type.pair.prod'(X8,X9),'const.pair.,_2'(s(X8,X13),s(X9,X14))))) = s('type.option.option'('type.pair.prod'(X8,X9)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X12),s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X15))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9] : ! [X10,X11,X12,X13,X14,X15] : ((p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X12),s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X11)))) & s('type.option.option'('type.pair.prod'(X8,X9)),'const.option.SOME_1'(s('type.pair.prod'(X8,X9),'const.pair.,_2'(s(X8,X13),s(X9,X14))))) = s('type.option.option'('type.pair.prod'(X8,X9)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X11),s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X15)))))) => s('type.option.option'('type.pair.prod'(X8,X9)),'const.option.SOME_1'(s('type.pair.prod'(X8,X9),'const.pair.,_2'(s(X8,X13),s(X9,X14))))) = s('type.option.option'('type.pair.prod'(X8,X9)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(X6,X7),'type.pair.prod'(X8,X9)),X12),s('type.pair.prod'(X6,X7),'const.pair.,_2'(s(X6,X10),s(X7,X15))))))),
+  file('thm.weakening.weakening_33_prove_ltb','thm.weakening.weakening_33_prove_ltb')).
+fof(f1176,plain,(
+  ~p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK18),s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK17))))),
+  inference(unit_resulting_resolution,[],[f222,f223,f410])).
+fof(f410,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (~p(s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X4),s('type.finite_map.fmap'(X0,X1),X5)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X5),s(X0,X3)))) )),
+  inference(forward_demodulation,[],[f299,f297])).
+fof(f297,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2)))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,plain,(
+  ! [X0,X1,X2,X3] : s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2)))),
+  inference(flattening,[],[f85])).
+fof(f85,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X0,X1),X2),s('type.finite_map.fmap'(X0,X1),X3))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X3),s('type.finite_map.fmap'(X0,X1),X2)))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X6,X7] : ! [X31,X32] : s(bool,'const.weakening.weakCT_2'(s('type.finite_map.fmap'(X6,X7),X31),s('type.finite_map.fmap'(X6,X7),X32))) = s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X32),s('type.finite_map.fmap'(X6,X7),X31)))),
+  file('thm.weakening.weakening_33_prove_ltb','thm.weakening.weakCT_def')).
+fof(f299,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X5),s(X0,X3))) | ~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X5),s('type.finite_map.fmap'(X0,X1),X4))))) )),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : (~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X5),s('type.finite_map.fmap'(X0,X1),X4)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X5),s(X0,X3))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))))),
+  inference(flattening,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((~p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X5),s('type.finite_map.fmap'(X0,X1),X4)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) != s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X5),s(X0,X3)))) | s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))))),
+  inference(ennf_transformation,[],[f90])).
+fof(f90,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : ((p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X5),s('type.finite_map.fmap'(X0,X1),X4)))) & s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X5),s(X0,X3)))) => s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))))),
+  inference(flattening,[],[f89])).
+fof(f89,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : ((p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X0,X1),X5),s('type.finite_map.fmap'(X0,X1),X4)))) & s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X5),s(X0,X3)))) => s('type.option.option'(X1),'const.option.SOME_1'(s(X1,X2))) = s('type.option.option'(X1),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X0,X1),X4),s(X0,X3))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X7] : ! [X24,X25,X26,X27] : ((p(s(bool,'const.finite_map.SUBMAP_2'(s('type.finite_map.fmap'(X6,X7),X27),s('type.finite_map.fmap'(X6,X7),X26)))) & s('type.option.option'(X7),'const.option.SOME_1'(s(X7,X24))) = s('type.option.option'(X7),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,X7),X27),s(X6,X25)))) => s('type.option.option'(X7),'const.option.SOME_1'(s(X7,X24))) = s('type.option.option'(X7),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'(X6,X7),X26),s(X6,X25))))),
+  file('thm.weakening.weakening_33_prove_ltb','thm.finite_map.FLOOKUP_SUBMAP')).
+fof(f223,plain,(
+  s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.option.SOME_1'(s('type.pair.prod'(sK14,sK15),'const.pair.,_2'(s(sK14,sK19),s(sK15,sK20))))) != s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK18),s('type.pair.prod'(sK12,sK13),'const.pair.,_2'(s(sK12,sK16),s(sK13,sK21)))))),
+  inference(cnf_transformation,[],[f151])).
+fof(f222,plain,(
+  s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.option.SOME_1'(s('type.pair.prod'(sK14,sK15),'const.pair.,_2'(s(sK14,sK19),s(sK15,sK20))))) = s('type.option.option'('type.pair.prod'(sK14,sK15)),'const.finite_map.FLOOKUP_2'(s('type.finite_map.fmap'('type.pair.prod'(sK12,sK13),'type.pair.prod'(sK14,sK15)),sK17),s('type.pair.prod'(sK12,sK13),'const.pair.,_2'(s(sK12,sK16),s(sK13,sK21)))))),
+  inference(cnf_transformation,[],[f151])).
+% SZS output end Proof for thm.weakening
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 206
+% Passive clauses: 260
+% Generated clauses: 959
+% Final active clauses: 205
+% Final passive clauses: 54
+% Input formulas: 39
+% Initial clauses: 167
+% 
+% Duplicate literals: 6
+% Trivial inequalities: 2
+% Fw subsumption resolutions: 38
+% Fw demodulations: 64
+% Bw demodulations: 1
+% Condensations: 15
+% 
+% Simple tautologies: 43
+% Equational tautologies: 12
+% Forward subsumptions: 516
+% 
+% Unit resulting resolution: 494
+% Forward superposition: 82
+% Backward superposition: 85
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 1
+% 
+% SAT solver clauses: 262
+% SAT solver unit clauses: 114
+% SAT solver binary clauses: 49
+% 
+% Memory used [KB]: 1407
+% Time elapsed: 0.025 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.332 s

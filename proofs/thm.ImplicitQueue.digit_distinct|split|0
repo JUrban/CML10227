@@ -1,0 +1,299 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.ImplicitQueue
+% (113849)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 107
+% Passive clauses: 2793
+% Generated clauses: 18477
+% Final active clauses: 105
+% Final passive clauses: 2582
+% Input formulas: 37
+% Initial clauses: 59
+% 
+% Duplicate literals: 407
+% Trivial inequalities: 213
+% Fw subsumption resolutions: 2493
+% Fw demodulations: 3008
+% Bw demodulations: 2
+% 
+% Simple tautologies: 221
+% Equational tautologies: 54
+% Forward subsumptions: 8879
+% 
+% Binary resolution: 211
+% Factoring: 2
+% Forward superposition: 6051
+% Backward superposition: 5533
+% Self superposition: 272
+% Equality factoring: 139
+% Equality resolution: 32
+% 
+% Split clauses: 267
+% Split components: 535
+% SAT solver clauses: 456
+% SAT solver unit clauses: 14
+% SAT solver binary clauses: 92
+% 
+% Sat splits: 267
+% 
+% TWLsolver clauses: 456
+% TWLsolver calls for satisfiability: 94
+% 
+% Memory used [KB]: 14072
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.ImplicitQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ImplicitQueue
+% SZS output start Proof for thm.ImplicitQueue
+fof(f4254,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f4235,f3875,f3876,f131,f193,f181,f225,f3458,f3625,f125,f187,f182,f226,f4187,f126,f189,f128,f191,f3898,f3877,f3879,f298,f303,f172,f219])).
+fof(f219,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1)) ) | $spl52),
+  inference(cnf_transformation,[],[f219_D])).
+fof(f219_D,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1)) ) <=> ~$spl52),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl52])])).
+fof(f172,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | p(s(bool,X1)) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f101])).
+fof(f101,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f100])).
+fof(f100,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f81])).
+fof(f81,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f19])).
+fof(f19,axiom,(
+  ! [X29,X30] : ((p(s(bool,X29)) => p(s(bool,X30))) => ((p(s(bool,X30)) => p(s(bool,X29))) => s(bool,X29) = s(bool,X30)))),
+  file('thm.ImplicitQueue.digit_distinct|split|0','thm.bool.IMP_ANTISYM_AX')).
+fof(f303,plain,(
+  ( ! [X8,X7] : (p(s(bool,X7)) | s(bool,X7) = s(bool,X8) | s(bool,'T_0') = s(bool,X8)) ) | $spl82),
+  inference(cnf_transformation,[],[f303_D])).
+fof(f303_D,plain,(
+  ( ! [X8,X7] : (p(s(bool,X7)) | s(bool,X7) = s(bool,X8) | s(bool,'T_0') = s(bool,X8)) ) <=> ~$spl82),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl82])])).
+fof(f298,plain,(
+  ( ! [X8,X7] : (p(s(bool,X7)) | s(bool,X7) = s(bool,X8) | s(bool,'T_0') = s(bool,X8)) ) | ($spl8 | $spl52)),
+  inference(resolution,[],[f219,f193])).
+fof(f3879,plain,(
+  ( ! [X101] : (p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X101),s('type.ImplicitQueue.times'(sK0),sK1))))) ) | $spl790),
+  inference(cnf_transformation,[],[f3879_D])).
+fof(f3879_D,plain,(
+  ( ! [X101] : (p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X101),s('type.ImplicitQueue.times'(sK0),sK1))))) ) <=> ~$spl790),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl790])])).
+fof(f3877,plain,(
+  ( ! [X97] : (s(bool,'T_0') = s(bool,X97)) ) | $spl788),
+  inference(cnf_transformation,[],[f3877_D])).
+fof(f3877_D,plain,(
+  ( ! [X97] : (s(bool,'T_0') = s(bool,X97)) ) <=> ~$spl788),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl788])])).
+fof(f3898,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,X0) | p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X1),s('type.ImplicitQueue.times'(sK0),sK1))))) ) | ($spl64 | $spl82 | $spl726)),
+  inference(condensation,[],[f3897])).
+fof(f3897,plain,(
+  ( ! [X152,X149,X150] : (s(bool,X149) = s(bool,X152) | p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X150),s('type.ImplicitQueue.times'(sK0),sK1)))) | s(bool,'T_0') = s(bool,X152)) ) | ($spl64 | $spl82 | $spl726)),
+  inference(forward_demodulation,[],[f3784,f225])).
+fof(f3784,plain,(
+  ( ! [X152,X151,X149,X150] : (p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X150),s('type.ImplicitQueue.times'(sK0),sK1)))) | s(bool,X152) = s(bool,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0'),s(bool,X149),s(fun('type.ImplicitQueue.times'(sK0),bool),X150),s(fun('type.ImplicitQueue.times'(sK0),fun('type.ImplicitQueue.times'(sK0),bool)),X151))) | s(bool,'T_0') = s(bool,X152)) ) | ($spl82 | $spl726)),
+  inference(superposition,[],[f303,f3625])).
+fof(f191,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f191_D])).
+fof(f191_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f128,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.ImplicitQueue.digit_distinct|split|0',aHL_FALSITY)).
+fof(f189,plain,(
+  p(s(bool,'T_0')) | $spl2),
+  inference(cnf_transformation,[],[f189_D])).
+fof(f189_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f126,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.ImplicitQueue.digit_distinct|split|0',aHL_TRUTH)).
+fof(f4187,plain,(
+  $false | ($spl2 | $spl5 | $spl788)),
+  inference(subsumption_resolution,[],[f4122,f189])).
+fof(f4122,plain,(
+  ~p(s(bool,'T_0')) | ($spl5 | $spl788)),
+  inference(backward_demodulation,[],[f3877,f191])).
+fof(f226,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.ImplicitQueue.times'(X1),X0),X4),s('type.ImplicitQueue.times'(X1),X2))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X1),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X1),X2))),s(X0,X3),s(fun('type.ImplicitQueue.times'(X1),X0),X4),s(fun('type.ImplicitQueue.times'(X1),fun('type.ImplicitQueue.times'(X1),X0)),X5)))) ) | $spl66),
+  inference(cnf_transformation,[],[f226_D])).
+fof(f226_D,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.ImplicitQueue.times'(X1),X0),X4),s('type.ImplicitQueue.times'(X1),X2))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X1),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X1),X2))),s(X0,X3),s(fun('type.ImplicitQueue.times'(X1),X0),X4),s(fun('type.ImplicitQueue.times'(X1),fun('type.ImplicitQueue.times'(X1),X0)),X5)))) ) <=> ~$spl66),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl66])])).
+fof(f182,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,happ(s(fun('type.ImplicitQueue.times'(X1),X0),X4),s('type.ImplicitQueue.times'(X1),X2))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X1),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X1),X2))),s(X0,X3),s(fun('type.ImplicitQueue.times'(X1),X0),X4),s(fun('type.ImplicitQueue.times'(X1),fun('type.ImplicitQueue.times'(X1),X0)),X5)))) )),
+  inference(cnf_transformation,[],[f95])).
+fof(f95,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,happ(s(fun('type.ImplicitQueue.times'(X1),X0),X4),s('type.ImplicitQueue.times'(X1),X2))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X1),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X1),X2))),s(X0,X3),s(fun('type.ImplicitQueue.times'(X1),X0),X4),s(fun('type.ImplicitQueue.times'(X1),fun('type.ImplicitQueue.times'(X1),X0)),X5)))),
+  inference(flattening,[],[f94])).
+fof(f94,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : s(X0,happ(s(fun('type.ImplicitQueue.times'(X1),X0),X4),s('type.ImplicitQueue.times'(X1),X2))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X1),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X1),X2))),s(X0,X3),s(fun('type.ImplicitQueue.times'(X1),X0),X4),s(fun('type.ImplicitQueue.times'(X1),fun('type.ImplicitQueue.times'(X1),X0)),X5)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X18,X6] : ! [X7,X31,X21,X32] : s(X18,happ(s(fun('type.ImplicitQueue.times'(X6),X18),X21),s('type.ImplicitQueue.times'(X6),X7))) = s(X18,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X6),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X6),X7))),s(X18,X31),s(fun('type.ImplicitQueue.times'(X6),X18),X21),s(fun('type.ImplicitQueue.times'(X6),fun('type.ImplicitQueue.times'(X6),X18)),X32)))),
+  file('thm.ImplicitQueue.digit_distinct|split|0','thm.ImplicitQueue.digit_case_def|split|1')).
+fof(f187,plain,(
+  s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(sK0),sK1))) | $spl0),
+  inference(cnf_transformation,[],[f187_D])).
+fof(f187_D,plain,(
+  s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(sK0),sK1))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f125,plain,(
+  s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(sK0),sK1)))),
+  inference(cnf_transformation,[],[f103])).
+fof(f103,plain,(
+  s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(sK0),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f98])).
+fof(f98,plain,(
+  ? [X0,X1] : s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X0),X1)))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0') != s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X0),X1)))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1] : ~s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X0),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : ~s('type.ImplicitQueue.digit'(X6),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(X6),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X6),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : ~s('type.ImplicitQueue.digit'(X6),'const.ImplicitQueue.Zero_0') = s('type.ImplicitQueue.digit'(X6),'const.ImplicitQueue.One_1'(s('type.ImplicitQueue.times'(X6),X7)))),
+  file('thm.ImplicitQueue.digit_distinct|split|0','thm.ImplicitQueue.digit_distinct|split|0')).
+fof(f3625,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ImplicitQueue.times'(sK0),X0),X1),s('type.ImplicitQueue.times'(sK0),sK1))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0'),s(X0,X2),s(fun('type.ImplicitQueue.times'(sK0),X0),X1),s(fun('type.ImplicitQueue.times'(sK0),fun('type.ImplicitQueue.times'(sK0),X0)),X3)))) ) | $spl726),
+  inference(cnf_transformation,[],[f3625_D])).
+fof(f3625_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ImplicitQueue.times'(sK0),X0),X1),s('type.ImplicitQueue.times'(sK0),sK1))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0'),s(X0,X2),s(fun('type.ImplicitQueue.times'(sK0),X0),X1),s(fun('type.ImplicitQueue.times'(sK0),fun('type.ImplicitQueue.times'(sK0),X0)),X3)))) ) <=> ~$spl726),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl726])])).
+fof(f3458,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ImplicitQueue.times'(sK0),X0),X1),s('type.ImplicitQueue.times'(sK0),sK1))) = s(X0,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0'),s(X0,X2),s(fun('type.ImplicitQueue.times'(sK0),X0),X1),s(fun('type.ImplicitQueue.times'(sK0),fun('type.ImplicitQueue.times'(sK0),X0)),X3)))) ) | ($spl0 | $spl66)),
+  inference(superposition,[],[f226,f187])).
+fof(f225,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0'),s(X1,X2),s(fun('type.ImplicitQueue.times'(X0),X1),X3),s(fun('type.ImplicitQueue.times'(X0),fun('type.ImplicitQueue.times'(X0),X1)),X4)))) ) | $spl64),
+  inference(cnf_transformation,[],[f225_D])).
+fof(f225_D,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0'),s(X1,X2),s(fun('type.ImplicitQueue.times'(X0),X1),X3),s(fun('type.ImplicitQueue.times'(X0),fun('type.ImplicitQueue.times'(X0),X1)),X4)))) ) <=> ~$spl64),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl64])])).
+fof(f181,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0'),s(X1,X2),s(fun('type.ImplicitQueue.times'(X0),X1),X3),s(fun('type.ImplicitQueue.times'(X0),fun('type.ImplicitQueue.times'(X0),X1)),X4)))) )),
+  inference(cnf_transformation,[],[f93])).
+fof(f93,plain,(
+  ! [X0,X1,X2,X3,X4] : s(X1,X2) = s(X1,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0'),s(X1,X2),s(fun('type.ImplicitQueue.times'(X0),X1),X3),s(fun('type.ImplicitQueue.times'(X0),fun('type.ImplicitQueue.times'(X0),X1)),X4)))),
+  inference(flattening,[],[f92])).
+fof(f92,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(X1,X2) = s(X1,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X0),'const.ImplicitQueue.Zero_0'),s(X1,X2),s(fun('type.ImplicitQueue.times'(X0),X1),X3),s(fun('type.ImplicitQueue.times'(X0),fun('type.ImplicitQueue.times'(X0),X1)),X4)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6,X18] : ! [X31,X21,X32] : s(X18,X31) = s(X18,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(X6),'const.ImplicitQueue.Zero_0'),s(X18,X31),s(fun('type.ImplicitQueue.times'(X6),X18),X21),s(fun('type.ImplicitQueue.times'(X6),fun('type.ImplicitQueue.times'(X6),X18)),X32)))),
+  file('thm.ImplicitQueue.digit_distinct|split|0','thm.ImplicitQueue.digit_case_def|split|0')).
+fof(f193,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl8),
+  inference(cnf_transformation,[],[f193_D])).
+fof(f193_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f131,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X28] : (s(bool,'T_0') = s(bool,X28) <=> p(s(bool,X28)))),
+  file('thm.ImplicitQueue.digit_distinct|split|0','thm.bool.EQ_CLAUSES|split|1')).
+fof(f3876,plain,(
+  ( ! [X98] : (~p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X98),s('type.ImplicitQueue.times'(sK0),sK1))))) ) | $spl786),
+  inference(cnf_transformation,[],[f3876_D])).
+fof(f3876_D,plain,(
+  ( ! [X98] : (~p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X98),s('type.ImplicitQueue.times'(sK0),sK1))))) ) <=> ~$spl786),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl786])])).
+fof(f3875,plain,(
+  ( ! [X97,X98] : (s(bool,'T_0') = s(bool,X97) | ~p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X98),s('type.ImplicitQueue.times'(sK0),sK1))))) ) | ($spl8 | $spl64 | $spl726)),
+  inference(forward_demodulation,[],[f3770,f225])).
+fof(f3770,plain,(
+  ( ! [X99,X97,X98] : (~p(s(bool,happ(s(fun('type.ImplicitQueue.times'(sK0),bool),X98),s('type.ImplicitQueue.times'(sK0),sK1)))) | s(bool,'T_0') = s(bool,'const.ImplicitQueue.digit_CASE_4'(s('type.ImplicitQueue.digit'(sK0),'const.ImplicitQueue.Zero_0'),s(bool,X97),s(fun('type.ImplicitQueue.times'(sK0),bool),X98),s(fun('type.ImplicitQueue.times'(sK0),fun('type.ImplicitQueue.times'(sK0),bool)),X99)))) ) | ($spl8 | $spl726)),
+  inference(superposition,[],[f193,f3625])).
+fof(f4235,plain,(
+  $false | ($spl786 | $spl790)),
+  inference(subsumption_resolution,[],[f3879,f3876])).
+% SZS output end Proof for thm.ImplicitQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 63
+% Passive clauses: 470
+% Generated clauses: 4366
+% Final active clauses: 56
+% Final passive clauses: 236
+% Input formulas: 37
+% Initial clauses: 59
+% 
+% Duplicate literals: 164
+% Trivial inequalities: 36
+% Fw subsumption resolutions: 172
+% Fw demodulations: 414
+% Bw demodulations: 163
+% Condensations: 288
+% Global subsumptions: 4
+% 
+% Simple tautologies: 87
+% Equational tautologies: 34
+% Forward subsumptions: 1800
+% Bw demodulations to eq. taut.: 11
+% 
+% Binary resolution: 46
+% Factoring: 1
+% Forward superposition: 1037
+% Backward superposition: 1089
+% Self superposition: 80
+% Equality factoring: 52
+% Equality resolution: 14
+% 
+% Split clauses: 17
+% Split components: 34
+% SAT solver clauses: 800
+% SAT solver unit clauses: 79
+% SAT solver binary clauses: 39
+% SAT solver learnt clauses: 9
+% 
+% Sat splits: 17
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 783
+% TWLsolver calls for satisfiability: 214
+% 
+% Memory used [KB]: 7036
+% Time elapsed: 0.355 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.981 s

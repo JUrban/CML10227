@@ -1,0 +1,258 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_mtiProof
+% (114736)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 191
+% Passive clauses: 3113
+% Generated clauses: 26602
+% Final active clauses: 186
+% Final passive clauses: 2760
+% Input formulas: 69
+% Initial clauses: 138
+% 
+% Duplicate literals: 603
+% Trivial inequalities: 711
+% Fw subsumption resolutions: 2351
+% Fw demodulations: 3892
+% Bw demodulations: 5
+% 
+% Simple tautologies: 515
+% Equational tautologies: 38
+% Forward subsumptions: 14979
+% Fw demodulations to eq. taut.: 38
+% 
+% Binary resolution: 257
+% Factoring: 1
+% Forward superposition: 10496
+% Backward superposition: 7822
+% Self superposition: 157
+% Equality factoring: 65
+% Equality resolution: 45
+% 
+% Split clauses: 203
+% Split components: 410
+% SAT solver clauses: 465
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 152
+% 
+% Sat splits: 203
+% 
+% TWLsolver clauses: 465
+% TWLsolver calls for satisfiability: 115
+% 
+% Memory used [KB]: 14583
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.clos_mtiProof
+% (114762)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 157
+% Passive clauses: 1160
+% Generated clauses: 19371
+% Final active clauses: 147
+% Final passive clauses: 981
+% Input formulas: 69
+% Initial clauses: 138
+% 
+% Duplicate literals: 515
+% Trivial inequalities: 318
+% Fw subsumption resolutions: 1221
+% Fw demodulations: 2636
+% Bw demodulations: 32
+% Condensations: 857
+% Global subsumptions: 18
+% 
+% Simple tautologies: 332
+% Equational tautologies: 36
+% Forward subsumptions: 10197
+% Fw demodulations to eq. taut.: 40
+% 
+% Binary resolution: 270
+% Factoring: 2
+% Forward superposition: 6916
+% Backward superposition: 5079
+% Self superposition: 144
+% Equality factoring: 61
+% Equality resolution: 30
+% 
+% Split clauses: 24
+% Split components: 48
+% SAT solver clauses: 2212
+% SAT solver unit clauses: 172
+% SAT solver binary clauses: 53
+% SAT solver learnt clauses: 36
+% SAT solver learnt literals: 2
+% 
+% Sat splits: 24
+% 
+% TWLsolver clauses: 2140
+% TWLsolver calls for satisfiability: 509
+% 
+% Memory used [KB]: 16119
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.clos_mtiProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_mtiProof
+% SZS output start Proof for thm.clos_mtiProof
+fof(f16972,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f16971,f389])).
+fof(f389,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f238,f234])).
+fof(f234,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN',aHL_TRUTH)).
+fof(f238,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f177])).
+fof(f177,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f55])).
+fof(f55,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN','thm.bool.NOT_CLAUSES|split|2')).
+fof(f16971,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f16950,f412])).
+fof(f412,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X0)))) )),
+  inference(unit_resulting_resolution,[],[f312,f262])).
+fof(f262,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f181])).
+fof(f181,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f93])).
+fof(f93,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f92])).
+fof(f92,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f16])).
+fof(f16,axiom,(
+  ! [X14] : (s(bool,'F_0') = s(bool,X14) <=> ~p(s(bool,X14)))),
+  file('thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN','thm.bool.EQ_CLAUSES|split|3')).
+fof(f312,plain,(
+  ( ! [X0] : (~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X0))))) )),
+  inference(cnf_transformation,[],[f115])).
+fof(f115,plain,(
+  ! [X0] : ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X0))))),
+  inference(flattening,[],[f114])).
+fof(f114,plain,(
+  ! [X0] : ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X0),s('type.num.num',X0))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6] : ~p(s(bool,'const.prim_rec.<_2'(s('type.num.num',X6),s('type.num.num',X6))))),
+  file('thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN','thm.prim_rec.LESS_REFL')).
+fof(f16950,plain,(
+  p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',sK2))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',sK2))))))),
+  inference(unit_resulting_resolution,[],[f233,f232,f368])).
+fof(f368,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X2))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X3)))))) | s('type.num.num',X0) = s('type.num.num',X1) | s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X3)))))) )),
+  inference(cnf_transformation,[],[f175])).
+fof(f175,plain,(
+  ! [X0,X1,X2,X3] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X3))))) | (s('type.num.num',X0) = s('type.num.num',X1) & s('type.closLang.exp',X2) = s('type.closLang.exp',X3)) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X2))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X3)))))))),
+  inference(flattening,[],[f174])).
+fof(f174,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))) != s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X3))))) | (s('type.num.num',X0) = s('type.num.num',X1) & s('type.closLang.exp',X2) = s('type.closLang.exp',X3))) | p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X2))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X3)))))))),
+  inference(ennf_transformation,[],[f153])).
+fof(f153,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X3))))) & (s('type.num.num',X0) != s('type.num.num',X1) | s('type.closLang.exp',X2) != s('type.closLang.exp',X3))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X2))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X3)))))))),
+  inference(flattening,[],[f152])).
+fof(f152,plain,(
+  ! [X0,X1,X2,X3] : ((s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X3))))) & (~s('type.num.num',X0) = s('type.num.num',X1) | ~s('type.closLang.exp',X2) = s('type.closLang.exp',X3))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X2))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X3)))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X7,X9,X8] : ((s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X6),s('type.closLang.exp',X9))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X7),s('type.closLang.exp',X8))))) & (~s('type.num.num',X6) = s('type.num.num',X7) | ~s('type.closLang.exp',X8) = s('type.closLang.exp',X9))) => p(s(bool,'const.prim_rec.<_2'(s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X9))),s('type.num.num','const.closLang.exp_size_1'(s('type.closLang.exp',X8)))))))),
+  file('thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN','thm.clos_mtiProof.mti_letrec|49|_size_decrease')).
+fof(f232,plain,(
+  s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',sK1),s('type.closLang.exp',sK2))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',sK0),s('type.closLang.exp',sK2)))))),
+  inference(cnf_transformation,[],[f176])).
+fof(f176,plain,(
+  s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',sK1),s('type.closLang.exp',sK2))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',sK0),s('type.closLang.exp',sK2))))) & s('type.num.num',sK0) != s('type.num.num',sK1)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f154])).
+fof(f154,plain,(
+  ? [X0,X1,X2] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X2))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))))) & s('type.num.num',X0) != s('type.num.num',X1))),
+  inference(ennf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X1),s('type.closLang.exp',X2))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X0),s('type.closLang.exp',X2))))) => s('type.num.num',X0) = s('type.num.num',X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X7),s('type.closLang.exp',X8))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X6),s('type.closLang.exp',X8))))) => s('type.num.num',X6) = s('type.num.num',X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : (s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X7),s('type.closLang.exp',X8))) = s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.clos_mtiProof.mti_letrec|49|_1'(s('type.pair.prod'('type.num.num','type.closLang.exp'),'const.pair.,_2'(s('type.num.num',X6),s('type.closLang.exp',X8))))) => s('type.num.num',X6) = s('type.num.num',X7))),
+  file('thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN','thm.clos_mtiProof.mti_letrec|49|_unchangedE_unchangedN')).
+fof(f233,plain,(
+  s('type.num.num',sK0) != s('type.num.num',sK1)),
+  inference(cnf_transformation,[],[f176])).
+% SZS output end Proof for thm.clos_mtiProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 86
+% Passive clauses: 445
+% Generated clauses: 16737
+% Final active clauses: 78
+% Final passive clauses: 298
+% Input formulas: 69
+% Initial clauses: 138
+% 
+% Duplicate literals: 256
+% Trivial inequalities: 49
+% Fw subsumption resolutions: 275
+% Fw demodulations: 5410
+% Bw demodulations: 59
+% Condensations: 542
+% Global subsumptions: 1
+% 
+% Simple tautologies: 155
+% Equational tautologies: 64
+% Forward subsumptions: 5898
+% Fw demodulations to eq. taut.: 3613
+% Bw demodulations to eq. taut.: 4
+% 
+% Unit resulting resolution: 4567
+% Factoring: 1
+% Forward superposition: 3303
+% Backward superposition: 1918
+% Self superposition: 93
+% Equality factoring: 56
+% Equality resolution: 10
+% 
+% Split clauses: 2
+% Split components: 4
+% SAT solver clauses: 458
+% SAT solver unit clauses: 142
+% SAT solver binary clauses: 115
+% 
+% Sat splits: 2
+% Sat splitting refutations: 6
+% 
+% Memory used [KB]: 8827
+% Time elapsed: 0.453 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.78 s

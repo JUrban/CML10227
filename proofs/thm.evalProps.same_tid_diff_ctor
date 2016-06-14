@@ -1,0 +1,1226 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.evalProps
+% (141117)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 123
+% Passive clauses: 4001
+% Generated clauses: 14194
+% Final active clauses: 119
+% Final passive clauses: 3698
+% Input formulas: 43
+% Initial clauses: 96
+% 
+% Duplicate literals: 625
+% Trivial inequalities: 258
+% Fw subsumption resolutions: 2298
+% Fw demodulations: 749
+% Bw demodulations: 4
+% 
+% Simple tautologies: 393
+% Equational tautologies: 83
+% Forward subsumptions: 4511
+% 
+% Binary resolution: 562
+% Factoring: 2
+% Forward superposition: 4787
+% Backward superposition: 4224
+% Self superposition: 218
+% Equality factoring: 190
+% Equality resolution: 32
+% 
+% Split clauses: 560
+% Split components: 1150
+% SAT solver clauses: 1418
+% SAT solver unit clauses: 40
+% SAT solver binary clauses: 478
+% 
+% Sat splits: 560
+% 
+% TWLsolver clauses: 1415
+% TWLsolver calls for satisfiability: 197
+% 
+% Memory used [KB]: 7547
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.evalProps
+% (141138)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 176
+% Passive clauses: 1041
+% Generated clauses: 15816
+% Final active clauses: 136
+% Final passive clauses: 652
+% Input formulas: 43
+% Initial clauses: 96
+% 
+% Duplicate literals: 488
+% Trivial inequalities: 349
+% Fw subsumption resolutions: 1440
+% Fw demodulations: 2055
+% Bw demodulations: 235
+% Condensations: 941
+% Global subsumptions: 13
+% 
+% Simple tautologies: 307
+% Equational tautologies: 32
+% Forward subsumptions: 7453
+% Bw demodulations to eq. taut.: 12
+% 
+% Binary resolution: 227
+% Factoring: 1
+% Forward superposition: 5435
+% Backward superposition: 3235
+% Self superposition: 107
+% Equality factoring: 49
+% Equality resolution: 39
+% 
+% Split clauses: 122
+% Split components: 246
+% SAT solver clauses: 1632
+% SAT solver unit clauses: 101
+% SAT solver binary clauses: 62
+% SAT solver learnt clauses: 26
+% 
+% Sat splits: 122
+% Sat splitting refutations: 19
+% 
+% TWLsolver clauses: 1580
+% TWLsolver calls for satisfiability: 408
+% 
+% Memory used [KB]: 12792
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.evalProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.evalProps
+% SZS output start Proof for thm.evalProps
+fof(f9116,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f159,f256,f255,f259,f1017,f1020,f1019,f1011,f1021,f1023,f1024,f1493,f1495,f1494,f1487,f1496,f1597,f1598,f1605,f1607,f1609,f1611,f1613,f1617,f1619,f1621,f4569,f4590,f5592,f5600,f1018,f6838,f6847,f6839,f6840,f6841,f6851,f6844,f6842,f6850,f6845,f6848,f8875,f8916,f8974,f9030])).
+fof(f9030,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f9029,f258])).
+fof(f258,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f163,f160])).
+fof(f160,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.bool.TRUTH')).
+fof(f163,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f47])).
+fof(f47,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f24])).
+fof(f24,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.bool.NOT_CLAUSES|split|2')).
+fof(f9029,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(forward_demodulation,[],[f9028,f8212])).
+fof(f8212,plain,(
+  s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))))) | $spl2),
+  inference(backward_demodulation,[],[f8209,f275])).
+fof(f275,plain,(
+  s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))))),
+  inference(unit_resulting_resolution,[],[f257,f176])).
+fof(f176,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f113])).
+fof(f113,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f57])).
+fof(f57,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f56])).
+fof(f56,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X13] : (s(bool,'F_0') = s(bool,X13) <=> ~p(s(bool,X13)))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.bool.EQ_CLAUSES|split|2')).
+fof(f257,plain,(
+  ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))))),
+  inference(forward_demodulation,[],[f157,f158])).
+fof(f158,plain,(
+  s(sK0,sK1) = s(sK0,sK2)),
+  inference(cnf_transformation,[],[f107])).
+fof(f107,plain,(
+  p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn',sK4)))))) & s(sK0,sK1) = s(sK0,sK2) & (s(sK0,sK1) != s(sK0,sK2) | ! [X5,X6] : (s('type.semanticPrimitives.tid_or_exn',sK3) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s('type.semanticPrimitives.tid_or_exn',sK4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) | s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4])],[f100])).
+fof(f100,plain,(
+  ? [X0,X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X3),s('type.semanticPrimitives.tid_or_exn',X4)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X1),s('type.semanticPrimitives.tid_or_exn',X3))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X2),s('type.semanticPrimitives.tid_or_exn',X4)))))) & s(X0,X1) = s(X0,X2) & (s(X0,X1) != s(X0,X2) | ! [X5,X6] : (s('type.semanticPrimitives.tid_or_exn',X3) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s('type.semanticPrimitives.tid_or_exn',X4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) | s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6))))),
+  inference(flattening,[],[f99])).
+fof(f99,plain,(
+  ? [X0,X1,X2,X3,X4] : ((p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X3),s('type.semanticPrimitives.tid_or_exn',X4)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X1),s('type.semanticPrimitives.tid_or_exn',X3))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X2),s('type.semanticPrimitives.tid_or_exn',X4))))))) & (s(X0,X1) = s(X0,X2) & (s(X0,X1) != s(X0,X2) | ! [X5,X6] : (s('type.semanticPrimitives.tid_or_exn',X3) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s('type.semanticPrimitives.tid_or_exn',X4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) | s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6)))))),
+  inference(ennf_transformation,[],[f46])).
+fof(f46,plain,(
+  ~! [X0,X1,X2,X3,X4] : ((p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X3),s('type.semanticPrimitives.tid_or_exn',X4)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X1),s('type.semanticPrimitives.tid_or_exn',X3))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X2),s('type.semanticPrimitives.tid_or_exn',X4))))))) => (s(X0,X1) != s(X0,X2) | (s(X0,X1) = s(X0,X2) & ? [X5,X6] : (s('type.semanticPrimitives.tid_or_exn',X3) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) & s('type.semanticPrimitives.tid_or_exn',X4) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) & s('type.ast.id'('type.list.list'('type.string.char')),X5) != s('type.ast.id'('type.list.list'('type.string.char')),X6)))))),
+  inference(flattening,[],[f45])).
+fof(f45,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4] : ((p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X3),s('type.semanticPrimitives.tid_or_exn',X4)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X1),s('type.semanticPrimitives.tid_or_exn',X3))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X2),s('type.semanticPrimitives.tid_or_exn',X4))))))) => (~s(X0,X1) = s(X0,X2) | (s(X0,X1) = s(X0,X2) & ? [X5,X6] : (s('type.semanticPrimitives.tid_or_exn',X3) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) & s('type.semanticPrimitives.tid_or_exn',X4) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) & ~s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X9),s('type.semanticPrimitives.tid_or_exn',X10)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X7),s('type.semanticPrimitives.tid_or_exn',X9))),s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X8),s('type.semanticPrimitives.tid_or_exn',X10))))))) => (~s(X6,X7) = s(X6,X8) | (s(X6,X7) = s(X6,X8) & ? [X11,X12] : (s('type.semanticPrimitives.tid_or_exn',X9) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X11))) & s('type.semanticPrimitives.tid_or_exn',X10) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X12))) & ~s('type.ast.id'('type.list.list'('type.string.char')),X11) = s('type.ast.id'('type.list.list'('type.string.char')),X12)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10] : ((p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X9),s('type.semanticPrimitives.tid_or_exn',X10)))) & ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X7),s('type.semanticPrimitives.tid_or_exn',X9))),s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X8),s('type.semanticPrimitives.tid_or_exn',X10))))))) => (~s(X6,X7) = s(X6,X8) | (s(X6,X7) = s(X6,X8) & ? [X11,X12] : (s('type.semanticPrimitives.tid_or_exn',X9) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X11))) & s('type.semanticPrimitives.tid_or_exn',X10) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X12))) & ~s('type.ast.id'('type.list.list'('type.string.char')),X11) = s('type.ast.id'('type.list.list'('type.string.char')),X12)))))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.evalProps.same_tid_diff_ctor')).
+fof(f157,plain,(
+  ~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn',sK4))))))),
+  inference(cnf_transformation,[],[f107])).
+fof(f8209,plain,(
+  s('type.semanticPrimitives.tid_or_exn',sK3) = s('type.semanticPrimitives.tid_or_exn',sK4) | $spl2),
+  inference(forward_demodulation,[],[f8194,f8067])).
+fof(f8067,plain,(
+  s('type.semanticPrimitives.tid_or_exn',sK3) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3))))),
+  inference(unit_resulting_resolution,[],[f262,f6469])).
+fof(f6469,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X0),s('type.semanticPrimitives.tid_or_exn',sK4))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X0))))) )),
+  inference(superposition,[],[f5489,f169])).
+fof(f169,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X0)))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X0))))) )),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : (s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X0)))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK5,sK6])],[f52])).
+fof(f52,plain,(
+  ! [X0] : (? [X2] : s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))) | ? [X1] : s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))),
+  inference(rectify,[],[f37])).
+fof(f37,axiom,(
+  ! [X20] : (? [X21] : s('type.semanticPrimitives.tid_or_exn',X20) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X21))) | ? [X21] : s('type.semanticPrimitives.tid_or_exn',X20) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X21))))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.tid_or_exn_nchotomy')).
+fof(f5489,plain,(
+  ( ! [X32] : (s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X32))),s('type.semanticPrimitives.tid_or_exn',sK4)))) )),
+  inference(superposition,[],[f403,f5459])).
+fof(f5459,plain,(
+  s('type.semanticPrimitives.tid_or_exn',sK4) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4))))),
+  inference(subsumption_resolution,[],[f5447,f258])).
+fof(f5447,plain,(
+  p(s(bool,'F_0')) | s('type.semanticPrimitives.tid_or_exn',sK4) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4))))),
+  inference(superposition,[],[f3129,f275])).
+fof(f3129,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',X1))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',X0)))))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X0))))) )),
+  inference(superposition,[],[f3091,f169])).
+fof(f3091,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',X0))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))) )),
+  inference(forward_demodulation,[],[f3016,f158])).
+fof(f3016,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',X0))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))) )),
+  inference(unit_resulting_resolution,[],[f158,f219])).
+fof(f219,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn',X2))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) != s(X0,X4)) )),
+  inference(cnf_transformation,[],[f142])).
+fof(f142,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn',X2))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) = s(X0,X4)) & (s(X0,X3) != s(X0,X4) | p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn',X2))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))))),
+  inference(nnf_transformation,[],[f78])).
+fof(f78,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn',X2))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) <=> s(X0,X3) = s(X0,X4))),
+  inference(flattening,[],[f77])).
+fof(f77,plain,(
+  ! [X0] : ! [X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn',X2))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) <=> s(X0,X3) = s(X0,X4))),
+  inference(rectify,[],[f43])).
+fof(f43,axiom,(
+  ! [X6] : ! [X30,X25,X8,X7] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X7),s('type.semanticPrimitives.tid_or_exn',X25))),s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X8),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X30)))))))) <=> s(X6,X7) = s(X6,X8))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_ctor_def|split|1')).
+fof(f403,plain,(
+  ( ! [X2,X3] : (s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X3)))))) )),
+  inference(subsumption_resolution,[],[f390,f258])).
+fof(f390,plain,(
+  ( ! [X2,X3] : (p(s(bool,'F_0')) | s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X3)))))) )),
+  inference(superposition,[],[f171,f225])).
+fof(f225,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))) )),
+  inference(cnf_transformation,[],[f83])).
+fof(f83,plain,(
+  ! [X0,X1] : s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X26,X27] : s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X26))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X27)))))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_tid_def|split|2')).
+fof(f171,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f111])).
+fof(f111,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f54])).
+fof(f54,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X13] : (s(bool,'T_0') = s(bool,X13) <=> p(s(bool,X13)))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.bool.EQ_CLAUSES|split|1')).
+fof(f262,plain,(
+  s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)))),
+  inference(unit_resulting_resolution,[],[f156,f172])).
+fof(f172,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f111])).
+fof(f156,plain,(
+  p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))))),
+  inference(cnf_transformation,[],[f107])).
+fof(f8194,plain,(
+  s('type.semanticPrimitives.tid_or_exn',sK4) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))) | $spl2),
+  inference(backward_demodulation,[],[f8100,f5459])).
+fof(f8100,plain,(
+  s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)) = s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4)) | $spl2),
+  inference(unit_resulting_resolution,[],[f5459,f8067,f256])).
+fof(f9028,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f9027,f8067])).
+fof(f9027,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f9026,f8100])).
+fof(f9026,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f9025,f158])).
+fof(f9025,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8724,f8067])).
+fof(f8724,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3))))))))) | $spl2),
+  inference(unit_resulting_resolution,[],[f158,f8100,f224])).
+fof(f224,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s('type.ast.id'('type.list.list'('type.string.char')),X1) != s('type.ast.id'('type.list.list'('type.string.char')),X2) | p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) != s(X0,X4)) )),
+  inference(cnf_transformation,[],[f145])).
+fof(f145,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | (s(X0,X3) = s(X0,X4) & s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2))) & (s(X0,X3) != s(X0,X4) | s('type.ast.id'('type.list.list'('type.string.char')),X1) != s('type.ast.id'('type.list.list'('type.string.char')),X2) | p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))))),
+  inference(flattening,[],[f144])).
+fof(f144,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | (s(X0,X3) = s(X0,X4) & s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2))) & ((s(X0,X3) != s(X0,X4) | s('type.ast.id'('type.list.list'('type.string.char')),X1) != s('type.ast.id'('type.list.list'('type.string.char')),X2)) | p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))))),
+  inference(nnf_transformation,[],[f82])).
+fof(f82,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) <=> (s(X0,X3) = s(X0,X4) & s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2)))),
+  inference(flattening,[],[f81])).
+fof(f81,plain,(
+  ! [X0] : ! [X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) <=> (s(X0,X3) = s(X0,X4) & s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2)))),
+  inference(rectify,[],[f42])).
+fof(f42,axiom,(
+  ! [X6] : ! [X12,X11,X8,X7] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X7),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X11))))),s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X8),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X12)))))))) <=> (s(X6,X7) = s(X6,X8) & s('type.ast.id'('type.list.list'('type.string.char')),X11) = s('type.ast.id'('type.list.list'('type.string.char')),X12)))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_ctor_def|split|0')).
+fof(f8974,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f8973,f258])).
+fof(f8973,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(forward_demodulation,[],[f8972,f8212])).
+fof(f8972,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8971,f158])).
+fof(f8971,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8970,f8067])).
+fof(f8970,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8969,f8100])).
+fof(f8969,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8738,f8067])).
+fof(f8738,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3))))))))) | $spl2),
+  inference(unit_resulting_resolution,[],[f158,f8100,f224])).
+fof(f8916,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f8915,f258])).
+fof(f8915,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(forward_demodulation,[],[f8914,f8212])).
+fof(f8914,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8913,f158])).
+fof(f8913,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8912,f8067])).
+fof(f8912,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3))))))))) | $spl2),
+  inference(forward_demodulation,[],[f8763,f8100])).
+fof(f8763,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4))))))))) | $spl2),
+  inference(unit_resulting_resolution,[],[f158,f8100,f224])).
+fof(f8875,plain,(
+  $false | $spl2),
+  inference(subsumption_resolution,[],[f8874,f258])).
+fof(f8874,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(forward_demodulation,[],[f8873,f8212])).
+fof(f8873,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8872,f158])).
+fof(f8872,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3)))))) | $spl2),
+  inference(forward_demodulation,[],[f8871,f8067])).
+fof(f8871,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3))))))))) | $spl2),
+  inference(forward_demodulation,[],[f8777,f8100])).
+fof(f8777,plain,(
+  p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK3)))))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(sK4))))))))) | $spl2),
+  inference(unit_resulting_resolution,[],[f158,f8100,f224])).
+fof(f6848,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,g(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X4)) ) | $spl26),
+  inference(cnf_transformation,[],[f6848_D])).
+fof(f6848_D,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,g(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X4)) ) <=> ~$spl26),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl26])])).
+fof(f6845,plain,(
+  ( ! [X0,X1] : (s(fun(bool,bool),X0) = s(fun(bool,bool),X1) | s(bool,'T_0') = s(bool,sK8(X0,X1,bool,bool))) ) | $spl22),
+  inference(cnf_transformation,[],[f6845_D])).
+fof(f6845_D,plain,(
+  ( ! [X0,X1] : (s(fun(bool,bool),X0) = s(fun(bool,bool),X1) | s(bool,'T_0') = s(bool,sK8(X0,X1,bool,bool))) ) <=> ~$spl22),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl22])])).
+fof(f6850,plain,(
+  s(bool,'T_0') != s(bool,f(s(bool,'F_0'))) | $spl29),
+  inference(cnf_transformation,[],[f6850_D])).
+fof(f6850_D,plain,(
+  s(bool,'T_0') != s(bool,f(s(bool,'F_0'))) <=> ~$spl29),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl29])])).
+fof(f6842,plain,(
+  ( ! [X12,X13,X11] : (s(bool,'T_0') != s(bool,f(s(bool,'F_0'))) | s(fun(bool,bool),X11) = s(fun(bool,bool),X12) | s(bool,'T_0') = s(bool,sK8(X11,X12,bool,bool)) | s(bool,X13) = s(bool,g(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X13)) )),
+  inference(superposition,[],[f2739,f280])).
+fof(f280,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f168,f168])).
+fof(f168,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.evalProps.same_tid_diff_ctor',aHL_BOOL_CASES)).
+fof(f2739,plain,(
+  ( ! [X2,X0,X1] : (s(X2,f(s(bool,'F_0'))) != s(X2,g(s(bool,'F_0'))) | s(fun(bool,X2),X0) = s(fun(bool,X2),X1) | s(bool,'T_0') = s(bool,sK8(X0,X1,X2,bool))) )),
+  inference(superposition,[],[f251,f168])).
+fof(f251,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,f(s(X0,sK8(X3,X2,X1,X0)))) != s(X1,g(s(X0,sK8(X3,X2,X1,X0)))) | s(fun(X0,X1),X2) = s(fun(X0,X1),X3)) )),
+  inference(cnf_transformation,[],[f155])).
+fof(f155,plain,(
+  ! [X0,X1,X2,X3] : (s(X1,f(s(X0,sK8(X3,X2,X1,X0)))) != s(X1,g(s(X0,sK8(X3,X2,X1,X0)))) | s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK8])],[f106])).
+fof(f106,plain,(
+  ! [X0,X1,X2,X3] : (? [X4] : s(X1,f(s(X0,X4))) != s(X1,g(s(X0,X4))) | s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(ennf_transformation,[],[f98])).
+fof(f98,plain,(
+  ! [X0,X1,X2,X3] : (! [X4] : s(X1,f(s(X0,X4))) = s(X1,g(s(X0,X4))) => s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(flattening,[],[f97])).
+fof(f97,plain,(
+  ! [X0,X1] : ! [X2,X3] : (! [X4] : s(X1,f(s(X0,X4))) = s(X1,g(s(X0,X4))) => s(fun(X0,X1),X2) = s(fun(X0,X1),X3))),
+  inference(rectify,[],[f4])).
+fof(f4,axiom,(
+  ! [X1,X2] : ! [X3,X4] : (! [X5] : s(X2,f(s(X1,X5))) = s(X2,g(s(X1,X5))) => s(fun(X1,X2),X3) = s(fun(X1,X2),X4))),
+  file('thm.evalProps.same_tid_diff_ctor',aHL_EXT)).
+fof(f6844,plain,(
+  s(bool,'T_0') = s(bool,g(s(bool,'F_0'))) | $spl20),
+  inference(cnf_transformation,[],[f6844_D])).
+fof(f6844_D,plain,(
+  s(bool,'T_0') = s(bool,g(s(bool,'F_0'))) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f6851,plain,(
+  ( ! [X5] : (s(bool,X5) != s(bool,f(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X5)) ) | $spl30),
+  inference(cnf_transformation,[],[f6851_D])).
+fof(f6851_D,plain,(
+  ( ! [X5] : (s(bool,X5) != s(bool,f(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X5)) ) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f6841,plain,(
+  ( ! [X10,X8,X9] : (s(bool,X8) != s(bool,f(s(bool,'F_0'))) | s(fun(bool,bool),X9) = s(fun(bool,bool),X10) | s(bool,'T_0') = s(bool,sK8(X9,X10,bool,bool)) | s(bool,'T_0') = s(bool,g(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X8)) )),
+  inference(superposition,[],[f2739,f280])).
+fof(f6840,plain,(
+  ( ! [X6,X7,X5] : (s(bool,X5) != s(bool,f(s(bool,'F_0'))) | s(fun(bool,bool),X6) = s(fun(bool,bool),X7) | s(bool,'T_0') = s(bool,sK8(X6,X7,bool,bool)) | s(bool,'T_0') = s(bool,X5) | s(bool,'T_0') = s(bool,g(s(bool,'F_0')))) )),
+  inference(superposition,[],[f2739,f280])).
+fof(f6839,plain,(
+  ( ! [X4,X2,X3] : (s(bool,'T_0') != s(bool,f(s(bool,'F_0'))) | s(fun(bool,bool),X2) = s(fun(bool,bool),X3) | s(bool,'T_0') = s(bool,sK8(X2,X3,bool,bool)) | s(bool,X4) = s(bool,g(s(bool,'F_0'))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f2739,f280])).
+fof(f6847,plain,(
+  s(bool,'F_0') != s(bool,f(s(bool,'F_0'))) | $spl25),
+  inference(cnf_transformation,[],[f6847_D])).
+fof(f6847_D,plain,(
+  s(bool,'F_0') != s(bool,f(s(bool,'F_0'))) <=> ~$spl25),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl25])])).
+fof(f6838,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') != s(bool,f(s(bool,'F_0'))) | s(fun(bool,bool),X0) = s(fun(bool,bool),X1) | s(bool,'T_0') = s(bool,sK8(X0,X1,bool,bool)) | s(bool,'T_0') = s(bool,g(s(bool,'F_0')))) )),
+  inference(superposition,[],[f2739,f168])).
+fof(f1018,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0)) ) | $spl4),
+  inference(cnf_transformation,[],[f1018_D])).
+fof(f1018_D,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f5600,plain,(
+  ( ! [X17,X18] : (~p(s(bool,happ(s(fun(bool,bool),X18),s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1)))))) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'F_0') = s(bool,sK7('F_0',X18,bool))) ) | $spl18),
+  inference(cnf_transformation,[],[f5600_D])).
+fof(f5600_D,plain,(
+  ( ! [X17,X18] : (~p(s(bool,happ(s(fun(bool,bool),X18),s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1)))))) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'F_0') = s(bool,sK7('F_0',X18,bool))) ) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f5592,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,happ(s(fun(bool,bool),X18),s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1)))))) | s(bool,'F_0') = s(bool,sK7('F_0',X18,bool)) | s(bool,'T_0') = s(bool,X16) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0))) )),
+  inference(duplicate_literal_removal,[],[f5557])).
+fof(f5557,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,happ(s(fun(bool,bool),X18),s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1)))))) | s(bool,'F_0') = s(bool,sK7('F_0',X18,bool)) | s(bool,'T_0') = s(bool,X16) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'T_0') = s(bool,X16)) )),
+  inference(superposition,[],[f361,f884])).
+fof(f884,plain,(
+  ( ! [X54,X55] : (s(bool,X55) = s(bool,happ(s(fun(sK0,bool),X54),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X54,sK0)) | s(bool,'T_0') = s(bool,X55)) )),
+  inference(subsumption_resolution,[],[f684,f160])).
+fof(f684,plain,(
+  ( ! [X54,X55] : (~p(s(bool,'T_0')) | s(sK0,sK1) = s(sK0,sK7(sK2,X54,sK0)) | s(bool,X55) = s(bool,happ(s(fun(sK0,bool),X54),s(sK0,sK1))) | s(bool,'T_0') = s(bool,X55)) )),
+  inference(superposition,[],[f365,f280])).
+fof(f365,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun(sK0,bool),X0),s(sK0,sK1)))) | s(sK0,sK1) = s(sK0,sK7(sK2,X0,sK0))) )),
+  inference(forward_demodulation,[],[f359,f158])).
+fof(f359,plain,(
+  ( ! [X0] : (~p(s(bool,happ(s(fun(sK0,bool),X0),s(sK0,sK1)))) | s(sK0,sK2) = s(sK0,sK7(sK2,X0,sK0))) )),
+  inference(superposition,[],[f216,f158])).
+fof(f216,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(X0,X2) = s(X0,sK7(X2,X1,X0))) )),
+  inference(cnf_transformation,[],[f141])).
+fof(f141,plain,(
+  ! [X0,X1,X2] : ((! [X4] : (s(X0,X2) != s(X0,X4) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | (s(X0,X2) = s(X0,sK7(X2,X1,X0)) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK7(X2,X1,X0))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK7])],[f140])).
+fof(f140,plain,(
+  ! [X0,X1,X2] : ((! [X4] : (s(X0,X2) != s(X0,X4) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(rectify,[],[f139])).
+fof(f139,plain,(
+  ! [X0,X1,X2] : ((! [X3] : (s(X0,X2) != s(X0,X3) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) & (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | ? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3)))))))),
+  inference(nnf_transformation,[],[f76])).
+fof(f76,plain,(
+  ! [X0,X1,X2] : (? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(flattening,[],[f75])).
+fof(f75,plain,(
+  ! [X0] : ! [X1,X2] : (? [X3] : (s(X0,X2) = s(X0,X3) & p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X3))))) <=> p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))))),
+  inference(rectify,[],[f33])).
+fof(f33,axiom,(
+  ! [X6] : ! [X17,X18] : (? [X14] : (s(X6,X14) = s(X6,X18) & p(s(bool,happ(s(fun(X6,bool),X17),s(X6,X14))))) <=> p(s(bool,happ(s(fun(X6,bool),X17),s(X6,X18)))))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.bool.UNWIND_THM2')).
+fof(f361,plain,(
+  ( ! [X4,X3] : (~p(s(bool,happ(s(fun(bool,bool),X4),s(bool,X3)))) | s(bool,'F_0') = s(bool,sK7('F_0',X4,bool)) | s(bool,'T_0') = s(bool,X3)) )),
+  inference(superposition,[],[f216,f168])).
+fof(f4590,plain,(
+  ( ! [X24,X23,X25] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn',X24))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25)))))))) | s(sK0,sK1) = s(sK0,sK7(sK2,X23,sK0))) ) | $spl16),
+  inference(cnf_transformation,[],[f4590_D])).
+fof(f4590_D,plain,(
+  ( ! [X24,X23,X25] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn',X24))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25)))))))) | s(sK0,sK1) = s(sK0,sK7(sK2,X23,sK0))) ) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f4569,plain,(
+  ( ! [X24,X23,X25,X22] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn',X24))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25)))))))) | s(bool,'T_0') = s(bool,X22) | s(sK0,sK1) = s(sK0,sK7(sK2,X23,sK0))) )),
+  inference(duplicate_literal_removal,[],[f4533])).
+fof(f4533,plain,(
+  ( ! [X24,X23,X25,X22] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn',X24))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,happ(s(fun(sK0,bool),X23),s(sK0,sK1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25)))))))) | s(bool,'T_0') = s(bool,X22) | s(sK0,sK1) = s(sK0,sK7(sK2,X23,sK0)) | s(bool,'T_0') = s(bool,X22)) )),
+  inference(superposition,[],[f3159,f884])).
+fof(f3159,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,X0),s('type.semanticPrimitives.tid_or_exn',X1))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,X0),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2)))))))) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f3086,f168])).
+fof(f3086,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,'F_0'),s('type.semanticPrimitives.tid_or_exn',X0))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,'F_0'),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))) )),
+  inference(forward_demodulation,[],[f3021,f275])).
+fof(f3021,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,'F_0'),s('type.semanticPrimitives.tid_or_exn',X0))),s('type.pair.prod'(bool,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))) )),
+  inference(unit_resulting_resolution,[],[f275,f219])).
+fof(f1621,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606,f1608,f1610,f1612,f1616,f1618,f1620])).
+fof(f1620,plain,(
+  ( ! [X0] : (s(sK0,sK1) = s(sK0,sK7(sK2,X0,sK0))) ) | $spl4),
+  inference(subsumption_resolution,[],[f1575,f160])).
+fof(f1575,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | s(sK0,sK1) = s(sK0,sK7(sK2,X0,sK0))) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f365])).
+fof(f1618,plain,(
+  ( ! [X6,X7] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X6)))) = s('type.semanticPrimitives.tid_or_exn',sK7('const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X6))),X7,'type.semanticPrimitives.tid_or_exn')) | s('type.semanticPrimitives.tid_or_exn',X6) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X6))))) ) | $spl4),
+  inference(subsumption_resolution,[],[f1574,f160])).
+fof(f1574,plain,(
+  ( ! [X6,X7] : (~p(s(bool,'T_0')) | s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X6)))) = s('type.semanticPrimitives.tid_or_exn',sK7('const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X6))),X7,'type.semanticPrimitives.tid_or_exn')) | s('type.semanticPrimitives.tid_or_exn',X6) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X6))))) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f1070])).
+fof(f1616,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X2) = s(X0,sK7(X2,X1,X0))) ) | $spl4),
+  inference(subsumption_resolution,[],[f1550,f160])).
+fof(f1550,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'T_0')) | s(X0,X2) = s(X0,sK7(X2,X1,X0))) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f216])).
+fof(f1612,plain,(
+  ( ! [X2,X1] : (s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2)) ) | $spl4),
+  inference(subsumption_resolution,[],[f1546,f160])).
+fof(f1546,plain,(
+  ( ! [X2,X1] : (~p(s(bool,'T_0')) | s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2)) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f223])).
+fof(f1610,plain,(
+  ( ! [X4,X0,X3] : (s(X0,X3) = s(X0,X4)) ) | $spl4),
+  inference(subsumption_resolution,[],[f1545,f160])).
+fof(f1545,plain,(
+  ( ! [X4,X0,X3] : (~p(s(bool,'T_0')) | s(X0,X3) = s(X0,X4)) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f222])).
+fof(f1608,plain,(
+  ( ! [X4,X0,X3] : (s(X0,X3) = s(X0,X4)) ) | $spl4),
+  inference(subsumption_resolution,[],[f1543,f160])).
+fof(f1543,plain,(
+  ( ! [X4,X0,X3] : (~p(s(bool,'T_0')) | s(X0,X3) = s(X0,X4)) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f220])).
+fof(f1606,plain,(
+  ( ! [X4,X0,X3] : (s(X0,X3) = s(X0,X4)) ) | $spl4),
+  inference(subsumption_resolution,[],[f1541,f160])).
+fof(f1541,plain,(
+  ( ! [X4,X0,X3] : (~p(s(bool,'T_0')) | s(X0,X3) = s(X0,X4)) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f218])).
+fof(f1604,plain,(
+  ( ! [X0,X1] : (s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) ) | $spl4),
+  inference(subsumption_resolution,[],[f1539,f160])).
+fof(f1539,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f236])).
+fof(f1596,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) | $spl4),
+  inference(subsumption_resolution,[],[f1513,f1018])).
+fof(f1513,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | ~p(s(bool,X0))) ) | $spl4),
+  inference(backward_demodulation,[],[f1018,f175])).
+fof(f1497,plain,(
+  ( ! [X31] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X31,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X31),s(bool,'T_0')))) )),
+  inference(subsumption_resolution,[],[f1463,f403])).
+fof(f1463,plain,(
+  ( ! [X30,X31,X29] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X31,bool)) | s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X29))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X30))))) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X31),s(bool,'T_0')))) )),
+  inference(superposition,[],[f1354,f225])).
+fof(f1486,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0'))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0')))) )),
+  inference(condensation,[],[f1485])).
+fof(f1485,plain,(
+  ( ! [X21,X19,X20] : (s(bool,happ(s(fun(bool,bool),X20),s(bool,'T_0'))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X21,bool)) | s(bool,'T_0') = s(bool,X19) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X21),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X20,bool))) )),
+  inference(duplicate_literal_removal,[],[f1462])).
+fof(f1462,plain,(
+  ( ! [X21,X19,X20] : (s(bool,happ(s(fun(bool,bool),X20),s(bool,'T_0'))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X21,bool)) | s(bool,'T_0') = s(bool,X19) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X21),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X20,bool)) | s(bool,'T_0') = s(bool,X19)) )),
+  inference(superposition,[],[f1354,f885])).
+fof(f1454,plain,(
+  ( ! [X54,X55,X53] : (s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X53,bool)) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X54,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X54),s(bool,'T_0'))) | s(bool,X55) = s(bool,happ(s(fun(bool,bool),X53),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X55)) )),
+  inference(subsumption_resolution,[],[f1439,f160])).
+fof(f1439,plain,(
+  ( ! [X54,X55,X53] : (~p(s(bool,'T_0')) | s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X53,bool)) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X54,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X54),s(bool,'T_0'))) | s(bool,X55) = s(bool,happ(s(fun(bool,bool),X53),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X55)) )),
+  inference(superposition,[],[f1353,f885])).
+fof(f1453,plain,(
+  ( ! [X52,X51] : (s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X51,bool)) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X52,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X52),s(bool,'T_0'))) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X51),s(bool,'T_0')))) )),
+  inference(subsumption_resolution,[],[f1438,f160])).
+fof(f1438,plain,(
+  ( ! [X52,X51] : (~p(s(bool,'T_0')) | s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X51,bool)) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X52,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X52),s(bool,'T_0'))) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X51),s(bool,'T_0')))) )),
+  inference(superposition,[],[f1353,f1292])).
+fof(f1440,plain,(
+  ( ! [X4,X2,X3] : (s(bool,X2) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X3,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X3),s(bool,'T_0'))) | s(bool,X2) = s(bool,X4) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(subsumption_resolution,[],[f1419,f160])).
+fof(f1419,plain,(
+  ( ! [X4,X2,X3] : (~p(s(bool,'T_0')) | s(bool,X2) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X3,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X3),s(bool,'T_0'))) | s(bool,X2) = s(bool,X4) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f1353,f280])).
+fof(f1358,plain,(
+  ( ! [X2,X0,X1] : (s(bool,X0) != s(bool,happ(s(fun(bool,bool),X1),s(bool,X0))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,X0) = s(bool,X2) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(superposition,[],[f1306,f280])).
+fof(f1355,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.tid_or_exn',X0) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) | s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),sK5(X0)) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X0))))) )),
+  inference(superposition,[],[f232,f169])).
+fof(f1344,plain,(
+  ( ! [X31,X32] : (~p(s(bool,happ(s(fun(bool,bool),X32),s(bool,'T_0')))) | s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X31,bool)) = s(bool,sK7(sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X31,bool),X32,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X31),s(bool,'T_0')))) )),
+  inference(superposition,[],[f216,f1292])).
+fof(f1354,plain,(
+  ( ! [X19,X18] : (s(bool,X19) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(bool,'T_0') = s(bool,X19) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0')))) )),
+  inference(subsumption_resolution,[],[f1336,f160])).
+fof(f1336,plain,(
+  ( ! [X19,X18] : (~p(s(bool,'T_0')) | s(bool,X19) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(bool,'T_0') = s(bool,X19) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0')))) )),
+  inference(superposition,[],[f283,f1292])).
+fof(f1353,plain,(
+  ( ! [X10,X11] : (~p(s(bool,X11)) | s(bool,X11) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X10,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X10),s(bool,'T_0')))) )),
+  inference(subsumption_resolution,[],[f1333,f160])).
+fof(f1333,plain,(
+  ( ! [X10,X11] : (~p(s(bool,'T_0')) | ~p(s(bool,X11)) | s(bool,X11) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X10,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X10),s(bool,'T_0')))) )),
+  inference(superposition,[],[f231,f1292])).
+fof(f1248,plain,(
+  ( ! [X0] : (s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0'))) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool))) )),
+  inference(trivial_inequality_removal,[],[f1244])).
+fof(f1244,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'T_0') | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0'))) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool))) )),
+  inference(equality_factoring,[],[f885])).
+fof(f1243,plain,(
+  ( ! [X52,X53,X51] : (~p(s(bool,happ(s(fun(bool,bool),X53),s(bool,X52)))) | s(bool,happ(s(fun(bool,bool),X51),s(bool,'T_0'))) = s(bool,sK7(happ(s(fun(bool,bool),X51),s(bool,'T_0')),X53,bool)) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X51,bool)) | s(bool,'T_0') = s(bool,X52)) )),
+  inference(superposition,[],[f216,f885])).
+fof(f1314,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | s(bool,X0) = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool))) )),
+  inference(condensation,[],[f1313])).
+fof(f1313,plain,(
+  ( ! [X14,X15,X16] : (p(s(bool,X15)) | p(s(bool,X16)) | s(bool,X16) = s(bool,happ(s(fun(bool,bool),X14),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X14,bool))) )),
+  inference(subsumption_resolution,[],[f1230,f171])).
+fof(f1230,plain,(
+  ( ! [X14,X15,X16] : (p(s(bool,X15)) | p(s(bool,X16)) | s(bool,X16) = s(bool,happ(s(fun(bool,bool),X14),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X14,bool)) | s(bool,'T_0') = s(bool,X15)) )),
+  inference(superposition,[],[f228,f885])).
+fof(f1222,plain,(
+  ( ! [X97,X95,X96] : (p(s(bool,happ(s(fun(bool,bool),X96),s(bool,happ(s(fun(bool,bool),X97),s(bool,'T_0')))))) | ~p(s(bool,happ(s(fun(bool,bool),X96),s(bool,X95)))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X97,bool)) | s(bool,'T_0') = s(bool,sK7(X95,X96,bool))) )),
+  inference(superposition,[],[f217,f885])).
+fof(f1221,plain,(
+  ( ! [X94,X92,X93] : (~p(s(bool,happ(s(fun(bool,bool),X94),s(bool,happ(s(fun(bool,bool),X93),s(bool,'T_0')))))) | s(bool,X92) = s(bool,sK7(X92,X94,bool)) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X93,bool)) | s(bool,'T_0') = s(bool,X92)) )),
+  inference(superposition,[],[f216,f885])).
+fof(f1306,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool))) )),
+  inference(forward_demodulation,[],[f1259,f262])).
+fof(f1259,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) != s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0')))) )),
+  inference(condensation,[],[f1258])).
+fof(f1258,plain,(
+  ( ! [X37,X38] : (s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) != s(bool,happ(s(fun(bool,bool),X38),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X37) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X38,bool))) )),
+  inference(duplicate_literal_removal,[],[f1204])).
+fof(f1204,plain,(
+  ( ! [X37,X38] : (s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) != s(bool,happ(s(fun(bool,bool),X38),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X37) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X38,bool)) | s(bool,'T_0') = s(bool,X37)) )),
+  inference(superposition,[],[f358,f885])).
+fof(f1189,plain,(
+  ( ! [X47,X45,X46] : (~p(s(bool,happ(s(fun(bool,bool),X46),s(bool,'T_0')))) | s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X45,bool)) = s(bool,sK7(sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X45,bool),X46,bool)) | s(bool,X47) = s(bool,happ(s(fun(bool,bool),X45),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X47)) )),
+  inference(superposition,[],[f216,f885])).
+fof(f1299,plain,(
+  ( ! [X28,X29,X27] : (s(bool,X28) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X27,bool)) | s(bool,'T_0') = s(bool,X28) | s(bool,X29) = s(bool,happ(s(fun(bool,bool),X27),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X29)) )),
+  inference(subsumption_resolution,[],[f1182,f160])).
+fof(f1182,plain,(
+  ( ! [X28,X29,X27] : (~p(s(bool,'T_0')) | s(bool,X28) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X27,bool)) | s(bool,'T_0') = s(bool,X28) | s(bool,X29) = s(bool,happ(s(fun(bool,bool),X27),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X29)) )),
+  inference(superposition,[],[f283,f885])).
+fof(f1298,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,X17)) | s(bool,X17) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X16,bool)) | s(bool,X18) = s(bool,happ(s(fun(bool,bool),X16),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X18)) )),
+  inference(subsumption_resolution,[],[f1179,f160])).
+fof(f1179,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,'T_0')) | ~p(s(bool,X17)) | s(bool,X17) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X16,bool)) | s(bool,X18) = s(bool,happ(s(fun(bool,bool),X16),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X18)) )),
+  inference(superposition,[],[f231,f885])).
+fof(f1157,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,X1) = s(bool,happ(s(fun(bool,bool),X2),s(bool,X0))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X2,bool)) | s(bool,'T_0') = s(bool,X1) | s(bool,X0) = s(bool,X3) | s(bool,'T_0') = s(bool,X3)) )),
+  inference(superposition,[],[f885,f280])).
+fof(f1282,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0'))) = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool))) )),
+  inference(condensation,[],[f1281])).
+fof(f1281,plain,(
+  ( ! [X21,X19,X20] : (s(bool,happ(s(fun(bool,bool),X20),s(bool,'T_0'))) = s(bool,happ(s(fun(bool,bool),X21),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X21,bool)) | s(bool,'T_0') = s(bool,X19) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X20,bool))) )),
+  inference(duplicate_literal_removal,[],[f1145])).
+fof(f1145,plain,(
+  ( ! [X21,X19,X20] : (s(bool,happ(s(fun(bool,bool),X20),s(bool,'T_0'))) = s(bool,happ(s(fun(bool,bool),X21),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X21,bool)) | s(bool,'T_0') = s(bool,X19) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X20,bool)) | s(bool,'T_0') = s(bool,X19)) )),
+  inference(superposition,[],[f885,f885])).
+fof(f1284,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0'))) = s(bool,happ(s(fun(sK0,bool),X1),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X1,sK0))) )),
+  inference(condensation,[],[f1283])).
+fof(f1283,plain,(
+  ( ! [X17,X18,X16] : (s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0'))) = s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(bool,'T_0') = s(bool,X16) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0))) )),
+  inference(duplicate_literal_removal,[],[f1144])).
+fof(f1144,plain,(
+  ( ! [X17,X18,X16] : (s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0'))) = s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(bool,'T_0') = s(bool,X16) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'T_0') = s(bool,X16)) )),
+  inference(superposition,[],[f885,f884])).
+fof(f1292,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X0,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X0),s(bool,'T_0')))) )),
+  inference(condensation,[],[f1291])).
+fof(f1291,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(duplicate_literal_removal,[],[f1138])).
+fof(f1138,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'T_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f885,f168])).
+fof(f1129,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),X1),s(X0,sK7(X2,X1,X0))))) )),
+  inference(subsumption_resolution,[],[f1121,f258])).
+fof(f1121,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'F_0')) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),X1),s(X0,sK7(X2,X1,X0))))) )),
+  inference(superposition,[],[f217,f168])).
+fof(f1120,plain,(
+  ( ! [X17,X18,X16] : (p(s(bool,happ(s(fun(bool,bool),X17),s(bool,happ(s(fun(sK0,bool),X18),s(sK0,sK1)))))) | ~p(s(bool,happ(s(fun(bool,bool),X17),s(bool,X16)))) | s(sK0,sK1) = s(sK0,sK7(sK2,X18,sK0)) | s(bool,'T_0') = s(bool,sK7(X16,X17,bool))) )),
+  inference(superposition,[],[f217,f884])).
+fof(f1116,plain,(
+  ( ! [X6,X7,X5] : (p(s(bool,happ(s(fun(bool,bool),X6),s(bool,X7)))) | ~p(s(bool,happ(s(fun(bool,bool),X6),s(bool,X5)))) | s(bool,'T_0') = s(bool,X7) | s(bool,'T_0') = s(bool,sK7(X5,X6,bool))) )),
+  inference(superposition,[],[f217,f280])).
+fof(f1115,plain,(
+  ( ! [X4,X2,X3] : (p(s(bool,happ(s(fun(bool,bool),X3),s(bool,'T_0')))) | ~p(s(bool,happ(s(fun(bool,bool),X3),s(bool,X2)))) | s(bool,X4) = s(bool,sK7(X2,X3,bool)) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f217,f280])).
+fof(f1114,plain,(
+  ( ! [X0,X1] : (~p(s(bool,happ(s(fun(bool,bool),X1),s(bool,X0)))) | p(s(bool,happ(s(fun(bool,bool),X1),s(bool,'F_0')))) | s(bool,'T_0') = s(bool,sK7(X0,X1,bool))) )),
+  inference(superposition,[],[f217,f168])).
+fof(f1070,plain,(
+  ( ! [X6,X7] : (~p(s(bool,happ(s(fun('type.semanticPrimitives.tid_or_exn',bool),X7),s('type.semanticPrimitives.tid_or_exn',X6)))) | s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X6)))) = s('type.semanticPrimitives.tid_or_exn',sK7('const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5(X6))),X7,'type.semanticPrimitives.tid_or_exn')) | s('type.semanticPrimitives.tid_or_exn',X6) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X6))))) )),
+  inference(superposition,[],[f216,f169])).
+fof(f1069,plain,(
+  ( ! [X4,X5] : (s('type.semanticPrimitives.tid_or_exn',X4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s('type.semanticPrimitives.tid_or_exn',X4) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X4))))) )),
+  inference(superposition,[],[f250,f169])).
+fof(f1068,plain,(
+  ( ! [X2,X3] : (s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',X2),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X3))))) | s('type.semanticPrimitives.tid_or_exn',X2) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X2))))) )),
+  inference(superposition,[],[f225,f169])).
+fof(f1067,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn',X0))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6(X0))))) )),
+  inference(superposition,[],[f226,f169])).
+fof(f1065,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK5('const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))))))) )),
+  inference(unit_resulting_resolution,[],[f250,f169])).
+fof(f1066,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK6('const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))))))) )),
+  inference(unit_resulting_resolution,[],[f250,f169])).
+fof(f1058,plain,(
+  ( ! [X31,X32] : (~p(s(bool,happ(s(fun(bool,bool),X32),s(bool,'F_0')))) | s(bool,happ(s(fun(sK0,bool),X31),s(sK0,sK1))) = s(bool,sK7(happ(s(fun(sK0,bool),X31),s(sK0,sK1)),X32,bool)) | s(sK0,sK1) = s(sK0,sK7(sK2,X31,sK0))) )),
+  inference(superposition,[],[f216,f1022])).
+fof(f990,plain,(
+  ( ! [X47,X45,X46] : (~p(s(bool,happ(s(fun(bool,bool),X47),s(bool,X46)))) | s(bool,happ(s(fun(sK0,bool),X45),s(sK0,sK1))) = s(bool,sK7(happ(s(fun(sK0,bool),X45),s(sK0,sK1)),X47,bool)) | s(sK0,sK1) = s(sK0,sK7(sK2,X45,sK0)) | s(bool,'T_0') = s(bool,X46)) )),
+  inference(superposition,[],[f216,f884])).
+fof(f1030,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | s(bool,X0) = s(bool,happ(s(fun(sK0,bool),X1),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X1,sK0))) )),
+  inference(condensation,[],[f1029])).
+fof(f1029,plain,(
+  ( ! [X14,X15,X16] : (p(s(bool,X15)) | p(s(bool,X16)) | s(bool,X16) = s(bool,happ(s(fun(sK0,bool),X14),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X14,sK0))) )),
+  inference(subsumption_resolution,[],[f979,f171])).
+fof(f979,plain,(
+  ( ! [X14,X15,X16] : (p(s(bool,X15)) | p(s(bool,X16)) | s(bool,X16) = s(bool,happ(s(fun(sK0,bool),X14),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X14,sK0)) | s(bool,'T_0') = s(bool,X15)) )),
+  inference(superposition,[],[f228,f884])).
+fof(f971,plain,(
+  ( ! [X76,X74,X75] : (~p(s(bool,happ(s(fun(bool,bool),X76),s(bool,happ(s(fun(sK0,bool),X75),s(sK0,sK1)))))) | s(bool,X74) = s(bool,sK7(X74,X76,bool)) | s(sK0,sK1) = s(sK0,sK7(sK2,X75,sK0)) | s(bool,'T_0') = s(bool,X74)) )),
+  inference(superposition,[],[f216,f884])).
+fof(f1026,plain,(
+  ( ! [X64] : (s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),X64),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X64,sK0))) )),
+  inference(subsumption_resolution,[],[f966,f276])).
+fof(f966,plain,(
+  ( ! [X64] : (s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),X64),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X64,sK0)) | s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))))) )),
+  inference(superposition,[],[f276,f884])).
+fof(f1022,plain,(
+  ( ! [X28] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X28),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X28,sK0))) )),
+  inference(subsumption_resolution,[],[f932,f403])).
+fof(f932,plain,(
+  ( ! [X28,X26,X27] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X28),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X28,sK0)) | s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X26))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X27)))))) )),
+  inference(superposition,[],[f884,f225])).
+fof(f924,plain,(
+  ( ! [X39,X41,X40] : (~p(s(bool,happ(s(fun(bool,bool),X41),s(bool,'T_0')))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X39))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X40)))),X41,bool))) )),
+  inference(forward_demodulation,[],[f911,f227])).
+fof(f911,plain,(
+  ( ! [X39,X41,X40] : (~p(s(bool,happ(s(fun(bool,bool),X41),s(bool,'T_0')))) | s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X39))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X40))))) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X39))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X40)))),X41,bool))) )),
+  inference(superposition,[],[f216,f227])).
+fof(f923,plain,(
+  ( ! [X30,X31,X29] : (s(bool,X31) != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X29))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X30))))) | s(bool,'T_0') = s(bool,X31)) )),
+  inference(subsumption_resolution,[],[f907,f160])).
+fof(f907,plain,(
+  ( ! [X30,X31,X29] : (~p(s(bool,'T_0')) | s(bool,X31) != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X29))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X30))))) | s(bool,'T_0') = s(bool,X31)) )),
+  inference(superposition,[],[f283,f227])).
+fof(f686,plain,(
+  ( ! [X59,X60,X58] : (~p(s(bool,happ(s(fun(bool,bool),X59),s(bool,'T_0')))) | s(bool,X58) = s(bool,sK7(X58,X59,bool)) | s(bool,X58) = s(bool,X60) | s(bool,'T_0') = s(bool,X60)) )),
+  inference(superposition,[],[f216,f280])).
+fof(f885,plain,(
+  ( ! [X57,X56] : (s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X56,bool)) | s(bool,X57) = s(bool,happ(s(fun(bool,bool),X56),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X57)) )),
+  inference(subsumption_resolution,[],[f685,f160])).
+fof(f685,plain,(
+  ( ! [X57,X56] : (~p(s(bool,'T_0')) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X56,bool)) | s(bool,X57) = s(bool,happ(s(fun(bool,bool),X56),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X57)) )),
+  inference(superposition,[],[f366,f280])).
+fof(f883,plain,(
+  ( ! [X52,X50,X53,X51] : (s(X50,X52) = s(X50,sK7(X52,X51,X50)) | s(bool,X53) = s(bool,happ(s(fun(X50,bool),X51),s(X50,X52))) | s(bool,'T_0') = s(bool,X53)) )),
+  inference(subsumption_resolution,[],[f683,f160])).
+fof(f683,plain,(
+  ( ! [X52,X50,X53,X51] : (~p(s(bool,'T_0')) | s(X50,X52) = s(X50,sK7(X52,X51,X50)) | s(bool,X53) = s(bool,happ(s(fun(X50,bool),X51),s(X50,X52))) | s(bool,'T_0') = s(bool,X53)) )),
+  inference(superposition,[],[f216,f280])).
+fof(f881,plain,(
+  ( ! [X21,X19,X20] : (s(bool,X19) != s(bool,X20) | s(bool,'T_0') = s(bool,X20) | s(bool,X19) = s(bool,X21) | s(bool,'T_0') = s(bool,X21)) )),
+  inference(subsumption_resolution,[],[f667,f160])).
+fof(f667,plain,(
+  ( ! [X21,X19,X20] : (~p(s(bool,'T_0')) | s(bool,X19) != s(bool,X20) | s(bool,'T_0') = s(bool,X20) | s(bool,X19) = s(bool,X21) | s(bool,'T_0') = s(bool,X21)) )),
+  inference(superposition,[],[f283,f280])).
+fof(f880,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,X17)) | s(bool,X16) = s(bool,X17) | s(bool,X16) = s(bool,X18) | s(bool,'T_0') = s(bool,X18)) )),
+  inference(subsumption_resolution,[],[f666,f160])).
+fof(f666,plain,(
+  ( ! [X17,X18,X16] : (~p(s(bool,'T_0')) | ~p(s(bool,X17)) | s(bool,X16) = s(bool,X17) | s(bool,X16) = s(bool,X18) | s(bool,'T_0') = s(bool,X18)) )),
+  inference(superposition,[],[f231,f280])).
+fof(f658,plain,(
+  ( ! [X33,X31,X32] : (~p(s(bool,happ(s(fun(bool,bool),X32),s(bool,X31)))) | s(bool,'T_0') = s(bool,sK7('T_0',X32,bool)) | s(bool,X31) = s(bool,X33) | s(bool,'T_0') = s(bool,X33)) )),
+  inference(superposition,[],[f216,f280])).
+fof(f648,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(bool,bool),X1),s(bool,X0)))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,X0) = s(bool,X2) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(superposition,[],[f366,f280])).
+fof(f618,plain,(
+  ( ! [X61,X62,X63] : (~p(s(bool,happ(s(fun(bool,bool),X63),s(bool,X62)))) | s(bool,X61) = s(bool,sK7(X61,X63,bool)) | s(bool,'T_0') = s(bool,X62) | s(bool,'T_0') = s(bool,X61)) )),
+  inference(superposition,[],[f216,f280])).
+fof(f560,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,X0) = s(bool,X1) | s(bool,X1) = s(bool,X2) | s(bool,'T_0') = s(bool,X2) | s(bool,X0) = s(bool,X3) | s(bool,'T_0') = s(bool,X3)) )),
+  inference(superposition,[],[f280,f280])).
+fof(f523,plain,(
+  ( ! [X19,X18] : (s(bool,'F_0') = s(bool,sK7('const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))),X19,bool)) | ~p(s(bool,happ(s(fun(bool,bool),X19),s(bool,X18)))) | s(bool,'T_0') = s(bool,X18)) )),
+  inference(forward_demodulation,[],[f494,f275])).
+fof(f494,plain,(
+  ( ! [X19,X18] : (~p(s(bool,happ(s(fun(bool,bool),X19),s(bool,X18)))) | s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) = s(bool,sK7('const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))),X19,bool)) | s(bool,'T_0') = s(bool,X18)) )),
+  inference(superposition,[],[f216,f425])).
+fof(f451,plain,(
+  ( ! [X28,X29,X27] : (~p(s(bool,happ(s(fun(bool,bool),X29),s(bool,'F_0')))) | s(bool,'F_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X27))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X28)))),X29,bool))) )),
+  inference(forward_demodulation,[],[f438,f226])).
+fof(f438,plain,(
+  ( ! [X28,X29,X27] : (~p(s(bool,happ(s(fun(bool,bool),X29),s(bool,'F_0')))) | s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X27))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X28))))) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X27))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X28)))),X29,bool))) )),
+  inference(superposition,[],[f216,f226])).
+fof(f448,plain,(
+  ( ! [X24,X23,X22] : (s(bool,X24) = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X22))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X23))))) | s(bool,'T_0') = s(bool,X24)) )),
+  inference(subsumption_resolution,[],[f436,f258])).
+fof(f436,plain,(
+  ( ! [X24,X23,X22] : (p(s(bool,'F_0')) | s(bool,X24) = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X22))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X23))))) | s(bool,'T_0') = s(bool,X24)) )),
+  inference(superposition,[],[f323,f226])).
+fof(f442,plain,(
+  ( ! [X2,X3] : (s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X3)))))) )),
+  inference(subsumption_resolution,[],[f428,f258])).
+fof(f428,plain,(
+  ( ! [X2,X3] : (p(s(bool,'F_0')) | s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X3)))))) )),
+  inference(superposition,[],[f171,f226])).
+fof(f425,plain,(
+  ( ! [X8] : (s(bool,X8) = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) | s(bool,'T_0') = s(bool,X8)) )),
+  inference(subsumption_resolution,[],[f422,f258])).
+fof(f422,plain,(
+  ( ! [X8] : (p(s(bool,'F_0')) | s(bool,X8) = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) | s(bool,'T_0') = s(bool,X8)) )),
+  inference(superposition,[],[f323,f275])).
+fof(f424,plain,(
+  ( ! [X6,X7,X5] : (s(bool,X7) = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))))) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(subsumption_resolution,[],[f421,f258])).
+fof(f421,plain,(
+  ( ! [X6,X7,X5] : (p(s(bool,'F_0')) | s(bool,X7) = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))))) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(superposition,[],[f323,f225])).
+fof(f411,plain,(
+  ( ! [X26,X24,X25] : (~p(s(bool,happ(s(fun(bool,bool),X26),s(bool,'F_0')))) | s(bool,'F_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X24))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25)))),X26,bool))) )),
+  inference(forward_demodulation,[],[f399,f225])).
+fof(f399,plain,(
+  ( ! [X26,X24,X25] : (~p(s(bool,happ(s(fun(bool,bool),X26),s(bool,'F_0')))) | s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X24))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25))))) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X24))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25)))),X26,bool))) )),
+  inference(superposition,[],[f216,f225])).
+fof(f367,plain,(
+  ( ! [X6] : (~p(s(bool,happ(s(fun(bool,bool),X6),s(bool,'F_0')))) | s(bool,'F_0') = s(bool,sK7('const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))),X6,bool))) )),
+  inference(forward_demodulation,[],[f363,f275])).
+fof(f363,plain,(
+  ( ! [X6] : (~p(s(bool,happ(s(fun(bool,bool),X6),s(bool,'F_0')))) | s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) = s(bool,sK7('const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))),X6,bool))) )),
+  inference(superposition,[],[f216,f275])).
+fof(f366,plain,(
+  ( ! [X5] : (~p(s(bool,happ(s(fun(bool,bool),X5),s(bool,'T_0')))) | s(bool,'T_0') = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X5,bool))) )),
+  inference(forward_demodulation,[],[f362,f262])).
+fof(f362,plain,(
+  ( ! [X5] : (~p(s(bool,happ(s(fun(bool,bool),X5),s(bool,'T_0')))) | s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) = s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X5,bool))) )),
+  inference(superposition,[],[f216,f262])).
+fof(f360,plain,(
+  ( ! [X2,X1] : (~p(s(bool,happ(s(fun(bool,bool),X2),s(bool,'F_0')))) | s(bool,X1) = s(bool,sK7(X1,X2,bool)) | s(bool,'T_0') = s(bool,X1)) )),
+  inference(superposition,[],[f216,f168])).
+fof(f358,plain,(
+  ( ! [X4] : (s(bool,X4) != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(subsumption_resolution,[],[f355,f160])).
+fof(f355,plain,(
+  ( ! [X4] : (~p(s(bool,'T_0')) | s(bool,X4) != s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f283,f262])).
+fof(f323,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(subsumption_resolution,[],[f315,f258])).
+fof(f315,plain,(
+  ( ! [X0,X1] : (p(s(bool,'F_0')) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f228,f168])).
+fof(f283,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | s(bool,X0) != s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f175,f168])).
+fof(f276,plain,(
+  s(bool,'T_0') != s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4)))))),
+  inference(unit_resulting_resolution,[],[f257,f171])).
+fof(f260,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(unit_resulting_resolution,[],[f258,f171])).
+fof(f250,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))) )),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ! [X0,X1] : s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))),
+  inference(flattening,[],[f95])).
+fof(f95,plain,(
+  ! [X0,X1] : ~s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))),
+  inference(rectify,[],[f36])).
+fof(f36,axiom,(
+  ! [X19,X18] : ~s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X19))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X18)))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.tid_or_exn_distinct')).
+fof(f236,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) )),
+  inference(cnf_transformation,[],[f148])).
+fof(f148,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) & (s('type.ast.id'('type.list.list'('type.string.char')),X0) != s('type.ast.id'('type.list.list'('type.string.char')),X1) | p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))))))))),
+  inference(nnf_transformation,[],[f89])).
+fof(f89,plain,(
+  ! [X0,X1] : (p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))) <=> s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1))),
+  inference(rectify,[],[f38])).
+fof(f38,axiom,(
+  ! [X22,X23] : (p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X23))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X22)))))) <=> s('type.ast.id'('type.list.list'('type.string.char')),X22) = s('type.ast.id'('type.list.list'('type.string.char')),X23))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_tid_def|split|0')).
+fof(f237,plain,(
+  ( ! [X0,X1] : (s('type.ast.id'('type.list.list'('type.string.char')),X0) != s('type.ast.id'('type.list.list'('type.string.char')),X1) | p(s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))))))) )),
+  inference(cnf_transformation,[],[f148])).
+fof(f234,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) )),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  ! [X0,X1] : ((s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) & (s('type.ast.id'('type.list.list'('type.string.char')),X0) != s('type.ast.id'('type.list.list'('type.string.char')),X1) | s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))),
+  inference(nnf_transformation,[],[f88])).
+fof(f88,plain,(
+  ! [X0,X1] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) <=> s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X18,X19] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X18))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X19))) <=> s('type.ast.id'('type.list.list'('type.string.char')),X18) = s('type.ast.id'('type.list.list'('type.string.char')),X19))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.tid_or_exn_|49||49||split|1')).
+fof(f235,plain,(
+  ( ! [X0,X1] : (s('type.ast.id'('type.list.list'('type.string.char')),X0) != s('type.ast.id'('type.list.list'('type.string.char')),X1) | s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))) )),
+  inference(cnf_transformation,[],[f147])).
+fof(f232,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f146,plain,(
+  ! [X0,X1] : ((s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) | s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1)) & (s('type.ast.id'('type.list.list'('type.string.char')),X0) != s('type.ast.id'('type.list.list'('type.string.char')),X1) | s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))),
+  inference(nnf_transformation,[],[f87])).
+fof(f87,plain,(
+  ! [X0,X1] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))) <=> s('type.ast.id'('type.list.list'('type.string.char')),X0) = s('type.ast.id'('type.list.list'('type.string.char')),X1))),
+  inference(rectify,[],[f34])).
+fof(f34,axiom,(
+  ! [X18,X19] : (s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X18))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X19))) <=> s('type.ast.id'('type.list.list'('type.string.char')),X18) = s('type.ast.id'('type.list.list'('type.string.char')),X19))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.tid_or_exn_|49||49||split|0')).
+fof(f233,plain,(
+  ( ! [X0,X1] : (s('type.ast.id'('type.list.list'('type.string.char')),X0) != s('type.ast.id'('type.list.list'('type.string.char')),X1) | s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))) )),
+  inference(cnf_transformation,[],[f146])).
+fof(f228,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f103])).
+fof(f103,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f102])).
+fof(f102,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f86])).
+fof(f86,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X9,X10] : ((p(s(bool,X9)) => p(s(bool,X10))) => ((p(s(bool,X10)) => p(s(bool,X9))) => s(bool,X9) = s(bool,X10)))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.bool.IMP_ANTISYM_AX')).
+fof(f231,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f103])).
+fof(f227,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))) )),
+  inference(cnf_transformation,[],[f85])).
+fof(f85,plain,(
+  ! [X0,X1] : s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))),
+  inference(rectify,[],[f39])).
+fof(f39,axiom,(
+  ! [X24,X25] : s(bool,'T_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X25))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X24)))))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_tid_def|split|1')).
+fof(f226,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))) )),
+  inference(cnf_transformation,[],[f84])).
+fof(f84,plain,(
+  ! [X0,X1] : s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))),
+  inference(rectify,[],[f41])).
+fof(f41,axiom,(
+  ! [X28,X29] : s(bool,'F_0') = s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X28))),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X29)))))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_tid_def|split|3')).
+fof(f222,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) = s(X0,X4)) )),
+  inference(cnf_transformation,[],[f145])).
+fof(f223,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s('type.ast.id'('type.list.list'('type.string.char')),X1) = s('type.ast.id'('type.list.list'('type.string.char')),X2)) )),
+  inference(cnf_transformation,[],[f145])).
+fof(f220,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) = s(X0,X4)) )),
+  inference(cnf_transformation,[],[f143])).
+fof(f143,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) = s(X0,X4)) & (s(X0,X3) != s(X0,X4) | p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))))))))),
+  inference(nnf_transformation,[],[f80])).
+fof(f80,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) <=> s(X0,X3) = s(X0,X4))),
+  inference(flattening,[],[f79])).
+fof(f79,plain,(
+  ! [X0] : ! [X1,X2,X3,X4] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) <=> s(X0,X3) = s(X0,X4))),
+  inference(rectify,[],[f44])).
+fof(f44,axiom,(
+  ! [X6] : ! [X31,X32,X8,X7] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X7),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X32))))),s('type.pair.prod'(X6,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X6,X8),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X31)))))))) <=> s(X6,X7) = s(X6,X8))),
+  file('thm.evalProps.same_tid_diff_ctor','thm.semanticPrimitives.same_ctor_def|split|2')).
+fof(f221,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) != s(X0,X4)) )),
+  inference(cnf_transformation,[],[f143])).
+fof(f218,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X4),s('type.semanticPrimitives.tid_or_exn',X2))),s('type.pair.prod'(X0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(X0,X3),s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1)))))))) | s(X0,X3) = s(X0,X4)) )),
+  inference(cnf_transformation,[],[f142])).
+fof(f215,plain,(
+  ( ! [X4,X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X4)))) | p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2)))) | s(X0,X2) != s(X0,X4)) )),
+  inference(cnf_transformation,[],[f141])).
+fof(f217,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),X1),s(X0,sK7(X2,X1,X0))))) | ~p(s(bool,happ(s(fun(X0,bool),X1),s(X0,X2))))) )),
+  inference(cnf_transformation,[],[f141])).
+fof(f175,plain,(
+  ( ! [X0] : (s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f113])).
+fof(f1619,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606,f1608,f1610,f1612,f1616,f1618])).
+fof(f1617,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606,f1608,f1610,f1612,f1616])).
+fof(f1613,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606,f1608,f1610,f1612])).
+fof(f1611,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606,f1608,f1610])).
+fof(f1609,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606,f1608])).
+fof(f1607,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604,f1606])).
+fof(f1605,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596,f1604])).
+fof(f1598,plain,(
+  $false | $spl4),
+  inference(subsumption_resolution,[],[f1517,f160])).
+fof(f1517,plain,(
+  ~p(s(bool,'T_0')) | $spl4),
+  inference(backward_demodulation,[],[f1018,f258])).
+fof(f1597,plain,(
+  $false | $spl4),
+  inference(global_subsumption,[],[f159,f158,f257,f156,f160,f258,f168,f169,f172,f171,f176,f175,f217,f216,f215,f219,f218,f221,f220,f224,f223,f222,f225,f226,f227,f231,f228,f233,f232,f235,f234,f237,f236,f250,f251,f260,f262,f276,f275,f280,f283,f323,f358,f365,f360,f361,f366,f367,f403,f411,f424,f425,f442,f448,f451,f523,f560,f618,f648,f658,f880,f881,f883,f884,f885,f686,f923,f924,f1017,f1020,f1011,f1022,f1023,f1026,f971,f1030,f990,f1058,f1066,f1065,f1067,f1068,f1069,f1070,f1114,f1115,f1116,f1120,f1129,f1292,f1284,f1282,f1157,f1298,f1299,f1189,f1306,f1221,f1222,f1314,f1243,f1248,f1353,f1354,f1344,f1355,f1358,f1440,f1453,f1454,f1493,f1495,f1487,f1486,f1497,f1018,f1596])).
+fof(f1496,plain,(
+  ( ! [X17,X18] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0')))) ) | $spl14),
+  inference(cnf_transformation,[],[f1496_D])).
+fof(f1496_D,plain,(
+  ( ! [X17,X18] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0')))) ) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f1487,plain,(
+  ( ! [X17,X18,X16] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(bool,'T_0') = s(bool,X16) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0'))) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0))) )),
+  inference(duplicate_literal_removal,[],[f1461])).
+fof(f1461,plain,(
+  ( ! [X17,X18,X16] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X18,bool)) | s(bool,'T_0') = s(bool,X16) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X18),s(bool,'T_0'))) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'T_0') = s(bool,X16)) )),
+  inference(superposition,[],[f1354,f884])).
+fof(f1494,plain,(
+  ( ! [X1] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0')))) ) | $spl12),
+  inference(cnf_transformation,[],[f1494_D])).
+fof(f1494_D,plain,(
+  ( ! [X1] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0')))) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f1495,plain,(
+  ( ! [X14,X15] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X15,bool)) | s(bool,'T_0') = s(bool,X14) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X15),s(bool,'T_0')))) )),
+  inference(forward_demodulation,[],[f1488,f275])).
+fof(f1488,plain,(
+  ( ! [X14,X15] : (s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X15,bool)) != s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) | s(bool,'T_0') = s(bool,X14) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X15),s(bool,'T_0')))) )),
+  inference(duplicate_literal_removal,[],[f1460])).
+fof(f1460,plain,(
+  ( ! [X14,X15] : (s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X15,bool)) != s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) | s(bool,'T_0') = s(bool,X14) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X15),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X14)) )),
+  inference(superposition,[],[f1354,f425])).
+fof(f1493,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0')))) )),
+  inference(duplicate_literal_removal,[],[f1455])).
+fof(f1455,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') != s(bool,sK7('const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4)),X1,bool)) | s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,happ(s(fun(bool,bool),X1),s(bool,'T_0'))) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f1354,f168])).
+fof(f1024,plain,(
+  ( ! [X38] : (s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),X38),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X38,sK0))) ) | $spl10),
+  inference(cnf_transformation,[],[f1024_D])).
+fof(f1024_D,plain,(
+  ( ! [X38] : (s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),X38),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X38,sK0))) ) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f1023,plain,(
+  ( ! [X37,X38] : (s(bool,'T_0') != s(bool,happ(s(fun(sK0,bool),X38),s(sK0,sK1))) | s(bool,'T_0') = s(bool,X37) | s(sK0,sK1) = s(sK0,sK7(sK2,X38,sK0))) )),
+  inference(forward_demodulation,[],[f999,f262])).
+fof(f999,plain,(
+  ( ! [X37,X38] : (s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) != s(bool,happ(s(fun(sK0,bool),X38),s(sK0,sK1))) | s(bool,'T_0') = s(bool,X37) | s(sK0,sK1) = s(sK0,sK7(sK2,X38,sK0))) )),
+  inference(duplicate_literal_removal,[],[f960])).
+fof(f960,plain,(
+  ( ! [X37,X38] : (s(bool,'const.semanticPrimitives.same_tid_2'(s('type.semanticPrimitives.tid_or_exn',sK3),s('type.semanticPrimitives.tid_or_exn',sK4))) != s(bool,happ(s(fun(sK0,bool),X38),s(sK0,sK1))) | s(bool,'T_0') = s(bool,X37) | s(sK0,sK1) = s(sK0,sK7(sK2,X38,sK0)) | s(bool,'T_0') = s(bool,X37)) )),
+  inference(superposition,[],[f358,f884])).
+fof(f1021,plain,(
+  ( ! [X17,X18] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) = s(bool,happ(s(fun(sK0,bool),X18),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(sK0,sK1) = s(sK0,sK7(sK2,X18,sK0))) ) | $spl8),
+  inference(cnf_transformation,[],[f1021_D])).
+fof(f1021_D,plain,(
+  ( ! [X17,X18] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) = s(bool,happ(s(fun(sK0,bool),X18),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(sK0,sK1) = s(sK0,sK7(sK2,X18,sK0))) ) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f1011,plain,(
+  ( ! [X17,X18,X16] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) = s(bool,happ(s(fun(sK0,bool),X18),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X18,sK0)) | s(bool,'T_0') = s(bool,X16) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0))) )),
+  inference(duplicate_literal_removal,[],[f931])).
+fof(f931,plain,(
+  ( ! [X17,X18,X16] : (s(bool,happ(s(fun(sK0,bool),X17),s(sK0,sK1))) = s(bool,happ(s(fun(sK0,bool),X18),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X18,sK0)) | s(bool,'T_0') = s(bool,X16) | s(sK0,sK1) = s(sK0,sK7(sK2,X17,sK0)) | s(bool,'T_0') = s(bool,X16)) )),
+  inference(superposition,[],[f884,f884])).
+fof(f1019,plain,(
+  ( ! [X1] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X1),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X1,sK0))) ) | $spl6),
+  inference(cnf_transformation,[],[f1019_D])).
+fof(f1019_D,plain,(
+  ( ! [X1] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X1),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X1,sK0))) ) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f1020,plain,(
+  ( ! [X14,X15] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X15),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X15,sK0)) | s(bool,'T_0') = s(bool,X14)) )),
+  inference(forward_demodulation,[],[f1012,f275])).
+fof(f1012,plain,(
+  ( ! [X14,X15] : (s(bool,happ(s(fun(sK0,bool),X15),s(sK0,sK1))) = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) | s(sK0,sK1) = s(sK0,sK7(sK2,X15,sK0)) | s(bool,'T_0') = s(bool,X14)) )),
+  inference(duplicate_literal_removal,[],[f930])).
+fof(f930,plain,(
+  ( ! [X14,X15] : (s(bool,happ(s(fun(sK0,bool),X15),s(sK0,sK1))) = s(bool,'const.semanticPrimitives.same_ctor_2'(s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK3))),s('type.pair.prod'(sK0,'type.semanticPrimitives.tid_or_exn'),'const.pair.,_2'(s(sK0,sK1),s('type.semanticPrimitives.tid_or_exn',sK4))))) | s(sK0,sK1) = s(sK0,sK7(sK2,X15,sK0)) | s(bool,'T_0') = s(bool,X14) | s(bool,'T_0') = s(bool,X14)) )),
+  inference(superposition,[],[f884,f425])).
+fof(f1017,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X1),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X1,sK0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(duplicate_literal_removal,[],[f925])).
+fof(f925,plain,(
+  ( ! [X0,X1] : (s(bool,'F_0') = s(bool,happ(s(fun(sK0,bool),X1),s(sK0,sK1))) | s(sK0,sK1) = s(sK0,sK7(sK2,X1,sK0)) | s(bool,'T_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f884,f168])).
+fof(f259,plain,(
+  $false | $spl1),
+  inference(subsumption_resolution,[],[f255,f158])).
+fof(f255,plain,(
+  s(sK0,sK1) != s(sK0,sK2) | $spl1),
+  inference(cnf_transformation,[],[f255_D])).
+fof(f255_D,plain,(
+  s(sK0,sK1) != s(sK0,sK2) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f256,plain,(
+  ( ! [X6,X5] : (s('type.semanticPrimitives.tid_or_exn',sK4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) | s('type.semanticPrimitives.tid_or_exn',sK3) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6)) ) | $spl2),
+  inference(cnf_transformation,[],[f256_D])).
+fof(f256_D,plain,(
+  ( ! [X6,X5] : (s('type.semanticPrimitives.tid_or_exn',sK4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) | s('type.semanticPrimitives.tid_or_exn',sK3) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6)) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f159,plain,(
+  ( ! [X6,X5] : (s('type.ast.id'('type.list.list'('type.string.char')),X5) = s('type.ast.id'('type.list.list'('type.string.char')),X6) | s('type.semanticPrimitives.tid_or_exn',sK4) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X6))) | s('type.semanticPrimitives.tid_or_exn',sK3) != s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X5))) | s(sK0,sK1) != s(sK0,sK2)) )),
+  inference(cnf_transformation,[],[f107])).
+% SZS output end Proof for thm.evalProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 153
+% Passive clauses: 983
+% Generated clauses: 8949
+% Final active clauses: 72
+% Final passive clauses: 551
+% Input formulas: 43
+% Initial clauses: 96
+% 
+% Duplicate literals: 375
+% Trivial inequalities: 62
+% Fw subsumption resolutions: 519
+% Fw demodulations: 1964
+% Bw demodulations: 356
+% Condensations: 397
+% Global subsumptions: 9
+% 
+% Simple tautologies: 143
+% Equational tautologies: 90
+% Forward subsumptions: 4335
+% Fw demodulations to eq. taut.: 45
+% Bw demodulations to eq. taut.: 3
+% 
+% Unit resulting resolution: 933
+% Factoring: 1
+% Forward superposition: 2129
+% Backward superposition: 1916
+% Self superposition: 54
+% Equality factoring: 43
+% Equality resolution: 20
+% 
+% Split clauses: 15
+% Split components: 35
+% SAT solver clauses: 1039
+% SAT solver unit clauses: 132
+% SAT solver binary clauses: 221
+% 
+% Sat splits: 15
+% Sat splitting refutations: 15
+% 
+% Memory used [KB]: 5756
+% Time elapsed: 0.335 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.67 s

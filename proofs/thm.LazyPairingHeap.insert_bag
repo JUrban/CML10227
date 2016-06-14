@@ -1,0 +1,185 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.LazyPairingHeap
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.LazyPairingHeap
+% SZS output start Proof for thm.LazyPairingHeap
+fof(f12961,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f12948])).
+fof(f12948,plain,(
+  s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(sK1),sK2))))) != s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(sK1),sK2)))))),
+  inference(superposition,[],[f50,f11359])).
+fof(f11359,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X4),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.LazyPairingHeap.heap'(X0),X5)))))) )),
+  inference(forward_demodulation,[],[f11358,f60])).
+fof(f60,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X2),s(fun(X0,'type.num.num'),X1))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X2))),s(fun(X0,'type.num.num'),X1)))) )),
+  inference(cnf_transformation,[],[f29])).
+fof(f29,plain,(
+  ! [X0,X1,X2] : s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X2),s(fun(X0,'type.num.num'),X1))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X2))),s(fun(X0,'type.num.num'),X1)))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ! [X0] : ! [X1,X2] : s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X2),s(fun(X0,'type.num.num'),X1))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X2))),s(fun(X0,'type.num.num'),X1)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X7] : ! [X15,X19] : s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X19),s(fun(X7,'type.num.num'),X15))) = s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),'const.bag.EL_BAG_1'(s(X7,X19))),s(fun(X7,'type.num.num'),X15)))),
+  file('thm.LazyPairingHeap.insert_bag','thm.bag.BAG_INSERT_UNION')).
+fof(f11358,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EL_BAG_1'(s(X0,X4))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.LazyPairingHeap.heap'(X0),X5)))))) )),
+  inference(forward_demodulation,[],[f11357,f257])).
+fof(f257,plain,(
+  ( ! [X4,X3] : (s(fun(X3,'type.num.num'),'const.bag.EL_BAG_1'(s(X3,X4))) = s(fun(X3,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X3,X4),s(fun(X3,'type.num.num'),'const.bag.EMPTY_BAG_0')))) )),
+  inference(superposition,[],[f60,f57])).
+fof(f57,plain,(
+  ( ! [X0,X1] : (s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0')))) )),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ! [X0,X1] : s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0')))),
+  inference(flattening,[],[f24])).
+fof(f24,plain,(
+  ! [X0] : ! [X1] : s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),X1),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0')))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X7] : ! [X15] : s(fun(X7,'type.num.num'),X15) = s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),X15),s(fun(X7,'type.num.num'),'const.bag.EMPTY_BAG_0')))),
+  file('thm.LazyPairingHeap.insert_bag','thm.bag.BAG_UNION_EMPTY|split|0')).
+fof(f11357,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X4),s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0'))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.LazyPairingHeap.heap'(X0),X5)))))) )),
+  inference(forward_demodulation,[],[f11356,f54])).
+fof(f54,plain,(
+  ( ! [X0] : (s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0') = s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0')))) )),
+  inference(cnf_transformation,[],[f21])).
+fof(f21,plain,(
+  ! [X0] : s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0') = s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0')))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7] : s(fun(X7,'type.num.num'),'const.bag.EMPTY_BAG_0') = s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.Empty_0')))),
+  file('thm.LazyPairingHeap.insert_bag','thm.LazyPairingHeap.heap_to_bag_def|split|0')).
+fof(f11356,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.LazyPairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X4),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0'))))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X5)))))) )),
+  inference(forward_demodulation,[],[f2410,f1293])).
+fof(f1293,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X2))))) = s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X1),s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X0),X2)))))) )),
+  inference(forward_demodulation,[],[f1250,f56])).
+fof(f56,plain,(
+  ( ! [X0,X1] : (s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0'),s(fun(X0,'type.num.num'),X1)))) )),
+  inference(cnf_transformation,[],[f23])).
+fof(f23,plain,(
+  ! [X0,X1] : s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0'),s(fun(X0,'type.num.num'),X1)))),
+  inference(flattening,[],[f22])).
+fof(f22,plain,(
+  ! [X0] : ! [X1] : s(fun(X0,'type.num.num'),X1) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0'),s(fun(X0,'type.num.num'),X1)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X6] : ! [X15] : s(fun(X6,'type.num.num'),X15) = s(fun(X6,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X6,'type.num.num'),'const.bag.EMPTY_BAG_0'),s(fun(X6,'type.num.num'),X15)))),
+  file('thm.LazyPairingHeap.insert_bag','thm.bag.BAG_UNION_EMPTY|split|1')).
+fof(f1250,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X1),s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X0),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.bag.EMPTY_BAG_0'),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X2)))))))) )),
+  inference(superposition,[],[f64,f54])).
+fof(f64,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X1),s('type.LazyPairingHeap.heap'(X0),X2),s('type.LazyPairingHeap.heap'(X0),X3))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X2))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X3)))))))) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0,X1,X2,X3] : s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X1),s('type.LazyPairingHeap.heap'(X0),X2),s('type.LazyPairingHeap.heap'(X0),X3))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X2))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X3)))))))),
+  inference(flattening,[],[f32])).
+fof(f32,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X1),s('type.LazyPairingHeap.heap'(X0),X2),s('type.LazyPairingHeap.heap'(X0),X3))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X0,X1),s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X2))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X3)))))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X7] : ! [X11,X12,X13] : s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.Tree_3'(s(X7,X11),s('type.LazyPairingHeap.heap'(X7),X12),s('type.LazyPairingHeap.heap'(X7),X13))))) = s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X11),s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),X12))),s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),X13)))))))),
+  file('thm.LazyPairingHeap.insert_bag','thm.LazyPairingHeap.heap_to_bag_def|split|1')).
+fof(f2410,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.insert_4'(s(fun(X0,X1),X2),s(fun(X1,fun(X1,bool)),X3),s(X0,X4),s('type.LazyPairingHeap.heap'(X0),X5))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Tree_3'(s(X0,X4),s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X0),'const.LazyPairingHeap.Empty_0'))))),s(fun(X0,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X0),X5)))))) )),
+  inference(superposition,[],[f68,f69])).
+fof(f69,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.insert_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s(X1,X4),s('type.LazyPairingHeap.heap'(X1),X5))) = s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Tree_3'(s(X1,X4),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Empty_0'))),s('type.LazyPairingHeap.heap'(X1),X5)))) )),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.insert_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s(X1,X4),s('type.LazyPairingHeap.heap'(X1),X5))) = s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Tree_3'(s(X1,X4),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Empty_0'))),s('type.LazyPairingHeap.heap'(X1),X5)))),
+  inference(flattening,[],[f40])).
+fof(f40,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.insert_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s(X1,X4),s('type.LazyPairingHeap.heap'(X1),X5))) = s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Tree_3'(s(X1,X4),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.Empty_0'))),s('type.LazyPairingHeap.heap'(X1),X5)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X6,X7] : ! [X9,X10,X11,X14] : s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.insert_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s(X7,X11),s('type.LazyPairingHeap.heap'(X7),X14))) = s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.merge_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.Tree_3'(s(X7,X11),s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.Empty_0'),s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.Empty_0'))),s('type.LazyPairingHeap.heap'(X7),X14)))),
+  file('thm.LazyPairingHeap.insert_bag','thm.LazyPairingHeap.insert_def')).
+fof(f68,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X1,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X4))),s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X5))))) = s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LazyPairingHeap.heap'(X1),X4),s('type.LazyPairingHeap.heap'(X1),X5)))))) )),
+  inference(cnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X4))),s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X5))))) = s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LazyPairingHeap.heap'(X1),X4),s('type.LazyPairingHeap.heap'(X1),X5)))))),
+  inference(flattening,[],[f38])).
+fof(f38,plain,(
+  ! [X0,X1] : ! [X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X4))),s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X5))))) = s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.merge_4'(s(fun(X1,X0),X2),s(fun(X0,fun(X0,bool)),X3),s('type.LazyPairingHeap.heap'(X1),X4),s('type.LazyPairingHeap.heap'(X1),X5)))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6,X7] : ! [X9,X10,X12,X13] : s(fun(X7,'type.num.num'),'const.bag.BAG_UNION_2'(s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),X12))),s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),X13))))) = s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.merge_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s('type.LazyPairingHeap.heap'(X7),X12),s('type.LazyPairingHeap.heap'(X7),X13)))))),
+  file('thm.LazyPairingHeap.insert_bag','thm.LazyPairingHeap.merge_bag')).
+fof(f50,plain,(
+  s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(sK1),sK2))))) != s(fun(sK1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(sK1),'const.LazyPairingHeap.insert_4'(s(fun(sK1,sK0),sK3),s(fun(sK0,fun(sK0,bool)),sK4),s(sK1,sK5),s('type.LazyPairingHeap.heap'(sK1),sK2)))))),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  s(fun(sK1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(sK1,sK5),s(fun(sK1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(sK1),sK2))))) != s(fun(sK1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(sK1),'const.LazyPairingHeap.insert_4'(s(fun(sK1,sK0),sK3),s(fun(sK0,fun(sK0,bool)),sK4),s(sK1,sK5),s('type.LazyPairingHeap.heap'(sK1),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f42])).
+fof(f42,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X1,X5),s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X2))))) != s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.insert_4'(s(fun(X1,X0),X3),s(fun(X0,fun(X0,bool)),X4),s(X1,X5),s('type.LazyPairingHeap.heap'(X1),X2)))))),
+  inference(ennf_transformation,[],[f19])).
+fof(f19,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X1,X5),s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X2))))) = s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.insert_4'(s(fun(X1,X0),X3),s(fun(X0,fun(X0,bool)),X4),s(X1,X5),s('type.LazyPairingHeap.heap'(X1),X2)))))),
+  inference(flattening,[],[f18])).
+fof(f18,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4,X5] : s(fun(X1,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X1,X5),s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),X2))))) = s(fun(X1,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X1),'const.LazyPairingHeap.insert_4'(s(fun(X1,X0),X3),s(fun(X0,fun(X0,bool)),X4),s(X1,X5),s('type.LazyPairingHeap.heap'(X1),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10,X11] : s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X11),s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),X8))))) = s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.insert_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s(X7,X11),s('type.LazyPairingHeap.heap'(X7),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10,X11] : s(fun(X7,'type.num.num'),'const.bag.BAG_INSERT_2'(s(X7,X11),s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),X8))))) = s(fun(X7,'type.num.num'),'const.LazyPairingHeap.heap_to_bag_1'(s('type.LazyPairingHeap.heap'(X7),'const.LazyPairingHeap.insert_4'(s(fun(X7,X6),X9),s(fun(X6,fun(X6,bool)),X10),s(X7,X11),s('type.LazyPairingHeap.heap'(X7),X8)))))),
+  file('thm.LazyPairingHeap.insert_bag','thm.LazyPairingHeap.insert_bag')).
+% SZS output end Proof for thm.LazyPairingHeap
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 117
+% Passive clauses: 613
+% Generated clauses: 12481
+% Final active clauses: 109
+% Final passive clauses: 369
+% Input formulas: 16
+% Initial clauses: 20
+% 
+% Duplicate literals: 1151
+% Trivial inequalities: 85
+% Fw subsumption resolutions: 1204
+% Fw demodulations: 1854
+% Bw demodulations: 2
+% 
+% Simple tautologies: 196
+% Equational tautologies: 40
+% Forward subsumptions: 6771
+% 
+% Binary resolution: 10
+% Forward superposition: 5063
+% Backward superposition: 2834
+% Self superposition: 167
+% Equality factoring: 96
+% Equality resolution: 16
+% 
+% Split clauses: 379
+% Split components: 763
+% SAT solver clauses: 650
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 66
+% 
+% Sat splits: 379
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 640
+% TWLsolver calls for satisfiability: 67
+% 
+% Memory used [KB]: 6524
+% Time elapsed: 0.260 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.26 s

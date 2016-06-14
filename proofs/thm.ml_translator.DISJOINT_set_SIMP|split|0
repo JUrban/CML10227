@@ -1,0 +1,116 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.ml_translator
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.ml_translator
+% SZS output start Proof for thm.ml_translator
+fof(f249,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f248,f185])).
+fof(f185,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.pred_set.EMPTY_0'),s(fun(X0,bool),X1)))) )),
+  inference(resolution,[],[f133,f108])).
+fof(f108,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f75])).
+fof(f75,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X10] : (s(bool,'T_0') = s(bool,X10) <=> p(s(bool,X10)))),
+  file('thm.ml_translator.DISJOINT_set_SIMP|split|0','thm.bool.EQ_CLAUSES|split|0')).
+fof(f133,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.pred_set.EMPTY_0'),s(fun(X0,bool),X1))))) )),
+  inference(cnf_transformation,[],[f55])).
+fof(f55,plain,(
+  ! [X0,X1] : p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.pred_set.EMPTY_0'),s(fun(X0,bool),X1))))),
+  inference(flattening,[],[f54])).
+fof(f54,plain,(
+  ! [X0] : ! [X1] : p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.pred_set.EMPTY_0'),s(fun(X0,bool),X1))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6] : ! [X7] : p(s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),'const.pred_set.EMPTY_0'),s(fun(X6,bool),X7))))),
+  file('thm.ml_translator.DISJOINT_set_SIMP|split|0','thm.pred_set.DISJOINT_EMPTY|split|0')).
+fof(f248,plain,(
+  s(bool,'T_0') != s(bool,'const.pred_set.DISJOINT_2'(s(fun(sK0,bool),'const.pred_set.EMPTY_0'),s(fun(sK0,bool),sK1)))),
+  inference(forward_demodulation,[],[f95,f103])).
+fof(f103,plain,(
+  ( ! [X0] : (s(fun(X0,bool),'const.pred_set.EMPTY_0') = s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f35])).
+fof(f35,plain,(
+  ! [X0] : s(fun(X0,bool),'const.pred_set.EMPTY_0') = s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X6] : s(fun(X6,bool),'const.pred_set.EMPTY_0') = s(fun(X6,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.ml_translator.DISJOINT_set_SIMP|split|0','thm.list.LIST_TO_SET|split|0')).
+fof(f95,plain,(
+  s(bool,'T_0') != s(bool,'const.pred_set.DISJOINT_2'(s(fun(sK0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(sK0),'const.list.NIL_0'))),s(fun(sK0,bool),sK1)))),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  s(bool,'T_0') != s(bool,'const.pred_set.DISJOINT_2'(s(fun(sK0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(sK0),'const.list.NIL_0'))),s(fun(sK0,bool),sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f67])).
+fof(f67,plain,(
+  ? [X0,X1] : s(bool,'T_0') != s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s(fun(X0,bool),X1)))),
+  inference(ennf_transformation,[],[f31])).
+fof(f31,plain,(
+  ~! [X0,X1] : s(bool,'T_0') = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s(fun(X0,bool),X1)))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ~! [X0] : ! [X1] : s(bool,'T_0') = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X0,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X0),'const.list.NIL_0'))),s(fun(X0,bool),X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : s(bool,'T_0') = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X6),'const.list.NIL_0'))),s(fun(X6,bool),X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : s(bool,'T_0') = s(bool,'const.pred_set.DISJOINT_2'(s(fun(X6,bool),'const.list.LIST_TO_SET_1'(s('type.list.list'(X6),'const.list.NIL_0'))),s(fun(X6,bool),X7)))),
+  file('thm.ml_translator.DISJOINT_set_SIMP|split|0','thm.ml_translator.DISJOINT_set_SIMP|split|0')).
+% SZS output end Proof for thm.ml_translator
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 16
+% Passive clauses: 48
+% Generated clauses: 150
+% Final active clauses: 14
+% Final passive clauses: 22
+% Input formulas: 28
+% Initial clauses: 52
+% 
+% Duplicate literals: 2
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 9
+% Fw demodulations: 3
+% Bw demodulations: 2
+% 
+% Simple tautologies: 23
+% Equational tautologies: 5
+% Forward subsumptions: 53
+% 
+% Binary resolution: 23
+% Factoring: 1
+% Forward superposition: 16
+% Backward superposition: 32
+% Self superposition: 2
+% Equality factoring: 2
+% Equality resolution: 1
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 13
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 9
+% 
+% Sat splits: 9
+% 
+% TWLsolver clauses: 13
+% TWLsolver calls for satisfiability: 3
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.015 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.014 s

@@ -1,0 +1,285 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.okasaki_misc
+% (143063)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 593
+% Passive clauses: 3887
+% Generated clauses: 17090
+% Final active clauses: 581
+% Final passive clauses: 3031
+% Input formulas: 39
+% Initial clauses: 151
+% 
+% Duplicate literals: 859
+% Trivial inequalities: 80
+% Fw subsumption resolutions: 2468
+% Fw demodulations: 460
+% Bw demodulations: 9
+% 
+% Simple tautologies: 226
+% Equational tautologies: 65
+% Forward subsumptions: 7306
+% 
+% Binary resolution: 4275
+% Factoring: 1186
+% Forward superposition: 2516
+% Backward superposition: 4355
+% Self superposition: 125
+% Equality factoring: 110
+% Equality resolution: 20
+% 
+% Split clauses: 1607
+% Split components: 3387
+% SAT solver clauses: 1992
+% SAT solver unit clauses: 36
+% SAT solver binary clauses: 182
+% 
+% Sat splits: 1606
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1985
+% TWLsolver calls for satisfiability: 386
+% 
+% Memory used [KB]: 8443
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.okasaki_misc
+% (143091)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 335
+% Passive clauses: 1626
+% Generated clauses: 8188
+% Final active clauses: 329
+% Final passive clauses: 1277
+% Input formulas: 39
+% Initial clauses: 151
+% 
+% Duplicate literals: 193
+% Trivial inequalities: 38
+% Fw subsumption resolutions: 786
+% Fw demodulations: 240
+% Bw demodulations: 18
+% Condensations: 223
+% Global subsumptions: 13
+% 
+% Simple tautologies: 206
+% Equational tautologies: 22
+% Forward subsumptions: 2705
+% 
+% Binary resolution: 2777
+% Factoring: 219
+% Forward superposition: 962
+% Backward superposition: 848
+% Self superposition: 41
+% Equality factoring: 28
+% Equality resolution: 14
+% 
+% Split clauses: 118
+% Split components: 241
+% SAT solver clauses: 2241
+% SAT solver unit clauses: 158
+% SAT solver binary clauses: 78
+% SAT solver learnt clauses: 26
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 118
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2189
+% TWLsolver calls for satisfiability: 1406
+% 
+% Memory used [KB]: 8315
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.okasaki_misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.okasaki_misc
+% SZS output start Proof for thm.okasaki_misc
+fof(f3148,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f3147,f382])).
+fof(f382,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f217,f214])).
+fof(f214,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.bool.TRUTH')).
+fof(f217,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f147])).
+fof(f147,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f15])).
+fof(f15,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f3147,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f3085,f416])).
+fof(f416,plain,(
+  s(bool,'F_0') = s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12)))),
+  inference(unit_resulting_resolution,[],[f213,f233])).
+fof(f233,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f151])).
+fof(f151,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f55])).
+fof(f55,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f54])).
+fof(f54,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X9] : (s(bool,'F_0') = s(bool,X9) <=> ~p(s(bool,X9)))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f213,plain,(
+  ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12))))),
+  inference(cnf_transformation,[],[f146])).
+fof(f146,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12))) & ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12])],[f101])).
+fof(f101,plain,(
+  ? [X0,X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) & ~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(ennf_transformation,[],[f42])).
+fof(f42,plain,(
+  ~! [X0,X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(flattening,[],[f41])).
+fof(f41,plain,(
+  ~! [X0] : ! [X1,X2] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X1))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : (s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X7))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X8))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : (s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X7))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X8))) => p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8)))))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb')).
+fof(f3085,plain,(
+  p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(sK10),sK11),s('type.list.list'(sK10),sK12))))),
+  inference(unit_resulting_resolution,[],[f2052,f260])).
+fof(f260,plain,(
+  ( ! [X2,X0,X1] : (s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,sK13(X2,X1,X0)))),s('type.list.list'(X0),X1))) != s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,sK13(X2,X1,X0)))),s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))) )),
+  inference(cnf_transformation,[],[f168])).
+fof(f168,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) | ! [X4] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X4))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X4))),s('type.list.list'(X0),X2)))) & (s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,sK13(X2,X1,X0)))),s('type.list.list'(X0),X1))) != s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,sK13(X2,X1,X0)))),s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13])],[f167])).
+fof(f167,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) | ! [X4] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X4))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X4))),s('type.list.list'(X0),X2)))) & (? [X3] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) != s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(rectify,[],[f166])).
+fof(f166,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) | ! [X3] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2)))) & (? [X3] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) != s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))) | p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(nnf_transformation,[],[f75])).
+fof(f75,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) <=> ! [X3] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))),
+  inference(flattening,[],[f74])).
+fof(f74,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2)))) <=> ! [X3] : s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))),
+  inference(rectify,[],[f40])).
+fof(f40,axiom,(
+  ! [X6] : ! [X23,X24] : (p(s(bool,'const.sorting.PERM_2'(s('type.list.list'(X6),X23),s('type.list.list'(X6),X24)))) <=> ! [X10] : s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),'|dollar|equals_1'(s(X6,X10))),s('type.list.list'(X6),X23))) = s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),'|dollar|equals_1'(s(X6,X10))),s('type.list.list'(X6),X24))))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.sorting.PERM_DEF')).
+fof(f2052,plain,(
+  ( ! [X0] : (s('type.list.list'(sK10),'const.list.FILTER_2'(s(fun(sK10,bool),'|dollar|equals_1'(s(sK10,X0))),s('type.list.list'(sK10),sK11))) = s('type.list.list'(sK10),'const.list.FILTER_2'(s(fun(sK10,bool),'|dollar|equals_1'(s(sK10,X0))),s('type.list.list'(sK10),sK12)))) )),
+  inference(unit_resulting_resolution,[],[f1705,f261])).
+fof(f261,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))))) != s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))) | s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f112])).
+fof(f112,plain,(
+  ! [X0,X1,X2,X3] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))))) != s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))) | s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))),
+  inference(ennf_transformation,[],[f77])).
+fof(f77,plain,(
+  ! [X0,X1,X2,X3] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))) => s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))),
+  inference(flattening,[],[f76])).
+fof(f76,plain,(
+  ! [X0] : ! [X1,X2,X3] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))))) = s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))) => s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),'|dollar|equals_1'(s(X0,X3))),s('type.list.list'(X0),X2))))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X6] : ! [X7,X8,X10] : (s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),'|dollar|equals_1'(s(X6,X10))),s('type.list.list'(X6),X7))))) = s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),'|dollar|equals_1'(s(X6,X10))),s('type.list.list'(X6),X8))))) => s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),'|dollar|equals_1'(s(X6,X10))),s('type.list.list'(X6),X7))) = s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),'|dollar|equals_1'(s(X6,X10))),s('type.list.list'(X6),X8))))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.okasaki_misc.okasaki_misc_9_prove_ltb')).
+fof(f1705,plain,(
+  ( ! [X0] : (s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),'const.list.FILTER_2'(s(fun(sK10,bool),X0),s('type.list.list'(sK10),sK11))))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),'const.list.FILTER_2'(s(fun(sK10,bool),X0),s('type.list.list'(sK10),sK12)))))) )),
+  inference(forward_demodulation,[],[f1704,f256])).
+fof(f256,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),X1),s('type.list.list'(X0),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_FILTER_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1,X2] : s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),X1),s('type.list.list'(X0),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_FILTER_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2)))))),
+  inference(flattening,[],[f70])).
+fof(f70,plain,(
+  ! [X0] : ! [X1,X2] : s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),'const.list.FILTER_2'(s(fun(X0,bool),X1),s('type.list.list'(X0),X2))))) = s(fun(X0,'type.num.num'),'const.bag.BAG_FILTER_2'(s(fun(X0,bool),X1),s(fun(X0,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X0),X2)))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6] : ! [X17,X18] : s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),'const.list.FILTER_2'(s(fun(X6,bool),X17),s('type.list.list'(X6),X18))))) = s(fun(X6,'type.num.num'),'const.bag.BAG_FILTER_2'(s(fun(X6,bool),X17),s(fun(X6,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(X6),X18)))))),
+  file('thm.okasaki_misc.okasaki_misc_|49||48|_prove_ltb','thm.okasaki_misc.list_to_bag_filter')).
+fof(f1704,plain,(
+  ( ! [X0] : (s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),'const.list.FILTER_2'(s(fun(sK10,bool),X0),s('type.list.list'(sK10),sK12))))) = s(fun(sK10,'type.num.num'),'const.bag.BAG_FILTER_2'(s(fun(sK10,bool),X0),s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11)))))) )),
+  inference(superposition,[],[f256,f212])).
+fof(f212,plain,(
+  s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK11))) = s(fun(sK10,'type.num.num'),'const.okasaki_misc.list_to_bag_1'(s('type.list.list'(sK10),sK12)))),
+  inference(cnf_transformation,[],[f146])).
+% SZS output end Proof for thm.okasaki_misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 263
+% Passive clauses: 396
+% Generated clauses: 2858
+% Final active clauses: 256
+% Final passive clauses: 125
+% Input formulas: 39
+% Initial clauses: 151
+% 
+% Duplicate literals: 124
+% Trivial inequalities: 15
+% Fw subsumption resolutions: 148
+% Fw demodulations: 232
+% Bw demodulations: 14
+% Condensations: 109
+% Global subsumptions: 4
+% 
+% Simple tautologies: 65
+% Equational tautologies: 40
+% Forward subsumptions: 1610
+% 
+% Unit resulting resolution: 1137
+% Forward superposition: 325
+% Backward superposition: 507
+% Self superposition: 24
+% Equality factoring: 28
+% Equality resolution: 6
+% 
+% Split clauses: 49
+% Split components: 103
+% SAT solver clauses: 503
+% SAT solver unit clauses: 150
+% SAT solver binary clauses: 123
+% 
+% Sat splits: 49
+% Sat splitting refutations: 3
+% 
+% Memory used [KB]: 2430
+% Time elapsed: 0.147 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.49 s

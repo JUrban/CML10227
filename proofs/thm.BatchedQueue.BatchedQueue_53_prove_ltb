@@ -1,0 +1,289 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.BatchedQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BatchedQueue
+% SZS output start Proof for thm.BatchedQueue
+fof(f3998,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3236,f3991,f3205,f99,f155,f153,f150,f161,f102,f157,f98,f154,f152,f3939,f3992])).
+fof(f3992,plain,(
+  p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | $spl98),
+  inference(cnf_transformation,[],[f3992_D])).
+fof(f3992_D,plain,(
+  p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) <=> ~$spl98),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl98])])).
+fof(f3939,plain,(
+  p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | $spl2),
+  inference(superposition,[],[f3912,f103])).
+fof(f103,plain,(
+  ( ! [X0] : (s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0') = s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0] : s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0') = s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : s('type.BatchedQueue.queue'(X6),'const.BatchedQueue.empty_0') = s('type.BatchedQueue.queue'(X6),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X6),'const.list.NIL_0'),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.BatchedQueue.empty_def')).
+fof(f3912,plain,(
+  ( ! [X0] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X0),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X0),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | $spl2),
+  inference(equality_resolution,[],[f3891])).
+fof(f3891,plain,(
+  ( ! [X26,X27] : (s('type.list.list'(sK0),X26) != s('type.list.list'(sK0),X27) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X26),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | $spl2),
+  inference(forward_demodulation,[],[f3890,f135])).
+fof(f135,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X6] : ! [X13] : s('type.list.list'(X6),X13) = s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X13),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.list.APPEND_NIL')).
+fof(f3890,plain,(
+  ( ! [X26,X27] : (s('type.list.list'(sK0),X26) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.NIL_0'))) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X26),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | $spl2),
+  inference(forward_demodulation,[],[f3889,f203])).
+fof(f203,plain,(
+  ( ! [X0] : (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(superposition,[],[f137,f136])).
+fof(f136,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f46])).
+fof(f46,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))),
+  inference(flattening,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),X1)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6] : ! [X14] : s('type.list.list'(X6),X14) = s('type.list.list'(X6),'const.list.REV_2'(s('type.list.list'(X6),'const.list.NIL_0'),s('type.list.list'(X6),X14)))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.list.REV_DEF|split|0')).
+fof(f137,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))) )),
+  inference(cnf_transformation,[],[f48])).
+fof(f48,plain,(
+  ! [X0,X1] : s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(flattening,[],[f47])).
+fof(f47,plain,(
+  ! [X0] : ! [X1] : s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X1))) = s('type.list.list'(X0),'const.list.REV_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.NIL_0')))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6] : ! [X16] : s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X16))) = s('type.list.list'(X6),'const.list.REV_2'(s('type.list.list'(X6),X16),s('type.list.list'(X6),'const.list.NIL_0')))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.list.REVERSE_REV')).
+fof(f3889,plain,(
+  ( ! [X26,X27] : (s('type.list.list'(sK0),X26) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),'const.list.NIL_0'))))) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X26),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.NIL_0'))))))) ) | $spl2),
+  inference(forward_demodulation,[],[f3888,f154])).
+fof(f3888,plain,(
+  ( ! [X26,X27] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X26),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.NIL_0')))))) | s('type.list.list'(sK0),X26) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),sK1)))))) ) | $spl2),
+  inference(forward_demodulation,[],[f3872,f154])).
+fof(f3872,plain,(
+  ( ! [X26,X27] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X26),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),sK1)))))) | s('type.list.list'(sK0),X26) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),sK1)))))) ) | $spl2),
+  inference(trivial_inequality_removal,[],[f3870])).
+fof(f3870,plain,(
+  ( ! [X26,X27] : (s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),'const.list.NIL_0') | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),X26),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),sK1)))))) | s('type.list.list'(sK0),X26) != s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),X27),s('type.list.list'(sK0),'const.list.REVERSE_1'(s('type.list.list'(sK0),sK1)))))) ) | $spl2),
+  inference(superposition,[],[f147,f154])).
+fof(f147,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X3) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) | s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3)))))) )),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) | (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) & (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X2) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X3)))) & (s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) | (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X2) & s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X3)) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3))))))))),
+  inference(flattening,[],[f95])).
+fof(f95,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) | (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) & (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X2) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X3)))) & ((s('type.list.list'(X0),X1) != s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) | (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X2) & s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X3))) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3))))))))),
+  inference(nnf_transformation,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) <=> (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) & (s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X2) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X3))))),
+  inference(ennf_transformation,[],[f57])).
+fof(f57,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) <=> (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) & (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X2) => s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X3))))),
+  inference(flattening,[],[f56])).
+fof(f56,plain,(
+  ! [X0] : ! [X1,X2,X3] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) <=> (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3))))) & (s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X2) => s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X3))))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X6] : ! [X8,X7,X9] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X6),X8),s('type.BatchedQueue.queue'(X6),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X9)))))) <=> (s('type.list.list'(X6),X8) = s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),'const.list.REVERSE_1'(s('type.list.list'(X6),X9))))) & (s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7) => s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X9))))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.BatchedQueue.queue_inv_def')).
+fof(f152,plain,(
+  p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | $spl0),
+  inference(cnf_transformation,[],[f152_D])).
+fof(f152_D,plain,(
+  p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f154,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | $spl2),
+  inference(cnf_transformation,[],[f154_D])).
+fof(f154_D,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f98,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0'))))),
+  inference(cnf_transformation,[],[f71])).
+fof(f71,plain,(
+  (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1)) & (~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f70])).
+fof(f70,plain,(
+  ? [X0,X1] : ((p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) & (~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') != s('type.list.list'(X0),X1)))),
+  inference(nnf_transformation,[],[f62])).
+fof(f62,plain,(
+  ? [X0,X1] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) <~> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(ennf_transformation,[],[f29])).
+fof(f29,plain,(
+  ~! [X0,X1] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ~! [X0] : ! [X1] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) <=> s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X6),X7),s('type.BatchedQueue.queue'(X6),'const.BatchedQueue.empty_0')))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X6),X7),s('type.BatchedQueue.queue'(X6),'const.BatchedQueue.empty_0')))) <=> s('type.list.list'(X6),'const.list.NIL_0') = s('type.list.list'(X6),X7))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.BatchedQueue.BatchedQueue_53_prove_ltb')).
+fof(f157,plain,(
+  ~p(s(bool,'F_0')) | $spl5),
+  inference(cnf_transformation,[],[f157_D])).
+fof(f157_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f102,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f30])).
+fof(f30,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb',aHL_FALSITY)).
+fof(f161,plain,(
+  p(s(bool,'T_0')) | $spl10),
+  inference(cnf_transformation,[],[f161_D])).
+fof(f161_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f150,plain,(
+  p(s(bool,'T_0'))),
+  inference(trivial_inequality_removal,[],[f138])).
+fof(f138,plain,(
+  ( ! [X0,X1] : (p(s(bool,'T_0')) | s(X0,X1) != s(X0,X1)) )),
+  inference(cnf_transformation,[],[f92])).
+fof(f92,plain,(
+  ! [X0,X1] : ((s(X0,X1) != s(X0,X1) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | s(X0,X1) = s(X0,X1)))),
+  inference(nnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0,X1] : (s(X0,X1) = s(X0,X1) <=> p(s(bool,'T_0')))),
+  inference(flattening,[],[f49])).
+fof(f49,plain,(
+  ! [X0] : ! [X1] : (s(X0,X1) = s(X0,X1) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6] : ! [X12] : (s(X6,X12) = s(X6,X12) <=> p(s(bool,'T_0')))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb','thm.bool.REFL_CLAUSE')).
+fof(f153,plain,(
+  ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | $spl1),
+  inference(cnf_transformation,[],[f153_D])).
+fof(f153_D,plain,(
+  ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f155,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) | $spl3),
+  inference(cnf_transformation,[],[f155_D])).
+fof(f155_D,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f99,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') != s('type.list.list'(sK0),sK1) | ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0'))))),
+  inference(cnf_transformation,[],[f71])).
+fof(f3205,plain,(
+  $false | ($spl0 | $spl3 | $spl5 | $spl10)),
+  inference(subsumption_resolution,[],[f3204,f155])).
+fof(f3204,plain,(
+  s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | ($spl0 | $spl5 | $spl10)),
+  inference(subsumption_resolution,[],[f3169,f161])).
+fof(f3169,plain,(
+  ~p(s(bool,'T_0')) | s('type.list.list'(sK0),'const.list.NIL_0') = s('type.list.list'(sK0),sK1) | ($spl0 | $spl5)),
+  inference(superposition,[],[f3149,f169])).
+fof(f169,plain,(
+  s(bool,'T_0') = s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0'))) | ($spl0 | $spl5)),
+  inference(subsumption_resolution,[],[f166,f157])).
+fof(f166,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),sK1),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0'))) | $spl0),
+  inference(superposition,[],[f152,f104])).
+fof(f104,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.BatchedQueue.BatchedQueue_53_prove_ltb',aHL_BOOL_CASES)).
+fof(f3149,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) | s('type.list.list'(X0),'const.list.NIL_0') = s('type.list.list'(X0),X1)) )),
+  inference(forward_demodulation,[],[f3148,f135])).
+fof(f3148,plain,(
+  ( ! [X0,X1] : (s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),'const.list.NIL_0'))) | ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0'))))) )),
+  inference(forward_demodulation,[],[f3102,f203])).
+fof(f3102,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.empty_0')))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),'const.list.NIL_0'),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),'const.list.NIL_0')))))) )),
+  inference(superposition,[],[f144,f103])).
+fof(f144,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(X0),X1),s('type.BatchedQueue.queue'(X0),'const.BatchedQueue.QUEUE_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),X3)))))) | s('type.list.list'(X0),X1) = s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X2),s('type.list.list'(X0),'const.list.REVERSE_1'(s('type.list.list'(X0),X3)))))) )),
+  inference(cnf_transformation,[],[f96])).
+fof(f3991,plain,(
+  ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | $spl99),
+  inference(cnf_transformation,[],[f3991_D])).
+fof(f3991_D,plain,(
+  ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) <=> ~$spl99),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl99])])).
+fof(f3236,plain,(
+  ~p(s(bool,'const.BatchedQueue.queue_inv_2'(s('type.list.list'(sK0),'const.list.NIL_0'),s('type.BatchedQueue.queue'(sK0),'const.BatchedQueue.empty_0')))) | ($spl1 | $spl2)),
+  inference(forward_demodulation,[],[f153,f154])).
+% SZS output end Proof for thm.BatchedQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 45
+% Passive clauses: 656
+% Generated clauses: 3791
+% Final active clauses: 37
+% Final passive clauses: 558
+% Input formulas: 26
+% Initial clauses: 52
+% 
+% Duplicate literals: 381
+% Trivial inequalities: 44
+% Fw subsumption resolutions: 249
+% Fw demodulations: 120
+% Bw demodulations: 3
+% 
+% Simple tautologies: 123
+% Equational tautologies: 85
+% Forward subsumptions: 1571
+% 
+% Binary resolution: 32
+% Forward superposition: 1252
+% Backward superposition: 1124
+% Self superposition: 244
+% Equality factoring: 212
+% Equality resolution: 5
+% 
+% Split clauses: 232
+% Split components: 465
+% SAT solver clauses: 594
+% SAT solver unit clauses: 211
+% SAT solver binary clauses: 133
+% SAT solver learnt clauses: 2
+% SAT solver learnt literals: 1
+% 
+% Sat splits: 232
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 592
+% TWLsolver calls for satisfiability: 28
+% 
+% Memory used [KB]: 2302
+% Time elapsed: 0.223 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.22 s

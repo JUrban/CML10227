@@ -1,0 +1,528 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.evalProps
+% (32868)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 189
+% Passive clauses: 3978
+% Generated clauses: 25425
+% Final active clauses: 132
+% Final passive clauses: 3269
+% Input formulas: 32
+% Initial clauses: 62
+% 
+% Duplicate literals: 1101
+% Trivial inequalities: 562
+% Fw subsumption resolutions: 4127
+% Fw demodulations: 2526
+% Bw demodulations: 41
+% 
+% Simple tautologies: 580
+% Equational tautologies: 56
+% Forward subsumptions: 11455
+% Fw demodulations to eq. taut.: 10
+% Bw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 493
+% Factoring: 1
+% Forward superposition: 7773
+% Backward superposition: 8083
+% Self superposition: 245
+% Equality factoring: 144
+% Equality resolution: 46
+% 
+% Split clauses: 551
+% Split components: 1105
+% SAT solver clauses: 1276
+% SAT solver unit clauses: 28
+% SAT solver binary clauses: 217
+% 
+% Sat splits: 551
+% Sat splitting refutations: 30
+% 
+% TWLsolver clauses: 1273
+% TWLsolver calls for satisfiability: 195
+% 
+% Memory used [KB]: 11257
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.evalProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.evalProps
+% SZS output start Proof for thm.evalProps
+fof(f2063,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2010,f2013,f1519,f1976,f153,f205,f1307,f1330,f167,f213,f1348,f2062,f116,f186,f118,f182,f181,f1308,f1331,f2048,f1995,f2051,f175,f219,f189,f191,f173,f217,f117,f184,f180,f223,f225,f129,f197,f233,f237,f1956,f1878,f1371,f1617,f243,f248,f132,f200,f1253,f1255,f711,f729,f490,f516,f162,f209,f119,f188,f133,f199])).
+fof(f199,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) | $spl18),
+  inference(cnf_transformation,[],[f199_D])).
+fof(f199_D,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f133,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f91,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X14] : (s(bool,'F_0') = s(bool,X14) <=> ~p(s(bool,X14)))),
+  file('thm.evalProps.exc_rel_raise2','thm.bool.EQ_CLAUSES|split|2')).
+fof(f188,plain,(
+  p(s(bool,'T_0')) | $spl8),
+  inference(cnf_transformation,[],[f188_D])).
+fof(f188_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f119,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.evalProps.exc_rel_raise2','thm.bool.TRUTH')).
+fof(f209,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) ) | $spl30),
+  inference(cnf_transformation,[],[f209_D])).
+fof(f209_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) ) <=> ~$spl30),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl30])])).
+fof(f162,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) = s(X0,X2) | s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0,X1,X2] : ((s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))))),
+  inference(nnf_transformation,[],[f63])).
+fof(f63,plain,(
+  ! [X0,X1,X2] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(flattening,[],[f62])).
+fof(f62,plain,(
+  ! [X0] : ! [X1,X2] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X1))) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f30])).
+fof(f30,axiom,(
+  ! [X6] : ! [X18,X29] : (s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X18))) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X29))) <=> s(X6,X18) = s(X6,X29))),
+  file('thm.evalProps.exc_rel_raise2','thm.semanticPrimitives.error_result_|49||49||split|0')).
+fof(f516,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X0))) | s(sK0,sK5) = s(sK0,X0)) ) | $spl134),
+  inference(cnf_transformation,[],[f516_D])).
+fof(f516_D,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X0))) | s(sK0,sK5) = s(sK0,X0)) ) <=> ~$spl134),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl134])])).
+fof(f490,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X0))) | s(sK0,sK5) = s(sK0,X0)) ) | ($spl6 | $spl30)),
+  inference(superposition,[],[f209,f186])).
+fof(f729,plain,(
+  ( ! [X16] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),X16) | s(sK0,sK5) = s(sK0,sK6(X16,sK0)) | s('type.semanticPrimitives.error_result'(sK0),X16) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X16,sK0))))) ) | $spl230),
+  inference(cnf_transformation,[],[f729_D])).
+fof(f729_D,plain,(
+  ( ! [X16] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),X16) | s(sK0,sK5) = s(sK0,sK6(X16,sK0)) | s('type.semanticPrimitives.error_result'(sK0),X16) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X16,sK0))))) ) <=> ~$spl230),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl230])])).
+fof(f711,plain,(
+  ( ! [X16] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),X16) | s(sK0,sK5) = s(sK0,sK6(X16,sK0)) | s('type.semanticPrimitives.error_result'(sK0),X16) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X16,sK0))))) ) | ($spl22 | $spl134)),
+  inference(superposition,[],[f516,f205])).
+fof(f1255,plain,(
+  s(sK0,sK5) = s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)) | $spl364),
+  inference(cnf_transformation,[],[f1255_D])).
+fof(f1255_D,plain,(
+  s(sK0,sK5) = s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)) <=> ~$spl364),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl364])])).
+fof(f1253,plain,(
+  s(sK0,sK5) = s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)) | ($spl6 | $spl38 | $spl230)),
+  inference(subsumption_resolution,[],[f1252,f213])).
+fof(f1252,plain,(
+  s(sK0,sK5) = s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)) | s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)))) | ($spl6 | $spl230)),
+  inference(trivial_inequality_removal,[],[f1246])).
+fof(f1246,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),sK3) | s(sK0,sK5) = s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)) | s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)))) | ($spl6 | $spl230)),
+  inference(superposition,[],[f729,f186])).
+fof(f200,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) ) | $spl20),
+  inference(cnf_transformation,[],[f200_D])).
+fof(f200_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f132,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'F_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f91])).
+fof(f248,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl61),
+  inference(cnf_transformation,[],[f248_D])).
+fof(f248_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl61),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl61])])).
+fof(f243,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | ($spl8 | $spl20)),
+  inference(resolution,[],[f200,f188])).
+fof(f1617,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X0,bool)),X1),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))))) = s(bool,happ(s(fun(X0,bool),happ(s(fun(sK0,fun(X0,bool)),X1),s(sK0,sK5))),s(X0,X2)))) ) | $spl460),
+  inference(cnf_transformation,[],[f1617_D])).
+fof(f1617_D,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X0,bool)),X1),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))))) = s(bool,happ(s(fun(X0,bool),happ(s(fun(sK0,fun(X0,bool)),X1),s(sK0,sK5))),s(X0,X2)))) ) <=> ~$spl460),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl460])])).
+fof(f1371,plain,(
+  ( ! [X2,X0,X1] : (s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X0,bool)),X1),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2))))) = s(bool,happ(s(fun(X0,bool),happ(s(fun(sK0,fun(X0,bool)),X1),s(sK0,sK5))),s(X0,X2)))) ) | ($spl6 | $spl50)),
+  inference(superposition,[],[f219,f186])).
+fof(f1878,plain,(
+  $false | ($spl56 | $spl58 | $spl61 | $spl460)),
+  inference(subsumption_resolution,[],[f1877,f248])).
+fof(f1877,plain,(
+  s(bool,'T_0') = s(bool,'F_0') | ($spl56 | $spl58 | $spl460)),
+  inference(forward_demodulation,[],[f1831,f225])).
+fof(f1831,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2))) | ($spl58 | $spl460)),
+  inference(superposition,[],[f1617,f237])).
+fof(f1956,plain,(
+  $false | ($spl2 | $spl6 | $spl8 | $spl56 | $spl364)),
+  inference(subsumption_resolution,[],[f1955,f188])).
+fof(f1955,plain,(
+  ~p(s(bool,'T_0')) | ($spl2 | $spl6 | $spl56 | $spl364)),
+  inference(forward_demodulation,[],[f1954,f225])).
+fof(f1954,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2)))) | ($spl2 | $spl6 | $spl364)),
+  inference(forward_demodulation,[],[f1953,f1255])).
+fof(f1953,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)))),s(sK1,sK2)))) | ($spl2 | $spl6 | $spl364)),
+  inference(subsumption_resolution,[],[f1946,f186])).
+fof(f1946,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) | ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK6('const.semanticPrimitives.Rraise_1'(s(sK0,sK5)),sK0)))),s(sK1,sK2)))) | ($spl2 | $spl364)),
+  inference(superposition,[],[f182,f1255])).
+fof(f237,plain,(
+  s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2))))) | $spl58),
+  inference(cnf_transformation,[],[f237_D])).
+fof(f237_D,plain,(
+  s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2))))) <=> ~$spl58),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl58])])).
+fof(f233,plain,(
+  s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2))))) | ($spl1 | $spl18)),
+  inference(resolution,[],[f199,f181])).
+fof(f197,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl14),
+  inference(cnf_transformation,[],[f197_D])).
+fof(f197_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f129,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f89])).
+fof(f89,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f40])).
+fof(f40,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X14] : (s(bool,'T_0') = s(bool,X14) <=> p(s(bool,X14)))),
+  file('thm.evalProps.exc_rel_raise2','thm.bool.EQ_CLAUSES|split|1')).
+fof(f225,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2))) | $spl56),
+  inference(cnf_transformation,[],[f225_D])).
+fof(f225_D,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2))) <=> ~$spl56),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl56])])).
+fof(f223,plain,(
+  s(bool,'T_0') = s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2))) | ($spl4 | $spl14)),
+  inference(resolution,[],[f197,f184])).
+fof(f180,plain,(
+  p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) | $spl0),
+  inference(cnf_transformation,[],[f180_D])).
+fof(f180_D,plain,(
+  p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f184,plain,(
+  p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2)))) | $spl4),
+  inference(cnf_transformation,[],[f184_D])).
+fof(f184_D,plain,(
+  p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2)))) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f117,plain,(
+  p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2)))) | p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2))))))),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,plain,(
+  (p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) | (s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) & p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK5))),s(sK1,sK2)))))) & (~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) | ! [X5] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X5))) | ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,X5))),s(sK1,sK2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f85])).
+fof(f85,plain,(
+  ? [X0,X1,X2,X3,X4] : ((p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) | ? [X6] : (s('type.semanticPrimitives.error_result'(X0),X3) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X6))) & p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X6))),s(X1,X2)))))) & (~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) | ! [X5] : (s('type.semanticPrimitives.error_result'(X0),X3) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X5))) | ~p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X5))),s(X1,X2)))))))),
+  inference(rectify,[],[f84])).
+fof(f84,plain,(
+  ? [X0,X1,X2,X3,X4] : ((p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) | ? [X5] : (s('type.semanticPrimitives.error_result'(X0),X3) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X5))) & p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X5))),s(X1,X2)))))) & (~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) | ! [X5] : (s('type.semanticPrimitives.error_result'(X0),X3) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X5))) | ~p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X5))),s(X1,X2)))))))),
+  inference(nnf_transformation,[],[f79])).
+fof(f79,plain,(
+  ? [X0,X1,X2,X3,X4] : (p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) <~> ? [X5] : (s('type.semanticPrimitives.error_result'(X0),X3) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X5))) & p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X5))),s(X1,X2))))))),
+  inference(ennf_transformation,[],[f35])).
+fof(f35,plain,(
+  ~! [X0,X1,X2,X3,X4] : (p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) <=> ? [X5] : (s('type.semanticPrimitives.error_result'(X0),X3) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X5))) & p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X5))),s(X1,X2))))))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4] : (p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),X3),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) <=> ? [X5] : (s('type.semanticPrimitives.error_result'(X0),X3) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X5))) & p(s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X5))),s(X1,X2))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10] : (p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X6,fun(X7,bool)),X10),s('type.semanticPrimitives.error_result'(X6),X9),s('type.semanticPrimitives.error_result'(X7),'const.semanticPrimitives.Rraise_1'(s(X7,X8)))))) <=> ? [X11] : (s('type.semanticPrimitives.error_result'(X6),X9) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X11))) & p(s(bool,happ(s(fun(X7,bool),happ(s(fun(X6,fun(X7,bool)),X10),s(X6,X11))),s(X7,X8))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10] : (p(s(bool,'const.evalProps.exc_rel_3'(s(fun(X6,fun(X7,bool)),X10),s('type.semanticPrimitives.error_result'(X6),X9),s('type.semanticPrimitives.error_result'(X7),'const.semanticPrimitives.Rraise_1'(s(X7,X8)))))) <=> ? [X11] : (s('type.semanticPrimitives.error_result'(X6),X9) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X11))) & p(s(bool,happ(s(fun(X7,bool),happ(s(fun(X6,fun(X7,bool)),X10),s(X6,X11))),s(X7,X8))))))),
+  file('thm.evalProps.exc_rel_raise2','thm.evalProps.exc_rel_raise2')).
+fof(f217,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X2),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X4))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X3)))))) ) | $spl46),
+  inference(cnf_transformation,[],[f217_D])).
+fof(f217_D,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X2),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X4))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X3)))))) ) <=> ~$spl46),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl46])])).
+fof(f173,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X2),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X4))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X3)))))) )),
+  inference(cnf_transformation,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1,X2,X3,X4] : s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X2),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X4))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X3)))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X2),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X4))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X3)))))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X6,X7] : ! [X25,X27,X28] : s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(X6,fun(X7,bool)),X25),s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X28))),s('type.semanticPrimitives.error_result'(X7),'const.semanticPrimitives.Rraise_1'(s(X7,X27)))))),
+  file('thm.evalProps.exc_rel_raise2','thm.evalProps.exc_rel_def|split|3')).
+fof(f191,plain,(
+  ~p(s(bool,'F_0')) | $spl11),
+  inference(cnf_transformation,[],[f191_D])).
+fof(f191_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl11),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl11])])).
+fof(f189,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(global_subsumption,[],[f122,f119])).
+fof(f122,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f87])).
+fof(f87,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f36])).
+fof(f36,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f18])).
+fof(f18,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.evalProps.exc_rel_raise2','thm.bool.NOT_CLAUSES|split|2')).
+fof(f219,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X3))),s(X1,X2))) = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) ) | $spl50),
+  inference(cnf_transformation,[],[f219_D])).
+fof(f219_D,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X3))),s(X1,X2))) = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) ) <=> ~$spl50),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl50])])).
+fof(f175,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X3))),s(X1,X2))) = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))) )),
+  inference(cnf_transformation,[],[f76])).
+fof(f76,plain,(
+  ! [X0,X1,X2,X3,X4] : s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X3))),s(X1,X2))) = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))),
+  inference(flattening,[],[f75])).
+fof(f75,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : s(bool,happ(s(fun(X1,bool),happ(s(fun(X0,fun(X1,bool)),X4),s(X0,X3))),s(X1,X2))) = s(bool,'const.evalProps.exc_rel_3'(s(fun(X0,fun(X1,bool)),X4),s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))),s('type.semanticPrimitives.error_result'(X1),'const.semanticPrimitives.Rraise_1'(s(X1,X2)))))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6,X7] : ! [X19,X20,X10] : s(bool,happ(s(fun(X7,bool),happ(s(fun(X6,fun(X7,bool)),X10),s(X6,X20))),s(X7,X19))) = s(bool,'const.evalProps.exc_rel_3'(s(fun(X6,fun(X7,bool)),X10),s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X20))),s('type.semanticPrimitives.error_result'(X7),'const.semanticPrimitives.Rraise_1'(s(X7,X19)))))),
+  file('thm.evalProps.exc_rel_raise2','thm.evalProps.exc_rel_def|split|0')).
+fof(f2051,plain,(
+  ( ! [X14,X15,X16] : (s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X14,bool)),X15),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X14),'const.semanticPrimitives.Rraise_1'(s(X14,X16))))) = s(bool,happ(s(fun(X14,bool),happ(s(fun(sK0,fun(X14,bool)),X15),s(sK0,sK6(sK3,sK0)))),s(X14,X16)))) ) | $spl556),
+  inference(cnf_transformation,[],[f2051_D])).
+fof(f2051_D,plain,(
+  ( ! [X14,X15,X16] : (s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X14,bool)),X15),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X14),'const.semanticPrimitives.Rraise_1'(s(X14,X16))))) = s(bool,happ(s(fun(X14,bool),happ(s(fun(sK0,fun(X14,bool)),X15),s(sK0,sK6(sK3,sK0)))),s(X14,X16)))) ) <=> ~$spl556),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl556])])).
+fof(f1995,plain,(
+  ( ! [X14,X15,X16] : (s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X14,bool)),X15),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X14),'const.semanticPrimitives.Rraise_1'(s(X14,X16))))) = s(bool,happ(s(fun(X14,bool),happ(s(fun(sK0,fun(X14,bool)),X15),s(sK0,sK6(sK3,sK0)))),s(X14,X16)))) ) | ($spl50 | $spl528)),
+  inference(superposition,[],[f219,f1976])).
+fof(f2048,plain,(
+  $false | ($spl0 | $spl11 | $spl400)),
+  inference(subsumption_resolution,[],[f2047,f191])).
+fof(f2047,plain,(
+  p(s(bool,'F_0')) | ($spl0 | $spl400)),
+  inference(forward_demodulation,[],[f180,f1331])).
+fof(f1331,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X3,bool)),X4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X3),'const.semanticPrimitives.Rraise_1'(s(X3,X5)))))) ) | $spl400),
+  inference(cnf_transformation,[],[f1331_D])).
+fof(f1331_D,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X3,bool)),X4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X3),'const.semanticPrimitives.Rraise_1'(s(X3,X5)))))) ) <=> ~$spl400),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl400])])).
+fof(f1308,plain,(
+  ( ! [X4,X5,X3] : (s(bool,'F_0') = s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(X3,bool)),X4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(X3),'const.semanticPrimitives.Rraise_1'(s(X3,X5)))))) ) | ($spl46 | $spl372)),
+  inference(superposition,[],[f217,f1263])).
+fof(f1263,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(sK3,sK0)))) | $spl372),
+  inference(cnf_transformation,[],[f1263_D])).
+fof(f1263_D,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(sK3,sK0)))) <=> ~$spl372),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl372])])).
+fof(f181,plain,(
+  ~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) | $spl1),
+  inference(cnf_transformation,[],[f181_D])).
+fof(f181_D,plain,(
+  ~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f182,plain,(
+  ( ! [X5] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X5))) | ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,X5))),s(sK1,sK2))))) ) | $spl2),
+  inference(cnf_transformation,[],[f182_D])).
+fof(f182_D,plain,(
+  ( ! [X5] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X5))) | ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,X5))),s(sK1,sK2))))) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f118,plain,(
+  ( ! [X5] : (~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,X5))),s(sK1,sK2)))) | s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X5))) | ~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2))))))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f186,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) | $spl6),
+  inference(cnf_transformation,[],[f186_D])).
+fof(f186_D,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f116,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK5))) | p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2))))))),
+  inference(cnf_transformation,[],[f86])).
+fof(f2062,plain,(
+  $false | ($spl0 | $spl535 | $spl556)),
+  inference(subsumption_resolution,[],[f2061,f180])).
+fof(f2061,plain,(
+  ~p(s(bool,'const.evalProps.exc_rel_3'(s(fun(sK0,fun(sK1,bool)),sK4),s('type.semanticPrimitives.error_result'(sK0),sK3),s('type.semanticPrimitives.error_result'(sK1),'const.semanticPrimitives.Rraise_1'(s(sK1,sK2)))))) | ($spl535 | $spl556)),
+  inference(backward_demodulation,[],[f2051,f2013])).
+fof(f1348,plain,(
+  $false | ($spl6 | $spl398)),
+  inference(trivial_inequality_removal,[],[f1344])).
+fof(f1344,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),sK3) | ($spl6 | $spl398)),
+  inference(superposition,[],[f1330,f186])).
+fof(f213,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))) ) | $spl38),
+  inference(cnf_transformation,[],[f213_D])).
+fof(f213_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))) ) <=> ~$spl38),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl38])])).
+fof(f167,plain,(
+  ( ! [X2,X0,X1] : (s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))) )),
+  inference(cnf_transformation,[],[f67])).
+fof(f67,plain,(
+  ! [X0,X1,X2] : s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X1))) != s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))),
+  inference(flattening,[],[f66])).
+fof(f66,plain,(
+  ! [X0] : ! [X1,X2] : ~s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X1))) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X2)))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X6] : ! [X29,X18] : ~s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X29))) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X18)))),
+  file('thm.evalProps.exc_rel_raise2','thm.semanticPrimitives.error_result_distinct')).
+fof(f1330,plain,(
+  ( ! [X2] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X2)))) ) | $spl398),
+  inference(cnf_transformation,[],[f1330_D])).
+fof(f1330_D,plain,(
+  ( ! [X2] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X2)))) ) <=> ~$spl398),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl398])])).
+fof(f1307,plain,(
+  ( ! [X2] : (s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,X2)))) ) | ($spl38 | $spl372)),
+  inference(superposition,[],[f213,f1263])).
+fof(f205,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK6(X1,X0))))) ) | $spl22),
+  inference(cnf_transformation,[],[f205_D])).
+fof(f205_D,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK6(X1,X0))))) ) <=> ~$spl22),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl22])])).
+fof(f153,plain,(
+  ( ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK6(X1,X0))))) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X0,X1] : (s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,sK6(X1,X0)))) | s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK6,sK7])],[f54])).
+fof(f54,plain,(
+  ! [X0,X1] : (? [X3] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))) | ? [X2] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X2))))),
+  inference(flattening,[],[f53])).
+fof(f53,plain,(
+  ! [X0] : ! [X1] : (? [X3] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rraise_1'(s(X0,X3))) | ? [X2] : s('type.semanticPrimitives.error_result'(X0),X1) = s('type.semanticPrimitives.error_result'(X0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X2))))),
+  inference(rectify,[],[f33])).
+fof(f33,axiom,(
+  ! [X6] : ! [X30] : (? [X18] : s('type.semanticPrimitives.error_result'(X6),X30) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rraise_1'(s(X6,X18))) | ? [X18] : s('type.semanticPrimitives.error_result'(X6),X30) = s('type.semanticPrimitives.error_result'(X6),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',X18))))),
+  file('thm.evalProps.exc_rel_raise2','thm.semanticPrimitives.error_result_nchotomy')).
+fof(f1976,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK6(sK3,sK0)))) | $spl528),
+  inference(cnf_transformation,[],[f1976_D])).
+fof(f1976_D,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK6(sK3,sK0)))) <=> ~$spl528),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl528])])).
+fof(f1519,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK6(sK3,sK0)))) | ($spl22 | $spl373)),
+  inference(trivial_inequality_removal,[],[f1518])).
+fof(f1518,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),sK3) | s('type.semanticPrimitives.error_result'(sK0),sK3) = s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rraise_1'(s(sK0,sK6(sK3,sK0)))) | ($spl22 | $spl373)),
+  inference(superposition,[],[f1262,f205])).
+fof(f1262,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(sK3,sK0)))) | $spl373),
+  inference(cnf_transformation,[],[f1262_D])).
+fof(f1262_D,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),'const.semanticPrimitives.Rabort_1'(s('type.semanticPrimitives.abort',sK7(sK3,sK0)))) <=> ~$spl373),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl373])])).
+fof(f2013,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK6(sK3,sK0)))),s(sK1,sK2)))) | $spl535),
+  inference(cnf_transformation,[],[f2013_D])).
+fof(f2013_D,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK6(sK3,sK0)))),s(sK1,sK2)))) <=> ~$spl535),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl535])])).
+fof(f2010,plain,(
+  ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK6(sK3,sK0)))),s(sK1,sK2)))) | ($spl2 | $spl528)),
+  inference(trivial_inequality_removal,[],[f1986])).
+fof(f1986,plain,(
+  s('type.semanticPrimitives.error_result'(sK0),sK3) != s('type.semanticPrimitives.error_result'(sK0),sK3) | ~p(s(bool,happ(s(fun(sK1,bool),happ(s(fun(sK0,fun(sK1,bool)),sK4),s(sK0,sK6(sK3,sK0)))),s(sK1,sK2)))) | ($spl2 | $spl528)),
+  inference(superposition,[],[f182,f1976])).
+% SZS output end Proof for thm.evalProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 72
+% Passive clauses: 285
+% Generated clauses: 2046
+% Final active clauses: 51
+% Final passive clauses: 200
+% Input formulas: 32
+% Initial clauses: 62
+% 
+% Duplicate literals: 23
+% Trivial inequalities: 41
+% Fw subsumption resolutions: 124
+% Fw demodulations: 215
+% Bw demodulations: 9
+% Condensations: 68
+% Global subsumptions: 9
+% 
+% Simple tautologies: 51
+% Equational tautologies: 9
+% Forward subsumptions: 685
+% Fw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 55
+% Factoring: 1
+% Forward superposition: 474
+% Backward superposition: 511
+% Self superposition: 25
+% Equality factoring: 4
+% Equality resolution: 17
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 561
+% SAT solver unit clauses: 76
+% SAT solver binary clauses: 52
+% SAT solver learnt clauses: 24
+% SAT solver learnt literals: 13
+% 
+% Sat splits: 9
+% Sat splitting refutations: 19
+% 
+% TWLsolver clauses: 519
+% TWLsolver calls for satisfiability: 281
+% 
+% Memory used [KB]: 3070
+% Time elapsed: 0.160 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.776 s

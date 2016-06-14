@@ -1,0 +1,303 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.source_to_modProof
+% (47781)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 617
+% Passive clauses: 7548
+% Generated clauses: 15574
+% Final active clauses: 617
+% Final passive clauses: 6608
+% Input formulas: 133
+% Initial clauses: 308
+% 
+% Duplicate literals: 207
+% Trivial inequalities: 34
+% Fw subsumption resolutions: 551
+% Fw demodulations: 368
+% 
+% Simple tautologies: 216
+% Equational tautologies: 46
+% Forward subsumptions: 6576
+% 
+% Binary resolution: 8710
+% Factoring: 946
+% Forward superposition: 2027
+% Backward superposition: 2330
+% Self superposition: 9
+% Equality factoring: 2
+% Equality resolution: 18
+% 
+% Split clauses: 156
+% Split components: 314
+% SAT solver clauses: 346
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 66
+% 
+% Sat splits: 156
+% 
+% TWLsolver clauses: 346
+% TWLsolver calls for satisfiability: 285
+% 
+% Memory used [KB]: 8315
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.source_to_modProof
+% (47798)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 378
+% Passive clauses: 1909
+% Generated clauses: 9020
+% Final active clauses: 376
+% Final passive clauses: 1476
+% Input formulas: 133
+% Initial clauses: 308
+% 
+% Duplicate literals: 115
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 476
+% Fw demodulations: 304
+% Bw demodulations: 55
+% Condensations: 135
+% Global subsumptions: 18
+% 
+% Simple tautologies: 187
+% Equational tautologies: 12
+% Forward subsumptions: 3812
+% 
+% Binary resolution: 2639
+% Factoring: 336
+% Forward superposition: 1620
+% Backward superposition: 1079
+% Self superposition: 10
+% Equality factoring: 2
+% Equality resolution: 3
+% 
+% Split clauses: 6
+% Split components: 12
+% SAT solver clauses: 2386
+% SAT solver unit clauses: 387
+% SAT solver binary clauses: 80
+% SAT solver learnt clauses: 36
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 6
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 2314
+% TWLsolver calls for satisfiability: 2472
+% 
+% Memory used [KB]: 13560
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.source_to_modProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.source_to_modProof
+% SZS output start Proof for thm.source_to_modProof
+fof(f111953,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f111952,f877])).
+fof(f877,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f552,f549])).
+fof(f549,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb',aHL_TRUTH)).
+fof(f552,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f440])).
+fof(f440,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f137])).
+fof(f137,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f102])).
+fof(f102,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f111952,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f111951,f4907])).
+fof(f4907,plain,(
+  s(bool,'F_0') = s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14)))),
+  inference(unit_resulting_resolution,[],[f901,f4714,f1085])).
+fof(f1085,plain,(
+  ( ! [X2,X3] : (p(s(bool,X3)) | s(bool,X2) = s(bool,X3) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(subsumption_resolution,[],[f1080,f877])).
+fof(f1080,plain,(
+  ( ! [X2,X3] : (p(s(bool,'F_0')) | p(s(bool,X3)) | s(bool,X2) = s(bool,X3) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(superposition,[],[f708,f556])).
+fof(f556,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb',aHL_BOOL_CASES)).
+fof(f708,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f404])).
+fof(f404,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f403])).
+fof(f403,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f307])).
+fof(f307,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f9])).
+fof(f9,axiom,(
+  ! [X21,X22] : ((p(s(bool,X21)) => p(s(bool,X22))) => ((p(s(bool,X22)) => p(s(bool,X21))) => s(bool,X21) = s(bool,X22)))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb','thm.bool.IMP_ANTISYM_AX')).
+fof(f4714,plain,(
+  ~p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14))))),
+  inference(unit_resulting_resolution,[],[f548,f667])).
+fof(f667,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2)))) | s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f472])).
+fof(f472,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2)))) | (p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X2))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X0),X2)))))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))) & s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X0),X2))) & s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X0),X2))) & s('type.ffi.ffi_state'(X0),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.modSem.state_ffi_1'(s('type.modSem.state'(X0),X2))))) & (~p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X2))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X0),X2)))))) | s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) != s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))) | s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X0),X1))) != s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X0),X2))) | s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))) != s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X0),X2))) | s('type.ffi.ffi_state'(X0),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X0),X1))) != s('type.ffi.ffi_state'(X0),'const.modSem.state_ffi_1'(s('type.modSem.state'(X0),X2))) | p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2))))))),
+  inference(flattening,[],[f471])).
+fof(f471,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2)))) | (p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X2))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X0),X2)))))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))) & s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X0),X2))) & s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X0),X2))) & s('type.ffi.ffi_state'(X0),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.modSem.state_ffi_1'(s('type.modSem.state'(X0),X2))))) & ((~p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X2))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X0),X2)))))) | s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) != s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))) | s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X0),X1))) != s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X0),X2))) | s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))) != s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X0),X2))) | s('type.ffi.ffi_state'(X0),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X0),X1))) != s('type.ffi.ffi_state'(X0),'const.modSem.state_ffi_1'(s('type.modSem.state'(X0),X2)))) | p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2))))))),
+  inference(nnf_transformation,[],[f277])).
+fof(f277,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2)))) <=> (p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X2))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X0),X2)))))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))) & s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X0),X2))) & s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X0),X2))) & s('type.ffi.ffi_state'(X0),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.modSem.state_ffi_1'(s('type.modSem.state'(X0),X2)))))),
+  inference(flattening,[],[f276])).
+fof(f276,plain,(
+  ! [X0] : ! [X1,X2] : (p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X1),s('type.modSem.state'(X0),X2)))) <=> (p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X2))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X0),X1))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X0),X2)))))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))) & s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X0),X1))) = s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X0),X2))) & s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X0),X2))) & s('type.ffi.ffi_state'(X0),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.modSem.state_ffi_1'(s('type.modSem.state'(X0),X2)))))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X6] : ! [X36,X37] : (p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X6),X36),s('type.modSem.state'(X6),X37)))) <=> (p(s(bool,'const.list.LIST_REL_3'(s(fun('type.semanticPrimitives.store_v'('type.semanticPrimitives.v'),fun('type.semanticPrimitives.store_v'('type.modSem.v'),bool)),'const.source_to_modProof.sv_rel_1'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X6),X37))))),s('type.list.list'('type.semanticPrimitives.store_v'('type.semanticPrimitives.v')),'const.semanticPrimitives.state_refs_1'(s('type.semanticPrimitives.state'(X6),X36))),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),'const.modSem.state_refs_1'(s('type.modSem.state'(X6),X37)))))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X6),X36))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X6),X37))) & s(fun('type.list.list'('type.string.char'),bool),'const.semanticPrimitives.state_defined_mods_1'(s('type.semanticPrimitives.state'(X6),X36))) = s(fun('type.list.list'('type.string.char'),bool),'const.modSem.state_defined_mods_1'(s('type.modSem.state'(X6),X37))) & s('type.num.num','const.semanticPrimitives.state_clock_1'(s('type.semanticPrimitives.state'(X6),X36))) = s('type.num.num','const.modSem.state_clock_1'(s('type.modSem.state'(X6),X37))) & s('type.ffi.ffi_state'(X6),'const.semanticPrimitives.state_ffi_1'(s('type.semanticPrimitives.state'(X6),X36))) = s('type.ffi.ffi_state'(X6),'const.modSem.state_ffi_1'(s('type.modSem.state'(X6),X37)))))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb','thm.source_to_modProof.s_rel_cases')).
+fof(f548,plain,(
+  s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(sK12),sK15))) != s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(sK12),sK14)))),
+  inference(cnf_transformation,[],[f439])).
+fof(f439,plain,(
+  p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),sK19),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),sK18),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),sK17),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK16),s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14),s(fun('type.list.list'('type.string.char'),bool),sK13)))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(sK12),sK15))) != s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(sK12),sK14)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13,sK14,sK15,sK16,sK17,sK18,sK19])],[f373])).
+fof(f373,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X7),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X6),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X5),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X3),s('type.modSem.state'(X0),X2),s(fun('type.list.list'('type.string.char'),bool),X1)))) & s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X3))) != s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))))),
+  inference(ennf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X7),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X6),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X5),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X3),s('type.modSem.state'(X0),X2),s(fun('type.list.list'('type.string.char'),bool),X1)))) => s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X3))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))))),
+  inference(flattening,[],[f135])).
+fof(f135,plain,(
+  ~! [X0] : ! [X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X7),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X6),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X5),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X3),s('type.modSem.state'(X0),X2),s(fun('type.list.list'('type.string.char'),bool),X1)))) => s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X0),X3))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X0),X2))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9,X10,X11,X12,X13] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X13),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X12),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X11),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X10),s('type.semanticPrimitives.state'(X6),X9),s('type.modSem.state'(X6),X8),s(fun('type.list.list'('type.string.char'),bool),X7)))) => s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X6),X9))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X6),X8))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9,X10,X11,X12,X13] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X13),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X12),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X11),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X10),s('type.semanticPrimitives.state'(X6),X9),s('type.modSem.state'(X6),X8),s(fun('type.list.list'('type.string.char'),bool),X7)))) => s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.semanticPrimitives.state_defined_types_1'(s('type.semanticPrimitives.state'(X6),X9))) = s(fun('type.semanticPrimitives.tid_or_exn',bool),'const.modSem.state_defined_types_1'(s('type.modSem.state'(X6),X8))))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb','thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb')).
+fof(f901,plain,(
+  s(bool,'T_0') != s(bool,'F_0')),
+  inference(unit_resulting_resolution,[],[f877,f563])).
+fof(f563,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f442])).
+fof(f442,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f145])).
+fof(f145,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f29])).
+fof(f29,axiom,(
+  ! [X47] : (s(bool,'T_0') = s(bool,X47) <=> p(s(bool,X47)))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb','thm.bool.EQ_CLAUSES|split|0')).
+fof(f111951,plain,(
+  p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14))))),
+  inference(subsumption_resolution,[],[f111441,f549])).
+fof(f111441,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14))))),
+  inference(superposition,[],[f700,f1800])).
+fof(f1800,plain,(
+  s(bool,'T_0') = s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),sK19),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),sK18),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),sK17),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK16),s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14),s(fun('type.list.list'('type.string.char'),bool),sK13)))),
+  inference(unit_resulting_resolution,[],[f549,f547,f711])).
+fof(f711,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f404])).
+fof(f547,plain,(
+  p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),sK19),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),sK18),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),sK17),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),sK16),s('type.semanticPrimitives.state'(sK12),sK15),s('type.modSem.state'(sK12),sK14),s(fun('type.list.list'('type.string.char'),bool),sK13))))),
+  inference(cnf_transformation,[],[f439])).
+fof(f700,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (~p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7)))) | p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6))))) )),
+  inference(cnf_transformation,[],[f489])).
+fof(f489,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : ((~p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7)))) | (p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3))))),s(fun('type.list.list'('type.string.char'),bool),X7)))) & p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X6))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4)))) & p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6)))))) & (~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3))))),s(fun('type.list.list'('type.string.char'),bool),X7)))) | ~p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X6))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4)))) | ~p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6)))) | p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7))))))),
+  inference(flattening,[],[f488])).
+fof(f488,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : ((~p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7)))) | (p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3))))),s(fun('type.list.list'('type.string.char'),bool),X7)))) & p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X6))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4)))) & p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6)))))) & ((~p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3))))),s(fun('type.list.list'('type.string.char'),bool),X7)))) | ~p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X6))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4)))) | ~p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6))))) | p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7))))))),
+  inference(nnf_transformation,[],[f299])).
+fof(f299,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7)))) <=> (p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3))))),s(fun('type.list.list'('type.string.char'),bool),X7)))) & p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X6))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4)))) & p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6))))))),
+  inference(flattening,[],[f298])).
+fof(f298,plain,(
+  ! [X0] : ! [X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4),s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6),s(fun('type.list.list'('type.string.char'),bool),X7)))) <=> (p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3))))),s(fun('type.list.list'('type.string.char'),bool),X7)))) & p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X0),X6))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X1),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X3),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X4)))) & p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X0),X5),s('type.modSem.state'(X0),X6))))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6] : ! [X23,X24,X25,X26,X27,X28,X29] : (p(s(bool,'const.source_to_modProof.invariant_7'(s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X23),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X24),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X25),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X26),s('type.semanticPrimitives.state'(X6),X27),s('type.modSem.state'(X6),X28),s(fun('type.list.list'('type.string.char'),bool),X29)))) <=> (p(s(bool,'const.pred_set.SUBSET_2'(s(fun('type.list.list'('type.string.char'),bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.list.list'('type.string.char')),'const.list.MAP_2'(s(fun('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v'))),'type.list.list'('type.string.char')),'const.pair.FST_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X25))))),s(fun('type.list.list'('type.string.char'),bool),X29)))) & p(s(bool,'const.source_to_modProof.global_env_inv_6'(s('type.list.list'('type.option.option'('type.modSem.v')),'const.modSem.state_globals_1'(s('type.modSem.state'(X6),X28))),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num')),X23),s('type.finite_map.fmap'('type.list.list'('type.string.char'),'type.num.num'),X24),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')))),X25),s(fun('type.list.list'('type.string.char'),bool),'const.pred_set.EMPTY_0'),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.semanticPrimitives.v')),X26)))) & p(s(bool,'const.source_to_modProof.s_rel_2'(s('type.semanticPrimitives.state'(X6),X27),s('type.modSem.state'(X6),X28))))))),
+  file('thm.source_to_modProof.source_to_modProof_|49|49_prove_ltb','thm.source_to_modProof.invariant_def')).
+% SZS output end Proof for thm.source_to_modProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 1298
+% Passive clauses: 9059
+% Generated clauses: 115946
+% Final active clauses: 882
+% Final passive clauses: 2103
+% Input formulas: 133
+% Initial clauses: 308
+% 
+% Duplicate literals: 1216
+% Trivial inequalities: 165
+% Fw subsumption resolutions: 3103
+% Fw demodulations: 11316
+% Bw demodulations: 5133
+% Condensations: 4026
+% Global subsumptions: 665
+% 
+% Simple tautologies: 150
+% Equational tautologies: 392
+% Forward subsumptions: 83493
+% Bw demodulations to eq. taut.: 49
+% 
+% Unit resulting resolution: 9551
+% Factoring: 1
+% Forward superposition: 51456
+% Backward superposition: 23598
+% Self superposition: 118
+% Equality factoring: 43
+% Equality resolution: 18
+% 
+% Split clauses: 110
+% Split components: 223
+% SAT solver clauses: 11721
+% SAT solver unit clauses: 3156
+% SAT solver binary clauses: 4059
+% 
+% Sat splits: 110
+% Sat splitting refutations: 1775
+% 
+% Memory used [KB]: 83282
+% Time elapsed: 7.048 s
+% ------------------------------
+% ------------------------------
+% Success in time 8.42 s

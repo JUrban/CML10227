@@ -1,0 +1,344 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.stack_namesProof
+% (99337)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 138
+% Passive clauses: 2616
+% Generated clauses: 18875
+% Final active clauses: 127
+% Final passive clauses: 2228
+% Input formulas: 35
+% Initial clauses: 98
+% 
+% Duplicate literals: 851
+% Trivial inequalities: 465
+% Fw subsumption resolutions: 3600
+% Fw demodulations: 1913
+% Bw demodulations: 8
+% 
+% Simple tautologies: 525
+% Equational tautologies: 60
+% Forward subsumptions: 7330
+% 
+% Binary resolution: 531
+% Factoring: 4
+% Forward superposition: 5769
+% Backward superposition: 5074
+% Self superposition: 188
+% Equality factoring: 166
+% Equality resolution: 43
+% 
+% Split clauses: 606
+% Split components: 1243
+% SAT solver clauses: 1465
+% SAT solver unit clauses: 40
+% SAT solver binary clauses: 284
+% 
+% Sat splits: 606
+% 
+% TWLsolver clauses: 1462
+% TWLsolver calls for satisfiability: 224
+% 
+% Memory used [KB]: 7803
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 144 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stack_namesProof
+% (99367)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 174
+% Passive clauses: 673
+% Generated clauses: 18852
+% Final active clauses: 133
+% Final passive clauses: 406
+% Input formulas: 35
+% Initial clauses: 98
+% 
+% Duplicate literals: 970
+% Trivial inequalities: 721
+% Fw subsumption resolutions: 2067
+% Fw demodulations: 1515
+% Bw demodulations: 121
+% Condensations: 1573
+% Global subsumptions: 13
+% 
+% Simple tautologies: 525
+% Equational tautologies: 43
+% Forward subsumptions: 9523
+% Bw demodulations to eq. taut.: 3
+% 
+% Binary resolution: 222
+% Factoring: 1
+% Forward superposition: 5595
+% Backward superposition: 4816
+% Self superposition: 123
+% Equality factoring: 89
+% Equality resolution: 26
+% 
+% Split clauses: 72
+% Split components: 144
+% SAT solver clauses: 1247
+% SAT solver unit clauses: 102
+% SAT solver binary clauses: 49
+% SAT solver learnt clauses: 26
+% 
+% Sat splits: 72
+% Sat splitting refutations: 23
+% 
+% TWLsolver clauses: 1195
+% TWLsolver calls for satisfiability: 434
+% 
+% Memory used [KB]: 10618
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 137 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.stack_namesProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stack_namesProof
+% SZS output start Proof for thm.stack_namesProof
+fof(f4375,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f4368])).
+fof(f4368,plain,(
+  s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',sK2),s('type.stackSem.state'(sK0,sK1),sK4))) != s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',sK2),s('type.stackSem.state'(sK0,sK1),sK4)))),
+  inference(superposition,[],[f150,f4355])).
+fof(f4355,plain,(
+  ( ! [X0] : (s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK5)))) )),
+  inference(forward_demodulation,[],[f4354,f146])).
+fof(f146,plain,(
+  s('type.stackSem.state'(sK0,sK1),sK5) = s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))),
+  inference(cnf_transformation,[],[f99])).
+fof(f99,plain,(
+  p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),sK3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(sK0,sK1),sK5) = s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) & s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',sK2),s('type.stackSem.state'(sK0,sK1),sK4))) != s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',sK2),s('type.stackSem.state'(sK0,sK1),sK5)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f81])).
+fof(f81,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : (p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(X0,X1),X5) = s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X3),s('type.stackSem.state'(X0,X1),X4))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X4)))) & s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X4))) != s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X5))))),
+  inference(flattening,[],[f80])).
+fof(f80,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(X0,X1),X5) = s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X3),s('type.stackSem.state'(X0,X1),X4))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X4))))) & s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X4))) != s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X5))))),
+  inference(ennf_transformation,[],[f38])).
+fof(f38,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(X0,X1),X5) = s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X3),s('type.stackSem.state'(X0,X1),X4))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X4))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X5))))),
+  inference(flattening,[],[f37])).
+fof(f37,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4,X5] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(X0,X1),X5) = s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X3),s('type.stackSem.state'(X0,X1),X4))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X4)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X4))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X5))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10,X11] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X9))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(X6,X7),X11) = s('type.stackSem.state'(X6,X7),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X9),s('type.stackSem.state'(X6,X7),X10))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X6,X7),X10)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X6,X7),X10)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X6,X7),X10))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X8),s('type.stackSem.state'(X6,X7),X10))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X8),s('type.stackSem.state'(X6,X7),X11))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10,X11] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X9))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & s('type.stackSem.state'(X6,X7),X11) = s('type.stackSem.state'(X6,X7),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X9),s('type.stackSem.state'(X6,X7),X10))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X6,X7),X10)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X6,X7),X10)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X6,X7),X10))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X8),s('type.stackSem.state'(X6,X7),X10))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X8),s('type.stackSem.state'(X6,X7),X11))))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb','thm.stack_namesProof.stack_namesProof_29_prove_ltb')).
+fof(f4354,plain,(
+  ( ! [X0] : (s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))))) )),
+  inference(subsumption_resolution,[],[f4353,f261])).
+fof(f261,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(subsumption_resolution,[],[f154,f151])).
+fof(f151,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb',aHL_TRUTH)).
+fof(f154,plain,(
+  ~p(s(bool,'F_0')) | ~p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f100])).
+fof(f100,plain,(
+  (p(s(bool,'F_0')) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')))),
+  inference(nnf_transformation,[],[f39])).
+fof(f39,plain,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  inference(flattening,[],[f23])).
+fof(f23,axiom,(
+  ~p(s(bool,'F_0')) <=> p(s(bool,'T_0'))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb','thm.bool.NOT_CLAUSES|split|2')).
+fof(f4353,plain,(
+  ( ! [X0] : (p(s(bool,'F_0')) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))))) )),
+  inference(forward_demodulation,[],[f4352,f274])).
+fof(f274,plain,(
+  s(bool,'F_0') = s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))),
+  inference(unit_resulting_resolution,[],[f147,f165])).
+fof(f165,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f104])).
+fof(f104,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f46])).
+fof(f46,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X11] : (s(bool,'F_0') = s(bool,X11) <=> ~p(s(bool,X11)))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f147,plain,(
+  ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4))))),
+  inference(cnf_transformation,[],[f99])).
+fof(f4352,plain,(
+  ( ! [X0] : (p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))))) )),
+  inference(subsumption_resolution,[],[f4351,f261])).
+fof(f4351,plain,(
+  ( ! [X0] : (p(s(bool,'F_0')) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))))) )),
+  inference(forward_demodulation,[],[f4350,f275])).
+fof(f275,plain,(
+  s(bool,'F_0') = s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(sK0,sK1),sK4)))),
+  inference(unit_resulting_resolution,[],[f148,f165])).
+fof(f148,plain,(
+  ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(sK0,sK1),sK4))))),
+  inference(cnf_transformation,[],[f99])).
+fof(f4350,plain,(
+  ( ! [X0] : (p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X0),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))))) )),
+  inference(condensation,[],[f4349])).
+fof(f4349,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X1),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X1),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4)))))) )),
+  inference(subsumption_resolution,[],[f4335,f160])).
+fof(f160,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f102])).
+fof(f102,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X11] : (s(bool,'T_0') = s(bool,X11) <=> p(s(bool,X11)))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb','thm.bool.EQ_CLAUSES|split|0')).
+fof(f4335,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(sK0,sK1),sK4)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X1),s('type.stackSem.state'(sK0,sK1),sK4))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X1),s('type.stackSem.state'(sK0,sK1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(sK0,sK1),sK4))))) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f799,f434])).
+fof(f434,plain,(
+  ( ! [X7] : (s(bool,X7) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(sK0,sK1),sK4))) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(subsumption_resolution,[],[f430,f261])).
+fof(f430,plain,(
+  ( ! [X7] : (p(s(bool,'F_0')) | s(bool,X7) = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(sK0,sK1),sK4))) | s(bool,'T_0') = s(bool,X7)) )),
+  inference(superposition,[],[f360,f276])).
+fof(f276,plain,(
+  s(bool,'F_0') = s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(sK0,sK1),sK4)))),
+  inference(unit_resulting_resolution,[],[f149,f165])).
+fof(f149,plain,(
+  ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(sK0,sK1),sK4))))),
+  inference(cnf_transformation,[],[f99])).
+fof(f360,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(subsumption_resolution,[],[f348,f261])).
+fof(f348,plain,(
+  ( ! [X0,X1] : (p(s(bool,'F_0')) | p(s(bool,X1)) | s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f209,f158])).
+fof(f158,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb',aHL_BOOL_CASES)).
+fof(f209,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f90])).
+fof(f90,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f89])).
+fof(f89,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X12,X13] : ((p(s(bool,X12)) => p(s(bool,X13))) => ((p(s(bool,X13)) => p(s(bool,X12))) => s(bool,X12) = s(bool,X13)))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb','thm.bool.IMP_ANTISYM_AX')).
+fof(f799,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2)))) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2)))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X3),s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X3),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(X0,X1),X2)))))) )),
+  inference(subsumption_resolution,[],[f794,f151])).
+fof(f794,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'T_0')) | p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X2)))) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X2)))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X2)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X3),s('type.stackSem.state'(X0,X1),X2))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X3),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),sK3),s('type.stackSem.state'(X0,X1),X2)))))) )),
+  inference(superposition,[],[f222,f296])).
+fof(f296,plain,(
+  s(bool,'T_0') = s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),sK3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))),
+  inference(unit_resulting_resolution,[],[f145,f161])).
+fof(f161,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f102])).
+fof(f145,plain,(
+  p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),sK3))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'))))),
+  inference(cnf_transformation,[],[f99])).
+fof(f222,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X4))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) | p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3)))) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3)))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X3))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X4),s('type.stackSem.state'(X0,X1),X3)))))) )),
+  inference(cnf_transformation,[],[f94])).
+fof(f94,plain,(
+  ! [X0,X1,X2,X3,X4] : (~p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X4))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3)))) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3)))) | p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3)))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X3))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X4),s('type.stackSem.state'(X0,X1),X3))))))),
+  inference(flattening,[],[f93])).
+fof(f93,plain,(
+  ! [X0,X1,X2,X3,X4] : ((~p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X4))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) | p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3)))) | p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3)))) | p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))))) | s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X3))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X4),s('type.stackSem.state'(X0,X1),X3))))))),
+  inference(ennf_transformation,[],[f76])).
+fof(f76,plain,(
+  ! [X0,X1,X2,X3,X4] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X4))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X3))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X4),s('type.stackSem.state'(X0,X1),X3))))))),
+  inference(flattening,[],[f75])).
+fof(f75,plain,(
+  ! [X0,X1] : ! [X2,X3,X4] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X4))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X0,X1),X3)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X0,X1),X3)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X0,X1),X3))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),X3))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X2),s('type.stackSem.state'(X0,X1),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X4),s('type.stackSem.state'(X0,X1),X3))))))),
+  inference(rectify,[],[f36])).
+fof(f36,axiom,(
+  ! [X6,X7] : ! [X8,X10,X9] : ((p(s(bool,'const.pred_set.BIJ_3'(s(fun('type.num.num','type.num.num'),'const.stack_names.find_name_1'(s('type.sptree.spt'('type.num.num'),X9))),s(fun('type.num.num',bool),'const.pred_set.UNIV_0'),s(fun('type.num.num',bool),'const.pred_set.UNIV_0')))) & ~p(s(bool,'const.stackSem.state_use_alloc_1'(s('type.stackSem.state'(X6,X7),X10)))) & ~p(s(bool,'const.stackSem.state_use_store_1'(s('type.stackSem.state'(X6,X7),X10)))) & ~p(s(bool,'const.stackSem.state_use_stack_1'(s('type.stackSem.state'(X6,X7),X10))))) => s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X8),s('type.stackSem.state'(X6,X7),X10))) = s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',X8),s('type.stackSem.state'(X6,X7),'const.stack_namesProof.rename_state_2'(s('type.sptree.spt'('type.num.num'),X9),s('type.stackSem.state'(X6,X7),X10))))))),
+  file('thm.stack_namesProof.stack_namesProof_29_prove_ltb','thm.stack_namesProof.compile_semantics')).
+fof(f150,plain,(
+  s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',sK2),s('type.stackSem.state'(sK0,sK1),sK4))) != s('type.ffi.behaviour','const.stackSem.semantics_2'(s('type.num.num',sK2),s('type.stackSem.state'(sK0,sK1),sK5)))),
+  inference(cnf_transformation,[],[f99])).
+% SZS output end Proof for thm.stack_namesProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 90
+% Passive clauses: 303
+% Generated clauses: 4169
+% Final active clauses: 80
+% Final passive clauses: 183
+% Input formulas: 35
+% Initial clauses: 98
+% 
+% Duplicate literals: 265
+% Trivial inequalities: 51
+% Fw subsumption resolutions: 327
+% Fw demodulations: 600
+% Bw demodulations: 11
+% Condensations: 264
+% 
+% Simple tautologies: 105
+% Equational tautologies: 88
+% Forward subsumptions: 2114
+% 
+% Unit resulting resolution: 357
+% Factoring: 1
+% Forward superposition: 1257
+% Backward superposition: 835
+% Self superposition: 36
+% Equality factoring: 34
+% Equality resolution: 6
+% 
+% Split clauses: 31
+% Split components: 67
+% SAT solver clauses: 381
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 66
+% 
+% Sat splits: 31
+% Sat splitting refutations: 14
+% 
+% Memory used [KB]: 2686
+% Time elapsed: 0.081 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.379 s

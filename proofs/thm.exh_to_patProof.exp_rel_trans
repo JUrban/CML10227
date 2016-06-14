@@ -1,0 +1,148 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.exh_to_patProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.exh_to_patProof
+% SZS output start Proof for thm.exh_to_patProof
+fof(f6767,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f6763,f204,f339])).
+fof(f339,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f339_D])).
+fof(f339_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f204,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.exh_to_patProof.exp_rel_trans',aHL_FALSITY)).
+fof(f6763,plain,(
+  $false | $spl3),
+  inference(subsumption_resolution,[],[f6762,f339])).
+fof(f6762,plain,(
+  p(s(bool,'F_0'))),
+  inference(forward_demodulation,[],[f6761,f3489])).
+fof(f3489,plain,(
+  s(bool,'F_0') = s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),sK15),s('type.patLang.exp',sK16),s('type.patLang.exp',sK18)))),
+  inference(resolution,[],[f197,f217])).
+fof(f217,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f49])).
+fof(f49,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X15] : (s(bool,'F_0') = s(bool,X15) <=> ~p(s(bool,X15)))),
+  file('thm.exh_to_patProof.exp_rel_trans','thm.bool.EQ_CLAUSES|split|3')).
+fof(f197,plain,(
+  ~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),sK15),s('type.patLang.exp',sK16),s('type.patLang.exp',sK18))))),
+  inference(cnf_transformation,[],[f131])).
+fof(f131,plain,(
+  p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK11),s(fun('type.num.num',fun('type.num.num',bool)),sK13),s('type.patLang.exp',sK16),s('type.patLang.exp',sK17)))) & p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK11),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),sK14),s('type.patLang.exp',sK17),s('type.patLang.exp',sK18)))) & s(fun('type.num.num',fun('type.num.num',bool)),sK15) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),sK14),s(fun('type.num.num',fun('type.num.num',bool)),sK13))) & ~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),sK15),s('type.patLang.exp',sK16),s('type.patLang.exp',sK18))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14,sK15,sK16,sK17,sK18])],[f90])).
+fof(f90,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7,X8] : (p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X1),s(fun('type.num.num',fun('type.num.num',bool)),X3),s('type.patLang.exp',X6),s('type.patLang.exp',X7)))) & p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X1),s('type.num.num',X2),s(fun('type.num.num',fun('type.num.num',bool)),X4),s('type.patLang.exp',X7),s('type.patLang.exp',X8)))) & s(fun('type.num.num',fun('type.num.num',bool)),X5) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X4),s(fun('type.num.num',fun('type.num.num',bool)),X3))) & ~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X2),s(fun('type.num.num',fun('type.num.num',bool)),X5),s('type.patLang.exp',X6),s('type.patLang.exp',X8)))))),
+  inference(flattening,[],[f89])).
+fof(f89,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7,X8] : ((p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X1),s(fun('type.num.num',fun('type.num.num',bool)),X3),s('type.patLang.exp',X6),s('type.patLang.exp',X7)))) & p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X1),s('type.num.num',X2),s(fun('type.num.num',fun('type.num.num',bool)),X4),s('type.patLang.exp',X7),s('type.patLang.exp',X8)))) & s(fun('type.num.num',fun('type.num.num',bool)),X5) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X4),s(fun('type.num.num',fun('type.num.num',bool)),X3)))) & ~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X2),s(fun('type.num.num',fun('type.num.num',bool)),X5),s('type.patLang.exp',X6),s('type.patLang.exp',X8)))))),
+  inference(ennf_transformation,[],[f37])).
+fof(f37,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6,X7,X8] : ((p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X1),s(fun('type.num.num',fun('type.num.num',bool)),X3),s('type.patLang.exp',X6),s('type.patLang.exp',X7)))) & p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X1),s('type.num.num',X2),s(fun('type.num.num',fun('type.num.num',bool)),X4),s('type.patLang.exp',X7),s('type.patLang.exp',X8)))) & s(fun('type.num.num',fun('type.num.num',bool)),X5) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X4),s(fun('type.num.num',fun('type.num.num',bool)),X3)))) => p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X2),s(fun('type.num.num',fun('type.num.num',bool)),X5),s('type.patLang.exp',X6),s('type.patLang.exp',X8)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8,X9,X10,X11,X12,X13,X14] : ((p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X6),s('type.num.num',X7),s(fun('type.num.num',fun('type.num.num',bool)),X9),s('type.patLang.exp',X12),s('type.patLang.exp',X13)))) & p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X7),s('type.num.num',X8),s(fun('type.num.num',fun('type.num.num',bool)),X10),s('type.patLang.exp',X13),s('type.patLang.exp',X14)))) & s(fun('type.num.num',fun('type.num.num',bool)),X11) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X10),s(fun('type.num.num',fun('type.num.num',bool)),X9)))) => p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X6),s('type.num.num',X8),s(fun('type.num.num',fun('type.num.num',bool)),X11),s('type.patLang.exp',X12),s('type.patLang.exp',X14)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8,X9,X10,X11,X12,X13,X14] : ((p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X6),s('type.num.num',X7),s(fun('type.num.num',fun('type.num.num',bool)),X9),s('type.patLang.exp',X12),s('type.patLang.exp',X13)))) & p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X7),s('type.num.num',X8),s(fun('type.num.num',fun('type.num.num',bool)),X10),s('type.patLang.exp',X13),s('type.patLang.exp',X14)))) & s(fun('type.num.num',fun('type.num.num',bool)),X11) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X10),s(fun('type.num.num',fun('type.num.num',bool)),X9)))) => p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X6),s('type.num.num',X8),s(fun('type.num.num',fun('type.num.num',bool)),X11),s('type.patLang.exp',X12),s('type.patLang.exp',X14)))))),
+  file('thm.exh_to_patProof.exp_rel_trans','thm.exh_to_patProof.exp_rel_trans')).
+fof(f6761,plain,(
+  p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),sK15),s('type.patLang.exp',sK16),s('type.patLang.exp',sK18))))),
+  inference(forward_demodulation,[],[f6729,f196])).
+fof(f196,plain,(
+  s(fun('type.num.num',fun('type.num.num',bool)),sK15) = s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),sK14),s(fun('type.num.num',fun('type.num.num',bool)),sK13)))),
+  inference(cnf_transformation,[],[f131])).
+fof(f6729,plain,(
+  p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),sK14),s(fun('type.num.num',fun('type.num.num',bool)),sK13))),s('type.patLang.exp',sK16),s('type.patLang.exp',sK18))))),
+  inference(resolution,[],[f3997,f195])).
+fof(f195,plain,(
+  p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK11),s('type.num.num',sK12),s(fun('type.num.num',fun('type.num.num',bool)),sK14),s('type.patLang.exp',sK17),s('type.patLang.exp',sK18))))),
+  inference(cnf_transformation,[],[f131])).
+fof(f3997,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK11),s('type.num.num',X0),s(fun('type.num.num',fun('type.num.num',bool)),X1),s('type.patLang.exp',sK17),s('type.patLang.exp',X2)))) | p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',X0),s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X1),s(fun('type.num.num',fun('type.num.num',bool)),sK13))),s('type.patLang.exp',sK16),s('type.patLang.exp',X2))))) )),
+  inference(resolution,[],[f332,f194])).
+fof(f194,plain,(
+  p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',sK10),s('type.num.num',sK11),s(fun('type.num.num',fun('type.num.num',bool)),sK13),s('type.patLang.exp',sK16),s('type.patLang.exp',sK17))))),
+  inference(cnf_transformation,[],[f131])).
+fof(f332,plain,(
+  ( ! [X6,X4,X2,X0,X7,X5,X3,X1] : (~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X1),s(fun('type.num.num',fun('type.num.num',bool)),X2),s('type.patLang.exp',X3),s('type.patLang.exp',X4)))) | ~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X1),s('type.num.num',X5),s(fun('type.num.num',fun('type.num.num',bool)),X6),s('type.patLang.exp',X4),s('type.patLang.exp',X7)))) | p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X5),s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X6),s(fun('type.num.num',fun('type.num.num',bool)),X2))),s('type.patLang.exp',X3),s('type.patLang.exp',X7))))) )),
+  inference(cnf_transformation,[],[f115])).
+fof(f115,plain,(
+  ! [X0,X1,X2,X3,X4] : (~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X1),s(fun('type.num.num',fun('type.num.num',bool)),X2),s('type.patLang.exp',X3),s('type.patLang.exp',X4)))) | ! [X5,X6,X7] : (~p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X1),s('type.num.num',X5),s(fun('type.num.num',fun('type.num.num',bool)),X6),s('type.patLang.exp',X4),s('type.patLang.exp',X7)))) | p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X5),s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X6),s(fun('type.num.num',fun('type.num.num',bool)),X2))),s('type.patLang.exp',X3),s('type.patLang.exp',X7))))))),
+  inference(ennf_transformation,[],[f88])).
+fof(f88,plain,(
+  ! [X0,X1,X2,X3,X4] : (p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X1),s(fun('type.num.num',fun('type.num.num',bool)),X2),s('type.patLang.exp',X3),s('type.patLang.exp',X4)))) => ! [X5,X6,X7] : (p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X1),s('type.num.num',X5),s(fun('type.num.num',fun('type.num.num',bool)),X6),s('type.patLang.exp',X4),s('type.patLang.exp',X7)))) => p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X0),s('type.num.num',X5),s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X6),s(fun('type.num.num',fun('type.num.num',bool)),X2))),s('type.patLang.exp',X3),s('type.patLang.exp',X7))))))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X6,X7,X9,X12,X13] : (p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X6),s('type.num.num',X7),s(fun('type.num.num',fun('type.num.num',bool)),X9),s('type.patLang.exp',X12),s('type.patLang.exp',X13)))) => ! [X8,X10,X14] : (p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X7),s('type.num.num',X8),s(fun('type.num.num',fun('type.num.num',bool)),X10),s('type.patLang.exp',X13),s('type.patLang.exp',X14)))) => p(s(bool,'const.exh_to_patProof.exp_rel_5'(s('type.num.num',X6),s('type.num.num',X8),s(fun('type.num.num',fun('type.num.num',bool)),'const.relation.O_2'(s(fun('type.num.num',fun('type.num.num',bool)),X10),s(fun('type.num.num',fun('type.num.num',bool)),X9))),s('type.patLang.exp',X12),s('type.patLang.exp',X14))))))),
+  file('thm.exh_to_patProof.exp_rel_trans','thm.exh_to_patProof.exh_to_patProof_5|49|_prove_ltb')).
+% SZS output end Proof for thm.exh_to_patProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 421
+% Passive clauses: 2016
+% Generated clauses: 6527
+% Final active clauses: 419
+% Final passive clauses: 1398
+% Input formulas: 35
+% Initial clauses: 139
+% 
+% Duplicate literals: 192
+% Trivial inequalities: 54
+% Fw subsumption resolutions: 703
+% Fw demodulations: 42
+% Bw demodulations: 2
+% 
+% Simple tautologies: 146
+% Equational tautologies: 48
+% Forward subsumptions: 3082
+% 
+% Binary resolution: 3167
+% Factoring: 820
+% Forward superposition: 508
+% Backward superposition: 749
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 16
+% 
+% Split clauses: 262
+% Split components: 530
+% SAT solver clauses: 449
+% SAT solver unit clauses: 14
+% SAT solver binary clauses: 109
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 262
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 448
+% TWLsolver calls for satisfiability: 256
+% 
+% Memory used [KB]: 3582
+% Time elapsed: 0.158 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.17 s

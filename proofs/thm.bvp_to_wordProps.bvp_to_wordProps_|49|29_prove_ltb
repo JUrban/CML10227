@@ -1,0 +1,180 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvp_to_wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_to_wordProps
+% SZS output start Proof for thm.bvp_to_wordProps
+fof(f411,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f406,f102,f116,f118,f84,f119])).
+fof(f119,plain,(
+  ~p(s(bool,'F_0')) | $spl3),
+  inference(cnf_transformation,[],[f119_D])).
+fof(f119_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f84,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f26])).
+fof(f26,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb',aHL_FALSITY)).
+fof(f118,plain,(
+  p(s(bool,'F_0')) | $spl2),
+  inference(cnf_transformation,[],[f118_D])).
+fof(f118_D,plain,(
+  p(s(bool,'F_0')) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f116,plain,(
+  p(s(bool,'T_0')) | $spl0),
+  inference(cnf_transformation,[],[f116_D])).
+fof(f116_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f102,plain,(
+  p(s(bool,'T_0')) | p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f68])).
+fof(f68,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | ~p(s(bool,'F_0')) | p(s(bool,X0))))),
+  inference(flattening,[],[f67])).
+fof(f67,plain,(
+  ! [X0] : (((p(s(bool,'F_0')) & ~p(s(bool,X0))) | p(s(bool,'T_0'))) & (~p(s(bool,'T_0')) | (~p(s(bool,'F_0')) | p(s(bool,X0)))))),
+  inference(nnf_transformation,[],[f51])).
+fof(f51,plain,(
+  ! [X0] : ((~p(s(bool,'F_0')) | p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(ennf_transformation,[],[f35])).
+fof(f35,plain,(
+  ! [X0] : ((p(s(bool,'F_0')) => p(s(bool,X0))) <=> p(s(bool,'T_0')))),
+  inference(rectify,[],[f21])).
+fof(f21,axiom,(
+  ! [X10] : ((p(s(bool,'F_0')) => p(s(bool,X10))) <=> p(s(bool,'T_0')))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb','thm.bool.IMP_CLAUSES|split|2')).
+fof(f406,plain,(
+  $false | ($spl0 | $spl3)),
+  inference(subsumption_resolution,[],[f405,f116])).
+fof(f405,plain,(
+  ~p(s(bool,'T_0')) | $spl3),
+  inference(forward_demodulation,[],[f404,f149])).
+fof(f149,plain,(
+  s(bool,'T_0') = s(bool,'const.bool.IN_2'(s('type.bvlSem.v',sK1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),sK0)))))),
+  inference(resolution,[],[f76,f88])).
+fof(f88,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f58])).
+fof(f58,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f28])).
+fof(f28,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f14])).
+fof(f14,axiom,(
+  ! [X10] : (s(bool,'T_0') = s(bool,X10) <=> p(s(bool,X10)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f76,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',sK1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),sK0))))))),
+  inference(cnf_transformation,[],[f55])).
+fof(f55,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',sK1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),sK0)))))) & ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',sK1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),sK0))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f46])).
+fof(f46,plain,(
+  ? [X0,X1] : (p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X0)))))) & ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X0)))))))),
+  inference(ennf_transformation,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1] : (p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X0)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X0)))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : (p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X7),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X6)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X7))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X6)))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : (p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X7),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X6)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X7))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X6)))))))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb','thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb')).
+fof(f404,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',sK1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),sK0)))))) | $spl3),
+  inference(subsumption_resolution,[],[f398,f119])).
+fof(f398,plain,(
+  p(s(bool,'F_0')) | ~p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',sK1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),sK0))))))),
+  inference(superposition,[],[f114,f152])).
+fof(f152,plain,(
+  s(bool,'F_0') = s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',sK1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),sK0)))))),
+  inference(resolution,[],[f77,f92])).
+fof(f92,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f60])).
+fof(f60,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f31])).
+fof(f31,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f30])).
+fof(f30,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X10] : (s(bool,'F_0') = s(bool,X10) <=> ~p(s(bool,X10)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb','thm.bool.EQ_CLAUSES|split|2')).
+fof(f77,plain,(
+  ~p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',sK1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),sK0))))))),
+  inference(cnf_transformation,[],[f55])).
+fof(f114,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X0)))))) | ~p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X0))))))) )),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0,X1] : (~p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X0)))))) | p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X0)))))))),
+  inference(ennf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1] : (p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X1),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X0)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X1))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X0)))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X8,X9] : (p(s(bool,'const.bool.IN_2'(s('type.bvlSem.v',X9),s(fun('type.bvlSem.v',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.bvlSem.v'),X8)))))) => p(s(bool,'const.arithmetic.<=_2'(s('type.num.num','const.bvlSem.v_size_1'(s('type.bvlSem.v',X9))),s('type.num.num','const.bvlSem.v|49|_size_1'(s('type.list.list'('type.bvlSem.v'),X8)))))))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49|29_prove_ltb','thm.bvp_to_wordProps.bvp_to_wordProps_53_prove_ltb')).
+% SZS output end Proof for thm.bvp_to_wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 18
+% Passive clauses: 60
+% Generated clauses: 317
+% Final active clauses: 16
+% Final passive clauses: 34
+% Input formulas: 21
+% Initial clauses: 40
+% 
+% Duplicate literals: 41
+% Trivial inequalities: 9
+% Fw subsumption resolutions: 24
+% Fw demodulations: 2
+% Bw demodulations: 2
+% 
+% Simple tautologies: 38
+% Equational tautologies: 15
+% Forward subsumptions: 116
+% 
+% Binary resolution: 17
+% Forward superposition: 39
+% Backward superposition: 92
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 1
+% 
+% Split clauses: 15
+% Split components: 31
+% SAT solver clauses: 21
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 16
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 15
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 17
+% TWLsolver calls for satisfiability: 3
+% 
+% Memory used [KB]: 767
+% Time elapsed: 0.018 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.037 s

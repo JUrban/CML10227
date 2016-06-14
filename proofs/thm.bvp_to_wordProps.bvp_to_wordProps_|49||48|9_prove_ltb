@@ -1,0 +1,295 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvp_to_wordProps
+% (63931)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 631
+% Passive clauses: 6194
+% Generated clauses: 14481
+% Final active clauses: 624
+% Final passive clauses: 5213
+% Input formulas: 40
+% Initial clauses: 161
+% 
+% Duplicate literals: 457
+% Trivial inequalities: 46
+% Fw subsumption resolutions: 1370
+% Fw demodulations: 174
+% Bw demodulations: 3
+% 
+% Simple tautologies: 186
+% Equational tautologies: 58
+% Forward subsumptions: 5742
+% 
+% Binary resolution: 8035
+% Factoring: 1262
+% Forward superposition: 1728
+% Backward superposition: 1107
+% Self superposition: 22
+% Equality factoring: 26
+% Equality resolution: 23
+% 
+% Split clauses: 302
+% Split components: 611
+% SAT solver clauses: 580
+% SAT solver unit clauses: 16
+% SAT solver binary clauses: 132
+% 
+% Sat splits: 302
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 580
+% TWLsolver calls for satisfiability: 386
+% 
+% Memory used [KB]: 7419
+% Time elapsed: 0.609 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.bvp_to_wordProps
+% (63966)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 425
+% Passive clauses: 2232
+% Generated clauses: 11214
+% Final active clauses: 387
+% Final passive clauses: 1625
+% Input formulas: 40
+% Initial clauses: 161
+% 
+% Duplicate literals: 187
+% Trivial inequalities: 59
+% Fw subsumption resolutions: 973
+% Fw demodulations: 429
+% Bw demodulations: 192
+% Condensations: 266
+% Global subsumptions: 13
+% 
+% Simple tautologies: 249
+% Equational tautologies: 24
+% Forward subsumptions: 4100
+% Bw demodulations to eq. taut.: 7
+% 
+% Binary resolution: 3292
+% Factoring: 83
+% Forward superposition: 1836
+% Backward superposition: 1311
+% Self superposition: 50
+% Equality factoring: 30
+% Equality resolution: 16
+% 
+% Split clauses: 153
+% Split components: 307
+% SAT solver clauses: 2789
+% SAT solver unit clauses: 164
+% SAT solver binary clauses: 63
+% SAT solver learnt clauses: 26
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 153
+% Sat splitting refutations: 9
+% 
+% TWLsolver clauses: 2737
+% TWLsolver calls for satisfiability: 1509
+% 
+% Memory used [KB]: 12153
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.bvp_to_wordProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvp_to_wordProps
+% SZS output start Proof for thm.bvp_to_wordProps
+fof(f101904,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f101903,f227])).
+fof(f227,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f7])).
+fof(f7,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb','thm.bool.TRUTH')).
+fof(f101903,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f101876,f436])).
+fof(f436,plain,(
+  s(bool,'T_0') = s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15)))),
+  inference(unit_resulting_resolution,[],[f224,f242])).
+fof(f242,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f154])).
+fof(f154,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X16] : (s(bool,'T_0') = s(bool,X16) <=> p(s(bool,X16)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb','thm.bool.EQ_CLAUSES|split|1')).
+fof(f224,plain,(
+  p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15))))),
+  inference(cnf_transformation,[],[f151])).
+fof(f151,plain,(
+  p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15)))) & s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16))) = s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(sK10,sK11),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(sK10)),sK12),s('type.num.num',sK14),s(sK11,sK17))))) & s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15))) != s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(sK10,sK11),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(sK10)),sK12),s('type.num.num',sK14),s(sK11,sK17)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12,sK13,sK14,sK15,sK16,sK17])],[f104])).
+fof(f104,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7] : (p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5)))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7))))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5))) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7))))))),
+  inference(flattening,[],[f103])).
+fof(f103,plain,(
+  ? [X0,X1,X2,X3,X4,X5,X6,X7] : ((p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5)))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7)))))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5))) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7))))))),
+  inference(ennf_transformation,[],[f43])).
+fof(f43,plain,(
+  ~! [X0,X1,X2,X3,X4,X5,X6,X7] : ((p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5)))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7)))))) => s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7))))))),
+  inference(flattening,[],[f42])).
+fof(f42,plain,(
+  ~! [X0,X1] : ! [X2,X3,X4,X5,X6,X7] : ((p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5)))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X6))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7)))))) => s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X3),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X5))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X2),s('type.num.num',X4),s(X1,X7))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9,X10,X11,X12,X13] : ((p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X12),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X11)))) & s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X9),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X12))) = s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X6,X7),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X6)),X8),s('type.num.num',X10),s(X7,X13)))))) => s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X9),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X11))) = s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X6,X7),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X6)),X8),s('type.num.num',X10),s(X7,X13))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9,X10,X11,X12,X13] : ((p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X12),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X11)))) & s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X9),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X12))) = s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X6,X7),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X6)),X8),s('type.num.num',X10),s(X7,X13)))))) => s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X9),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X11))) = s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X6,X7),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X6)),X8),s('type.num.num',X10),s(X7,X13))))))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb','thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb')).
+fof(f101876,plain,(
+  ~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15))))),
+  inference(unit_resulting_resolution,[],[f927,f3103])).
+fof(f3103,plain,(
+  ( ! [X0] : (~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),X0)))) | s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16))) = s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),X0)))) )),
+  inference(subsumption_resolution,[],[f3054,f227])).
+fof(f3054,plain,(
+  ( ! [X0] : (~p(s(bool,'T_0')) | s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16))) = s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),X0))) | ~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),X0))))) )),
+  inference(superposition,[],[f311,f1052])).
+fof(f1052,plain,(
+  s(bool,'T_0') = s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16)))))),
+  inference(unit_resulting_resolution,[],[f227,f1039,f278])).
+fof(f278,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f116])).
+fof(f116,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f115])).
+fof(f115,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f75])).
+fof(f75,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f8])).
+fof(f8,axiom,(
+  ! [X14,X15] : ((p(s(bool,X14)) => p(s(bool,X15))) => ((p(s(bool,X15)) => p(s(bool,X14))) => s(bool,X14) = s(bool,X15)))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb','thm.bool.IMP_ANTISYM_AX')).
+fof(f1039,plain,(
+  p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16))))))),
+  inference(unit_resulting_resolution,[],[f225,f309])).
+fof(f309,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5))))) | p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2))))) )),
+  inference(cnf_transformation,[],[f187])).
+fof(f187,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2)))) | s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),sK20(X2,X1,X0)),s('type.num.num',sK21(X2,X1,X0)),s(X1,sK22(X2,X1,X0))))))) & (! [X3,X4,X5] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5))))) | p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK20,sK21,sK22])],[f186])).
+fof(f186,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2)))) | ? [X6,X7,X8] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X6),s('type.num.num',X7),s(X1,X8)))))) & (! [X3,X4,X5] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5))))) | p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2))))))),
+  inference(rectify,[],[f185])).
+fof(f185,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2)))) | ? [X3,X4,X5] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5)))))) & (! [X3,X4,X5] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5))))) | p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2))))))),
+  inference(nnf_transformation,[],[f90])).
+fof(f90,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2)))) <=> ? [X3,X4,X5] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5))))))),
+  inference(flattening,[],[f89])).
+fof(f89,plain,(
+  ! [X0,X1] : ! [X2] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2)))) <=> ? [X3,X4,X5] : s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),X2) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X0,X1),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X0)),X3),s('type.num.num',X4),s(X1,X5))))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6,X7] : ! [X17] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),X17)))) <=> ? [X8,X10,X13] : s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),X17) = s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(X6,X7),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(X6)),X8),s('type.num.num',X10),s(X7,X13))))))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb','thm.copying_gc.isSomeDataElement_def')).
+fof(f225,plain,(
+  s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16))) = s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(sK10,sK11),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(sK10)),sK12),s('type.num.num',sK14),s(sK11,sK17)))))),
+  inference(cnf_transformation,[],[f151])).
+fof(f311,plain,(
+  ( ! [X2,X0,X5,X3,X1] : (~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) | s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))) | ~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))) )),
+  inference(cnf_transformation,[],[f191])).
+fof(f191,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) | ! [X5] : (~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) | s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))) & ((p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK24(X3,X2,X1,X0)),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK24(X3,X2,X1,X0)),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK24(X3,X2,X1,X0)),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) | p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK24])],[f190])).
+fof(f190,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) | ! [X5] : (~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) | s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X5),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))) & (? [X4] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) | p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))))),
+  inference(rectify,[],[f189])).
+fof(f189,plain,(
+  ! [X0,X1,X2,X3] : ((~p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) | ! [X4] : (~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) | s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))) & (? [X4] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) & s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) != s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) | p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3))))))),
+  inference(nnf_transformation,[],[f130])).
+fof(f130,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) <=> ! [X4] : (~p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) | s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))))),
+  inference(ennf_transformation,[],[f94])).
+fof(f94,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) <=> ! [X4] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) => s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))))),
+  inference(flattening,[],[f93])).
+fof(f93,plain,(
+  ! [X0,X1] : ! [X2,X3] : (p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))) <=> ! [X4] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2)))))) => s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X2))) = s('type.option.option'('type.copying_gc.heap_element'(X0,X1)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X4),s('type.list.list'('type.copying_gc.heap_element'(X0,X1)),X3)))))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6,X7] : ! [X24,X25] : (p(s(bool,'const.bvp_to_wordProps.heap_store_rel_2'(s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X24),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X25)))) <=> ! [X26] : (p(s(bool,'const.copying_gc.isSomeDataElement_1'(s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X26),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X24)))))) => s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X26),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X24))) = s('type.option.option'('type.copying_gc.heap_element'(X6,X7)),'const.copying_gc.heap_lookup_2'(s('type.num.num',X26),s('type.list.list'('type.copying_gc.heap_element'(X6,X7)),X25)))))),
+  file('thm.bvp_to_wordProps.bvp_to_wordProps_|49||48|9_prove_ltb','thm.bvp_to_wordProps.heap_store_rel_def')).
+fof(f927,plain,(
+  s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15))) != s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK16)))),
+  inference(superposition,[],[f226,f225])).
+fof(f226,plain,(
+  s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.copying_gc.heap_lookup_2'(s('type.num.num',sK13),s('type.list.list'('type.copying_gc.heap_element'(sK10,sK11)),sK15))) != s('type.option.option'('type.copying_gc.heap_element'(sK10,sK11)),'const.option.SOME_1'(s('type.copying_gc.heap_element'(sK10,sK11),'const.copying_gc.DataElement_3'(s('type.list.list'('type.copying_gc.heap_address'(sK10)),sK12),s('type.num.num',sK14),s(sK11,sK17)))))),
+  inference(cnf_transformation,[],[f151])).
+% SZS output end Proof for thm.bvp_to_wordProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 1637
+% Passive clauses: 6562
+% Generated clauses: 105378
+% Final active clauses: 765
+% Final passive clauses: 740
+% Input formulas: 40
+% Initial clauses: 161
+% 
+% Duplicate literals: 5839
+% Trivial inequalities: 290
+% Fw subsumption resolutions: 4360
+% Fw demodulations: 7905
+% Bw demodulations: 2438
+% Condensations: 12485
+% Global subsumptions: 730
+% 
+% Simple tautologies: 289
+% Equational tautologies: 1307
+% Forward subsumptions: 64320
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 600
+% 
+% Unit resulting resolution: 19171
+% Factoring: 15
+% Forward superposition: 25152
+% Backward superposition: 20668
+% Self superposition: 284
+% Equality factoring: 196
+% Equality resolution: 37
+% 
+% Split clauses: 346
+% Split components: 701
+% SAT solver clauses: 9035
+% SAT solver unit clauses: 731
+% SAT solver binary clauses: 1623
+% 
+% Sat splits: 346
+% Sat splitting refutations: 1049
+% 
+% Memory used [KB]: 48869
+% Time elapsed: 5.874 s
+% ------------------------------
+% ------------------------------
+% Success in time 7.21 s

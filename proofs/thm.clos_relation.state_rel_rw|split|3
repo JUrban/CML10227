@@ -1,0 +1,112 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.clos_relation
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.clos_relation
+% SZS output start Proof for thm.clos_relation
+fof(f2536,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2517,f72,f101])).
+fof(f101,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f101_D])).
+fof(f101_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f72,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.clos_relation.state_rel_rw|split|3',aHL_FALSITY)).
+fof(f2517,plain,(
+  $false | $spl1),
+  inference(subsumption_resolution,[],[f2469,f101])).
+fof(f2469,plain,(
+  p(s(bool,'F_0'))),
+  inference(backward_demodulation,[],[f80,f69])).
+fof(f69,plain,(
+  p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(sK0),'const.bool.the_value_0'),s('type.num.num',sK3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),sK2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),sK1))))))),
+  inference(cnf_transformation,[],[f59])).
+fof(f59,plain,(
+  p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(sK0),'const.bool.the_value_0'),s('type.num.num',sK3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),sK2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),sK1))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f52])).
+fof(f52,plain,(
+  ? [X0,X1,X2,X3] : p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X0),'const.bool.the_value_0'),s('type.num.num',X3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X1))))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2,X3] : ~p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X0),'const.bool.the_value_0'),s('type.num.num',X3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X1))))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0] : ! [X1,X2,X3] : ~p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X0),'const.bool.the_value_0'),s('type.num.num',X3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X1))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : ~p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X6),'const.bool.the_value_0'),s('type.num.num',X9),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X8))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X7))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : ~p(s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X6),'const.bool.the_value_0'),s('type.num.num',X9),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X8))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X7))))))),
+  file('thm.clos_relation.state_rel_rw|split|3','thm.clos_relation.state_rel_rw|split|3')).
+fof(f80,plain,(
+  ( ! [X2,X0,X3,X1] : (s(bool,'F_0') = s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X0),'const.bool.the_value_0'),s('type.num.num',X3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X1)))))) )),
+  inference(cnf_transformation,[],[f33])).
+fof(f33,plain,(
+  ! [X0,X1,X2,X3] : s(bool,'F_0') = s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X0),'const.bool.the_value_0'),s('type.num.num',X3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X1)))))),
+  inference(flattening,[],[f32])).
+fof(f32,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(bool,'F_0') = s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X0),'const.bool.the_value_0'),s('type.num.num',X3),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X2))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X1)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X7,X8,X9] : s(bool,'F_0') = s(bool,'const.clos_relation.ref_v_rel_4'(s('type.bool.itself'(X6),'const.bool.the_value_0'),s('type.num.num',X9),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ByteArray_1'(s('type.list.list'('type.fcp.cart'(bool,'type.fcp.bit|48|'('type.fcp.bit|48|'('type.fcp.bit|48|'('type.one.one'))))),X8))),s('type.closSem.ref'('type.closSem.v'),'const.closSem.ValueArray_1'(s('type.list.list'('type.closSem.v'),X7)))))),
+  file('thm.clos_relation.state_rel_rw|split|3','thm.clos_relation.val_rel_def|split|30')).
+% SZS output end Proof for thm.clos_relation
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 47
+% Passive clauses: 533
+% Generated clauses: 2367
+% Final active clauses: 35
+% Final passive clauses: 412
+% Input formulas: 21
+% Initial clauses: 31
+% 
+% Duplicate literals: 162
+% Trivial inequalities: 15
+% Fw subsumption resolutions: 326
+% Fw demodulations: 85
+% Bw demodulations: 8
+% 
+% Simple tautologies: 49
+% Equational tautologies: 30
+% Forward subsumptions: 1008
+% 
+% Binary resolution: 158
+% Factoring: 1
+% Forward superposition: 811
+% Backward superposition: 610
+% Self superposition: 62
+% Equality factoring: 58
+% Equality resolution: 1
+% 
+% Split clauses: 119
+% Split components: 238
+% SAT solver clauses: 219
+% SAT solver unit clauses: 5
+% SAT solver binary clauses: 33
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 119
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 218
+% TWLsolver calls for satisfiability: 79
+% 
+% Memory used [KB]: 1918
+% Time elapsed: 0.055 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.07 s

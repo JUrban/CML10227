@@ -1,0 +1,269 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stackSem
+% (38912)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 70
+% Passive clauses: 2376
+% Generated clauses: 8606
+% Final active clauses: 63
+% Final passive clauses: 2153
+% Input formulas: 69
+% Initial clauses: 74
+% 
+% Duplicate literals: 429
+% Trivial inequalities: 60
+% Fw subsumption resolutions: 863
+% Fw demodulations: 303
+% Bw demodulations: 3
+% 
+% Simple tautologies: 153
+% Equational tautologies: 74
+% Forward subsumptions: 3518
+% 
+% Binary resolution: 117
+% Factoring: 2
+% Forward superposition: 3258
+% Backward superposition: 2944
+% Self superposition: 305
+% Equality factoring: 172
+% Equality resolution: 10
+% 
+% Split clauses: 225
+% Split components: 472
+% SAT solver clauses: 708
+% SAT solver unit clauses: 19
+% SAT solver binary clauses: 170
+% 
+% Sat splits: 225
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 703
+% TWLsolver calls for satisfiability: 124
+% 
+% Memory used [KB]: 8187
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stackSem
+% (38924)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 39
+% Passive clauses: 377
+% Generated clauses: 5369
+% Final active clauses: 38
+% Final passive clauses: 325
+% Input formulas: 69
+% Initial clauses: 74
+% 
+% Duplicate literals: 635
+% Trivial inequalities: 37
+% Fw subsumption resolutions: 176
+% Fw demodulations: 78
+% Bw demodulations: 13
+% Condensations: 995
+% 
+% Simple tautologies: 106
+% Equational tautologies: 72
+% Forward subsumptions: 1846
+% 
+% Binary resolution: 63
+% Factoring: 2
+% Forward superposition: 1135
+% Backward superposition: 1632
+% Self superposition: 219
+% Equality factoring: 166
+% Equality resolution: 7
+% 
+% Split clauses: 9
+% Split components: 18
+% SAT solver clauses: 666
+% SAT solver unit clauses: 132
+% SAT solver binary clauses: 39
+% 
+% Sat splits: 9
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 666
+% TWLsolver calls for satisfiability: 144
+% 
+% Memory used [KB]: 8315
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.stackSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stackSem
+% SZS output start Proof for thm.stackSem
+fof(f13092,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f13091,f211])).
+fof(f211,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1',aHL_TRUTH)).
+fof(f13091,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f13089,f1214])).
+fof(f1214,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(equality_resolution,[],[f612])).
+fof(f612,plain,(
+  ( ! [X2,X0,X1] : (s(X0,X1) != s(X0,X2) | s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) )),
+  inference(condensation,[],[f611])).
+fof(f611,plain,(
+  ( ! [X10,X8,X11,X9] : (s(X8,X9) != s(X8,X10) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X10))) | s(bool,'T_0') = s(bool,X11)) )),
+  inference(subsumption_resolution,[],[f608,f287])).
+fof(f287,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f212,f213])).
+fof(f213,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1',aHL_BOOL_CASES)).
+fof(f212,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1',aHL_FALSITY)).
+fof(f608,plain,(
+  ( ! [X10,X8,X11,X9] : (p(s(bool,X11)) | s(X8,X9) != s(X8,X10) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X10))) | s(bool,'T_0') = s(bool,X11)) )),
+  inference(superposition,[],[f241,f285])).
+fof(f285,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f213,f213])).
+fof(f241,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f209])).
+fof(f209,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f116])).
+fof(f116,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f60])).
+fof(f60,axiom,(
+  ! [X45,X46,X47] : (p(s(bool,happ(s(fun(X45,bool),happ(s(fun(X45,fun(X45,bool)),'=_0'),s(X45,X46))),s(X45,X47)))) <=> s(X45,X46) = s(X45,X47))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1',arity_0_HL_EQ)).
+fof(f13089,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))))),
+  inference(backward_demodulation,[],[f13042,f4179])).
+fof(f4179,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))))))),
+  inference(unit_resulting_resolution,[],[f210,f240])).
+fof(f240,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f209])).
+fof(f210,plain,(
+  s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3)))))),
+  inference(cnf_transformation,[],[f205])).
+fof(f205,plain,(
+  s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK5))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(sK1))),sK4))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f201])).
+fof(f201,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X4))))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3))) != s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X5))),s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X4))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3)))))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X4))))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3))) = s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X5))),s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X4))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3)))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5] : s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X5),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X4))))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3))) = s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X5))),s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X4))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X11),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X10))))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9))) = s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X11))),s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X10))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X11),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X10))))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9))) = s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X11))),s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X10))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9)))))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1','thm.stackSem.state_fupdfupds_comp|split|1')).
+fof(f13042,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X4,'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0))),X2),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0))),X3))))),s(fun(X4,'type.stackSem.state'(X0,X1)),X5))) = s(fun(X4,'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0))),X2))),s(fun(X4,'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X0))),X3))),s(fun(X4,'type.stackSem.state'(X0,X1)),X5)))))) )),
+  inference(superposition,[],[f246,f222])).
+fof(f222,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X3),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X2))))) = s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X3))),s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X2)))))) )),
+  inference(cnf_transformation,[],[f82])).
+fof(f82,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X3),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X2))))) = s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X3))),s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X2)))))),
+  inference(flattening,[],[f81])).
+fof(f81,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X3),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X2))))) = s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X3))),s(fun('type.stackSem.state'(X1,X0),'type.stackSem.state'(X1,X0)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X1))),X2)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X8,X7] : ! [X10,X11] : s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),'const.combin.o_2'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X11),s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X10))))) = s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X11))),s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_regs_fupd_1'(s(fun('type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7)),'type.finite_map.fmap'('type.num.num','type.wordSem.word_loc'(X7))),X10)))))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1','thm.stackSem.state_fupdfupds_comp|split|0')).
+fof(f246,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f126])).
+fof(f126,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f125])).
+fof(f125,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X6,X7,X21,X16] : ! [X11,X10,X9] : s(fun(X21,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X21,X7),'const.combin.o_2'(s(fun(X16,X7),X10),s(fun(X21,X16),X9))))) = s(fun(X21,X6),'const.combin.o_2'(s(fun(X16,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X16,X7),X10))),s(fun(X21,X16),X9)))),
+  file('thm.stackSem.state_fupdfupds_comp|split|1','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.stackSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 107
+% Passive clauses: 1136
+% Generated clauses: 12673
+% Final active clauses: 81
+% Final passive clauses: 845
+% Input formulas: 69
+% Initial clauses: 74
+% 
+% Duplicate literals: 647
+% Trivial inequalities: 57
+% Fw subsumption resolutions: 308
+% Fw demodulations: 1621
+% Bw demodulations: 76
+% Condensations: 665
+% Global subsumptions: 49
+% 
+% Simple tautologies: 131
+% Equational tautologies: 150
+% Forward subsumptions: 7780
+% Fw demodulations to eq. taut.: 3
+% 
+% Unit resulting resolution: 723
+% Factoring: 1
+% Forward superposition: 3713
+% Backward superposition: 4302
+% Self superposition: 284
+% Equality factoring: 78
+% Equality resolution: 2
+% 
+% Split clauses: 50
+% Split components: 105
+% SAT solver clauses: 1335
+% SAT solver unit clauses: 394
+% SAT solver binary clauses: 369
+% 
+% Sat splits: 50
+% Sat splitting refutations: 48
+% 
+% Memory used [KB]: 24178
+% Time elapsed: 0.760 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.101 s

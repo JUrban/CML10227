@@ -1,0 +1,276 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.type_eDeterm
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.type_eDeterm
+% SZS output start Proof for thm.type_eDeterm
+fof(f963,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f956,f90,f142,f89,f146,f187,f189,f188,f212,f154,f157,f163,f144,f148,f868,f155,f870])).
+fof(f870,plain,(
+  s(bool,'F_0') = s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2))))) | $spl22),
+  inference(cnf_transformation,[],[f870_D])).
+fof(f870_D,plain,(
+  s(bool,'F_0') = s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2))))) <=> ~$spl22),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl22])])).
+fof(f155,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) | $spl8),
+  inference(cnf_transformation,[],[f155_D])).
+fof(f155_D,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0)) ) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f868,plain,(
+  ( ! [X6] : (s(bool,'F_0') = s(bool,X6) | s(bool,'F_0') = s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2)))))) ) | ($spl1 | $spl6 | $spl14)),
+  inference(subsumption_resolution,[],[f864,f189])).
+fof(f864,plain,(
+  ( ! [X6] : (~p(s(bool,X6)) | s(bool,'F_0') = s(bool,X6) | s(bool,'F_0') = s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2)))))) ) | ($spl1 | $spl6 | $spl14)),
+  inference(superposition,[],[f833,f281])).
+fof(f281,plain,(
+  ( ! [X4,X3] : (s(bool,X3) = s(bool,X4) | s(bool,'F_0') = s(bool,X4) | s(bool,'F_0') = s(bool,X3)) ) | $spl14),
+  inference(resolution,[],[f232,f189])).
+fof(f232,plain,(
+  ( ! [X2,X1] : (~p(s(bool,X1)) | s(bool,X1) = s(bool,X2) | s(bool,'F_0') = s(bool,X2)) ) | $spl14),
+  inference(resolution,[],[f137,f189])).
+fof(f137,plain,(
+  ( ! [X0,X1] : (~p(s(bool,X1)) | ~p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f53])).
+fof(f53,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f52])).
+fof(f52,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f20])).
+fof(f20,axiom,(
+  ! [X12,X13] : ((p(s(bool,X12)) => p(s(bool,X13))) => ((p(s(bool,X13)) => p(s(bool,X12))) => s(bool,X12) = s(bool,X13)))),
+  file('thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1','thm.bool.IMP_ANTISYM_AX')).
+fof(f833,plain,(
+  ~p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2)))))) | ($spl1 | $spl6 | $spl14)),
+  inference(resolution,[],[f827,f88])).
+fof(f88,plain,(
+  ( ! [X3] : (~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),sK0)))) | ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2))))))) )),
+  inference(cnf_transformation,[],[f55])).
+fof(f55,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',sK2),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),sK1)))))) & ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),sK0),s('type.infer_t.infer_t',sK2)))) & ! [X3] : (~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),sK0)))) | ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',sK2)))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f47])).
+fof(f47,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',X2),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),X1)))))) & ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X2)))) & ! [X3] : (~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),X0)))) | ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X2))))))))),
+  inference(flattening,[],[f46])).
+fof(f46,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',X2),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),X1)))))) & ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X2))))) & ! [X3] : (~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),X0)))) | ~p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X2)))))))))),
+  inference(ennf_transformation,[],[f24])).
+fof(f24,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',X2),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),X1)))))) => ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X2))))) => ? [X3] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X2)))))))))),
+  inference(flattening,[],[f23])).
+fof(f23,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',X2),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),X1)))))) => ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X2)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X2))))) => ? [X3] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X3),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X2)))))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : (p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',X8),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),X7)))))) => ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X8)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X6),s('type.infer_t.infer_t',X8))))) => ? [X9] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X9),s(fun('type.num.num',bool),X6)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X9),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X8)))))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : (p(s(bool,'const.bool.IN_2'(s('type.infer_t.infer_t',X8),s(fun('type.infer_t.infer_t',bool),'const.list.LIST_TO_SET_1'(s('type.list.list'('type.infer_t.infer_t'),X7)))))) => ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X8)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X6),s('type.infer_t.infer_t',X8))))) => ? [X9] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X9),s(fun('type.num.num',bool),X6)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X9),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X8)))))))))),
+  file('thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1','thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1')).
+fof(f827,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),sK0)))) | ($spl1 | $spl6 | $spl14)),
+  inference(subsumption_resolution,[],[f826,f142])).
+fof(f826,plain,(
+  p(s(bool,'F_0')) | p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),sK0)))) | ($spl1 | $spl6 | $spl14)),
+  inference(forward_demodulation,[],[f825,f225])).
+fof(f225,plain,(
+  s(bool,'F_0') = s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2))) | $spl14),
+  inference(resolution,[],[f189,f86])).
+fof(f86,plain,(
+  ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2))))),
+  inference(cnf_transformation,[],[f55])).
+fof(f825,plain,(
+  p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),sK0)))) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) | ($spl1 | $spl6)),
+  inference(subsumption_resolution,[],[f814,f146])).
+fof(f814,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(sK2,sK0)),s(fun('type.num.num',bool),sK0)))) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) | $spl1),
+  inference(superposition,[],[f132,f175])).
+fof(f175,plain,(
+  s(bool,'T_0') = s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),sK0),s('type.infer_t.infer_t',sK2))) | $spl1),
+  inference(subsumption_resolution,[],[f174,f142])).
+fof(f174,plain,(
+  p(s(bool,'F_0')) | s(bool,'T_0') = s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),sK0),s('type.infer_t.infer_t',sK2)))),
+  inference(superposition,[],[f87,f91])).
+fof(f91,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1',aHL_BOOL_CASES)).
+fof(f87,plain,(
+  p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),sK0),s('type.infer_t.infer_t',sK2))))),
+  inference(cnf_transformation,[],[f55])).
+fof(f132,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1)))) | p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(X1,X0)),s(fun('type.num.num',bool),X0)))) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1))))) )),
+  inference(cnf_transformation,[],[f83])).
+fof(f83,plain,(
+  ! [X0,X1] : (p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) | ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1)))) | (p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(X1,X0)),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(X1,X0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X1))))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3])],[f51])).
+fof(f51,plain,(
+  ! [X0,X1] : (p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) | ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1)))) | ? [X2] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X1))))))))),
+  inference(flattening,[],[f50])).
+fof(f50,plain,(
+  ! [X0,X1] : ((p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) | ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1))))) | ? [X2] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X1))))))))),
+  inference(ennf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1))))) => ? [X2] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X1))))))))),
+  inference(flattening,[],[f41])).
+fof(f41,plain,(
+  ! [X0,X1] : ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1))))) => ? [X2] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),X0)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X2),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X1))))))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6,X10] : ((~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X10)))) & p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X6),s('type.infer_t.infer_t',X10))))) => ? [X9] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',X9),s(fun('type.num.num',bool),X6)))) & p(s(bool,'const.bool.IN_2'(s('type.num.num',X9),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X10))))))))),
+  file('thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1','thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|0')).
+fof(f148,plain,(
+  $false | ($spl4 | $spl6)),
+  inference(subsumption_resolution,[],[f146,f144])).
+fof(f144,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) | $spl4),
+  inference(cnf_transformation,[],[f144_D])).
+fof(f144_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0))) ) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f163,plain,(
+  ( ! [X2] : (~p(s(bool,X2))) ) | ($spl1 | $spl8)),
+  inference(superposition,[],[f142,f155])).
+fof(f157,plain,(
+  s(bool,'T_0') != s(bool,'F_0') | $spl11),
+  inference(cnf_transformation,[],[f157_D])).
+fof(f157_D,plain,(
+  s(bool,'T_0') != s(bool,'F_0') <=> ~$spl11),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl11])])).
+fof(f154,plain,(
+  ( ! [X0] : (s(bool,'T_0') != s(bool,'F_0') | s(bool,'F_0') = s(bool,X0)) )),
+  inference(equality_factoring,[],[f91])).
+fof(f212,plain,(
+  $false | ($spl11 | $spl12)),
+  inference(trivial_inequality_removal,[],[f209])).
+fof(f209,plain,(
+  s(bool,'T_0') != s(bool,'T_0') | ($spl11 | $spl12)),
+  inference(superposition,[],[f157,f188])).
+fof(f188,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0)) ) | $spl12),
+  inference(cnf_transformation,[],[f188_D])).
+fof(f188_D,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl12),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl12])])).
+fof(f189,plain,(
+  ( ! [X1] : (p(s(bool,X1)) | s(bool,'F_0') = s(bool,X1)) ) | $spl14),
+  inference(cnf_transformation,[],[f189_D])).
+fof(f189_D,plain,(
+  ( ! [X1] : (p(s(bool,X1)) | s(bool,'F_0') = s(bool,X1)) ) <=> ~$spl14),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl14])])).
+fof(f187,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | s(bool,'F_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) ) | $spl1),
+  inference(subsumption_resolution,[],[f183,f151])).
+fof(f151,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl1),
+  inference(superposition,[],[f142,f91])).
+fof(f183,plain,(
+  ( ! [X0,X1] : (p(s(bool,X0)) | p(s(bool,X1)) | s(bool,'F_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f134,f91])).
+fof(f134,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f53])).
+fof(f146,plain,(
+  p(s(bool,'T_0')) | $spl6),
+  inference(cnf_transformation,[],[f146_D])).
+fof(f146_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f89,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1',aHL_TRUTH)).
+fof(f142,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f142_D])).
+fof(f142_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f90,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f25])).
+fof(f25,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.type_eDeterm.type_eDeterm_6_prove_ltb|split|1',aHL_FALSITY)).
+fof(f956,plain,(
+  $false | ($spl1 | $spl6 | $spl14 | $spl22)),
+  inference(subsumption_resolution,[],[f955,f142])).
+fof(f955,plain,(
+  p(s(bool,'F_0')) | ($spl1 | $spl6 | $spl14 | $spl22)),
+  inference(forward_demodulation,[],[f954,f225])).
+fof(f954,plain,(
+  p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) | ($spl1 | $spl6 | $spl22)),
+  inference(subsumption_resolution,[],[f953,f146])).
+fof(f953,plain,(
+  ~p(s(bool,'T_0')) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) | ($spl1 | $spl22)),
+  inference(forward_demodulation,[],[f952,f175])).
+fof(f952,plain,(
+  ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),sK0),s('type.infer_t.infer_t',sK2)))) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) | ($spl1 | $spl22)),
+  inference(subsumption_resolution,[],[f942,f142])).
+fof(f942,plain,(
+  p(s(bool,'F_0')) | ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),sK0),s('type.infer_t.infer_t',sK2)))) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',sK2)))) | $spl22),
+  inference(superposition,[],[f133,f870])).
+fof(f133,plain,(
+  ( ! [X0,X1] : (p(s(bool,'const.bool.IN_2'(s('type.num.num',sK3(X1,X0)),s(fun('type.num.num',bool),'const.unify.t_vars_1'(s('type.infer_t.infer_t',X1)))))) | ~p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),X0),s('type.infer_t.infer_t',X1)))) | p(s(bool,'const.infer.check_t_3'(s('type.num.num','const.num.|48|_0'),s(fun('type.num.num',bool),'const.pred_set.EMPTY_0'),s('type.infer_t.infer_t',X1))))) )),
+  inference(cnf_transformation,[],[f83])).
+% SZS output end Proof for thm.type_eDeterm
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 33
+% Passive clauses: 188
+% Generated clauses: 844
+% Final active clauses: 21
+% Final passive clauses: 134
+% Input formulas: 21
+% Initial clauses: 54
+% 
+% Duplicate literals: 98
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 109
+% Fw demodulations: 10
+% Bw demodulations: 8
+% 
+% Simple tautologies: 60
+% Equational tautologies: 28
+% Forward subsumptions: 325
+% 
+% Binary resolution: 53
+% Factoring: 1
+% Forward superposition: 146
+% Backward superposition: 250
+% Self superposition: 46
+% Equality factoring: 50
+% 
+% Split clauses: 23
+% Split components: 46
+% SAT solver clauses: 41
+% SAT solver unit clauses: 2
+% SAT solver binary clauses: 19
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 23
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 38
+% TWLsolver calls for satisfiability: 19
+% 
+% Memory used [KB]: 1023
+% Time elapsed: 0.026 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.021 s

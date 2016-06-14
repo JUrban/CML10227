@@ -1,0 +1,294 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.stackSem
+% (117898)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 143
+% Passive clauses: 3371
+% Generated clauses: 22525
+% Final active clauses: 113
+% Final passive clauses: 3027
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 714
+% Trivial inequalities: 258
+% Fw subsumption resolutions: 2567
+% Fw demodulations: 4246
+% Bw demodulations: 25
+% 
+% Simple tautologies: 248
+% Equational tautologies: 72
+% Forward subsumptions: 10271
+% 
+% Binary resolution: 349
+% Factoring: 1
+% Forward superposition: 6517
+% Backward superposition: 7174
+% Self superposition: 272
+% Equality factoring: 158
+% Equality resolution: 17
+% 
+% Split clauses: 294
+% Split components: 588
+% SAT solver clauses: 782
+% SAT solver unit clauses: 22
+% SAT solver binary clauses: 112
+% 
+% Sat splits: 294
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 780
+% TWLsolver calls for satisfiability: 151
+% 
+% Memory used [KB]: 15095
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.stackSem
+% (117907)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 114
+% Passive clauses: 1011
+% Generated clauses: 13640
+% Final active clauses: 97
+% Final passive clauses: 818
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 480
+% Trivial inequalities: 92
+% Fw subsumption resolutions: 694
+% Fw demodulations: 1513
+% Bw demodulations: 95
+% Condensations: 1006
+% 
+% Simple tautologies: 144
+% Equational tautologies: 44
+% Forward subsumptions: 6625
+% 
+% Binary resolution: 242
+% Factoring: 1
+% Forward superposition: 4317
+% Backward superposition: 4272
+% Self superposition: 211
+% Equality factoring: 98
+% Equality resolution: 10
+% 
+% Split clauses: 48
+% Split components: 96
+% SAT solver clauses: 1788
+% SAT solver unit clauses: 259
+% SAT solver binary clauses: 46
+% 
+% Sat splits: 48
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 1788
+% TWLsolver calls for satisfiability: 315
+% 
+% Memory used [KB]: 20212
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.stackSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.stackSem
+% SZS output start Proof for thm.stackSem
+fof(f22556,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f22555,f406])).
+fof(f406,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19',aHL_TRUTH)).
+fof(f22555,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f22553,f3204])).
+fof(f3204,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(unit_resulting_resolution,[],[f3113,f551])).
+fof(f551,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f407,f408])).
+fof(f408,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19',aHL_BOOL_CASES)).
+fof(f407,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19',aHL_FALSITY)).
+fof(f3113,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(backward_demodulation,[],[f3022,f1465])).
+fof(f1465,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),'const.combin.o_3'(s(fun(X0,fun(X0,bool)),'=_0'),s(fun(X0,X0),'_i_0_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f1429,f467])).
+fof(f467,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f230])).
+fof(f230,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(flattening,[],[f229])).
+fof(f229,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(rectify,[],[f10])).
+fof(f10,axiom,(
+  ! [X6,X7,X15] : ! [X11,X10,X16] : s(X6,'const.combin.o_3'(s(fun(X7,X6),X11),s(fun(X15,X7),X10),s(X15,X16))) = s(X6,happ(s(fun(X7,X6),X11),s(X7,happ(s(fun(X15,X7),X10),s(X15,X16)))))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19','thm.combin.o_THM')).
+fof(f1429,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1))))),s(X0,X1))))) )),
+  inference(unit_resulting_resolution,[],[f409,f465])).
+fof(f465,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f404])).
+fof(f404,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f226])).
+fof(f226,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f68])).
+fof(f68,axiom,(
+  ! [X49,X50,X51] : (p(s(bool,happ(s(fun(X49,bool),happ(s(fun(X49,fun(X49,bool)),'=_0'),s(X49,X50))),s(X49,X51)))) <=> s(X49,X50) = s(X49,X51))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19',arity_0_HL_EQ)).
+fof(f409,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f138])).
+fof(f138,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f137])).
+fof(f137,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f125])).
+fof(f125,axiom,(
+  ! [X29] : ! [X31] : s(X29,X31) = s(X29,happ(s(fun(X29,X29),'_i_0_0'),s(X29,X31)))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19','_i0_ax')).
+fof(f3022,plain,(
+  ( ! [X76,X74,X75,X73] : (s(X75,happ(s(fun(X73,X75),X76),s(X73,X74))) = s(X75,'const.combin.o_3'(s(fun(X73,X75),X76),s(fun(X73,X73),'_i_0_0'),s(X73,X74)))) )),
+  inference(superposition,[],[f467,f409])).
+fof(f22553,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),sK5),s(fun(bool,bool),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),sK5),s(fun(bool,bool),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))))),
+  inference(backward_demodulation,[],[f22510,f7615])).
+fof(f7615,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),fun(fun(sK0,'type.stackSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),sK5))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),sK4))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),sK5),s(fun(bool,bool),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))))))),
+  inference(unit_resulting_resolution,[],[f405,f464])).
+fof(f464,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f404])).
+fof(f405,plain,(
+  s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),sK5),s(fun(bool,bool),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),sK5))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),sK4))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3)))))),
+  inference(cnf_transformation,[],[f392])).
+fof(f392,plain,(
+  s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),sK5),s(fun(bool,bool),sK4))))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),sK5))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.stackSem.state'(sK1,sK2),'type.stackSem.state'(sK1,sK2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),sK4))),s(fun(sK0,'type.stackSem.state'(sK1,sK2)),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f387])).
+fof(f387,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X5),s(fun(bool,bool),X4))))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3))) != s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X5))),s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X4))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X5),s(fun(bool,bool),X4))))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3))) = s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X5))),s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X4))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5] : s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X5),s(fun(bool,bool),X4))))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3))) = s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X5))),s(fun(X0,'type.stackSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.stackSem.state'(X1,X2),'type.stackSem.state'(X1,X2)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X4))),s(fun(X0,'type.stackSem.state'(X1,X2)),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X11),s(fun(bool,bool),X10))))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9))) = s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X11))),s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X10))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X11),s(fun(bool,bool),X10))))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9))) = s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X11))),s(fun(X6,'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X10))),s(fun(X6,'type.stackSem.state'(X7,X8)),X9)))))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19','thm.stackSem.state_fupdfupds_comp|split|19')).
+fof(f22510,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X4,'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X2),s(fun(bool,bool),X3))))),s(fun(X4,'type.stackSem.state'(X0,X1)),X5))) = s(fun(X4,'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X2))),s(fun(X4,'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X3))),s(fun(X4,'type.stackSem.state'(X0,X1)),X5)))))) )),
+  inference(superposition,[],[f480,f437])).
+fof(f437,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X3),s(fun(bool,bool),X2))))) = s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X3))),s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X2)))))) )),
+  inference(cnf_transformation,[],[f174])).
+fof(f174,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X3),s(fun(bool,bool),X2))))) = s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X3))),s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X2)))))),
+  inference(flattening,[],[f173])).
+fof(f173,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X3),s(fun(bool,bool),X2))))) = s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X3))),s(fun('type.stackSem.state'(X0,X1),'type.stackSem.state'(X0,X1)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X2)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X7,X8] : ! [X10,X11] : s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),'const.combin.o_2'(s(fun(bool,bool),X11),s(fun(bool,bool),X10))))) = s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X11))),s(fun('type.stackSem.state'(X7,X8),'type.stackSem.state'(X7,X8)),'const.stackSem.state_use_store_fupd_1'(s(fun(bool,bool),X10)))))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19','thm.stackSem.state_fupdfupds_comp|split|18')).
+fof(f480,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f256])).
+fof(f256,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f255])).
+fof(f255,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X6,X7,X21,X15] : ! [X11,X10,X9] : s(fun(X21,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X21,X7),'const.combin.o_2'(s(fun(X15,X7),X10),s(fun(X21,X15),X9))))) = s(fun(X21,X6),'const.combin.o_2'(s(fun(X15,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X15,X7),X10))),s(fun(X21,X15),X9)))),
+  file('thm.stackSem.state_fupdfupds_comp|split|19','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.stackSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 218
+% Passive clauses: 2410
+% Generated clauses: 25632
+% Final active clauses: 93
+% Final passive clauses: 819
+% Input formulas: 132
+% Initial clauses: 141
+% 
+% Duplicate literals: 792
+% Trivial inequalities: 135
+% Fw subsumption resolutions: 1263
+% Fw demodulations: 4075
+% Bw demodulations: 1212
+% Condensations: 1312
+% Global subsumptions: 6
+% 
+% Simple tautologies: 155
+% Equational tautologies: 288
+% Forward subsumptions: 14759
+% Fw demodulations to eq. taut.: 1
+% Bw demodulations to eq. taut.: 17
+% 
+% Unit resulting resolution: 1334
+% Factoring: 1
+% Forward superposition: 5974
+% Backward superposition: 5320
+% Self superposition: 226
+% Equality factoring: 114
+% Equality resolution: 10
+% 
+% Split clauses: 45
+% Split components: 90
+% SAT solver clauses: 2866
+% SAT solver unit clauses: 781
+% SAT solver binary clauses: 1029
+% 
+% Sat splits: 45
+% Sat splitting refutations: 358
+% 
+% Memory used [KB]: 18933
+% Time elapsed: 1.118 s
+% ------------------------------
+% ------------------------------
+% Success in time 2.47 s

@@ -1,0 +1,167 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.pat_to_closProof
+% (28631)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 856
+% Passive clauses: 9227
+% Generated clauses: 20652
+% Final active clauses: 850
+% Final passive clauses: 8185
+% Input formulas: 132
+% Initial clauses: 328
+% 
+% Duplicate literals: 145
+% Trivial inequalities: 40
+% Fw subsumption resolutions: 1189
+% Fw demodulations: 2415
+% Bw demodulations: 5
+% 
+% Simple tautologies: 239
+% Equational tautologies: 24
+% Forward subsumptions: 7237
+% 
+% Binary resolution: 7520
+% Factoring: 367
+% Forward superposition: 3739
+% Backward superposition: 4718
+% Self superposition: 57
+% Equality factoring: 2
+% Equality resolution: 15
+% 
+% Split clauses: 218
+% Split components: 438
+% SAT solver clauses: 328
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 79
+% 
+% Sat splits: 218
+% 
+% TWLsolver clauses: 328
+% TWLsolver calls for satisfiability: 274
+% 
+% Memory used [KB]: 15095
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.pat_to_closProof
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.pat_to_closProof
+% SZS output start Proof for thm.pat_to_closProof
+fof(f4376,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f4375,f4340,f4360,f556,f908,f738,f1012])).
+fof(f1012,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK30(X2,X1,X0)),s(X1,sK31(X2,X1,X0))))) ) | $spl154),
+  inference(cnf_transformation,[],[f1012_D])).
+fof(f1012_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK30(X2,X1,X0)),s(X1,sK31(X2,X1,X0))))) ) <=> ~$spl154),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl154])])).
+fof(f738,plain,(
+  ( ! [X2,X0,X1] : (s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK30(X2,X1,X0)),s(X1,sK31(X2,X1,X0))))) )),
+  inference(cnf_transformation,[],[f504])).
+fof(f504,plain,(
+  ! [X0,X1,X2] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,sK30(X2,X1,X0)),s(X1,sK31(X2,X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK30,sK31])],[f262])).
+fof(f262,plain,(
+  ! [X0,X1,X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(flattening,[],[f261])).
+fof(f261,plain,(
+  ! [X0,X1] : ! [X2] : ? [X3,X4] : s('type.pair.prod'(X0,X1),X2) = s('type.pair.prod'(X0,X1),'const.pair.,_2'(s(X0,X3),s(X1,X4)))),
+  inference(rectify,[],[f104])).
+fof(f104,axiom,(
+  ! [X14,X17] : ! [X20] : ? [X49,X48] : s('type.pair.prod'(X14,X17),X20) = s('type.pair.prod'(X14,X17),'const.pair.,_2'(s(X14,X49),s(X17,X48)))),
+  file('thm.pat_to_closProof.pat_to_closProof_|49|6_prove_ltb','thm.pair.ABS_PAIR_THM')).
+fof(f908,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(sK13),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))) ) | $spl0),
+  inference(cnf_transformation,[],[f908_D])).
+fof(f908_D,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(sK13),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))) ) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f556,plain,(
+  ( ! [X4,X5] : (s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(sK13),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))) )),
+  inference(cnf_transformation,[],[f415])).
+fof(f415,plain,(
+  ! [X4,X5] : s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(sK13),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13,sK14,sK15,sK16])],[f357])).
+fof(f357,plain,(
+  ? [X0,X1,X2,X3] : ! [X4,X5] : s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X0),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) != s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),X3),s('type.patSem.state'(X0),X1),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),X2)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X0),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) = s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),X3),s('type.patSem.state'(X0),X1),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),X2)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0] : ! [X1,X2,X3] : ? [X4,X5] : s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X0),X4),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X5))) = s('type.pair.prod'('type.patSem.state'(X0),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),X3),s('type.patSem.state'(X0),X1),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X6),X10),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X11))) = s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),X9),s('type.patSem.state'(X6),X7),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : ? [X10,X11] : s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.pair.,_2'(s('type.patSem.state'(X6),X10),s('type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v'),X11))) = s('type.pair.prod'('type.patSem.state'(X6),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),X9),s('type.patSem.state'(X6),X7),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),X8)))))),
+  file('thm.pat_to_closProof.pat_to_closProof_|49|6_prove_ltb','thm.pat_to_closProof.pat_to_closProof_|49|6_prove_ltb')).
+fof(f4360,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),X0) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))) ) | $spl1822),
+  inference(cnf_transformation,[],[f4360_D])).
+fof(f4360_D,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),X0) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))) ) <=> ~$spl1822),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1822])])).
+fof(f4340,plain,(
+  ( ! [X0] : (s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),X0) != s('type.pair.prod'('type.patSem.state'(sK13),'type.semanticPrimitives.result'('type.list.list'('type.patSem.v'),'type.patSem.v')),'const.patSem.evaluate_3'(s('type.list.list'('type.patSem.v'),sK16),s('type.patSem.state'(sK13),sK14),s('type.list.list'('type.patLang.exp'),'const.list.REVERSE_1'(s('type.list.list'('type.patLang.exp'),sK15)))))) ) | ($spl0 | $spl154)),
+  inference(superposition,[],[f908,f1012])).
+fof(f4375,plain,(
+  $false | $spl1822),
+  inference(equality_resolution,[],[f4360])).
+% SZS output end Proof for thm.pat_to_closProof
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 240
+% Passive clauses: 901
+% Generated clauses: 3809
+% Final active clauses: 239
+% Final passive clauses: 660
+% Input formulas: 132
+% Initial clauses: 328
+% 
+% Duplicate literals: 82
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 178
+% Fw demodulations: 205
+% Bw demodulations: 2
+% Condensations: 52
+% Global subsumptions: 24
+% 
+% Simple tautologies: 211
+% Equational tautologies: 8
+% Forward subsumptions: 1094
+% 
+% Binary resolution: 988
+% Factoring: 70
+% Forward superposition: 457
+% Backward superposition: 481
+% Self superposition: 23
+% Equality factoring: 2
+% Equality resolution: 4
+% 
+% SAT solver clauses: 1431
+% SAT solver unit clauses: 392
+% SAT solver binary clauses: 105
+% SAT solver learnt clauses: 49
+% SAT solver learnt literals: 12
+% 
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 1334
+% TWLsolver calls for satisfiability: 2321
+% 
+% Memory used [KB]: 4861
+% Time elapsed: 0.112 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.75 s

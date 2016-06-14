@@ -1,0 +1,174 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.gramProps
+% (85959)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 1184
+% Passive clauses: 10340
+% Generated clauses: 47821
+% Final active clauses: 1067
+% Final passive clauses: 8723
+% Input formulas: 260
+% Initial clauses: 524
+% 
+% Duplicate literals: 275
+% Trivial inequalities: 62
+% Fw subsumption resolutions: 2679
+% Fw demodulations: 4141
+% Bw demodulations: 99
+% 
+% Simple tautologies: 325
+% Equational tautologies: 26
+% Forward subsumptions: 29288
+% Fw demodulations to eq. taut.: 10
+% 
+% Binary resolution: 7644
+% Factoring: 1035
+% Forward superposition: 12106
+% Backward superposition: 18876
+% Self superposition: 63
+% Equality factoring: 2
+% Equality resolution: 10
+% 
+% Split clauses: 596
+% Split components: 1194
+% SAT solver clauses: 799
+% SAT solver unit clauses: 17
+% SAT solver binary clauses: 76
+% 
+% Sat splits: 596
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 797
+% TWLsolver calls for satisfiability: 456
+% 
+% Memory used [KB]: 29679
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.gramProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.gramProps
+% SZS output start Proof for thm.gramProps
+fof(f2038,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f2037,f973,f1525,f1141,f1637,f1198,f1682])).
+fof(f1682,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X3))))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X3)))))) ) | $spl264),
+  inference(cnf_transformation,[],[f1682_D])).
+fof(f1682_D,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X3))))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X3)))))) ) <=> ~$spl264),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl264])])).
+fof(f1198,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X3))))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X3)))))) )),
+  inference(cnf_transformation,[],[f483])).
+fof(f483,plain,(
+  ! [X0,X1,X2,X3] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X3))))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X3)))))),
+  inference(flattening,[],[f482])).
+fof(f482,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X3))))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X3)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X6] : ! [X10,X11,X12] : s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X10),s(fun(X6,bool),'const.pred_set.UNION_2'(s(fun(X6,bool),X11),s(fun(X6,bool),X12))))) = s(fun(X6,bool),'const.pred_set.UNION_2'(s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X10),s(fun(X6,bool),X11))),s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X10),s(fun(X6,bool),X12)))))),
+  file('thm.gramProps.gramProps_5_prove_ltb','thm.pred_set.UNION_OVER_INTER')).
+fof(f1637,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))) ) | $spl174),
+  inference(cnf_transformation,[],[f1637_D])).
+fof(f1637_D,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))) ) <=> ~$spl174),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl174])])).
+fof(f1141,plain,(
+  ( ! [X2,X0,X1] : (s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))) )),
+  inference(cnf_transformation,[],[f423])).
+fof(f423,plain,(
+  ! [X0,X1,X2] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))),
+  inference(flattening,[],[f422])).
+fof(f422,plain,(
+  ! [X0] : ! [X1,X2] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X1),s(fun(X0,bool),X2))) = s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))),
+  inference(rectify,[],[f182])).
+fof(f182,axiom,(
+  ! [X6] : ! [X10,X11] : s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X10),s(fun(X6,bool),X11))) = s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X11),s(fun(X6,bool),X10)))),
+  file('thm.gramProps.gramProps_5_prove_ltb','thm.pred_set.INTER_COMM')).
+fof(f1525,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK14))),s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK15),s(fun(sK13,bool),sK14))))) | $spl1),
+  inference(cnf_transformation,[],[f1525_D])).
+fof(f1525_D,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK14))),s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK15),s(fun(sK13,bool),sK14))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f973,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK14))),s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK15),s(fun(sK13,bool),sK14)))))),
+  inference(cnf_transformation,[],[f765])).
+fof(f765,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK14))),s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK15),s(fun(sK13,bool),sK14)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK13,sK14,sK15,sK16])],[f671])).
+fof(f671,plain,(
+  ? [X0,X1,X2,X3] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X3),s(fun(X0,bool),X2))),s(fun(X0,bool),X1))) != s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X3),s(fun(X0,bool),X1))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))))),
+  inference(ennf_transformation,[],[f263])).
+fof(f263,plain,(
+  ~! [X0,X1,X2,X3] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X3),s(fun(X0,bool),X2))),s(fun(X0,bool),X1))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X3),s(fun(X0,bool),X1))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))))),
+  inference(flattening,[],[f262])).
+fof(f262,plain,(
+  ~! [X0] : ! [X1,X2,X3] : s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),X3),s(fun(X0,bool),X2))),s(fun(X0,bool),X1))) = s(fun(X0,bool),'const.pred_set.UNION_2'(s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X3),s(fun(X0,bool),X1))),s(fun(X0,bool),'const.pred_set.INTER_2'(s(fun(X0,bool),X2),s(fun(X0,bool),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),'const.pred_set.UNION_2'(s(fun(X6,bool),X9),s(fun(X6,bool),X8))),s(fun(X6,bool),X7))) = s(fun(X6,bool),'const.pred_set.UNION_2'(s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X9),s(fun(X6,bool),X7))),s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X8),s(fun(X6,bool),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),'const.pred_set.UNION_2'(s(fun(X6,bool),X9),s(fun(X6,bool),X8))),s(fun(X6,bool),X7))) = s(fun(X6,bool),'const.pred_set.UNION_2'(s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X9),s(fun(X6,bool),X7))),s(fun(X6,bool),'const.pred_set.INTER_2'(s(fun(X6,bool),X8),s(fun(X6,bool),X7)))))),
+  file('thm.gramProps.gramProps_5_prove_ltb','thm.gramProps.gramProps_5_prove_ltb')).
+fof(f2037,plain,(
+  $false | ($spl1 | $spl174 | $spl264)),
+  inference(subsumption_resolution,[],[f2036,f1637])).
+fof(f2036,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK14),s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))))) | ($spl1 | $spl174 | $spl264)),
+  inference(forward_demodulation,[],[f2035,f1682])).
+fof(f2035,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK14),s(fun(sK13,bool),sK16))),s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK14),s(fun(sK13,bool),sK15))))) | ($spl1 | $spl174)),
+  inference(forward_demodulation,[],[f2034,f1637])).
+fof(f2034,plain,(
+  s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK15))),s(fun(sK13,bool),sK14))) != s(fun(sK13,bool),'const.pred_set.UNION_2'(s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK16),s(fun(sK13,bool),sK14))),s(fun(sK13,bool),'const.pred_set.INTER_2'(s(fun(sK13,bool),sK14),s(fun(sK13,bool),sK15))))) | ($spl1 | $spl174)),
+  inference(forward_demodulation,[],[f1525,f1637])).
+% SZS output end Proof for thm.gramProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Passive clauses: 335
+% Generated clauses: 1009
+% Final passive clauses: 297
+% Input formulas: 260
+% Initial clauses: 524
+% 
+% Duplicate literals: 8
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 6
+% Fw demodulations: 35
+% Bw demodulations: 38
+% Condensations: 18
+% Global subsumptions: 25
+% 
+% Simple tautologies: 100
+% Equational tautologies: 3
+% Forward subsumptions: 4
+% 
+% SAT solver clauses: 1021
+% SAT solver unit clauses: 645
+% SAT solver binary clauses: 149
+% SAT solver learnt clauses: 51
+% SAT solver learnt literals: 14
+% 
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 920
+% TWLsolver calls for satisfiability: 3094
+% 
+% Memory used [KB]: 3070
+% Time elapsed: 0.025 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.637 s

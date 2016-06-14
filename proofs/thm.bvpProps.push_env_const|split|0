@@ -1,0 +1,168 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpProps
+% SZS output start Proof for thm.bvpProps
+fof(f8413,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f8404,f575,f583,f580,f5445])).
+fof(f5445,plain,(
+  $false | $spl21),
+  inference(trivial_inequality_removal,[],[f5442])).
+fof(f5442,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) | $spl21),
+  inference(superposition,[],[f583,f5041])).
+fof(f5041,plain,(
+  ( ! [X14,X12,X13] : (s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),X14))) = s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X13),s(bool,'F_0'),s('type.bvpSem.state'(X12),X14)))))) )),
+  inference(superposition,[],[f351,f388])).
+fof(f388,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X1),s(bool,'F_0'),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Env_1'(s('type.sptree.spt'('type.bvlSem.v'),X1))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f251])).
+fof(f251,plain,(
+  ! [X0,X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X1),s(bool,'F_0'),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Env_1'(s('type.sptree.spt'('type.bvlSem.v'),X1))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),X2)))),
+  inference(flattening,[],[f250])).
+fof(f250,plain,(
+  ! [X0] : ! [X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X1),s(bool,'F_0'),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Env_1'(s('type.sptree.spt'('type.bvlSem.v'),X1))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),X2)))),
+  inference(rectify,[],[f97])).
+fof(f97,axiom,(
+  ! [X6] : ! [X16,X13] : s('type.bvpSem.state'(X6),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X16),s(bool,'F_0'),s('type.bvpSem.state'(X6),X13))) = s('type.bvpSem.state'(X6),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Env_1'(s('type.sptree.spt'('type.bvlSem.v'),X16))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X6),X13))))))),s('type.bvpSem.state'(X6),X13)))),
+  file('thm.bvpProps.push_env_const|split|0','thm.bvpSem.push_env_def|split|0')).
+fof(f351,plain,(
+  ( ! [X2,X0,X1] : (s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),X2),s('type.bvpSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f177])).
+fof(f177,plain,(
+  ! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f176])).
+fof(f176,plain,(
+  ! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f73])).
+fof(f73,axiom,(
+  ! [X12] : ! [X13,X14] : s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),X13))) = s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),X14),s('type.bvpSem.state'(X12),X13)))))),
+  file('thm.bvpProps.push_env_const|split|0','thm.bvpSem.bvpSem_98_prove_ltb')).
+fof(f580,plain,(
+  s(bool,'T_0') = s(bool,sK2) | $spl16),
+  inference(cnf_transformation,[],[f580_D])).
+fof(f580_D,plain,(
+  s(bool,'T_0') = s(bool,sK2) <=> ~$spl16),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl16])])).
+fof(f583,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),sK3),s(bool,'F_0'),s('type.bvpSem.state'(sK0),sK1))))) | $spl21),
+  inference(cnf_transformation,[],[f583_D])).
+fof(f583_D,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),sK3),s(bool,'F_0'),s('type.bvpSem.state'(sK0),sK1))))) <=> ~$spl21),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl21])])).
+fof(f575,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),sK3),s(bool,'F_0'),s('type.bvpSem.state'(sK0),sK1))))) | s(bool,'T_0') = s(bool,sK2)),
+  inference(superposition,[],[f295,f299])).
+fof(f299,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.bvpProps.push_env_const|split|0',aHL_BOOL_CASES)).
+fof(f295,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),sK3),s(bool,sK2),s('type.bvpSem.state'(sK0),sK1)))))),
+  inference(cnf_transformation,[],[f282])).
+fof(f282,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),sK3),s(bool,sK2),s('type.bvpSem.state'(sK0),sK1)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f280])).
+fof(f280,plain,(
+  ? [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) != s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X3),s(bool,X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(ennf_transformation,[],[f100])).
+fof(f100,plain,(
+  ~! [X0,X1,X2,X3] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X3),s(bool,X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f99])).
+fof(f99,plain,(
+  ~! [X0] : ! [X1,X2,X3] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X3),s(bool,X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8,X9] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X9),s(bool,X8),s('type.bvpSem.state'(X6),X7)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8,X9] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X9),s(bool,X8),s('type.bvpSem.state'(X6),X7)))))),
+  file('thm.bvpProps.push_env_const|split|0','thm.bvpProps.push_env_const|split|0')).
+fof(f8404,plain,(
+  $false | $spl16),
+  inference(subsumption_resolution,[],[f5467,f8123])).
+fof(f8123,plain,(
+  ( ! [X14,X12,X13] : (s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),X14))) = s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X13),s(bool,'T_0'),s('type.bvpSem.state'(X12),X14)))))) )),
+  inference(forward_demodulation,[],[f8010,f326])).
+fof(f326,plain,(
+  ( ! [X2,X0,X1] : (s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f127])).
+fof(f127,plain,(
+  ! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f126])).
+fof(f126,plain,(
+  ! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f75])).
+fof(f75,axiom,(
+  ! [X12] : ! [X13,X14] : s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),X13))) = s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),X14),s('type.bvpSem.state'(X12),X13)))))),
+  file('thm.bvpProps.push_env_const|split|0','thm.bvpSem.bvpSem_|49||48||48|_prove_ltb')).
+fof(f8010,plain,(
+  ( ! [X14,X12,X13] : (s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X13),s(bool,'T_0'),s('type.bvpSem.state'(X12),X14))))) = s('type.ffi.ffi_state'(X12),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X12),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X12),X14))))))),s('type.bvpSem.state'(X12),X14)))))) )),
+  inference(superposition,[],[f351,f391])).
+fof(f391,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X1),s(bool,'T_0'),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Exc_2'(s('type.sptree.spt'('type.bvlSem.v'),X1),s('type.num.num','const.bvpSem.state_handler_1'(s('type.bvpSem.state'(X0),X2))))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f257])).
+fof(f257,plain,(
+  ! [X0,X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X1),s(bool,'T_0'),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Exc_2'(s('type.sptree.spt'('type.bvlSem.v'),X1),s('type.num.num','const.bvpSem.state_handler_1'(s('type.bvpSem.state'(X0),X2))))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(flattening,[],[f256])).
+fof(f256,plain,(
+  ! [X0] : ! [X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X1),s(bool,'T_0'),s('type.bvpSem.state'(X0),X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Exc_2'(s('type.sptree.spt'('type.bvlSem.v'),X1),s('type.num.num','const.bvpSem.state_handler_1'(s('type.bvpSem.state'(X0),X2))))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X0),X2))))))),s('type.bvpSem.state'(X0),X2)))))),
+  inference(rectify,[],[f98])).
+fof(f98,axiom,(
+  ! [X6] : ! [X16,X13] : s('type.bvpSem.state'(X6),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),X16),s(bool,'T_0'),s('type.bvpSem.state'(X6),X13))) = s('type.bvpSem.state'(X6),'const.bvpSem.state_stack_fupd_2'(s(fun('type.list.list'('type.bvpSem.stack'),'type.list.list'('type.bvpSem.stack')),'const.combin.K_1'(s('type.list.list'('type.bvpSem.stack'),'const.list.CONS_2'(s('type.bvpSem.stack','const.bvpSem.Exc_2'(s('type.sptree.spt'('type.bvlSem.v'),X16),s('type.num.num','const.bvpSem.state_handler_1'(s('type.bvpSem.state'(X6),X13))))),s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X6),X13))))))),s('type.bvpSem.state'(X6),'const.bvpSem.state_handler_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num','const.list.LENGTH_1'(s('type.list.list'('type.bvpSem.stack'),'const.bvpSem.state_stack_1'(s('type.bvpSem.state'(X6),X13))))))),s('type.bvpSem.state'(X6),X13)))))),
+  file('thm.bvpProps.push_env_const|split|0','thm.bvpSem.push_env_def|split|1')).
+fof(f5467,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.push_env_3'(s('type.sptree.spt'('type.bvlSem.v'),sK3),s(bool,'T_0'),s('type.bvpSem.state'(sK0),sK1))))) | $spl16),
+  inference(backward_demodulation,[],[f580,f295])).
+% SZS output end Proof for thm.bvpProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 135
+% Passive clauses: 1096
+% Generated clauses: 7814
+% Final active clauses: 129
+% Final passive clauses: 900
+% Input formulas: 97
+% Initial clauses: 108
+% 
+% Duplicate literals: 662
+% Trivial inequalities: 108
+% Fw subsumption resolutions: 1024
+% Fw demodulations: 97
+% Bw demodulations: 1
+% 
+% Simple tautologies: 199
+% Equational tautologies: 97
+% Forward subsumptions: 3352
+% 
+% Binary resolution: 25
+% Forward superposition: 3068
+% Backward superposition: 2043
+% Self superposition: 309
+% Equality factoring: 268
+% Equality resolution: 13
+% 
+% Split clauses: 373
+% Split components: 754
+% SAT solver clauses: 1226
+% SAT solver unit clauses: 261
+% SAT solver binary clauses: 402
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 373
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 1214
+% TWLsolver calls for satisfiability: 61
+% 
+% Memory used [KB]: 5117
+% Time elapsed: 0.361 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.37 s

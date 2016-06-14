@@ -1,0 +1,103 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.bvpProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.bvpProps
+% SZS output start Proof for thm.bvpProps
+fof(f691,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f690])).
+fof(f690,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1)))),
+  inference(superposition,[],[f267,f543])).
+fof(f543,plain,(
+  ( ! [X6,X8,X7] : (s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X8))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X6),X8),s('type.num.num',X7)))))) )),
+  inference(superposition,[],[f286,f306])).
+fof(f306,plain,(
+  ( ! [X2,X0,X1] : (s('type.bvpSem.state'(X0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X0),X1),s('type.num.num',X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.bvpSem.state'(X0),X1)))) )),
+  inference(cnf_transformation,[],[f161])).
+fof(f161,plain,(
+  ! [X0,X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X0),X1),s('type.num.num',X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.bvpSem.state'(X0),X1)))),
+  inference(flattening,[],[f160])).
+fof(f160,plain,(
+  ! [X0] : ! [X1,X2] : s('type.bvpSem.state'(X0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X0),X1),s('type.num.num',X2))) = s('type.bvpSem.state'(X0),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.bvpSem.state'(X0),X1)))),
+  inference(rectify,[],[f90])).
+fof(f90,axiom,(
+  ! [X6] : ! [X7,X8] : s('type.bvpSem.state'(X6),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X6),X7),s('type.num.num',X8))) = s('type.bvpSem.state'(X6),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X8))),s('type.bvpSem.state'(X6),X7)))),
+  file('thm.bvpProps.add_space_const','thm.bvpSem.add_space_def')).
+fof(f286,plain,(
+  ( ! [X2,X0,X1] : (s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))) )),
+  inference(cnf_transformation,[],[f121])).
+fof(f121,plain,(
+  ! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(flattening,[],[f120])).
+fof(f120,plain,(
+  ! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),X2),s('type.bvpSem.state'(X0),X1)))))),
+  inference(rectify,[],[f72])).
+fof(f72,axiom,(
+  ! [X10] : ! [X7,X11] : s('type.ffi.ffi_state'(X10),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X10),X7))) = s('type.ffi.ffi_state'(X10),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X10),'const.bvpSem.state_space_fupd_2'(s(fun('type.num.num','type.num.num'),X11),s('type.bvpSem.state'(X10),X7)))))),
+  file('thm.bvpProps.add_space_const','thm.bvpSem.bvpSem_|49||48|4_prove_ltb')).
+fof(f267,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(sK0),sK1),s('type.num.num',sK2)))))),
+  inference(cnf_transformation,[],[f264])).
+fof(f264,plain,(
+  s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),sK1))) != s('type.ffi.ffi_state'(sK0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(sK0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(sK0),sK1),s('type.num.num',sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f262])).
+fof(f262,plain,(
+  ? [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) != s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X0),X1),s('type.num.num',X2)))))),
+  inference(ennf_transformation,[],[f92])).
+fof(f92,plain,(
+  ~! [X0,X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X0),X1),s('type.num.num',X2)))))),
+  inference(flattening,[],[f91])).
+fof(f91,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),X1))) = s('type.ffi.ffi_state'(X0),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X0),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X0),X1),s('type.num.num',X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X6),X7),s('type.num.num',X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),X7))) = s('type.ffi.ffi_state'(X6),'const.bvpSem.state_ffi_1'(s('type.bvpSem.state'(X6),'const.bvpSem.add_space_2'(s('type.bvpSem.state'(X6),X7),s('type.num.num',X8)))))),
+  file('thm.bvpProps.add_space_const','thm.bvpProps.add_space_const')).
+% SZS output end Proof for thm.bvpProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 52
+% Passive clauses: 109
+% Generated clauses: 391
+% Final active clauses: 50
+% Final passive clauses: 51
+% Input formulas: 89
+% Initial clauses: 90
+% 
+% Duplicate literals: 37
+% Trivial inequalities: 4
+% 
+% Simple tautologies: 16
+% Equational tautologies: 15
+% Forward subsumptions: 210
+% 
+% Binary resolution: 4
+% Forward superposition: 147
+% Backward superposition: 75
+% Self superposition: 27
+% Equality factoring: 26
+% 
+% Split clauses: 1
+% Split components: 2
+% SAT solver clauses: 2
+% SAT solver unit clauses: 1
+% SAT solver binary clauses: 1
+% 
+% Sat splits: 1
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 1151
+% Time elapsed: 0.016 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.019 s

@@ -1,0 +1,275 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.inferProps
+% (89672)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 128
+% Passive clauses: 1273
+% Generated clauses: 15111
+% Final active clauses: 124
+% Final passive clauses: 1003
+% Input formulas: 24
+% Initial clauses: 53
+% 
+% Duplicate literals: 874
+% Trivial inequalities: 340
+% Fw subsumption resolutions: 2723
+% Fw demodulations: 1541
+% Bw demodulations: 4
+% 
+% Simple tautologies: 401
+% Equational tautologies: 45
+% Forward subsumptions: 5946
+% 
+% Binary resolution: 288
+% Forward superposition: 4289
+% Backward superposition: 4432
+% Self superposition: 174
+% Equality factoring: 137
+% Equality resolution: 31
+% 
+% Split clauses: 1173
+% Split components: 2462
+% SAT solver clauses: 1886
+% SAT solver unit clauses: 25
+% SAT solver binary clauses: 174
+% 
+% Sat splits: 1173
+% 
+% TWLsolver clauses: 1884
+% TWLsolver calls for satisfiability: 165
+% 
+% Memory used [KB]: 7419
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.inferProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.inferProps
+% SZS output start Proof for thm.inferProps
+fof(f749,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f748,f186,f188,f88,f158,f121,f175,f740,f743,f120,f174,f731,f732,f89,f162,f183,f184,f125,f179,f189,f192,f87,f160,f94,f166])).
+fof(f166,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl10),
+  inference(cnf_transformation,[],[f166_D])).
+fof(f166_D,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) <=> ~$spl10),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl10])])).
+fof(f94,plain,(
+  ( ! [X0] : (s(bool,'T_0') = s(bool,X0) | ~p(s(bool,X0))) )),
+  inference(cnf_transformation,[],[f66])).
+fof(f66,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f28])).
+fof(f28,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X9] : (s(bool,'T_0') = s(bool,X9) <=> p(s(bool,X9)))),
+  file('thm.inferProps.walkstar_inc2','thm.bool.EQ_CLAUSES|split|0')).
+fof(f160,plain,(
+  p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1)))) | $spl2),
+  inference(cnf_transformation,[],[f160_D])).
+fof(f160_D,plain,(
+  p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1)))) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f87,plain,(
+  p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))))),
+  inference(cnf_transformation,[],[f65])).
+fof(f65,plain,(
+  p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1)))) & s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f53])).
+fof(f53,plain,(
+  ? [X0,X1,X2] : (p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1)))) & s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X2))))))),
+  inference(ennf_transformation,[],[f26])).
+fof(f26,plain,(
+  ~! [X0,X1,X2] : (p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1)))) => s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X2))))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X2))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : (p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7)))) => s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X8))))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X8))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : (p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7)))) => s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X8))))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X8))))))),
+  file('thm.inferProps.walkstar_inc2','thm.inferProps.walkstar_inc2')).
+fof(f192,plain,(
+  s(bool,'T_0') = s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))) | $spl38),
+  inference(cnf_transformation,[],[f192_D])).
+fof(f192_D,plain,(
+  s(bool,'T_0') = s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))) <=> ~$spl38),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl38])])).
+fof(f189,plain,(
+  s(bool,'T_0') = s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))) | ($spl2 | $spl10)),
+  inference(resolution,[],[f166,f160])).
+fof(f179,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X2))))) | ~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))))) ) | $spl28),
+  inference(cnf_transformation,[],[f179_D])).
+fof(f179_D,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X2))))) | ~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))))) ) <=> ~$spl28),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl28])])).
+fof(f125,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X2))))) | ~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))))) )),
+  inference(cnf_transformation,[],[f60])).
+fof(f60,plain,(
+  ! [X0,X1,X2] : (~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1)))) | s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X2))))))),
+  inference(ennf_transformation,[],[f50])).
+fof(f50,plain,(
+  ! [X0,X1,X2] : (p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1)))) => s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X2))))))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6,X7,X9] : (p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7)))) => s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7),s('type.infer_t.infer_t',X9))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X7))),s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X6))),s('type.infer_t.infer_t',X9))))))),
+  file('thm.inferProps.walkstar_inc2','thm.inferProps.walkstar_inc')).
+fof(f184,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1)))) | s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X2)))))) ) | $spl32),
+  inference(cnf_transformation,[],[f184_D])).
+fof(f184_D,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1)))) | s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X2)))))) ) <=> ~$spl32),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl32])])).
+fof(f183,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X2))))) | ~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))))) ) | ($spl20 | $spl28)),
+  inference(forward_demodulation,[],[f181,f175])).
+fof(f181,plain,(
+  ( ! [X2,X0,X1] : (s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1),s('type.infer_t.infer_t',X2))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X2))))) | ~p(s(bool,'const.unify.t_wfs_1'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),X1))))) ) | ($spl20 | $spl28)),
+  inference(backward_demodulation,[],[f175,f179])).
+fof(f162,plain,(
+  p(s(bool,'T_0')) | $spl4),
+  inference(cnf_transformation,[],[f162_D])).
+fof(f162_D,plain,(
+  p(s(bool,'T_0')) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f89,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.inferProps.walkstar_inc2',aHL_TRUTH)).
+fof(f732,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t',X1))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1)))))) ) | $spl108),
+  inference(cnf_transformation,[],[f732_D])).
+fof(f732_D,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t',X1))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1)))))) ) <=> ~$spl108),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl108])])).
+fof(f731,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t',X1))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1)))))) ) | ($spl4 | $spl32 | $spl38)),
+  inference(subsumption_resolution,[],[f721,f162])).
+fof(f721,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t',X1))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1)))))) ) | ($spl32 | $spl38)),
+  inference(superposition,[],[f184,f192])).
+fof(f174,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))) = s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))) ) | $spl18),
+  inference(cnf_transformation,[],[f174_D])).
+fof(f174_D,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))) = s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))) ) <=> ~$spl18),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl18])])).
+fof(f120,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))) = s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))) )),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,plain,(
+  ! [X0,X1] : s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))) = s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))),
+  inference(rectify,[],[f23])).
+fof(f23,axiom,(
+  ! [X8,X18] : s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X18))) = s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X8),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X18)))))),
+  file('thm.inferProps.walkstar_inc2','thm.infer.infer_deBruijn_inc_def|split|2')).
+fof(f743,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))) ) | $spl110),
+  inference(cnf_transformation,[],[f743_D])).
+fof(f743_D,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))) ) <=> ~$spl110),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl110])])).
+fof(f740,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1))))))) = s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',X1)))))) ) | ($spl18 | $spl108)),
+  inference(superposition,[],[f732,f174])).
+fof(f175,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1))) = s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X1)))) ) | $spl20),
+  inference(cnf_transformation,[],[f175_D])).
+fof(f175_D,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1))) = s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X1)))) ) <=> ~$spl20),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl20])])).
+fof(f121,plain,(
+  ( ! [X0,X1] : (s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1))) = s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X1)))) )),
+  inference(cnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0,X1] : s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X0),s('type.infer_t.infer_t',X1))) = s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X0))),s('type.infer_t.infer_t',X1)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X21,X22] : s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',X21),s('type.infer_t.infer_t',X22))) = s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',X21))),s('type.infer_t.infer_t',X22)))),
+  file('thm.inferProps.walkstar_inc2','ARITY_1_2_const.infer.infer_deBruijn_inc')).
+fof(f158,plain,(
+  s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))) | $spl1),
+  inference(cnf_transformation,[],[f158_D])).
+fof(f158_D,plain,(
+  s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f88,plain,(
+  s('type.infer_t.infer_t',happ(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2)))))),
+  inference(cnf_transformation,[],[f65])).
+fof(f188,plain,(
+  s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',sK0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))) | $spl37),
+  inference(cnf_transformation,[],[f188_D])).
+fof(f188_D,plain,(
+  s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',sK0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))) <=> ~$spl37),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl37])])).
+fof(f186,plain,(
+  s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',sK0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),'const.finite_map.o_f_2'(s(fun('type.infer_t.infer_t','type.infer_t.infer_t'),'const.infer.infer_deBruijn_inc_1'(s('type.num.num',sK0))),s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1))),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))) | ($spl1 | $spl20)),
+  inference(forward_demodulation,[],[f158,f175])).
+fof(f748,plain,(
+  $false | ($spl37 | $spl110)),
+  inference(trivial_inequality_removal,[],[f745])).
+fof(f745,plain,(
+  s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',sK0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) != s('type.infer_t.infer_t','const.infer.infer_deBruijn_inc_2'(s('type.num.num',sK0),s('type.infer_t.infer_t','const.unify.t_walkstar_2'(s('type.finite_map.fmap'('type.num.num','type.infer_t.infer_t'),sK1),s('type.infer_t.infer_t','const.infer_t.Infer_Tuvar_1'(s('type.num.num',sK2))))))) | ($spl37 | $spl110)),
+  inference(superposition,[],[f188,f743])).
+% SZS output end Proof for thm.inferProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 34
+% Passive clauses: 58
+% Generated clauses: 641
+% Final active clauses: 28
+% Final passive clauses: 18
+% Input formulas: 24
+% Initial clauses: 53
+% 
+% Duplicate literals: 60
+% Trivial inequalities: 18
+% Fw subsumption resolutions: 37
+% Fw demodulations: 6
+% Bw demodulations: 8
+% Condensations: 81
+% Global subsumptions: 4
+% 
+% Simple tautologies: 53
+% Equational tautologies: 17
+% Forward subsumptions: 202
+% 
+% Binary resolution: 29
+% Forward superposition: 133
+% Backward superposition: 90
+% Self superposition: 24
+% Equality factoring: 26
+% Equality resolution: 8
+% 
+% Split clauses: 8
+% Split components: 16
+% SAT solver clauses: 159
+% SAT solver unit clauses: 61
+% SAT solver binary clauses: 23
+% SAT solver learnt clauses: 9
+% 
+% Sat splits: 8
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 142
+% TWLsolver calls for satisfiability: 190
+% 
+% Memory used [KB]: 1279
+% Time elapsed: 0.049 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.7 s

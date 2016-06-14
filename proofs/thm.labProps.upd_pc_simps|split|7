@@ -1,0 +1,235 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labProps
+% (962)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 132
+% Passive clauses: 1724
+% Generated clauses: 16283
+% Final active clauses: 130
+% Final passive clauses: 1430
+% Input formulas: 81
+% Initial clauses: 92
+% 
+% Duplicate literals: 525
+% Trivial inequalities: 202
+% Fw subsumption resolutions: 1328
+% Fw demodulations: 2056
+% 
+% Simple tautologies: 177
+% Equational tautologies: 22
+% Forward subsumptions: 10016
+% 
+% Binary resolution: 4
+% Forward superposition: 6555
+% Backward superposition: 6007
+% Self superposition: 210
+% Equality factoring: 51
+% Equality resolution: 11
+% 
+% Split clauses: 135
+% Split components: 270
+% SAT solver clauses: 392
+% SAT solver unit clauses: 41
+% SAT solver binary clauses: 112
+% 
+% Sat splits: 135
+% Sat splitting refutations: 1
+% 
+% TWLsolver clauses: 392
+% TWLsolver calls for satisfiability: 104
+% 
+% Memory used [KB]: 12920
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.labProps
+% (984)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 104
+% Passive clauses: 706
+% Generated clauses: 13663
+% Final active clauses: 101
+% Final passive clauses: 583
+% Input formulas: 81
+% Initial clauses: 92
+% 
+% Duplicate literals: 597
+% Trivial inequalities: 185
+% Fw subsumption resolutions: 751
+% Fw demodulations: 1287
+% Bw demodulations: 18
+% Condensations: 1641
+% Global subsumptions: 4
+% 
+% Simple tautologies: 162
+% Equational tautologies: 23
+% Forward subsumptions: 7211
+% 
+% Binary resolution: 4
+% Forward superposition: 4475
+% Backward superposition: 3677
+% Self superposition: 168
+% Equality factoring: 62
+% Equality resolution: 13
+% 
+% Split clauses: 30
+% Split components: 60
+% SAT solver clauses: 1198
+% SAT solver unit clauses: 164
+% SAT solver binary clauses: 35
+% SAT solver learnt clauses: 8
+% 
+% Sat splits: 30
+% Sat splitting refutations: 4
+% 
+% TWLsolver clauses: 1182
+% TWLsolver calls for satisfiability: 171
+% 
+% Memory used [KB]: 13944
+% Time elapsed: 0.729 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.labProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labProps
+% SZS output start Proof for thm.labProps
+fof(f35248,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f35203])).
+fof(f35203,plain,(
+  s('type.fcp.cart'(bool,sK0),sK1) != s('type.fcp.cart'(bool,sK0),sK1)),
+  inference(superposition,[],[f248,f35185])).
+fof(f35185,plain,(
+  ( ! [X4,X5,X3] : (s('type.fcp.cart'(bool,X3),X4) = s('type.fcp.cart'(bool,X3),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X3),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X3),X4),s('type.asmSem.asm_state'(X3),X5)))))) )),
+  inference(forward_demodulation,[],[f35133,f314])).
+fof(f314,plain,(
+  ( ! [X2,X0,X1] : (s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2))) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'const.combin.K_1'(s('type.fcp.cart'(bool,X0),X1))),s('type.asmSem.asm_state'(X0),X2)))) )),
+  inference(cnf_transformation,[],[f182])).
+fof(f182,plain,(
+  ! [X0,X1,X2] : s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2))) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'const.combin.K_1'(s('type.fcp.cart'(bool,X0),X1))),s('type.asmSem.asm_state'(X0),X2)))),
+  inference(flattening,[],[f181])).
+fof(f181,plain,(
+  ! [X0] : ! [X1,X2] : s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2))) = s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),'const.combin.K_1'(s('type.fcp.cart'(bool,X0),X1))),s('type.asmSem.asm_state'(X0),X2)))),
+  inference(rectify,[],[f71])).
+fof(f71,axiom,(
+  ! [X6] : ! [X11,X8] : s('type.asmSem.asm_state'(X6),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X6),X11),s('type.asmSem.asm_state'(X6),X8))) = s('type.asmSem.asm_state'(X6),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,X6)),'const.combin.K_1'(s('type.fcp.cart'(bool,X6),X11))),s('type.asmSem.asm_state'(X6),X8)))),
+  file('thm.labProps.upd_pc_simps|split|7','thm.asmSem.upd_pc_def')).
+fof(f35133,plain,(
+  ( ! [X4,X5,X3] : (s('type.fcp.cart'(bool,X3),X4) = s('type.fcp.cart'(bool,X3),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X3),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X3),'type.fcp.cart'(bool,X3)),'const.combin.K_1'(s('type.fcp.cart'(bool,X3),X4))),s('type.asmSem.asm_state'(X3),X5)))))) )),
+  inference(superposition,[],[f327,f342])).
+fof(f342,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,X2) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(forward_demodulation,[],[f338,f336])).
+fof(f336,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f226])).
+fof(f226,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(flattening,[],[f225])).
+fof(f225,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,'const.combin.K_2'(s(X1,X2),s(X0,X3)))),
+  inference(rectify,[],[f80])).
+fof(f80,axiom,(
+  ! [X12,X6] : ! [X7,X14] : s(X6,X7) = s(X6,'const.combin.K_2'(s(X6,X7),s(X12,X14)))),
+  file('thm.labProps.upd_pc_simps|split|7','thm.combin.K_THM')).
+fof(f338,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f230])).
+fof(f230,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(flattening,[],[f229])).
+fof(f229,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.combin.K_2'(s(X0,X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.combin.K_1'(s(X0,X2))),s(X1,X3)))),
+  inference(rectify,[],[f82])).
+fof(f82,axiom,(
+  ! [X6,X12] : ! [X15,X16] : s(X6,'const.combin.K_2'(s(X6,X15),s(X12,X16))) = s(X6,happ(s(fun(X12,X6),'const.combin.K_1'(s(X6,X15))),s(X12,X16)))),
+  file('thm.labProps.upd_pc_simps|split|7','ARITY_1_2_const.combin.K')).
+fof(f327,plain,(
+  ( ! [X2,X0,X1] : (s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.asmSem.asm_state'(X0),X2))))) = s('type.fcp.cart'(bool,X0),happ(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X2)))))) )),
+  inference(cnf_transformation,[],[f208])).
+fof(f208,plain,(
+  ! [X0,X1,X2] : s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.asmSem.asm_state'(X0),X2))))) = s('type.fcp.cart'(bool,X0),happ(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(flattening,[],[f207])).
+fof(f207,plain,(
+  ! [X0] : ! [X1,X2] : s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.asmSem.asm_state'(X0),X2))))) = s('type.fcp.cart'(bool,X0),happ(s(fun('type.fcp.cart'(bool,X0),'type.fcp.cart'(bool,X0)),X1),s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(rectify,[],[f66])).
+fof(f66,axiom,(
+  ! [X6] : ! [X9,X10] : s('type.fcp.cart'(bool,X6),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X6),'const.asmSem.asm_state_pc_fupd_2'(s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,X6)),X9),s('type.asmSem.asm_state'(X6),X10))))) = s('type.fcp.cart'(bool,X6),happ(s(fun('type.fcp.cart'(bool,X6),'type.fcp.cart'(bool,X6)),X9),s('type.fcp.cart'(bool,X6),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X6),X10)))))),
+  file('thm.labProps.upd_pc_simps|split|7','thm.asmSem.asmSem_83_prove_ltb')).
+fof(f248,plain,(
+  s('type.fcp.cart'(bool,sK0),sK1) != s('type.fcp.cart'(bool,sK0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(sK0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,sK0),sK1),s('type.asmSem.asm_state'(sK0),sK2)))))),
+  inference(cnf_transformation,[],[f235])).
+fof(f235,plain,(
+  s('type.fcp.cart'(bool,sK0),sK1) != s('type.fcp.cart'(bool,sK0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(sK0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,sK0),sK1),s('type.asmSem.asm_state'(sK0),sK2)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f233])).
+fof(f233,plain,(
+  ? [X0,X1,X2] : s('type.fcp.cart'(bool,X0),X1) != s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(ennf_transformation,[],[f84])).
+fof(f84,plain,(
+  ~! [X0,X1,X2] : s('type.fcp.cart'(bool,X0),X1) = s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(flattening,[],[f83])).
+fof(f83,plain,(
+  ~! [X0] : ! [X1,X2] : s('type.fcp.cart'(bool,X0),X1) = s('type.fcp.cart'(bool,X0),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X0),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X0),X1),s('type.asmSem.asm_state'(X0),X2)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : s('type.fcp.cart'(bool,X6),X7) = s('type.fcp.cart'(bool,X6),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X6),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X6),X7),s('type.asmSem.asm_state'(X6),X8)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : s('type.fcp.cart'(bool,X6),X7) = s('type.fcp.cart'(bool,X6),'const.asmSem.asm_state_pc_1'(s('type.asmSem.asm_state'(X6),'const.asmSem.upd_pc_2'(s('type.fcp.cart'(bool,X6),X7),s('type.asmSem.asm_state'(X6),X8)))))),
+  file('thm.labProps.upd_pc_simps|split|7','thm.labProps.upd_pc_simps|split|7')).
+% SZS output end Proof for thm.labProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 201
+% Passive clauses: 1830
+% Generated clauses: 36135
+% Final active clauses: 131
+% Final passive clauses: 860
+% Input formulas: 81
+% Initial clauses: 92
+% 
+% Duplicate literals: 1346
+% Trivial inequalities: 371
+% Fw subsumption resolutions: 1887
+% Fw demodulations: 4317
+% Bw demodulations: 707
+% Condensations: 3493
+% 
+% Simple tautologies: 320
+% Equational tautologies: 160
+% Forward subsumptions: 22321
+% Bw demodulations to eq. taut.: 48
+% 
+% Unit resulting resolution: 1176
+% Forward superposition: 10549
+% Backward superposition: 10460
+% Self superposition: 279
+% Equality factoring: 81
+% Equality resolution: 16
+% 
+% Split clauses: 43
+% Split components: 86
+% SAT solver clauses: 1924
+% SAT solver unit clauses: 137
+% SAT solver binary clauses: 559
+% 
+% Sat splits: 43
+% Sat splitting refutations: 6
+% 
+% Memory used [KB]: 21108
+% Time elapsed: 2.184 s
+% ------------------------------
+% ------------------------------
+% Success in time 3.551 s

@@ -1,0 +1,86 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.PhysicistsQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.PhysicistsQueue
+% SZS output start Proof for thm.PhysicistsQueue
+fof(f214,plain,(
+  $false),
+  inference(resolution,[],[f145,f109])).
+fof(f109,plain,(
+  ~p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2))))))),
+  inference(cnf_transformation,[],[f85])).
+fof(f85,plain,(
+  ~p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),'const.list.APPEND_2'(s('type.list.list'(sK0),sK1),s('type.list.list'(sK0),sK2))))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f81])).
+fof(f81,plain,(
+  ? [X0,X1,X2] : ~p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(ennf_transformation,[],[f35])).
+fof(f35,plain,(
+  ~! [X0,X1,X2] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(flattening,[],[f34])).
+fof(f34,plain,(
+  ~! [X0] : ! [X1,X2] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7,X8] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8))))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7,X8] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X7),s('type.list.list'(X6),X8))))))),
+  file('thm.PhysicistsQueue.PhysicistsQueue_65_prove_ltb','thm.PhysicistsQueue.PhysicistsQueue_65_prove_ltb')).
+fof(f145,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))) )),
+  inference(cnf_transformation,[],[f58])).
+fof(f58,plain,(
+  ! [X0,X1,X2] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(flattening,[],[f57])).
+fof(f57,plain,(
+  ! [X0] : ! [X1,X2] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),'const.list.APPEND_2'(s('type.list.list'(X0),X1),s('type.list.list'(X0),X2))))))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X6] : ! [X21,X22] : p(s(bool,'const.list.isPREFIX_2'(s('type.list.list'(X6),X21),s('type.list.list'(X6),'const.list.APPEND_2'(s('type.list.list'(X6),X21),s('type.list.list'(X6),X22))))))),
+  file('thm.PhysicistsQueue.PhysicistsQueue_65_prove_ltb','thm.rich_list.IS_PREFIX_APPEND3')).
+% SZS output end Proof for thm.PhysicistsQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 13
+% Passive clauses: 43
+% Generated clauses: 108
+% Final active clauses: 13
+% Final passive clauses: 22
+% Input formulas: 32
+% Initial clauses: 52
+% 
+% Duplicate literals: 2
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 1
+% 
+% Simple tautologies: 18
+% Equational tautologies: 5
+% Forward subsumptions: 28
+% 
+% Binary resolution: 13
+% Forward superposition: 10
+% Backward superposition: 19
+% Self superposition: 3
+% Equality factoring: 2
+% Equality resolution: 1
+% 
+% Split clauses: 4
+% Split components: 8
+% SAT solver clauses: 8
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 4
+% 
+% Sat splits: 4
+% 
+% TWLsolver clauses: 8
+% TWLsolver calls for satisfiability: 4
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.013 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.015 s

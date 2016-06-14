@@ -1,0 +1,107 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f313,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f169,f302,f167,f303,f300,f168,f301,f299,f166,f298])).
+fof(f298,plain,(
+  p(s(bool,sK12)) | $spl0),
+  inference(cnf_transformation,[],[f298_D])).
+fof(f298_D,plain,(
+  p(s(bool,sK12)) <=> ~$spl0),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl0])])).
+fof(f166,plain,(
+  p(s(bool,sK12))),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  p(s(bool,sK12)) & (~p(s(bool,sK11)) | p(s(bool,sK10))) & (~p(s(bool,sK12)) | p(s(bool,sK11))) & ~p(s(bool,sK10))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK10,sK11,sK12])],[f73])).
+fof(f73,plain,(
+  ? [X0,X1,X2] : (p(s(bool,X2)) & (~p(s(bool,X1)) | p(s(bool,X0))) & (~p(s(bool,X2)) | p(s(bool,X1))) & ~p(s(bool,X0)))),
+  inference(flattening,[],[f72])).
+fof(f72,plain,(
+  ? [X0,X1,X2] : ((p(s(bool,X2)) & (~p(s(bool,X1)) | p(s(bool,X0)))) & ((~p(s(bool,X2)) | p(s(bool,X1))) & ~p(s(bool,X0))))),
+  inference(ennf_transformation,[],[f31])).
+fof(f31,plain,(
+  ~! [X0,X1,X2] : ((p(s(bool,X2)) & (p(s(bool,X1)) => p(s(bool,X0)))) => ((p(s(bool,X2)) => p(s(bool,X1))) => p(s(bool,X0))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ((p(s(bool,X8)) & (p(s(bool,X7)) => p(s(bool,X6)))) => ((p(s(bool,X8)) => p(s(bool,X7))) => p(s(bool,X6))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ((p(s(bool,X8)) & (p(s(bool,X7)) => p(s(bool,X6)))) => ((p(s(bool,X8)) => p(s(bool,X7))) => p(s(bool,X6))))),
+  file('thm.misc.IMP_IMP','thm.misc.IMP_IMP')).
+fof(f299,plain,(
+  ~p(s(bool,sK12)) | $spl1),
+  inference(cnf_transformation,[],[f299_D])).
+fof(f299_D,plain,(
+  ~p(s(bool,sK12)) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f301,plain,(
+  p(s(bool,sK11)) | $spl2),
+  inference(cnf_transformation,[],[f301_D])).
+fof(f301_D,plain,(
+  p(s(bool,sK11)) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f168,plain,(
+  p(s(bool,sK11)) | ~p(s(bool,sK12))),
+  inference(cnf_transformation,[],[f108])).
+fof(f300,plain,(
+  ~p(s(bool,sK11)) | $spl3),
+  inference(cnf_transformation,[],[f300_D])).
+fof(f300_D,plain,(
+  ~p(s(bool,sK11)) <=> ~$spl3),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl3])])).
+fof(f303,plain,(
+  p(s(bool,sK10)) | $spl4),
+  inference(cnf_transformation,[],[f303_D])).
+fof(f303_D,plain,(
+  p(s(bool,sK10)) <=> ~$spl4),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl4])])).
+fof(f167,plain,(
+  p(s(bool,sK10)) | ~p(s(bool,sK11))),
+  inference(cnf_transformation,[],[f108])).
+fof(f302,plain,(
+  ~p(s(bool,sK10)) | $spl5),
+  inference(cnf_transformation,[],[f302_D])).
+fof(f302_D,plain,(
+  ~p(s(bool,sK10)) <=> ~$spl5),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl5])])).
+fof(f169,plain,(
+  ~p(s(bool,sK10))),
+  inference(cnf_transformation,[],[f108])).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Passive clauses: 88
+% Generated clauses: 139
+% Final passive clauses: 87
+% Input formulas: 29
+% Initial clauses: 129
+% 
+% Duplicate literals: 3
+% 
+% Simple tautologies: 27
+% 
+% Split clauses: 19
+% Split components: 39
+% SAT solver clauses: 23
+% SAT solver unit clauses: 3
+% SAT solver binary clauses: 18
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 19
+% 
+% TWLsolver clauses: 22
+% TWLsolver calls for satisfiability: 1
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.014 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.03 s

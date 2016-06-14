@@ -1,0 +1,280 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.typeSound
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.typeSound
+% SZS output start Proof for thm.typeSound
+fof(f9595,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f9594,f348,f352,f350,f2552])).
+fof(f2552,plain,(
+  $false | $spl6),
+  inference(subsumption_resolution,[],[f2551,f291])).
+fof(f291,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') != s('type.ast.tctor','const.ast.TC_exn_0')),
+  inference(cnf_transformation,[],[f159])).
+fof(f159,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') != s('type.ast.tctor','const.ast.TC_exn_0')),
+  inference(flattening,[],[f62])).
+fof(f62,axiom,(
+  ~s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_exn_0')),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.tctor_distinct|split|54')).
+fof(f2551,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_exn_0') | $spl6),
+  inference(forward_demodulation,[],[f2546,f359])).
+fof(f359,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | $spl6),
+  inference(forward_demodulation,[],[f356,f233])).
+fof(f233,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0')))),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,axiom,(
+  s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0')))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.TC_word_def|split|0')).
+fof(f356,plain,(
+  s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W8_0'))) | $spl6),
+  inference(backward_demodulation,[],[f350,f229])).
+fof(f229,plain,(
+  s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',sK1)))),
+  inference(cnf_transformation,[],[f222])).
+fof(f222,plain,(
+  s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',sK1)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f217])).
+fof(f217,plain,(
+  ? [X0,X1] : s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X1)))),
+  inference(ennf_transformation,[],[f103])).
+fof(f103,plain,(
+  ~! [X0,X1] : s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0))) != s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X1)))),
+  inference(flattening,[],[f102])).
+fof(f102,plain,(
+  ~! [X0,X1] : ~s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X1)))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ~s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X6))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X7)))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ~s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X6))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size',X7)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.typeSound.typeSound_4_prove_ltb|split|8')).
+fof(f2546,plain,(
+  s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | $spl6),
+  inference(trivial_inequality_removal,[],[f2543])).
+fof(f2543,plain,(
+  s('type.ast.tctor','const.ast.TC_word8_0') != s('type.ast.tctor','const.ast.TC_word8_0') | s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | $spl6),
+  inference(superposition,[],[f2343,f359])).
+fof(f2343,plain,(
+  ( ! [X6] : (s('type.ast.tctor','const.ast.TC_word8_0') != s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X6))) | s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X6)))) )),
+  inference(superposition,[],[f319,f2331])).
+fof(f2331,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0))) = s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK2(X0)))) | s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0)))) )),
+  inference(superposition,[],[f2308,f1834])).
+fof(f1834,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK2(X0)))) | s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0)))) )),
+  inference(superposition,[],[f1818,f309])).
+fof(f309,plain,(
+  ( ! [X0] : (s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK3(X0)))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK2(X0))))) )),
+  inference(cnf_transformation,[],[f225])).
+fof(f225,plain,(
+  ! [X0] : (s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK2(X0)))) | s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),sK3(X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK2,sK3])],[f176])).
+fof(f176,plain,(
+  ! [X0] : (? [X2] : s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X2))) | ? [X1] : s('type.semanticPrimitives.tid_or_exn',X0) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))))),
+  inference(rectify,[],[f97])).
+fof(f97,axiom,(
+  ! [X17] : (? [X18] : s('type.semanticPrimitives.tid_or_exn',X17) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X18))) | ? [X18] : s('type.semanticPrimitives.tid_or_exn',X17) = s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X18))))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.semanticPrimitives.tid_or_exn_nchotomy')).
+fof(f1818,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))) )),
+  inference(forward_demodulation,[],[f1747,f334])).
+fof(f334,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))) )),
+  inference(cnf_transformation,[],[f214])).
+fof(f214,plain,(
+  ! [X0,X1,X2,X3] : s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))),
+  inference(flattening,[],[f213])).
+fof(f213,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X1,X2) = s(X1,happ(s(fun(X0,X1),'_dst_x0_1'(s(X1,X2))),s(X0,X3)))),
+  inference(rectify,[],[f101])).
+fof(f101,axiom,(
+  ! [X22,X23] : ! [X24,X25] : s(X23,X24) = s(X23,happ(s(fun(X22,X23),'_dst_x0_1'(s(X23,X24))),s(X22,X25)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','_dst_x0_ax')).
+fof(f1747,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))))) = s('type.ast.tctor',happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'_dst_x0_1'(s('type.ast.tctor','const.ast.TC_exn_0'))),s('type.ast.id'('type.list.list'('type.string.char')),X0)))) )),
+  inference(superposition,[],[f327,f306])).
+fof(f306,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0))) = s('type.ast.tctor','const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn',X0),s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'_dst_x0_1'(s('type.ast.tctor','const.ast.TC_exn_0')))))) )),
+  inference(cnf_transformation,[],[f174])).
+fof(f174,plain,(
+  ! [X0] : s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X0))) = s('type.ast.tctor','const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn',X0),s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'_dst_x0_1'(s('type.ast.tctor','const.ast.TC_exn_0')))))),
+  inference(rectify,[],[f98])).
+fof(f98,axiom,(
+  ! [X11] : s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X11))) = s('type.ast.tctor','const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn',X11),s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'_dst_x0_1'(s('type.ast.tctor','const.ast.TC_exn_0')))))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.typeSystem.tid_exn_to_tc_def')).
+fof(f327,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3),s('type.ast.id'('type.list.list'('type.string.char')),X1))) = s(X0,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3)))) )),
+  inference(cnf_transformation,[],[f207])).
+fof(f207,plain,(
+  ! [X0,X1,X2,X3] : s(X0,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3),s('type.ast.id'('type.list.list'('type.string.char')),X1))) = s(X0,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3)))),
+  inference(flattening,[],[f206])).
+fof(f206,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3),s('type.ast.id'('type.list.list'('type.string.char')),X1))) = s(X0,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3)))),
+  inference(rectify,[],[f96])).
+fof(f96,axiom,(
+  ! [X12] : ! [X8,X15,X16] : s(X12,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X12),X16),s('type.ast.id'('type.list.list'('type.string.char')),X8))) = s(X12,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeExn_1'(s('type.ast.id'('type.list.list'('type.string.char')),X8))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X12),X15),s(fun('type.ast.id'('type.list.list'('type.string.char')),X12),X16)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.semanticPrimitives.tid_or_exn_case_def|split|1')).
+fof(f2308,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))))) )),
+  inference(forward_demodulation,[],[f2224,f305])).
+fof(f305,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.ast.tctor',happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s('type.ast.id'('type.list.list'('type.string.char')),X0)))) )),
+  inference(cnf_transformation,[],[f173])).
+fof(f173,plain,(
+  ! [X0] : s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))) = s('type.ast.tctor',happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s('type.ast.id'('type.list.list'('type.string.char')),X0)))),
+  inference(rectify,[],[f100])).
+fof(f100,axiom,(
+  ! [X19] : s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X19))) = s('type.ast.tctor',happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s('type.ast.id'('type.list.list'('type.string.char')),X19)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','ARITY_0_1_const.ast.TC_name')).
+fof(f2224,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0))))) = s('type.ast.tctor',happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),'type.ast.tctor'),'const.ast.TC_name_0'),s('type.ast.id'('type.list.list'('type.string.char')),X0)))) )),
+  inference(superposition,[],[f328,f306])).
+fof(f328,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s('type.ast.id'('type.list.list'('type.string.char')),X1))) = s(X0,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3)))) )),
+  inference(cnf_transformation,[],[f209])).
+fof(f209,plain,(
+  ! [X0,X1,X2,X3] : s(X0,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s('type.ast.id'('type.list.list'('type.string.char')),X1))) = s(X0,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3)))),
+  inference(flattening,[],[f208])).
+fof(f208,plain,(
+  ! [X0] : ! [X1,X2,X3] : s(X0,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s('type.ast.id'('type.list.list'('type.string.char')),X1))) = s(X0,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X1))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X2),s(fun('type.ast.id'('type.list.list'('type.string.char')),X0),X3)))),
+  inference(rectify,[],[f95])).
+fof(f95,axiom,(
+  ! [X12] : ! [X8,X15,X16] : s(X12,happ(s(fun('type.ast.id'('type.list.list'('type.string.char')),X12),X15),s('type.ast.id'('type.list.list'('type.string.char')),X8))) = s(X12,'const.semanticPrimitives.tid_or_exn_CASE_3'(s('type.semanticPrimitives.tid_or_exn','const.semanticPrimitives.TypeId_1'(s('type.ast.id'('type.list.list'('type.string.char')),X8))),s(fun('type.ast.id'('type.list.list'('type.string.char')),X12),X15),s(fun('type.ast.id'('type.list.list'('type.string.char')),X12),X16)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.semanticPrimitives.tid_or_exn_case_def|split|0')).
+fof(f319,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.ast.TC_word8_0') != s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))) )),
+  inference(cnf_transformation,[],[f193])).
+fof(f193,plain,(
+  ! [X0] : s('type.ast.tctor','const.ast.TC_word8_0') != s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))),
+  inference(flattening,[],[f192])).
+fof(f192,plain,(
+  ! [X0] : ~s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))),
+  inference(rectify,[],[f12])).
+fof(f12,axiom,(
+  ! [X8] : ~s('type.ast.tctor','const.ast.TC_word8_0') = s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X8)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.tctor_distinct|split|4')).
+fof(f350,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK1) | $spl6),
+  inference(cnf_transformation,[],[f350_D])).
+fof(f350_D,plain,(
+  s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK1) <=> ~$spl6),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl6])])).
+fof(f352,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | $spl8),
+  inference(cnf_transformation,[],[f352_D])).
+fof(f352_D,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) <=> ~$spl8),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl8])])).
+fof(f348,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK1)),
+  inference(forward_demodulation,[],[f345,f232])).
+fof(f232,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  inference(cnf_transformation,[],[f87])).
+fof(f87,axiom,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0')))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.TC_word_def|split|1')).
+fof(f345,plain,(
+  s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) = s('type.ast.tctor','const.ast.TC_word_1'(s('type.ast.word_size','const.ast.W64_0'))) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',sK1)),
+  inference(superposition,[],[f229,f307])).
+fof(f307,plain,(
+  ( ! [X0] : (s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X0) | s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0)) )),
+  inference(cnf_transformation,[],[f175])).
+fof(f175,plain,(
+  ! [X0] : (s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X0) | s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X0))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X8] : (s('type.ast.word_size','const.ast.W8_0') = s('type.ast.word_size',X8) | s('type.ast.word_size','const.ast.W64_0') = s('type.ast.word_size',X8))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.word_size_nchotomy')).
+fof(f9594,plain,(
+  $false | $spl8),
+  inference(subsumption_resolution,[],[f9593,f297])).
+fof(f297,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') != s('type.ast.tctor','const.ast.TC_exn_0')),
+  inference(cnf_transformation,[],[f165])).
+fof(f165,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') != s('type.ast.tctor','const.ast.TC_exn_0')),
+  inference(flattening,[],[f68])).
+fof(f68,axiom,(
+  ~s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_exn_0')),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.tctor_distinct|split|60')).
+fof(f9593,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_exn_0') | $spl8),
+  inference(forward_demodulation,[],[f9588,f352])).
+fof(f9588,plain,(
+  s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | $spl8),
+  inference(trivial_inequality_removal,[],[f9587])).
+fof(f9587,plain,(
+  s('type.ast.tctor','const.ast.TC_word64_0') != s('type.ast.tctor','const.ast.TC_word64_0') | s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',sK0))) | $spl8),
+  inference(superposition,[],[f2344,f352])).
+fof(f2344,plain,(
+  ( ! [X7] : (s('type.ast.tctor','const.ast.TC_word64_0') != s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X7))) | s('type.ast.tctor','const.ast.TC_exn_0') = s('type.ast.tctor','const.typeSystem.tid_exn_to_tc_1'(s('type.semanticPrimitives.tid_or_exn',X7)))) )),
+  inference(superposition,[],[f320,f2331])).
+fof(f320,plain,(
+  ( ! [X0] : (s('type.ast.tctor','const.ast.TC_word64_0') != s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))) )),
+  inference(cnf_transformation,[],[f195])).
+fof(f195,plain,(
+  ! [X0] : s('type.ast.tctor','const.ast.TC_word64_0') != s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))),
+  inference(flattening,[],[f194])).
+fof(f194,plain,(
+  ! [X0] : ~s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X0)))),
+  inference(rectify,[],[f13])).
+fof(f13,axiom,(
+  ! [X8] : ~s('type.ast.tctor','const.ast.TC_word64_0') = s('type.ast.tctor','const.ast.TC_name_1'(s('type.ast.id'('type.list.list'('type.string.char')),X8)))),
+  file('thm.typeSound.typeSound_4_prove_ltb|split|8','thm.ast.tctor_distinct|split|5')).
+% SZS output end Proof for thm.typeSound
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 205
+% Passive clauses: 1319
+% Generated clauses: 9111
+% Final active clauses: 189
+% Final passive clauses: 943
+% Input formulas: 100
+% Initial clauses: 107
+% 
+% Duplicate literals: 742
+% Trivial inequalities: 92
+% Fw subsumption resolutions: 862
+% Fw demodulations: 769
+% Bw demodulations: 7
+% 
+% Simple tautologies: 163
+% Equational tautologies: 55
+% Forward subsumptions: 4698
+% 
+% Binary resolution: 50
+% Factoring: 2
+% Forward superposition: 3364
+% Backward superposition: 2693
+% Self superposition: 171
+% Equality factoring: 117
+% Equality resolution: 3
+% 
+% Split clauses: 402
+% Split components: 809
+% SAT solver clauses: 563
+% SAT solver unit clauses: 16
+% SAT solver binary clauses: 122
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 402
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 562
+% TWLsolver calls for satisfiability: 97
+% 
+% Memory used [KB]: 5756
+% Time elapsed: 0.233 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.23 s

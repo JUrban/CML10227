@@ -1,0 +1,71 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 150 next slice time: 5
+dis+11_7_3 on thm.labSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labSem
+% SZS output start Proof for thm.labSem
+fof(f237,plain,(
+  $false),
+  inference(equality_resolution,[],[f133])).
+fof(f133,plain,(
+  ( ! [X3] : (s('type.labSem.state'(sK6,sK7),sK8) != s('type.labSem.state'(sK6,sK7),X3)) )),
+  inference(cnf_transformation,[],[f90])).
+fof(f90,plain,(
+  s('type.labSem.state'(sK6,sK7),sK8) = s('type.labSem.state'(sK6,sK7),sK9) & ! [X3] : s('type.labSem.state'(sK6,sK7),sK8) != s('type.labSem.state'(sK6,sK7),X3)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK6,sK7,sK8,sK9])],[f89])).
+fof(f89,plain,(
+  ? [X0,X1,X2] : (? [X4] : s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X4) & ! [X3] : s('type.labSem.state'(X0,X1),X2) != s('type.labSem.state'(X0,X1),X3))),
+  inference(rectify,[],[f64])).
+fof(f64,plain,(
+  ? [X0,X1,X2] : (? [X3] : s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3) & ! [X4] : s('type.labSem.state'(X0,X1),X2) != s('type.labSem.state'(X0,X1),X4))),
+  inference(ennf_transformation,[],[f29])).
+fof(f29,plain,(
+  ~! [X0,X1,X2] : (? [X3] : s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3) => ? [X4] : s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X4))),
+  inference(flattening,[],[f28])).
+fof(f28,plain,(
+  ~! [X0,X1] : ! [X2] : (? [X3] : s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X3) => ? [X4] : s('type.labSem.state'(X0,X1),X2) = s('type.labSem.state'(X0,X1),X4))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8] : (? [X9] : s('type.labSem.state'(X6,X7),X8) = s('type.labSem.state'(X6,X7),X9) => ? [X9] : s('type.labSem.state'(X6,X7),X8) = s('type.labSem.state'(X6,X7),X9))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8] : (? [X9] : s('type.labSem.state'(X6,X7),X8) = s('type.labSem.state'(X6,X7),X9) => ? [X9] : s('type.labSem.state'(X6,X7),X8) = s('type.labSem.state'(X6,X7),X9))),
+  file('thm.labSem.labSem_387_prove_ltb','thm.labSem.labSem_387_prove_ltb')).
+% SZS output end Proof for thm.labSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 20
+% Passive clauses: 54
+% Generated clauses: 100
+% Final active clauses: 20
+% Final passive clauses: 30
+% Input formulas: 26
+% Initial clauses: 92
+% 
+% Duplicate literals: 1
+% 
+% Simple tautologies: 25
+% Forward subsumptions: 1
+% 
+% Binary resolution: 2
+% Forward superposition: 1
+% Equality resolution: 1
+% 
+% Split clauses: 18
+% Split components: 37
+% SAT solver clauses: 22
+% SAT solver unit clauses: 4
+% SAT solver binary clauses: 17
+% 
+% Sat splits: 18
+% 
+% TWLsolver clauses: 22
+% TWLsolver calls for satisfiability: 4
+% 
+% Memory used [KB]: 639
+% Time elapsed: 0.015 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.04 s

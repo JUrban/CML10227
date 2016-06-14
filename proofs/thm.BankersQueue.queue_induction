@@ -1,0 +1,191 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.BankersQueue
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.BankersQueue
+% SZS output start Proof for thm.BankersQueue
+fof(f3416,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f3406,f198,f135,f197,f202])).
+fof(f202,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(resolution,[],[f198,f197])).
+fof(f197,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f197_D])).
+fof(f197_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f135,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.BankersQueue.queue_induction',aHL_FALSITY)).
+fof(f198,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl2),
+  inference(cnf_transformation,[],[f198_D])).
+fof(f198_D,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f3406,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl1),
+  inference(subsumption_resolution,[],[f3391,f137])).
+fof(f137,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f108,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f42])).
+fof(f42,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f28])).
+fof(f28,axiom,(
+  ! [X15] : (s(bool,'T_0') = s(bool,X15) <=> p(s(bool,X15)))),
+  file('thm.BankersQueue.queue_induction','thm.bool.EQ_CLAUSES|split|1')).
+fof(f3391,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl1),
+  inference(superposition,[],[f3365,f385])).
+fof(f385,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),sK2))) | s(bool,'T_0') = s(bool,X4)) ) | $spl1),
+  inference(subsumption_resolution,[],[f379,f197])).
+fof(f379,plain,(
+  ( ! [X4] : (p(s(bool,'F_0')) | s(bool,X4) = s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),sK2))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f234,f209])).
+fof(f209,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),sK2)))),
+  inference(resolution,[],[f133,f142])).
+fof(f142,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X15] : (s(bool,'F_0') = s(bool,X15) <=> ~p(s(bool,X15)))),
+  file('thm.BankersQueue.queue_induction','thm.bool.EQ_CLAUSES|split|2')).
+fof(f133,plain,(
+  ~p(s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f107])).
+fof(f107,plain,(
+  ! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X3),s('type.list.list'(sK0),X4),s('type.num.num',X5),s('type.list.list'(sK0),X6)))))) & ~p(s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f106])).
+fof(f106,plain,(
+  ? [X0,X1] : (! [X3,X4,X5,X6] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X3),s('type.list.list'(X0),X4),s('type.num.num',X5),s('type.list.list'(X0),X6)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),X2)))))),
+  inference(rectify,[],[f99])).
+fof(f99,plain,(
+  ? [X0,X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) & ? [X6] : ~p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),X6)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) => ! [X6] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),X6)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1] : (! [X2,X3,X4,X5] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))))) => ! [X6] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X0),bool),X1),s('type.BankersQueue.queue'(X0),X6)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X6),bool),X7),s('type.BankersQueue.queue'(X6),'const.BankersQueue.QUEUE_4'(s('type.num.num',X8),s('type.list.list'(X6),X9),s('type.num.num',X10),s('type.list.list'(X6),X11)))))) => ! [X12] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X6),bool),X7),s('type.BankersQueue.queue'(X6),X12)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8,X9,X10,X11] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X6),bool),X7),s('type.BankersQueue.queue'(X6),'const.BankersQueue.QUEUE_4'(s('type.num.num',X8),s('type.list.list'(X6),X9),s('type.num.num',X10),s('type.list.list'(X6),X11)))))) => ! [X12] : p(s(bool,happ(s(fun('type.BankersQueue.queue'(X6),bool),X7),s('type.BankersQueue.queue'(X6),X12)))))),
+  file('thm.BankersQueue.queue_induction','thm.BankersQueue.queue_induction')).
+fof(f234,plain,(
+  ( ! [X2,X1] : (p(s(bool,X1)) | s(bool,X1) = s(bool,X2) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(resolution,[],[f177,f138])).
+fof(f138,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f108])).
+fof(f177,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f102])).
+fof(f102,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f101])).
+fof(f101,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f74])).
+fof(f74,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X13,X14] : ((p(s(bool,X13)) => p(s(bool,X14))) => ((p(s(bool,X14)) => p(s(bool,X13))) => s(bool,X13) = s(bool,X14)))),
+  file('thm.BankersQueue.queue_induction','thm.bool.IMP_ANTISYM_AX')).
+fof(f3365,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),X0))))) )),
+  inference(superposition,[],[f132,f162])).
+fof(f162,plain,(
+  ( ! [X0,X1] : (s('type.BankersQueue.queue'(X0),X1) = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',sK3(X1,X0)),s('type.list.list'(X0),sK4(X1,X0)),s('type.num.num',sK5(X1,X0)),s('type.list.list'(X0),sK6(X1,X0))))) )),
+  inference(cnf_transformation,[],[f123])).
+fof(f123,plain,(
+  ! [X0,X1] : s('type.BankersQueue.queue'(X0),X1) = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',sK3(X1,X0)),s('type.list.list'(X0),sK4(X1,X0)),s('type.num.num',sK5(X1,X0)),s('type.list.list'(X0),sK6(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6])],[f56])).
+fof(f56,plain,(
+  ! [X0,X1] : ? [X2,X3,X4,X5] : s('type.BankersQueue.queue'(X0),X1) = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))),
+  inference(flattening,[],[f55])).
+fof(f55,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3,X4,X5] : s('type.BankersQueue.queue'(X0),X1) = s('type.BankersQueue.queue'(X0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X2),s('type.list.list'(X0),X3),s('type.num.num',X4),s('type.list.list'(X0),X5)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X6] : ! [X47] : ? [X8,X9,X10,X11] : s('type.BankersQueue.queue'(X6),X47) = s('type.BankersQueue.queue'(X6),'const.BankersQueue.QUEUE_4'(s('type.num.num',X8),s('type.list.list'(X6),X9),s('type.num.num',X10),s('type.list.list'(X6),X11)))),
+  file('thm.BankersQueue.queue_induction','thm.BankersQueue.queue_nchotomy')).
+fof(f132,plain,(
+  ( ! [X6,X4,X5,X3] : (p(s(bool,happ(s(fun('type.BankersQueue.queue'(sK0),bool),sK1),s('type.BankersQueue.queue'(sK0),'const.BankersQueue.QUEUE_4'(s('type.num.num',X3),s('type.list.list'(sK0),X4),s('type.num.num',X5),s('type.list.list'(sK0),X6))))))) )),
+  inference(cnf_transformation,[],[f107])).
+% SZS output end Proof for thm.BankersQueue
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 54
+% Passive clauses: 629
+% Generated clauses: 3223
+% Final active clauses: 46
+% Final passive clauses: 521
+% Input formulas: 37
+% Initial clauses: 62
+% 
+% Duplicate literals: 192
+% Trivial inequalities: 50
+% Fw subsumption resolutions: 298
+% Fw demodulations: 245
+% Bw demodulations: 5
+% 
+% Simple tautologies: 100
+% Equational tautologies: 32
+% Forward subsumptions: 1646
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 94
+% Factoring: 1
+% Forward superposition: 1015
+% Backward superposition: 1108
+% Self superposition: 70
+% Equality factoring: 56
+% Equality resolution: 8
+% 
+% Split clauses: 37
+% Split components: 74
+% SAT solver clauses: 78
+% SAT solver unit clauses: 8
+% SAT solver binary clauses: 41
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 37
+% Sat splitting refutations: 3
+% 
+% TWLsolver clauses: 73
+% TWLsolver calls for satisfiability: 28
+% 
+% Memory used [KB]: 2430
+% Time elapsed: 0.154 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.18 s

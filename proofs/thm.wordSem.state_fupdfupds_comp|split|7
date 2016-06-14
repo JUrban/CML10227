@@ -1,0 +1,305 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.wordSem
+% (102416)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 145
+% Passive clauses: 2568
+% Generated clauses: 16063
+% Final active clauses: 115
+% Final passive clauses: 2222
+% Input formulas: 132
+% Initial clauses: 143
+% 
+% Duplicate literals: 593
+% Trivial inequalities: 43
+% Fw subsumption resolutions: 1216
+% Fw demodulations: 2410
+% Bw demodulations: 24
+% 
+% Simple tautologies: 48
+% Equational tautologies: 44
+% Forward subsumptions: 8455
+% 
+% Binary resolution: 445
+% Factoring: 2
+% Forward superposition: 5062
+% Backward superposition: 5778
+% Self superposition: 193
+% Equality factoring: 76
+% Equality resolution: 1
+% 
+% Split clauses: 168
+% Split components: 336
+% SAT solver clauses: 507
+% SAT solver unit clauses: 21
+% SAT solver binary clauses: 112
+% 
+% Sat splits: 168
+% Sat splitting refutations: 5
+% 
+% TWLsolver clauses: 507
+% TWLsolver calls for satisfiability: 129
+% 
+% Memory used [KB]: 18166
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.wordSem
+% (102440)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 107
+% Passive clauses: 814
+% Generated clauses: 10764
+% Final active clauses: 81
+% Final passive clauses: 570
+% Input formulas: 132
+% Initial clauses: 143
+% 
+% Duplicate literals: 430
+% Trivial inequalities: 40
+% Fw subsumption resolutions: 624
+% Fw demodulations: 1138
+% Bw demodulations: 156
+% Condensations: 949
+% 
+% Simple tautologies: 65
+% Equational tautologies: 39
+% Forward subsumptions: 5308
+% Bw demodulations to eq. taut.: 2
+% 
+% Binary resolution: 274
+% Factoring: 1
+% Forward superposition: 2977
+% Backward superposition: 2938
+% Self superposition: 154
+% Equality factoring: 78
+% Equality resolution: 3
+% 
+% Split clauses: 88
+% Split components: 176
+% SAT solver clauses: 1477
+% SAT solver unit clauses: 259
+% SAT solver binary clauses: 45
+% 
+% Sat splits: 88
+% Sat splitting refutations: 7
+% 
+% TWLsolver clauses: 1477
+% TWLsolver calls for satisfiability: 318
+% 
+% Memory used [KB]: 13560
+% Time elapsed: 0.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.wordSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.wordSem
+% SZS output start Proof for thm.wordSem
+fof(f68697,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f68696,f407])).
+fof(f407,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f44])).
+fof(f44,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7','thm.bool.TRUTH')).
+fof(f68696,plain,(
+  ~p(s(bool,'T_0'))),
+  inference(forward_demodulation,[],[f68694,f4520])).
+fof(f4520,plain,(
+  ( ! [X0,X1] : (s(bool,'T_0') = s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1)))) )),
+  inference(condensation,[],[f4519])).
+fof(f4519,plain,(
+  ( ! [X10,X8,X9] : (s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(subsumption_resolution,[],[f4447,f555])).
+fof(f555,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f409,f410])).
+fof(f410,plain,(
+  ( ! [X0] : (s(bool,'F_0') = s(bool,X0) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f3])).
+fof(f3,axiom,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) | s(bool,'F_0') = s(bool,X0))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7',aHL_BOOL_CASES)).
+fof(f409,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f136])).
+fof(f136,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7',aHL_FALSITY)).
+fof(f4447,plain,(
+  ( ! [X10,X8,X9] : (p(s(bool,X10)) | s(bool,'T_0') = s(bool,happ(s(fun(X8,bool),happ(s(fun(X8,fun(X8,bool)),'=_0'),s(X8,X9))),s(X8,X9))) | s(bool,'T_0') = s(bool,X10)) )),
+  inference(superposition,[],[f3505,f553])).
+fof(f553,plain,(
+  ( ! [X0,X1] : (s(bool,X0) = s(bool,X1) | s(bool,'T_0') = s(bool,X1) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(superposition,[],[f410,f410])).
+fof(f3505,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(backward_demodulation,[],[f3410,f1569])).
+fof(f1569,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),'const.combin.o_3'(s(fun(X0,fun(X0,bool)),'=_0'),s(fun(X0,X0),'_i_0_0'),s(X0,X1))),s(X0,X1))))) )),
+  inference(forward_demodulation,[],[f1522,f488])).
+fof(f488,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))) )),
+  inference(cnf_transformation,[],[f264])).
+fof(f264,plain,(
+  ! [X0,X1,X2,X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(flattening,[],[f263])).
+fof(f263,plain,(
+  ! [X0,X1,X2] : ! [X3,X4,X5] : s(X0,'const.combin.o_3'(s(fun(X1,X0),X3),s(fun(X2,X1),X4),s(X2,X5))) = s(X0,happ(s(fun(X1,X0),X3),s(X1,happ(s(fun(X2,X1),X4),s(X2,X5)))))),
+  inference(rectify,[],[f11])).
+fof(f11,axiom,(
+  ! [X6,X7,X15] : ! [X11,X10,X17] : s(X6,'const.combin.o_3'(s(fun(X7,X6),X11),s(fun(X15,X7),X10),s(X15,X17))) = s(X6,happ(s(fun(X7,X6),X11),s(X7,happ(s(fun(X15,X7),X10),s(X15,X17)))))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7','thm.combin.o_THM')).
+fof(f1522,plain,(
+  ( ! [X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1))))),s(X0,X1))))) )),
+  inference(unit_resulting_resolution,[],[f411,f486])).
+fof(f486,plain,(
+  ( ! [X2,X0,X1] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) != s(X0,X2)) )),
+  inference(cnf_transformation,[],[f405])).
+fof(f405,plain,(
+  ! [X0,X1,X2] : ((~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) & (s(X0,X1) != s(X0,X2) | p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2))))))),
+  inference(nnf_transformation,[],[f260])).
+fof(f260,plain,(
+  ! [X0,X1,X2] : (p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) <=> s(X0,X1) = s(X0,X2))),
+  inference(rectify,[],[f75])).
+fof(f75,axiom,(
+  ! [X47,X48,X49] : (p(s(bool,happ(s(fun(X47,bool),happ(s(fun(X47,fun(X47,bool)),'=_0'),s(X47,X48))),s(X47,X49)))) <=> s(X47,X48) = s(X47,X49))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7',arity_0_HL_EQ)).
+fof(f411,plain,(
+  ( ! [X0,X1] : (s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))) )),
+  inference(cnf_transformation,[],[f138])).
+fof(f138,plain,(
+  ! [X0,X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(flattening,[],[f137])).
+fof(f137,plain,(
+  ! [X0] : ! [X1] : s(X0,X1) = s(X0,happ(s(fun(X0,X0),'_i_0_0'),s(X0,X1)))),
+  inference(rectify,[],[f127])).
+fof(f127,axiom,(
+  ! [X42] : ! [X44] : s(X42,X44) = s(X42,happ(s(fun(X42,X42),'_i_0_0'),s(X42,X44)))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7','_i0_ax')).
+fof(f3410,plain,(
+  ( ! [X76,X74,X75,X73] : (s(X75,happ(s(fun(X73,X75),X76),s(X73,X74))) = s(X75,'const.combin.o_3'(s(fun(X73,X75),X76),s(fun(X73,X73),'_i_0_0'),s(X73,X74)))) )),
+  inference(superposition,[],[f488,f411])).
+fof(f68694,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5),s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5),s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))))),
+  inference(backward_demodulation,[],[f68676,f18394])).
+fof(f18394,plain,(
+  ~p(s(bool,happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool),happ(s(fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),fun(fun(sK0,'type.wordSem.state'(sK1,sK2)),bool)),'=_0'),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5),s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))))))),
+  inference(unit_resulting_resolution,[],[f406,f485])).
+fof(f485,plain,(
+  ( ! [X2,X0,X1] : (~p(s(bool,happ(s(fun(X0,bool),happ(s(fun(X0,fun(X0,bool)),'=_0'),s(X0,X1))),s(X0,X2)))) | s(X0,X1) = s(X0,X2)) )),
+  inference(cnf_transformation,[],[f405])).
+fof(f406,plain,(
+  s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5),s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3)))))),
+  inference(cnf_transformation,[],[f391])).
+fof(f391,plain,(
+  s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5),s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3))) != s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK5))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),'const.combin.o_2'(s(fun('type.wordSem.state'(sK1,sK2),'type.wordSem.state'(sK1,sK2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1)),fun('type.fcp.cart'(bool,sK1),'type.wordSem.word_loc'(sK1))),sK4))),s(fun(sK0,'type.wordSem.state'(sK1,sK2)),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3,sK4,sK5])],[f385])).
+fof(f385,plain,(
+  ? [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X5),s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X4))))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3))) != s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X5))),s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X4))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3)))))),
+  inference(ennf_transformation,[],[f135])).
+fof(f135,plain,(
+  ~! [X0,X1,X2,X3,X4,X5] : s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X5),s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X4))))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3))) = s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X5))),s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X4))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3)))))),
+  inference(flattening,[],[f134])).
+fof(f134,plain,(
+  ~! [X0,X1,X2] : ! [X3,X4,X5] : s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X5),s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X4))))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3))) = s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X5))),s(fun(X0,'type.wordSem.state'(X1,X2)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X2),'type.wordSem.state'(X1,X2)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X4))),s(fun(X0,'type.wordSem.state'(X1,X2)),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X11),s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X10))))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9))) = s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X11))),s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X10))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7,X8] : ! [X9,X10,X11] : s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X11),s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X10))))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9))) = s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X11))),s(fun(X6,'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X10))),s(fun(X6,'type.wordSem.state'(X7,X8)),X9)))))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7','thm.wordSem.state_fupdfupds_comp|split|7')).
+fof(f68676,plain,(
+  ( ! [X4,X2,X0,X5,X3,X1] : (s(fun(X4,'type.wordSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.wordSem.state'(X0,X1),'type.wordSem.state'(X0,X1)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0))),X2),s(fun(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0))),X3))))),s(fun(X4,'type.wordSem.state'(X0,X1)),X5))) = s(fun(X4,'type.wordSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.wordSem.state'(X0,X1),'type.wordSem.state'(X0,X1)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0))),X2))),s(fun(X4,'type.wordSem.state'(X0,X1)),'const.combin.o_2'(s(fun('type.wordSem.state'(X0,X1),'type.wordSem.state'(X0,X1)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0)),fun('type.fcp.cart'(bool,X0),'type.wordSem.word_loc'(X0))),X3))),s(fun(X4,'type.wordSem.state'(X0,X1)),X5)))))) )),
+  inference(superposition,[],[f495,f445])).
+fof(f445,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X3),s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X2))))) = s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X3))),s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X2)))))) )),
+  inference(cnf_transformation,[],[f182])).
+fof(f182,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X3),s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X2))))) = s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X3))),s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X2)))))),
+  inference(flattening,[],[f181])).
+fof(f181,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X3),s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X2))))) = s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.combin.o_2'(s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X3))),s(fun('type.wordSem.state'(X1,X0),'type.wordSem.state'(X1,X0)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1)),fun('type.fcp.cart'(bool,X1),'type.wordSem.word_loc'(X1))),X2)))))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X8,X7] : ! [X10,X11] : s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),'const.combin.o_2'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X11),s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X10))))) = s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.combin.o_2'(s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X11))),s(fun('type.wordSem.state'(X7,X8),'type.wordSem.state'(X7,X8)),'const.wordSem.state_memory_fupd_1'(s(fun(fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7)),fun('type.fcp.cart'(bool,X7),'type.wordSem.word_loc'(X7))),X10)))))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7','thm.wordSem.state_fupdfupds_comp|split|6')).
+fof(f495,plain,(
+  ( ! [X6,X4,X2,X0,X5,X3,X1] : (s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))) )),
+  inference(cnf_transformation,[],[f278])).
+fof(f278,plain,(
+  ! [X0,X1,X2,X3,X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(flattening,[],[f277])).
+fof(f277,plain,(
+  ! [X0,X1,X2,X3] : ! [X4,X5,X6] : s(fun(X2,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X2,X1),'const.combin.o_2'(s(fun(X3,X1),X5),s(fun(X2,X3),X6))))) = s(fun(X2,X0),'const.combin.o_2'(s(fun(X3,X0),'const.combin.o_2'(s(fun(X1,X0),X4),s(fun(X3,X1),X5))),s(fun(X2,X3),X6)))),
+  inference(rectify,[],[f26])).
+fof(f26,axiom,(
+  ! [X6,X7,X22,X15] : ! [X11,X10,X9] : s(fun(X22,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X22,X7),'const.combin.o_2'(s(fun(X15,X7),X10),s(fun(X22,X15),X9))))) = s(fun(X22,X6),'const.combin.o_2'(s(fun(X15,X6),'const.combin.o_2'(s(fun(X7,X6),X11),s(fun(X15,X7),X10))),s(fun(X22,X15),X9)))),
+  file('thm.wordSem.state_fupdfupds_comp|split|7','thm.combin.o_ASSOC')).
+% SZS output end Proof for thm.wordSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 368
+% Passive clauses: 6595
+% Generated clauses: 74833
+% Final active clauses: 146
+% Final passive clauses: 1796
+% Input formulas: 132
+% Initial clauses: 143
+% Discarded non-redundant clauses: 2105
+% 
+% Duplicate literals: 1851
+% Trivial inequalities: 238
+% Fw subsumption resolutions: 2579
+% Fw demodulations: 11349
+% Bw demodulations: 3897
+% Condensations: 2943
+% Global subsumptions: 353
+% 
+% Simple tautologies: 294
+% Equational tautologies: 284
+% Forward subsumptions: 47709
+% Fw demodulations to eq. taut.: 9
+% Bw demodulations to eq. taut.: 122
+% 
+% Unit resulting resolution: 1910
+% Factoring: 1
+% Forward superposition: 22890
+% Backward superposition: 19018
+% Self superposition: 506
+% Equality factoring: 170
+% Equality resolution: 19
+% 
+% Split clauses: 59
+% Split components: 118
+% SAT solver clauses: 7537
+% SAT solver unit clauses: 1856
+% SAT solver binary clauses: 3268
+% 
+% Sat splits: 59
+% Sat splitting refutations: 469
+% 
+% Memory used [KB]: 82898
+% Time elapsed: 5.485 s
+% ------------------------------
+% ------------------------------
+% Success in time 6.881 s

@@ -1,0 +1,132 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.modSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.modSem
+% SZS output start Proof for thm.modSem
+fof(f3595,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f3580,f136])).
+fof(f136,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f41])).
+fof(f41,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.modSem.state_induction',aHL_FALSITY)).
+fof(f3580,plain,(
+  p(s(bool,'F_0'))),
+  inference(superposition,[],[f3551,f194])).
+fof(f194,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.modSem.state'(sK0),bool),sK1),s('type.modSem.state'(sK0),sK2)))),
+  inference(resolution,[],[f133,f143])).
+fof(f143,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f113])).
+fof(f113,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f45])).
+fof(f45,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f44])).
+fof(f44,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f22])).
+fof(f22,axiom,(
+  ! [X18] : (s(bool,'F_0') = s(bool,X18) <=> ~p(s(bool,X18)))),
+  file('thm.modSem.state_induction','thm.bool.EQ_CLAUSES|split|2')).
+fof(f133,plain,(
+  ~p(s(bool,happ(s(fun('type.modSem.state'(sK0),bool),sK1),s('type.modSem.state'(sK0),sK2))))),
+  inference(cnf_transformation,[],[f110])).
+fof(f110,plain,(
+  ! [X3,X4,X5,X6,X7,X8] : p(s(bool,happ(s(fun('type.modSem.state'(sK0),bool),sK1),s('type.modSem.state'(sK0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X4),s('type.ffi.ffi_state'(sK0),X5),s(fun('type.semanticPrimitives.tid_or_exn',bool),X6),s(fun('type.list.list'('type.string.char'),bool),X7),s('type.list.list'('type.option.option'('type.modSem.v')),X8)))))) & ~p(s(bool,happ(s(fun('type.modSem.state'(sK0),bool),sK1),s('type.modSem.state'(sK0),sK2))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2])],[f109])).
+fof(f109,plain,(
+  ? [X0,X1] : (! [X3,X4,X5,X6,X7,X8] : p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X4),s('type.ffi.ffi_state'(X0),X5),s(fun('type.semanticPrimitives.tid_or_exn',bool),X6),s(fun('type.list.list'('type.string.char'),bool),X7),s('type.list.list'('type.option.option'('type.modSem.v')),X8)))))) & ? [X2] : ~p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),X2)))))),
+  inference(rectify,[],[f102])).
+fof(f102,plain,(
+  ? [X0,X1] : (! [X2,X3,X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s(fun('type.semanticPrimitives.tid_or_exn',bool),X5),s(fun('type.list.list'('type.string.char'),bool),X6),s('type.list.list'('type.option.option'('type.modSem.v')),X7)))))) & ? [X8] : ~p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),X8)))))),
+  inference(ennf_transformation,[],[f40])).
+fof(f40,plain,(
+  ~! [X0,X1] : (! [X2,X3,X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s(fun('type.semanticPrimitives.tid_or_exn',bool),X5),s(fun('type.list.list'('type.string.char'),bool),X6),s('type.list.list'('type.option.option'('type.modSem.v')),X7)))))) => ! [X8] : p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),X8)))))),
+  inference(flattening,[],[f39])).
+fof(f39,plain,(
+  ~! [X0] : ! [X1] : (! [X2,X3,X4,X5,X6,X7] : p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s(fun('type.semanticPrimitives.tid_or_exn',bool),X5),s(fun('type.list.list'('type.string.char'),bool),X6),s('type.list.list'('type.option.option'('type.modSem.v')),X7)))))) => ! [X8] : p(s(bool,happ(s(fun('type.modSem.state'(X0),bool),X1),s('type.modSem.state'(X0),X8)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : ! [X7] : (! [X8,X9,X10,X11,X12,X13] : p(s(bool,happ(s(fun('type.modSem.state'(X6),bool),X7),s('type.modSem.state'(X6),'const.modSem.recordtype|46|state_6'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s(fun('type.semanticPrimitives.tid_or_exn',bool),X11),s(fun('type.list.list'('type.string.char'),bool),X12),s('type.list.list'('type.option.option'('type.modSem.v')),X13)))))) => ! [X14] : p(s(bool,happ(s(fun('type.modSem.state'(X6),bool),X7),s('type.modSem.state'(X6),X14)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : ! [X7] : (! [X8,X9,X10,X11,X12,X13] : p(s(bool,happ(s(fun('type.modSem.state'(X6),bool),X7),s('type.modSem.state'(X6),'const.modSem.recordtype|46|state_6'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s(fun('type.semanticPrimitives.tid_or_exn',bool),X11),s(fun('type.list.list'('type.string.char'),bool),X12),s('type.list.list'('type.option.option'('type.modSem.v')),X13)))))) => ! [X14] : p(s(bool,happ(s(fun('type.modSem.state'(X6),bool),X7),s('type.modSem.state'(X6),X14)))))),
+  file('thm.modSem.state_induction','thm.modSem.state_induction')).
+fof(f3551,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.modSem.state'(sK0),bool),sK1),s('type.modSem.state'(sK0),X0))))) )),
+  inference(superposition,[],[f132,f148])).
+fof(f148,plain,(
+  ( ! [X0,X1] : (s('type.modSem.state'(X0),X1) = s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',sK3(X1,X0)),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),sK4(X1,X0)),s('type.ffi.ffi_state'(X0),sK5(X1,X0)),s(fun('type.semanticPrimitives.tid_or_exn',bool),sK6(X1,X0)),s(fun('type.list.list'('type.string.char'),bool),sK7(X1,X0)),s('type.list.list'('type.option.option'('type.modSem.v')),sK8(X1,X0))))) )),
+  inference(cnf_transformation,[],[f117])).
+fof(f117,plain,(
+  ! [X0,X1] : s('type.modSem.state'(X0),X1) = s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',sK3(X1,X0)),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),sK4(X1,X0)),s('type.ffi.ffi_state'(X0),sK5(X1,X0)),s(fun('type.semanticPrimitives.tid_or_exn',bool),sK6(X1,X0)),s(fun('type.list.list'('type.string.char'),bool),sK7(X1,X0)),s('type.list.list'('type.option.option'('type.modSem.v')),sK8(X1,X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK3,sK4,sK5,sK6,sK7,sK8])],[f50])).
+fof(f50,plain,(
+  ! [X0,X1] : ? [X2,X3,X4,X5,X6,X7] : s('type.modSem.state'(X0),X1) = s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s(fun('type.semanticPrimitives.tid_or_exn',bool),X5),s(fun('type.list.list'('type.string.char'),bool),X6),s('type.list.list'('type.option.option'('type.modSem.v')),X7)))),
+  inference(flattening,[],[f49])).
+fof(f49,plain,(
+  ! [X0] : ! [X1] : ? [X2,X3,X4,X5,X6,X7] : s('type.modSem.state'(X0),X1) = s('type.modSem.state'(X0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X2),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X3),s('type.ffi.ffi_state'(X0),X4),s(fun('type.semanticPrimitives.tid_or_exn',bool),X5),s(fun('type.list.list'('type.string.char'),bool),X6),s('type.list.list'('type.option.option'('type.modSem.v')),X7)))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X6] : ! [X48] : ? [X8,X9,X10,X11,X12,X13] : s('type.modSem.state'(X6),X48) = s('type.modSem.state'(X6),'const.modSem.recordtype|46|state_6'(s('type.num.num',X8),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X9),s('type.ffi.ffi_state'(X6),X10),s(fun('type.semanticPrimitives.tid_or_exn',bool),X11),s(fun('type.list.list'('type.string.char'),bool),X12),s('type.list.list'('type.option.option'('type.modSem.v')),X13)))),
+  file('thm.modSem.state_induction','thm.modSem.state_nchotomy')).
+fof(f132,plain,(
+  ( ! [X6,X4,X8,X7,X5,X3] : (p(s(bool,happ(s(fun('type.modSem.state'(sK0),bool),sK1),s('type.modSem.state'(sK0),'const.modSem.recordtype|46|state_6'(s('type.num.num',X3),s('type.list.list'('type.semanticPrimitives.store_v'('type.modSem.v')),X4),s('type.ffi.ffi_state'(sK0),X5),s(fun('type.semanticPrimitives.tid_or_exn',bool),X6),s(fun('type.list.list'('type.string.char'),bool),X7),s('type.list.list'('type.option.option'('type.modSem.v')),X8))))))) )),
+  inference(cnf_transformation,[],[f110])).
+% SZS output end Proof for thm.modSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 55
+% Passive clauses: 736
+% Generated clauses: 3404
+% Final active clauses: 49
+% Final passive clauses: 626
+% Input formulas: 37
+% Initial clauses: 56
+% 
+% Duplicate literals: 191
+% Trivial inequalities: 49
+% Fw subsumption resolutions: 295
+% Fw demodulations: 252
+% Bw demodulations: 4
+% 
+% Simple tautologies: 92
+% Equational tautologies: 31
+% Forward subsumptions: 1728
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 95
+% Factoring: 1
+% Forward superposition: 1136
+% Backward superposition: 1166
+% Self superposition: 79
+% Equality factoring: 56
+% Equality resolution: 8
+% 
+% Split clauses: 31
+% Split components: 62
+% SAT solver clauses: 62
+% SAT solver unit clauses: 14
+% SAT solver binary clauses: 26
+% 
+% Sat splits: 31
+% 
+% TWLsolver clauses: 61
+% TWLsolver calls for satisfiability: 24
+% 
+% Memory used [KB]: 3326
+% Time elapsed: 0.120 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.16 s

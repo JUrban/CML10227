@@ -1,0 +1,294 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.misc
+% (70798)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 138
+% Passive clauses: 2313
+% Generated clauses: 20665
+% Final active clauses: 113
+% Final passive clauses: 1898
+% Input formulas: 33
+% Initial clauses: 79
+% 
+% Duplicate literals: 800
+% Trivial inequalities: 287
+% Fw subsumption resolutions: 3053
+% Fw demodulations: 2894
+% Bw demodulations: 23
+% 
+% Simple tautologies: 420
+% Equational tautologies: 59
+% Forward subsumptions: 8070
+% Bw demodulations to eq. taut.: 1
+% 
+% Binary resolution: 795
+% Factoring: 3
+% Forward superposition: 5808
+% Backward superposition: 6419
+% Self superposition: 220
+% Equality factoring: 165
+% Equality resolution: 25
+% 
+% Split clauses: 480
+% Split components: 1000
+% SAT solver clauses: 974
+% SAT solver unit clauses: 21
+% SAT solver binary clauses: 158
+% 
+% Sat splits: 480
+% 
+% TWLsolver clauses: 968
+% TWLsolver calls for satisfiability: 176
+% 
+% Memory used [KB]: 9338
+% Time elapsed: 0.600 s
+% ------------------------------
+% ------------------------------
+% remaining time: 143 next slice time: 6
+lrs-11_2_cond=on:fde=unused:gs=on:nwc=3:stl=30:sdd=off:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=all_4 on thm.misc
+% (70816)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+
+% Active clauses: 99
+% Passive clauses: 624
+% Generated clauses: 11025
+% Final active clauses: 78
+% Final passive clauses: 401
+% Input formulas: 33
+% Initial clauses: 79
+% 
+% Duplicate literals: 559
+% Trivial inequalities: 89
+% Fw subsumption resolutions: 1091
+% Fw demodulations: 1103
+% Bw demodulations: 125
+% Condensations: 821
+% Global subsumptions: 13
+% 
+% Simple tautologies: 195
+% Equational tautologies: 37
+% Forward subsumptions: 5517
+% 
+% Binary resolution: 322
+% Factoring: 2
+% Forward superposition: 3211
+% Backward superposition: 2905
+% Self superposition: 102
+% Equality factoring: 66
+% Equality resolution: 13
+% 
+% Split clauses: 104
+% Split components: 208
+% SAT solver clauses: 1082
+% SAT solver unit clauses: 95
+% SAT solver binary clauses: 40
+% SAT solver learnt clauses: 28
+% SAT solver learnt literals: 10
+% 
+% Sat splits: 104
+% Sat splitting refutations: 10
+% 
+% TWLsolver clauses: 1028
+% TWLsolver calls for satisfiability: 358
+% 
+% Memory used [KB]: 7803
+% Time elapsed: 0.709 s
+% ------------------------------
+% ------------------------------
+% remaining time: 136 next slice time: 103
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:lwlo=on:nwc=2:sas=minisat:stl=30:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_98 on thm.misc
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.misc
+% SZS output start Proof for thm.misc
+fof(f1239,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f1213,f188])).
+fof(f188,plain,(
+  ( ! [X2,X0,X3,X1] : (s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),X2))),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f68])).
+fof(f68,plain,(
+  ! [X0,X1,X2,X3] : s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),X2))),s(X1,X3)))),
+  inference(flattening,[],[f67])).
+fof(f67,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3))) = s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),X2))),s(X1,X3)))),
+  inference(rectify,[],[f34])).
+fof(f34,axiom,(
+  ! [X6,X7] : ! [X19,X20] : s(X6,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X7,X6),X19),s(X7,X20))) = s(X6,happ(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),X19))),s(X7,X20)))),
+  file('thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY','ARITY_1_2_const.finite_map.FAPPLY')).
+fof(f1213,plain,(
+  s(sK0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'),s(sK1,sK2))) != s(sK0,happ(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(sK1,sK2)))),
+  inference(superposition,[],[f333,f1169])).
+fof(f1169,plain,(
+  ( ! [X0,X1] : (s(X0,happ(s(fun(sK1,X0),X1),s(sK1,sK2))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3))),s(sK1,sK2)))) )),
+  inference(subsumption_resolution,[],[f1162,f130])).
+fof(f130,plain,(
+  p(s(bool,'T_0'))),
+  inference(cnf_transformation,[],[f1])).
+fof(f1,axiom,(
+  p(s(bool,'T_0'))),
+  file('thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY',aHL_TRUTH)).
+fof(f1162,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | s(X0,happ(s(fun(sK1,X0),X1),s(sK1,sK2))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3))),s(sK1,sK2)))) )),
+  inference(superposition,[],[f1156,f877])).
+fof(f877,plain,(
+  s(bool,'T_0') = s(bool,'const.bool.IN_2'(s(sK1,sK2),s(fun(sK1,bool),sK3)))),
+  inference(unit_resulting_resolution,[],[f742,f141])).
+fof(f141,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f96])).
+fof(f96,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f43])).
+fof(f43,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f27])).
+fof(f27,axiom,(
+  ! [X12] : (s(bool,'T_0') = s(bool,X12) <=> p(s(bool,X12)))),
+  file('thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY','thm.bool.EQ_CLAUSES|split|1')).
+fof(f742,plain,(
+  p(s(bool,'const.bool.IN_2'(s(sK1,sK2),s(fun(sK1,bool),sK3))))),
+  inference(forward_demodulation,[],[f723,f686])).
+fof(f686,plain,(
+  ( ! [X0,X1] : (s(fun(sK1,bool),sK3) = s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3)))))) )),
+  inference(subsumption_resolution,[],[f679,f130])).
+fof(f679,plain,(
+  ( ! [X0,X1] : (~p(s(bool,'T_0')) | s(fun(sK1,bool),sK3) = s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3)))))) )),
+  inference(superposition,[],[f189,f229])).
+fof(f229,plain,(
+  s(bool,'T_0') = s(bool,'const.pred_set.FINITE_1'(s(fun(sK1,bool),sK3)))),
+  inference(unit_resulting_resolution,[],[f128,f141])).
+fof(f128,plain,(
+  p(s(bool,'const.pred_set.FINITE_1'(s(fun(sK1,bool),sK3))))),
+  inference(cnf_transformation,[],[f93])).
+fof(f93,plain,(
+  p(s(bool,'const.pred_set.FINITE_1'(s(fun(sK1,bool),sK3)))) & s(sK0,happ(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(sK1,sK2))) != s(sK0,happ(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(fun(sK1,bool),sK3))))),s(sK1,sK2)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f77])).
+fof(f77,plain,(
+  ? [X0,X1,X2,X3] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) & s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'))),s(X1,X2))) != s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'))),s(fun(X1,bool),X3))))),s(X1,X2))))),
+  inference(ennf_transformation,[],[f36])).
+fof(f36,plain,(
+  ~! [X0,X1,X2,X3] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) => s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'))),s(X1,X2))) = s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'))),s(fun(X1,bool),X3))))),s(X1,X2))))),
+  inference(flattening,[],[f35])).
+fof(f35,plain,(
+  ~! [X0,X1] : ! [X2,X3] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) => s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'))),s(X1,X2))) = s(X0,happ(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'))),s(fun(X1,bool),X3))))),s(X1,X2))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X7,bool),X9)))) => s(X6,happ(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FEMPTY_0'))),s(X7,X8))) = s(X6,happ(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FUN_FMAP_2'(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FEMPTY_0'))),s(fun(X7,bool),X9))))),s(X7,X8))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X7,bool),X9)))) => s(X6,happ(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FEMPTY_0'))),s(X7,X8))) = s(X6,happ(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FUN_FMAP_2'(s(fun(X7,X6),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FEMPTY_0'))),s(fun(X7,bool),X9))))),s(X7,X8))))),
+  file('thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY','thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY')).
+fof(f189,plain,(
+  ( ! [X2,X0,X3,X1] : (~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) | s(fun(X1,bool),X3) = s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3)))))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f86,plain,(
+  ! [X0,X1,X2,X3] : (~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) | (s(fun(X1,bool),X3) = s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))))) & ! [X4] : (~p(s(bool,'const.bool.IN_2'(s(X1,X4),s(fun(X1,bool),X3)))) | s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))),s(X1,X4))))))),
+  inference(ennf_transformation,[],[f70])).
+fof(f70,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) => (s(fun(X1,bool),X3) = s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))))) & ! [X4] : (p(s(bool,'const.bool.IN_2'(s(X1,X4),s(fun(X1,bool),X3)))) => s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))),s(X1,X4))))))),
+  inference(flattening,[],[f69])).
+fof(f69,plain,(
+  ! [X0,X1] : ! [X2,X3] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) => (s(fun(X1,bool),X3) = s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))))) & ! [X4] : (p(s(bool,'const.bool.IN_2'(s(X1,X4),s(fun(X1,bool),X3)))) => s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))),s(X1,X4))))))),
+  inference(rectify,[],[f33])).
+fof(f33,axiom,(
+  ! [X6,X7] : ! [X17,X18] : (p(s(bool,'const.pred_set.FINITE_1'(s(fun(X7,bool),X18)))) => (s(fun(X7,bool),X18) = s(fun(X7,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FUN_FMAP_2'(s(fun(X7,X6),X17),s(fun(X7,bool),X18))))) & ! [X8] : (p(s(bool,'const.bool.IN_2'(s(X7,X8),s(fun(X7,bool),X18)))) => s(X6,happ(s(fun(X7,X6),X17),s(X7,X8))) = s(X6,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FUN_FMAP_2'(s(fun(X7,X6),X17),s(fun(X7,bool),X18))),s(X7,X8))))))),
+  file('thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY','thm.finite_map.FUN_FMAP_DEF')).
+fof(f723,plain,(
+  p(s(bool,'const.bool.IN_2'(s(sK1,sK2),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(fun(sK1,bool),sK3))))))))),
+  inference(unit_resulting_resolution,[],[f333,f191])).
+fof(f191,plain,(
+  ( ! [X2,X0,X3,X1] : (p(s(bool,'const.bool.IN_2'(s(X1,X3),s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),X2)))))) | s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'),s(X1,X3))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3)))) )),
+  inference(cnf_transformation,[],[f87])).
+fof(f87,plain,(
+  ! [X0,X1,X2,X3] : (p(s(bool,'const.bool.IN_2'(s(X1,X3),s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),X2)))))) | s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'),s(X1,X3))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3))))),
+  inference(ennf_transformation,[],[f72])).
+fof(f72,plain,(
+  ! [X0,X1,X2,X3] : (~p(s(bool,'const.bool.IN_2'(s(X1,X3),s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),X2)))))) => s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'),s(X1,X3))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3))))),
+  inference(flattening,[],[f71])).
+fof(f71,plain,(
+  ! [X0,X1] : ! [X2,X3] : (~p(s(bool,'const.bool.IN_2'(s(X1,X3),s(fun(X1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X1,X0),X2)))))) => s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FEMPTY_0'),s(X1,X3))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),X2),s(X1,X3))))),
+  inference(rectify,[],[f32])).
+fof(f32,axiom,(
+  ! [X6,X7] : ! [X17,X8] : (~p(s(bool,'const.bool.IN_2'(s(X7,X8),s(fun(X7,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(X7,X6),X17)))))) => s(X6,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X7,X6),'const.finite_map.FEMPTY_0'),s(X7,X8))) = s(X6,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X7,X6),X17),s(X7,X8))))),
+  file('thm.misc.FUN_FMAP_FAPPLY_FEMPTY_FAPPLY','thm.finite_map.NOT_FDOM_FAPPLY_FEMPTY')).
+fof(f1156,plain,(
+  ( ! [X4,X2,X3] : (~p(s(bool,'const.bool.IN_2'(s(sK1,X2),s(fun(sK1,bool),sK3)))) | s(X3,happ(s(fun(sK1,X3),X4),s(sK1,X2))) = s(X3,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X3),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X3),X4),s(fun(sK1,bool),sK3))),s(sK1,X2)))) )),
+  inference(forward_demodulation,[],[f1155,f686])).
+fof(f1155,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.bool.IN_2'(s(sK1,X2),s(fun(sK1,bool),sK3)))) | s(X3,happ(s(fun(sK1,X3),X4),s(sK1,X2))) = s(X3,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X3),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X3),X4),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3))))))),s(sK1,X2)))) )),
+  inference(forward_demodulation,[],[f1154,f686])).
+fof(f1154,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.bool.IN_2'(s(sK1,X2),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3)))))))) | s(X3,happ(s(fun(sK1,X3),X4),s(sK1,X2))) = s(X3,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X3),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X3),X4),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3))))))),s(sK1,X2)))) )),
+  inference(subsumption_resolution,[],[f1153,f130])).
+fof(f1153,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'T_0')) | ~p(s(bool,'const.bool.IN_2'(s(sK1,X2),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3)))))))) | s(X3,happ(s(fun(sK1,X3),X4),s(sK1,X2))) = s(X3,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X3),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X3),X4),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3))))))),s(sK1,X2)))) )),
+  inference(forward_demodulation,[],[f1144,f229])).
+fof(f1144,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.pred_set.FINITE_1'(s(fun(sK1,bool),sK3)))) | ~p(s(bool,'const.bool.IN_2'(s(sK1,X2),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3)))))))) | s(X3,happ(s(fun(sK1,X3),X4),s(sK1,X2))) = s(X3,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,X3),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X3),X4),s(fun(sK1,bool),'const.finite_map.FDOM_1'(s('type.finite_map.fmap'(sK1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,X0),X1),s(fun(sK1,bool),sK3))))))),s(sK1,X2)))) )),
+  inference(superposition,[],[f190,f686])).
+fof(f190,plain,(
+  ( ! [X4,X2,X0,X3,X1] : (~p(s(bool,'const.pred_set.FINITE_1'(s(fun(X1,bool),X3)))) | ~p(s(bool,'const.bool.IN_2'(s(X1,X4),s(fun(X1,bool),X3)))) | s(X0,happ(s(fun(X1,X0),X2),s(X1,X4))) = s(X0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(X1,X0),'const.finite_map.FUN_FMAP_2'(s(fun(X1,X0),X2),s(fun(X1,bool),X3))),s(X1,X4)))) )),
+  inference(cnf_transformation,[],[f86])).
+fof(f333,plain,(
+  s(sK0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'),s(sK1,sK2))) != s(sK0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(fun(sK1,bool),sK3))),s(sK1,sK2)))),
+  inference(superposition,[],[f226,f188])).
+fof(f226,plain,(
+  s(sK0,'const.finite_map.FAPPLY_2'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'),s(sK1,sK2))) != s(sK0,happ(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(fun(sK1,bool),sK3))))),s(sK1,sK2)))),
+  inference(backward_demodulation,[],[f188,f129])).
+fof(f129,plain,(
+  s(sK0,happ(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(sK1,sK2))) != s(sK0,happ(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FUN_FMAP_2'(s(fun(sK1,sK0),'const.finite_map.FAPPLY_1'(s('type.finite_map.fmap'(sK1,sK0),'const.finite_map.FEMPTY_0'))),s(fun(sK1,bool),sK3))))),s(sK1,sK2)))),
+  inference(cnf_transformation,[],[f93])).
+% SZS output end Proof for thm.misc
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 43
+% Passive clauses: 129
+% Generated clauses: 1121
+% Final active clauses: 33
+% Final passive clauses: 60
+% Input formulas: 33
+% Initial clauses: 79
+% 
+% Duplicate literals: 63
+% Trivial inequalities: 25
+% Fw subsumption resolutions: 66
+% Fw demodulations: 95
+% Bw demodulations: 28
+% Condensations: 97
+% 
+% Simple tautologies: 71
+% Equational tautologies: 36
+% Forward subsumptions: 519
+% Bw demodulations to eq. taut.: 2
+% 
+% Unit resulting resolution: 83
+% Factoring: 1
+% Forward superposition: 266
+% Backward superposition: 230
+% Self superposition: 28
+% Equality factoring: 26
+% Equality resolution: 4
+% 
+% Split clauses: 4
+% Split components: 8
+% SAT solver clauses: 151
+% SAT solver unit clauses: 27
+% SAT solver binary clauses: 36
+% 
+% Sat splits: 4
+% Sat splitting refutations: 12
+% 
+% Memory used [KB]: 1791
+% Time elapsed: 0.066 s
+% ------------------------------
+% ------------------------------
+% Success in time 1.42 s

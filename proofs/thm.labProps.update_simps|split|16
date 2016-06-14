@@ -1,0 +1,105 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.labProps
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.labProps
+% SZS output start Proof for thm.labProps
+fof(f21765,plain,(
+  $false),
+  inference(trivial_inequality_removal,[],[f21718])).
+fof(f21718,plain,(
+  s(fun('type.fcp.cart'(bool,sK0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(sK0,sK1),sK3))) != s(fun('type.fcp.cart'(bool,sK0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(sK0,sK1),sK3)))),
+  inference(superposition,[],[f566,f21617])).
+fof(f21617,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3)))))) )),
+  inference(superposition,[],[f672,f656])).
+fof(f656,plain,(
+  ( ! [X2,X0,X3,X1] : (s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.labSem.state'(X0,X1),X3)))) )),
+  inference(cnf_transformation,[],[f336])).
+fof(f336,plain,(
+  ! [X0,X1,X2,X3] : s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.labSem.state'(X0,X1),X3)))),
+  inference(flattening,[],[f335])).
+fof(f335,plain,(
+  ! [X0,X1] : ! [X2,X3] : s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3))) = s('type.labSem.state'(X0,X1),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X2))),s('type.labSem.state'(X0,X1),X3)))),
+  inference(rectify,[],[f185])).
+fof(f185,axiom,(
+  ! [X7,X6] : ! [X15,X9] : s('type.labSem.state'(X7,X6),'const.labSem.upd_pc_2'(s('type.num.num',X15),s('type.labSem.state'(X7,X6),X9))) = s('type.labSem.state'(X7,X6),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),'const.combin.K_1'(s('type.num.num',X15))),s('type.labSem.state'(X7,X6),X9)))),
+  file('thm.labProps.update_simps|split|16','thm.labSem.upd_pc_def')).
+fof(f672,plain,(
+  ( ! [X2,X0,X3,X1] : (s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.labSem.state'(X0,X1),X2)))))) )),
+  inference(cnf_transformation,[],[f368])).
+fof(f368,plain,(
+  ! [X0,X1,X2,X3] : s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(flattening,[],[f367])).
+fof(f367,plain,(
+  ! [X0,X1] : ! [X2,X3] : s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X2))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),X3),s('type.labSem.state'(X0,X1),X2)))))),
+  inference(rectify,[],[f42])).
+fof(f42,axiom,(
+  ! [X7,X12] : ! [X9,X13] : s(fun('type.fcp.cart'(bool,X7),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X7,X12),X9))) = s(fun('type.fcp.cart'(bool,X7),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X7,X12),'const.labSem.state_pc_fupd_2'(s(fun('type.num.num','type.num.num'),X13),s('type.labSem.state'(X7,X12),X9)))))),
+  file('thm.labProps.update_simps|split|16','thm.labSem.labSem_75_prove_ltb')).
+fof(f566,plain,(
+  s(fun('type.fcp.cart'(bool,sK0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(sK0,sK1),sK3))) != s(fun('type.fcp.cart'(bool,sK0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.upd_pc_2'(s('type.num.num',sK2),s('type.labSem.state'(sK0,sK1),sK3)))))),
+  inference(cnf_transformation,[],[f553])).
+fof(f553,plain,(
+  s(fun('type.fcp.cart'(bool,sK0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(sK0,sK1),sK3))) != s(fun('type.fcp.cart'(bool,sK0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(sK0,sK1),'const.labSem.upd_pc_2'(s('type.num.num',sK2),s('type.labSem.state'(sK0,sK1),sK3)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1,sK2,sK3])],[f551])).
+fof(f551,plain,(
+  ? [X0,X1,X2,X3] : s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) != s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3)))))),
+  inference(ennf_transformation,[],[f190])).
+fof(f190,plain,(
+  ~! [X0,X1,X2,X3] : s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3)))))),
+  inference(flattening,[],[f189])).
+fof(f189,plain,(
+  ~! [X0,X1] : ! [X2,X3] : s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),X3))) = s(fun('type.fcp.cart'(bool,X0),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X0,X1),'const.labSem.upd_pc_2'(s('type.num.num',X2),s('type.labSem.state'(X0,X1),X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6,X7] : ! [X8,X9] : s(fun('type.fcp.cart'(bool,X6),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X6,X7),X9))) = s(fun('type.fcp.cart'(bool,X6),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X6,X7),'const.labSem.upd_pc_2'(s('type.num.num',X8),s('type.labSem.state'(X6,X7),X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6,X7] : ! [X8,X9] : s(fun('type.fcp.cart'(bool,X6),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X6,X7),X9))) = s(fun('type.fcp.cart'(bool,X6),bool),'const.labSem.state_mem_domain_1'(s('type.labSem.state'(X6,X7),'const.labSem.upd_pc_2'(s('type.num.num',X8),s('type.labSem.state'(X6,X7),X9)))))),
+  file('thm.labProps.update_simps|split|16','thm.labProps.update_simps|split|16')).
+% SZS output end Proof for thm.labProps
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 161
+% Passive clauses: 2217
+% Generated clauses: 20960
+% Final active clauses: 160
+% Final passive clauses: 1899
+% Input formulas: 187
+% Initial clauses: 198
+% 
+% Duplicate literals: 642
+% Trivial inequalities: 169
+% Fw subsumption resolutions: 1557
+% Fw demodulations: 2243
+% 
+% Simple tautologies: 189
+% Equational tautologies: 24
+% Forward subsumptions: 13485
+% 
+% Binary resolution: 3
+% Forward superposition: 9407
+% Backward superposition: 6432
+% Self superposition: 214
+% Equality factoring: 65
+% Equality resolution: 15
+% 
+% Split clauses: 186
+% Split components: 372
+% SAT solver clauses: 541
+% SAT solver unit clauses: 43
+% SAT solver binary clauses: 135
+% 
+% Sat splits: 186
+% 
+% TWLsolver clauses: 541
+% TWLsolver calls for satisfiability: 117
+% 
+% Memory used [KB]: 14583
+% Time elapsed: 0.439 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.46 s

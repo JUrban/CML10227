@@ -1,0 +1,184 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 149 next slice time: 5
+dis+11_7_3 on thm.modSem
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for thm.modSem
+% SZS output start Proof for thm.modSem
+fof(f6301,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f6289,f323,f225,f322,f327])).
+fof(f327,plain,(
+  $false | ($spl1 | $spl2)),
+  inference(resolution,[],[f323,f322])).
+fof(f322,plain,(
+  ~p(s(bool,'F_0')) | $spl1),
+  inference(cnf_transformation,[],[f322_D])).
+fof(f322_D,plain,(
+  ~p(s(bool,'F_0')) <=> ~$spl1),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl1])])).
+fof(f225,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(cnf_transformation,[],[f71])).
+fof(f71,plain,(
+  ~p(s(bool,'F_0'))),
+  inference(flattening,[],[f2])).
+fof(f2,axiom,(
+  ~p(s(bool,'F_0'))),
+  file('thm.modSem.environment_induction',aHL_FALSITY)).
+fof(f323,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl2),
+  inference(cnf_transformation,[],[f323_D])).
+fof(f323_D,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) <=> ~$spl2),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl2])])).
+fof(f6289,plain,(
+  ( ! [X0] : (p(s(bool,X0))) ) | $spl1),
+  inference(subsumption_resolution,[],[f6273,f228])).
+fof(f228,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') != s(bool,X0)) )),
+  inference(cnf_transformation,[],[f180])).
+fof(f180,plain,(
+  ! [X0] : ((s(bool,'T_0') != s(bool,X0) | p(s(bool,X0))) & (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f73])).
+fof(f73,plain,(
+  ! [X0] : (s(bool,'T_0') = s(bool,X0) <=> p(s(bool,X0)))),
+  inference(rectify,[],[f24])).
+fof(f24,axiom,(
+  ! [X13] : (s(bool,'T_0') = s(bool,X13) <=> p(s(bool,X13)))),
+  file('thm.modSem.environment_induction','thm.bool.EQ_CLAUSES|split|1')).
+fof(f6273,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) ) | $spl1),
+  inference(superposition,[],[f6225,f589])).
+fof(f589,plain,(
+  ( ! [X4] : (s(bool,X4) = s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment',sK1))) | s(bool,'T_0') = s(bool,X4)) ) | $spl1),
+  inference(subsumption_resolution,[],[f581,f322])).
+fof(f581,plain,(
+  ( ! [X4] : (p(s(bool,'F_0')) | s(bool,X4) = s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment',sK1))) | s(bool,'T_0') = s(bool,X4)) )),
+  inference(superposition,[],[f372,f334])).
+fof(f334,plain,(
+  s(bool,'F_0') = s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment',sK1)))),
+  inference(resolution,[],[f222,f233])).
+fof(f233,plain,(
+  ( ! [X0] : (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f182])).
+fof(f182,plain,(
+  ! [X0] : ((s(bool,'F_0') != s(bool,X0) | ~p(s(bool,X0))) & (p(s(bool,X0)) | s(bool,'F_0') = s(bool,X0)))),
+  inference(nnf_transformation,[],[f76])).
+fof(f76,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(flattening,[],[f75])).
+fof(f75,plain,(
+  ! [X0] : (s(bool,'F_0') = s(bool,X0) <=> ~p(s(bool,X0)))),
+  inference(rectify,[],[f25])).
+fof(f25,axiom,(
+  ! [X13] : (s(bool,'F_0') = s(bool,X13) <=> ~p(s(bool,X13)))),
+  file('thm.modSem.environment_induction','thm.bool.EQ_CLAUSES|split|3')).
+fof(f222,plain,(
+  ~p(s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment',sK1))))),
+  inference(cnf_transformation,[],[f179])).
+fof(f179,plain,(
+  ! [X2,X3] : p(s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X3)))))) & ~p(s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment',sK1))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f178])).
+fof(f178,plain,(
+  ? [X0] : (! [X2,X3] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X0),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X3)))))) & ? [X1] : ~p(s(bool,happ(s(fun('type.modSem.environment',bool),X0),s('type.modSem.environment',X1)))))),
+  inference(rectify,[],[f171])).
+fof(f171,plain,(
+  ? [X0] : (! [X1,X2] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X0),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X1),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X2)))))) & ? [X3] : ~p(s(bool,happ(s(fun('type.modSem.environment',bool),X0),s('type.modSem.environment',X3)))))),
+  inference(ennf_transformation,[],[f70])).
+fof(f70,plain,(
+  ~! [X0] : (! [X1,X2] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X0),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X1),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X2)))))) => ! [X3] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X0),s('type.modSem.environment',X3)))))),
+  inference(rectify,[],[f6])).
+fof(f6,negated_conjecture,(
+  ~! [X6] : (! [X7,X8] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X6),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X7),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X8)))))) => ! [X9] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X6),s('type.modSem.environment',X9)))))),
+  inference(negated_conjecture,[],[f5])).
+fof(f5,conjecture,(
+  ! [X6] : (! [X7,X8] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X6),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X7),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X8)))))) => ! [X9] : p(s(bool,happ(s(fun('type.modSem.environment',bool),X6),s('type.modSem.environment',X9)))))),
+  file('thm.modSem.environment_induction','thm.modSem.environment_induction')).
+fof(f372,plain,(
+  ( ! [X2,X1] : (p(s(bool,X1)) | s(bool,X1) = s(bool,X2) | s(bool,'T_0') = s(bool,X2)) )),
+  inference(resolution,[],[f281,f229])).
+fof(f229,plain,(
+  ( ! [X0] : (~p(s(bool,X0)) | s(bool,'T_0') = s(bool,X0)) )),
+  inference(cnf_transformation,[],[f180])).
+fof(f281,plain,(
+  ( ! [X0,X1] : (p(s(bool,X1)) | p(s(bool,X0)) | s(bool,X0) = s(bool,X1)) )),
+  inference(cnf_transformation,[],[f176])).
+fof(f176,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | (p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1))),
+  inference(flattening,[],[f175])).
+fof(f175,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) & ~p(s(bool,X1))) | ((p(s(bool,X1)) & ~p(s(bool,X0))) | s(bool,X0) = s(bool,X1)))),
+  inference(ennf_transformation,[],[f120])).
+fof(f120,plain,(
+  ! [X0,X1] : ((p(s(bool,X0)) => p(s(bool,X1))) => ((p(s(bool,X1)) => p(s(bool,X0))) => s(bool,X0) = s(bool,X1)))),
+  inference(rectify,[],[f7])).
+fof(f7,axiom,(
+  ! [X10,X11] : ((p(s(bool,X10)) => p(s(bool,X11))) => ((p(s(bool,X11)) => p(s(bool,X10))) => s(bool,X10) = s(bool,X11)))),
+  file('thm.modSem.environment_induction','thm.bool.IMP_ANTISYM_AX')).
+fof(f6225,plain,(
+  ( ! [X0] : (p(s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment',X0))))) )),
+  inference(superposition,[],[f221,f274])).
+fof(f274,plain,(
+  ( ! [X0] : (s('type.modSem.environment',X0) = s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),sK12(X0)),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),sK13(X0))))) )),
+  inference(cnf_transformation,[],[f207])).
+fof(f207,plain,(
+  ! [X0] : s('type.modSem.environment',X0) = s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),sK12(X0)),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),sK13(X0))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK12,sK13])],[f113])).
+fof(f113,plain,(
+  ! [X0] : ? [X1,X2] : s('type.modSem.environment',X0) = s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X1),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X2)))),
+  inference(rectify,[],[f35])).
+fof(f35,axiom,(
+  ! [X41] : ? [X7,X8] : s('type.modSem.environment',X41) = s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X7),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X8)))),
+  file('thm.modSem.environment_induction','thm.modSem.environment_nchotomy')).
+fof(f221,plain,(
+  ( ! [X2,X3] : (p(s(bool,happ(s(fun('type.modSem.environment',bool),sK0),s('type.modSem.environment','const.modSem.recordtype|46|environment_2'(s('type.pair.prod'('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn'))))),'type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.pair.prod'('type.num.num','type.semanticPrimitives.tid_or_exn')))),X2),s('type.list.list'('type.pair.prod'('type.list.list'('type.string.char'),'type.modSem.v')),X3))))))) )),
+  inference(cnf_transformation,[],[f179])).
+% SZS output end Proof for thm.modSem
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 87
+% Passive clauses: 1360
+% Generated clauses: 5985
+% Final active clauses: 76
+% Final passive clauses: 1179
+% Input formulas: 68
+% Initial clauses: 98
+% 
+% Duplicate literals: 243
+% Trivial inequalities: 117
+% Fw subsumption resolutions: 518
+% Fw demodulations: 807
+% Bw demodulations: 9
+% 
+% Simple tautologies: 159
+% Equational tautologies: 34
+% Forward subsumptions: 2674
+% 
+% Binary resolution: 197
+% Factoring: 1
+% Forward superposition: 1924
+% Backward superposition: 1884
+% Self superposition: 78
+% Equality factoring: 58
+% Equality resolution: 15
+% 
+% Split clauses: 75
+% Split components: 150
+% SAT solver clauses: 159
+% SAT solver unit clauses: 11
+% SAT solver binary clauses: 72
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 75
+% Sat splitting refutations: 2
+% 
+% TWLsolver clauses: 153
+% TWLsolver calls for satisfiability: 64
+% 
+% Memory used [KB]: 4093
+% Time elapsed: 0.147 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.157 s
